@@ -12,7 +12,7 @@ spec:
       - path: /
         backend:
           serviceName: freqtrade
-          servicePort: 8080
+          servicePort: 8084
       {{- end }}
       {{- if (and .Values.backtesting.results.enable_export .Values.backtesting.results.reader_enabled) }}
       - path: /results

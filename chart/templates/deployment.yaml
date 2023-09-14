@@ -25,7 +25,13 @@ spec:
         - {{ .Values.bot.strategy_name }}
         - --db-url
         - sqlite:////sqlite/tradesv3.sqlite
+        # - --recursive-strategy-search
+        # - -vvv 
+        # - --freqaimodel ReinforcementLearner_multiproc 
+        # - --freqaimodel-path /freqtrade/freqtrade/freqai/prediction_models
         volumeMounts:
+        # - mountPath: /freqtrade/freqtrade/freqai
+        #  name: freqai
         - mountPath: /freqtrade/config
           name: config
         - mountPath: /freqtrade/user_data/strategies
@@ -34,7 +40,7 @@ spec:
           name: sqlite
         ports:
         - name: api
-          containerPort: 8080
+          containerPort: 8084
       volumes:
       - name: config
         configMap:
