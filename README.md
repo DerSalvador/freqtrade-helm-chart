@@ -13,3 +13,14 @@ The [`chart`](./chart) directory contains the Helm 3 chart for deploying a freqt
 ## Testing locally
 
 If you don't have a full-fledged Kubernetes environment and want to test things locally and see them in action, follow the instructions under the [`test-local`](./test-local) directory.
+
+## Running on Minikube
+
+kubectx minikube
+kubectl create ns trading
+kubens trading
+cd <chartdir>
+helm template . -n trading -f values-latest.yaml|kubectl delete -f -
+helm template . -n trading -f values-latest.yaml|kubectl apply -f -
+
+
