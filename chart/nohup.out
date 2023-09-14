@@ -1,0 +1,108 @@
+pod/backtesting-1694703901-dvcjh
+pod "backtesting-1694703901-dvcjh" deleted
+pod/backtesting-1694704826-zhk4x
+pod "backtesting-1694704826-zhk4x" deleted
+pod/backtesting-1694705198-psgvn
+pod "backtesting-1694705198-psgvn" deleted
+pod/backtesting-1694705374-72wm5
+pod "backtesting-1694705374-72wm5" deleted
+pod/backtesting-1694705841-m449b
+pod "backtesting-1694705841-m449b" deleted
+pod/backtesting-1694706345-2pm9x
+pod "backtesting-1694706345-2pm9x" deleted
+configmap/freqtrade-config
+configmap "freqtrade-config" deleted
+configmap/freqtrade-strategies
+configmap "freqtrade-strategies" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config
+configmap "results-reader-config" deleted
+
+"Usage: dsTradingDeleteAllPods.sh param1"
+pod/backtesting-1694705198-tqktt
+pod "backtesting-1694705198-tqktt" deleted
+pod/backtesting-1694705374-nzbx4
+pod "backtesting-1694705374-nzbx4" deleted
+pod/backtesting-1694705841-r59dm
+pod "backtesting-1694705841-r59dm" deleted
+pod/backtesting-1694706345-6677w
+pod "backtesting-1694706345-6677w" deleted
+pod/backtesting-1694706423-6jnj4
+pod "backtesting-1694706423-6jnj4" deleted
+configmap/freqtrade-config
+configmap "freqtrade-config" deleted
+configmap/freqtrade-strategies
+configmap "freqtrade-strategies" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config
+configmap "results-reader-config" deleted
+
+"Usage: dsTradingDeleteAllPods.sh param1"
+pod/backtesting-1694703901-swrq7
+pod "backtesting-1694703901-swrq7" deleted
+pod/backtesting-1694704826-pnbcr
+pod "backtesting-1694704826-pnbcr" deleted
+pod/backtesting-1694705198-cchjg
+pod "backtesting-1694705198-cchjg" deleted
+pod/backtesting-1694705374-s44f5
+pod "backtesting-1694705374-s44f5" deleted
+pod/backtesting-1694705841-nkxmj
+pod "backtesting-1694705841-nkxmj" deleted
+pod/backtesting-1694706345-m9vjr
+pod "backtesting-1694706345-m9vjr" deleted
+pod/backtesting-1694706423-jw572
+pod "backtesting-1694706423-jw572" deleted
+pod/backtesting-1694706571-dndph
+pod "backtesting-1694706571-dndph" deleted
+pod/freqtrade-856f4cc45b-hfqjt
+Error from server (NotFound): pods "freqtrade-856f4cc45b-hfqjt" not found
+pod/results-reader-7977df5bfc-p47sd
+Error from server (NotFound): pods "results-reader-7977df5bfc-p47sd" not found
+configmap/freqtrade-config
+configmap "freqtrade-config" deleted
+configmap/freqtrade-strategies
+configmap "freqtrade-strategies" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config
+configmap "results-reader-config" deleted
+
+"Usage: dsTradingDeleteAllPods.sh param1"
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+
+"Usage: dsTradingDeleteAllPods.sh param1"
+pod/backtesting-1694707425-2pgzv
+pod "backtesting-1694707425-2pgzv" deleted
+pod/backtesting-1694707425-8hltx
+pod "backtesting-1694707425-8hltx" deleted
+pod/backtesting-1694707425-ggk9s
+pod "backtesting-1694707425-ggk9s" deleted
+pod/backtesting-1694707425-lbkcd
+pod "backtesting-1694707425-lbkcd" deleted
+pod/backtesting-1694707425-rm5dt
+pod "backtesting-1694707425-rm5dt" deleted
+pod/backtesting-1694707425-svjwg
+pod "backtesting-1694707425-svjwg" deleted
+pod/backtesting-1694707425-v9v48
+pod "backtesting-1694707425-v9v48" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+
+"Usage: dsTradingDeleteAllPods.sh param1"
+pod/backtesting-1694707644-jtjs8
+pod "backtesting-1694707644-jtjs8" deleted
+pod/backtesting-1694707644-v6g7b
+pod "backtesting-1694707644-v6g7b" deleted
+configmap/freqtrade-config
+configmap "freqtrade-config" deleted
+configmap/freqtrade-strategies
+configmap "freqtrade-strategies" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config
+configmap "results-reader-config" deleted
+
+"Usage: dsTradingDeleteAllPods.sh param1"

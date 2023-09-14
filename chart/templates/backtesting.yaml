@@ -8,8 +8,25 @@ spec:
     spec:
       {{- if .Values.backtesting.download_data }}
       initContainers:
+      - name: take-data-dir-ownership
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   runAsUser: 0
+        command:
+        - bash
+        args: ["-c","chown -R ftuser:ftuser /data; ls -ltra /data" ] 
+        volumeMounts:
+        - mountPath: /data
+          name: data
       - name: download-data
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   runAsUser: 0
         command:
         - freqtrade
         args:
@@ -33,6 +50,9 @@ spec:
       containers:
       - name: backtesting
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
         command:
         - freqtrade
         args:

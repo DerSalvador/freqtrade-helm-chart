@@ -12,26 +12,46 @@ spec:
       labels:
         app: freqtrade
     spec:
+      initContainers:
+      - name: take-sqlite-dir-ownership
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   runAsUser: 0
+        command:
+        - bash
+        args: ["-c","chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
+        volumeMounts:
+        - mountPath: /sqlite
+          name: sqlite
       containers:
       - name: freqtrade
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        # securityContext:
+        #  runAsUser: 1000
+        #  runAsGroup: 1000
         command:
         - freqtrade
         args:
         - trade
         - --config
         - /freqtrade/config/config.json
+        - --strategy-path 
+        - /freqtrade/user_data/strategies
         - --strategy
         - {{ .Values.bot.strategy_name }}
         - --db-url
         - sqlite:////sqlite/tradesv3.sqlite
-        # - --recursive-strategy-search
-        # - -vvv 
-        # - --freqaimodel ReinforcementLearner_multiproc 
-        # - --freqaimodel-path /freqtrade/freqtrade/freqai/prediction_models
+        - --recursive-strategy-search
+        - -vvv 
+        - --freqaimodel 
+        - ReinforcementLearner_multiproc 
+        - --freqaimodel-path 
+        - /freqtrade/freqtrade/freqai/prediction_models
         volumeMounts:
-        # - mountPath: /freqtrade/freqtrade/freqai
-        #  name: freqai
         - mountPath: /freqtrade/config
           name: config
         - mountPath: /freqtrade/user_data/strategies
@@ -58,7 +78,7 @@ metadata:
   name: freqtrade-sqlite
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: {{ .Values.bot.pvc_size }}
