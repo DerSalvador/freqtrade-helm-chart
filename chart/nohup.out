@@ -257,3 +257,16 @@ kube-node-lease
 kube-public
 kube-system
 trading
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace
+binance-michael
+default
+gke-gmp-system
+gke-managed-filestorecsi
+gmp-public
+kube-node-lease
+kube-public
+kube-system
+trading
