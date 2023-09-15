@@ -1,0 +1,85 @@
+{{- if .Values.bot.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: freqtrade
+spec:
+  selector:
+    matchLabels:
+      app: freqtrade
+  template:
+    metadata:
+      labels:
+        app: freqtrade
+    spec:
+      initContainers:
+      - name: take-sqlite-dir-ownership
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   runAsUser: 0
+        command:
+        - bash
+        args: ["-c","chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
+        volumeMounts:
+        - mountPath: /sqlite
+          name: sqlite
+      containers:
+      - name: freqtrade
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        # securityContext:
+        #  runAsUser: 1000
+        #  runAsGroup: 1000
+        command:
+        - freqtrade
+        args:
+        - trade
+        - --config
+        - /freqtrade/config/config.json
+        - --strategy-path 
+        - /freqtrade/user_data/strategies
+        - --strategy
+        - {{ .Values.bot.strategy_name }}
+        - --db-url
+        - sqlite:////sqlite/tradesv3.sqlite
+        - --recursive-strategy-search
+        - -vvv 
+        - --freqaimodel 
+        - ReinforcementLearner_multiproc 
+        - --freqaimodel-path 
+        - /freqtrade/freqtrade/freqai/prediction_models
+        volumeMounts:
+        - mountPath: /freqtrade/config
+          name: config
+        - mountPath: /freqtrade/user_data/strategies
+          name: strategies
+        - mountPath: /sqlite
+          name: sqlite
+        ports:
+        - name: api
+          containerPort: 8084
+      volumes:
+      - name: config
+        configMap:
+          name: freqtrade-config
+      - name: strategies
+        configMap:
+          name: freqtrade-strategies
+      - name: sqlite
+        persistentVolumeClaim:
+          claimName: freqtrade-sqlite
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: freqtrade-sqlite
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: {{ .Values.bot.pvc_size }}
+{{- end }}
