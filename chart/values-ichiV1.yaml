@@ -32,27 +32,27 @@ config:
     order_book_top: 1
   download_trades: true
   exchange:
-    name: binance
-    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ
+    name: kraken
+    key: 6vsqnOYuJJD3soHSFzjtm6NERdQt10gr+5+xDhfJk7/sOk5ntLYlNwCa
     secret: >-
-      RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97
+      Scf4g6DcfkRujaSVfWQ9nYZci5vBENi5QSLroy4BXXGFlUvYuwKv4Z5Z7juyF4ugvSIfmSI8DP4qxnw//cG6mg==
     ccxt_config:
       enableRateLimit: true
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist: []
     pair_blacklist: []
   pairlists:
-    - method: StaticPairList
-      number_assets: 24
+    - method: VolumePairList
+      number_assets: 661
       sort_key: quoteVolume
       min_value: 0
       refresh_period: 1800
   telegram:
     enabled: true
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
+    chat_id: "1759706931"
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -105,7 +105,7 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-binance-michael
+  bot_name: freqtrade-ichiV1
   initial_state: running
   force_entry_enable: true
   internals:
@@ -121,11 +121,11 @@ image:
   tag: 2023.8_freqairl
 
 backtesting:
-  enabled: true
+  enabled: false
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: TheForce
+  strategy_list: SampleStrategy
   fee:
   pvc_size: 1Gi
   results:
@@ -135,7 +135,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: TheForce
+  strategy_name: ichiV1
   pvc_size: 1Gi
 
 ingress:

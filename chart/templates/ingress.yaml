@@ -1,0 +1,49 @@
+---
+{{- if .Values.ingress.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: freqtrade
+spec:
+  rules:
+  - host: localhost
+    http:
+      paths:
+      {{- if (and .Values.bot.enabled .Values.config.api_server.enabled) }}
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: freqtrade
+            port: 
+              number: 8084
+      {{- end }}
+      {{- if (and .Values.backtesting.results.enable_export .Values.backtesting.results.reader_enabled) }}
+      - path: /results
+        pathType: Prefix
+        backend:
+          service:
+            name: results-reader
+            port: 
+              number: 80
+     {{- end }}
+{{- end }}
+---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: example-ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /$1
+# spec:
+#   rules:
+#   - host: hello-world.info
+#     http:
+#       paths:
+#         - path: /
+#           pathType: Prefix
+#           backend:
+#             service:
+#               name: web
+#               port:
+#                 number: 8080
