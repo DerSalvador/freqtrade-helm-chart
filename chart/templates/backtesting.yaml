@@ -46,6 +46,8 @@ spec:
           name: data
         - mountPath: /freqtrade/config
           name: config
+      imagePullSecrets:
+      - name: do-dersalvador-registry
       {{- end }}
       containers:
       - name: backtesting
@@ -86,6 +88,8 @@ spec:
           name: config
         - mountPath: /freqtrade/user_data/strategies
           name: strategies
+      imagePullSecrets:
+      - name: do-dersalvador-registry
       restartPolicy: Never
       volumes:
       - name: data

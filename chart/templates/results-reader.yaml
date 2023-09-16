@@ -46,6 +46,8 @@ spec:
       - name: config
         configMap:
           name: results-reader-config
+      imagePullSecrets:
+      - name: do-dersalvador-registry
 ---
 apiVersion: v1
 kind: Service
