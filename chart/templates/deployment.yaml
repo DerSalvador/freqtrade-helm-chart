@@ -27,6 +27,8 @@ spec:
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
+      imagePullSecrets:
+      - name: do-dersalvador-registry
       containers:
       - name: freqtrade
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -61,6 +63,8 @@ spec:
         ports:
         - name: api
           containerPort: 8084
+      imagePullSecrets:
+      - name: do-dersalvador-registry
       volumes:
       - name: config
         configMap:
