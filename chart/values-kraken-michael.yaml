@@ -56,7 +56,7 @@ config:
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
-    listen_port: 8080
+    listen_port: 8081
     verbosity: error
     enable_openapi: false
     jwt_secret_key: 235573d45bb26d0cbf1986893b12d4aaf0cf4934f3566d9459d818ec7fbb851b
@@ -125,7 +125,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: TheForce
+  strategy_list: BBRSIv2
   fee:
   pvc_size: 1Gi
   results:
@@ -135,7 +135,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: TheForce
+  strategy_name: BBRSIv2
   pvc_size: 1Gi
 
 ingress:
