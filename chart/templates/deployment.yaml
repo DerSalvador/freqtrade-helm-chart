@@ -82,7 +82,7 @@ metadata:
   name: freqtrade-sqlite
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: {{ .Values.bot.pvc_size }}
