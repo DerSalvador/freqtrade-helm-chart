@@ -14,10 +14,33 @@ config:
   trading_mode: spot
   margin_mode: ""
   unfilledtimeout:
-    entry: 10
-    exit: 30
-    exit_timeout_count: 0
+    buy: 10
     unit: minutes
+  order_types:
+    buy: limit
+    sell: limit
+    stoploss: market
+    forcebuy: market
+    forcesell: market
+    stoploss_on_exchange: false
+  bid_strategy:
+    price_side: ask
+    ask_last_balance: 0
+    use_order_book: false
+    order_book_top: 1
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  ask_strategy:
+    price_side: bid
+    use_order_book: false
+    order_book_min: 1
+    order_book_max: 1
+  # unfilledtimeout:
+  #   entry: 10
+  #   exit: 30
+  #   exit_timeout_count: 0
+  #   unit: minutes
   entry_pricing:
     price_side: same
     use_order_book: true
@@ -33,26 +56,83 @@ config:
   download_trades: true
   exchange:
     name: kraken
-    key: KVVUE8qZtAFziVRcZrPQomjg+myfF75paUZgrlPKJuwAzSkmJADdtyKL
+    key: 7T77qjKhPC7jbKq0eyDtFSM99pLluWN1v+oxmtciibIbBFoxTdQ+JO+0
     secret: >-
-      VAPW9pYWBympjMaxiiPD6tVPdxZQ892RXRDgJSUu+6/tTmZ1EuIJJ2Onkmm7QQNJl2lXP9lLefNh5eIO4sBiKQ==
+      UwKS092Z0SXRycR/6CmWj39LcJJN4hexqTrMbME8b9pW8XIL/38w3mNZhPqpTpQ/OjAWfUtOuvistsp2iMYuvw==
     ccxt_config:
       enableRateLimit: true
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
-    pair_blacklist: []
+    pair_whitelist:
+      - BTC/USDT
+      - ETH/USDT
+      - AVAX/USDT
+      - SOL/USDT
+      # - MINA/USDT not on kraken
+      # - SAND/USDT
+      - MATIC/USDT
+      - MANA/USDT
+      # - ONE/USDT
+      # - HOT/USDT
+      # - NEAR/USDT
+      # - ROSE/USDT
+      # - MBOX/USDT
+      # - DAR/USDT
+      - DOT/USDT
+      # - TLM/USDT
+      # - LRC/USDT
+      - ADA/USDT
+      - XRP/USDT
+      # - SYS/USDT
+      # - GRT/USDT
+      # - TRX/USDT
+      # - RSR/USDT
+      # - HIVE/USDT
+      # - FIL/USDT
+      - LTC/USDT
+      - EOS/USDT
+      # - LUNA/USDT
+      # - VET/USDT
+      # - FTM/USDT
+    pair_blacklist:
+      - (BNB)/.*
+      - '.*(_PREMIUM|BEAR|BULL|DOWN|HALF|HEDGE|UP|[1235][SL])/.*'
+      - (AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*
+      - (USDT|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDP|USDT|VAI)/.*
+      - >-
+        (ACM|AFA|ALA|ALL|APL|ASR|ATM|BAR|CAI|CITY|FOR|GAL|GOZ|IBFK|JUV|LAZIO|LEG|LOCK-1|NAVI|NMR|NOV|OG|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*
+      - (CHZ|CTXC|HBAR|NMR|SHIB|SLP|XVS|ONG|ARDR)/.*
   pairlists:
-    - method: VolumePairList
-      number_assets: 661
+    - method: StaticPairList
+      number_assets: 11
       sort_key: quoteVolume
-      min_value: 0
+      refresh_period: 1800
+    - method: AgeFilter
+      min_days_listed: 14
+    - method: SpreadFilter
+      max_spread_ratio: 0.005
+    - method: PriceFilter
+      min_price: 0.001
+    - method: RangeStabilityFilter
+      lookback_days: 3
+      min_rate_of_change: 0.1
       refresh_period: 1800
   telegram:
     enabled: true
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"
     chat_id: "6493643145"
+    keyboard:
+      - - /daily
+        - /stats
+        - /balance
+        - /profit
+      - - /status table
+        - /performance
+      - - /show_config
+        - /whitelist
+        - /logs
+
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -117,7 +197,7 @@ config:
     "60": 0
 
 image:
-  base: freqtradeorg/freqtrade
+  base: registry.digitalocean.com/do-dersalvador-registry/freqtrade
   tag: 2023.8_freqairl
 
 backtesting:
@@ -125,7 +205,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: TheForce
+  strategy_list: NASOSv5_antipump
   fee:
   pvc_size: 1Gi
   results:
@@ -135,7 +215,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: TheForce
+  strategy_name: NASOSv5_antipump
   pvc_size: 1Gi
 
 ingress:
