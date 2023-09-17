@@ -64,60 +64,37 @@ config:
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    pair_whitelist:
-      - BTC/USDT
-      - ETH/USDT
-      - AVAX/USDT
-      - SOL/USDT
-      # - MINA/USDT not on kraken
-      # - SAND/USDT
-      - MATIC/USDT
-      - MANA/USDT
-      # - ONE/USDT
-      # - HOT/USDT
-      # - NEAR/USDT
-      # - ROSE/USDT
-      # - MBOX/USDT
-      # - DAR/USDT
-      - DOT/USDT
-      # - TLM/USDT
-      # - LRC/USDT
-      - ADA/USDT
-      - XRP/USDT
-      # - SYS/USDT
-      # - GRT/USDT
-      # - TRX/USDT
-      # - RSR/USDT
-      # - HIVE/USDT
-      # - FIL/USDT
-      - LTC/USDT
-      - EOS/USDT
-      # - LUNA/USDT
-      # - VET/USDT
-      # - FTM/USDT
-    pair_blacklist:
-      - (BNB)/.*
-      - '.*(_PREMIUM|BEAR|BULL|DOWN|HALF|HEDGE|UP|[1235][SL])/.*'
-      - (AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*
-      - (USDT|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDP|USDT|VAI)/.*
-      - >-
-        (ACM|AFA|ALA|ALL|APL|ASR|ATM|BAR|CAI|CITY|FOR|GAL|GOZ|IBFK|JUV|LAZIO|LEG|LOCK-1|NAVI|NMR|NOV|OG|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*
-      - (CHZ|CTXC|HBAR|NMR|SHIB|SLP|XVS|ONG|ARDR)/.*
+    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_blacklist: []
   pairlists:
-    - method: StaticPairList
-      number_assets: 11
+    - method: VolumePairList
+      number_assets: 661
       sort_key: quoteVolume
+      min_value: 0
       refresh_period: 1800
+    - method: RangeStabilityFilter
+      lookback_days: 10
+      min_rate_of_change: 0.01
+      max_rate_of_change: 0.99
+      refresh_period: 1440
     - method: AgeFilter
-      min_days_listed: 14
+      min_days_listed: 10
+    - method: PrecisionFilter
+    - method: PriceFilter
+      low_price_ratio: 0.01
     - method: SpreadFilter
       max_spread_ratio: 0.005
-    - method: PriceFilter
-      min_price: 0.001
     - method: RangeStabilityFilter
-      lookback_days: 3
-      min_rate_of_change: 0.1
-      refresh_period: 1800
+      lookback_days: 10
+      min_rate_of_change: 0.01
+      refresh_period: 1440
+    - method: VolatilityFilter
+      lookback_days: 10
+      min_volatility: 0.05
+      max_volatility: 0.5
+      refresh_period: 86400
+    - method: ShuffleFilter
+      seed: 42
   telegram:
     enabled: true
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"
