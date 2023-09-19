@@ -12,8 +12,7 @@
 # freqtrade hyperopt --hyperopt-loss SharpeHyperOptLoss --spaces roi buy --strategy Heracles
 # ######################################################################
 # --- Do not remove these libs ---
-from freqtrade.strategy.hyper import IntParameter, DecimalParameter
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import IntParameter, DecimalParameter, IStrategy
 from pandas import DataFrame
 # --------------------------------
 # Add your lib to import here
@@ -30,6 +29,7 @@ class Heracles(IStrategy):
     ########################################## RESULT PASTE PLACE ##########################################
     # 10/100:     25 trades. 18/4/3 Wins/Draws/Losses. Avg profit   5.92%. Median profit   6.33%. Total profit  0.04888306 BTC (  48.88Σ%). Avg duration 4 days, 6:24:00 min. Objective: -11.42103
 
+    INTERFACE_VERSION: int = 3
     # Buy hyperspace params:
     buy_params = {
         "buy_crossed_indicator_shift": 9,
@@ -88,7 +88,7 @@ class Heracles(IStrategy):
 
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Buy strategy Hyperopt will build and use.
         """
@@ -109,13 +109,13 @@ class Heracles(IStrategy):
         if conditions:
             dataframe.loc[
                 reduce(lambda x, y: x & y, conditions),
-                'buy']=1
+                'enter_long']=1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Sell strategy Hyperopt will build and use.
         """
-        dataframe.loc[:, 'sell'] = 0
+        dataframe.loc[:, 'exit_long'] = 0
         return dataframe

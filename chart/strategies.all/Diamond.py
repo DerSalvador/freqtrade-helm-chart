@@ -40,8 +40,7 @@
 # *    7/10:    117 trades. 74/41/2 Wins/Draws/Losses. Avg profit   1.91%. Median profit   1.50%. Total profit  0.07370921 BTC (  73.71%). Avg duration 9:26:00 min. Objective: -0.07371
 
 # --- Do not remove these libs ---
-from freqtrade.strategy.hyper import CategoricalParameter, DecimalParameter, IntParameter
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParameter, IStrategy
 from pandas import DataFrame
 # --------------------------------
 
@@ -56,6 +55,7 @@ class Diamond(IStrategy):
     #    Config: 5 x UNLIMITED STOCK costume pair list,
     #    hyperopt : 5000 x SortinoHyperOptLossDaily,
     #    34/5000: 297 trades. 136/156/5 Wins/Draws/Losses. Avg profit   0.49%. Median profit   0.00%. Total profit  45.84477237 USDT (  33.96Σ%). Avg duration 11:54:00 min. Objective: -46.50379
+    INTERFACE_VERSION: int = 3
 
     # Buy hyperspace params:
     buy_params = {
@@ -122,7 +122,7 @@ class Diamond(IStrategy):
         # dataframe['{...}'] = ta.{...}(dataframe, timeperiod={...})
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = []
         conditions.append(
             qtpylib.crossed_above
@@ -135,11 +135,11 @@ class Diamond(IStrategy):
         if conditions:
             dataframe.loc[
                 reduce(lambda x, y: x & y, conditions),
-                'buy']=1
+                'enter_long']=1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = []
         conditions.append(
             qtpylib.crossed_below
@@ -151,5 +151,5 @@ class Diamond(IStrategy):
         if conditions:
             dataframe.loc[
                 reduce(lambda x, y: x & y, conditions),
-                'sell']=1
+                'exit_long']=1
         return dataframe
