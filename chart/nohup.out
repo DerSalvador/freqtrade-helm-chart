@@ -601,3 +601,14 @@ ingress-nginx
 kube-node-lease
 kube-public
 kube-system
+pod/backtesting-1694882106-gwl22
+pod "backtesting-1694882106-gwl22" deleted
+pod/backtesting-1694882106-hrnvj
+pod "backtesting-1694882106-hrnvj" deleted
+pod/backtesting-1694882569-thbd2
+pod "backtesting-1694882569-thbd2" deleted
+pod/backtesting-1694883253-ccd2r
+pod "backtesting-1694883253-ccd2r" deleted
+pod/backtesting-1694883253-q9bbx
+pod "backtesting-1694883253-q9bbx" deleted
+pod/backtesting-1694883253-vljp5

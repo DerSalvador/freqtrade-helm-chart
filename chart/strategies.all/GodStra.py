@@ -11,21 +11,22 @@
 
 # --- Do not remove these libs ---
 import logging
+from functools import reduce
 
-from numpy.lib import math
-from freqtrade.strategy.interface import IStrategy
-from pandas import DataFrame
-# --------------------------------
-
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+import numpy as np
 # Add your lib to import here
 # import talib.abstract as ta
 import pandas as pd
+from freqtrade.strategy import IStrategy
+from numpy.lib import math
+from pandas import DataFrame
 # import talib.abstract as ta
 from ta import add_all_ta_features
 from ta.utils import dropna
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-from functools import reduce
-import numpy as np
+
+# --------------------------------
+
 
 
 class GodStra(IStrategy):
@@ -37,6 +38,7 @@ class GodStra(IStrategy):
     # | * Best |   2/500 |       10 |      7    0    3 |       18.76% |  983.46414442 USDT  (187.58%) |        360.0 m |    -4.32665 |
     # | * Best |   5/500 |        9 |      8    0    1 |       21.83% | 1,060.11476586 USDT  (196.50%) |      3,440.0 m |     -7.0696 |
 
+    INTERFACE_VERSION: int = 3
     # Buy hyperspace params:
     buy_params = {
         'buy-cross-0': 'volatility_kcc',
@@ -92,7 +94,7 @@ class GodStra(IStrategy):
         # dataframe.to_csv("df.csv", index=True)
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = list()
         # /5: Cuz We have 5 Group of variables inside buy_param
         for i in range(self.dna_size(self.buy_params)):
@@ -131,11 +133,11 @@ class GodStra(IStrategy):
         print(conditions)
         dataframe.loc[
             reduce(lambda x, y: x & y, conditions),
-            'buy'] = 1
+            'enter_long'] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = list()
         for i in range(self.dna_size(self.sell_params)):
             OPR = self.sell_params[f'sell-oper-{i}']
@@ -171,6 +173,6 @@ class GodStra(IStrategy):
 
         dataframe.loc[
             reduce(lambda x, y: x & y, conditions),
-            'sell'] = 1
+            'exit_long'] = 1
 
         return dataframe
