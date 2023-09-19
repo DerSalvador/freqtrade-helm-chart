@@ -10,14 +10,15 @@ import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 
 
-class Strategy001(IStrategy):
+class Strategy001_custom_exit(IStrategy):
+
     """
-    Strategy 001
-    author@: Gerald Lonlas
+    Strategy 001_custom_exit
+    author@: Gerald Lonlas, froggleston
     github@: https://github.com/freqtrade/freqtrade-strategies
 
     How to use it?
-    > python3 ./freqtrade/main.py -s Strategy001
+    > python3 ./freqtrade/main.py -s Strategy001_custom_exit
     """
 
     INTERFACE_VERSION: int = 3
@@ -88,6 +89,8 @@ class Strategy001(IStrategy):
         dataframe['ha_open'] = heikinashi['open']
         dataframe['ha_close'] = heikinashi['close']
 
+        dataframe['rsi'] = ta.RSI(dataframe, 14)
+
         return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
@@ -120,3 +123,21 @@ class Strategy001(IStrategy):
             ),
             'exit_long'] = 1
         return dataframe
+
+    def custom_exit(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float, current_profit: float, **kwargs):
+        """
+        Sell only when matching some criteria other than those used to generate the sell signal
+        :return: str sell_reason, if any, otherwise None
+        """
+        # get dataframe
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+
+        # get the current candle
+        current_candle = dataframe.iloc[-1].squeeze()
+
+        # if RSI greater than 70 and profit is positive, then sell
+        if (current_candle['rsi'] > 70) and (current_profit > 0):
+            return "rsi_profit_sell"
+
+        # else, hold
+        return None
