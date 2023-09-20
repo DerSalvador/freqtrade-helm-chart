@@ -683,3 +683,7 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
+2023.8_freqairl: Pulling from freqtradeorg/freqtrade
+Digest: sha256:29b06d5eee0b6a7288e29b72fafd41c239355be0902f5aced66fe52039578885
+Status: Image is up to date for freqtradeorg/freqtrade:2023.8_freqairl
+docker.io/freqtradeorg/freqtrade:2023.8_freqairl
