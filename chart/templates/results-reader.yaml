@@ -42,7 +42,7 @@ spec:
       volumes:
       - name: results
         persistentVolumeClaim:
-          claimName: backtesting-results
+          claimName: backtesting-results-{{ .Release.Namespace }}
       - name: config
         configMap:
           name: results-reader-config-{{ .Release.Namespace }}
