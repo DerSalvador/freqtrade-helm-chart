@@ -1,436 +1,25 @@
+pod/backtesting-1695318364-d2wwq
+pod "backtesting-1695318364-d2wwq" deleted
+pod/backtesting-1695318558-6lsh8
+pod "backtesting-1695318558-6lsh8" deleted
+pod/backtesting-1695319231-7h2zp
+pod "backtesting-1695319231-7h2zp" deleted
+pod/backtesting-1695321068-25n9l
+pod "backtesting-1695321068-25n9l" deleted
+pod/backtesting-1695321311-vgsf5
+pod "backtesting-1695321311-vgsf5" deleted
+pod/backtesting-1695321371-k2978
+pod "backtesting-1695321371-k2978" deleted
+pod/freqtrade-85fc5b4988-r24rl
+pod "freqtrade-85fc5b4988-r24rl" deleted
+configmap/freqtrade-config-binance-michael
+configmap "freqtrade-config-binance-michael" deleted
+configmap/freqtrade-strategies-binance-michael
+configmap "freqtrade-strategies-binance-michael" deleted
 configmap/kube-root-ca.crt
 configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace
-binance-michael
-default
-gke-gmp-system
-gke-managed-filestorecsi
-gmp-public
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-trading
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace
-default
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694850205-4jhsk
-pod "backtesting-1694850205-4jhsk" deleted
-pod/results-reader-6fbbdc4b85-xfhh7
-pod "results-reader-6fbbdc4b85-xfhh7" deleted
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace
-default
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694850205-w7qtx
-pod "backtesting-1694850205-w7qtx" deleted
-pod/backtesting-1694850412-85cj6
-pod "backtesting-1694850412-85cj6" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace
-default
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace
-default
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694855610-k2n62
-pod "backtesting-1694855610-k2n62" deleted
-pod/backtesting-1694855610-vfw6g
-pod "backtesting-1694855610-vfw6g" deleted
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace
-default
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace
-default
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694870459-jtf2j
-Error from server (NotFound): pods "backtesting-1694870459-jtf2j" not found
-pod/freqtrade-5d8b768cd-2tps6
-Error from server (NotFound): pods "freqtrade-5d8b768cd-2tps6" not found
-pod/results-reader-59b9b66fd8-j4lc2
-Error from server (NotFound): pods "results-reader-59b9b66fd8-j4lc2" not found
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694878374-d2qft
-pod "backtesting-1694878374-d2qft" deleted
-pod/backtesting-1694878374-j7b45
-pod "backtesting-1694878374-j7b45" deleted
-pod/backtesting-1694878565-q4zkm
-pod "backtesting-1694878565-q4zkm" deleted
-pod/backtesting-1694878698-rj4gs
-pod "backtesting-1694878698-rj4gs" deleted
-pod/freqtrade-6cfd8b788d-w7tg9
-Error from server (NotFound): pods "freqtrade-6cfd8b788d-w7tg9" not found
-pod/results-reader-59b9b66fd8-5lf94
-Error from server (NotFound): pods "results-reader-59b9b66fd8-5lf94" not found
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694878374-k8mcv
-pod "backtesting-1694878374-k8mcv" deleted
-pod/backtesting-1694878565-9fcsl
-pod "backtesting-1694878565-9fcsl" deleted
-pod/backtesting-1694878698-qnfll
-pod "backtesting-1694878698-qnfll" deleted
-pod/backtesting-1694879193-8nshk
-pod "backtesting-1694879193-8nshk" deleted
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694878374-6vhr7
-pod "backtesting-1694878374-6vhr7" deleted
-pod/backtesting-1694878565-xlhdh
-pod "backtesting-1694878565-xlhdh" deleted
-pod/backtesting-1694878698-2txc8
-pod "backtesting-1694878698-2txc8" deleted
-pod/backtesting-1694879193-qf9w5
-pod "backtesting-1694879193-qf9w5" deleted
-pod/backtesting-1694879680-lsss4
-pod "backtesting-1694879680-lsss4" deleted
-pod/results-reader-59b9b66fd8-8htql
-Error from server (NotFound): pods "results-reader-59b9b66fd8-8htql" not found
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694878374-26fvr
-pod "backtesting-1694878374-26fvr" deleted
-pod/backtesting-1694878565-djb9x
-pod "backtesting-1694878565-djb9x" deleted
-pod/backtesting-1694878698-z4g7d
-pod "backtesting-1694878698-z4g7d" deleted
-pod/backtesting-1694879193-dt899
-pod "backtesting-1694879193-dt899" deleted
-pod/backtesting-1694879680-wvqgd
-pod "backtesting-1694879680-wvqgd" deleted
-pod/backtesting-1694879788-g48nt
-pod "backtesting-1694879788-g48nt" deleted
-pod/freqtrade-6cfd8b788d-hwjv9
-Error from server (NotFound): pods "freqtrade-6cfd8b788d-hwjv9" not found
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694878374-68j7p
-pod "backtesting-1694878374-68j7p" deleted
-pod/backtesting-1694878565-8www4
-pod "backtesting-1694878565-8www4" deleted
-pod/backtesting-1694878698-l5hmq
-pod "backtesting-1694878698-l5hmq" deleted
-pod/backtesting-1694879193-2qv6s
-pod "backtesting-1694879193-2qv6s" deleted
-pod/backtesting-1694879680-gv4t8
-pod "backtesting-1694879680-gv4t8" deleted
-pod/backtesting-1694879788-7xrgf
-pod "backtesting-1694879788-7xrgf" deleted
-pod/backtesting-1694880172-2s5jl
-pod "backtesting-1694880172-2s5jl" deleted
-pod/freqtrade-6cfd8b788d-6fzd8
-Error from server (NotFound): pods "freqtrade-6cfd8b788d-6fzd8" not found
-pod/results-reader-59b9b66fd8-9lvjl
-Error from server (NotFound): pods "results-reader-59b9b66fd8-9lvjl" not found
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kraken-michael-digitalocean
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-default
-kraken-hellen
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-
-error: You must provide one or more resources by argument or filename.
-Example resource specifications include:
-   '-f rsrc.yaml'
-   '--filename=rsrc.json'
-   '<resource> <name>'
-   '<resource>'
-
-error: You must provide one or more resources by argument or filename.
-Example resource specifications include:
-   '-f rsrc.yaml'
-   '--filename=rsrc.json'
-   '<resource> <name>'
-   '<resource>'
-pod/backtesting-1694882106-nl4dt
-Error from server (NotFound): pods "backtesting-1694882106-nl4dt" not found
-pod/freqtrade-55b6bfdf66-tr48n
-Error from server (NotFound): pods "freqtrade-55b6bfdf66-tr48n" not found
-pod/results-reader-59b9b66fd8-cctp4
-Error from server (NotFound): pods "results-reader-59b9b66fd8-cctp4" not found
-configmap/freqtrade-config
-Error from server (NotFound): configmaps "freqtrade-config" not found
-configmap/freqtrade-strategies
-Error from server (NotFound): configmaps "freqtrade-strategies" not found
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-Error from server (NotFound): configmaps "results-reader-config" not found
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-binance-michael
-default
-kraken-hellen
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694882106-nl4dt
-Error from server (NotFound): pods "backtesting-1694882106-nl4dt" not found
-pod/freqtrade-55b6bfdf66-tr48n
-Error from server (NotFound): pods "freqtrade-55b6bfdf66-tr48n" not found
-pod/results-reader-59b9b66fd8-cctp4
-Error from server (NotFound): pods "results-reader-59b9b66fd8-cctp4" not found
-configmap/freqtrade-config
-Error from server (NotFound): configmaps "freqtrade-config" not found
-configmap/freqtrade-strategies
-Error from server (NotFound): configmaps "freqtrade-strategies" not found
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-Error from server (NotFound): configmaps "results-reader-config" not found
-
-Usage: dsTradingDeleteAllPods.sh namespacei kubectx
-binance-michael
-default
-kraken-hellen
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config-binance-michael
+configmap "results-reader-config-binance-michael" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
 binance-michael
@@ -440,8 +29,32 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
+pod/backtesting-1695319231-zcfd7
+pod "backtesting-1695319231-zcfd7" deleted
+pod/backtesting-1695318345-wf7dd
+pod "backtesting-1695318345-wf7dd" deleted
+pod/backtesting-1695318327-j6lxm
+pod "backtesting-1695318327-j6lxm" deleted
+pod/backtesting-1695318572-zbc7b
+pod "backtesting-1695318572-zbc7b" deleted
+pod/backtesting-1695318583-cwfsr
+pod "backtesting-1695318583-cwfsr" deleted
+pod/backtesting-1695321068-8clb9
+pod "backtesting-1695321068-8clb9" deleted
+pod/backtesting-1695321311-c9b8m
+pod "backtesting-1695321311-c9b8m" deleted
+pod/backtesting-1695321371-9djd5
+pod "backtesting-1695321371-9djd5" deleted
+pod/backtesting-1695321608-xhbms
+pod "backtesting-1695321608-xhbms" deleted
+configmap/freqtrade-config-binance-michael
+configmap "freqtrade-config-binance-michael" deleted
+configmap/freqtrade-strategies-binance-michael
+configmap "freqtrade-strategies-binance-michael" deleted
 configmap/kube-root-ca.crt
 configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config-binance-michael
+configmap "results-reader-config-binance-michael" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
 binance-michael
@@ -451,20 +64,47 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
-pod/backtesting-1694882688-vx4vg
-pod "backtesting-1694882688-vx4vg" deleted
-pod/freqtrade-6874d8df4b-c2s8t
-Error from server (NotFound): pods "freqtrade-6874d8df4b-c2s8t" not found
-pod/results-reader-59b9b66fd8-4r7wf
-Error from server (NotFound): pods "results-reader-59b9b66fd8-4r7wf" not found
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
+pod/backtesting-1695319252-grbf4
+pod "backtesting-1695319252-grbf4" deleted
+pod/backtesting-1695319598-48f7n
+pod "backtesting-1695319598-48f7n" deleted
+pod/freqtrade-678ff48fb4-9zm4p
+Error from server (NotFound): pods "freqtrade-678ff48fb4-9zm4p" not found
+pod/results-reader-645b648796-2lsng
+Error from server (NotFound): pods "results-reader-645b648796-2lsng" not found
+configmap/freqtrade-config-kraken-hellen
+configmap "freqtrade-config-kraken-hellen" deleted
+configmap/freqtrade-strategies-kraken-hellen
+configmap "freqtrade-strategies-kraken-hellen" deleted
 configmap/kube-root-ca.crt
 configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
+configmap/results-reader-config-kraken-hellen
+configmap "results-reader-config-kraken-hellen" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+pod/backtesting-1695319242-8xcd8
+pod "backtesting-1695319242-8xcd8" deleted
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695319613-2gjr7
+pod "backtesting-1695319613-2gjr7" deleted
+pod/backtesting-1695321037-dbqsn
+pod "backtesting-1695321037-dbqsn" deleted
+pod/results-reader-6b4954c7f7-5hz4s
+Error from server (NotFound): pods "results-reader-6b4954c7f7-5hz4s" not found
+configmap/freqtrade-config-kraken-michael
+configmap "freqtrade-config-kraken-michael" deleted
+configmap/freqtrade-strategies-kraken-michael
+configmap "freqtrade-strategies-kraken-michael" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config-kraken-michael
+configmap "results-reader-config-kraken-michael" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
 binance-michael
@@ -474,22 +114,28 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
-pod/backtesting-1694882106-nl4dt
-pod "backtesting-1694882106-nl4dt" deleted
-pod/backtesting-1694882327-qzkl2
-pod "backtesting-1694882327-qzkl2" deleted
-pod/backtesting-1694882569-xkgbd
-pod "backtesting-1694882569-xkgbd" deleted
-pod/freqtrade-6874d8df4b-5v8nn
-Error from server (NotFound): pods "freqtrade-6874d8df4b-5v8nn" not found
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
+pod/backtesting-1695321692-b5hxt
+pod "backtesting-1695321692-b5hxt" deleted
+pod/freqtrade-7b84679c49-g7hmj
+pod "freqtrade-7b84679c49-g7hmj" deleted
+pod/freqtrade-7b84679c49-rzp9c
+pod "freqtrade-7b84679c49-rzp9c" deleted
+pod/backtesting-1695318345-fqgl8
+pod "backtesting-1695318345-fqgl8" deleted
+pod/backtesting-1695318572-jt7l6
+pod "backtesting-1695318572-jt7l6" deleted
+pod/backtesting-1695318327-24c7g
+pod "backtesting-1695318327-24c7g" deleted
+pod/backtesting-1695318583-jrglg
+pod "backtesting-1695318583-jrglg" deleted
+configmap/freqtrade-config-binance-michael
+configmap "freqtrade-config-binance-michael" deleted
+configmap/freqtrade-strategies-binance-michael
+configmap "freqtrade-strategies-binance-michael" deleted
 configmap/kube-root-ca.crt
 configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
+configmap/results-reader-config-binance-michael
+configmap "results-reader-config-binance-michael" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
 binance-michael
@@ -499,30 +145,26 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
-pod/backtesting-1694878565-b6wrr
-pod "backtesting-1694878565-b6wrr" deleted
-pod/backtesting-1694878698-86rv2
-pod "backtesting-1694878698-86rv2" deleted
-pod/backtesting-1694879193-bv9fj
-pod "backtesting-1694879193-bv9fj" deleted
-pod/backtesting-1694879680-xhlb4
-pod "backtesting-1694879680-xhlb4" deleted
-pod/backtesting-1694879788-hqqdv
-pod "backtesting-1694879788-hqqdv" deleted
-pod/backtesting-1694880172-z75md
-pod "backtesting-1694880172-z75md" deleted
-pod/backtesting-1694880629-b9v5j
-pod "backtesting-1694880629-b9v5j" deleted
-pod/freqtrade-6cfd8b788d-5dprw
-pod "freqtrade-6cfd8b788d-5dprw" deleted
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
+pod/backtesting-1695319242-k5ljs
+pod "backtesting-1695319242-k5ljs" deleted
+pod/backtesting-1695319613-5tkvv
+pod "backtesting-1695319613-5tkvv" deleted
+pod/backtesting-1695321037-lmmlg
+pod "backtesting-1695321037-lmmlg" deleted
+pod/backtesting-1695321720-hmt7k
+pod "backtesting-1695321720-hmt7k" deleted
+pod/freqtrade-54848f8777-d9zrm
+Error from server (NotFound): pods "freqtrade-54848f8777-d9zrm" not found
+pod/results-reader-6b4954c7f7-brgpt
+Error from server (NotFound): pods "results-reader-6b4954c7f7-brgpt" not found
+configmap/freqtrade-config-kraken-michael
+configmap "freqtrade-config-kraken-michael" deleted
+configmap/freqtrade-strategies-kraken-michael
+configmap "freqtrade-strategies-kraken-michael" deleted
 configmap/kube-root-ca.crt
 configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
+configmap/results-reader-config-kraken-michael
+configmap "results-reader-config-kraken-michael" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
 binance-michael
@@ -532,36 +174,24 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
-pod/backtesting-1694879193-2bgmh
-pod "backtesting-1694879193-2bgmh" deleted
-pod/backtesting-1694879680-66qv5
-pod "backtesting-1694879680-66qv5" deleted
-pod/backtesting-1694879788-4r2cw
-pod "backtesting-1694879788-4r2cw" deleted
-pod/backtesting-1694880172-tndkb
-pod "backtesting-1694880172-tndkb" deleted
-pod/backtesting-1694880629-s8s8s
-pod "backtesting-1694880629-s8s8s" deleted
-pod/backtesting-1694883317-hwn52
-pod "backtesting-1694883317-hwn52" deleted
-pod/backtesting-1694883613-wll4h
-pod "backtesting-1694883613-wll4h" deleted
-pod/backtesting-1694883981-rm8bj
-pod "backtesting-1694883981-rm8bj" deleted
-pod/freqtrade-55b6bfdf66-qvzfd
-Error from server (NotFound): pods "freqtrade-55b6bfdf66-qvzfd" not found
-pod/freqtrade-6cfd8b788d-78wvj
-Error from server (NotFound): pods "freqtrade-6cfd8b788d-78wvj" not found
-pod/results-reader-59b9b66fd8-nw5rz
-Error from server (NotFound): pods "results-reader-59b9b66fd8-nw5rz" not found
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
+pod/backtesting-1695319252-l6x26
+pod "backtesting-1695319252-l6x26" deleted
+pod/backtesting-1695319598-qn4m7
+pod "backtesting-1695319598-qn4m7" deleted
+pod/backtesting-1695321731-shxpb
+pod "backtesting-1695321731-shxpb" deleted
+pod/freqtrade-5686898d5b-fbp9v
+Error from server (NotFound): pods "freqtrade-5686898d5b-fbp9v" not found
+pod/results-reader-645b648796-vv5sf
+Error from server (NotFound): pods "results-reader-645b648796-vv5sf" not found
+configmap/freqtrade-config-kraken-hellen
+configmap "freqtrade-config-kraken-hellen" deleted
+configmap/freqtrade-strategies-kraken-hellen
+configmap "freqtrade-strategies-kraken-hellen" deleted
 configmap/kube-root-ca.crt
 configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
+configmap/results-reader-config-kraken-hellen
+configmap "results-reader-config-kraken-hellen" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
 binance-michael
@@ -571,109 +201,28 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
-pod/backtesting-1694882688-r8dgw
-pod "backtesting-1694882688-r8dgw" deleted
-pod/backtesting-1694882798-d4t9g
-Error from server (NotFound): pods "backtesting-1694882798-d4t9g" not found
-pod/backtesting-1694884448-w9lw6
-Error from server (NotFound): pods "backtesting-1694884448-w9lw6" not found
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
+pod/backtesting-1695321068-6jkcz
+pod "backtesting-1695321068-6jkcz" deleted
+pod/backtesting-1695318345-l4gw5
+pod "backtesting-1695318345-l4gw5" deleted
+pod/backtesting-1695321311-tgj9c
+pod "backtesting-1695321311-tgj9c" deleted
+pod/backtesting-1695321371-vkb48
+pod "backtesting-1695321371-vkb48" deleted
+pod/backtesting-1695321608-mfrzd
+pod "backtesting-1695321608-mfrzd" deleted
+pod/backtesting-1695321692-m2r5n
+pod "backtesting-1695321692-m2r5n" deleted
+pod/backtesting-1695321968-56sdk
+pod "backtesting-1695321968-56sdk" deleted
+configmap/freqtrade-config-binance-michael
+configmap "freqtrade-config-binance-michael" deleted
+configmap/freqtrade-strategies-binance-michael
+configmap "freqtrade-strategies-binance-michael" deleted
 configmap/kube-root-ca.crt
 configmap "kube-root-ca.crt" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-binance-michael
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694882106-gwl22
-pod "backtesting-1694882106-gwl22" deleted
-pod/backtesting-1694882106-hrnvj
-pod "backtesting-1694882106-hrnvj" deleted
-pod/backtesting-1694882569-thbd2
-pod "backtesting-1694882569-thbd2" deleted
-pod/backtesting-1694883253-ccd2r
-pod "backtesting-1694883253-ccd2r" deleted
-pod/backtesting-1694883253-q9bbx
-pod "backtesting-1694883253-q9bbx" deleted
-pod/backtesting-1694883253-vljp5
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-pod/backtesting-1694880172-b8m2m
-pod "backtesting-1694880172-b8m2m" deleted
-pod/backtesting-1694880629-tdsdl
-pod "backtesting-1694880629-tdsdl" deleted
-pod/backtesting-1694883317-5sw46
-pod "backtesting-1694883317-5sw46" deleted
-pod/backtesting-1694883317-htgmk
-pod "backtesting-1694883317-htgmk" deleted
-pod/backtesting-1694883613-8th6b
-pod "backtesting-1694883613-8th6b" deleted
-pod/backtesting-1694884039-pqt9s
-pod "backtesting-1694884039-pqt9s" deleted
-pod/backtesting-1694884179-w4nsb
-pod "backtesting-1694884179-w4nsb" deleted
-pod/backtesting-1694884422-j8dxj
-pod "backtesting-1694884422-j8dxj" deleted
-pod/backtesting-1694884422-wwhwd
-pod "backtesting-1694884422-wwhwd" deleted
-pod/backtesting-1694884584-rrkx7
-pod "backtesting-1694884584-rrkx7" deleted
-pod/freqtrade-6cfd8b788d-fttt6
-pod "freqtrade-6cfd8b788d-fttt6" deleted
-pod/results-reader-59b9b66fd8-cts7s
-Error from server (NotFound): pods "results-reader-59b9b66fd8-cts7s" not found
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-pod/backtesting-1694882569-ztv7r
-binance-michael
-default
-kraken-hellen
-kraken-michael
-kube-node-lease
-kube-public
-kube-system
-pod "backtesting-1694882569-ztv7r" deleted
-pod/backtesting-1694883253-g5pz8
-pod "backtesting-1694883253-g5pz8" deleted
-pod/backtesting-1695070194-ml7pb
-pod "backtesting-1695070194-ml7pb" deleted
-configmap/freqtrade-config
-configmap "freqtrade-config" deleted
-configmap/freqtrade-strategies
-configmap "freqtrade-strategies" deleted
-configmap/kube-root-ca.crt
-configmap "kube-root-ca.crt" deleted
-configmap/results-reader-config
-configmap "results-reader-config" deleted
+configmap/results-reader-config-binance-michael
+configmap "results-reader-config-binance-michael" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
 binance-michael
@@ -683,7 +232,119 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
-2023.8_freqairl: Pulling from freqtradeorg/freqtrade
-Digest: sha256:29b06d5eee0b6a7288e29b72fafd41c239355be0902f5aced66fe52039578885
-Status: Image is up to date for freqtradeorg/freqtrade:2023.8_freqairl
-docker.io/freqtradeorg/freqtrade:2023.8_freqairl
+pod/backtesting-1695318327-j5zdq
+pod "backtesting-1695318327-j5zdq" deleted
+pod/backtesting-1695318583-qx2sx
+pod "backtesting-1695318583-qx2sx" deleted
+pod/backtesting-1695319252-7wr2z
+pod "backtesting-1695319252-7wr2z" deleted
+pod/backtesting-1695318572-6dfvr
+pod "backtesting-1695318572-6dfvr" deleted
+pod/backtesting-1695319598-g2cnq
+pod "backtesting-1695319598-g2cnq" deleted
+pod/backtesting-1695321731-zp72q
+pod "backtesting-1695321731-zp72q" deleted
+pod/backtesting-1695322016-v9bnd
+pod "backtesting-1695322016-v9bnd" deleted
+pod/results-reader-645b648796-vbnvs
+Error from server (NotFound): pods "results-reader-645b648796-vbnvs" not found
+configmap/freqtrade-config-kraken-hellen
+configmap "freqtrade-config-kraken-hellen" deleted
+configmap/freqtrade-strategies-kraken-hellen
+configmap "freqtrade-strategies-kraken-hellen" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config-kraken-hellen
+configmap "results-reader-config-kraken-hellen" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695319598-nl6sj
+pod "backtesting-1695319598-nl6sj" deleted
+pod/backtesting-1695321731-n9bhn
+pod "backtesting-1695321731-n9bhn" deleted
+pod/backtesting-1695322016-h2vjw
+pod "backtesting-1695322016-h2vjw" deleted
+pod/backtesting-1695319242-w2xr8
+pod "backtesting-1695319242-w2xr8" deleted
+pod/backtesting-1695322382-8ccdr
+pod "backtesting-1695322382-8ccdr" deleted
+pod/backtesting-1695319613-fvx5m
+pod "backtesting-1695319613-fvx5m" deleted
+pod/freqtrade-5686898d5b-6lz5m
+pod "freqtrade-5686898d5b-6lz5m" deleted
+pod/backtesting-1695321037-vd5ps
+pod "backtesting-1695321037-vd5ps" deleted
+pod/backtesting-1695321720-kvh7q
+pod "backtesting-1695321720-kvh7q" deleted
+pod/backtesting-1695322005-b5lpk
+pod "backtesting-1695322005-b5lpk" deleted
+pod/results-reader-6b4954c7f7-t4zjd
+Error from server (NotFound): pods "results-reader-6b4954c7f7-t4zjd" not found
+configmap/freqtrade-config-kraken-michael
+configmap "freqtrade-config-kraken-michael" deleted
+configmap/freqtrade-strategies-kraken-michael
+configmap "freqtrade-strategies-kraken-michael" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config-kraken-michael
+configmap "results-reader-config-kraken-michael" deleted
+persistentvolumeclaim/backtesting-data
+persistentvolumeclaim "backtesting-data" deleted
+persistentvolumeclaim/backtesting-data-kraken-michael
+persistentvolumeclaim "backtesting-data-kraken-michael" deleted
+pod/results-reader-645b648796-6xz2l
+Error from server (NotFound): pods "results-reader-645b648796-6xz2l" not found
+configmap/freqtrade-config-kraken-hellen
+configmap "freqtrade-config-kraken-hellen" deleted
+configmap/freqtrade-strategies-kraken-hellen
+configmap "freqtrade-strategies-kraken-hellen" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config-kraken-hellen
+configmap "results-reader-config-kraken-hellen" deleted
+persistentvolumeclaim/backtesting-data
+persistentvolumeclaim "backtesting-data" deleted
+persistentvolumeclaim/backtesting-data-kraken-hellen
+persistentvolumeclaim "backtesting-data-kraken-hellen" deleted
+persistentvolumeclaim/backtesting-results
+persistentvolumeclaim "backtesting-results" deleted
+persistentvolumeclaim/backtesting-results-kraken-hellen
+persistentvolumeclaim "backtesting-results-kraken-hellen" deleted
+persistentvolumeclaim/freqtrade-sqlite
+Error from server (NotFound): persistentvolumeclaims "freqtrade-sqlite" not found
+persistentvolume/pvc-2be49964-c219-4078-87e2-136ddbcb98ba
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+persistentvolume "pvc-2be49964-c219-4078-87e2-136ddbcb98ba" deleted
+pod/backtesting-1695318327-w992r
+pod "backtesting-1695318327-w992r" deleted
+pod/backtesting-1695318583-4g5lv
+pod "backtesting-1695318583-4g5lv" deleted
+pod/backtesting-1695319252-czqkt
+pod "backtesting-1695319252-czqkt" deleted
+pod/backtesting-1695319598-mscg8
+pod "backtesting-1695319598-mscg8" deleted
+pod/backtesting-1695321731-mzjjl
+pod "backtesting-1695321731-mzjjl" deleted
+pod/backtesting-1695322016-gb9r5
+pod "backtesting-1695322016-gb9r5" deleted
+pod/backtesting-1695322382-xhkmp
+pod "backtesting-1695322382-xhkmp" deleted
+pod/backtesting-1695322507-x9x48
+pod "backtesting-1695322507-x9x48" deleted
+configmap/freqtrade-config-kraken-hellen
+configmap "freqtrade-config-kraken-hellen" deleted
+configmap/freqtrade-strategies-kraken-hellen
+configmap "freqtrade-strategies-kraken-hellen" deleted
+configmap/kube-root-ca.crt
+configmap "kube-root-ca.crt" deleted
+configmap/results-reader-config-kraken-hellen
+configmap "results-reader-config-kraken-hellen" deleted
+persistentvolumeclaim/backtesting-data-kraken-hellen
+persistentvolumeclaim "backtesting-data-kraken-hellen" deleted
