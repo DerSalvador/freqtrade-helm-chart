@@ -94,13 +94,13 @@ spec:
       volumes:
       - name: data
         persistentVolumeClaim:
-          claimName: backtesting-data
+          claimName: backtesting-data-{{ .Release.Namespace }}
       - name: results
         persistentVolumeClaim:
-          claimName: backtesting-results
+          claimName: backtesting-results-{{ .Release.Namespace }}
       - name: config
         configMap:
-          name: freqtrade-config
+          name: freqtrade-config-{{ .Release.Namespace }}
       - name: strategies
         configMap:
           name: freqtrade-strategies
@@ -108,7 +108,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: backtesting-data
+  name: backtesting-data-{{ .Release.Namespace }}
 spec:
   accessModes:
   - ReadWriteOnce
@@ -120,7 +120,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: backtesting-results
+  name: backtesting-results-{{ .Release.Namespace }}
 spec:
   accessModes:
   - ReadWriteOnce
