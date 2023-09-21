@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: results-reader-config
+  name: results-reader-config-{{ .Release.Namespace }}
 data:
   default.conf: |
     server {
@@ -45,7 +45,7 @@ spec:
           claimName: backtesting-results
       - name: config
         configMap:
-          name: results-reader-config
+          name: results-reader-config-{{ .Release.Namespace }}
       imagePullSecrets:
       - name: do-dersalvador-registry
 ---
