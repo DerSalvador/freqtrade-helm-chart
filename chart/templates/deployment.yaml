@@ -68,18 +68,18 @@ spec:
       volumes:
       - name: config
         configMap:
-          name: freqtrade-config
+          name: freqtrade-config-{{ .Release.Namespace }}
       - name: strategies
         configMap:
-          name: freqtrade-strategies
+          name: freqtrade-strategies-{{ .Release.Namespace }}
       - name: sqlite
         persistentVolumeClaim:
-          claimName: freqtrade-sqlite
+          claimName: freqtrade-sqlite-{{ .Release.Namespace }}
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: freqtrade-sqlite
+  name: freqtrade-sqlite-{{ .Release.Namespace }}
 spec:
   accessModes:
   - ReadWriteOnce

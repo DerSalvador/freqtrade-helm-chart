@@ -72,29 +72,29 @@ config:
       sort_key: quoteVolume
       min_value: 0
       refresh_period: 1800
-    - method: RangeStabilityFilter
-      lookback_days: 10
-      min_rate_of_change: 0.01
-      max_rate_of_change: 0.99
-      refresh_period: 1440
-    - method: AgeFilter
-      min_days_listed: 10
-    - method: PrecisionFilter
-    - method: PriceFilter
-      low_price_ratio: 0.01
-    - method: SpreadFilter
-      max_spread_ratio: 0.005
-    - method: RangeStabilityFilter
-      lookback_days: 10
-      min_rate_of_change: 0.01
-      refresh_period: 1440
-    - method: VolatilityFilter
-      lookback_days: 10
-      min_volatility: 0.05
-      max_volatility: 0.5
-      refresh_period: 86400
-    - method: ShuffleFilter
-      seed: 42
+    #- method: RangeStabilityFilter
+    #  lookback_days: 10
+    #  min_rate_of_change: 0.01
+    #  max_rate_of_change: 0.99
+    #  refresh_period: 1440
+    #- method: AgeFilter
+    #  min_days_listed: 10
+    #- method: PrecisionFilter
+    #- method: PriceFilter
+    #  low_price_ratio: 0.01
+    #- method: SpreadFilter
+    #  max_spread_ratio: 0.005
+    #- method: RangeStabilityFilter
+    #  lookback_days: 10
+    #  min_rate_of_change: 0.01
+    #  refresh_period: 1440
+    #- method: VolatilityFilter
+    #  lookback_days: 10
+    #  min_volatility: 0.05
+    #  max_volatility: 0.5
+    #  refresh_period: 86400
+    #- method: ShuffleFilter
+    #  seed: 42
   telegram:
     enabled: true
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"
@@ -168,10 +168,12 @@ config:
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.04
-    "20": 0.02
-    "30": 0.01
-    "60": 0
+    "0": 0.10
+    "20": 0.08
+    "30": 0.04
+    "60": 0.02
+    "120": 0.01
+    "160": 0
 
 image:
   base: registry.digitalocean.com/do-dersalvador-registry/freqtrade

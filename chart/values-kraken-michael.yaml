@@ -111,10 +111,12 @@ config:
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.04
-    "20": 0.02
-    "30": 0.01
-    "60": 0
+    "0": 0.10
+    "20": 0.08
+    "30": 0.04
+    "60": 0.02
+    "120": 0.01
+    "160": 0
 
 image:
   base: freqtradeorg/freqtrade
