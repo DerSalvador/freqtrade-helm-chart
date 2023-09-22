@@ -184,7 +184,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: NASOSv5_antipump
+  strategy_list: EI3v2_tag_cofi_green
   fee:
   pvc_size: 1Gi
   results:
@@ -194,7 +194,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: NASOSv5_antipump
+  strategy_name: EI3v2_tag_cofi_green
   pvc_size: 1Gi
 
 ingress:
