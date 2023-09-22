@@ -43,3 +43,67 @@ W0922 08:56:16.960509   78888 reflector.go:535] vendor/k8s.io/client-go/tools/wa
 E0922 08:56:16.960876   78888 reflector.go:147] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2302210": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: no such host
 W0922 09:17:36.081944   78975 reflector.go:458] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: watch of *unstructured.Unstructured ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
 W0922 09:17:36.757928   78888 reflector.go:458] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: watch of *unstructured.Unstructured ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0922 09:43:43.539233   78888 reflector.go:458] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: watch of *unstructured.Unstructured ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0922 09:44:09.179627   78975 reflector.go:458] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: watch of *unstructured.Unstructured ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0922 09:44:15.021309   78888 reflector.go:535] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+I0922 09:44:15.022364   78888 trace.go:236] Trace[1650100007]: "Reflector ListAndWatch" name:vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146 (22-Sep-2023 09:43:45.019) (total time: 30001ms):
+Trace[1650100007]: ---"Objects listed" error:Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout 30001ms (09:44:15.021)
+Trace[1650100007]: [30.001831569s] [30.001831569s] END
+E0922 09:44:15.022898   78888 reflector.go:147] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+W0922 09:44:40.627776   78975 reflector.go:535] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+I0922 09:44:40.628736   78975 trace.go:236] Trace[740042886]: "Reflector ListAndWatch" name:vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146 (22-Sep-2023 09:44:10.626) (total time: 30002ms):
+Trace[740042886]: ---"Objects listed" error:Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout 30001ms (09:44:40.627)
+Trace[740042886]: [30.002339856s] [30.002339856s] END
+E0922 09:44:40.628784   78975 reflector.go:147] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+W0922 09:44:47.737132   78888 reflector.go:535] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+I0922 09:44:47.738206   78888 trace.go:236] Trace[1699890896]: "Reflector ListAndWatch" name:vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146 (22-Sep-2023 09:44:17.734) (total time: 30003ms):
+Trace[1699890896]: ---"Objects listed" error:Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout 30002ms (09:44:47.737)
+Trace[1699890896]: [30.003042396s] [30.003042396s] END
+E0922 09:44:47.738264   78888 reflector.go:147] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+W0922 09:45:12.920603   78975 reflector.go:535] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+I0922 09:45:12.920812   78975 trace.go:236] Trace[1968045771]: "Reflector ListAndWatch" name:vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146 (22-Sep-2023 09:44:42.919) (total time: 30001ms):
+Trace[1968045771]: ---"Objects listed" error:Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout 30001ms (09:45:12.920)
+Trace[1968045771]: [30.001281331s] [30.001281331s] END
+E0922 09:45:12.922828   78975 reflector.go:147] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api/v1/persistentvolumes?fieldSelector=metadata.name%3Dpvc-2afeca50-f9da-475e-ba40-17e8d33ffd9e&resourceVersion=2330909": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+I0922 09:45:17.193406   78888 trace.go:236] Trace[261464152]: "Reflector ListAndWatch" name:vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146 (22-Sep-2023 09:44:52.356) (total time: 24837ms):
+Trace[261464152]: ---"Objects listed" error:<nil> 24837ms (09:45:17.193)
+Trace[261464152]: [24.837117989s] [24.837117989s] END
+W0922 09:50:03.007102   78888 reflector.go:458] vendor/k8s.io/client-go/tools/watch/informerwatcher.go:146: watch of *unstructured.Unstructured ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+persistentvolume/pvc-71093f18-28de-463b-b984-1a4350cd049c
+persistentvolume/pvc-4b8c58b1-e597-49f4-a744-90e6756fcfe6
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Error from server (NotFound): persistentvolumes "pvc-4b8c58b1-e597-49f4-a744-90e6756fcfe6" not found
+Error from server (NotFound): persistentvolumes "pvc-71093f18-28de-463b-b984-1a4350cd049c" not found
+persistentvolume/pvc-71093f18-28de-463b-b984-1a4350cd049c
+persistentvolume/pvc-ea06e5e3-aab8-4b4a-ba1d-c28fdc70f939
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Error from server (NotFound): persistentvolumes "pvc-71093f18-28de-463b-b984-1a4350cd049c" not found
+persistentvolume/pvc-71b52e9c-fd84-4aa9-802c-1a249155e3bf
+Error from server (NotFound): persistentvolumes "pvc-ea06e5e3-aab8-4b4a-ba1d-c28fdc70f939" not found
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Error from server (NotFound): persistentvolumes "pvc-71b52e9c-fd84-4aa9-802c-1a249155e3bf" not found
+persistentvolume/pvc-c49b14bb-1cce-4714-98c3-d0e127c2b959
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Error from server (NotFound): persistentvolumes "pvc-c49b14bb-1cce-4714-98c3-d0e127c2b959" not found
+persistentvolume/pvc-ea06e5e3-aab8-4b4a-ba1d-c28fdc70f939
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+Error from server (NotFound): persistentvolumes "pvc-ea06e5e3-aab8-4b4a-ba1d-c28fdc70f939" not found
+
+default
+ingress-nginx
+kube-node-lease
+kube-public
+kube-system
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+default
+ingress-nginx
+kube-node-lease
+kube-public
+kube-system
+
+X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
+
