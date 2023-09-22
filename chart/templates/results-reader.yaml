@@ -28,6 +28,7 @@ spec:
       labels:
         app: results-reader
     spec:
+      nodeName: pool-dersalvador-y6z2l
       containers:
       - name: nginx
         image: nginx:1.19.6
