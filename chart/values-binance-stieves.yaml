@@ -1,0 +1,149 @@
+config:
+  timeframe: 1m
+  include_timeframes: 5m
+  max_open_trades: 10
+  amend_last_stake_amount: true
+  stake_currency: USDT
+  stake_amount: unlimited
+  tradable_balance_ratio: 0.99
+  fiat_display_currency: EUR
+  db_url: "sqlite:///user_data/tradesv3.sqlite"
+  dry_run: false
+  dry_run_wallet: 1000
+  cancel_open_orders_on_exit: false
+  trading_mode: spot
+  margin_mode: ""
+  unfilledtimeout:
+    entry: 10
+    exit: 30
+    exit_timeout_count: 0
+    unit: minutes
+  entry_pricing:
+    price_side: same
+    use_order_book: true
+    order_book_top: 1
+    price_last_balance: 0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: same
+    use_order_book: true
+    order_book_top: 1
+  download_trades: true
+  exchange:
+    name: binance
+    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ
+    secret: >-
+      RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97
+    ccxt_config:
+      enableRateLimit: true
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 2500
+    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_blacklist: []
+  pairlists:
+    - method: StaticPairList
+      number_assets: 24
+      sort_key: quoteVolume
+      min_value: 0
+      refresh_period: 1800
+  telegram:
+    enabled: true
+    token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"
+    chat_id: "889071692"
+  api_server:
+    enabled: true
+    listen_ip_address: 0.0.0.0
+    listen_port: 8080
+    verbosity: error
+    enable_openapi: false
+    jwt_secret_key: 235573d45bb26d0cbf1986893b12d4aaf0cf4934f3566d9459d818ec7fbb851b
+    ws_token: acnQI1n44GG9lJ51fLKqWQvVJF5k5q7xsw
+    CORS_origins:
+      - "http://127.0.0.1:8080"
+      - "http://localhost:8080"
+      - "http://0.0.0.0:8080"
+    username: freqtrade
+    password: "&&Liz270117!!"
+  freqai:
+    rl_config:
+      train_cycles: 25
+      add_state_info: true
+      max_trade_duration_candles: 300
+      max_training_drawdown_pct: 0.02
+      cpu_count: 8
+      model_type: PPO
+      policy_type: MlpPolicy
+      model_reward_parameters:
+        rr: 1
+        profit_aim: 0.025
+    enabled: true
+    purge_old_models: 2
+    train_period_days: 15
+    backtest_period_days: 7
+    live_retrain_hours: 0
+    identifier: uniqe-id
+    feature_parameters:
+      include_timeframes:
+        - 1m
+        - 15m
+        - 1h
+      include_corr_pairlist: []
+      label_period_candles: 20
+      include_shifted_candles: 2
+      DI_threshold: 0.9
+      weight_factor: 0.9
+      principal_component_analysis: false
+      use_SVM_to_remove_outliers: true
+      indicator_periods_candles:
+        - 10
+        - 20
+      plot_feature_importances: 0
+    data_split_parameters:
+      test_size: 0.33
+      random_state: 1
+    model_training_parameters: {}
+  bot_name: freqtrade-binance-michael
+  initial_state: running
+  force_entry_enable: true
+  internals:
+    process_throttle_secs: 5
+  minimal_roi:
+    "0": 0.10
+    "20": 0.08
+    "30": 0.04
+    "60": 0.02
+    "120": 0.01
+    "160": 0
+
+image:
+  base: freqtradeorg/freqtrade
+  tag: 2023.8_freqairl
+
+backtesting:
+  enabled: true
+  download_data: true
+  timerange:
+  timeframes: 5m
+  strategy_list: TheForce
+  fee:
+  pvc_size: 1Gi
+  results:
+    enable_export: true
+    reader_enabled: true
+    pvc_size: 1Gi
+
+bot:
+  enabled: true
+  strategy_name: TheForce
+  pvc_size: 1Gi
+
+ingress:
+  enabled: true
+
+create_config_configmap: true
+create_strategies_configmap: true
+
+strategies: []
