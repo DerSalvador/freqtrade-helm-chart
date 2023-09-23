@@ -8,7 +8,7 @@ config:
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
-  dry_run: false
+  dry_run: true
   dry_run_wallet: 1000
   cancel_open_orders_on_exit: false
   trading_mode: spot
@@ -33,9 +33,9 @@ config:
   download_trades: true
   exchange:
     name: kraken
-    key: 
+    key: iYMnr561Jd2W/5mO5vGh0dRkxVuRIIFASiyMg438+JxOo+3x4E0hRsRg
     secret: >-
-      
+        7WUb1oOKiy13s45HBDO9s+LMzjw6SXpsLAYuKC5biErZ83Wjt+fTY/QL7s2R6qG/5NCLr2EyxGJE1tqVMshJgQ==
     ccxt_config:
       enableRateLimit: true
     ccxt_async_config:
@@ -52,7 +52,7 @@ config:
   telegram:
     enabled: true
     token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"
-    chat_id: ""889071692
+    chat_id: "889071692"
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -127,7 +127,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: BBRSIv2
+  strategy_list: SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
@@ -137,9 +137,9 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: BBRSIv2
+  strategy_name: SwingHighToSky
   pvc_size: 1Gi
-  freqaimodel: ReinforcementLearner_multiproc
+  freqaimodel: LightGBMRegressor
 
 ingress:
   enabled: true
