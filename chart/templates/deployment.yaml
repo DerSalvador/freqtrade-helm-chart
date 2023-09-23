@@ -50,7 +50,7 @@ spec:
         - --recursive-strategy-search
         - -vvv 
         - --freqaimodel 
-        - ReinforcementLearner_multiproc 
+        - {{ .Values.bot.freqaimodel }}
         - --freqaimodel-path 
         - /freqtrade/freqtrade/freqai/prediction_models
         volumeMounts:
