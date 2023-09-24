@@ -107,3 +107,79 @@ kube-system
 
 X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
 
+pod/backtesting-1695326279-5xts5
+pod "backtesting-1695326279-5xts5" deleted
+pod/backtesting-1695494842-dhdtc
+pod "backtesting-1695494842-dhdtc" deleted
+pod/freqtrade-54848f8777-s2gfn
+pod "freqtrade-54848f8777-s2gfn" deleted
+pod/freqtrade-78fcff57f9-4gvlx
+pod "freqtrade-78fcff57f9-4gvlx" deleted
+pod/results-reader-8589fd85c8-spbln
+pod "results-reader-8589fd85c8-spbln" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695326295-pbk2w
+pod "backtesting-1695326295-pbk2w" deleted
+pod/backtesting-1695494818-prbvz
+pod "backtesting-1695494818-prbvz" deleted
+pod/freqtrade-774748c5d-zmvtz
+pod "freqtrade-774748c5d-zmvtz" deleted
+pod/results-reader-6f95849688-nb5j4
+pod "results-reader-6f95849688-nb5j4" deleted
+pod/results-reader-cbff5cd66-4587h
+pod "results-reader-cbff5cd66-4587h" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695326295-psgss
+pod "backtesting-1695326295-psgss" deleted
+pod/backtesting-1695494818-h6xg5
+pod "backtesting-1695494818-h6xg5" deleted
+pod/backtesting-1695495888-r7sgn
+pod "backtesting-1695495888-r7sgn" deleted
+pod/freqtrade-774748c5d-h79rn
+pod "freqtrade-774748c5d-h79rn" deleted
+pod/results-reader-6f95849688-q7l95
+pod "results-reader-6f95849688-q7l95" deleted
+pod/results-reader-cbff5cd66-t2tzm
+pod "results-reader-cbff5cd66-t2tzm" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/freqtrade-69f4c9c574-v4wxw
+pod "freqtrade-69f4c9c574-v4wxw" deleted
+pod/results-reader-684b99b766-chztx
+pod "results-reader-684b99b766-chztx" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
