@@ -53,6 +53,18 @@ config:
     enabled: true
     token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
     chat_id: "1759706931"
+    keyboard:
+      - - /daily
+        - /stats
+        - /balance
+        - /profit
+      - - /status table
+        - /performance
+        - /mix_tags
+      - - /show_config
+        - /whitelist
+        - /logs
+        - /trades
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -126,8 +138,8 @@ backtesting:
   enabled: true
   download_data: true
   timerange:
-  timeframes: 5m
-  strategy_list: BBRSIv2
+  timeframes: 1h
+  strategy_list: SwingHighToSky # EI3v2_tag_cofi_green # SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
@@ -137,8 +149,27 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: BBRSIv2
+  strategy_name: SwingHighToSky # EI3v2_tag_cofi_green # SwingHighToSky
   pvc_size: 1Gi
+  freqaimodel: ReinforcementLearner # LightGBMRegressor
+
+#backtesting:
+#  enabled: true
+#  download_data: true
+#  timerange:
+#  timeframes: 5m
+#  strategy_list: BBRSIv2
+#  fee:
+#  pvc_size: 1Gi
+#  results:
+#    enable_export: true
+#    reader_enabled: true
+#    pvc_size: 1Gi
+#
+#bot:
+#  enabled: true
+#  strategy_name: BBRSIv2
+#  pvc_size: 1Gi
 
 ingress:
   enabled: true
