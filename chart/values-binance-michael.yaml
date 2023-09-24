@@ -19,7 +19,7 @@ config:
     exit_timeout_count: 0
     unit: minutes
   entry_pricing:
-    price_side: same
+    price_side: other
     use_order_book: true
     order_book_top: 1
     price_last_balance: 0
@@ -27,7 +27,7 @@ config:
       enabled: false
       bids_to_ask_delta: 1
   exit_pricing:
-    price_side: same
+    price_side: other
     use_order_book: true
     order_book_top: 1
   download_trades: true
@@ -127,7 +127,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: TheForce
+  strategy_list: ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   fee:
   pvc_size: 1Gi
   results:
@@ -137,8 +137,9 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: TheForce
+  strategy_name: ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   pvc_size: 1Gi
+  freqaimodel: ReinforcementLearner 
 
 ingress:
   enabled: true
