@@ -3,7 +3,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: freqtrade
+  name: freqtrade-{{ .Release.Namespace }}
 spec:
   rules:
   - host: localhost
@@ -14,7 +14,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: freqtrade
+            name: freqtrade-{{ .Release.Namespace }}
             port: 
               number: 8084
       {{- end }}
@@ -23,7 +23,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: results-reader
+            name: results-reader-{{ .Release.Namespace }}
             port: 
               number: 80
      {{- end }}
