@@ -12,6 +12,7 @@ spec:
       labels:
         app: freqtrade-{{ .Release.Namespace }}
     spec:
+      nodeName: pool-dersalvador-ylyw0
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
