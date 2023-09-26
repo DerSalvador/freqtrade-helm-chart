@@ -33,7 +33,7 @@ spec:
         args:
         - download-data
         - --pairs
-{{ .Values.config.exchange.pair_whitelist | toYaml | indent 8 }}
+{{ .Values.config.exchange.pair_whitelist_backtesting | toYaml | indent 8 }}
         - --timerange
         - {{ .Values.backtesting.timerange }}
         - --timeframes

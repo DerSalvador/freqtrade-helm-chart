@@ -48,7 +48,7 @@ spec:
         - --db-url
         - sqlite:////sqlite/tradesv3.sqlite
         - --recursive-strategy-search
-        - -vvv 
+        # - -vvv 
         - --freqaimodel 
         - {{ .Values.bot.freqaimodel }}
         - --freqaimodel-path 
@@ -63,6 +63,8 @@ spec:
         ports:
         - name: api
           containerPort: 8084
+        # - name: frequi
+        #  containerPort: 8080
       imagePullSecrets:
       - name: do-dersalvador-registry
       volumes:
