@@ -148,3 +148,407 @@ kraken-stieves
 kube-node-lease
 kube-public
 kube-system
+pod/backtesting-1695717387-28gsm
+pod "backtesting-1695717387-28gsm" deleted
+pod/backtesting-1695717387-fvtvf
+pod "backtesting-1695717387-fvtvf" deleted
+pod/backtesting-1695717387-k4flp
+pod "backtesting-1695717387-k4flp" deleted
+pod/backtesting-1695717387-sctpt
+pod "backtesting-1695717387-sctpt" deleted
+pod/backtesting-1695717387-szczb
+pod "backtesting-1695717387-szczb" deleted
+pod/backtesting-1695717387-vpbmg
+pod "backtesting-1695717387-vpbmg" deleted
+pod/backtesting-1695717387-z66wz
+pod "backtesting-1695717387-z66wz" deleted
+pod/freqtrade-5f4dc9cb95-zr9gm
+pod "freqtrade-5f4dc9cb95-zr9gm" deleted
+pod/results-reader-684b99b766-tdhzx
+pod "results-reader-684b99b766-tdhzx" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695729566-tzw5b
+pod "backtesting-1695729566-tzw5b" deleted
+pod/backtesting-1695730327-j8wmg
+pod "backtesting-1695730327-j8wmg" deleted
+pod/backtesting-1695730617-fjvrn
+pod "backtesting-1695730617-fjvrn" deleted
+pod/backtesting-1695732901-jxt8n
+pod "backtesting-1695732901-jxt8n" deleted
+pod/freqtrade-688fb76bff-fpt7w
+pod "freqtrade-688fb76bff-fpt7w" deleted
+pod/freqtrade-6b5499f786-2626p
+Error from server (NotFound): pods "freqtrade-6b5499f786-2626p" not found
+pod/freqtrade-6b5499f786-4nwjn
+Error from server (NotFound): pods "freqtrade-6b5499f786-4nwjn" not found
+pod/freqtrade-6b5499f786-55gk4
+Error from server (NotFound): pods "freqtrade-6b5499f786-55gk4" not found
+pod/freqtrade-6b5499f786-5g97p
+Error from server (NotFound): pods "freqtrade-6b5499f786-5g97p" not found
+pod/freqtrade-6b5499f786-64c9k
+Error from server (NotFound): pods "freqtrade-6b5499f786-64c9k" not found
+pod/freqtrade-6b5499f786-6bsnl
+Error from server (NotFound): pods "freqtrade-6b5499f786-6bsnl" not found
+pod/freqtrade-6b5499f786-6gbq7
+Error from server (NotFound): pods "freqtrade-6b5499f786-6gbq7" not found
+pod/freqtrade-6b5499f786-8jxdq
+Error from server (NotFound): pods "freqtrade-6b5499f786-8jxdq" not found
+pod/freqtrade-6b5499f786-b67ps
+Error from server (NotFound): pods "freqtrade-6b5499f786-b67ps" not found
+pod/freqtrade-6b5499f786-blj6j
+Error from server (NotFound): pods "freqtrade-6b5499f786-blj6j" not found
+pod/freqtrade-6b5499f786-cftmt
+Error from server (NotFound): pods "freqtrade-6b5499f786-cftmt" not found
+pod/freqtrade-6b5499f786-d5lk2
+Error from server (NotFound): pods "freqtrade-6b5499f786-d5lk2" not found
+pod/freqtrade-6b5499f786-fd2b2
+Error from server (NotFound): pods "freqtrade-6b5499f786-fd2b2" not found
+pod/freqtrade-6b5499f786-gj252
+Error from server (NotFound): pods "freqtrade-6b5499f786-gj252" not found
+pod/freqtrade-6b5499f786-gpz8t
+Error from server (NotFound): pods "freqtrade-6b5499f786-gpz8t" not found
+pod/freqtrade-6b5499f786-hs5xd
+Error from server (NotFound): pods "freqtrade-6b5499f786-hs5xd" not found
+pod/freqtrade-6b5499f786-jh7zh
+Error from server (NotFound): pods "freqtrade-6b5499f786-jh7zh" not found
+pod/freqtrade-6b5499f786-jwpdl
+Error from server (NotFound): pods "freqtrade-6b5499f786-jwpdl" not found
+pod/freqtrade-6b5499f786-l62c5
+Error from server (NotFound): pods "freqtrade-6b5499f786-l62c5" not found
+pod/freqtrade-6b5499f786-n8ppp
+Error from server (NotFound): pods "freqtrade-6b5499f786-n8ppp" not found
+pod/freqtrade-6b5499f786-n9tsr
+Error from server (NotFound): pods "freqtrade-6b5499f786-n9tsr" not found
+pod/freqtrade-6b5499f786-nqbct
+Error from server (NotFound): pods "freqtrade-6b5499f786-nqbct" not found
+pod/freqtrade-6b5499f786-qqxqr
+Error from server (NotFound): pods "freqtrade-6b5499f786-qqxqr" not found
+pod/freqtrade-6b5499f786-sqdk9
+Error from server (NotFound): pods "freqtrade-6b5499f786-sqdk9" not found
+pod/freqtrade-6b5499f786-t8bzs
+Error from server (NotFound): pods "freqtrade-6b5499f786-t8bzs" not found
+pod/freqtrade-6b5499f786-wv6h4
+Error from server (NotFound): pods "freqtrade-6b5499f786-wv6h4" not found
+pod/freqtrade-6b5499f786-xcqb5
+Error from server (NotFound): pods "freqtrade-6b5499f786-xcqb5" not found
+pod/freqtrade-6b5499f786-xst82
+Error from server (NotFound): pods "freqtrade-6b5499f786-xst82" not found
+pod/freqtrade-6b5499f786-xzqp5
+Error from server (NotFound): pods "freqtrade-6b5499f786-xzqp5" not found
+pod/freqtrade-6b5499f786-zgjgt
+Error from server (NotFound): pods "freqtrade-6b5499f786-zgjgt" not found
+pod/freqtrade-6b5499f786-zmpb7
+Error from server (NotFound): pods "freqtrade-6b5499f786-zmpb7" not found
+pod/results-reader-8589fd85c8-6qnb5
+Error from server (NotFound): pods "results-reader-8589fd85c8-6qnb5" not found
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695729566-ldjfb
+pod "backtesting-1695729566-ldjfb" deleted
+pod/backtesting-1695729566-ldjfb
+pod "backtesting-1695729566-ldjfb" deleted
+pod/backtesting-1695730327-rknr4
+pod/backtesting-1695730327-rknr4
+pod "backtesting-1695730327-rknr4" deleted
+pod "backtesting-1695730327-rknr4" deleted
+pod/backtesting-1695730617-rmmb2
+pod/backtesting-1695730617-rmmb2
+pod "backtesting-1695730617-rmmb2" deleted
+pod "backtesting-1695730617-rmmb2" deleted
+pod/backtesting-1695732901-gswlq
+pod/backtesting-1695732901-gswlq
+pod "backtesting-1695732901-gswlq" deleted
+pod "backtesting-1695732901-gswlq" deleted
+pod/backtesting-1695734604-s78z8
+pod/backtesting-1695734604-s78z8
+pod "backtesting-1695734604-s78z8" deleted
+pod "backtesting-1695734604-s78z8" deleted
+pod/backtesting-1695734982-cfmpt
+pod/freqtrade-5c76cfc7bb-fqzb6
+pod "freqtrade-5c76cfc7bb-fqzb6" deleted
+pod "backtesting-1695734982-cfmpt" deleted
+pod/results-reader-8589fd85c8-dnnhl
+pod "results-reader-8589fd85c8-dnnhl" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/freqtrade-5c76cfc7bb-fqzb6
+Error from server (NotFound): pods "freqtrade-5c76cfc7bb-fqzb6" not found
+pod/results-reader-8589fd85c8-dnnhl
+Error from server (NotFound): pods "results-reader-8589fd85c8-dnnhl" not found
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-michael-2
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695735907-8jwjs
+pod "backtesting-1695735907-8jwjs" deleted
+pod/freqtrade-74ffcff459-zn7bt
+pod "freqtrade-74ffcff459-zn7bt" deleted
+pod/results-reader-57b5898ccb-tmjn7
+pod "results-reader-57b5898ccb-tmjn7" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-michael-2
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695755225-tt4hf
+pod "backtesting-1695755225-tt4hf" deleted
+pod/freqtrade-binance-stieves-5b578b9664-wpdgq
+pod "freqtrade-binance-stieves-5b578b9664-wpdgq" deleted
+pod/backtesting-1695755225-h68kc
+pod "backtesting-1695755225-h68kc" deleted
+pod/results-reader-binance-stieves-85d9984645-654gn
+pod "results-reader-binance-stieves-85d9984645-654gn" deleted
+pod/backtesting-1695755393-p568f
+pod "backtesting-1695755393-p568f" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/freqtrade-binance-stieves-5b578b9664-bgpvn
+pod "freqtrade-binance-stieves-5b578b9664-bgpvn" deleted
+pod/freqtrade-binance-stieves-5b578b9664-wpdgq
+Error from server (NotFound): pods "freqtrade-binance-stieves-5b578b9664-wpdgq" not found
+pod/results-reader-binance-stieves-85d9984645-654gn
+Error from server (NotFound): pods "results-reader-binance-stieves-85d9984645-654gn" not found
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695756186-56qn6
+pod "backtesting-1695756186-56qn6" deleted
+pod/freqtrade-kraken-michael-86bcf9b794-9lbgn
+pod "freqtrade-kraken-michael-86bcf9b794-9lbgn" deleted
+pod/results-reader-kraken-michael-5b58fdb995-4dxs5
+pod "results-reader-kraken-michael-5b58fdb995-4dxs5" deleted
+pod/results-reader-kraken-michael-5b58fdb995-5qjfv
+pod "results-reader-kraken-michael-5b58fdb995-5qjfv" deleted
+pod/results-reader-kraken-michael-5b58fdb995-5z55m
+pod "results-reader-kraken-michael-5b58fdb995-5z55m" deleted
+pod/results-reader-kraken-michael-5b58fdb995-66prl
+pod "results-reader-kraken-michael-5b58fdb995-66prl" deleted
+pod/results-reader-kraken-michael-5b58fdb995-6jv2n
+pod "results-reader-kraken-michael-5b58fdb995-6jv2n" deleted
+pod/results-reader-kraken-michael-5b58fdb995-6qwwf
+pod "results-reader-kraken-michael-5b58fdb995-6qwwf" deleted
+pod/results-reader-kraken-michael-5b58fdb995-6vstl
+pod "results-reader-kraken-michael-5b58fdb995-6vstl" deleted
+pod/results-reader-kraken-michael-5b58fdb995-7c6cn
+pod "results-reader-kraken-michael-5b58fdb995-7c6cn" deleted
+pod/results-reader-kraken-michael-5b58fdb995-7ckmx
+pod "results-reader-kraken-michael-5b58fdb995-7ckmx" deleted
+pod/results-reader-kraken-michael-5b58fdb995-7dvp4
+pod "results-reader-kraken-michael-5b58fdb995-7dvp4" deleted
+pod/results-reader-kraken-michael-5b58fdb995-7kndg
+pod "results-reader-kraken-michael-5b58fdb995-7kndg" deleted
+pod/results-reader-kraken-michael-5b58fdb995-7pskg
+pod "results-reader-kraken-michael-5b58fdb995-7pskg" deleted
+pod/results-reader-kraken-michael-5b58fdb995-7tn2b
+pod "results-reader-kraken-michael-5b58fdb995-7tn2b" deleted
+pod/results-reader-kraken-michael-5b58fdb995-8bb6n
+pod "results-reader-kraken-michael-5b58fdb995-8bb6n" deleted
+pod/results-reader-kraken-michael-5b58fdb995-8r26s
+pod "results-reader-kraken-michael-5b58fdb995-8r26s" deleted
+pod/results-reader-kraken-michael-5b58fdb995-8wqr8
+pod "results-reader-kraken-michael-5b58fdb995-8wqr8" deleted
+pod/results-reader-kraken-michael-5b58fdb995-9f7dv
+pod "results-reader-kraken-michael-5b58fdb995-9f7dv" deleted
+pod/results-reader-kraken-michael-5b58fdb995-9kn2v
+pod "results-reader-kraken-michael-5b58fdb995-9kn2v" deleted
+pod/results-reader-kraken-michael-5b58fdb995-9wsfp
+pod "results-reader-kraken-michael-5b58fdb995-9wsfp" deleted
+pod/results-reader-kraken-michael-5b58fdb995-bcktp
+pod "results-reader-kraken-michael-5b58fdb995-bcktp" deleted
+pod/results-reader-kraken-michael-5b58fdb995-bcw9n
+pod "results-reader-kraken-michael-5b58fdb995-bcw9n" deleted
+pod/results-reader-kraken-michael-5b58fdb995-ddfqp
+pod "results-reader-kraken-michael-5b58fdb995-ddfqp" deleted
+pod/results-reader-kraken-michael-5b58fdb995-dg5hl
+pod "results-reader-kraken-michael-5b58fdb995-dg5hl" deleted
+pod/results-reader-kraken-michael-5b58fdb995-dm4sg
+pod "results-reader-kraken-michael-5b58fdb995-dm4sg" deleted
+pod/results-reader-kraken-michael-5b58fdb995-h8n2c
+pod "results-reader-kraken-michael-5b58fdb995-h8n2c" deleted
+pod/results-reader-kraken-michael-5b58fdb995-hznxr
+pod "results-reader-kraken-michael-5b58fdb995-hznxr" deleted
+pod/results-reader-kraken-michael-5b58fdb995-jldj4
+pod "results-reader-kraken-michael-5b58fdb995-jldj4" deleted
+pod/results-reader-kraken-michael-5b58fdb995-jlkxz
+pod "results-reader-kraken-michael-5b58fdb995-jlkxz" deleted
+pod/results-reader-kraken-michael-5b58fdb995-lmlcp
+pod "results-reader-kraken-michael-5b58fdb995-lmlcp" deleted
+pod/results-reader-kraken-michael-5b58fdb995-lttx9
+pod "results-reader-kraken-michael-5b58fdb995-lttx9" deleted
+pod/results-reader-kraken-michael-5b58fdb995-mtzzb
+pod "results-reader-kraken-michael-5b58fdb995-mtzzb" deleted
+pod/results-reader-kraken-michael-5b58fdb995-mwdqh
+pod "results-reader-kraken-michael-5b58fdb995-mwdqh" deleted
+pod/results-reader-kraken-michael-5b58fdb995-n59zm
+pod "results-reader-kraken-michael-5b58fdb995-n59zm" deleted
+pod/results-reader-kraken-michael-5b58fdb995-nkj8s
+pod "results-reader-kraken-michael-5b58fdb995-nkj8s" deleted
+pod/results-reader-kraken-michael-5b58fdb995-p8gm6
+pod "results-reader-kraken-michael-5b58fdb995-p8gm6" deleted
+pod/results-reader-kraken-michael-5b58fdb995-pcz92
+pod "results-reader-kraken-michael-5b58fdb995-pcz92" deleted
+pod/results-reader-kraken-michael-5b58fdb995-r9t9z
+pod "results-reader-kraken-michael-5b58fdb995-r9t9z" deleted
+pod/results-reader-kraken-michael-5b58fdb995-rrjdt
+pod "results-reader-kraken-michael-5b58fdb995-rrjdt" deleted
+pod/results-reader-kraken-michael-5b58fdb995-sf5bv
+pod "results-reader-kraken-michael-5b58fdb995-sf5bv" deleted
+pod/results-reader-kraken-michael-5b58fdb995-sspgv
+pod "results-reader-kraken-michael-5b58fdb995-sspgv" deleted
+pod/results-reader-kraken-michael-5b58fdb995-t88fc
+pod "results-reader-kraken-michael-5b58fdb995-t88fc" deleted
+pod/results-reader-kraken-michael-5b58fdb995-t9lrz
+pod "results-reader-kraken-michael-5b58fdb995-t9lrz" deleted
+pod/results-reader-kraken-michael-5b58fdb995-tgt2v
+pod "results-reader-kraken-michael-5b58fdb995-tgt2v" deleted
+pod/results-reader-kraken-michael-5b58fdb995-vrv2m
+pod "results-reader-kraken-michael-5b58fdb995-vrv2m" deleted
+pod/results-reader-kraken-michael-5b58fdb995-vsm49
+pod "results-reader-kraken-michael-5b58fdb995-vsm49" deleted
+pod/results-reader-kraken-michael-5b58fdb995-vw4k4
+pod "results-reader-kraken-michael-5b58fdb995-vw4k4" deleted
+pod/results-reader-kraken-michael-5b58fdb995-w7l8v
+pod "results-reader-kraken-michael-5b58fdb995-w7l8v" deleted
+pod/results-reader-kraken-michael-5b58fdb995-w8lds
+pod "results-reader-kraken-michael-5b58fdb995-w8lds" deleted
+pod/results-reader-kraken-michael-5b58fdb995-wfzl5
+pod "results-reader-kraken-michael-5b58fdb995-wfzl5" deleted
+pod/results-reader-kraken-michael-5b58fdb995-whrgw
+pod "results-reader-kraken-michael-5b58fdb995-whrgw" deleted
+pod/results-reader-kraken-michael-5b58fdb995-xkb9v
+pod "results-reader-kraken-michael-5b58fdb995-xkb9v" deleted
+pod/results-reader-kraken-michael-5b58fdb995-xnm2b
+pod "results-reader-kraken-michael-5b58fdb995-xnm2b" deleted
+pod/results-reader-kraken-michael-5b58fdb995-xwdpx
+pod "results-reader-kraken-michael-5b58fdb995-xwdpx" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system

@@ -18,15 +18,15 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: results-reader
+  name: results-reader-{{ .Release.Namespace }}
 spec:
   selector:
     matchLabels:
-      app: results-reader
+      app: results-reader-{{ .Release.Namespace }}
   template:
     metadata:
       labels:
-        app: results-reader
+        app: results-reader-{{ .Release.Namespace }}
     spec:
       nodeName: pool-dersalvador-y6z2l
       containers:
@@ -53,9 +53,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: results-reader
+  name: results-reader-{{ .Release.Namespace }}
   labels:
-    app: results-reader
+    app: results-reader-{{ .Release.Namespace }}
 spec:
   type: ClusterIP
   ports:
@@ -63,6 +63,6 @@ spec:
     port: 80
     targetPort: http
   selector:
-    app: results-reader
+    app: results-reader-{{ .Release.Namespace }}
 ---
 {{- end }}
