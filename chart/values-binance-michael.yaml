@@ -41,22 +41,43 @@ config:
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
     pair_blacklist: []
   pairlists:
-    - method: StaticPairList
-      number_assets: 24
-      sort_key: quoteVolume
-      min_value: 0
+    - method: RemotePairList
+      mode: whitelist
+      processing_mode: filter
+      pairlist_url: https://dersalvador.com/remotepairlist.json
+      number_assets: 39
       refresh_period: 1800
+      keep_pairlist_on_failure: true
+      read_timeout: 60  
+
+    #- method: StaticPairList
+    #  number_assets: 24
+    #  sort_key: quoteVolume
+    #  min_value: 0
+    #  refresh_period: 1800
   telegram:
     enabled: true
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
+    keyboard:
+      - - /daily
+        - /stats
+        - /balance
+        - /profit
+      - - /status table
+        - /performance
+        - /mix_tags
+      - - /show_config
+        - /whitelist
+        - /logs
+        - /trades
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
-    listen_port: 8080
+    listen_port: 8084
     verbosity: error
     enable_openapi: false
     jwt_secret_key: 235573d45bb26d0cbf1986893b12d4aaf0cf4934f3566d9459d818ec7fbb851b
@@ -127,7 +148,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_list: SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   fee:
   pvc_size: 1Gi
   results:
@@ -137,9 +158,9 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_name: SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   pvc_size: 1Gi
-  freqaimodel: ReinforcementLearner 
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
 ingress:
   enabled: true

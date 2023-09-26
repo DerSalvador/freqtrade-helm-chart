@@ -53,7 +53,7 @@ config:
     price_side: same
     use_order_book: true
     order_book_top: 1
-  download_trades: false
+  download_trades: true
   exchange:
     name: kraken
     key: 7T77qjKhPC7jbKq0eyDtFSM99pLluWN1v+oxmtciibIbBFoxTdQ+JO+0
@@ -64,14 +64,26 @@ config:
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    # pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist: []
     pair_blacklist: []
   pairlists:
-    - method: StaticPairList
-      number_assets: 23
-      sort_key: quoteVolume
-      min_value: 0
+    - method: RemotePairList
+      mode: whitelist
+      processing_mode: filter
+      pairlist_url: https://dersalvador.com/remotepairlist.json
+      number_assets: 39
       refresh_period: 1800
+      keep_pairlist_on_failure: true
+      read_timeout: 60
+      # bearer_token: my-bearer-token
+  #pairlists:
+  #  - method: StaticPairList
+  #    number_assets: 23
+  #    sort_key: quoteVolume
+  #    min_value: 0
+  #    refresh_period: 1800
     #- method: RangeStabilityFilter
     #  lookback_days: 10
     #  min_rate_of_change: 0.01
@@ -205,7 +217,8 @@ bot:
   enabled: true
   strategy_name: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   pvc_size: 1Gi
-  freqaimodel: ReinforcementLearner # LightGBMRegressor
+  # freqaimodel: ReinforcementLearner # LightGBMRegressor
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
 #backtesting:
 #  enabled: true
