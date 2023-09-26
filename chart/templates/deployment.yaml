@@ -12,6 +12,7 @@ spec:
       labels:
         app: freqtrade
     spec:
+      nodeName: pool-dersalvador-ytuka
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -48,7 +49,7 @@ spec:
         - --db-url
         - sqlite:////sqlite/tradesv3.sqlite
         - --recursive-strategy-search
-        # - -vvv 
+        - -vvv 
         - --freqaimodel 
         - {{ .Values.bot.freqaimodel }}
         - --freqaimodel-path 
@@ -63,6 +64,8 @@ spec:
         ports:
         - name: api
           containerPort: 8084
+          hostIP: 138.68.122.196
+          hostPort: 8084  
         # - name: frequi
         #  containerPort: 8080
       imagePullSecrets:

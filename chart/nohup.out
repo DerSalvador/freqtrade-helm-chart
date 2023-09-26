@@ -1,0 +1,128 @@
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+default
+ingress-nginx
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695660198-sqzwc
+pod "backtesting-1695660198-sqzwc" deleted
+pod/backtesting-1695660198-zqbwj
+pod "backtesting-1695660198-zqbwj" deleted
+pod/freqtrade-565b756bf5-t9pwt
+pod "freqtrade-565b756bf5-t9pwt" deleted
+pod/results-reader-7bd58f5f4-g7fsz
+pod "results-reader-7bd58f5f4-g7fsz" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/freqtrade-bd6d4855f-ckjm7
+pod "freqtrade-bd6d4855f-ckjm7" deleted
+pod/results-reader-8589fd85c8-wq67q
+pod "results-reader-8589fd85c8-wq67q" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/freqtrade-bd6d4855f-kbwq6
+pod "freqtrade-bd6d4855f-kbwq6" deleted
+pod/results-reader-8589fd85c8-mvj8q
+pod "results-reader-8589fd85c8-mvj8q" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695729566-8vhk2
+pod "backtesting-1695729566-8vhk2" deleted
+pod/backtesting-1695729566-8vhk2
+pod "backtesting-1695729566-8vhk2" deleted
+pod/backtesting-1695729566-swfnr
+pod/freqtrade-bd6d4855f-xdkw8
+Error from server (NotFound): pods "freqtrade-bd6d4855f-xdkw8" not found
+pod/results-reader-8589fd85c8-hkl4k
+pod "backtesting-1695729566-swfnr" deleted
+pod "results-reader-8589fd85c8-hkl4k" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/freqtrade-bd6d4855f-xdkw8
+Error from server (NotFound): pods "freqtrade-bd6d4855f-xdkw8" not found
+pod/results-reader-8589fd85c8-hkl4k
+Error from server (NotFound): pods "results-reader-8589fd85c8-hkl4k" not found
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695729566-v94vb
+pod "backtesting-1695729566-v94vb" deleted
+pod/backtesting-1695730327-bqfbs
+pod "backtesting-1695730327-bqfbs" deleted
+pod/freqtrade-6b5499f786-5rch7
+pod "freqtrade-6b5499f786-5rch7" deleted
+pod/results-reader-8589fd85c8-lbt76
+pod "results-reader-8589fd85c8-lbt76" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+default
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
