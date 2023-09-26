@@ -62,6 +62,19 @@ config:
     enabled: true
     token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"
     chat_id: "889071692"
+    keyboard:
+      - - /daily
+        - /stats
+        - /balance
+        - /profit
+      - - /status table
+        - /performance
+        - /mix_tags
+      - - /show_config
+        - /whitelist
+        - /logs
+        - /trades
+
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
