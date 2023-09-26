@@ -552,3 +552,54 @@ kraken-michael
 kube-node-lease
 kube-public
 kube-system
+pod/backtesting-1695756186-s9rcb
+pod "backtesting-1695756186-s9rcb" deleted
+pod/backtesting-1695759058-2fdhj
+pod "backtesting-1695759058-2fdhj" deleted
+pod/freqtrade-kraken-michael-86bcf9b794-qcwp2
+pod "freqtrade-kraken-michael-86bcf9b794-qcwp2" deleted
+pod/results-reader-kraken-michael-5b58fdb995-6nmwx
+pod "results-reader-kraken-michael-5b58fdb995-6nmwx" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+pod/backtesting-1695761741-c69r8
+pod "backtesting-1695761741-c69r8" deleted
+pod/freqtrade-kraken-michael-645fd6d746-ck9rs
+pod "freqtrade-kraken-michael-645fd6d746-ck9rs" deleted
+pod/results-reader-kraken-michael-5b58fdb995-mqfs6
+pod "results-reader-kraken-michael-5b58fdb995-mqfs6" deleted
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kube-node-lease
+kube-public
+kube-system
+
+Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael
+binance-stieves
+default
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
