@@ -2,17 +2,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: freqtrade
+  name: freqtrade-{{ .Release.Namespace }}
 spec:
   selector:
     matchLabels:
-      app: freqtrade
+      app: freqtrade-{{ .Release.Namespace }}
   template:
     metadata:
       labels:
-        app: freqtrade
+        app: freqtrade-{{ .Release.Namespace }}
     spec:
-      nodeName: pool-dersalvador-ytuka
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -31,7 +30,7 @@ spec:
       imagePullSecrets:
       - name: do-dersalvador-registry
       containers:
-      - name: freqtrade
+      - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         # securityContext:
         #  runAsUser: 1000
@@ -49,7 +48,6 @@ spec:
         - --db-url
         - sqlite:////sqlite/tradesv3.sqlite
         - --recursive-strategy-search
-        - -vvv 
         - --freqaimodel 
         - {{ .Values.bot.freqaimodel }}
         - --freqaimodel-path 
@@ -64,8 +62,8 @@ spec:
         ports:
         - name: api
           containerPort: 8084
-          hostIP: 138.68.122.196
-          hostPort: 8084  
+          # hostIP: 138.68.122.196
+          # hostPort: 8084  
         # - name: frequi
         #  containerPort: 8080
       imagePullSecrets:
