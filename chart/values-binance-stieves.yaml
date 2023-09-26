@@ -139,6 +139,7 @@ bot:
   enabled: true
   strategy_name: TheForce
   pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
 ingress:
   enabled: true

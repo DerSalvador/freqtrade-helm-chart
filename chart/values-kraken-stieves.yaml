@@ -41,14 +41,23 @@ config:
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist: []
     pair_blacklist: []
   pairlists:
-    - method: VolumePairList
-      number_assets: 661
-      sort_key: quoteVolume
-      min_value: 0
+    - method: RemotePairList
+      mode: whitelist
+      processing_mode: filter
+      pairlist_url: https://dersalvador.com/remotepairlist.json
+      number_assets: 39
       refresh_period: 1800
+      keep_pairlist_on_failure: true
+      read_timeout: 60  
+    #- method: VolumePairList
+    #  number_assets: 661
+    #  sort_key: quoteVolume
+    #  min_value: 0
+    #  refresh_period: 1800
   telegram:
     enabled: true
     token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"
@@ -105,18 +114,22 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-ichiV1
+  bot_name: freqtrade-stieves
   initial_state: running
   force_entry_enable: true
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.10
-    "20": 0.08
-    "30": 0.04
-    "60": 0.02
-    "120": 0.01
-    "160": 0
+    "0": 0.50
+    "20": 0.40
+    "30": 0.30
+    "60": 0.20
+    "120": 0.10
+    "130": 0.05
+    "140": 0.03
+    "180": 0.02
+    "240": 0.01
+    "360": 0
 
 image:
   base: freqtradeorg/freqtrade
