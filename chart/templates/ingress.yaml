@@ -16,7 +16,7 @@ spec:
           service:
             name: freqtrade-{{ .Release.Namespace }}
             port: 
-              number: 8084
+              number: {{ .Values.config.api_server.listen_port }}
       {{- end }}
       {{- if (and .Values.backtesting.results.enable_export .Values.backtesting.results.reader_enabled) }}
       - path: /results
