@@ -62,7 +62,7 @@ spec:
           name: sqlite
         ports:
         - name: api
-          containerPort: 8084
+          containerPort: {{ .Values.config.api_server.listen_port }}
           # hostIP: 138.68.122.196
           # hostPort: 8084  
         # - name: frequi
