@@ -148,7 +148,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_list: Strategy004 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   fee:
   pvc_size: 1Gi
   results:
@@ -158,7 +158,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_name: Strategy004 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
