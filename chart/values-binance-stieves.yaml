@@ -151,7 +151,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: Strategy001 . TheForce
+  strategy_name: Strategy001 # TheForce
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
