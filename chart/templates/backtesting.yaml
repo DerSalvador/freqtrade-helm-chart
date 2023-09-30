@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       {{- if .Values.backtesting.download_data }}
-      nodeName: pool-dersalvador-y6z2l
+      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} #  pool-dersalvador-y5wl4 # pool-dersalvador-y6z2l
       initContainers:
       - name: take-data-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
