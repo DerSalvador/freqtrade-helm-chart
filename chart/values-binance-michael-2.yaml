@@ -1,6 +1,6 @@
 config:
   timeframe: 1m
-  include_timeframes: 5m
+  include_timeframes: [ "1m", "3m", "5m", "15m", "30m", "1h", "2h", "4h", "6h", "8h", "12h", "1d", "3d", "1w", "1M" ]  
   max_open_trades: 10
   amend_last_stake_amount: true
   stake_currency: USDT
@@ -14,12 +14,35 @@ config:
   trading_mode: spot
   margin_mode: ""
   unfilledtimeout:
-    entry: 10
-    exit: 30
-    exit_timeout_count: 0
+    buy: 10
     unit: minutes
+  order_types:
+    buy: limit
+    sell: limit
+    stoploss: market
+    forcebuy: market
+    forcesell: market
+    stoploss_on_exchange: false
+  bid_strategy:
+    price_side: ask
+    ask_last_balance: 0
+    use_order_book: false
+    order_book_top: 1
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  ask_strategy:
+    price_side: bid
+    use_order_book: false
+    order_book_min: 1
+    order_book_max: 1
+  # unfilledtimeout:
+  #   entry: 10
+  #   exit: 30
+  #   exit_timeout_count: 0
+  #   unit: minutes
   entry_pricing:
-    price_side: other
+    price_side: same
     use_order_book: true
     order_book_top: 1
     price_last_balance: 0
@@ -27,7 +50,7 @@ config:
       enabled: false
       bids_to_ask_delta: 1
   exit_pricing:
-    price_side: other
+    price_side: same
     use_order_book: true
     order_book_top: 1
   download_trades: true
@@ -41,23 +64,49 @@ config:
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
+    # pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
     pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist: []
     pair_blacklist: []
   pairlists:
     - method: RemotePairList
       mode: whitelist
       processing_mode: filter
-      pairlist_url: https://dersalvador.com/remotepairlist.json
+      pairlist_url: https://filekeys.com/remotepairlist-white-michael.json
       number_assets: 39
       refresh_period: 1800
       keep_pairlist_on_failure: true
-      read_timeout: 60  
-
-    #- method: StaticPairList
-    #  number_assets: 24
-    #  sort_key: quoteVolume
-    #  min_value: 0
-    #  refresh_period: 1800
+      read_timeout: 60
+      # bearer_token: my-bearer-token
+  #pairlists:
+  #  - method: StaticPairList
+  #    number_assets: 23
+  #    sort_key: quoteVolume
+  #    min_value: 0
+  #    refresh_period: 1800
+    #- method: RangeStabilityFilter
+    #  lookback_days: 10
+    #  min_rate_of_change: 0.01
+    #  max_rate_of_change: 0.99
+    #  refresh_period: 1440
+    #- method: AgeFilter
+    #  min_days_listed: 10
+    #- method: PrecisionFilter
+    #- method: PriceFilter
+    #  low_price_ratio: 0.01
+    #- method: SpreadFilter
+    #  max_spread_ratio: 0.005
+    #- method: RangeStabilityFilter
+    #  lookback_days: 10
+    #  min_rate_of_change: 0.01
+    #  refresh_period: 1440
+    #- method: VolatilityFilter
+    #  lookback_days: 10
+    #  min_volatility: 0.05
+    #  max_volatility: 0.5
+    #  refresh_period: 86400
+    #- method: ShuffleFilter
+    #  seed: 42
   telegram:
     enabled: true
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
@@ -69,11 +118,10 @@ config:
         - /profit
       - - /status table
         - /performance
-        - /mix_tags
       - - /show_config
         - /whitelist
         - /logs
-        - /trades
+
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -99,7 +147,7 @@ config:
       policy_type: MlpPolicy
       model_reward_parameters:
         rr: 1
-        profit_aim: 0.025
+        profit_aim: 0.5
     enabled: true
     purge_old_models: 2
     train_period_days: 15
@@ -108,9 +156,23 @@ config:
     identifier: uniqe-id
     feature_parameters:
       include_timeframes:
-        - 1m
+        - 1w
+        - 2w
+        - 1m 
+        - 3m
+        - 5m 
         - 15m
+        - 30m
         - 1h
+        - 2h
+        - 4h
+        - 6h
+        - 8h
+        - 12h
+        - 1d
+        - 3d
+        - 1w
+        - 1M
       include_corr_pairlist: []
       label_period_candles: 20
       include_shifted_candles: 2
@@ -121,6 +183,9 @@ config:
       indicator_periods_candles:
         - 10
         - 20
+        - 30
+        - 40
+        - 50
       plot_feature_importances: 0
     data_split_parameters:
       test_size: 0.33
@@ -140,15 +205,15 @@ config:
     "160": 0
 
 image:
-  base: freqtradeorg/freqtrade
+  base: registry.digitalocean.com/do-dersalvador-registry/freqtrade
   tag: 2023.8_freqairl
 
 backtesting:
   enabled: true
   download_data: true
   timerange:
-  timeframes: 5m
-  strategy_list: Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  timeframes: 1h
+  strategy_list: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
@@ -158,10 +223,29 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_name: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   pvc_size: 1Gi
+  # freqaimodel: ReinforcementLearner # LightGBMRegressor
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
+#backtesting:
+#  enabled: true
+#  download_data: true
+#  timerange:
+#  timeframes: 5m
+#  strategy_list: EI3v2_tag_cofi_green
+#  fee:
+#  pvc_size: 1Gi
+#  results:
+#    enable_export: true
+#    reader_enabled: true
+#    pvc_size: 1Gi
+#
+#bot:
+#  enabled: true
+#  strategy_name: EI3v2_tag_cofi_green
+#  pvc_size: 1Gi
+#
 ingress:
   enabled: true
 

@@ -1,148 +1,22 @@
+pod "backtesting-1695927781-qnd2r" deleted
+pod "backtesting-1695927855-4mj77" deleted
+pod "backtesting-1695927855-7bqfd" deleted
+pod "backtesting-1695927997-9q6x2" deleted
+pod "backtesting-1695927997-tt7ts" deleted
+pod "backtesting-1695928167-6gwbt" deleted
+pod "backtesting-1695928167-vnjgz" deleted
+pod "backtesting-1695928350-8nc5r" deleted
+pod "backtesting-1695928350-jn6jf" deleted
+pod "freqtrade-binance-michael-2-7bb967f8d7-lhsg8" deleted
+pod "results-reader-binance-michael-2-9ffd844fd-ftvss" deleted
 
 Usage: dsTradingDeleteAllPods.sh namespace kubectx
+binance-michael-2
+binance-stieves
 default
-ingress-nginx
+kraken-hellen
+kraken-michael
+kraken-stieves
 kube-node-lease
 kube-public
 kube-system
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-
-Usage: dsTradingDeleteAllPods.sh namespace kubectx
-default
-ingress-nginx
-kube-node-lease
-kube-public
-kube-system
-Error from server (NotFound): persistentvolumeclaims "backtesting-data-kraken-michael" not found
-persistentvolumeclaim "backtesting-results-kraken-michael" deleted
-persistentvolumeclaim "freqtrade-sqlite-kraken-michael" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-026bdb1f-bb99-410a-ab4d-fa504d6c1dee" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-1c492b36-df0b-4a89-86ab-5b3db6237804" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-2a37fcfd-c774-4c84-8b3b-eab47fb6733b" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-404c8af8-e0e4-476b-9eb8-63fe1d3e9676" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-6569a740-5a73-42c2-87f8-335fb14e9330" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-66422cb5-bd16-4aaa-a8e2-bae99cde454b" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-8b8f83c5-5b7b-4294-b2be-1d015d15121d" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-8e10eeec-0ce7-4a27-8029-0006b6620e55" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-8eab3454-fa7f-4c09-9bcf-f7f6ad2c36d6" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-a0b8d624-8b50-4042-b428-255ba1ddb3c5" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-a8311deb-9260-4ff1-9b29-2ea049366f91" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-b5ae411c-eb18-4582-8916-9a6ced721fbd" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-b61add28-17c7-4c8e-8846-5dfb09916e0e" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-persistentvolume "pvc-c56b2bd0-2626-41fe-be7a-296f6f574866" deleted
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-1c492b36-df0b-4a89-86ab-5b3db6237804" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-404c8af8-e0e4-476b-9eb8-63fe1d3e9676" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-6569a740-5a73-42c2-87f8-335fb14e9330" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-66422cb5-bd16-4aaa-a8e2-bae99cde454b" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-8b8f83c5-5b7b-4294-b2be-1d015d15121d" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-8e10eeec-0ce7-4a27-8029-0006b6620e55" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-8eab3454-fa7f-4c09-9bcf-f7f6ad2c36d6" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-a0b8d624-8b50-4042-b428-255ba1ddb3c5" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-a8311deb-9260-4ff1-9b29-2ea049366f91" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-b5ae411c-eb18-4582-8916-9a6ced721fbd" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-b61add28-17c7-4c8e-8846-5dfb09916e0e" not found
-Warning: deleting cluster-scoped resources, not scoped to the provided namespace
-Error from server (NotFound): persistentvolumes "pvc-c56b2bd0-2626-41fe-be7a-296f6f574866" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-results-kraken-michael" not found
-persistentvolumeclaim "backtesting-data-binance-michael" deleted
-persistentvolumeclaim "backtesting-results-binance-michael" deleted
-persistentvolumeclaim "freqtrade-sqlite-binance-michael" deleted
-persistentvolumeclaim "backtesting-data-binance-stieves" deleted
-persistentvolumeclaim "backtesting-results-binance-stieves" deleted
-persistentvolumeclaim "freqtrade-sqlite-binance-stieves" deleted
-persistentvolumeclaim "backtesting-data-kraken-hellen" deleted
-persistentvolumeclaim "backtesting-results-kraken-hellen" deleted
-persistentvolumeclaim "freqtrade-sqlite-kraken-hellen" deleted
-persistentvolumeclaim "backtesting-data-kraken-stieves" deleted
-persistentvolumeclaim "backtesting-results-kraken-stieves" deleted
-persistentvolumeclaim "freqtrade-sqlite-kraken-stieves" deleted
-Error from server (NotFound): persistentvolumeclaims "backtesting-data-binance-michael" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-results-binance-michael" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-data-binance-stieves" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-results-binance-stieves" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-data-kraken-hellen" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-results-kraken-hellen" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-data-kraken-stieves" not found
-Error from server (NotFound): persistentvolumeclaims "backtesting-results-kraken-stieves" not found
-pod "backtesting-1695887196-fchjs" deleted
-pod "backtesting-1695887282-74lmp" deleted
-pod "backtesting-1695887353-jhtmt" deleted
-pod "backtesting-1695887196-q6hrm" deleted
-pod "backtesting-1695887282-vpmxm" deleted
-Error from server (NotFound): pods "backtesting-1695887353-jhtmt" not found
-pod "backtesting-1695887196-c6tcr" deleted
-pod "backtesting-1695887282-v9d7w" deleted
-pod "backtesting-1695887353-whdss" deleted
-pod "backtesting-1695887196-xpk96" deleted
-pod "backtesting-1695887282-6rx9v" deleted
-pod "backtesting-1695887353-gbmlb" deleted
-pod "backtesting-1695887196-kp9vm" deleted
-pod "backtesting-1695887282-hz5sh" deleted
-pod "backtesting-1695887353-9l7f6" deleted
-pod "backtesting-1695887196-8cr9g" deleted
-pod "backtesting-1695887282-npxwq" deleted
-pod "backtesting-1695887353-p7ns6" deleted
-pod "backtesting-1695887379-xfp4l" deleted
-pod "backtesting-1695887379-k27kp" deleted
-pod "backtesting-1695887379-krnwt" deleted
-pod "backtesting-1695887379-bpljc" deleted
-pod "backtesting-1695887379-2xt5s" deleted
