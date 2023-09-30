@@ -20,3 +20,36 @@ kraken-stieves
 kube-node-lease
 kube-public
 kube-system
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Failed to restart network-manager.service: Unit network-manager.service not found.
+Error: exit status 5
+ssh: connect to host 134.209.90.187 port 22: Operation timed out
+Error: exit status 255
+ssh: connect to host 165.232.89.161 port 22: Operation timed out
+Error: exit status 255
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Cannot call openvswitch: ovsdb-server.service is not running.
+ID            Status         Type      Started At                       Completed At    Resource ID    Resource Type    Region
+1906384102    in-progress    reboot    2023-09-30 14:28:47 +0000 UTC    <nil>           377223543      droplet          ams3
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Cannot call openvswitch: ovsdb-server.service is not running.
+ID            Status         Type      Started At                       Completed At    Resource ID    Resource Type    Region
+1906384327    in-progress    reboot    2023-09-30 14:29:19 +0000 UTC    <nil>           377223865      droplet          ams3
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Cannot call openvswitch: ovsdb-server.service is not running.
+ID            Status         Type      Started At                       Completed At    Resource ID    Resource Type    Region
+1906384497    in-progress    reboot    2023-09-30 14:29:51 +0000 UTC    <nil>           377260737      droplet          ams3
+Connection to 165.232.89.161 closed by remote host.
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Cannot call openvswitch: ovsdb-server.service is not running.
+ID            Status         Type      Started At                       Completed At    Resource ID    Resource Type    Region
+1906385973    in-progress    reboot    2023-09-30 14:32:25 +0000 UTC    <nil>           377223543      droplet          ams3
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Cannot call openvswitch: ovsdb-server.service is not running.
+ID            Status         Type      Started At                       Completed At    Resource ID    Resource Type    Region
+1906386195    in-progress    reboot    2023-09-30 14:32:57 +0000 UTC    <nil>           377223865      droplet          ams3
+bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+Cannot call openvswitch: ovsdb-server.service is not running.
+ID            Status         Type      Started At                       Completed At    Resource ID    Resource Type    Region
+1906386526    in-progress    reboot    2023-09-30 14:33:29 +0000 UTC    <nil>           377260737      droplet          ams3
+Connection to 165.232.89.161 closed by remote host.
