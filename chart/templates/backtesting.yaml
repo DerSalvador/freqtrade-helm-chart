@@ -2,14 +2,16 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: backtesting-{{ now | unixEpoch }}
+  name: backtesting-{{ .Release.Namespace }}-{{ now | unixEpoch }}
   labels:
-    app: backtesting
+    app: backtesting-{{ .Release.Namespace }}
 spec:
   template:
     spec:
       {{- if .Values.backtesting.download_data }}
+      {{- if (.Values.kubernetes.nodeNameBackTestingResultsReeader) }}
       nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} #  pool-dersalvador-y5wl4 # pool-dersalvador-y6z2l
+      {{- end }}
       initContainers:
       - name: take-data-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
