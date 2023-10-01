@@ -35,8 +35,8 @@ class EI3v2_tag_cofi_green(IStrategy):
     """
     # ROI table:
     minimal_roi = {
-        "0": 0.1,
-        "20": 0.08,
+        "0": 0.08,
+        "20": 0.04,
         "40": 0.032,
         "87": 0.016,
         "201": 0,
@@ -105,8 +105,14 @@ class EI3v2_tag_cofi_green(IStrategy):
             }
         ]
 
+    # ROI table:
+    minimal_roi = {
+        "0": 0.99,
+        
+    }
+
     # Stoploss:
-    stoploss = -0.33
+    stoploss = -0.99
 
     # SMAOffset
     base_nb_candles_buy = IntParameter(8, 20, default=buy_params['base_nb_candles_buy'], space='buy', optimize=False)
@@ -146,7 +152,7 @@ class EI3v2_tag_cofi_green(IStrategy):
     # Sell signal
     use_sell_signal = True
     sell_profit_only = True
-    sell_profit_offset = 0.1
+    sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
 
     ## Optional order time in force.
