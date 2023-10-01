@@ -28,7 +28,7 @@ spec:
       labels:
         app: results-reader-{{ .Release.Namespace }}
     spec:
-      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }}  pool-dersalvador-y5wl4 # pool-dersalvador-y6z2l
+      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} #  pool-dersalvador-y5wl4 # pool-dersalvador-y6z2l
       containers:
       - name: nginx
         image: nginx:1.19.6
