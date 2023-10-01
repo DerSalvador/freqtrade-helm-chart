@@ -205,7 +205,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 1h
-  strategy_list: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_list: SmartMoneyStrategy # Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
@@ -215,7 +215,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_name: SmartMoneyStrategy # Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   pvc_size: 1Gi
   # freqaimodel: ReinforcementLearner # LightGBMRegressor
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
