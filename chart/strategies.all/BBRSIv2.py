@@ -28,7 +28,7 @@ class BBRSIv2(IStrategy):
     }
 
     # Optimal stoploss designed for the strategy
-    stoploss = -0.99
+    stoploss = -0.33
     
     process_only_new_candles = True  
     use_sell_signal = True

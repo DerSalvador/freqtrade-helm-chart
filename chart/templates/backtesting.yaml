@@ -3,6 +3,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: backtesting-{{ now | unixEpoch }}
+  labels:
+    app: backtesting
 spec:
   template:
     spec:

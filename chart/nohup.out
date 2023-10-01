@@ -53,3 +53,39 @@ Cannot call openvswitch: ovsdb-server.service is not running.
 ID            Status         Type      Started At                       Completed At    Resource ID    Resource Type    Region
 1906386526    in-progress    reboot    2023-09-30 14:33:29 +0000 UTC    <nil>           377260737      droplet          ams3
 Connection to 165.232.89.161 closed by remote host.
+job.batch "backtesting-1695902280" deleted
+job.batch "backtesting-1695924181" deleted
+job.batch "backtesting-1696018620" deleted
+job.batch "backtesting-1696058367" deleted
+job.batch "backtesting-1696059532" deleted
+job.batch "backtesting-1696059950" deleted
+job.batch "backtesting-1696070931" deleted
+job.batch "backtesting-1695927475" deleted
+job.batch "backtesting-1695927781" deleted
+job.batch "backtesting-1695927855" deleted
+job.batch "backtesting-1695927997" deleted
+job.batch "backtesting-1695928167" deleted
+job.batch "backtesting-1695928350" deleted
+job.batch "backtesting-1695929164" deleted
+job.batch "backtesting-1695929213" deleted
+job.batch "backtesting-1695929379" deleted
+job.batch "backtesting-1696018655" deleted
+job.batch "backtesting-1696058386" deleted
+job.batch "backtesting-1696059552" deleted
+job.batch "backtesting-1696059970" deleted
+job.batch "backtesting-1696070951" deleted
+job.batch "backtesting-1695896143" deleted
+job.batch "backtesting-1695902325" deleted
+job.batch "backtesting-1695924207" deleted
+job.batch "backtesting-1696018688" deleted
+job.batch "backtesting-1696058406" deleted
+job.batch "backtesting-1696059577" deleted
+job.batch "backtesting-1696059988" deleted
+job.batch "backtesting-1696070971" deleted
+job.batch "backtesting-1695896084" deleted
+job.batch "backtesting-1695924168" deleted
+job.batch "backtesting-1696018588" deleted
+job.batch "backtesting-1696058344" deleted
+job.batch "backtesting-1696059511" deleted
+job.batch "backtesting-1696059929" deleted
+job.batch "backtesting-1696070911" deleted
