@@ -2,8 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  # name: backtesting-{{ .Release.Namespace }}-{{ now | unixEpoch }}
-  name: backtesting-{{ .Release.Namespace }}
+  name: backtesting-{{ .Release.Namespace }}-{{ now | unixEpoch }}
   labels:
     app: backtesting-{{ .Release.Namespace }}
 spec:
