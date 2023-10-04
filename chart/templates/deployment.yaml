@@ -36,11 +36,14 @@ spec:
         # securityContext:
         #  runAsUser: 1000
         #  runAsGroup: 1000
+        # - -vvv Debug
         command:
         - freqtrade
         args:
         - trade
-        - -vvv
+{{- if .Values.bot.debug }}
+        - {{ .Values.bot.debuglevel }}
+{{- end }}
         - --config
         - /freqtrade/config/config.json
         - --strategy-path 
