@@ -1,10 +1,10 @@
 config:
   timeframe: 1m
-  include_timeframes: 1m
+  include_timeframes: [ "1m", "3m", "5m", "15m", "30m", "1h", "2h", "4h", "6h", "8h", "12h", "1d", "3d", "1w", "1M" ]  
   max_open_trades: 10
   amend_last_stake_amount: true
   stake_currency: USDT
-  stake_amount: 100
+  stake_amount: unlimited
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
@@ -12,16 +12,9 @@ config:
   dry_run_wallet: 1000
   cancel_open_orders_on_exit: false
   trading_mode: spot
-  available_capital: 1000
-  amend_last_stake_amount: true
-  last_stake_amount_min_ratio: 0.8
-  exit_profit_only: true
-  exit_profit_offset: 0.05
   margin_mode: ""
   unfilledtimeout:
-    entry: 10
-    exit: 30
-    exit_timeout_count: 0
+    buy: 10
     unit: minutes
   order_types:
     buy: limit
@@ -62,17 +55,18 @@ config:
     order_book_top: 1
   download_trades: true
   exchange:
-    name: kraken
-    key: 6vsqnOYuJJD3soHSFzjtm6NERdQt10gr+5+xDhfJk7/sOk5ntLYlNwCa
+    name: binance
+    key: EvXcnxKsJ7OQHHkh9xjeMGrjgcl8Dj2Fgaoi0MuNUZgf9mxGluC45Uc8EFWb9ZJL
     secret: >-
-      Scf4g6DcfkRujaSVfWQ9nYZci5vBENi5QSLroy4BXXGFlUvYuwKv4Z5Z7juyF4ugvSIfmSI8DP4qxnw//cG6mg==
+      gWa0htBqvwkdwLnUhY53LPdY4uHVoIW3ljUp2obKl1AdPe3O4nTIGHhVN1f0YNK6
     ccxt_config:
       enableRateLimit: true
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
     # pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist: []
     pair_blacklist: []
   pairlists:
     - method: RemotePairList
@@ -80,32 +74,58 @@ config:
       processing_mode: filter
       pairlist_url: https://filekeys.com/remotepairlist-white-michael.json
       number_assets: 39
-      refresh_period: 900
+      refresh_period: 1800
       keep_pairlist_on_failure: true
-      read_timeout: 60  
-    #- method: VolumePairList
-    #  number_assets: 661
-    #  sort_key: quoteVolume
-    #  min_value: 0
-    #  refresh_period: 1800
+      read_timeout: 60
+      # bearer_token: my-bearer-token
+  #pairlists:
+  #  - method: StaticPairList
+  #    number_assets: 23
+  #    sort_key: quoteVolume
+  #    min_value: 0
+  #    refresh_period: 1800
+    #- method: RangeStabilityFilter
+    #  lookback_days: 10
+    #  min_rate_of_change: 0.01
+    #  max_rate_of_change: 0.99
+    #  refresh_period: 1440
+    #- method: AgeFilter
+    #  min_days_listed: 10
+    #- method: PrecisionFilter
+    #- method: PriceFilter
+    #  low_price_ratio: 0.01
+    #- method: SpreadFilter
+    #  max_spread_ratio: 0.005
+    #- method: RangeStabilityFilter
+    #  lookback_days: 10
+    #  min_rate_of_change: 0.01
+    #  refresh_period: 1440
+    #- method: VolatilityFilter
+    #  lookback_days: 10
+    #  min_volatility: 0.05
+    #  max_volatility: 0.5
+    #  refresh_period: 86400
+    #- method: ShuffleFilter
+    #  seed: 42
   telegram:
     enabled: true
-    token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
-    chat_id: "1759706931"
+    # Michael
+    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "5711830404"
+    # Hassan
+    # token: "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"
+    # chat_id: "5510878923"
     keyboard:
-      - - /balance
+      - - /daily
+        - /stats
+        - /balance
         - /profit
-        - /reload_config
-        - /stopentry
       - - /status table
         - /performance
-        - /mix_tags
-        - /start
-        - /stop
       - - /show_config
         - /whitelist
         - /logs
-        - /trades
+
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -131,7 +151,7 @@ config:
       policy_type: MlpPolicy
       model_reward_parameters:
         rr: 1
-        profit_aim: 0.025
+        profit_aim: 0.5
     enabled: true
     purge_old_models: 2
     train_period_days: 15
@@ -140,15 +160,23 @@ config:
     identifier: uniqe-id
     feature_parameters:
       include_timeframes:
-        - 1m
-        - 5m
+        - 1w
+        - 2w
+        - 1m 
+        - 3m
+        - 5m 
         - 15m
         - 30m
         - 1h
+        - 2h
         - 4h
+        - 6h
+        - 8h
+        - 12h
         - 1d
+        - 3d
         - 1w
-        - 2w
+        - 1M
       include_corr_pairlist: []
       label_period_candles: 20
       include_shifted_candles: 2
@@ -167,38 +195,26 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-michael
+  bot_name: freqtrade-binance-hassan
   initial_state: running
   force_entry_enable: true
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.8
-    "10160": 0.5
-    "15160": 0.25
-    "20160": 0
-
-    #"0": 0.50
-    #"20": 0.40
-    #"30": 0.30
-    #"60": 0.20
-    #"120": 0.10
-    #"130": 0.05
-    #"140": 0.03
-    #"180": 0.02
-    #"240": 0.01
-    #"360": 0
+    "0": 0.50
+    "10160": 0.25
+    "20160": 0  # Stop after 14 days only if no loss
 
 image:
-  base: freqtradeorg/freqtrade
+  base: registry.digitalocean.com/do-dersalvador-registry/freqtrade
   tag: 2023.8_freqairl
 
 backtesting:
-  enabled: false
-  download_data: false
+  enabled: true
+  download_data: true
   timerange:
   timeframes: 1h
-  strategy_list: Strategy005HigherROI # Strategy005 # SwingHighToSky # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_list: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
@@ -207,18 +223,20 @@ backtesting:
     pvc_size: 1Gi
 
 bot:
+  debug: true
+  debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy005HigherROI # Strategy005 # SwingHighToSky # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_name: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor #  ReinforcementLearner 
   # freqaimodel: ReinforcementLearner # LightGBMRegressor
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
 #backtesting:
 #  enabled: true
 #  download_data: true
 #  timerange:
 #  timeframes: 5m
-#  strategy_list: BBRSIv2
+#  strategy_list: EI3v2_tag_cofi_green
 #  fee:
 #  pvc_size: 1Gi
 #  results:
@@ -228,9 +246,9 @@ bot:
 #
 #bot:
 #  enabled: true
-#  strategy_name: BBRSIv2
+#  strategy_name: EI3v2_tag_cofi_green
 #  pvc_size: 1Gi
-
+#
 ingress:
   enabled: true
 
