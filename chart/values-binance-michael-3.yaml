@@ -69,25 +69,26 @@ config:
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
-    # pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist: [ "BTC/USDT", "ACM/USDT", "ADA/USDT", "AKRO/USDT", "ALGO/USDT", "ALICE/USDT", "ANKR/USDT", "ATOM/USDT", "AVAX/USDT", "BCH/USDT", "DOGE/USDT", "DOT/USDT", "EOS/USDT", "LINK/USDT", "LTC/USDT", "MANA/USDT", "MATIC/USDT", "SHIB/USDT", "SOL/USDT", "USDC/USDT", "XMR/USDT", "XRP/USDT", "XTZ/USDT", "ETH/USDT", "ACA/USDT", "APE/USDT", "AMB/USDT", "USTC/USDT", "ARB/USDT", "AERGO/USDT" ]
     pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
     pair_blacklist: []
   pairlists:
-    - method: RemotePairList
-      mode: whitelist
-      processing_mode: filter
-      pairlist_url: https://filekeys.com/remotepairlist-white-binance-michael.json
-      number_assets: 39
-      refresh_period: 1800
-      keep_pairlist_on_failure: true
-      read_timeout: 60
-      # bearer_token: my-bearer-token
-  #pairlists:
-  #  - method: StaticPairList
-  #    number_assets: 23
-  #    sort_key: quoteVolume
-  #    min_value: 0
-  #    refresh_period: 1800
+    #- method: RemotePairList
+    #  mode: whitelist
+    #  processing_mode: append
+    #  pairlist_url: http://filekeys.com/pairlist-1.white.binance.json
+    #  number_assets: 30
+    #  refresh_period: 1800
+    #  keep_pairlist_on_failure: true
+    #  read_timeout: 120
+    #  # bearer_token: my-bearer-token
+     - method: StaticPairList
+       number_assets: 30
+       sort_key: quoteVolume
+       min_value: 0
+       refresh_period: 1800
+     - method: PriceFilter
+       min_price: 100
     #- method: RangeStabilityFilter
     #  lookback_days: 10
     #  min_rate_of_change: 0.01
@@ -204,15 +205,19 @@ config:
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.5
-    "40": 0.3
-    "50": 0.1
-    "60": 0.05
-    "120": 0.04
-    "140": 0.03
-    "180": 0.02
-    "240": 0.01
-    "360": 0
+    "0": 0.8
+    "10160": 0.5
+    "15160": 0.25
+    "20160": 0
+    #"0": 0.5
+    #"40": 0.3
+    #"50": 0.1
+    #"60": 0.05
+    #"120": 0.04
+    #"140": 0.03
+    #"180": 0.02
+    #"240": 0.01
+    #"360": 0
 
 image:
   base: registry.digitalocean.com/do-dersalvador-registry/freqtrade
@@ -232,6 +237,8 @@ backtesting:
     pvc_size: 1Gi
 
 bot:
+  debug: true
+  debuglevel: -vvv
   enabled: true
   strategy_name: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   pvc_size: 1Gi
