@@ -89,3 +89,9 @@ job.batch "backtesting-1696058344" deleted
 job.batch "backtesting-1696059511" deleted
 job.batch "backtesting-1696059929" deleted
 job.batch "backtesting-1696070911" deleted
+
+X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
+
+
+X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
+
