@@ -9,7 +9,7 @@ config:
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   dry_run: false
-  dry_run_wallet: 1000
+  dry_run_wallet: 4000
   cancel_open_orders_on_exit: false
   trading_mode: spot
   available_capital: 4000
