@@ -194,12 +194,11 @@ config:
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.10
-    "20": 0.08
-    "30": 0.04
-    "60": 0.02
-    "120": 0.01
-    "160": 0
+    "0": 0.8
+    "10120": 0.5
+    "15120": 0.3
+    "18120": 0.2
+    "20160": 0
 
 image:
   base: registry.digitalocean.com/do-dersalvador-registry/freqtrade
