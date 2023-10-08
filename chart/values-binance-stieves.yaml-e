@@ -141,7 +141,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 5m
-  strategy_list: TheForce
+  strategy_list: Strategy001 # TheForce
   fee:
   pvc_size: 1Gi
   results:
@@ -151,7 +151,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: TheForce
+  strategy_name: Strategy001 # TheForce
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
