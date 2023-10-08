@@ -1,10 +1,10 @@
 config:
   timeframe: 1m
   include_timeframes: [ "1d", "2w", "30m", "15m" ]  
-  max_open_trades: 10
+  max_open_trades: 3
   amend_last_stake_amount: true
   stake_currency: USDT
-  stake_amount: unlimited
+  stake_amount: 10
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
@@ -12,6 +12,11 @@ config:
   dry_run_wallet: 1000
   cancel_open_orders_on_exit: false
   trading_mode: spot
+  available_capital: 50
+  amend_last_stake_amount: true
+  last_stake_amount_min_ratio: 0.8
+  exit_profit_only: true
+  exit_profit_offset: 0.05
   margin_mode: ""
   unfilledtimeout:
     buy: 10
@@ -189,12 +194,11 @@ config:
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.10
-    "20": 0.08
-    "30": 0.04
-    "60": 0.02
-    "120": 0.01
-    "160": 0
+    "0": 0.8
+    "10120": 0.5
+    "15120": 0.3
+    "18120": 0.2
+    "20160": 0
 
 image:
   base: registry.digitalocean.com/do-dersalvador-registry/freqtrade
@@ -205,7 +209,7 @@ backtesting:
   download_data: true
   timerange:
   timeframes: 1h
-  strategy_list: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_list: Strategy005 # SmartMoneyStrategy # Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
@@ -215,7 +219,7 @@ backtesting:
 
 bot:
   enabled: true
-  strategy_name: Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_name: Strategy005 # SmartMoneyStrategy # Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   pvc_size: 1Gi
   # freqaimodel: ReinforcementLearner # LightGBMRegressor
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
