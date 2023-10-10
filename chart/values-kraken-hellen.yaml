@@ -1,10 +1,10 @@
 config:
   timeframe: 1m
   include_timeframes: [ "1d", "2w", "30m", "15m" ]  
-  max_open_trades: 3
+  max_open_trades: 10
   amend_last_stake_amount: true
   stake_currency: USDT
-  stake_amount: 10
+  stake_amount: 100
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
@@ -12,7 +12,7 @@ config:
   dry_run_wallet: 1000
   cancel_open_orders_on_exit: false
   trading_mode: spot
-  available_capital: 50
+  available_capital: 530
   amend_last_stake_amount: true
   last_stake_amount_min_ratio: 0.8
   exit_profit_only: true
@@ -118,14 +118,16 @@ config:
     chat_id: "6493643145"
     keyboard:
       - - /daily
-        - /stats
         - /balance
         - /profit
+        - /status
       - - /status table
         - /performance
+        - /stop
       - - /show_config
         - /whitelist
         - /logs
+        - /start
 
   api_server:
     enabled: true
