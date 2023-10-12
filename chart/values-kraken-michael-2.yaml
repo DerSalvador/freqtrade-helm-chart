@@ -78,7 +78,7 @@ config:
     - method: RemotePairList
       mode: whitelist
       processing_mode: filter
-      pairlist_url: https://filekeys.com/remotepairlist-white-michael.json
+      pairlist_url: https://filekeys.com/kraken-pairs.json
       number_assets: 39
       refresh_period: 900
       keep_pairlist_on_failure: true

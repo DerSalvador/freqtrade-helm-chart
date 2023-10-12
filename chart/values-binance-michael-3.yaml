@@ -76,7 +76,7 @@ config:
     #- method: RemotePairList
     #  mode: whitelist
     #  processing_mode: append
-    #  pairlist_url: http://filekeys.com/pairlist-1.white.binance.json
+    #  pairlist_url: http://filekeys.com/binance-pairs.json
     #  number_assets: 30
     #  refresh_period: 1800
     #  keep_pairlist_on_failure: true
