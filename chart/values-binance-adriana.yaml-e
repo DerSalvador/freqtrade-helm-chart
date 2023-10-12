@@ -4,12 +4,12 @@ config:
   max_open_trades: 4
   amend_last_stake_amount: true
   stake_currency: USDT
-  stake_amount: 1000
+  stake_amount: 10
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   dry_run: false
-  dry_run_wallet: 4000
+  dry_run_wallet: 50
   cancel_open_orders_on_exit: false
   trading_mode: spot
   available_capital: 4000
@@ -38,9 +38,9 @@ config:
   download_trades: false
   exchange:
     name: binance
-    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ
+    key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
     secret: >-
-      RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97
+      TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
     ccxt_config:
       enableRateLimit: true
     ccxt_async_config:
@@ -54,7 +54,7 @@ config:
      - method: RemotePairList
        mode: whitelist
        processing_mode: append
-       pairlist_url: http://filekeys.com/binance-pairs.json
+       pairlist_url: http://filekeys.com/pairlist-1.white.binance.json
        number_assets: 30
        refresh_period: 1800
        keep_pairlist_on_failure: true
@@ -74,7 +74,7 @@ config:
     #  min_value: 0
     #  refresh_period: 1800
   telegram:
-    enabled: true
+    enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
     keyboard:
@@ -155,7 +155,7 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-binance-michael-4
+  bot_name: freqtrade-binance-adriana
   initial_state: running
   force_entry_enable: true
   internals:
