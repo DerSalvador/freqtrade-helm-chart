@@ -195,7 +195,7 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-binance-hassan
+  bot_name: freqtrade-binance-michael-6
   initial_state: running
   force_entry_enable: true
   internals:

@@ -167,7 +167,7 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-michael
+  bot_name: freqtrade-kraken-michael-2
   initial_state: running
   force_entry_enable: true
   internals:
