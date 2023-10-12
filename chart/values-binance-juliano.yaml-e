@@ -38,9 +38,9 @@ config:
   download_trades: false
   exchange:
     name: binance
-    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ
+    key: HrLllzlPhN2BAAChE7iQdewMvawTuEwLGkWPYU1ZqlnxJ1uN1IdUernLvk6rU5cF
     secret: >-
-      RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97
+      HSeKgVJP2XpL7AJWENZ54p2QexsWZq25jT3i8ywHpSLA7zKijo8yoKvFFTweTIYF
     ccxt_config:
       enableRateLimit: true
     ccxt_async_config:
@@ -54,7 +54,7 @@ config:
      - method: RemotePairList
        mode: whitelist
        processing_mode: append
-       pairlist_url: http://filekeys.com/binance-pairs.json
+       pairlist_url: http://filekeys.com/pairlist-1.white.binance.json
        number_assets: 30
        refresh_period: 1800
        keep_pairlist_on_failure: true
@@ -74,7 +74,7 @@ config:
     #  min_value: 0
     #  refresh_period: 1800
   telegram:
-    enabled: true
+    enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
     keyboard:
@@ -155,7 +155,7 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-binance-michael-4
+  bot_name: freqtrade-binance-juliano
   initial_state: running
   force_entry_enable: true
   internals:
