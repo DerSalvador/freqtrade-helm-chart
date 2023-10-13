@@ -1,4 +1,4 @@
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
@@ -15,6 +15,7 @@ class EMASkipPump(IStrategy):
         basic strategy, which trys to avoid pump and dump market conditions. Shared from the tradingview
         slack
     """
+    INTERFACE_VERSION: int = 3
     EMA_SHORT_TERM = 5
     EMA_MEDIUM_TERM = 12
     EMA_LONG_TERM = 21
@@ -59,7 +60,7 @@ class EMASkipPump(IStrategy):
 
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
         dataframe.loc[
             (dataframe['volume'] < (dataframe['volume'].rolling(window=30).mean().shift(1) * 20)) &
@@ -67,19 +68,19 @@ class EMASkipPump(IStrategy):
             (dataframe['close'] < dataframe['ema_{}'.format(self.EMA_MEDIUM_TERM)]) &
             (dataframe['close'] == dataframe['min']) &
             (dataframe['close'] <= dataframe['bb_lowerband']),
-            'buy'
+            'enter_long'
         ] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
         dataframe.loc[
             (dataframe['close'] > dataframe['ema_{}'.format(self.EMA_SHORT_TERM)]) &
             (dataframe['close'] > dataframe['ema_{}'.format(self.EMA_MEDIUM_TERM)]) &
             (dataframe['close'] >= dataframe['max']) &
             (dataframe['close'] >= dataframe['bb_upperband']),
-            'sell'
+            'exit_long'
         ] = 1
 
         return dataframe
