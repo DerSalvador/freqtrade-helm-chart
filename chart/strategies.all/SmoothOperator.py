@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
@@ -23,6 +23,7 @@ class SmoothOperator(IStrategy):
     a none completed peak shape.
     """
 
+    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # we only sell after 100%, unless our sell points are found before
     minimal_roi = {
@@ -101,7 +102,7 @@ class SmoothOperator(IStrategy):
 
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
 
@@ -167,11 +168,11 @@ class SmoothOperator(IStrategy):
                 # ensure we have an overall uptrend
                 (dataframe['close'] > dataframe['close'].shift())
             ),
-            'buy'] = 1
+            'enter_long'] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # different strategy used for sell points, due to be able to duplicate it to 100%
         dataframe.loc[
             (
@@ -200,7 +201,7 @@ class SmoothOperator(IStrategy):
                 )
 
             ),
-            'sell'] = 1
+            'exit_long'] = 1
         return dataframe
 
 
