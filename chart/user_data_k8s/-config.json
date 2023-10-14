@@ -1,0 +1,15 @@
+Usage: dsTradingShowConfigFreqtradeInConfigmap.sh namespace
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael-4
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael-2
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
