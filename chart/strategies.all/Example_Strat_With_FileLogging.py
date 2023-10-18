@@ -23,7 +23,7 @@ import os
 
 logger = logging.getLogger(__name__)
 
-LOG_FILENAME = datetime.now().strftime('logfile_%d_%m_%Y.log')
+LOG_FILENAME = datetime.now().strftime('/trading/logfile_%d_%m_%Y.log')
 os.system("rm " + LOG_FILENAME)
 
 # This will have an impact on all the logging from FreqTrade, when using other strategies than this one !!! 
