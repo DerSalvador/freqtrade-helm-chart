@@ -162,7 +162,7 @@ backtesting:
   download_data: false
   timerange:
   timeframes: 5m
-  strategy_list: Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_list: SmartMoneyStrategy  # Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   fee:
   pvc_size: 1Gi
   results:
@@ -174,7 +174,7 @@ bot:
   debug: true
   debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_name: SmartMoneyStrategy # Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
