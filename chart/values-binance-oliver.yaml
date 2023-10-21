@@ -171,7 +171,7 @@ backtesting:
     pvc_size: 1Gi
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvv
   enabled: true
   strategy_name: SmartMoneyStrategy # Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
