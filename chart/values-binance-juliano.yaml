@@ -4,12 +4,12 @@ config:
   max_open_trades: 4
   amend_last_stake_amount: true
   stake_currency: USDT
-  stake_amount: 1000
+  stake_amount: unlimited
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   dry_run: false
-  dry_run_wallet: 4000
+  dry_run_wallet: 20
   cancel_open_orders_on_exit: false
   trading_mode: spot
   available_capital: 4000
@@ -59,8 +59,8 @@ config:
        refresh_period: 1800
        keep_pairlist_on_failure: true
        read_timeout: 60  
-     - method: PriceFilter
-       min_price: 100
+    # - method: PriceFilter
+    #   min_price: 100
     # - method: StaticPairList
     #   number_assets: 30
     #   sort_key: quoteVolume
@@ -74,9 +74,9 @@ config:
     #  min_value: 0
     #  refresh_period: 1800
   telegram:
-    enabled: false
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    enabled: true
+    token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
+    chat_id: "1649376180"
     keyboard:
       - - /daily
         - /stats
