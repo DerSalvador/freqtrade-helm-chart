@@ -4,12 +4,12 @@ config:
   max_open_trades: 10
   amend_last_stake_amount: true
   stake_currency: USDT
-  stake_amount: 100
+  stake_amount: unlimited
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   dry_run: false
-  dry_run_wallet: 1000
+  dry_run_wallet: 20
   cancel_open_orders_on_exit: false
   trading_mode: spot
   available_capital: 1000
@@ -77,7 +77,7 @@ config:
   pairlists:
     - method: RemotePairList
       mode: whitelist
-      processing_mode: filter
+      processing_mode: append
       pairlist_url: https://filekeys.com/kraken-pairs.json
       number_assets: 39
       refresh_period: 900
