@@ -52,13 +52,13 @@ config:
      - method: StaticPairList
        mode: whitelist
        processing_mode: append
-       #pairlist_url: http://filekeys.com/binance-pairs.json
+       pairlist_url: http://filekeys.com/binance-pairs.json
        number_assets: 364
        refresh_period: 1800
        keep_pairlist_on_failure: true
        read_timeout: 60  
-     - method: PriceFilter
-       min_price: 100
+    # - method: PriceFilter
+    #   min_price: 100
     # - method: StaticPairList
     #   number_assets: 30
     #   sort_key: quoteVolume
@@ -140,7 +140,7 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-binance-michael-4
+  bot_name: freqtrade-binance-michael-prawnstarobv
   initial_state: running
   force_entry_enable: true
   internals:
