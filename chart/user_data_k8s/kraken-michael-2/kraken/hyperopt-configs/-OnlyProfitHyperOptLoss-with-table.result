@@ -1,4 +1,0 @@
-host path already mounted in minikube /Users/michaelmellouk/dersalvador/freqtrading/freqtrade
-2023-10-14 20:22:24,531 - freqtrade - INFO - freqtrade 2023.9
-2023-10-14 20:22:24,619 - freqtrade.configuration.load_config - INFO - Using config: /trading/user_data_k8s/kraken-michael-2/kraken-michael-2-config.json ...
-2023-10-14 20:22:24,622 - freqtrade - ERROR - Config file "/trading/user_data_k8s/kraken-michael-2/kraken-michael-2-config.json" not found! Please create a config file or check whether it exists.
