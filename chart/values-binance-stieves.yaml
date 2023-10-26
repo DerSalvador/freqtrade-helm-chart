@@ -45,11 +45,27 @@ config:
     pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
     pair_blacklist: []
   pairlists:
-    - method: StaticPairList
-      number_assets: 24
-      sort_key: quoteVolume
-      min_value: 0
-      refresh_period: 1800
+     - method: RemotePairList
+       number_assets: 50
+       mode: whitelist
+       processing_mode: append
+       pairlist_url: http://filekeys.com/binance-pairs.json
+       number_assets: 50
+       refresh_period: 1800
+       keep_pairlist_on_failure: true
+       read_timeout: 60 
+     - method: RemotePairList
+       number_assets: 50
+       sort_key: quoteVolume
+       mode: blacklist
+       processing_mode: append
+       pairlist_url: http://filekeys.com/binance-pairs-blacklist.json
+       refresh_period: 1800
+       keep_pairlist_on_failure: true
+       read_timeout: 60
+     - method: AgeFilter
+       min_days_listed: 30
+
   #telegram:
   #  enabled: true
   #  token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"

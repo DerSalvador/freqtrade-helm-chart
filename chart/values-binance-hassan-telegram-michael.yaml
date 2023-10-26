@@ -78,6 +78,18 @@ config:
       keep_pairlist_on_failure: true
       read_timeout: 60
       # bearer_token: my-bearer-token
+    - method: RemotePairList
+      number_assets: 50
+      sort_key: quoteVolume
+      mode: blacklist
+      processing_mode: append
+      pairlist_url: http://filekeys.com/binance-pairs-blacklist.json
+      refresh_period: 1800
+      keep_pairlist_on_failure: true
+      read_timeout: 60
+    - method: AgeFilter
+      min_days_listed: 30
+
   #pairlists:
   #  - method: StaticPairList
   #    number_assets: 23

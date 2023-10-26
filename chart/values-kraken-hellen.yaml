@@ -4,7 +4,7 @@ config:
   max_open_trades: 10
   amend_last_stake_amount: true
   stake_currency: USDT
-  stake_amount: 100
+  stake_amount: unlimited
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
@@ -83,6 +83,8 @@ config:
       keep_pairlist_on_failure: true
       read_timeout: 60
       # bearer_token: my-bearer-token
+    - method: AgeFilter
+      min_days_listed: 30
   #pairlists:
   #  - method: StaticPairList
   #    number_assets: 23
