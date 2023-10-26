@@ -83,6 +83,8 @@ config:
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 60  
+    - method: AgeFilter
+      min_days_listed: 30
     #- method: VolumePairList
     #  number_assets: 661
     #  sort_key: quoteVolume
