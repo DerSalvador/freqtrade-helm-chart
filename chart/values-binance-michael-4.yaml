@@ -53,13 +53,13 @@ config:
      - method: RemotePairList
        mode: whitelist
        processing_mode: append
-       #pairlist_url: http://filekeys.com/binance-pairs.json
-       number_assets: 50
+       pairlist_url: http://filekeys.com/binance-pairs.json
+       number_assets: 100 
        refresh_period: 1800
        keep_pairlist_on_failure: true
        read_timeout: 60  
      - method: RemotePairList
-       number_assets: 50
+       number_assets: 100
        sort_key: quoteVolume
        mode: blacklist
        processing_mode: append
