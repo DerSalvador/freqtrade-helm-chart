@@ -168,7 +168,7 @@ config:
   trailing_stop_positive: 0.013
   trailing_stop_positive_offset: 0.025
   trailing_only_offset_is_reached: True
-  max_open_trades: 1
+  max_open_trades: 5
 
   #minimal_roi:
   #  "0": 0.8
