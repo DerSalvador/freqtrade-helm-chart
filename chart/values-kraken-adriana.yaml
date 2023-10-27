@@ -79,7 +79,13 @@ config:
       mode: whitelist
       processing_mode: append
       pairlist_url: https://filekeys.com/kraken-pairs.json
-      number_assets: 39
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 60  
+    - method: RemotePairList
+      mode: blacklist
+      processing_mode: append
+      pairlist_url: https://filekeys.com/kraken-pairs-blacklist.json
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 60  
