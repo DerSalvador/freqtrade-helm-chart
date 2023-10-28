@@ -78,3 +78,6 @@ X Exiting due to MK_INTERRUPTED: Received terminated signal
 
 X Exiting due to MK_INTERRUPTED: Received terminated signal
 
+
+X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
+
