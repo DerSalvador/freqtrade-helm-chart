@@ -150,21 +150,21 @@ image:
   tag: 2023.8_freqairl
 
 backtesting:
-  enabled: true
-  download_data: true
+  enabled: false
+  download_data: false
   timerange:
   timeframes: 1h
   strategy_list: Strategy005 # SwingHighToSky # EI3v2_tag_cofi_green # SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
-    enable_export: true
-    reader_enabled: true
+    enable_export: false
+    reader_enabled: false
     pvc_size: 1Gi
 
 bot:
   enabled: true
-  strategy_name: Strategy005 # SwingHighToSky # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_name: Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
   # freqaimodel: ReinforcementLearner # LightGBMRegressor
@@ -178,13 +178,13 @@ bot:
 #  fee:
 #  pvc_size: 1Gi
 #  results:
-#    enable_export: true
-#    reader_enabled: true
+#    enable_export: false
+#    reader_enabled: false
 #    pvc_size: 1Gi
 #
 #bot:
 #  enabled: true
-#  strategy_name: BBRSIv2
+#  strategy_name: Strategy005
 #  pvc_size: 1Gi
 
 ingress:

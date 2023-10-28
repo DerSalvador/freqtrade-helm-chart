@@ -79,7 +79,15 @@ config:
       mode: whitelist
       processing_mode: filter
       pairlist_url: https://filekeys.com/kraken-pairs.json
-      number_assets: 39
+      number_assets: 364
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 60  
+    - method: RemotePairList
+      mode: blacklist
+      processing_mode: filter
+      pairlist_url: https://filekeys.com/kraken-pairs-blacklist.json
+      number_assets: 364
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 60  
@@ -204,13 +212,13 @@ backtesting:
   fee:
   pvc_size: 1Gi
   results:
-    enable_export: true
-    reader_enabled: true
+    enable_export: false
+    reader_enabled: false
     pvc_size: 1Gi
 
 bot:
   enabled: true
-  strategy_name: Strategy005 # Strategy005HigherROI # # SwingHighToSky # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_name: Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
   # freqaimodel: ReinforcementLearner # LightGBMRegressor
@@ -224,13 +232,13 @@ bot:
 #  fee:
 #  pvc_size: 1Gi
 #  results:
-#    enable_export: true
-#    reader_enabled: true
+#    enable_export: false
+#    reader_enabled: false
 #    pvc_size: 1Gi
 #
 #bot:
 #  enabled: true
-#  strategy_name: BBRSIv2
+#  strategy_name: Strategy005
 #  pvc_size: 1Gi
 
 ingress:
