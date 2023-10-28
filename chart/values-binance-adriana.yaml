@@ -192,15 +192,15 @@ backtesting:
   fee:
   pvc_size: 1Gi
   results:
-    enable_export: true
-    reader_enabled: true
+    enable_export: false
+    reader_enabled: false
     pvc_size: 1Gi
 
 bot:
   debug: true
   debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
+  strategy_name: Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 

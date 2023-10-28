@@ -153,21 +153,21 @@ image:
   tag: 2023.8_freqairl
 
 backtesting:
-  enabled: true
-  download_data: true
+  enabled: false
+  download_data: false
   timerange:
   timeframes: 5m
   strategy_list: Strategy001 # TheForce
   fee:
   pvc_size: 1Gi
   results:
-    enable_export: true
-    reader_enabled: true
+    enable_export: false
+    reader_enabled: false
     pvc_size: 1Gi
 
 bot:
   enabled: true
-  strategy_name: Strategy001 # TheForce
+  strategy_name: Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 

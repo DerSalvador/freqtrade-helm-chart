@@ -83,6 +83,15 @@ config:
       keep_pairlist_on_failure: true
       read_timeout: 60
       # bearer_token: my-bearer-token
+    - method: RemotePairList
+      mode: blacklist
+      processing_mode: filter
+      pairlist_url: https://filekeys.com/kraken-pairs-blacklist.json
+      number_assets: 39
+      refresh_period: 1800
+      keep_pairlist_on_failure: true
+      read_timeout: 60
+      # bearer_token: my-bearer-token
     - method: AgeFilter
       min_days_listed: 30
   #pairlists:
@@ -209,21 +218,21 @@ image:
   tag: 2023.8_freqairl
 
 backtesting:
-  enabled: true
-  download_data: true
+  enabled: false
+  download_data: false
   timerange:
   timeframes: 1h
   strategy_list: Strategy005 # SmartMoneyStrategy # Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
   fee:
   pvc_size: 1Gi
   results:
-    enable_export: true
-    reader_enabled: true
+    enable_export: false
+    reader_enabled: false
     pvc_size: 1Gi
 
 bot:
   enabled: true
-  strategy_name: Strategy005 # SmartMoneyStrategy # Strategy005 # EI3v2_tag_cofi_green # SwingHighToSky
+  strategy_name: Strategy005
   pvc_size: 1Gi
   # freqaimodel: ReinforcementLearner # LightGBMRegressor
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
@@ -237,13 +246,13 @@ bot:
 #  fee:
 #  pvc_size: 1Gi
 #  results:
-#    enable_export: true
-#    reader_enabled: true
+#    enable_export: false
+#    reader_enabled: false
 #    pvc_size: 1Gi
 #
 #bot:
 #  enabled: true
-#  strategy_name: EI3v2_tag_cofi_green
+#  strategy_name: Strategy005
 #  pvc_size: 1Gi
 #
 ingress:
