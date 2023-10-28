@@ -198,10 +198,10 @@ backtesting:
     pvc_size: 1Gi
 
 bot:
-  debug: false
+  debug: true
   debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy005
+  strategy_name: Strategy005 #  SwingHighToSky #  ClucHAnix_BB_RPB_MOD_E0V1E_ROI # TheForce
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
 
