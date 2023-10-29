@@ -121,7 +121,7 @@ config:
     listen_ip_address: 0.0.0.0
     listen_port: 8084
     verbosity: error
-    enable_openapi: false
+    enable_openapi: true
     jwt_secret_key: 235573d45bb26d0cbf1986893b12d4aaf0cf4934f3566d9459d818ec7fbb851b
     ws_token: acnQI1n44GG9lJ51fLKqWQvVJF5k5q7xsw
     CORS_origins:
