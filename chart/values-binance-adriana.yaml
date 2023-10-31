@@ -54,7 +54,7 @@ config:
      - method: RemotePairList
        mode: whitelist
        processing_mode: append
-       pairlist_url: http://filekeys.com/binance-pairs.json
+       pairlist_url: "https://remotepairlist.com?q=ef0c3abe2d3ba2fa"
        number_assets: 50
        refresh_period: 1800
        keep_pairlist_on_failure: true
@@ -197,7 +197,7 @@ backtesting:
     pvc_size: 1Gi
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvv
   enabled: true
   strategy_name: Strategy005
