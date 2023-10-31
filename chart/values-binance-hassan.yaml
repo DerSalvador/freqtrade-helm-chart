@@ -231,7 +231,7 @@ backtesting:
     pvc_size: 1Gi
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvv
   enabled: true
   strategy_name: Strategy005
