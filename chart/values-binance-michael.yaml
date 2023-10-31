@@ -158,10 +158,14 @@ config:
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.07300000000000001
-    "8": 0.038
-    "17": 0.015
-    "31": 0
+    "0": 0.8
+    "10160": 0.5
+    "15160": 0.25
+    "20160": 0
+    #"0": 0.07300000000000001
+    #"8": 0.038
+    #"17": 0.015
+    #"31": 0
   stoploss: -0.277
   trailing_stop: True
   trailing_stop_positive: 0.013
