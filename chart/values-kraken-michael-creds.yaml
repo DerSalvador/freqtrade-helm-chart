@@ -1,0 +1,11 @@
+configcreds:
+  stake_amount: 100
+  exchange:
+    name: kraken
+    key: 6vsqnOYuJJD3soHSFzjtm6NERdQt10gr+5+xDhfJk7/sOk5ntLYlNwCa
+    secret: >-
+      Scf4g6DcfkRujaSVfWQ9nYZci5vBENi5QSLroy4BXXGFlUvYuwKv4Z5Z7juyF4ugvSIfmSI8DP4qxnw//cG6mg==
+  telegram:
+    enabled: true
+    token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
+    chat_id: "1759706931"
