@@ -1,0 +1,11 @@
+configcreds:
+  stake_amount: 1000
+  exchange:
+    name: binance
+    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ
+    secret: >-
+      RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97
+  telegram:
+    enabled: true
+    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "5711830404"
