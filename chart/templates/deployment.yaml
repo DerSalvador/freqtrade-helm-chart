@@ -46,6 +46,8 @@ spec:
 {{- end }}
         - --config
         - /freqtrade/config/config.json
+        - --config
+        - /freqtrade/configcreds/configcreds.json
         - --strategy-path 
         - /freqtrade/user_data/strategies
         - --strategy
@@ -58,6 +60,8 @@ spec:
         - --freqaimodel-path 
         - /freqtrade/freqtrade/freqai/prediction_models
         volumeMounts:
+        - mountPath: /freqtrade/configcreds
+          name: configcreds
         - mountPath: /freqtrade/config
           name: config
         - mountPath: /freqtrade/user_data/strategies
@@ -74,6 +78,9 @@ spec:
       imagePullSecrets:
       - name: do-dersalvador-registry
       volumes:
+      - name: configcreds
+        configMap:
+          name: freqtrade-config-creds-{{ .Release.Namespace }}
       - name: config
         configMap:
           name: freqtrade-config-{{ .Release.Namespace }}
