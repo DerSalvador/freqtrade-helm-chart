@@ -66,8 +66,7 @@ config:
        min_days_listed: 30
   telegram:
     keyboard:
-      - - /daily
-        - /stats
+      - - /forcelong
         - /balance
         - /profit
         - /reload_config
@@ -81,6 +80,7 @@ config:
         - /whitelist
         - /logs
         - /trades
+        - /forceexit
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
