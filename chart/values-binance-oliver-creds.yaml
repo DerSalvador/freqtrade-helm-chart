@@ -1,0 +1,10 @@
+configcreds:
+  stake_amount: unlimited
+  exchange:
+    name: binance
+    key: z12MdhIr1GXvEWzA6ZI3N3SBT9lA3L0AaZbdFbBTMiz9dIKpqedNDP8xwt7q1G0f
+    secret: kTSbbt3MZ35z9EiOOrFArOVVM9YYubpHOp7VC1RD2UJFru7VO6r9fgUY201PeYrU
+  telegram:
+    enabled: true
+    token: "6769081383:AAEls-xws8eZw4vv-adHpnTWqbnWGliHnSE"
+    chat_id: "477936067"
