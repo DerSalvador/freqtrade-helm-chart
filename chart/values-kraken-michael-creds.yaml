@@ -2,9 +2,9 @@ configcreds:
   stake_amount: 100
   exchange:
     name: kraken
-    key: 6vsqnOYuJJD3soHSFzjtm6NERdQt10gr+5+xDhfJk7/sOk5ntLYlNwCa
+    key: ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA # 6vsqnOYuJJD3soHSFzjtm6NERdQt10gr+5+xDhfJk7/sOk5ntLYlNwCa
     secret: >-
-      Scf4g6DcfkRujaSVfWQ9nYZci5vBENi5QSLroy4BXXGFlUvYuwKv4Z5Z7juyF4ugvSIfmSI8DP4qxnw//cG6mg==
+      EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg== #  Scf4g6DcfkRujaSVfWQ9nYZci5vBENi5QSLroy4BXXGFlUvYuwKv4Z5Z7juyF4ugvSIfmSI8DP4qxnw//cG6mg==
   telegram:
     enabled: true
     token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
