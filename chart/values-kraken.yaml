@@ -57,17 +57,21 @@ config:
     #  refresh_period: 1800
   telegram:
     keyboard:
-      - - /daily
-        - /stats
+      - - /forcelong
         - /balance
         - /profit
+        - /reload_config
+        - /stopentry
       - - /status table
         - /performance
         - /mix_tags
+        - /start
+        - /stop
       - - /show_config
         - /whitelist
         - /logs
         - /trades
+        - /forceexit
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -126,17 +130,10 @@ config:
   internals:
     process_throttle_secs: 5
   minimal_roi:
-    "0": 0.50
-    "20": 0.40
-    "30": 0.30
-    "60": 0.20
-    "120": 0.10
-    "130": 0.05
-    "140": 0.03
-    "180": 0.02
-    "240": 0.01
-    "360": 0
-
+    "0": 0.8
+    "10160": 0.5
+    "15160": 0.25
+    "20160": 0
 image:
   base: freqtradeorg/freqtrade
   tag: 2023.8_freqairl
