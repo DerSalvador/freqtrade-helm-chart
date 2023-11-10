@@ -1,5 +1,5 @@
 configcreds:
-  stake_amount: 50
+  stake_amount: 100
   exchange:
     name: kraken
     key: iYMnr561Jd2W/5mO5vGh0dRkxVuRIIFASiyMg438+JxOo+3x4E0hRsRg
