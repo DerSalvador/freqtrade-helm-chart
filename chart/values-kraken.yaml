@@ -37,13 +37,13 @@ config:
       enableRateLimit: true
       rateLimit: 2500
     pair_whitelist_backtesting: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
-    # pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
+    pair_whitelist: [ "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT", "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT", "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT", "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT", "XTZ/USDT", "MANA/USDT", "USTC/USDT" ]
     pair_blacklist: []
   pairlists:
-    - method: RemotePairList
+    - method: StaticPairList
       mode: whitelist
-      processing_mode: filter
-      pairlist_url: https://filekeys.com/kraken-pairs.json
+      processing_mode: append
+      # pairlist_url: https://filekeys.com/kraken-pairs.json
       number_assets: 39
       refresh_period: 1800
       keep_pairlist_on_failure: true
