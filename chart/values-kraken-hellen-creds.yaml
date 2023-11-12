@@ -9,3 +9,9 @@ configcreds:
     enabled: true
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"
     chat_id: "6493643145"
+bot:  
+  enabled: true
+  strategy_name: Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner
+  # freqaimodel: ReinforcementLearner # LightGBMRegressor

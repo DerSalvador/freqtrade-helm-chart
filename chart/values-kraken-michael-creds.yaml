@@ -10,10 +10,10 @@ configcreds:
     token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
     chat_id: "1759706931"
   position_adjustment_enable: true
-  bot:
-    enabled: true
-    strategy_name: NostalgiaForInfinityX
-    pvc_size: 1Gi
-    freqaimodel: LightGBMRegressor #  ReinforcementLearner 
+bot:
+  enabled: true
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityX
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner 
     # freqaimodel: ReinforcementLearner # LightGBMRegressor
 
