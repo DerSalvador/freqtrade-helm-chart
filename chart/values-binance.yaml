@@ -191,13 +191,13 @@ backtesting:
     reader_enabled: false
     pvc_size: 1Gi
 
-bot:
-  debug: false
-  debuglevel: -vvv
-  enabled: true
-  strategy_name: Strategy005
-  pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor 
+#bot:
+#  debug: false
+#  debuglevel: -vvv
+#  enabled: true
+#  strategy_name: Strategy005
+#  pvc_size: 1Gi
+#  freqaimodel: LightGBMRegressor 
 
 ingress:
   enabled: true
