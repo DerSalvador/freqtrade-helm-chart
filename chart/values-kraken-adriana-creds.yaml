@@ -14,3 +14,9 @@ configcreds:
     # Adriana token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     # Adriana chat_id: "6274423445"
   
+bot:  
+  enabled: true
+  strategy_name: Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner
+  # freqaimodel: ReinforcementLearner # LightGBMRegressor
