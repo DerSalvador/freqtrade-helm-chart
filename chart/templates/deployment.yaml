@@ -1,4 +1,27 @@
 {{- if .Values.bot.enabled }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: freqtrade-sqlite-{{ .Release.Namespace }}
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.bot.pvc_size }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: freqtrade-extra-strategies-{{ .Release.Namespace }}
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.bot.pvc_size }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -49,7 +72,7 @@ spec:
         - --config
         - /freqtrade/configcreds/configcreds.json
         - --strategy-path 
-        - /freqtrade/user_data/strategies
+        - /freqtrade/user_data/extra_strategies
         - --strategy
         - {{ .Values.bot.strategy_name }}
         - --db-url
@@ -60,29 +83,25 @@ spec:
         - --freqaimodel-path 
         - /freqtrade/freqtrade/freqai/prediction_models
         volumeMounts:
-        - name: strategies_rw
+        - name: strategies
           mountPath: /freqtrade/user_data/strategies
+        - name: extra-strategies
+          mountPath: /freqtrade/user_data/extra_strategies
         - name: configcreds
           mountPath: /freqtrade/configcreds
         - name: config
           mountPath: /freqtrade/config
-        - name: strategies
-          mountPath: /freqtrade/user_data/strategies
         - name: sqlite
           mountPath: /sqlite
         ports:
         - name: api
           containerPort: {{ .Values.config.api_server.listen_port }}
-          # hostIP: 138.68.122.196
-          # hostPort: 8084  
-        # - name: frequi
-        #  containerPort: 8080
       imagePullSecrets:
       - name: do-dersalvador-registry
       volumes:
-   volumes:
-      - name: strategies_rw
-        emptyDir: {}
+      - name: extra-strategies
+        persistentVolumeClaim:
+          claimName: freqtrade-extra-strategies-{{ .Release.Namespace }}
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
@@ -96,14 +115,4 @@ spec:
         persistentVolumeClaim:
           claimName: freqtrade-sqlite-{{ .Release.Namespace }}
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: freqtrade-sqlite-{{ .Release.Namespace }}
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: {{ .Values.bot.pvc_size }}
 {{- end }}
