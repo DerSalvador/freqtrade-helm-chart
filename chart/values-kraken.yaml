@@ -151,11 +151,11 @@ backtesting:
     reader_enabled: false
     pvc_size: 1Gi
 
-bot:
-  enabled: true
-  strategy_name: Strategy005
-  pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor #  ReinforcementLearner 
+# bot:
+#   enabled: true
+#   strategy_name: Strategy005
+#   pvc_size: 1Gi
+#   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
   # freqaimodel: ReinforcementLearner # LightGBMRegressor
 
 #backtesting:
