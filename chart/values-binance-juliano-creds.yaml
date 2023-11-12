@@ -11,3 +11,10 @@ configcreds:
     token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
     chat_id: "1649376180"
  
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor 
