@@ -8,3 +8,11 @@ configcreds:
     enabled: true
     token: "6769081383:AAEls-xws8eZw4vv-adHpnTWqbnWGliHnSE"
     chat_id: "477936067"
+
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor 
