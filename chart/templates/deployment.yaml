@@ -60,14 +60,16 @@ spec:
         - --freqaimodel-path 
         - /freqtrade/freqtrade/freqai/prediction_models
         volumeMounts:
-        - mountPath: /freqtrade/configcreds
-          name: configcreds
-        - mountPath: /freqtrade/config
-          name: config
-        - mountPath: /freqtrade/user_data/strategies
-          name: strategies
-        - mountPath: /sqlite
-          name: sqlite
+        - name: strategies_rw
+          mountPath: /freqtrade/user_data/strategies
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+        - name: strategies
+          mountPath: /freqtrade/user_data/strategies
+        - name: sqlite
+          mountPath: /sqlite
         ports:
         - name: api
           containerPort: {{ .Values.config.api_server.listen_port }}
@@ -78,6 +80,9 @@ spec:
       imagePullSecrets:
       - name: do-dersalvador-registry
       volumes:
+   volumes:
+      - name: strategies_rw
+        emptyDir: {}
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
