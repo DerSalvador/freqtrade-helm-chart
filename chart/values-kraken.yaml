@@ -1,3 +1,31 @@
+nostalgiaforinfinity:
+  holdtrades: 
+    trade_pairs: 
+       - BTC/USDT: 0.3
+       - ETH/USDT: 0.3
+       - ADA/USDT: 0.1
+       - ALGO/USDT: 0.1
+       - APE/USDT: 0.1
+       - ATOM/USDT: 0.1
+       - AVAX/USDT: 0.1
+       - BCH/USDT: 0.1
+       - DAI/USDT: 0.1
+       - DOGE/USDT: 0.1
+       - DOT/USDT: 0.1
+       - EOS/USDT: 0.1
+       - EURT/USDT: 0.1
+       - LINK/USDT: 0.1
+       - LTC/USDT: 0.1
+       - MANA/USDT: 0.1
+       - MATIC/USDT: 0.1
+       - SHIB/USDT: 0.1
+       - SOL/USDT: 0.1
+       - USDC/USDT: 0.1
+       - USTC/USDT: 0.1
+       - XMR/USDT: 0.1
+       - XRP/USDT: 0.1
+       - XTZ/USDT: 0.1
+
 config:
   timeframe: 1m
   include_timeframes: 5m
