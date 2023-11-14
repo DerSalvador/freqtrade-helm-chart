@@ -87,3 +87,12 @@ X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/
 
 X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
 
+
+X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
+
+Error from server (NotFound): persistentvolumeclaims "freqtrade-extra-strategies-binance-michael" not found
+Error from server (NotFound): persistentvolumeclaims "freqtrade-sqlite-binance-michael" not found
+Error from server (NotFound): persistentvolumeclaims "freqtrade-user-data-binance-michael" not found
+persistentvolumeclaim "freqtrade-extra-strategies-binance-michael" deleted
+persistentvolumeclaim "freqtrade-sqlite-binance-michael" deleted
+persistentvolumeclaim "freqtrade-user-data-binance-michael" deleted
