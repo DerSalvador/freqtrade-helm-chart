@@ -117,13 +117,13 @@ spec:
       volumes:
       - name: backtesting-data
         persistentVolumeClaim:
-          claimName: freqtrade-backtesting-data-{{ .Release.Namespace }}
+          claimName: freqtrade-backtesting-data
       - name: user-data
         persistentVolumeClaim:
-          claimName: freqtrade-user-data-{{ .Release.Namespace }}
+          claimName: freqtrade-user-data
       - name: extra-strategies
         persistentVolumeClaim:
-          claimName: freqtrade-extra-strategies-{{ .Release.Namespace }}
+          claimName: freqtrade-extra-strategies
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
@@ -138,6 +138,6 @@ spec:
           name: freqtrade-strategies-{{ .Release.Namespace }}
       - name: sqlite
         persistentVolumeClaim:
-          claimName: freqtrade-sqlite-{{ .Release.Namespace }}
+          claimName: freqtrade-sqlite
 ---
 {{- end }}

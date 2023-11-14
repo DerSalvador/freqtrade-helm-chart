@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: freqtrade-sqlite-{{ .Release.Namespace }}
+  name: freqtrade-sqlite
 spec:
   accessModes:
   - ReadWriteOnce
@@ -13,7 +13,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: freqtrade-extra-strategies-{{ .Release.Namespace }}
+  name: freqtrade-extra-strategies
 spec:
   accessModes:
   - ReadWriteOnce
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: freqtrade-user-data-{{ .Release.Namespace }}
+  name: freqtrade-user-data
 spec:
   accessModes:
   - ReadWriteOnce
@@ -35,7 +35,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: freqtrade-backtesting-data-{{ .Release.Namespace }}
+  name: freqtrade-backtesting-data
 spec:   
   accessModes:
   - ReadWriteOnce
@@ -46,7 +46,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: freqtrade-backtesting-results-{{ .Release.Namespace }}
+  name: freqtrade-backtesting-results
 spec:     
   accessModes:
   - ReadWriteOnce
