@@ -109,28 +109,28 @@ spec:
       - name: strategies
         configMap:
           name: freqtrade-strategies-{{ .Release.Namespace }}
----
-apiVersion: v1
-kind: PersistentVolumeClaim
+#---
+#apiVersion: v1
+#kind: PersistentVolumeClaim
 metadata:
-  name: backtesting-data-{{ .Release.Namespace }}
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: {{ .Values.backtesting.pvc_size }}
----
-{{- if .Values.backtesting.results.enable_export }}
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: backtesting-results-{{ .Release.Namespace }}
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: {{ .Values.backtesting.results.pvc_size }}
+#  name: backtesting-data-{{ .Release.Namespace }}
+#spec:
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: {{ .Values.backtesting.pvc_size }}
+#---
+#{{- if .Values.backtesting.results.enable_export }}
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: backtesting-results-{{ .Release.Namespace }}
+#spec:
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: {{ .Values.backtesting.results.pvc_size }}
 {{- end }}
 {{- end }}
