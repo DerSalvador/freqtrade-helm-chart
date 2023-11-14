@@ -1,5 +1,5 @@
 configcreds:
-  stake_amount: 100
+  stake_amount: unlimited
   exchange:
     name: kraken
     key: iYMnr561Jd2W/5mO5vGh0dRkxVuRIIFASiyMg438+JxOo+3x4E0hRsRg
@@ -13,7 +13,7 @@ configcreds:
     # chat_id: "743804896"
 bot:  
   enabled: true
-  strategy_name: Strategy005
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner
   # freqaimodel: ReinforcementLearner # LightGBMRegressor

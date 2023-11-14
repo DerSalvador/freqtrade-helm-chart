@@ -1,38 +1,38 @@
 {{- if .Values.bot.enabled }}
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: freqtrade-sqlite-{{ .Release.Namespace }}
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: {{ .Values.bot.pvc_size }}
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: freqtrade-extra-strategies-{{ .Release.Namespace }}
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: {{ .Values.bot.pvc_size }}
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: freqtrade-user-data-{{ .Release.Namespace }}
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: {{ .Values.bot.pvc_size }}
----
+#---
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: freqtrade-sqlite-{{ .Release.Namespace }}
+#spec:
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: {{ .Values.bot.pvc_size }}
+#---
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: freqtrade-extra-strategies-{{ .Release.Namespace }}
+#spec:
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: {{ .Values.bot.pvc_size }}
+#---
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: freqtrade-user-data-{{ .Release.Namespace }}
+#spec:
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: {{ .Values.bot.pvc_size }}
+#---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -46,7 +46,7 @@ spec:
       labels:
         app: freqtrade-{{ .Release.Namespace }}
     spec:
-      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
+      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -86,13 +86,19 @@ spec:
         - {{ .Values.bot.freqaimodel }}
         - --freqaimodel-path 
         - /freqtrade/freqtrade/freqai/prediction_models
+        - --log-file 
+        - /tmp/freqtrade.log
+        - --data-dir
+        - /freqtrade/user_data/data
         volumeMounts:
         - name: nfi-hold-trades
           subPath: nfi-hold-trades.json
           mountPath: /freqtrade/user_data/nfi-hold-trades.json
         - name: user-data
           subPath: nfi-hold-trades.json
-          mountPath: /freqtrade/user_data/nfi-hold-trades.json
+          mountPath: /freqtrade/user_data
+        - name: backtesting-data
+          mountPath: /freqtrade/user_data/data
         - name: strategies
           mountPath: /freqtrade/user_data/strategies
         - name: extra-strategies
@@ -109,6 +115,9 @@ spec:
       imagePullSecrets:
       - name: do-dersalvador-registry
       volumes:
+      - name: backtesting-data
+        persistentVolumeClaim:
+          claimName: freqtrade-backtesting-data-{{ .Release.Namespace }}
       - name: user-data
         persistentVolumeClaim:
           claimName: freqtrade-user-data-{{ .Release.Namespace }}
