@@ -22,6 +22,17 @@ spec:
     requests:
       storage: {{ .Values.bot.pvc_size }}
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: freqtrade-user-data-{{ .Release.Namespace }}
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.bot.pvc_size }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -42,9 +53,6 @@ spec:
         securityContext:
           allowPrivilegeEscalation: false
           runAsUser: 0
-        # securityContext:
-        #   allowPrivilegeEscalation: false
-        #   runAsUser: 0
         command:
         - bash
         args: ["-c","chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
@@ -56,10 +64,6 @@ spec:
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-        # securityContext:
-        #  runAsUser: 1000
-        #  runAsGroup: 1000
-        # - -vvv Debug
         command:
         - freqtrade
         args:
@@ -83,6 +87,12 @@ spec:
         - --freqaimodel-path 
         - /freqtrade/freqtrade/freqai/prediction_models
         volumeMounts:
+        - name: nfi-hold-trades
+          subPath: nfi-hold-trades.json
+          mountPath: /freqtrade/user_data/nfi-hold-trades.json
+        - name: user-data
+          subPath: nfi-hold-trades.json
+          mountPath: /freqtrade/user_data/nfi-hold-trades.json
         - name: strategies
           mountPath: /freqtrade/user_data/strategies
         - name: extra-strategies
@@ -99,12 +109,18 @@ spec:
       imagePullSecrets:
       - name: do-dersalvador-registry
       volumes:
+      - name: user-data
+        persistentVolumeClaim:
+          claimName: freqtrade-user-data-{{ .Release.Namespace }}
       - name: extra-strategies
         persistentVolumeClaim:
           claimName: freqtrade-extra-strategies-{{ .Release.Namespace }}
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
+      - name: nfi-hold-trades
+        configMap:
+          name: freqtrade-nfi-hold-trades-{{ .Release.Namespace }}
       - name: config
         configMap:
           name: freqtrade-config-{{ .Release.Namespace }}
