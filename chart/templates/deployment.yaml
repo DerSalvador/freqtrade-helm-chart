@@ -46,7 +46,7 @@ spec:
       labels:
         app: freqtrade-{{ .Release.Namespace }}
     spec:
-      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
+      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}

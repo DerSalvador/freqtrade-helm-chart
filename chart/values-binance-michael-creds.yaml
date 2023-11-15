@@ -1,5 +1,5 @@
 configcreds:
-  stake_amount: 1000
+  stake_amount: unlimited
   exchange:
     name: binance
     key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ
@@ -13,6 +13,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 # NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 #Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
