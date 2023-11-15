@@ -164,7 +164,7 @@ config:
     "20160": 0
 image:
   base: freqtradeorg/freqtrade
-  tag: 2023.8_freqairl
+  tag: 2023.9_freqairl
 
 backtesting:
   enabled: false
