@@ -12,7 +12,7 @@ configcreds:
   position_adjustment_enable: true
 bot:
   enabled: true
-  strategy_name:  NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityX
+  strategy_name: Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityX
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
     # freqaimodel: ReinforcementLearner # LightGBMRegressor
