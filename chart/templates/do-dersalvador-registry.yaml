@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJyZWdpc3RyeS5kaWdpdGFsb2NlYW4uY29tIjp7ImF1dGgiOiJaRzl2WDNZeFh6UTBZekJoTlRBek9UUTJZVEkyT0RWbVpEZGtOek15TkdNell6VXhabVU0WWpKbVpUY3pZMlUzWWpsaVlUVTFZek0xTUdJNE1HTXpPV0U1WWpGak5HVTZaRzl2WDNZeFh6UTBZekJoTlRBek9UUTJZVEkyT0RWbVpEZGtOek15TkdNell6VXhabVU0WWpKbVpUY3pZMlUzWWpsaVlUVTFZek0xTUdJNE1HTXpPV0U1WWpGak5HVT0ifX19
+kind: Secret
+metadata:
+  labels:
+    digitalocean.com/copy-identifier: do-dersalvador-registry
+  name: do-dersalvador-registry
+type: kubernetes.io/dockerconfigjson
