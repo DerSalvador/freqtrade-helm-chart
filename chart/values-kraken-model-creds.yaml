@@ -2,7 +2,7 @@ configcreds:
   bot_name: freqtrade-kraken-model
   dry_run: true
   dry_run_wallet: 1000000
-  download_trades: false
+  download_trades: true
   position_adjustment_enable: true
   stake_amount: unlimited
   exchange:
@@ -15,7 +15,7 @@ configcreds:
     chat_id: "889071692"
 bot:
   enabled: true
-  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 #  Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityX
+  strategy_name:  Strategy005 # NostalgiaForInfinityX4 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityX
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
     # freqaimodel: ReinforcementLearner # LightGBMRegressor

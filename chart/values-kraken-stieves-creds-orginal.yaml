@@ -16,7 +16,7 @@ configcreds:
     chat_id: "889071692"
 bot:  
   enabled: true
-  strategy_name: Strategy005
+  strategy_name: NostalgiaForInfinityX4
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner
     # freqaimodel: ReinforcementLearner # LightGBMRegressor
