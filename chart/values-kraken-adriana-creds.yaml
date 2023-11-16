@@ -1,4 +1,9 @@
 configcreds:
+  bot_name: freqtrade-kraken-adriana
+  dry_run: false
+  dry_run_wallet: 100000
+  download_trades: false
+  position_adjustment_enable: true
   stake_amount: unlimited
   exchange:
     name: kraken

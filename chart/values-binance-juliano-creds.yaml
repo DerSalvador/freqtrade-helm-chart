@@ -1,5 +1,9 @@
 configcreds:
+  bot_name: freqtrading-binance-juliano
+  dry_run: false
+  dry_run_wallet: 4000
   stake_amount: unlimited
+  position_adjustment_enable: true
   exchange:
     name: binance
     key: HrLllzlPhN2BAAChE7iQdewMvawTuEwLGkWPYU1ZqlnxJ1uN1IdUernLvk6rU5cF

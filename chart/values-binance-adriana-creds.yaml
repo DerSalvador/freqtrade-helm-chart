@@ -1,5 +1,9 @@
 configcreds:
+  bot_name: freqtrading-binance-adriana
+  dry_run: false
+  dry_run_wallet: 4000
   stake_amount: unlimited
+  position_adjustment_enable: true
   exchange:
     name: binance
     key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
@@ -9,7 +13,6 @@ configcreds:
     enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
-
 
 bot:
   debug: false
