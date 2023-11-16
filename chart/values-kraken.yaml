@@ -35,8 +35,6 @@ config:
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
-  dry_run: false
-  dry_run_wallet: 1000
   cancel_open_orders_on_exit: false
   trading_mode: spot
   margin_mode: ""
@@ -57,7 +55,6 @@ config:
     price_side: same
     use_order_book: true
     order_book_top: 1
-  download_trades: true
   exchange:
     ccxt_config:
       enableRateLimit: true
@@ -152,7 +149,6 @@ config:
       test_size: 0.33
       random_state: 1
     model_training_parameters: {}
-  bot_name: freqtrade-kraken-michael
   initial_state: running
   force_entry_enable: true
   internals:
@@ -162,6 +158,14 @@ config:
     "10160": 0.5
     "15160": 0.25
     "20160": 0
+  order_types: 
+    buy: "limit"
+    forcebuy: "market"
+    forcesell: "market"
+    sell: limit
+    stoploss: "market"
+    stoploss_on_exchange: false
+
 image:
   base: freqtradeorg/freqtrade
   tag: 2023.9_freqairl

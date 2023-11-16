@@ -1,5 +1,9 @@
 configcreds:
+  bot_name: freqtrading-binance-hassan
+  dry_run: false
+  dry_run_wallet: 4000
   stake_amount: unlimited
+  position_adjustment_enable: true
   exchange:
     name: binance
     key: EvXcnxKsJ7OQHHkh9xjeMGrjgcl8Dj2Fgaoi0MuNUZgf9mxGluC45Uc8EFWb9ZJL
@@ -11,3 +15,10 @@ configcreds:
     token: "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"
     chat_id: "5510878923"
  
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor 

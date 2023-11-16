@@ -1,5 +1,9 @@
 configcreds:
+  bot_name: freqtrading-binance-oliver
+  dry_run: false
+  dry_run_wallet: 4000
   stake_amount: unlimited
+  position_adjustment_enable: true
   exchange:
     name: binance
     key: z12MdhIr1GXvEWzA6ZI3N3SBT9lA3L0AaZbdFbBTMiz9dIKpqedNDP8xwt7q1G0f
