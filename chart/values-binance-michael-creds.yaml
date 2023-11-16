@@ -2,17 +2,17 @@ configcreds:
   stake_amount: unlimited
   exchange:
     name: binance
-    key: 3JUjneNm4YVUnZgCV6nfP6taOexu7AlGVdus1o2MULTuULETfdjSaGTdsBmzqiqq
-    secret: >-
-       r4JrDQ0TCOhOwZ8Z454bZ2xhcmDFXtLmsmJWCCt0l6uqozzvYlYg5r7aRUo34gOy      
+    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ 
+    secret: RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97 
   telegram:
     enabled: true
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
+  position_adjustment_enable: true
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name:  Strategy005 # NostalgiaForInfinityNext_ChangeToTower_V5_2 #Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005 # Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
