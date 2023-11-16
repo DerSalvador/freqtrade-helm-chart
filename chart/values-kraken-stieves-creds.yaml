@@ -9,6 +9,7 @@ configcreds:
     enabled: true
     token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
     chat_id: "743804896"
+  position_adjustment_enable: true
     # token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
     # chat_id: "743804896"
 bot:  
