@@ -1,5 +1,9 @@
 configcreds:
+  bot_name: freqtrading-binance-michael
+  dry_run: false
+  dry_run_wallet: 4000
   stake_amount: unlimited
+  position_adjustment_enable: true
   exchange:
     name: binance
     key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ 
@@ -8,7 +12,6 @@ configcreds:
     enabled: true
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
-  position_adjustment_enable: true
 bot:
   debug: false
   debuglevel: -vvv

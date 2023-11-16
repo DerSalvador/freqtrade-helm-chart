@@ -1,21 +1,21 @@
 configcreds:
-  bot_name: freqtrade-kraken-michael
-  dry_run: false
-  dry_run_wallet: 100000
+  bot_name: freqtrade-kraken-model
+  dry_run: true
+  dry_run_wallet: 1000000
   download_trades: false
   position_adjustment_enable: true
-  stake_amount: 100
+  stake_amount: unlimited
   exchange:
     name: kraken
     key: ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
     secret: EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
   telegram:
     enabled: true
-    token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
-    chat_id: "1759706931"
+    token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"
+    chat_id: "889071692"
 bot:
   enabled: true
-  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005 #   NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityX
+  strategy_name: NostalgiaForInfinityNext_ChangeToTower_V5_2 #  Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 #  NostalgiaForInfinityX
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
     # freqaimodel: ReinforcementLearner # LightGBMRegressor

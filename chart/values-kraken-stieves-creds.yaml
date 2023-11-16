@@ -1,4 +1,9 @@
 configcreds:
+  bot_name: freqtrade-kraken-stieves
+  dry_run: false
+  dry_run_wallet: 100000
+  download_trades: false
+  position_adjustment_enable: true
   stake_amount: unlimited
   exchange:
     name: kraken
@@ -9,7 +14,6 @@ configcreds:
     enabled: true
     token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
     chat_id: "743804896"
-  position_adjustment_enable: true
     # token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
     # chat_id: "743804896"
 bot:  
