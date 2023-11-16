@@ -1,0 +1,22 @@
+configcreds:
+  download_trades: true
+  bot_name: freqtrading-binance-hossein
+  dry_run: true
+  dry_run_wallet: 100000
+  stake_amount: unlimited
+  position_adjustment_enable: true
+  exchange:
+    name: binance
+    key: TGGGuWFODOW9dksxdkLZECW7xw4m1WXOja9XIbfO8byTpq8SBkhKjEngacbCOPHq
+    secret: T9pqg7tJ8NOyQDaqivZ0yhvEqouuyrZyCaYyp9d7tczoRTAg8v5rnzRAnZpxfQeb
+  telegram:
+    enabled: true
+    token: "6957116128:AAEVFIwOrmDumdEOejlxd0gomEDPDcqwaYw"
+    chat_id: "27944625"
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name:  Strategy005 # NostalgiaForInfinityX4 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005 # Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor 
