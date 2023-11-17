@@ -2,3 +2,5 @@ W1117 14:37:37.073566    3085 main.go:291] Unable to resolve the current Docker 
 
 X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/msantana/dersalvador/docker-images-saved for mount
 
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/msantana/dersalvador/freqtrading/freqtrade-helm-chart/chart/simplehttp.py': [Errno 2] No such file or directory
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/msantana/dersalvador/freqtrading/freqtrade-helm-chart/chart/simplehttps.py': [Errno 2] No such file or directory
