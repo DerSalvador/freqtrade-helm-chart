@@ -147,10 +147,6 @@ config:
     live_retrain_hours: 0
     identifier: uniqe-id
     feature_parameters:
-      # include_timeframes:
-      #   - 1m
-      #   - 15m
-      #   - 1h
       include_corr_pairlist: []
       label_period_candles: 20
       include_shifted_candles: 2
@@ -199,31 +195,6 @@ backtesting:
     enable_export: false
     reader_enabled: false
     pvc_size: 1Gi
-
-# bot:
-#   enabled: true
-#   strategy_name: Strategy005
-#   pvc_size: 1Gi
-#   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
-  # freqaimodel: ReinforcementLearner # LightGBMRegressor
-
-#backtesting:
-#  enabled: true
-#  download_data: true
-#  timerange:
-#  timeframes: 5m
-#  strategy_list: BBRSIv2
-#  fee:
-#  pvc_size: 1Gi
-#  results:
-#    enable_export: false
-#    reader_enabled: false
-#    pvc_size: 1Gi
-#
-#bot:
-#  enabled: true
-#  strategy_name: Strategy005
-#  pvc_size: 1Gi
 
 ingress:
   enabled: true

@@ -4,7 +4,7 @@ configcreds:
   dry_run_wallet: 100000
   download_trades: false
   position_adjustment_enable: true
-  stake_amount: 100
+  stake_amount: unlimited
   exchange:
     name: kraken
     key: ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
