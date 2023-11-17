@@ -1,0 +1,4 @@
+W1117 14:37:37.073566    3085 main.go:291] Unable to resolve the current Docker CLI context "default": context "default": context not found: open /Users/msantana/.docker/contexts/meta/37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f/meta.json: no such file or directory
+
+X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/msantana/dersalvador/docker-images-saved for mount
+
