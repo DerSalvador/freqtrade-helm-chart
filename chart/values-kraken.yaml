@@ -176,9 +176,9 @@ config:
     "15160": 0.25
     "20160": 0
   order_types: 
-    buy: "limit"
-    forcebuy: "market"
-    forcesell: "market"
+    entry: "limit"
+    forceentry: "market"
+    forceexit: "market"
     sell: limit
     stoploss: "market"
     stoploss_on_exchange: false
