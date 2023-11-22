@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
@@ -19,7 +19,6 @@ class AwesomeMacd(IStrategy):
 
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
     # This attribute will be overridden if the config file contains "minimal_roi"
@@ -28,10 +27,14 @@ class AwesomeMacd(IStrategy):
     }
 
     # Optimal stoploss designed for the strategy
-    stoploss = -0.25
+    stoploss = -0.12
+    trailing_stop = True
+    trailing_stop_positive = 0.0033
+    trailing_stop_positive_offset = 0.03
+    trailing_only_offset_is_reached = True
 
     # Optimal timeframe for the strategy
-    timeframe = '1h'
+    timeframe = '5m'
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe['adx'] = ta.ADX(dataframe, timeperiod=14)
@@ -44,7 +47,7 @@ class AwesomeMacd(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                     (dataframe['macd'] > 0) &
@@ -52,10 +55,10 @@ class AwesomeMacd(IStrategy):
                     (dataframe['ao'].shift() < 0)
 
             ),
-            'enter_long'] = 1
+            'buy'] = 1
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                     (dataframe['macd'] < 0) &
@@ -63,5 +66,5 @@ class AwesomeMacd(IStrategy):
                     (dataframe['ao'].shift() > 0)
 
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe
