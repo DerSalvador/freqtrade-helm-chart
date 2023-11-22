@@ -20,7 +20,7 @@ class TheForce(IStrategy):
         "0": 0.012
     }
 
-    stoploss = -0.33
+    stoploss = -0.015
 
     # Trailing stoploss
     trailing_stop = False
