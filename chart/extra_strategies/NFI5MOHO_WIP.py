@@ -133,10 +133,10 @@ class NFI5MOHO_WIP(IStrategy):
 
     # ROI table:
     minimal_roi = {
-        "0": 0.111,
-        "13": 0.048,
-        "50": 0.015,
-        "61": 0.01
+        "0": 0.08,
+        "10": 0.04,
+        "30": 0.02,
+        "60": 0.01
     }
 
     stoploss = -0.99
@@ -208,10 +208,10 @@ class NFI5MOHO_WIP(IStrategy):
     }
 
     # Trailing stoploss (not used)
-    trailing_stop = False
+    trailing_stop = True
     trailing_only_offset_is_reached = True
     trailing_stop_positive = 0.01
-    trailing_stop_positive_offset = 0.03
+    trailing_stop_positive_offset = 0.04
 
     use_custom_stoploss = False
 
@@ -1174,7 +1174,7 @@ class NFI5MOHO_WIP(IStrategy):
             dataframe.loc[
                 reduce(lambda x, y: x | y, conditions),
                 'sell'
-            ] = 1
+            ] = 0
 
         return dataframe
 
