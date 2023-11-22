@@ -9,6 +9,7 @@ import freqtrade.vendor.qtpylib.indicators as qtpylib
 
 
 class SuperTrendPure(IStrategy):
+   
     # ROI table:
     minimal_roi = {
         "0": 0.087,
@@ -28,20 +29,20 @@ class SuperTrendPure(IStrategy):
     timeframe = '1h'
 
     startup_candle_count = 50
-
+    
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-
+       
         supertrend = self.supertrend(dataframe, 2, 8)
         dataframe['st'] = supertrend['ST']
         dataframe['stx'] = supertrend['STX']
-
+        
         return dataframe
 
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
-                    (qtpylib.crossed_above(dataframe['close'], dataframe['st'])) &
-                    (dataframe['volume'].gt(0))
+               (qtpylib.crossed_above(dataframe['close'], dataframe['st'])) &
+               (dataframe['volume'].gt(0))
             ),
             'buy'] = 1
 
@@ -50,8 +51,8 @@ class SuperTrendPure(IStrategy):
     def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
-                    (qtpylib.crossed_below(dataframe['close'], dataframe['st'])) &
-                    (dataframe['volume'].gt(0))
+               (qtpylib.crossed_below(dataframe['close'], dataframe['st'])) &
+               (dataframe['volume'].gt(0))
             ),
             'sell'] = 1
 
@@ -61,7 +62,6 @@ class SuperTrendPure(IStrategy):
         Supertrend Indicator; adapted for freqtrade
         from: https://github.com/freqtrade/freqtrade-strategies/issues/30
     """
-
     def supertrend(self, dataframe: DataFrame, multiplier, period):
         df = dataframe.copy()
 
@@ -79,26 +79,18 @@ class SuperTrendPure(IStrategy):
         df['final_ub'] = 0.00
         df['final_lb'] = 0.00
         for i in range(period, len(df)):
-            df['final_ub'].iat[i] = df['basic_ub'].iat[i] if df['basic_ub'].iat[i] < df['final_ub'].iat[i - 1] or \
-                                                             df['close'].iat[i - 1] > df['final_ub'].iat[i - 1] else \
-            df['final_ub'].iat[i - 1]
-            df['final_lb'].iat[i] = df['basic_lb'].iat[i] if df['basic_lb'].iat[i] > df['final_lb'].iat[i - 1] or \
-                                                             df['close'].iat[i - 1] < df['final_lb'].iat[i - 1] else \
-            df['final_lb'].iat[i - 1]
+            df['final_ub'].iat[i] = df['basic_ub'].iat[i] if df['basic_ub'].iat[i] < df['final_ub'].iat[i - 1] or df['close'].iat[i - 1] > df['final_ub'].iat[i - 1] else df['final_ub'].iat[i - 1]
+            df['final_lb'].iat[i] = df['basic_lb'].iat[i] if df['basic_lb'].iat[i] > df['final_lb'].iat[i - 1] or df['close'].iat[i - 1] < df['final_lb'].iat[i - 1] else df['final_lb'].iat[i - 1]
 
         # Set the Supertrend value
         df[st] = 0.00
         for i in range(period, len(df)):
-            df[st].iat[i] = df['final_ub'].iat[i] if df[st].iat[i - 1] == df['final_ub'].iat[i - 1] and df['close'].iat[
-                i] <= df['final_ub'].iat[i] else \
-                df['final_lb'].iat[i] if df[st].iat[i - 1] == df['final_ub'].iat[i - 1] and df['close'].iat[i] > \
-                                         df['final_ub'].iat[i] else \
-                    df['final_lb'].iat[i] if df[st].iat[i - 1] == df['final_lb'].iat[i - 1] and df['close'].iat[i] >= \
-                                             df['final_lb'].iat[i] else \
-                        df['final_ub'].iat[i] if df[st].iat[i - 1] == df['final_lb'].iat[i - 1] and df['close'].iat[i] < \
-                                                 df['final_lb'].iat[i] else 0.00
+            df[st].iat[i] = df['final_ub'].iat[i] if df[st].iat[i - 1] == df['final_ub'].iat[i - 1] and df['close'].iat[i] <= df['final_ub'].iat[i] else \
+                            df['final_lb'].iat[i] if df[st].iat[i - 1] == df['final_ub'].iat[i - 1] and df['close'].iat[i] >  df['final_ub'].iat[i] else \
+                            df['final_lb'].iat[i] if df[st].iat[i - 1] == df['final_lb'].iat[i - 1] and df['close'].iat[i] >= df['final_lb'].iat[i] else \
+                            df['final_ub'].iat[i] if df[st].iat[i - 1] == df['final_lb'].iat[i - 1] and df['close'].iat[i] <  df['final_lb'].iat[i] else 0.00
         # Mark the trend direction up/down
-        df[stx] = np.where((df[st] > 0.00), np.where((df['close'] < df[st]), 'down', 'up'), np.NaN)
+        df[stx] = np.where((df[st] > 0.00), np.where((df['close'] < df[st]), 'down',  'up'), np.NaN)
 
         # Remove basic and final bands from the columns
         df.drop(['basic_ub', 'basic_lb', 'final_ub', 'final_lb'], inplace=True, axis=1)
@@ -106,6 +98,6 @@ class SuperTrendPure(IStrategy):
         df.fillna(0, inplace=True)
 
         return DataFrame(index=df.index, data={
-            'ST': df[st],
-            'STX': df[stx]
+            'ST' : df[st],
+            'STX' : df[stx]
         })
