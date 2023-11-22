@@ -22,7 +22,7 @@ import technical.indicators as ftt
 
 # Buy hyperspace params:
 buy_params = {
-    "low_offset": 0.99,
+    "low_offset": 0.981,
     "base_nb_candles_buy": 8,  # value loaded from strategy
     "ewo_high": 3.553,  # value loaded from strategy
     "ewo_high_2": -5.585,  # value loaded from strategy
@@ -37,9 +37,10 @@ buy_params = {
 # Sell hyperspace params:
 sell_params = {
     "base_nb_candles_sell": 16,  # value loaded from strategy
-    "high_offset": 0.991,  # value loaded from strategy
+    "high_offset": 1.097,  # value loaded from strategy
     "high_offset_2": 1.472,  # value loaded from strategy
 }
+
 
 def EWO(dataframe, ema_length=5, ema2_length=35):
     df = dataframe.copy()
@@ -54,14 +55,14 @@ class NASOSv5(IStrategy):
 
     # ROI table:
     minimal_roi = {
-         "0": 0.045,
-         "13": 0.031,
-         "35": 0.017,
-         "189": 0
+        # "0": 0.283,
+        # "40": 0.086,
+        # "99": 0.036,
+        "360": 0
     }
 
     # Stoploss:
-    stoploss = -0.2
+    stoploss = -0.15
 
     # SMAOffset
     base_nb_candles_buy = IntParameter(
@@ -100,7 +101,7 @@ class NASOSv5(IStrategy):
         10, 50, default=buy_params['rsi_fast_buy'], space='buy', optimize=False)
 
     # Trailing stop:
-    trailing_stop = True
+    trailing_stop = False
     trailing_stop_positive = 0.001
     trailing_stop_positive_offset = 0.016
     trailing_only_offset_is_reached = True
@@ -109,7 +110,7 @@ class NASOSv5(IStrategy):
     use_sell_signal = True
     sell_profit_only = False
     sell_profit_offset = 0.01
-    ignore_roi_if_buy_signal = True
+    ignore_roi_if_buy_signal = False
 
     # Optional order time in force.
     order_time_in_force = {

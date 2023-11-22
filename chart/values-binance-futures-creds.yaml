@@ -1,0 +1,26 @@
+configcreds:
+  trading_mode: futures
+  margin_mode: isolated
+  dataformat_ohlcv: feather
+  dataformat_trades: feather  
+  download_trades: true
+  bot_name: freqtrading-binance-futures
+  dry_run: false
+  dry_run_wallet: 4000
+  stake_amount: unlimited
+  position_adjustment_enable: true
+  exchange:
+    name: binance
+    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ 
+    secret: RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97 
+  # telegram:
+  #  enabled: true
+  #  token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+  #  chat_id: "5711830404"
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: NostalgiaForInfinityX4 #  Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005 # Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor 
