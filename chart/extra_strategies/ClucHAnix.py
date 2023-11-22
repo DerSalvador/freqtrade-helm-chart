@@ -2,9 +2,11 @@ import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 import talib.abstract as ta
 from freqtrade.strategy.interface import IStrategy
-from freqtrade.strategy import merge_informative_pair, DecimalParameter, stoploss_from_open, RealParameter
+from freqtrade.strategy import merge_informative_pair, DecimalParameter, stoploss_from_open
 from pandas import DataFrame, Series
 from datetime import datetime
+from typing import Dict, List
+from skopt.space import Dimension, Integer, Real
 
 def bollinger_bands(stock_price, window_size, num_of_std):
     rolling_mean = stock_price.rolling(window=window_size).mean()
@@ -22,22 +24,62 @@ class ClucHAnix(IStrategy):
     PASTE OUTPUT FROM HYPEROPT HERE
     Can be overridden for specific sub-strategies (stake currencies) at the bottom.
     """
+    class HyperOpt:
+        @staticmethod
+        def generate_roi_table(params: Dict) -> Dict[int, float]:
+            roi_table = {}
+            roi_table[0] = params['roi_p1'] + params['roi_p2'] + params['roi_p3'] + params['roi_p4'] + params[
+                'roi_p5'] + params['roi_p6']
+            roi_table[params['roi_t6']] = params['roi_p1'] + params['roi_p2'] + params['roi_p3'] + params['roi_p4'] + \
+                                          params['roi_p5']
+            roi_table[params['roi_t6'] + params['roi_t5']] = params['roi_p1'] + params['roi_p2'] + params['roi_p3'] + \
+                                                             params['roi_p4']
+            roi_table[params['roi_t6'] + params['roi_t5'] + params['roi_t4']] = params['roi_p1'] + params['roi_p2'] + \
+                                                                                params['roi_p3']
+            roi_table[params['roi_t6'] + params['roi_t5'] + params['roi_t4'] + params['roi_t3']] = params['roi_p1'] + \
+                                                                                                   params['roi_p2']
+            roi_table[params['roi_t6'] + params['roi_t5'] + params['roi_t4'] + params['roi_t3'] + params['roi_t2']] = \
+            params['roi_p1']
+            roi_table[
+                params['roi_t6'] + params['roi_t5'] + params['roi_t4'] + params['roi_t3'] + params['roi_t2'] + params[
+                    'roi_t1']] = 0
+
+            return roi_table
+
+        @staticmethod
+        def roi_space() -> List[Dimension]:
+            return [
+                Integer(1, 15, name='roi_t6'),
+                Integer(1, 45, name='roi_t5'),
+                Integer(1, 90, name='roi_t4'),
+                Integer(45, 120, name='roi_t3'),
+                Integer(45, 180, name='roi_t2'),
+                Integer(90, 300, name='roi_t1'),
+
+                Real(0.005, 0.10, name='roi_p6'),
+                Real(0.005, 0.07, name='roi_p5'),
+                Real(0.005, 0.05, name='roi_p4'),
+                Real(0.005, 0.025, name='roi_p3'),
+                Real(0.005, 0.01, name='roi_p2'),
+                Real(0.003, 0.007, name='roi_p1'),
+            ]
+
     buy_params = {
-        'bbdelta_close': 0.01965,
-        'bbdelta_tail': 0.95089,
-        'close_bblower': 0.00799,
-        'closedelta_close': 0.00556,
-        'rocr_1h': 0.54904
+        'bbdelta-close': 0.01965,
+        'bbdelta-tail': 0.95089,
+        'close-bblower': 0.00799,
+        'closedelta-close': 0.00556,
+        'rocr-1h': 0.54904
     }
 
     # Sell hyperspace params:
     sell_params = {
         # custom stoploss params, come from BB_RPB_TSL
-        "pHSL": -0.32,
-        "pPF_1": 0.02,
-        "pPF_2": 0.047,
-        "pSL_1": 0.02,
-        "pSL_2": 0.046, 
+        "pHSL": -0.178,
+        "pPF_1": 0.019,
+        "pPF_2": 0.065,
+        "pSL_1": 0.019,
+        "pSL_2": 0.062,
 
         'sell-fisher': 0.38414, 
         'sell-bbmiddle-close': 1.07634
@@ -45,7 +87,11 @@ class ClucHAnix(IStrategy):
 
     # ROI table:
     minimal_roi = {
-        "70": 0
+        "0": 0.05,
+        "18": 0.03,
+        "36": 0.015,
+        "72": 0.006,
+        "140": 0
     }
 
     # Stoploss:
@@ -53,8 +99,8 @@ class ClucHAnix(IStrategy):
 
     # Trailing stop:
     trailing_stop = False
-    trailing_stop_positive = 0.001
-    trailing_stop_positive_offset = 0.012
+    trailing_stop_positive = 0.3207
+    trailing_stop_positive_offset = 0.3849
     trailing_only_offset_is_reached = False
 
     """
@@ -87,15 +133,8 @@ class ClucHAnix(IStrategy):
         'stoploss_on_exchange_limit_ratio': 0.99
     }
 
-    # buy params
-    rocr_1h = RealParameter(0.5, 1.0, default=0.54904, space='buy', optimize=True)
-    bbdelta_close = RealParameter(0.0005, 0.02, default=0.01965, space='buy', optimize=True)
-    closedelta_close = RealParameter(0.0005, 0.02, default=0.00556, space='buy', optimize=True)
-    bbdelta_tail = RealParameter(0.7, 1.0, default=0.95089, space='buy', optimize=True)
-    close_bblower = RealParameter(0.0005, 0.02, default=0.00799, space='buy', optimize=True)
-
     # hard stoploss profit
-    pHSL = DecimalParameter(-0.500, -0.040, default=-0.08, decimals=3, space='sell', load=True)
+    pHSL = DecimalParameter(-0.200, -0.040, default=-0.08, decimals=3, space='sell', load=True)
     # profit threshold 1, trigger point, SL_1 is used
     pPF_1 = DecimalParameter(0.008, 0.020, default=0.016, decimals=3, space='sell', load=True)
     pSL_1 = DecimalParameter(0.008, 0.020, default=0.011, decimals=3, space='sell', load=True)
@@ -113,10 +152,10 @@ class ClucHAnix(IStrategy):
     ############################################################################
     #come from BB_RPB_TSL
 
-    # Custom Trailing stoploss ( credit to Perkmeister for this custom stoploss to help the strategy ride a green candle )
+    ## Custom Trailing stoploss ( credit to Perkmeister for this custom stoploss to help the strategy ride a green candle )
     def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
                         current_rate: float, current_profit: float, **kwargs) -> float:
-    
+
         # hard stoploss profit
         HSL = self.pHSL.value
         PF_1 = self.pPF_1.value
@@ -138,7 +177,7 @@ class ClucHAnix(IStrategy):
         # Only for hyperopt invalid return
         if (sl_profit >= current_profit):
             return -0.99
-    
+
         return stoploss_from_open(sl_profit, current_profit)
 
     ############################################################################
@@ -192,19 +231,19 @@ class ClucHAnix(IStrategy):
 
         dataframe.loc[
             (
-                dataframe['rocr_1h'].gt(self.rocr_1h.value)
+                dataframe['rocr_1h'].gt(params['rocr-1h'])
             ) &
             ((      
                     (dataframe['lower'].shift().gt(0)) &
-                    (dataframe['bbdelta'].gt(dataframe['ha_close'] * self.bbdelta_close.value)) &
-                    (dataframe['closedelta'].gt(dataframe['ha_close'] * self.closedelta_close.value)) &
-                    (dataframe['tail'].lt(dataframe['bbdelta'] * self.bbdelta_tail.value)) &
+                    (dataframe['bbdelta'].gt(dataframe['ha_close'] * params['bbdelta-close'])) &
+                    (dataframe['closedelta'].gt(dataframe['ha_close'] * params['closedelta-close'])) &
+                    (dataframe['tail'].lt(dataframe['bbdelta'] * params['bbdelta-tail'])) &
                     (dataframe['ha_close'].lt(dataframe['lower'].shift())) &
                     (dataframe['ha_close'].le(dataframe['ha_close'].shift()))
             ) |
             (       
                     (dataframe['ha_close'] < dataframe['ema_slow']) &
-                    (dataframe['ha_close'] < self.close_bblower.value * dataframe['bb_lowerband'])
+                    (dataframe['ha_close'] < params['close-bblower'] * dataframe['bb_lowerband']) 
             )),
             'buy'
         ] = 1
