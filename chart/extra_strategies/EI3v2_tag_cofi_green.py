@@ -1,24 +1,20 @@
 # --- Do not remove these libs ---
-import datetime
-import logging
-import math
-from datetime import datetime, timedelta
-from functools import reduce
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
-
-import numpy as np
+from functools import reduce
+from pandas import DataFrame
 # --------------------------------
 import talib.abstract as ta
-import technical.indicators as ftt
-from pandas import DataFrame
-from technical.util import resample_to_interval, resampled_merge
-
+import numpy as np
 import freqtrade.vendor.qtpylib.indicators as qtpylib
+import datetime
+from technical.util import resample_to_interval, resampled_merge
+from datetime import datetime, timedelta
 from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair, stoploss_from_open)
-from freqtrade.strategy.interface import IStrategy
-
+from freqtrade.strategy import stoploss_from_open, merge_informative_pair, DecimalParameter, IntParameter, CategoricalParameter
+import technical.indicators as ftt
+import math
+import logging
 
 logger = logging.getLogger(__name__)
 
@@ -112,7 +108,7 @@ class EI3v2_tag_cofi_green(IStrategy):
     # ROI table:
     minimal_roi = {
         "0": 0.99,
-
+        
     }
 
     # Stoploss:
@@ -151,11 +147,11 @@ class EI3v2_tag_cofi_green(IStrategy):
     buy_fastd = IntParameter(20, 30, default=20, optimize = is_optimize_cofi)
     buy_adx = IntParameter(20, 30, default=30, optimize = is_optimize_cofi)
     buy_ewo_high = DecimalParameter(2, 12, default=3.553, optimize = is_optimize_cofi)
-
+    
 
     # Sell signal
     use_sell_signal = True
-    exit_profit_only = True
+    sell_profit_only = True
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
 
@@ -417,7 +413,7 @@ def pct_change(a, b):
     return (b - a) / a
 
 class EI3v2_tag_cofi_dca_green(EI3v2_tag_cofi_green):
-
+   
 
     initial_safety_order_trigger = -0.018
     max_safety_orders = 8
@@ -461,7 +457,7 @@ class EI3v2_tag_cofi_dca_green(EI3v2_tag_cofi_green):
                 count_of_buys += 1
 
         if 1 <= count_of_buys <= self.max_safety_orders:
-
+            
             safety_order_trigger = abs(self.initial_safety_order_trigger) + (abs(self.initial_safety_order_trigger) * self.safety_order_step_scale * (math.pow(self.safety_order_step_scale,(count_of_buys - 1)) - 1) / (self.safety_order_step_scale - 1))
 
             if current_profit <= (-1 * abs(safety_order_trigger)):
@@ -472,7 +468,8 @@ class EI3v2_tag_cofi_dca_green(EI3v2_tag_cofi_green):
                     logger.info(f"Initiating safety order buy #{count_of_buys} for {trade.pair} with stake amount of {stake_amount} which equals {amount}")
                     return stake_amount
                 except Exception as exception:
-                    logger.info(f'Error occured while trying to get stake amount for {trade.pair}: {str(exception)}')
+                    logger.info(f'Error occured while trying to get stake amount for {trade.pair}: {str(exception)}') 
                     return None
 
         return None
+

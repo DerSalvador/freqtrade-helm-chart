@@ -4,10 +4,10 @@
 # freqtrade hyperopt --hyperopt-loss SharpeHyperOptLoss --spaces buy roi trailing sell --strategy GodStraNew
 # --- Do not remove these libs ---
 from freqtrade import data
-from freqtrade.strategy import CategoricalParameter, DecimalParameter
+from freqtrade.strategy.hyper import CategoricalParameter, DecimalParameter
 
 from numpy.lib import math
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 
 # --------------------------------
@@ -459,7 +459,6 @@ def condition_generator(dataframe, operator, indicator, crossed_indicator, real_
 
 class GodStraNew(IStrategy):
     # #################### RESULTS PASTE PLACE ####################
-    INTERFACE_VERSION: int = 3
     # ROI table:
     minimal_roi = {
         "0": 0.598,
@@ -540,7 +539,7 @@ class GodStraNew(IStrategy):
         '''
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
         conditions = list()
 
@@ -588,13 +587,13 @@ class GodStraNew(IStrategy):
         if conditions:
             dataframe.loc[
                 reduce(lambda x, y: x & y, conditions),
-                'enter_long']=1
+                'buy']=1
 
         # print(len(dataframe.keys()))
 
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
         conditions = list()
         # TODO: Its not dry code!
@@ -640,5 +639,5 @@ class GodStraNew(IStrategy):
         if conditions:
             dataframe.loc[
                 reduce(lambda x, y: x & y, conditions),
-                'exit_long']=1
+                'sell']=1
         return dataframe
