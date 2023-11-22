@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
@@ -18,6 +18,7 @@ class Quickie(IStrategy):
         momentum based strategie. The main idea is that it closes trades very quickly, while avoiding excessive losses. Hence a rather moderate stop loss in this case
     """
 
+    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
@@ -54,7 +55,7 @@ class Quickie(IStrategy):
 
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                     (dataframe['adx'] > 30) &
@@ -63,15 +64,15 @@ class Quickie(IStrategy):
                     (dataframe['sma_200'] > dataframe['close'])
 
             ),
-            'buy'] = 1
+            'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                     (dataframe['adx'] > 70) &
                     (dataframe['tema'] > dataframe['bb_middleband']) &
                     (dataframe['tema'] < dataframe['tema'].shift(1))
             ),
-            'sell'] = 1
+            'exit_long'] = 1
         return dataframe
