@@ -4,8 +4,7 @@
 # freqtrade hyperopt --hyperopt-loss SharpeHyperOptLoss --spaces all --strategy mabStra --config config.json -e 100
 
 # --- Do not remove these libs ---
-from freqtrade.strategy.hyper import IntParameter, DecimalParameter
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import IntParameter, DecimalParameter, IStrategy
 from pandas import DataFrame
 # --------------------------------
 
@@ -13,8 +12,9 @@ from pandas import DataFrame
 import talib.abstract as ta
 
 
-class MabStra(IStrategy):
+class mabStra(IStrategy):
 
+    INTERFACE_VERSION: int = 3
     # #################### RESULTS PASTE PLACE ####################
     # ROI table:
     minimal_roi = {
@@ -64,7 +64,7 @@ class MabStra(IStrategy):
                                           timeperiod=self.sell_slow_ma_timeframe.value)
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
         dataframe.loc[
             (
@@ -77,11 +77,11 @@ class MabStra(IStrategy):
                 (dataframe['buy-fastMA'].div(dataframe['buy-slowMA'])
                     < self.buy_div_max.value)
             ),
-            'buy'] = 1
+            'enter_long'] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                 (dataframe['sell-fastMA'].div(dataframe['sell-mojoMA'])
@@ -93,5 +93,5 @@ class MabStra(IStrategy):
                 (dataframe['sell-slowMA'].div(dataframe['sell-fastMA'])
                     < self.sell_div_max.value)
             ),
-            'sell'] = 1
+            'exit_long'] = 1
         return dataframe

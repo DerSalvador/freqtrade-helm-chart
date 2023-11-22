@@ -6,10 +6,10 @@
 # freqtrade hyperopt --hyperopt-loss SharpeHyperOptLoss --spaces buy sell roi --strategy Zeus
 # --- Do not remove these libs ---
 import logging
-from freqtrade.strategy.hyper import CategoricalParameter, DecimalParameter
+from freqtrade.strategy import CategoricalParameter, DecimalParameter
 
 from numpy.lib import math
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import IStrategy
 from pandas import DataFrame
 # --------------------------------
 
@@ -33,6 +33,7 @@ class Zeus(IStrategy):
     # "timeframe": "4h",
     # "dry_run_wallet": 0.1,
 
+    INTERFACE_VERSION: int = 3
     # Buy hyperspace params:
     buy_params = {
         "buy_cat": "<R",
@@ -103,7 +104,7 @@ class Zeus(IStrategy):
         dataframe['trend_kst_diff'] = (tkd-tkd.min())/(tkd.max()-tkd.min())
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = []
         IND = 'trend_ichimoku_base'
         REAL = self.buy_real.value
@@ -120,11 +121,11 @@ class Zeus(IStrategy):
         if conditions:
             dataframe.loc[
                 reduce(lambda x, y: x & y, conditions),
-                'buy'] = 1
+                'enter_long'] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = []
         IND = 'trend_kst_diff'
         REAL = self.sell_real.value
@@ -142,6 +143,6 @@ class Zeus(IStrategy):
         if conditions:
             dataframe.loc[
                 reduce(lambda x, y: x & y, conditions),
-                'sell'] = 1
+                'exit_long'] = 1
 
         return dataframe
