@@ -1,7 +1,20 @@
 configcreds:
+  max_open_trades: -1
+  entry_pricing: 
+    price_side: same
+    use_order_book: true
+    order_book_top: 1
+    price_last_balance: 0.0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: same
+    use_order_book: true
+    order_book_top: 1
   order_types:  
-    entry: market
-    exit: market
+    entry: limit
+    exit: limit
     stoploss: market
     stoploss_on_exchange: false
   trading_mode: futures
@@ -12,14 +25,14 @@ configcreds:
   bot_name: freqtrading-binance-futures
   dry_run: false
   dry_run_wallet: 4000
-  stake_amount: unlimited
+  stake_amount: 100
   position_adjustment_enable: true
   exchange:
     name: binance
     key: ZJ8HMz2H5G1HMqcZh5yIJmoCVcWrYZLp9ZUqMhhSlb6mdJnzjUkNrdN8rJ4Zw7ro
     secret: Q37TvH7ORApOdkNl7IYvLhBVjxhcGzGagvH86jrJCHEtTeUsxPZGlPTe8wYpqWfO
   telegram:
-    enabled: false
+    enabled: true
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
 bot:
