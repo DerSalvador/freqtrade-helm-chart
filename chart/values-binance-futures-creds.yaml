@@ -1,4 +1,9 @@
 configcreds:
+  order_types:  
+    entry: market
+    exit: market
+    stoploss: market
+    stoploss_on_exchange: false
   trading_mode: futures
   margin_mode: isolated
   dataformat_ohlcv: feather
@@ -11,12 +16,12 @@ configcreds:
   position_adjustment_enable: true
   exchange:
     name: binance
-    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ 
-    secret: RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97 
-  # telegram:
-  #  enabled: true
-  #  token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-  #  chat_id: "5711830404"
+    key: ZJ8HMz2H5G1HMqcZh5yIJmoCVcWrYZLp9ZUqMhhSlb6mdJnzjUkNrdN8rJ4Zw7ro
+    secret: Q37TvH7ORApOdkNl7IYvLhBVjxhcGzGagvH86jrJCHEtTeUsxPZGlPTe8wYpqWfO
+  telegram:
+    enabled: false
+    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "5711830404"
 bot:
   debug: false
   debuglevel: -vvv
