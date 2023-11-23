@@ -60,31 +60,31 @@ class Strategy005(IStrategy):
         'stoploss_on_exchange': False
     }
 
-    buy_volumeAVG = IntParameter(low=50, high=300, default=70, space='buy', optimize=True)
-    buy_rsi = IntParameter(low=1, high=100, default=30, space='buy', optimize=True)
-    buy_fastd = IntParameter(low=1, high=100, default=30, space='buy', optimize=True)
-    buy_fishRsiNorma = IntParameter(low=1, high=100, default=30, space='buy', optimize=True)
+    entry_volumeAVG = IntParameter(low=50, high=300, default=70, space='entry', optimize=True)
+    entry_rsi = IntParameter(low=1, high=100, default=30, space='entry', optimize=True)
+    entry_fastd = IntParameter(low=1, high=100, default=30, space='entry', optimize=True)
+    entry_fishRsiNorma = IntParameter(low=1, high=100, default=30, space='entry', optimize=True)
 
-    sell_rsi = IntParameter(low=1, high=100, default=70, space='sell', optimize=True)
-    sell_minusDI = IntParameter(low=1, high=100, default=50, space='sell', optimize=True)
-    sell_fishRsiNorma = IntParameter(low=1, high=100, default=50, space='sell', optimize=True)
-    sell_trigger = CategoricalParameter(["rsi-macd-minusdi", "sar-fisherRsi"],
-                                        default=30, space='sell', optimize=True)
+    exit_rsi = IntParameter(low=1, high=100, default=70, space='exit', optimize=True)
+    exit_minusDI = IntParameter(low=1, high=100, default=50, space='exit', optimize=True)
+    exit_fishRsiNorma = IntParameter(low=1, high=100, default=50, space='exit', optimize=True)
+    exit_trigger = CategoricalParameter(["rsi-macd-minusdi", "sar-fisherRsi"],
+                                        default=30, space='exit', optimize=True)
 
     # Buy hyperspace params:
-    buy_params = {
-        "buy_fastd": 1,
-        "buy_fishRsiNorma": 5,
-        "buy_rsi": 26,
-        "buy_volumeAVG": 150,
+    entry_params = {
+        "entry_fastd": 1,
+        "entry_fishRsiNorma": 5,
+        "entry_rsi": 26,
+        "entry_volumeAVG": 150,
     }
 
     # Sell hyperspace params:
-    sell_params = {
-        "sell_fishRsiNorma": 30,
-        "sell_minusDI": 4,
-        "sell_rsi": 74,
-        "sell_trigger": "rsi-macd-minusdi",
+    exit_params = {
+        "exit_fishRsiNorma": 30,
+        "exit_minusDI": 4,
+        "exit_rsi": 74,
+        "exit_trigger": "rsi-macd-minusdi",
     }
 
     def informative_pairs(self):
@@ -144,20 +144,20 @@ class Strategy005(IStrategy):
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the buy signal for the given dataframe
+        Based on TA indicators, populates the entry signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
         dataframe.loc[
             # Prod
             (
                 (dataframe['close'] > 0.00000200) &
-                (dataframe['volume'] > dataframe['volume'].rolling(self.buy_volumeAVG.value).mean() * 4) &
+                (dataframe['volume'] > dataframe['volume'].rolling(self.entry_volumeAVG.value).mean() * 4) &
                 (dataframe['close'] < dataframe['sma']) &
                 (dataframe['fastd'] > dataframe['fastk']) &
-                (dataframe['rsi'] > self.buy_rsi.value) &
-                (dataframe['fastd'] > self.buy_fastd.value) &
-                (dataframe['fisher_rsi_norma'] < self.buy_fishRsiNorma.value)
+                (dataframe['rsi'] > self.entry_rsi.value) &
+                (dataframe['fastd'] > self.entry_fastd.value) &
+                (dataframe['fisher_rsi_norma'] < self.entry_fishRsiNorma.value)
             ),
             'enter_long'] = 1
 
@@ -165,19 +165,19 @@ class Strategy005(IStrategy):
 
     def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the sell signal for the given dataframe
+        Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
 
         conditions = []
-        if self.sell_trigger.value == 'rsi-macd-minusdi':
-            conditions.append(qtpylib.crossed_above(dataframe['rsi'], self.sell_rsi.value))
+        if self.exit_trigger.value == 'rsi-macd-minusdi':
+            conditions.append(qtpylib.crossed_above(dataframe['rsi'], self.exit_rsi.value))
             conditions.append(dataframe['macd'] < 0)
-            conditions.append(dataframe['minus_di'] > self.sell_minusDI.value)
-        if self.sell_trigger.value == 'sar-fisherRsi':
+            conditions.append(dataframe['minus_di'] > self.exit_minusDI.value)
+        if self.exit_trigger.value == 'sar-fisherRsi':
             conditions.append(dataframe['sar'] > dataframe['close'])
-            conditions.append(dataframe['fisher_rsi'] > self.sell_fishRsiNorma.value)
+            conditions.append(dataframe['fisher_rsi'] > self.exit_fishRsiNorma.value)
 
         if conditions:
             dataframe.loc[reduce(lambda x, y: x & y, conditions), 'exit_long'] = 1
