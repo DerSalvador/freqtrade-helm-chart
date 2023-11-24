@@ -55,12 +55,10 @@ spec:
           runAsUser: 0
         command:
         - bash
-        args: ["-c","chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
+        args: ["-c","#!/bin/bash; chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
-      imagePullSecrets:
-      - name: deploy-key-gcr
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -113,7 +111,7 @@ spec:
         - name: api
           containerPort: {{ .Values.config.api_server.listen_port }}
       imagePullSecrets:
-      - name: do-dersalvador-registry
+      - name: deploy-key-gcr
       volumes:
       - name: backtesting-data
         persistentVolumeClaim:
