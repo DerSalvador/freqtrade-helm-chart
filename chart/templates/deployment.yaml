@@ -60,7 +60,7 @@ spec:
         - mountPath: /sqlite
           name: sqlite
       imagePullSecrets:
-      - name: do-dersalvador-registry
+      - name: deploy-key-gcr
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
