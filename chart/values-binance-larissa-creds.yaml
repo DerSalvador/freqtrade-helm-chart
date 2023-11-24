@@ -1,0 +1,22 @@
+configcreds:
+  download_trades: true
+  bot_name: freqtrading-binance-larissa
+  dry_run: false
+  dry_run_wallet: 4000
+  stake_amount: unlimited
+  position_adjustment_enable: true
+  exchange:
+    name: binance
+    key: B7M26i11tIFNDPGcXG8Yu3ZOoI6eB1LcOP3FMpXTgI8T7ejICD9yYxMGMZ1kFN0y
+    secret: MAopXKz9eJMyN6vL6bxO57YyqeHW6fWISaFtz4CdWWCjHgA8gFBKIA5hqFDFePqy
+  telegram:
+    enabled: false
+    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "5711830404"
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: NostalgiaForInfinityX4 #  Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005 # Strategy005 #  NostalgiaForInfinityNext_ChangeToTower_V5_2 # NostalgiaForInfinityNext_ChangeToTower_V5_2 # Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor 
