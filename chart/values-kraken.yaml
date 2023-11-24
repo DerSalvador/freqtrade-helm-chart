@@ -181,7 +181,7 @@ config:
 
 image:
   base: gcr.io/plucky-door-200208/freqtradeorg #  docker.io/freqtradeorg/freqtrade
-  tag: 2023.9_freqairl
+  tag: 2023.10_freqairl
 
 backtesting:
   enabled: false
