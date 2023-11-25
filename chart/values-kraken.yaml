@@ -180,7 +180,9 @@ config:
     stoploss_on_exchange: false
 
 image:
-  base: gcr.io/plucky-door-200208/freqtradeorg #  docker.io/freqtradeorg/freqtrade
+  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+# europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256:d2d56e41d4052e61a3e1e6df9ec5d82189b4d78b84b0a450598b3b11f10ce837
+# freqtradeorg/freqtrade@sha256:f149410d215f0d625d51fa2dbcb9faf247a15e31ea616260020fcf1a149e80a7  #  europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade #  gcr.io/plucky-door-200208/freqtradeorg #  docker.io/freqtradeorg/freqtrade
   tag: 2023.10_freqairl
 
 backtesting:
