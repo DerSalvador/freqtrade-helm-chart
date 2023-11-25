@@ -55,7 +55,7 @@ spec:
           runAsUser: 0
         command:
         - bash
-        args: ["-c","#!/bin/bash; chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
+        args: ["-c","chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
