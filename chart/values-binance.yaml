@@ -208,8 +208,8 @@ config:
   #  stoploss_on_exchange: false
 
 image:
-  base: registry.digitalocean.com/do-dersalvador-registry/freqtrade
-  tag: 2023.9_freqairl
+ base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+ tag: 2023.10_freqairl
 
 backtesting:
   enabled: false
