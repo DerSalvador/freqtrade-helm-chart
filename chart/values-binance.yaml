@@ -68,6 +68,7 @@ config:
   exchange:
     ccxt_config:
       enableRateLimit: true
+      rateLimit: 2500
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
@@ -209,7 +210,7 @@ config:
 
 image:
  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
- tag: 2023.10_freqairl
+ tag: 2023.9_freqairl
 
 backtesting:
   enabled: false
