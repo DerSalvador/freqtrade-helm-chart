@@ -1,5 +1,13 @@
 configcreds:
-  max_open_trades: -1
+  stake_currency: BTC
+  stake_amount_type: quote_currency
+  tradable_balance_ratio: 0.99
+  fiat_display_currency: EUR
+  db_url: "sqlite:///user_data/tradesv3.sqlite"
+  cancel_open_orders_on_exit: false
+  available_capital: 8000
+  amend_last_stake_amount: true
+  max_open_trades: 20
   entry_pricing: 
     price_side: same
     use_order_book: true
@@ -25,9 +33,21 @@ configcreds:
   bot_name: freqtrading-binance-futures
   dry_run: false
   dry_run_wallet: 4000
-  stake_amount: 100
+  stake_amount: unlimited
   position_adjustment_enable: true
   exchange:
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 2500
+      options:
+        defaultType: future
+        leverage: 10      
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 2500
+      options:
+        defaultType: future
+        leverage: 10      
     name: binance
     key: ZJ8HMz2H5G1HMqcZh5yIJmoCVcWrYZLp9ZUqMhhSlb6mdJnzjUkNrdN8rJ4Zw7ro
     secret: Q37TvH7ORApOdkNl7IYvLhBVjxhcGzGagvH86jrJCHEtTeUsxPZGlPTe8wYpqWfO
@@ -155,6 +175,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityX4 #  Strategy005 
+  strategy_name: VolatilitySystem #  NostalgiaForInfinityX4 #  Strategy005 
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
