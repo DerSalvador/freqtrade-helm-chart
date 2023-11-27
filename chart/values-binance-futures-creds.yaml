@@ -6,7 +6,7 @@ configcreds:
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   cancel_open_orders_on_exit: false
   available_capital: 8000
-  amend_last_stake_amount: true
+  amend_last_stake_amount: false
   entry_pricing: 
     price_side: same
     use_order_book: true
@@ -32,7 +32,7 @@ configcreds:
   bot_name: freqtrading-binance-futures
   dry_run: false
   dry_run_wallet: 4000
-  stake_amount: unlimited
+  stake_amount: 100
   position_adjustment_enable: true
   exchange:
     ccxt_config:
