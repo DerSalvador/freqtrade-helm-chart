@@ -40,6 +40,7 @@ config:
     - "1w"
     - "1M"
   stake_currency: USDT
+  max_open_trades: 10
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
@@ -199,7 +200,6 @@ config:
   # trailing_stop_positive: 0.013
   # trailing_stop_positive_offset: 0.025
   # trailing_only_offset_is_reached: True
-  max_open_trades: 10
   #order_types: 
   #  entry: market
     # forceentry: "market"

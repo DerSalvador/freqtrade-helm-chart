@@ -1,5 +1,5 @@
 configcreds:
-  stake_currency: BTC
+  stake_currency: USDT
   stake_amount_type: quote_currency
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
@@ -7,7 +7,6 @@ configcreds:
   cancel_open_orders_on_exit: false
   available_capital: 8000
   amend_last_stake_amount: true
-  max_open_trades: 20
   entry_pricing: 
     price_side: same
     use_order_book: true
@@ -29,7 +28,7 @@ configcreds:
   margin_mode: isolated
   dataformat_ohlcv: feather
   dataformat_trades: feather  
-  download_trades: true
+  download_trades: false
   bot_name: freqtrading-binance-futures
   dry_run: false
   dry_run_wallet: 4000
