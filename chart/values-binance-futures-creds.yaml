@@ -1,5 +1,6 @@
 configcreds:
   stake_currency: USDT
+  stoploss = -0.5
   stake_amount_type: quote_currency
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
