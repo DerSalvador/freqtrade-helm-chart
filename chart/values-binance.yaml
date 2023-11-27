@@ -47,7 +47,7 @@ config:
   cancel_open_orders_on_exit: false
   trading_mode: spot
   available_capital: 4000
-  amend_last_stake_amount: true
+  amend_last_stake_amount: false
   margin_mode: ""
   unfilledtimeout:
     entry: 10
