@@ -10,9 +10,9 @@ configcreds:
     key: B7M26i11tIFNDPGcXG8Yu3ZOoI6eB1LcOP3FMpXTgI8T7ejICD9yYxMGMZ1kFN0y
     secret: MAopXKz9eJMyN6vL6bxO57YyqeHW6fWISaFtz4CdWWCjHgA8gFBKIA5hqFDFePqy
   telegram:
-    enabled: false
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    enabled: true
+    token: "6607555119:AAGqoNPH-3m1SECXrPeZdtRDgTuy5988BN0"
+    chat_id: "6456658723"
 bot:
   debug: false
   debuglevel: -vvv

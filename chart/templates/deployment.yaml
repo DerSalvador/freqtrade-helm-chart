@@ -62,6 +62,9 @@ spec:
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        env:
+          - name: PYTHONPATH
+            value: $PYTHONPATH:/freqtrade/lib
         command:
         - freqtrade
         args:
