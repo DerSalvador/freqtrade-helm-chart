@@ -200,10 +200,10 @@ config:
   # trailing_only_offset_is_reached: True
   max_open_trades: 10
   order_types: 
-    buy: "limit"
-    forcebuy: "market"
-    forcesell: "market"
-    sell: limit
+    entry: "limit"
+    forceentry: "market"
+    forceexit: "market"
+    exit: limit
     stoploss: "market"
     stoploss_on_exchange: false
 
