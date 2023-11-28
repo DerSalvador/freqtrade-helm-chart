@@ -1,6 +1,8 @@
 configcreds:
   stake_currency: USDT
-  stoploss = -0.5
+  stoploss: -0.5
+  trailing_stop: true
+  trailing_stop_positive: 0.05
   stake_amount_type: quote_currency
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
@@ -24,7 +26,10 @@ configcreds:
     entry: limit
     exit: limit
     stoploss: market
-    stoploss_on_exchange: false
+    stoploss_on_exchange: true
+    trailing_stop: true
+    trailing_stop_positive: 0.10
+    trailing_stop_positive_offset: 0.05
   trading_mode: futures
   margin_mode: isolated
   dataformat_ohlcv: feather
