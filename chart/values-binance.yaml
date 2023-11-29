@@ -29,16 +29,11 @@ nostalgiaforinfinity:
 config:
   timeframe: 5m
   include_timeframes:
-    - "1h"
-    - "2h"
-    - "4h"
-    - "6h"
-    - "8h"
-    - "12h"
-    - "1d"
-    - "3d"
-    - "1w"
-    - "1M"
+    - 5m 
+    - 15m
+    - 1h
+    - 4h
+    - 1d
   stake_currency: USDT
   max_open_trades: 10
   tradable_balance_ratio: 0.99
@@ -88,7 +83,7 @@ config:
       sort_key: quoteVolume
       refresh_period: 1800
     - method: AgeFilter
-      min_days_listed: 3
+      min_days_listed: 30
     - method: PriceFilter
       low_price_ratio: 0.003
     - method: SpreadFilter
@@ -158,16 +153,11 @@ config:
     identifier: uniqe-id
     feature_parameters:
       include_timeframes:
-        - "1h"
-        - "2h"
-        - "4h"
-        - "6h"
-        - "8h"
-        - "12h"
-        - "1d"
-        - "3d"
-        - "1w"
-        - "1M"
+        - 5m 
+        - 15m
+        - 1h
+        - 4h
+        - 1d
       include_corr_pairlist: []
       label_period_candles: 20
       include_shifted_candles: 2

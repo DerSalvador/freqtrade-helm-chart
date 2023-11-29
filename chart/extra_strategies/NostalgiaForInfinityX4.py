@@ -67,7 +67,7 @@ class NostalgiaForInfinityX4(IStrategy):
   INTERFACE_VERSION = 3
 
   def version(self) -> str:
-    return "v14.0.512"
+    return "v14.0.525"
 
   # ROI table:
   minimal_roi = {
@@ -2483,11 +2483,11 @@ class NostalgiaForInfinityX4(IStrategy):
     total_stake = 0.0
     total_profit = 0.0
     for entry in filled_entries:
-      entry_stake = entry.filled * entry.average * (1 + trade.fee_open)
+      entry_stake = entry.safe_filled * entry.safe_price * (1 + trade.fee_open)
       total_stake += entry_stake
       total_profit -= entry_stake
     for exit in filled_exits:
-      exit_stake = exit.filled * exit.average * (1 - trade.fee_close)
+      exit_stake = exit.safe_filled * exit.safe_price * (1 - trade.fee_close)
       total_profit += exit_stake
     current_stake = trade.amount * exit_rate * (1 - trade.fee_close)
     total_profit += current_stake
@@ -2915,10 +2915,10 @@ class NostalgiaForInfinityX4(IStrategy):
       )
 
       slice_amount = filled_entries[0].cost
-      slice_profit = (exit_rate - filled_orders[-1].average) / filled_orders[-1].average
-      slice_profit_entry = (exit_rate - filled_entries[-1].average) / filled_entries[-1].average
+      slice_profit = (exit_rate - filled_orders[-1].safe_price) / filled_orders[-1].safe_price
+      slice_profit_entry = (exit_rate - filled_entries[-1].safe_price) / filled_entries[-1].safe_price
       slice_profit_exit = (
-        ((exit_rate - filled_exits[-1].average) / filled_exits[-1].average) if count_of_exits > 0 else 0.0
+        ((exit_rate - filled_exits[-1].safe_price) / filled_exits[-1].safe_price) if count_of_exits > 0 else 0.0
       )
 
       current_stake_amount = trade.amount * current_rate
@@ -3275,7 +3275,7 @@ class NostalgiaForInfinityX4(IStrategy):
           count_of_full_exits = 0
           for exit_order in filled_exits:
             if (
-              exit_order.remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+              exit_order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
             ) < min_stake:
               count_of_full_exits += 1
           num_buys = 0
@@ -3285,19 +3285,19 @@ class NostalgiaForInfinityX4(IStrategy):
               num_buys += 1
             elif order.ft_order_side == "sell":
               if (
-                order.remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+                order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
               ) < min_stake:
                 num_sells += 1
             # patial fills on exits
             if (num_buys == num_sells) and (order.ft_order_side == "sell"):
-              sell_amount = order.remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-              grind_profit = (exit_rate - order.average) / order.average
+              sell_amount = order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+              grind_profit = (exit_rate - order.safe_price) / order.safe_price
               if sell_amount > min_stake:
                 # Test if it's the last exit. Normal exit with partial fill
                 if (trade.stake_amount - sell_amount) > min_stake:
                   if grind_profit > 0.01:
                     self.dp.send_msg(
-                      f"Grinding exit (remaining) [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Coin amount: {order.remaining} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
+                      f"Grinding exit (remaining) [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Coin amount: {order.safe_remaining} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
                     )
                     return -sell_amount
                   else:
@@ -3310,10 +3310,10 @@ class NostalgiaForInfinityX4(IStrategy):
               and (order.ft_order_side == "buy")
             ):
               buy_order = order
-              grind_profit = (exit_rate - buy_order.average) / buy_order.average
+              grind_profit = (exit_rate - buy_order.safe_price) / buy_order.safe_price
               if grind_profit > self.grinding_profit_threshold:
                 sell_amount = (
-                  buy_order.filled * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+                  buy_order.safe_filled * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
                 )
                 if (current_stake_amount - sell_amount) < (min_stake * 1.7):
                   sell_amount = (
@@ -3321,7 +3321,7 @@ class NostalgiaForInfinityX4(IStrategy):
                   ) - (min_stake * 1.7)
                 if sell_amount > min_stake:
                   self.dp.send_msg(
-                    f"Grinding exit [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount}| Coin amount: {buy_order.filled} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
+                    f"Grinding exit [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount}| Coin amount: {buy_order.safe_filled} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
                   )
                   return -sell_amount
               # elif (
@@ -3333,11 +3333,11 @@ class NostalgiaForInfinityX4(IStrategy):
               #             or (buy_order.order_date_utc.replace(tzinfo=None) >= datetime(2023, 5, 27) or is_backtest)
               #         )
               # ):
-              #     sell_amount = buy_order.filled * exit_rate * 0.999
+              #     sell_amount = buy_order.safe_filled * exit_rate * 0.999
               #     if ((current_stake_amount - sell_amount) < (min_stake * 1.7)):
               #         sell_amount = (trade.amount * exit_rate) - (min_stake * 1.7)
               #     if (sell_amount > min_stake):
-              #         self.dp.send_msg(f"Grinding stop exit [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount}| Coin amount: {buy_order.filled} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%")
+              #         self.dp.send_msg(f"Grinding stop exit [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount}| Coin amount: {buy_order.safe_filled} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%")
               #         return -sell_amount
               break
 
@@ -3380,11 +3380,11 @@ class NostalgiaForInfinityX4(IStrategy):
         for order in reversed(filled_orders):
           if (order.ft_order_side == "buy") and (order is not filled_orders[0]):
             sub_grind_count += 1
-            total_amount += order.filled
-            total_cost += order.filled * order.average
+            total_amount += order.safe_filled
+            total_cost += order.safe_filled * order.safe_price
           elif order.ft_order_side == "sell":
             if (
-              order.remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+              order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
             ) > min_stake:
               partial_sell = True
             break
@@ -3551,13 +3551,13 @@ class NostalgiaForInfinityX4(IStrategy):
         # Sell remaining if partial fill on exit
         if partial_sell:
           order = filled_exits[-1]
-          sell_amount = order.remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-          grind_profit = (exit_rate - order.average) / order.average
+          sell_amount = order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+          grind_profit = (exit_rate - order.safe_price) / order.safe_price
           if sell_amount > min_stake:
             # Test if it's the last exit. Normal exit with partial fill
             if (trade.stake_amount - sell_amount) > min_stake:
               self.dp.send_msg(
-                f"Grinding exit (remaining) [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Coin amount: {order.remaining} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
+                f"Grinding exit (remaining) [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Coin amount: {order.safe_remaining} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
               )
               return -sell_amount
 
@@ -3644,10 +3644,10 @@ class NostalgiaForInfinityX4(IStrategy):
     )
 
     slice_amount = filled_entries[0].cost
-    slice_profit = (exit_rate - filled_orders[-1].average) / filled_orders[-1].average
-    slice_profit_entry = (exit_rate - filled_entries[-1].average) / filled_entries[-1].average
+    slice_profit = (exit_rate - filled_orders[-1].safe_price) / filled_orders[-1].safe_price
+    slice_profit_entry = (exit_rate - filled_entries[-1].safe_price) / filled_entries[-1].safe_price
     slice_profit_exit = (
-      ((exit_rate - filled_exits[-1].average) / filled_exits[-1].average) if count_of_exits > 0 else 0.0
+      ((exit_rate - filled_exits[-1].safe_price) / filled_exits[-1].safe_price) if count_of_exits > 0 else 0.0
     )
 
     current_stake_amount = trade.amount * current_rate
@@ -3667,10 +3667,10 @@ class NostalgiaForInfinityX4(IStrategy):
     for order in reversed(filled_orders):
       if (order.ft_order_side == "buy") and (order is not filled_orders[0]):
         sub_grind_count += 1
-        total_amount += order.filled
-        total_cost += order.filled * order.average
+        total_amount += order.safe_filled
+        total_cost += order.safe_filled * order.safe_price
       elif order.ft_order_side == "sell":
-        if (order.remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)) > min_stake:
+        if (order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)) > min_stake:
           partial_sell = True
         break
     if sub_grind_count > 0:
@@ -9734,6 +9734,174 @@ class NostalgiaForInfinityX4(IStrategy):
         | (dataframe["cti_20_1h"] < 0.7)
         | (dataframe["rsi_14_1h"] < 50.0)
         | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # current 1d green with top wick, 5m downmove, 15m & 1h & 4h stil high, 4h low, 1h & 4h downtrend
+      & (
+        (dataframe["change_pct_1d"] < 0.06)
+        | (dataframe["top_wick_pct_1d"] < 0.06)
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["r_480_4h"] > -75.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # 1h & 4h & 1d downtrend, 5m & 1h downmove, 15m & 1h still high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_1d"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # current 1h & 4h red, 1h & 4h downtrend, 15m & 1h & 4h downmove, 1d stil high
+      & (
+        (dataframe["change_pct_1h"] > -0.04)
+        | (dataframe["change_pct_4h"] > -0.04)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 4h downtrend, 5m & 15m & 1h & 4h downmove, 1d still high, 5m low, 5m & 15m downtrend, drop in last 12 hours
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_3_4h"] > 36.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["r_480"] > -80.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_24"] == False)
+        | (dataframe["ema_200_dec_24_15m"] == False)
+        | (dataframe["close"] > (dataframe["high_max_12_1h"] * 0.86))
+      )
+      # 1h & 1d downtrend, 5m & 15m & 1d downmove, 1h & 4h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_3_1d"] > 20.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # current 1d green, current 4h red, 1h downtrend, 1h downmove, 5m & 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] < 0.04)
+        | (dataframe["change_pct_4h"] > -0.04)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_14"] < 36.0)
+        | (dataframe["rsi_14_15m"] < 33.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+      )
+      # 1h downtrend, 5m & 15m downmove, 15m & 1h & 4h still high, 4h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_15m"] > 10.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 4h downtrend, 4h & 1d downmove, 15m & 1d still high, 1h downtrend, drop in last 6 days
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3_4h"] > 26.0)
+        | (dataframe["rsi_3_1d"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_1d"] < 0.7)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.6))
+      )
+      # current 4h red, 1h downtrend, 1h dowmove, 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_4h"] > -0.04)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < -0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+      )
+      # current 4h green with top wick, 1h downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_4h"] < 0.02)
+        | (dataframe["top_wick_pct_4h"] < 0.08)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["rsi_14_4h"] < 70.0)
+        | (dataframe["cti_20_1d"] < -0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+      )
+      # 1h & 4h downtrend, 1h & 4h downmove, 4h & 1d stil high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["cti_20_4h"] < -0.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 60.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 1d green, current 1h  red, 15m & 1h & 4h & 1d still high, 4h high
+      & (
+        (dataframe["change_pct_1d"] < 0.08)
+        | (dataframe["change_pct_1h"] > -0.02)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.7)
+        | (dataframe["rsi_14_4h"] < 60.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 65.0)
+        | (dataframe["r_480_4h"] < -16.0)
+      )
+      # 1h & 4h & 1d downtrend, 15m & 1h & 4h & 1d downmove, 15m still high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 16.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["rsi_3_1d"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
         | (dataframe["ema_200_dec_48_1h"] == False)
       )
     )

@@ -2,7 +2,6 @@ configcreds:
   stake_currency: USDT
   stoploss: -0.5
   trailing_stop: true
-  trailing_stop_positive: 0.05
   stake_amount_type: quote_currency
   tradable_balance_ratio: 0.99
   fiat_display_currency: EUR
@@ -10,6 +9,11 @@ configcreds:
   cancel_open_orders_on_exit: false
   available_capital: 8000
   amend_last_stake_amount: false
+  minimal_roi:
+    "0": 0.8
+    "10160": 0.5
+    "15160": 0.25
+    "20160": 0
   entry_pricing: 
     price_side: same
     use_order_book: true
@@ -28,8 +32,8 @@ configcreds:
     stoploss: market
     stoploss_on_exchange: true
     trailing_stop: true
-    trailing_stop_positive: 0.10
-    trailing_stop_positive_offset: 0.05
+    trailing_stop_positive: 0.05
+    trailing_stop_positive_offset: 0.1
   trading_mode: futures
   margin_mode: isolated
   dataformat_ohlcv: feather
@@ -46,13 +50,13 @@ configcreds:
       rateLimit: 2500
       options:
         defaultType: future
-        leverage: 10      
+        leverage: 50      
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
       options:
         defaultType: future
-        leverage: 10      
+        leverage: 50     
     name: binance
     key: ZJ8HMz2H5G1HMqcZh5yIJmoCVcWrYZLp9ZUqMhhSlb6mdJnzjUkNrdN8rJ4Zw7ro
     secret: Q37TvH7ORApOdkNl7IYvLhBVjxhcGzGagvH86jrJCHEtTeUsxPZGlPTe8wYpqWfO
@@ -172,6 +176,17 @@ configcreds:
     number_assets: 50
     mode: blacklist
     pairlist_url: https://remotepairlist.com?q=8fc6625b0bc79a51
+  - method: AgeFilter
+    min_days_listed: 30
+  - method: PriceFilter
+    low_price_ratio: 0.003
+  - method: SpreadFilter
+    max_spread_ratio: 0.005
+  - method: RangeStabilityFilter
+    lookback_days: 3
+    min_rate_of_change: 0.03
+    refresh_period: 1800
+  - method: ShuffleFilter
   telegram:
     enabled: true
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
