@@ -50,13 +50,13 @@ configcreds:
       rateLimit: 2500
       options:
         defaultType: future
-        leverage: 50      
+        leverage: 100
     ccxt_async_config:
       enableRateLimit: true
       rateLimit: 2500
       options:
         defaultType: future
-        leverage: 50     
+        leverage: 100
     name: binance
     key: ZJ8HMz2H5G1HMqcZh5yIJmoCVcWrYZLp9ZUqMhhSlb6mdJnzjUkNrdN8rJ4Zw7ro
     secret: Q37TvH7ORApOdkNl7IYvLhBVjxhcGzGagvH86jrJCHEtTeUsxPZGlPTe8wYpqWfO
