@@ -8,15 +8,15 @@
     "dry_run": true,
     "cancel_open_orders_on_exit": true,
     "unfilledtimeout": {
-        "buy": 10,
+        "entry": 10,
         "unit": "minutes"
     },
     "order_types": {
-        "buy": "limit",
-        "sell": "limit",
+        "entry": "limit",
+        "exit": "limit",
         "stoploss": "market",
-        "forcebuy": "market",
-		"forcesell": "market",
+        "forceentry": "market",
+		"forceexit": "market",
         "stoploss_on_exchange": false
     },
     "bid_strategy": {
@@ -135,7 +135,7 @@
     },
     "bot_name": "freqtrade",
     "initial_state": "running",
-    "forcebuy_enable": false,
+    "forceentry_enable": false,
     "internals": {
         "process_throttle_secs": 5
     }
