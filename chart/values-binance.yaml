@@ -202,15 +202,15 @@ config:
   # trailing_only_offset_is_reached: True
   #order_types: 
   #  entry: market
-    # forceentry: "market"
-    # forceexit: "market"
+    # force_entry: "market"
+    # force_exit: "market"
   #  exit: market
   #  stoploss: "market"
   #  stoploss_on_exchange: false
 
 image:
  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
- tag: 2023.9_freqairl
+ tag: 2023.10_freqairl
 
 backtesting:
   enabled: false

@@ -184,9 +184,9 @@ config:
     #"20160": 0
   order_types: 
     entry: "limit"
-    forceentry: "market"
-    forceexit: "market"
-    sell: limit
+    force_entry: "market"
+    force_exit: "market"
+    exit: limit
     stoploss: "market"
     stoploss_on_exchange: false
 

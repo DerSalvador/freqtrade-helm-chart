@@ -62,9 +62,13 @@ spec:
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/sh","-c","sleep 60"]
         env:
-          - name: PYTHONPATH
-            value: $PYTHONPATH:/freqtrade/lib
+        - name: PYTHONPATH
+          value: $PYTHONPATH:/freqtrade/lib:/freqtrade/user_data/lib
         command:
         - freqtrade
         args:
