@@ -188,7 +188,7 @@ configcreds:
     refresh_period: 1800
   - method: ShuffleFilter
   telegram:
-    enabled: true
+    enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
 bot:
