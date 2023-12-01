@@ -195,6 +195,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: madrid_ribbon
+  strategy_name: VolatilitySystem #  NostalgiaForInfinityX4 #  Strategy005 
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
