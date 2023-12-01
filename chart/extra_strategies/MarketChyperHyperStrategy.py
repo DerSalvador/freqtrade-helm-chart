@@ -3,12 +3,10 @@ import numpy as np  # noqa
 import pandas as pd  # noqa
 import talib.abstract as ta
 from pandas import DataFrame
-
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.strategy.hyper import (CategoricalParameter, DecimalParameter, IntParameter,
-                                      RealParameter)
 from freqtrade.strategy.interface import IStrategy
-
+from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
+                                      RealParameter)
 
 # ^ TA-Lib Autofill mostly broken in JetBrains Products,
 # ta._ta_lib.<function_name> can temporarily be used while writing as a workaround
@@ -94,7 +92,7 @@ class MarketChyperHyperStrategy(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals

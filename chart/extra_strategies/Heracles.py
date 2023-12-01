@@ -69,7 +69,7 @@ class Heracles(IStrategy):
     trailing_only_offset_is_reached = True
 
     # Buy hypers
-    timeframe = '12h'
+    timeframe = '5m'
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # Add all ta features

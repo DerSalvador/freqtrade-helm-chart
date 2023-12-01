@@ -121,7 +121,7 @@ config:
         - /whitelist
         - /logs
         - /trades
-        - /forceexit
+        - /force_exit
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
@@ -201,8 +201,8 @@ config:
   max_open_trades: 10
   order_types: 
     entry: "limit"
-    forceentry: "market"
-    forceexit: "market"
+    force_entry: "market"
+    force_exit: "market"
     exit: limit
     stoploss: "market"
     stoploss_on_exchange: false
