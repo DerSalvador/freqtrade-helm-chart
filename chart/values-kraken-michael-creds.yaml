@@ -1,6 +1,6 @@
 configcreds:
   bot_name: freqtrade-kraken-michael
-  timeframe: 1h
+  timeframe: 5m
   dry_run: false
   dry_run_wallet: 100000
   download_trades: false
@@ -37,8 +37,6 @@ configcreds:
 bot:
   enabled: true
   strategy_name: EnsembleStrategyV2
-
-
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
     # freqaimodel: ReinforcementLearner # LightGBMRegressor
