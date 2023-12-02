@@ -2,9 +2,21 @@ configcreds:
   download_trades: true
   bot_name: freqtrading-binance-juliano
   dry_run: false
-  dry_run_wallet: 4000
+  dry_run_wallet: 50
   stake_amount: unlimited
   position_adjustment_enable: true
+  entry_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1
+    price_last_balance: 0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1    
   exchange:
     name: binance
     key: HrLllzlPhN2BAAChE7iQdewMvawTuEwLGkWPYU1ZqlnxJ1uN1IdUernLvk6rU5cF
@@ -20,6 +32,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityX4 # Strategy005
+  strategy_name: NostalgiaForInfinityX4
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 

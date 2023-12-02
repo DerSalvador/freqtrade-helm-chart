@@ -8,22 +8,25 @@ from datetime import datetime
 from typing import Dict, List
 from skopt.space import Dimension, Integer, Real
 
+
 def bollinger_bands(stock_price, window_size, num_of_std):
     rolling_mean = stock_price.rolling(window=window_size).mean()
     rolling_std = stock_price.rolling(window=window_size).std()
     lower_band = rolling_mean - (rolling_std * num_of_std)
     return np.nan_to_num(rolling_mean), np.nan_to_num(lower_band)
 
+
 def ha_typical_price(bars):
     res = (bars['ha_high'] + bars['ha_low'] + bars['ha_close']) / 3.
     return Series(index=bars.index, data=res)
 
-class ClucHAnix(IStrategy):
 
+class ClucHAnix(IStrategy):
     """
     VERSION MODIFIED BY REUNIWARE (InvestDataSystems@Yahoo.Com / 2021)
     THIS VERSION CONTAINS HYPEROPT SETTINGS FROM E0V1E (cf. https://discord.gg/Ayvcvs6N )
     """
+
     class HyperOpt:
         @staticmethod
         def generate_roi_table(params: Dict) -> Dict[int, float]:
@@ -39,7 +42,7 @@ class ClucHAnix(IStrategy):
             roi_table[params['roi_t6'] + params['roi_t5'] + params['roi_t4'] + params['roi_t3']] = params['roi_p1'] + \
                                                                                                    params['roi_p2']
             roi_table[params['roi_t6'] + params['roi_t5'] + params['roi_t4'] + params['roi_t3'] + params['roi_t2']] = \
-            params['roi_p1']
+                params['roi_p1']
             roi_table[
                 params['roi_t6'] + params['roi_t5'] + params['roi_t4'] + params['roi_t3'] + params['roi_t2'] + params[
                     'roi_t1']] = 0
@@ -75,23 +78,23 @@ class ClucHAnix(IStrategy):
     # Sell hyperspace params:
     sell_params = {
         # custom stoploss params, come from BB_RPB_TSL
-      "pHSL": -0.134,
-      "pPF_1": 0.02,
-      "pPF_2": 0.047,
-      "pSL_1": 0.02,
-      "pSL_2": 0.046,
+        "pHSL": -0.134,
+        "pPF_1": 0.02,
+        "pPF_2": 0.047,
+        "pSL_1": 0.02,
+        "pSL_2": 0.046,
 
-        'sell-fisher': 0.38414, 
+        'sell-fisher': 0.38414,
         'sell-bbmiddle-close': 1.07634
     }
 
     # ROI table:
     minimal_roi = {
-      "70": 0
+        "70": 0
     }
 
     # Stoploss:
-    stoploss = -0.99   # use custom stoploss
+    stoploss = -0.99  # use custom stoploss
 
     # Trailing stop:
     trailing_stop = False
@@ -102,7 +105,7 @@ class ClucHAnix(IStrategy):
     """
     END HYPEROPT
     """
-    
+
     timeframe = '1m'
 
     # Make sure these match or are not overridden in config
@@ -144,9 +147,8 @@ class ClucHAnix(IStrategy):
         informative_pairs = [(pair, '1h') for pair in pairs]
         return informative_pairs
 
-
     ############################################################################
-    #come from BB_RPB_TSL
+    # come from BB_RPB_TSL
 
     ## Custom Trailing stoploss ( credit to Perkmeister for this custom stoploss to help the strategy ride a green candle )
     def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
@@ -186,12 +188,11 @@ class ClucHAnix(IStrategy):
         dataframe['ha_high'] = heikinashi['high']
         dataframe['ha_low'] = heikinashi['low']
 
-
         # Set Up Bollinger Bands
         mid, lower = bollinger_bands(ha_typical_price(dataframe), window_size=40, num_of_std=2)
         dataframe['lower'] = lower
         dataframe['mid'] = mid
-        
+
         dataframe['bbdelta'] = (mid - dataframe['lower']).abs()
         dataframe['closedelta'] = (dataframe['ha_close'] - dataframe['ha_close'].shift()).abs()
         dataframe['tail'] = (dataframe['ha_close'] - dataframe['ha_low']).abs()
@@ -208,16 +209,16 @@ class ClucHAnix(IStrategy):
         dataframe["rsi"] = rsi
         rsi = 0.1 * (rsi - 50)
         dataframe["fisher"] = (np.exp(2 * rsi) - 1) / (np.exp(2 * rsi) + 1)
-        
+
         inf_tf = '1h'
-        
+
         informative = self.dp.get_pair_dataframe(pair=metadata['pair'], timeframe=inf_tf)
-        
+
         inf_heikinashi = qtpylib.heikinashi(informative)
 
         informative['ha_close'] = inf_heikinashi['close']
         informative['rocr'] = ta.ROCR(informative['ha_close'], timeperiod=168)
-     
+
         dataframe = merge_informative_pair(dataframe, informative, self.timeframe, inf_tf, ffill=True)
 
         return dataframe
@@ -229,18 +230,18 @@ class ClucHAnix(IStrategy):
             (
                 dataframe['rocr_1h'].gt(params['rocr-1h'])
             ) &
-            ((      
-                    (dataframe['lower'].shift().gt(0)) &
-                    (dataframe['bbdelta'].gt(dataframe['ha_close'] * params['bbdelta-close'])) &
-                    (dataframe['closedelta'].gt(dataframe['ha_close'] * params['closedelta-close'])) &
-                    (dataframe['tail'].lt(dataframe['bbdelta'] * params['bbdelta-tail'])) &
-                    (dataframe['ha_close'].lt(dataframe['lower'].shift())) &
-                    (dataframe['ha_close'].le(dataframe['ha_close'].shift()))
-            ) |
-            (       
-                    (dataframe['ha_close'] < dataframe['ema_slow']) &
-                    (dataframe['ha_close'] < params['close-bblower'] * dataframe['bb_lowerband']) 
-            )),
+            ((
+                     (dataframe['lower'].shift().gt(0)) &
+                     (dataframe['bbdelta'].gt(dataframe['ha_close'] * params['bbdelta-close'])) &
+                     (dataframe['closedelta'].gt(dataframe['ha_close'] * params['closedelta-close'])) &
+                     (dataframe['tail'].lt(dataframe['bbdelta'] * params['bbdelta-tail'])) &
+                     (dataframe['ha_close'].lt(dataframe['lower'].shift())) &
+                     (dataframe['ha_close'].le(dataframe['ha_close'].shift()))
+             ) |
+             (
+                     (dataframe['ha_close'] < dataframe['ema_slow']) &
+                     (dataframe['ha_close'] < params['close-bblower'] * dataframe['bb_lowerband'])
+             )),
             'buy'
         ] = 1
 
@@ -263,8 +264,8 @@ class ClucHAnix(IStrategy):
 
         return dataframe
 
-class ClucHAnix_ETH(ClucHAnix):
 
+class ClucHAnix_ETH(ClucHAnix):
     # Buy hyperspace params:
     buy_params = {
         'bbdelta-close': 0.01566,
@@ -274,13 +275,13 @@ class ClucHAnix_ETH(ClucHAnix):
         'rocr-1h': 0.61579,
         'volume': 27
     }
-	
+
     # Sell hyperspace params:
     sell_params = {
-        'sell-bbmiddle-close': 1.02894, 
-		'sell-fisher': 0.38414
+        'sell-bbmiddle-close': 1.02894,
+        'sell-fisher': 0.38414
     }
-	
+
     # ROI table:
     minimal_roi = {
         "0": 0.14414,
@@ -291,18 +292,18 @@ class ClucHAnix_ETH(ClucHAnix):
         "177": 0.00328,
         "277": 0
     }
-	
+
     # Stoploss:
     stoploss = -0.02
-	
+
     # Trailing stop:
     trailing_stop = True
     trailing_stop_positive = 0.01
     trailing_stop_positive_offset = 0.0116
     trailing_only_offset_is_reached = False
 
-class ClucHAnix_BTC(ClucHAnix):
 
+class ClucHAnix_BTC(ClucHAnix):
     # Buy hyperspace params:
     buy_params = {
         'bbdelta-close': 0.01192,
@@ -312,13 +313,13 @@ class ClucHAnix_BTC(ClucHAnix):
         'rocr-1h': 0.53422,
         'volume': 27
     }
-	
+
     # Sell hyperspace params:
     sell_params = {
-        'sell-bbmiddle-close': 0.98016, 
-		'sell-fisher': 0.38414
+        'sell-bbmiddle-close': 0.98016,
+        'sell-fisher': 0.38414
     }
-	
+
     # ROI table:
     minimal_roi = {
         "0": 0.19724,
@@ -329,18 +330,18 @@ class ClucHAnix_BTC(ClucHAnix):
         "307": 0.0063,
         "449": 0
     }
-	
+
     # Stoploss:
     stoploss = -0.11356
-	
+
     # Trailing stop:
     trailing_stop = True
     trailing_stop_positive = 0.01544
     trailing_stop_positive_offset = 0.11438
     trailing_only_offset_is_reached = False
 
-class ClucHAnix_USD(ClucHAnix):
 
+class ClucHAnix_USD(ClucHAnix):
     # Buy hyperspace params:
     buy_params = {
         'bbdelta-close': 0.01806,
@@ -350,10 +351,10 @@ class ClucHAnix_USD(ClucHAnix):
         'rocr-1h': 0.51901,
         'volume': 26
     }
-	
+
     # Sell hyperspace params:
     sell_params = {
-        'sell-bbmiddle-close': 0.96094, 
+        'sell-bbmiddle-close': 0.96094,
         'sell-fisher': 0.38414
     }
 
