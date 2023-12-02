@@ -10,7 +10,7 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 STRATEGIES = [
-    # "AwesomeMacd",
+    "AwesomeMacd",
     "CombinedBinHAndCluc",
     "CombinedBinHAndClucV2",
     "CombinedBinHAndClucV5",
