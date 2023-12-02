@@ -27,9 +27,9 @@ nostalgiaforinfinity:
        XTZ/USDT: 0.1
 
 config:
-  # timeframe: 1m
-  # include_timeframes: 5m
-  # max_open_trades: 10
+  trading_mode: spot
+  include_timeframes: [ 1m, 5m, 15m, 30m, 1h, 4h, 1d  ]
+  max_open_trades: 5
   amend_last_stake_amount: true
   stake_currency: USDT
   tradable_balance_ratio: 0.99
@@ -37,7 +37,7 @@ config:
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   cancel_open_orders_on_exit: false
   trading_mode: spot
-  #margin_mode: ""
+  margin_mode: ""
   unfilledtimeout:
     entry: 10
     exit: 30
@@ -116,66 +116,14 @@ config:
       - "http://0.0.0.0:8084"
     username: freqtrade
     password: "&&Liz270117!!"
-  freqai:
-    rl_config:
-      train_cycles: 25
-      add_state_info: true
-      max_trade_duration_candles: 300
-      max_training_drawdown_pct: 0.02
-      cpu_count: 8
-      model_type: PPO
-      policy_type: MlpPolicy
-      model_reward_parameters:
-        rr: 1
-        profit_aim: 0.025
-    enabled: true
-    purge_old_models: 2
-    train_period_days: 15
-    backtest_period_days: 7
-    live_retrain_hours: 0
-    identifier: uniqe-id
-    feature_parameters:
-      include_corr_pairlist: []
-      label_period_candles: 20
-      include_shifted_candles: 2
-      DI_threshold: 0.9
-      weight_factor: 0.9
-      principal_component_analysis: false
-      use_SVM_to_remove_outliers: true
-      indicator_periods_candles:
-        - 10
-        - 20
-      plot_feature_importances: 0
-    data_split_parameters:
-      test_size: 0.33
-      random_state: 1
-    model_training_parameters: {}
   initial_state: running
   force_entry_enable: true
   internals:
     process_throttle_secs: 5
-  #minimal_roi:
-  #  "0": 0.5
-  #  "2": 0.01
-  #  "4": 0.05
-  #  "6": 0.1
-  #  "16": 0.15
-  #  "31": 0.2
-  #  "61": 0.25
-  #  "121": 0.3
-  #  "241": 0.35
-  #  "361": 0.4
-  #  "721": 0
-    #"0": 0.8
-    #"10160": 0.5
-    #"15160": 0.25
-    #"20160": 0
 
 image:
   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-# europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256:d2d56e41d4052e61a3e1e6df9ec5d82189b4d78b84b0a450598b3b11f10ce837
-# freqtradeorg/freqtrade@sha256:f149410d215f0d625d51fa2dbcb9faf247a15e31ea616260020fcf1a149e80a7  #  europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade #  gcr.io/plucky-door-200208/freqtradeorg #  docker.io/freqtradeorg/freqtrade
-  tag: 2023.10_freqairl
+  tag: 2023.10_freqai
 
 backtesting:
   enabled: false
