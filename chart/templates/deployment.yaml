@@ -1,38 +1,4 @@
 {{- if .Values.bot.enabled }}
-#---
-#apiVersion: v1
-#kind: PersistentVolumeClaim
-#metadata:
-#  name: freqtrade-sqlite-{{ .Release.Namespace }}
-#spec:
-#  accessModes:
-#  - ReadWriteOnce
-#  resources:
-#    requests:
-#      storage: {{ .Values.bot.pvc_size }}
-#---
-#apiVersion: v1
-#kind: PersistentVolumeClaim
-#metadata:
-#  name: freqtrade-extra-strategies-{{ .Release.Namespace }}
-#spec:
-#  accessModes:
-#  - ReadWriteOnce
-#  resources:
-#    requests:
-#      storage: {{ .Values.bot.pvc_size }}
-#---
-#apiVersion: v1
-#kind: PersistentVolumeClaim
-#metadata:
-#  name: freqtrade-user-data-{{ .Release.Namespace }}
-#spec:
-#  accessModes:
-#  - ReadWriteOnce
-#  resources:
-#    requests:
-#      storage: {{ .Values.bot.pvc_size }}
-#---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -62,10 +28,10 @@ spec:
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-        lifecycle:
-          preStop:
-            exec:
-              command: ["/bin/sh","-c","sleep 60"]
+        #lifecycle:
+        #  preStop:
+        #    exec:
+        #      command: ["/bin/sh","-c","sleep 60"]
         env:
         - name: PYTHONPATH
           value: $PYTHONPATH:/freqtrade/lib:/freqtrade/user_data/lib
@@ -77,9 +43,9 @@ spec:
         - {{ .Values.bot.debuglevel }}
 {{- end }}
         - --config
-        - /freqtrade/config/config.json
+        - /freqtrade/config/config-{{ .Release.Namespace }}.json
         - --config
-        - /freqtrade/configcreds/configcreds.json
+        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
         - --strategy-path 
         - /freqtrade/user_data/extra_strategies
         - --strategy
