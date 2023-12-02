@@ -6,6 +6,6 @@ metadata:
   labels:
      app: freqtrade-config-creds
 data:
-  configcreds.json: |
+  configcreds-{{ .Release.Namespace }}.json: |
 {{ toPrettyJson .Values.configcreds | indent 4 }}
 {{- end }}
