@@ -20,7 +20,6 @@ class Strategy004(IStrategy):
     > python3 ./freqtrade/main.py -s Strategy004
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
@@ -43,17 +42,17 @@ class Strategy004(IStrategy):
     trailing_stop_positive_offset = 0.02
 
     # run "populate_indicators" only for new candle
-    process_only_new_candles = True
+    process_only_new_candles = False
 
     # Experimental settings (configuration will overide these if set)
-    use_exit_signal = True
-    exit_profit_only = True
-    ignore_roi_if_entry_signal = False
+    use_sell_signal = True
+    sell_profit_only = True
+    ignore_roi_if_buy_signal = False
 
     # Optional order type mapping
     order_types = {
-        'entry': 'limit',
-        'exit': 'limit',
+        'buy': 'limit',
+        'sell': 'limit',
         'stoploss': 'market',
         'stoploss_on_exchange': False
     }
@@ -103,15 +102,12 @@ class Strategy004(IStrategy):
 
         # EMA - Exponential Moving Average
         dataframe['ema5'] = ta.EMA(dataframe, timeperiod=5)
-        
-        # get the rolling volume mean for the last hour (12x5)
-        # Note: dataframe['volume'].mean() uses the whole dataframe in 
-        # backtesting hence will have lookahead, but would be fine for dry/live use
-        dataframe['mean-volume'] = dataframe['volume'].rolling(12).mean()
+
+        dataframe['mean-volume'] = dataframe['volume'].mean()
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the buy signal for the given dataframe
         :param dataframe: DataFrame
@@ -137,11 +133,11 @@ class Strategy004(IStrategy):
                 (dataframe['mean-volume'] > 0.75) &
                 (dataframe['close'] > 0.00000100)
             ),
-            'enter_long'] = 1
+            'buy'] = 1
 
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the sell signal for the given dataframe
         :param dataframe: DataFrame
@@ -154,5 +150,5 @@ class Strategy004(IStrategy):
                 (dataframe['fastk-previous'] < dataframe['fastd-previous']) &
                 (dataframe['close'] > dataframe['ema5'])
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

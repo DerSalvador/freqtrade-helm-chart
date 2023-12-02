@@ -29,7 +29,7 @@ nostalgiaforinfinity:
 config:
   # timeframe: 1m
   # include_timeframes: 5m
-  max_open_trades: 10
+  # max_open_trades: 10
   amend_last_stake_amount: true
   stake_currency: USDT
   tradable_balance_ratio: 0.99
@@ -37,24 +37,12 @@ config:
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   cancel_open_orders_on_exit: false
   trading_mode: spot
-  margin_mode: ""
+  #margin_mode: ""
   unfilledtimeout:
     entry: 10
     exit: 30
     exit_timeout_count: 0
     unit: minutes
-  entry_pricing:
-    price_side: same
-    use_order_book: true
-    order_book_top: 1
-    price_last_balance: 0
-    check_depth_of_market:
-      enabled: false
-      bids_to_ask_delta: 1
-  exit_pricing:
-    price_side: same
-    use_order_book: true
-    order_book_top: 1
   exchange:
     ccxt_config:
       enableRateLimit: true
@@ -166,29 +154,22 @@ config:
   force_entry_enable: true
   internals:
     process_throttle_secs: 5
-  minimal_roi:
-    "0": 0.5
-    "2": 0.01
-    "4": 0.05
-    "6": 0.1
-    "16": 0.15
-    "31": 0.2
-    "61": 0.25
-    "121": 0.3
-    "241": 0.35
-    "361": 0.4
-    "721": 0
+  #minimal_roi:
+  #  "0": 0.5
+  #  "2": 0.01
+  #  "4": 0.05
+  #  "6": 0.1
+  #  "16": 0.15
+  #  "31": 0.2
+  #  "61": 0.25
+  #  "121": 0.3
+  #  "241": 0.35
+  #  "361": 0.4
+  #  "721": 0
     #"0": 0.8
     #"10160": 0.5
     #"15160": 0.25
     #"20160": 0
-  order_types: 
-    entry: "limit"
-    force_entry: "market"
-    force_exit: "market"
-    exit: limit
-    stoploss: "market"
-    stoploss_on_exchange: false
 
 image:
   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade

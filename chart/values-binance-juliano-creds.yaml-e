@@ -1,10 +1,8 @@
 configcreds:
   download_trades: true
-  timeframe: 1h
-  bot_name: freqtrading-binance-michael
-  available_capital: 1500  
+  bot_name: freqtrading-binance-juliano
   dry_run: false
-  dry_run_wallet: 4000
+  dry_run_wallet: 50
   stake_amount: unlimited
   position_adjustment_enable: true
   entry_pricing:
@@ -18,19 +16,22 @@ configcreds:
   exit_pricing:
     price_side: other
     use_order_book: true
-    order_book_top: 1  
+    order_book_top: 1    
   exchange:
     name: binance
-    key: uNxKJECeWU3KtD2QIAcXxhKWXLtQkASu4zdZfu1ajAFM2kmBaVM7WmLX8WNKfAiQ 
-    secret: RK8dLdbqtpDJ7J5hmOKbgcvhLJBxqscFdgNb5jrv5Y623ItQZe5ScirKDrJyYq97 
+    key: HrLllzlPhN2BAAChE7iQdewMvawTuEwLGkWPYU1ZqlnxJ1uN1IdUernLvk6rU5cF
+    secret: >-
+      HSeKgVJP2XpL7AJWENZ54p2QexsWZq25jT3i8ywHpSLA7zKijo8yoKvFFTweTIYF
+
   telegram:
-    enabled: false
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    enabled: true
+    token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
+    chat_id: "1649376180"
+ 
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: EnsembleStrategyV2
+  strategy_name: NostalgiaForInfinityX4 # Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
