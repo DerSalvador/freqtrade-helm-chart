@@ -1,48 +1,60 @@
 configcreds:
-  stake_currency: USDT
-  stoploss: -0.5
-  trailing_stop: true
+  trading_mode: futures
+  margin_mode: isolated
+  leverage: 70
+  available_capital: 1500
+  bot_name: freqtrading-binance-futures
   stake_amount_type: quote_currency
-  tradable_balance_ratio: 0.99
-  fiat_display_currency: EUR
-  db_url: "sqlite:///user_data/tradesv3.sqlite"
-  cancel_open_orders_on_exit: false
-  available_capital: 8000
-  amend_last_stake_amount: false
-  minimal_roi:
-    "0": 0.8
-    "10160": 0.5
-    "15160": 0.25
-    "20160": 0
-  entry_pricing: 
-    price_side: same
+  entry_pricing:
+    price_side: other
     use_order_book: true
     order_book_top: 1
-    price_last_balance: 0.0
+    price_last_balance: 0
     check_depth_of_market:
       enabled: false
       bids_to_ask_delta: 1
   exit_pricing:
-    price_side: same
+    price_side: other
     use_order_book: true
-    order_book_top: 1
-  order_types:  
-    entry: limit
-    exit: limit
-    stoploss: market
-    stoploss_on_exchange: true
-    trailing_stop: true
-    trailing_stop_positive: 0.05
-    trailing_stop_positive_offset: 0.1
-  trading_mode: futures
-  margin_mode: isolated
-  dataformat_ohlcv: feather
-  dataformat_trades: feather  
-  download_trades: false
-  bot_name: freqtrading-binance-futures
+    order_book_top: 1    
+  #stoploss: -0.5
+  #trailing_stop: true
+  #tradable_balance_ratio: 0.99
+  #fiat_display_currency: EUR
+  #db_url: "sqlite:///user_data/tradesv3.sqlite"
+  #cancel_open_orders_on_exit: false
+  #amend_last_stake_amount: false
+  #minimal_roi:
+  #  "0": 0.8
+  ##  "10160": 0.5
+  #  "15160": 0.25
+  #  "20160": 0
+  #entry_pricing: 
+  #  price_side: same
+  #  use_order_book: true
+  #  order_book_top: 1
+  #  price_last_balance: 0.0
+  #  check_depth_of_market:
+  #    enabled: false
+  #    bids_to_ask_delta: 1
+  #exit_pricing:
+  #  price_side: same
+  #  use_order_book: true
+  #  order_book_top: 1
+  #order_types:  
+  #  entry: limit
+  #  exit: limit
+  #  stoploss: market
+  #  stoploss_on_exchange: true
+  #  trailing_stop: true
+  #  trailing_stop_positive: 0.05
+  #  trailing_stop_positive_offset: 0.1
+  #dataformat_ohlcv: feather
+  #dataformat_trades: feather  
+  #download_trades: false
   dry_run: false
   dry_run_wallet: 4000
-  stake_amount: 100
+  stake_amount: unlimited
   position_adjustment_enable: true
   exchange:
     ccxt_config:
@@ -60,7 +72,7 @@ configcreds:
     name: binance
     key: ZJ8HMz2H5G1HMqcZh5yIJmoCVcWrYZLp9ZUqMhhSlb6mdJnzjUkNrdN8rJ4Zw7ro
     secret: Q37TvH7ORApOdkNl7IYvLhBVjxhcGzGagvH86jrJCHEtTeUsxPZGlPTe8wYpqWfO
-    pair_whitelist:
+  pair_whitelist:
     - AUDIO/USDT
     - AAVE/USDT
     - ALICE/USDT
@@ -164,18 +176,20 @@ configcreds:
     - XEM/USDT
     - QTUM/USDT
     - 1INCH/USDT
-    pair_blacklist:
-    - BNB/.*
+    #pair_blacklist:
+    #- BNB/.*
   pairlists:
   # - method: StaticPairList
   - method: RemotePairList
     number_assets: 50
     pairlist_url: https://remotepairlist.com?q=422f8201e9d8a16b
     mode: whitelist
+    refresh_period: 60
   - method: RemotePairList
     number_assets: 50
     mode: blacklist
     pairlist_url: https://remotepairlist.com?q=8fc6625b0bc79a51
+    refresh_period: 60
   - method: AgeFilter
     min_days_listed: 30
   - method: PriceFilter
