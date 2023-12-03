@@ -78,6 +78,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityX4
+  strategy_name: AdxSmasS_v7
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
