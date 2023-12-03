@@ -7,6 +7,10 @@ configcreds:
   stake_amount_type: quote_currency
   pair_blacklist: ["FLR/USDT", "(BNB)/.*" ]
   pair_whitelist: ["BTC/USDT:USDT","ETH/USDT:USDT","YFI/USDT:USDT","SOL/USDT:USDT","MKR/USDT:USDT","BNB/USDT:USDT","BCH/USDT:USDT","LTC/USDT:USDT","TRB/USDT:USDT","AVAX/USDT:USDT","LINK/USDT:USDT","AAVE/USDT:USDT","ORDI/USDT:USDT","ILV/USDT:USDT","BTCDOM/USDT:USDT","XMR/USDT:USDT","INJ/USDT:USDT","TIA/USDT:USDT","SSV/USDT:USDT","ETC/USDT:USDT","UNFI/USDT:USDT","ATOM/USDT:USDT","DEFI/USDT:USDT","AXS/USDT:USDT","COMP/USDT:USDT","RUNE/USDT:USDT","EGLD/USDT:USDT","FOOTBALL/USDT:USDT","GAS/USDT:USDT","DOT/USDT:USDT","UNI/USDT:USDT","QNT/USDT:USDT","APT/USDT:USDT","FIL/USDT:USDT","GMX/USDT:USDT","WLD/USDT:USDT","DYDX/USDT:USDT","KSM/USDT:USDT","APE/USDT:USDT","BSV/USDT:USDT","NEO/USDT:USDT","ZEC/USDT:USDT","BLUR/USDT:USDT","RNDR/USDT:USDT","XRP/USDT:USDT","DASH/USDT:USDT","MATIC/USDT:USDT","OP/USDT:USDT","NEAR/USDT:USDT","CYBER/USDT:USDT"]
+  telegram:
+    enabled: true
+    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "5711830404"        
   entry_pricing:
     price_side: other
     use_order_book: true
@@ -70,53 +74,10 @@ configcreds:
     min_rate_of_change: 0.03
     refresh_period: 1800
   - method: ShuffleFilter
-  telegram:
-    enabled: true
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
-    keyboard:
-      - - /forcelong
-        - /balance
-        - /profit
-        - /reload_config
-        - /stopentry
-      - - /status table
-        - /performance
-        - /mix_tags
-        - /start
-        - /stop
-      - - /show_config
-        - /whitelist
-        - /logs
-        - /trades
-        - /forceexit
-    notification_settings:
-      status: 'on'
-      warning: 'on'
-      startup: 'on'
-      entry: 'on'
-      entry_fill: 'on'
-      exit:
-        roi: 'on'
-        emergency_exit: 'on'
-        force_exit: 'on'
-        exit_signal: 'on'
-        trailing_stop_loss: 'on'
-        stop_loss: 'on'
-        stoploss_on_exchange: 'on'
-        custom_exit: 'on'
-      exit_fill: 'on'
-      entry_cancel: 'on'
-      exit_cancel: 'on'
-      protection_trigger: 'on'
-      protection_trigger_global: 'on'
-      show_candle: 'ohlc'
-    reload: true
-    balance_dust_level: 0.03        
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: madrid_ribbon
+  strategy_name: NostalgiaForInfinityX4
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
