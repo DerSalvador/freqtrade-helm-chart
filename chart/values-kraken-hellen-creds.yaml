@@ -4,7 +4,26 @@ configcreds:
   dry_run_wallet: 100000
   download_trades: false
   position_adjustment_enable: true
-  stake_amount: 100
+  stake_amount: unlimited
+  entry_pricing:
+    price_side: same
+    use_order_book: true
+    order_book_top: 1
+    price_last_balance: 0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: same
+    use_order_book: true
+    order_book_top: 1
+  order_types: 
+    entry: "limit"
+    force_entry: "market"
+    force_exit: "market"
+    exit: limit
+    stoploss: "market"
+    stoploss_on_exchange: false    
   exchange:
     name: kraken
     key: 54UnpzC561cUBlNh1D/5+3C8pyKKZs8lFYNhI1HcLxmn+jo8JybDGgWM
