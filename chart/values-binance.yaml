@@ -37,6 +37,18 @@ config:
   cancel_open_orders_on_exit: false
   trading_mode: spot
   #margin_mode: ""
+  #minimal_roi:
+  #  "0": 0.5
+  #  "2": 0.01
+  #  "4": 0.05
+  #  "6": 0.1
+  #  "16": 0.15
+  #  "31": 0.2
+  #  "61": 0.25
+  #  "121": 0.3
+  #  "241": 0.35
+  #  "361": 0.4
+  #  "721": 0  
   unfilledtimeout:
     entry: 10
     exit: 30
