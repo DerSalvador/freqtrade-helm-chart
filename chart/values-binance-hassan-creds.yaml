@@ -32,6 +32,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityX4 # Strategy005
+  strategy_name: EI3v2_tag_cofi_green
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
