@@ -36,7 +36,7 @@ configcreds:
     chat_id: "1759706931"
 bot:
   enabled: true
-  strategy_name: EnsembleStrategyV2
+  strategy_name: NostalgiaForInfinityX3
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
     # freqaimodel: ReinforcementLearner # LightGBMRegressor
