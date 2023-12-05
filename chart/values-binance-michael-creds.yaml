@@ -1,3 +1,6 @@
+kubernetes:
+  nodePort: 32326
+
 configcreds:
   download_trades: true
   timeframe: 1h

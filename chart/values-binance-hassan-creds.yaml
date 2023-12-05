@@ -1,3 +1,6 @@
+kubernetes:
+  nodePort: 32323
+
 configcreds:
   download_trades: true
   bot_name: freqtrading-binance-hassan
