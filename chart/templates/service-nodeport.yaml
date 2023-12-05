@@ -11,6 +11,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: api
+    nodePort: {{ .Values.kubernetes.nodePort }}
   selector:
     app: freqtrade-{{ .Release.Namespace }}
 {{- end }}

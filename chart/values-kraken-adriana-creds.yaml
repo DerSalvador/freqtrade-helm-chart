@@ -1,3 +1,6 @@
+kubernetes:
+  nodePort: 32327
+  
 configcreds:
   bot_name: freqtrade-kraken-adriana
   dry_run: false
