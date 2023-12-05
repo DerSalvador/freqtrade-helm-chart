@@ -1,3 +1,6 @@
+kubernetes:
+  nodePort: 32321
+
 configcreds:
   trading_mode: futures
   margin_mode: isolated
