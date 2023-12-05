@@ -1,3 +1,6 @@
+kubernetes:
+  nodePort: 32322
+
 configcreds:
   bot_name: freqtrade-kraken-stieves
   dry_run: false

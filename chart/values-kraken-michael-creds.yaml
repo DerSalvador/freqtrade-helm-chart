@@ -1,3 +1,6 @@
+kubernetes:
+  nodePort: 32329
+
 configcreds:
   bot_name: freqtrade-kraken-michael
   timeframe: 5m
