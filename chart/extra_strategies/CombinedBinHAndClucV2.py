@@ -44,7 +44,7 @@ class CombinedBinHAndClucV2(IStrategy):
     stoploss = -0.05
 
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = True
 
     protections = [

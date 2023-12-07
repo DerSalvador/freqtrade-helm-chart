@@ -92,7 +92,7 @@ class NotAnotherSMAOffSetStrategy_V2(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
 

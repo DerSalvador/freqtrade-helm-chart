@@ -68,8 +68,8 @@ spec:
         - name: user-data
           subPath: nfi-hold-trades.json
           mountPath: /freqtrade/user_data
-        - name: backtesting-data
-          mountPath: /freqtrade/user_data/data
+        #- name: backtesting-data
+        #  mountPath: /freqtrade/user_data/data
         - name: strategies
           mountPath: /freqtrade/user_data/strategies
         - name: extra-strategies
@@ -86,9 +86,9 @@ spec:
       imagePullSecrets:
       - name: deploy-key-gcr
       volumes:
-      - name: backtesting-data
-        persistentVolumeClaim:
-          claimName: freqtrade-backtesting-data
+      #- name: backtesting-data
+      #  persistentVolumeClaim:
+      #    claimName: freqtrade-backtesting-data
       - name: user-data
         persistentVolumeClaim:
           claimName: freqtrade-user-data

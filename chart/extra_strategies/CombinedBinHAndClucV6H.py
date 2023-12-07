@@ -31,7 +31,7 @@ from functools import reduce
 ##   Prefer stable coin (USDT, BUSDT etc) pairs, instead of BTC or ETH pairs.                            ##
 ##   Highly recommended to blacklist leveraged tokens (*BULL, *BEAR, *UP, *DOWN etc).                    ##
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
-##   the timeframe (must be 5m) & sell_profit_only (must be true).                                       ##
+##   the timeframe (must be 5m) & exit_profit_only (must be true).                                       ##
 ##                                                                                                       ##
 ###########################################################################################################
 ##               DONATIONS                                                                               ##
@@ -78,7 +78,7 @@ class CombinedBinHAndClucV6H(IStrategy):
 
 
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     sell_profit_offset = 0.001
     ignore_roi_if_buy_signal = True
 

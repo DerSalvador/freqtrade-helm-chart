@@ -40,7 +40,7 @@ configcreds:
     # chat_id: "743804896"
 bot:  
   enabled: true
-  strategy_name: turbov8
+  strategy_name: GodStraNew40
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner
   # freqaimodel: ReinforcementLearner # LightGBMRegressor

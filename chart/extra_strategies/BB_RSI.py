@@ -46,7 +46,7 @@ class BB_RSI(IStrategy):
 
     # Experimental settings (configuration will overide these if set)
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     ignore_roi_if_buy_signal = False
 
     # Optional order type mapping

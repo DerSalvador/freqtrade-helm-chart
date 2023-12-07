@@ -212,7 +212,7 @@ class NostalgiaForInfinityX2(IStrategy):
         config['exchange']['ccxt_async_config']['options'] = options
         super().__init__(config)
         if (('exit_profit_only' in self.config and self.config['exit_profit_only'])
-                or ('sell_profit_only' in self.config and self.config['sell_profit_only'])):
+                or ('exit_profit_only' in self.config and self.config['exit_profit_only'])):
             self.exit_profit_only = True
         if ('stop_thresholds_normal' in self.config):
             self.stop_thresholds_normal = self.config['stop_thresholds_normal']
