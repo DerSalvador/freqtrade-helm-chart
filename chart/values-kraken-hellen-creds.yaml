@@ -38,7 +38,7 @@ configcreds:
     chat_id: "6493643145"
 bot:  
   enabled: true
-  strategy_name: BB_RTR
+  strategy_name: DevilStra
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner
   # freqaimodel: ReinforcementLearner # LightGBMRegressor

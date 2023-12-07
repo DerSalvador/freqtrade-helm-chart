@@ -122,7 +122,7 @@ class MacheteV8bRallimod2(IStrategy):
 
     # Experimental settings (configuration will overide these if set)
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
     startup_candle_count = 200#149
 

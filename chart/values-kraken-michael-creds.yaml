@@ -39,7 +39,7 @@ configcreds:
     chat_id: "1759706931"
 bot:
   enabled: true
-  strategy_name: NostalgiaForInfinityX3
+  strategy_name: DevilStra
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor #  ReinforcementLearner 
     # freqaimodel: ReinforcementLearner # LightGBMRegressor

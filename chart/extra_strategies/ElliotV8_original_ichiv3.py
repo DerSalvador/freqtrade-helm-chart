@@ -122,7 +122,7 @@ class ElliotV8_original_ichiv3(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
 

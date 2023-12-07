@@ -171,7 +171,7 @@ class Solipsis3(IStrategy):
 
     # Recommended
     use_sell_signal = False
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Required

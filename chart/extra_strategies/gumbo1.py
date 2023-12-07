@@ -42,7 +42,7 @@ class Gumbo1(IStrategy):
     inf_timeframe = '1h'
     # Recommended
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = True
     startup_candle_count = 200
 

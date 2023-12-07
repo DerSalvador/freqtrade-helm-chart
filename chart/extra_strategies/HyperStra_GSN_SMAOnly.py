@@ -115,7 +115,7 @@ class HyperStra_GSN_SMAOnly(IStrategy):
     process_only_new_candles = False
     startup_candle_count = 440
 
-    sell_profit_only = False
+    exit_profit_only = False
     sell_profit_offset = 0.01
 
     # ##################################################################
