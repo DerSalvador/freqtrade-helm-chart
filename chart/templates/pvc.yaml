@@ -32,24 +32,24 @@ spec:
     requests:
       storage: {{ .Values.bot.pvc_size }}
 ---     
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: freqtrade-backtesting-data
-spec:   
-  accessModes:
-  - ReadWriteOnce
-  resources: 
-    requests:
-      storage: {{ .Values.backtesting.pvc_size }}
----     
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: freqtrade-backtesting-results
-spec:     
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests: 
-      storage: {{ .Values.backtesting.results.pvc_size }}
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: freqtrade-backtesting-data
+#spec:   
+#  accessModes:
+#  - ReadWriteOnce
+#  resources: 
+#    requests:
+#      storage: {{ .Values.backtesting.pvc_size }}
+#---     
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: freqtrade-backtesting-results
+#spec:     
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests: 
+#      storage: {{ .Values.backtesting.results.pvc_size }}

@@ -50,7 +50,7 @@ else:
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
 ##   the timeframe (must be 15m).                                                                         ##
 ##     use_sell_signal must set to true (or not set at all).                                             ##
-##     sell_profit_only must set to false (or not set at all).                                           ##
+##     exit_profit_only must set to false (or not set at all).                                           ##
 ##     ignore_roi_if_buy_signal must set to true (or not set at all).                                    ##
 ##                                                                                                       ##
 ###########################################################################################################
@@ -158,7 +158,7 @@ class NostalgiaForInfinityNextGen(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = True
 
     # Number of candles the strategy requires before producing valid signals

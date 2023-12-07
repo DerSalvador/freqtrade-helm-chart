@@ -2,10 +2,13 @@ kubernetes:
   nodePort: 32325
 
 configcreds:
+  trading_mode: futures
+  margin_mode: isolated
+  max_open_trades: 5
   download_trades: true
   bot_name: freqtrading-binance-larissa
   dry_run: false
-  dry_run_wallet: 4000
+  dry_run_wallet: 800
   stake_amount: unlimited
   position_adjustment_enable: true
   entry_pricing:
@@ -22,8 +25,12 @@ configcreds:
     order_book_top: 1    
   exchange:
     name: binance
-    key: B7M26i11tIFNDPGcXG8Yu3ZOoI6eB1LcOP3FMpXTgI8T7ejICD9yYxMGMZ1kFN0y
-    secret: MAopXKz9eJMyN6vL6bxO57YyqeHW6fWISaFtz4CdWWCjHgA8gFBKIA5hqFDFePqy
+    # API Futures
+    key: eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
+    secret: qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy
+    # API Spot 
+    #key: B7M26i11tIFNDPGcXG8Yu3ZOoI6eB1LcOP3FMpXTgI8T7ejICD9yYxMGMZ1kFN0y
+    #secret: MAopXKz9eJMyN6vL6bxO57YyqeHW6fWISaFtz4CdWWCjHgA8gFBKIA5hqFDFePqy
   telegram:
     enabled: true
     token: "6607555119:AAGqoNPH-3m1SECXrPeZdtRDgTuy5988BN0"
@@ -50,6 +57,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityX2
+  strategy_name: madrid_ribbon
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 

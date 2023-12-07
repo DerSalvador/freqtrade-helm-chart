@@ -36,7 +36,7 @@ from functools import reduce
 ##   Ensure that you don't override any variables in your config.json. Especially                        ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##                                                                                                       ##
-##   sell_profit_only:                                                                                   ##
+##   exit_profit_only:                                                                                   ##
 ##       True - risk more (gives you higher profit and higher Drawdown)                                  ##
 ##       False (default) - risk less (gives you less ~10-15% profit and much lower Drawdown)             ##
 ##                                                                                                       ##
@@ -69,7 +69,7 @@ class BigZ04(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     sell_profit_offset = 0.001 # it doesn't meant anything, just to guarantee there is a minimal profit.
     ignore_roi_if_buy_signal = False
 

@@ -35,7 +35,6 @@ config:
   fiat_display_currency: EUR
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   cancel_open_orders_on_exit: false
-  trading_mode: spot
   #margin_mode: ""
   #minimal_roi:
   #  "0": 0.5
