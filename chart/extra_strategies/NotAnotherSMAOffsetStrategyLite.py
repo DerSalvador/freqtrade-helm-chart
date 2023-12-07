@@ -51,7 +51,7 @@ class NotAnotherSMAOffsetStrategyLite(IStrategy):
     slow_ewo = 200
 
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
     order_time_in_force = {'buy': 'gtc', 'sell': 'ioc'}

@@ -67,7 +67,7 @@ class RaposaDivergenceV1(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = False
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals

@@ -114,7 +114,7 @@ class ClucHAnix_BB_RPB_MOD(IStrategy):
 
     # Make sure these match or are not overridden in config
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Custom stoploss
