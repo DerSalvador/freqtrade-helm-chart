@@ -4,9 +4,7 @@
 import numpy as np  # noqa
 import pandas as pd  # noqa
 from pandas import DataFrame
-
 from freqtrade.strategy import IStrategy
-
 # --------------------------------
 # Add your lib to import here
 import talib.abstract as ta
@@ -14,24 +12,16 @@ import freqtrade.vendor.qtpylib.indicators as qtpylib
 from datetime import datetime
 from freqtrade.persistence import Trade
 
-
 class CustomStoplossWithPSAR(IStrategy):
-    """
-    this is an example class, implementing a PSAR based trailing stop loss
-    you are supposed to take the `custom_stoploss()` and `populate_indicators()`
-    parts and adapt it to your own strategy
-
-    the populate_entry_trend() function is pretty nonsencial
-    """
+    INTERFACE_VERSION = 3
+    '\n    this is an example class, implementing a PSAR based trailing stop loss\n    you are supposed to take the `custom_stoploss()` and `populate_indicators()`\n    parts and adapt it to your own strategy\n\n    the populate_entry_trend() function is pretty nonsencial\n    '
     INTERFACE_VERSION: int = 3
     timeframe = '1h'
     stoploss = -0.2
     custom_info = {}
     use_custom_stoploss = True
 
-    def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
-                        current_rate: float, current_profit: float, **kwargs) -> float:
-
+    def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime, current_rate: float, current_profit: float, **kwargs) -> float:
         result = 1
         if self.custom_info and pair in self.custom_info and trade:
             # using current_time directly (like below) will only work in backtesting/hyperopt.
@@ -44,14 +34,12 @@ class CustomStoplossWithPSAR(IStrategy):
                 # see: https://www.freqtrade.io/en/latest/strategy-customization/#common-mistakes-when-developing-strategies
                 last_candle = dataframe.iloc[-1].squeeze()
                 relative_sl = last_candle['sar']
-
-            if (relative_sl is not None):
+            if relative_sl is not None:
                 # print("custom_stoploss().relative_sl: {}".format(relative_sl))
                 # calculate new_stoploss relative to current_rate
                 new_stoploss = (current_rate - relative_sl) / current_rate
                 # turn into relative negative offset required by `custom_stoploss` return implementation
                 result = new_stoploss - 1
-
         # print("custom_stoploss() -> {}".format(result))
         return result
 
@@ -59,7 +47,6 @@ class CustomStoplossWithPSAR(IStrategy):
         dataframe['sar'] = ta.SAR(dataframe)
         if self.dp.runmode.value in ('backtest', 'hyperopt'):
             self.custom_info[metadata['pair']] = dataframe[['date', 'sar']].copy().set_index('date')
-
         # all "normal" indicators:
         # e.g.
         # dataframe['rsi'] = ta.RSI(dataframe)
@@ -67,26 +54,21 @@ class CustomStoplossWithPSAR(IStrategy):
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Placeholder Strategy: buys when SAR is smaller then candle before
-        Based on TA indicators, populates the buy signal for the given dataframe
+        Placeholder Strategy: entrys when SAR is smaller then candle before
+        Based on TA indicators, populates the entry signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        dataframe.loc[
-            (
-                (dataframe['sar'] < dataframe['sar'].shift())
-            ),
-            'enter_long'] = 1
-
+        dataframe.loc[dataframe['sar'] < dataframe['sar'].shift(), 'enter_long'] = 1
         return dataframe
 
     def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Placeholder Strategy: does nothing
-        Based on TA indicators, populates the sell signal for the given dataframe
+        Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        # Deactivated sell signal to allow the strategy to work correctly
+        # Deactivated exit signal to allow the strategy to work correctly
         dataframe.loc[:, 'exit_long'] = 0
         return dataframe

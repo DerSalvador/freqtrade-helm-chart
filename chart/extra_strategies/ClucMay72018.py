@@ -4,38 +4,25 @@ from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
 # --------------------------------
-
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame, DatetimeIndex, merge
 # --------------------------------
-
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy  # noqa
 
-
 class ClucMay72018(IStrategy):
-    """
-
-    author@: Gert Wohlgemuth
-
-    works on new objectify branch!
-
-    """
-
+    INTERFACE_VERSION = 3
+    '\n\n    author@: Gert Wohlgemuth\n\n    works on new objectify branch!\n\n    '
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
-    minimal_roi = {
-        "0": 0.01
-    }
-
+    minimal_roi = {'0': 0.01}
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
     stoploss = -0.05
-
     # Optimal timeframe for the strategy
     timeframe = '5m'
 
@@ -53,31 +40,20 @@ class ClucMay72018(IStrategy):
         dataframe['ema100'] = ta.EMA(dataframe, timeperiod=50)
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the buy signal for the given dataframe
+        Based on TA indicators, populates the entry signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        dataframe.loc[
-            (
-                    (dataframe['close'] < dataframe['ema100']) &
-                    (dataframe['close'] < 0.985 * dataframe['bb_lowerband']) &
-                    (dataframe['volume'] < (dataframe['volume'].rolling(window=30).mean().shift(1) * 20))
-            ),
-            'buy'] = 1
-
+        dataframe.loc[(dataframe['close'] < dataframe['ema100']) & (dataframe['close'] < 0.985 * dataframe['bb_lowerband']) & (dataframe['volume'] < dataframe['volume'].rolling(window=30).mean().shift(1) * 20), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the sell signal for the given dataframe
+        Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        dataframe.loc[
-            (
-                (dataframe['close'] > dataframe['bb_middleband'])
-            ),
-            'sell'] = 1
+        dataframe.loc[dataframe['close'] > dataframe['bb_middleband'], 'exit_long'] = 1
         return dataframe

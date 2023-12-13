@@ -28,8 +28,8 @@ spec:
       labels:
         app: results-reader-{{ .Release.Namespace }}
     spec:
-{{- if (.Values.kubernetes.nodeNameBackTestingResultsReeader) }}
-      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} #  pool-dersalvador-y5wl4 # pool-dersalvador-y6z2l
+{{- if (.Values.kubernetes.nodeNameBackTestingResultsReader) }}
+      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} #  pool-dersalvador-y5wl4 # pool-dersalvador-y6z2l
 {{- end }}
       containers:
       - name: nginx

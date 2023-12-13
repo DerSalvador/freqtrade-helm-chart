@@ -1,5 +1,6 @@
+---
 nostalgiaforinfinity:
-  holdtrades: 
+  holdtrades:
     trade_pairs:
       BTC/USDT: 0.3
       ETH/USDT: 0.3

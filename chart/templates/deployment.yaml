@@ -1,3 +1,4 @@
+---
 {{- if .Values.bot.enabled }}
 apiVersion: apps/v1
 kind: Deployment
@@ -12,7 +13,7 @@ spec:
       labels:
         app: freqtrade-{{ .Release.Namespace }}
     spec:
-      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
+      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -46,7 +47,7 @@ spec:
         - /freqtrade/config/config-{{ .Release.Namespace }}.json
         - --config
         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-        - --strategy-path 
+        - --strategy-path
         - /freqtrade/user_data/extra_strategies
         - --strategy
         - {{ .Values.bot.strategy_name }}

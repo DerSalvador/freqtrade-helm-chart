@@ -1,61 +1,36 @@
-
 # --- Do not remove these libs ---
 from freqtrade.strategy import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
 # --------------------------------
-
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 
-
 class Strategy001(IStrategy):
-    """
-    Strategy 001
-    author@: Gerald Lonlas
-    github@: https://github.com/freqtrade/freqtrade-strategies
-
-    How to use it?
-    > python3 ./freqtrade/main.py -s Strategy001
-    """
-
+    INTERFACE_VERSION = 3
+    '\n    Strategy 001\n    author@: Gerald Lonlas\n    github@: https://github.com/freqtrade/freqtrade-strategies\n\n    How to use it?\n    > python3 ./freqtrade/main.py -s Strategy001\n    '
+    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
-    minimal_roi = {
-        "60":  0.01,
-        "30":  0.03,
-        "20":  0.04,
-        "0":  0.05
-    }
-
+    minimal_roi = {'60': 0.01, '30': 0.03, '20': 0.04, '0': 0.05}
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
-    stoploss = -0.10
-
+    stoploss = -0.1
     # Optimal timeframe for the strategy
     timeframe = '5m'
-
     # trailing stoploss
     trailing_stop = False
     trailing_stop_positive = 0.01
     trailing_stop_positive_offset = 0.02
-
     # run "populate_indicators" only for new candle
-    process_only_new_candles = False
-
+    process_only_new_candles = True
     # Experimental settings (configuration will overide these if set)
-    use_sell_signal = True
+    use_exit_signal = True
     exit_profit_only = True
-    ignore_roi_if_buy_signal = False
-
+    ignore_roi_if_entry_signal = False
     # Optional order type mapping
-    order_types = {
-        'buy': 'limit',
-        'sell': 'limit',
-        'stoploss': 'market',
-        'stoploss_on_exchange': False
-    }
+    order_types = {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
 
     def informative_pairs(self):
         """
@@ -78,44 +53,28 @@ class Strategy001(IStrategy):
         you are using. Let uncomment only the indicator you are using in your strategies
         or your hyperopt configuration, otherwise you will waste your memory and CPU usage.
         """
-
         dataframe['ema20'] = ta.EMA(dataframe, timeperiod=20)
         dataframe['ema50'] = ta.EMA(dataframe, timeperiod=50)
         dataframe['ema100'] = ta.EMA(dataframe, timeperiod=100)
-
         heikinashi = qtpylib.heikinashi(dataframe)
         dataframe['ha_open'] = heikinashi['open']
         dataframe['ha_close'] = heikinashi['close']
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the buy signal for the given dataframe
+        Based on TA indicators, populates the entry signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
-        """
-        dataframe.loc[
-            (
-                qtpylib.crossed_above(dataframe['ema20'], dataframe['ema50']) &
-                (dataframe['ha_close'] > dataframe['ema20']) &
-                (dataframe['ha_open'] < dataframe['ha_close'])  # green bar
-            ),
-            'buy'] = 1
-
+        :return: DataFrame with entry column
+        """  # green bar
+        dataframe.loc[qtpylib.crossed_above(dataframe['ema20'], dataframe['ema50']) & (dataframe['ha_close'] > dataframe['ema20']) & (dataframe['ha_open'] < dataframe['ha_close']), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the sell signal for the given dataframe
+        Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
-        """
-        dataframe.loc[
-            (
-                qtpylib.crossed_above(dataframe['ema50'], dataframe['ema100']) &
-                (dataframe['ha_close'] < dataframe['ema20']) &
-                (dataframe['ha_open'] > dataframe['ha_close'])  # red bar
-            ),
-            'sell'] = 1
+        :return: DataFrame with entry column
+        """  # red bar
+        dataframe.loc[qtpylib.crossed_above(dataframe['ema50'], dataframe['ema100']) & (dataframe['ha_close'] < dataframe['ema20']) & (dataframe['ha_open'] > dataframe['ha_close']), 'exit_long'] = 1
         return dataframe

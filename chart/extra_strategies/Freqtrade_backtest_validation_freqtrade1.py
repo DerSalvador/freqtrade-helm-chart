@@ -7,23 +7,16 @@
 from freqtrade.strategy import IStrategy
 from pandas import DataFrame
 # --------------------------------
-
 # Add your lib to import here
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 
-
 class Freqtrade_backtest_validation_freqtrade1(IStrategy):
+    INTERFACE_VERSION = 3
     INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
-    minimal_roi = {
-        "40": 2.0,
-        "30": 2.01,
-        "20": 2.02,
-        "0": 2.04
-    }
-
-    stoploss = -0.90
+    minimal_roi = {'40': 2.0, '30': 2.01, '20': 2.02, '0': 2.04}
+    stoploss = -0.9
     timeframe = '1h'
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
@@ -33,18 +26,9 @@ class Freqtrade_backtest_validation_freqtrade1(IStrategy):
         return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                (dataframe['fastMA'] > dataframe['slowMA'])
-            ),
-            'enter_long'] = 1
-
+        dataframe.loc[dataframe['fastMA'] > dataframe['slowMA'], 'enter_long'] = 1
         return dataframe
 
     def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                (dataframe['fastMA'] < dataframe['slowMA'])
-            ),
-            'exit_long'] = 1
+        dataframe.loc[dataframe['fastMA'] < dataframe['slowMA'], 'exit_long'] = 1
         return dataframe

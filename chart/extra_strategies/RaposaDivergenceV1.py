@@ -1,18 +1,13 @@
 # pragma pylint: disable=missing-docstring, invalid-name, pointless-string-statement
 # flake8: noqa: F401
-
-
 import numpy as np  # noqa
 import pandas as pd  # noqa
-
 pd.options.mode.chained_assignment = None
 from collections import deque
-
 import talib.abstract as ta
 from freqtrade.strategy import IntParameter, IStrategy
 from pandas import DataFrame
 from scipy.signal import argrelextrema
-
 
 class RaposaDivergenceV1(IStrategy):
     """
@@ -21,77 +16,45 @@ class RaposaDivergenceV1(IStrategy):
 
     NOTES:
     - "argrelextrema" might have look-ahead bias so results in backtest will not be reliable
-    - sell signal seems like garbage
+    - exit signal seems like garbage
 
     Based on:
     - https://raposa.trade/higher-highs-calculate-python/
     - https://medium.com/raposa-technologies/test-and-trade-rsi-divergence-in-python-34a11c1c4142
 
     """
-
     # Strategy interface version - allow new iterations of the strategy interface.
     # Check the documentation or the Sample strategy to get the latest version.
-    INTERFACE_VERSION = 2
-
+    INTERFACE_VERSION = 3
     # Buy hyperspace params:
-    buy_params = {
-        "k_value": 2,
-        "order": 5,
-        "rsi_buy": 50,
-    }
-
+    entry_params = {'k_value': 2, 'order': 5, 'rsi_entry': 50}
     # Sell hyperspace params:
-    sell_params = {
-        "rsi_sell": 50,
-    }
-
+    exit_params = {'rsi_exit': 50}
     # ROI table:
-    minimal_roi = {
-        "0": 0.15,
-        "60": 0.02,
-        "120": 0.01,
-        "180": 0.001
-    }
-
+    minimal_roi = {'0': 0.15, '60': 0.02, '120': 0.01, '180': 0.001}
     # Stoploss:
     stoploss = -0.3
-
     # Trailing stop:
     trailing_stop = True
     trailing_stop_positive = 0.01
     trailing_stop_positive_offset = 0.02
     trailing_only_offset_is_reached = True
-
     # Optimal timeframe for the strategy.
     timeframe = '5m'
-
     # These values can be overridden in the "ask_strategy" section in the config.
-    use_sell_signal = False
+    use_exit_signal = False
     exit_profit_only = False
-    ignore_roi_if_buy_signal = False
-
+    ignore_roi_if_entry_signal = False
     # Number of candles the strategy requires before producing valid signals
     startup_candle_count = 40
-
     # Optional order type mapping.
-    order_types = {
-        'buy': 'limit',
-        'sell': 'market',
-        'stoploss': 'market',
-        'stoploss_on_exchange': False
-    }
-
+    order_types = {'entry': 'limit', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False}
     # Optional order time in force.
-    order_time_in_force = {
-        'buy': 'gtc',
-        'sell': 'gtc'
-    }
-
-    rsi_buy = IntParameter(20, 80, default=buy_params['rsi_buy'], space='buy', optimize=True)
-    order = IntParameter(1, 32, default=buy_params['order'], space='buy', optimize=True)
-    k_value = IntParameter(1, 32, default=buy_params['k_value'], space='buy', optimize=True)
-
-    rsi_sell = IntParameter(20, 80, default=sell_params['rsi_sell'], space='sell', optimize=True)
+    order_time_in_force = {'entry': 'gtc', 'exit': 'gtc'}
+    rsi_entry = IntParameter(20, 80, default=entry_params['rsi_entry'], space='entry', optimize=True)
+    order = IntParameter(1, 32, default=entry_params['order'], space='entry', optimize=True)
+    k_value = IntParameter(1, 32, default=entry_params['k_value'], space='entry', optimize=True)
+    rsi_exit = IntParameter(20, 80, default=exit_params['rsi_exit'], space='exit', optimize=True)
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
@@ -104,52 +67,31 @@ class RaposaDivergenceV1(IStrategy):
         :param metadata: Additional information, like the currently traded pair
         :return: a Dataframe with all mandatory indicators for the strategies
         """
-
         # RSI
         dataframe['rsi'] = ta.RSI(dataframe)
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the buy signal for the given dataframe
+        Based on TA indicators, populates the entry signal for the given dataframe
         :param dataframe: DataFrame populated with indicators
         :param metadata: Additional information, like the currently traded pair
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-
         dataframe = getPeaks(dataframe, key='close', order=int(self.order.value), K=int(self.k_value.value))
         dataframe = getPeaks(dataframe, key='rsi', order=int(self.order.value), K=int(self.k_value.value))
-
-        dataframe.loc[
-            (
-                (dataframe['close_lows'] == -1) &
-                (dataframe['rsi_lows'] == -1) &
-                (dataframe['rsi'] < int(self.rsi_buy.value)) &
-                (dataframe['volume'] > 0)
-            ),
-            'buy'] = 1
-
+        dataframe.loc[(dataframe['close_lows'] == -1) & (dataframe['rsi_lows'] == -1) & (dataframe['rsi'] < int(self.rsi_entry.value)) & (dataframe['volume'] > 0), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the sell signal for the given dataframe
+        Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame populated with indicators
         :param metadata: Additional information, like the currently traded pair
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        dataframe.loc[
-            (
-                (dataframe['close_highs'] == 1) &
-                (dataframe['rsi_highs'] == -1) &
-                (dataframe['rsi'] > int(self.rsi_sell.value)) &
-                (dataframe['volume'] > 0)
-            ),
-            'sell'] = 1
-
+        dataframe.loc[(dataframe['close_highs'] == 1) & (dataframe['rsi_highs'] == -1) & (dataframe['rsi'] > int(self.rsi_exit.value)) & (dataframe['volume'] > 0), 'exit_long'] = 1
         return dataframe
-
 
 def getHigherLows(data: np.array, order=5, K=2):
     """
@@ -168,13 +110,11 @@ def getHigherLows(data: np.array, order=5, K=2):
         if i == 0:
             ex_deque.append(idx)
             continue
-        if lows[i] < lows[i-1]:
+        if lows[i] < lows[i - 1]:
             ex_deque.clear()
-
         ex_deque.append(idx)
         if len(ex_deque) == K:
             extrema.append(ex_deque.copy())
-
     return extrema
 
 def getLowerHighs(data: np.array, order=5, K=2):
@@ -194,13 +134,11 @@ def getLowerHighs(data: np.array, order=5, K=2):
         if i == 0:
             ex_deque.append(idx)
             continue
-        if highs[i] > highs[i-1]:
+        if highs[i] > highs[i - 1]:
             ex_deque.clear()
-
         ex_deque.append(idx)
         if len(ex_deque) == K:
             extrema.append(ex_deque.copy())
-
     return extrema
 
 def getHigherHighs(data: np.array, order=5, K=2):
@@ -220,13 +158,11 @@ def getHigherHighs(data: np.array, order=5, K=2):
         if i == 0:
             ex_deque.append(idx)
             continue
-        if highs[i] < highs[i-1]:
+        if highs[i] < highs[i - 1]:
             ex_deque.clear()
-
         ex_deque.append(idx)
         if len(ex_deque) == K:
             extrema.append(ex_deque.copy())
-
     return extrema
 
 def getLowerLows(data: np.array, order=5, K=2):
@@ -246,34 +182,32 @@ def getLowerLows(data: np.array, order=5, K=2):
         if i == 0:
             ex_deque.append(idx)
             continue
-        if lows[i] > lows[i-1]:
+        if lows[i] > lows[i - 1]:
             ex_deque.clear()
-
         ex_deque.append(idx)
         if len(ex_deque) == K:
             extrema.append(ex_deque.copy())
-
     return extrema
 
 def getHHIndex(data: np.array, order=5, K=2):
     extrema = getHigherHighs(data, order, K)
     idx = np.array([i[-1] + order for i in extrema])
-    return idx[np.where(idx<len(data))]
+    return idx[np.where(idx < len(data))]
 
 def getLHIndex(data: np.array, order=5, K=2):
     extrema = getLowerHighs(data, order, K)
     idx = np.array([i[-1] + order for i in extrema])
-    return idx[np.where(idx<len(data))]
+    return idx[np.where(idx < len(data))]
 
 def getLLIndex(data: np.array, order=5, K=2):
     extrema = getLowerLows(data, order, K)
     idx = np.array([i[-1] + order for i in extrema])
-    return idx[np.where(idx<len(data))]
+    return idx[np.where(idx < len(data))]
 
 def getHLIndex(data: np.array, order=5, K=2):
     extrema = getHigherLows(data, order, K)
     idx = np.array([i[-1] + order for i in extrema])
-    return idx[np.where(idx<len(data))]
+    return idx[np.where(idx < len(data))]
 
 def getPeaks(data, key='close', order=5, K=2):
     vals = data[key].values

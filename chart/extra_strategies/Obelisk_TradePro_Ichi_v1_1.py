@@ -3,18 +3,13 @@ from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-
-
 # --------------------------------
 import pandas as pd  # noqa
 pd.options.mode.chained_assignment = None  # default='warn'
-
 import technical.indicators as ftt
 from technical.util import resample_to_interval, resampled_merge
-
 from functools import reduce
 from datetime import datetime, timedelta
-
 # Obelisk_TradeProIM v1 - 2021-03-25
 #
 # by Obelisk 
@@ -23,53 +18,23 @@ from datetime import datetime, timedelta
 # Based on "Crazy Results Best Ichimoku Cloud Trading Strategy Proven 100 Trades" by Trade Pro
 # https://www.youtube.com/watch?v=8gWIykJgMNY
 #
-# Does not attempt to emulate the risk/reward take-profit/stop-loss, so the sell criteria are mine.
+# Does not attempt to emulate the risk/reward take-profit/stop-loss, so the exit criteria are mine.
 
 class Obelisk_TradePro_Ichi_v1_1(IStrategy):
-
+    INTERFACE_VERSION = 3
     # Optimal timeframe for the strategy
     timeframe = '1h'
-
     startup_candle_count = 120
     process_only_new_candles = True
-
     # no ROI
-    minimal_roi = {
-        "0": 10,
-    }
-
+    minimal_roi = {'0': 10}
     # Stoploss:
     stoploss = -0.015
-
-    plot_config = {
-        # Main plot indicators (Moving averages, ...)
-        'main_plot': {
-            'senkou_a': {
-                'color': 'green',
-                'fill_to': 'senkou_b',
-                'fill_label': 'Ichimoku Cloud',
-                'fill_color': 'rgba(0,0,0,0.2)',
-            },
-            # plot senkou_b, too. Not only the area to it.
-            'senkou_b': {
-                'color': 'red',
-            },
-            'tenkan_sen': { 'color': 'orange' },
-            'kijun_sen': { 'color': 'blue' },
-
-            'chikou_span': { 'color': 'lightgreen' },
-        },
-        'subplots': {
-            "Signals": {
-                'go_long': {'color': 'blue'},
-                'future_green': {'color': 'green'},
-                'chikou_high': {'color': 'lightgreen'},
-            },
-        }
-    }
+    # Main plot indicators (Moving averages, ...)
+    # plot senkou_b, too. Not only the area to it.
+    plot_config = {'main_plot': {'senkou_a': {'color': 'green', 'fill_to': 'senkou_b', 'fill_label': 'Ichimoku Cloud', 'fill_color': 'rgba(0,0,0,0.2)'}, 'senkou_b': {'color': 'red'}, 'tenkan_sen': {'color': 'orange'}, 'kijun_sen': {'color': 'blue'}, 'chikou_span': {'color': 'lightgreen'}}, 'subplots': {'Signals': {'go_long': {'color': 'blue'}, 'future_green': {'color': 'green'}, 'chikou_high': {'color': 'lightgreen'}}}}
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-
         # # Standard Settings
         # displacement = 26
         # ichimoku = ftt.ichimoku(dataframe, 
@@ -78,22 +43,13 @@ class Obelisk_TradePro_Ichi_v1_1(IStrategy):
         #     laggin_span=52, 
         #     displacement=displacement
         #     )
-
         # Crypto Settings
         displacement = 30
-        ichimoku = ftt.ichimoku(dataframe, 
-            conversion_line_period=20, 
-            base_line_periods=60,
-            laggin_span=120, 
-            displacement=displacement
-            )
-
+        ichimoku = ftt.ichimoku(dataframe, conversion_line_period=20, base_line_periods=60, laggin_span=120, displacement=displacement)
         dataframe['chikou_span'] = ichimoku['chikou_span']
-
         # cross indicators
         dataframe['tenkan_sen'] = ichimoku['tenkan_sen']
         dataframe['kijun_sen'] = ichimoku['kijun_sen']
-
         # cloud, green a > b, red a < b
         dataframe['senkou_a'] = ichimoku['senkou_span_a']
         dataframe['senkou_b'] = ichimoku['senkou_span_b']
@@ -101,56 +57,24 @@ class Obelisk_TradePro_Ichi_v1_1(IStrategy):
         dataframe['leading_senkou_span_b'] = ichimoku['leading_senkou_span_b']
         dataframe['cloud_green'] = ichimoku['cloud_green'] * 1
         dataframe['cloud_red'] = ichimoku['cloud_red'] * -1
-
         # DANGER ZONE START
-
         # NOTE: Not actually the future, present data that is normally shifted forward for display as the cloud
         dataframe['future_green'] = (dataframe['leading_senkou_span_a'] > dataframe['leading_senkou_span_b']).astype('int') * 2
-
         # The chikou_span is shifted into the past, so we need to be careful not to read the
         # current value.  But if we shift it forward again by displacement it should be safe to use.
         # We're effectively "looking back" at where it normally appears on the chart.
-        dataframe['chikou_high'] = (
-                (dataframe['chikou_span'] > dataframe['senkou_a']) &
-                (dataframe['chikou_span'] > dataframe['senkou_b'])
-            ).shift(displacement).fillna(0).astype('int')
-
+        dataframe['chikou_high'] = ((dataframe['chikou_span'] > dataframe['senkou_a']) & (dataframe['chikou_span'] > dataframe['senkou_b'])).shift(displacement).fillna(0).astype('int')
         # DANGER ZONE END
-
-        dataframe['go_long'] = (
-                (dataframe['tenkan_sen'] > dataframe['kijun_sen']) &
-                (dataframe['close'] > dataframe['senkou_a']) &
-                (dataframe['close'] > dataframe['senkou_b']) &
-                (dataframe['future_green'] > 0) &
-                (dataframe['chikou_high'] > 0)
-                ).astype('int') * 3
-
-
+        dataframe['go_long'] = ((dataframe['tenkan_sen'] > dataframe['kijun_sen']) & (dataframe['close'] > dataframe['senkou_a']) & (dataframe['close'] > dataframe['senkou_b']) & (dataframe['future_green'] > 0) & (dataframe['chikou_high'] > 0)).astype('int') * 3
         return dataframe
 
-
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-
-        dataframe.loc[
-
-            qtpylib.crossed_above(dataframe['go_long'], 0),
-
-        'buy'] = 1
-
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[qtpylib.crossed_above(dataframe['go_long'], 0), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-
-        dataframe.loc[
-
-            qtpylib.crossed_below(dataframe['tenkan_sen'], dataframe['kijun_sen']) 
-            | 
-            qtpylib.crossed_below(dataframe['close'], dataframe['kijun_sen']),
-
-        'sell'] = 1
-
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[qtpylib.crossed_below(dataframe['tenkan_sen'], dataframe['kijun_sen']) | qtpylib.crossed_below(dataframe['close'], dataframe['kijun_sen']), 'exit_long'] = 1
         return dataframe
-
 #
 # Fun with outliers.
 #
@@ -182,7 +106,7 @@ class Obelisk_TradePro_Ichi_v1_1(IStrategy):
 # |   Sell Reason |   Sells |   Wins |   Draws |   Losses |   Avg Profit % |   Cum Profit % |   Tot Profit USD |   Tot Profit % |
 # |---------------+---------+--------+---------+----------+----------------+----------------+------------------+----------------|
 # |     stop_loss |     145 |      0 |       0 |      145 |          -1.54 |        -223.21 |         -1116.28 |         -44.64 |
-# |   sell_signal |      63 |     50 |       0 |       13 |          14.01 |         882.7  |          4414.39 |         176.54 |
+# |   exit_signal |      63 |     50 |       0 |       13 |          14.01 |         882.7  |          4414.39 |         176.54 |
 # ======================================================= LEFT OPEN TRADES REPORT ========================================================
 # |   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USD |   Tot Profit % |   Avg Duration |   Wins |   Draws |   Losses |
 # |--------+--------+----------------+----------------+------------------+----------------+----------------+--------+---------+----------|

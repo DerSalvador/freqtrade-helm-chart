@@ -18,65 +18,28 @@ class FrostAuraM21hStrategy(IStrategy):
     """
     # Strategy interface version - allow new iterations of the strategy interface.
     # Check the documentation or the Sample strategy to get the latest version.
-    INTERFACE_VERSION = 2
-
+    INTERFACE_VERSION = 3
     # Minimal ROI designed for the strategy.
-    minimal_roi = {
-        "0": 0.32365,
-        "359": 0.12673,
-        "934": 0.08834,
-        "2090": 0
-    }
-
+    minimal_roi = {'0': 0.32365, '359': 0.12673, '934': 0.08834, '2090': 0}
     # Optimal stoploss designed for the strategy.
     stoploss = -0.44897
-
     # Trailing stoploss
     trailing_stop = False
-
     # Optimal ticker interval for the strategy.
     timeframe = '15m'
-
     # Run "populate_indicators()" only for new candle.
     process_only_new_candles = False
-
     # These values can be overridden in the "ask_strategy" section in the config.
-    use_sell_signal = True
+    use_exit_signal = True
     exit_profit_only = False
-    ignore_roi_if_buy_signal = False
-
+    ignore_roi_if_entry_signal = False
     # Number of candles the strategy requires before producing valid signals
     startup_candle_count: int = 30
-
     # Optional order type mapping.
-    order_types = {
-        'buy': 'limit',
-        'sell': 'limit',
-        'stoploss': 'market',
-        'stoploss_on_exchange': False
-    }
-
+    order_types = {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
     # Optional order time in force.
-    order_time_in_force = {
-        'buy': 'gtc',
-        'sell': 'gtc'
-    }
-
-    plot_config = {
-        'main_plot': {
-            'tema': {},
-            'sar': {'color': 'white'},
-        },
-        'subplots': {
-            "MACD": {
-                'macd': {'color': 'blue'},
-                'macdsignal': {'color': 'orange'},
-            },
-            "RSI": {
-                'rsi': {'color': 'red'},
-            }
-        }
-    }
+    order_time_in_force = {'entry': 'gtc', 'exit': 'gtc'}
+    plot_config = {'main_plot': {'tema': {}, 'sar': {'color': 'white'}}, 'subplots': {'MACD': {'macd': {'color': 'blue'}, 'macdsignal': {'color': 'orange'}}, 'RSI': {'rsi': {'color': 'red'}}}}
 
     def informative_pairs(self):
         return []
@@ -84,35 +47,17 @@ class FrostAuraM21hStrategy(IStrategy):
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # RSI
         dataframe['rsi'] = ta.RSI(dataframe)
-
         # Stochastic Slow
         stoch = ta.STOCH(dataframe)
         dataframe['slowd'] = stoch['slowd']
         dataframe['slowk'] = stoch['slowk']
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        minimum_coin_price = 0.0000015
-        
-        dataframe.loc[
-            (
-                (dataframe['rsi'] > 48) &
-                (dataframe["slowd"] > 79) &
-                (dataframe["slowk"] > 77) &
-                (dataframe["close"] > minimum_coin_price)
-            ),
-            'buy'] = 1
-
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        minimum_coin_price = 1.5e-06
+        dataframe.loc[(dataframe['rsi'] > 48) & (dataframe['slowd'] > 79) & (dataframe['slowk'] > 77) & (dataframe['close'] > minimum_coin_price), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                (dataframe['rsi'] < 48) &
-                (dataframe["slowd"] < 79) &
-                (dataframe["slowk"] < 77)
-            ),
-            'sell'] = 1
-        
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[(dataframe['rsi'] < 48) & (dataframe['slowd'] < 79) & (dataframe['slowk'] < 77), 'exit_long'] = 1
         return dataframe

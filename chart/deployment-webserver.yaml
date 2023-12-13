@@ -12,7 +12,7 @@ spec:
       labels:
         app: freqtrade-webserver-{{ .Release.Namespace }}
     spec:
-      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
+      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       containers:
       - name: freqtrade-webserver-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
