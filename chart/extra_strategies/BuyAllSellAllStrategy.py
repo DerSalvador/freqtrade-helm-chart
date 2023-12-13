@@ -4,31 +4,28 @@ from freqtrade.persistence import Trade
 from datetime import datetime
 import numpy as np
 
-
 class BuyAllSellAllStrategy(IStrategy):
+    INTERFACE_VERSION = 3
     stoploss = -0.25
     timeframe = '5m'
-
-    use_sell_signal = True
+    use_exit_signal = True
     exit_profit_only = False
-    ignore_roi_if_buy_signal = False
+    ignore_roi_if_entry_signal = False
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe["buy"] = np.random.randint(0, 2, size=len(dataframe))
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe['enter_long'] = np.random.randint(0, 2, size=len(dataframe))
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe["sell"] = 0
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe['exit_long'] = 0
         return dataframe
 
-    def custom_sell(
-        self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float, current_profit: float, **kwargs
-    ) -> float:
+    def custom_exit(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float, current_profit: float, **kwargs) -> float:
         dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
         last_candle = dataframe.iloc[-1].squeeze()
-        if (last_candle is not None):
+        if last_candle is not None:
             return True
         return None

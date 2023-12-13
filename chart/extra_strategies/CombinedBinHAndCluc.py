@@ -6,29 +6,25 @@ import talib.abstract as ta
 from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 
-
 def bollinger_bands(stock_price, window_size, num_of_std):
     rolling_mean = stock_price.rolling(window=window_size).mean()
     rolling_std = stock_price.rolling(window=window_size).std()
-    lower_band = rolling_mean - (rolling_std * num_of_std)
-    return np.nan_to_num(rolling_mean), np.nan_to_num(lower_band)
-
+    lower_band = rolling_mean - rolling_std * num_of_std
+    return (np.nan_to_num(rolling_mean), np.nan_to_num(lower_band))
 
 class CombinedBinHAndCluc(IStrategy):
+    INTERFACE_VERSION = 3
     # Based on a backtesting:
     # - the best perfomance is reached with "max_open_trades" = 2 (in average for any market),
     #   so it is better to increase "stake_amount" value rather then "max_open_trades" to get more profit
     # - if the market is constantly green(like in JAN 2018) the best performance is reached with
     #   "max_open_trades" = 2 and minimal_roi = 0.01
-    minimal_roi = {
-        "0": 0.05
-    }
+    minimal_roi = {'0': 0.05}
     stoploss = -0.05
     timeframe = '5m'
-
-    use_sell_signal = True
+    use_exit_signal = True
     exit_profit_only = True
-    ignore_roi_if_buy_signal = False
+    ignore_roi_if_entry_signal = False
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # strategy BinHV45
@@ -43,33 +39,15 @@ class CombinedBinHAndCluc(IStrategy):
         dataframe['bb_middleband'] = bollinger['mid']
         dataframe['ema_slow'] = ta.EMA(dataframe, timeperiod=50)
         dataframe['volume_mean_slow'] = dataframe['volume'].rolling(window=30).mean()
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (  # strategy BinHV45
-                    dataframe['lower'].shift().gt(0) &
-                    dataframe['bbdelta'].gt(dataframe['close'] * 0.008) &
-                    dataframe['closedelta'].gt(dataframe['close'] * 0.0175) &
-                    dataframe['tail'].lt(dataframe['bbdelta'] * 0.25) &
-                    dataframe['close'].lt(dataframe['lower'].shift()) &
-                    dataframe['close'].le(dataframe['close'].shift())
-            ) |
-            (  # strategy ClucMay72018
-                    (dataframe['close'] < dataframe['ema_slow']) &
-                    (dataframe['close'] < 0.985 * dataframe['bb_lowerband']) &
-                    (dataframe['volume'] < (dataframe['volume_mean_slow'].shift(1) * 20))
-            ),
-            'buy'
-        ] = 1
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:  # strategy BinHV45
+        # strategy ClucMay72018
+        dataframe.loc[dataframe['lower'].shift().gt(0) & dataframe['bbdelta'].gt(dataframe['close'] * 0.008) & dataframe['closedelta'].gt(dataframe['close'] * 0.0175) & dataframe['tail'].lt(dataframe['bbdelta'] * 0.25) & dataframe['close'].lt(dataframe['lower'].shift()) & dataframe['close'].le(dataframe['close'].shift()) | (dataframe['close'] < dataframe['ema_slow']) & (dataframe['close'] < 0.985 * dataframe['bb_lowerband']) & (dataframe['volume'] < dataframe['volume_mean_slow'].shift(1) * 20), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         """
-        dataframe.loc[
-            (dataframe['close'] > dataframe['bb_middleband']),
-            'sell'
-        ] = 1
+        dataframe.loc[dataframe['close'] > dataframe['bb_middleband'], 'exit_long'] = 1
         return dataframe

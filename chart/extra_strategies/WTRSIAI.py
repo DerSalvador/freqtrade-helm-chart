@@ -92,7 +92,7 @@ class WTRSIAI(IStrategy):
 
 
     ### Strategy parameters ###
-    exit_profit_only = True ### No selling at a loss
+    exit_profit_only = True ### No exiting at a loss
     use_custom_stoploss = True
     trailing_stop = True
     position_adjustment_enable = True
@@ -115,7 +115,7 @@ class WTRSIAI(IStrategy):
 
     ### Hyperoptable parameters ###
     # entry optizimation
-    max_epa = CategoricalParameter([-1, 0, 1, 3, 5, 10], default=3, space="buy", optimize=True)
+    max_epa = CategoricalParameter([-1, 0, 1, 3, 5, 10], default=3, space="entry", optimize=True)
 
     # protections
     cooldown_lookback = IntParameter(2, 48, default=5, space="protection", optimize=True)
@@ -123,13 +123,13 @@ class WTRSIAI(IStrategy):
     use_stop_protection = BooleanParameter(default=True, space="protection", optimize=True)
 
     # indicators
-    mfi_length = IntParameter(3,60, default=53, space='buy', optimize=True)
+    mfi_length = IntParameter(3,60, default=53, space='entry', optimize=True)
 
     # trading
-    buy_rsi = IntParameter(low=1, high=50, default=30, space='buy', optimize=True, load=True)
-    mfi_buy_slope = IntParameter(-30, 30 , default=0, space='buy', optimize=True)
-    sell_rsi = IntParameter(low=50, high=100, default=55, space='sell', optimize=True, load=True)
-    mfi_sell_slope = IntParameter(-30, 30 , default=0, space='sell', optimize=True)
+    entry_rsi = IntParameter(low=1, high=50, default=30, space='entry', optimize=True, load=True)
+    mfi_entry_slope = IntParameter(-30, 30 , default=0, space='entry', optimize=True)
+    exit_rsi = IntParameter(low=50, high=100, default=55, space='exit', optimize=True, load=True)
+    mfi_exit_slope = IntParameter(-30, 30 , default=0, space='exit', optimize=True)
 
 
     ### entry opt. ###
@@ -179,7 +179,7 @@ class WTRSIAI(IStrategy):
         """
         Custom trade adjustment logic, returning the stake amount that a trade should be
         increased or decreased.
-        This means extra buy or sell orders with additional fees.
+        This means extra entry or exit orders with additional fees.
         Only called when `position_adjustment_enable` is set to True.
 
         For full documentation please go to https://www.freqtrade.io/en/latest/strategy-advanced/
@@ -188,7 +188,7 @@ class WTRSIAI(IStrategy):
 
         :param trade: trade object.
         :param current_time: datetime object, containing the current datetime
-        :param current_rate: Current buy rate.
+        :param current_rate: Current entry rate.
         :param current_profit: Current profit (as ratio), calculated based on current_rate.
         :param min_stake: Minimal stake size allowed by exchange (for both entries and exits)
         :param max_stake: Maximum stake allowed (either through balance, or by exchange limits).
@@ -221,11 +221,11 @@ class WTRSIAI(IStrategy):
         filled_entries = trade.select_filled_orders(trade.entry_side)
         count_of_entries = trade.nr_of_successful_entries
 
-        # Allow up to 3 additional increasingly larger buys (4 in total)
-        # Initial buy is 1x
-        # If that falls to -5% profit, we buy more, 
-        # If that falls down to -5% again, we buy 1.5x more
-        # If that falls once again down to -5%, we buy  more
+        # Allow up to 3 additional increasingly larger entrys (4 in total)
+        # Initial entry is 1x
+        # If that falls to -5% profit, we entry more, 
+        # If that falls down to -5% again, we entry 1.5x more
+        # If that falls once again down to -5%, we entry  more
         # Total stake for this trade would be 1 + 1.5 + 2 + 2.5 = 7x of the initial allowed stake.
         # That is why max_dca_multiplier is 7
         # Hope you have a deep wallet!
@@ -372,11 +372,11 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['tema'] > df['tema'].shift(1)) &  # Guard: tema is raising
                 (df['volume'] > 0) &  # Make sure Volume is not 0
-                (df['mfi_slope'] >= self.mfi_buy_slope.value) & # Money flow index
+                (df['mfi_slope'] >= self.mfi_entry_slope.value) & # Money flow index
                 (df['do_predict'] == 1) &  # Make sure Freqai is confident in the prediction
                 # Only enter trade if Freqai thinks the trend is in this direction
                 (df['&s-up_or_down'] == 'up')
@@ -386,7 +386,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['tema'] > df['tema'].shift(1)) &  # Guard: teinma is raisg
                 (df['volume'] > 0) &  # Make sure Volume is not 0
@@ -400,7 +400,7 @@ class WTRSIAI(IStrategy):
             (
                 (df['tema'] > df['tema'].shift(1)) &  # Guard: tema is raising
                 (df['volume'] > 0) &  # Make sure Volume is not 0
-                (df['mfi_slope'] >= self.mfi_buy_slope.value) & # Money flow index
+                (df['mfi_slope'] >= self.mfi_entry_slope.value) & # Money flow index
                 (df['do_predict'] == 1) &  # Make sure Freqai is confident in the prediction
                 # Only enter trade if Freqai thinks the trend is in this direction
                 (df['&s-up_or_down'] == 'up')
@@ -410,12 +410,12 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['wave_t1'] > df['wave_t1'].shift(1)) &  # Guard: Wave 1 is raising
                 (df['wave_t1'] > df['wave_t2']) &
                 (df['volume'] > 0) &  # Make sure Volume is not 0
-                (df['mfi_slope'] >= self.mfi_buy_slope.value) & # Money flow index 
+                (df['mfi_slope'] >= self.mfi_entry_slope.value) & # Money flow index 
                 # (df['do_predict'] == 1) &  # Make sure Freqai is confident in the prediction
                 # Only enter trade if Freqai thinks the trend is in this direction
                 (df['&s-up_or_down'] == 'up')
@@ -425,7 +425,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['wave_t1'] > df['wave_t1'].shift(1)) &  # Guard: Wave 1 is raising
                 (df['wave_t1'] > df['wave_t2']) &
@@ -450,7 +450,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (qtpylib.crossed_above(df['rsi'], df['rsi_ma'])) &
                 (df['volume'] > 0) &  # Make sure Volume is not 0
@@ -465,11 +465,11 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['tema'] > df['tema'].shift(1)) &  # Guard: tema is raising
                 (df['volume'] > 0) &  # Make sure Volume is not 0
-                (df['mfi_slope'] >= self.mfi_buy_slope.value) & # Money flow index
+                (df['mfi_slope'] >= self.mfi_entry_slope.value) & # Money flow index
                 (df['do_predict'] == -2) &  # Make sure Freqai is confident in the prediction
                 # Only enter trade if Freqai thinks the trend is in this direction
                 (df['&s-up_or_down'] == 'up')
@@ -479,7 +479,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['tema'] > df['tema'].shift(1)) &  # Guard: tema is raising
                 (df['volume'] > 0) &  # Make sure Volume is not 0
@@ -493,7 +493,7 @@ class WTRSIAI(IStrategy):
             (
                 (df['tema'] > df['tema'].shift(1)) &  # Guard: tema is raising
                 (df['volume'] > 0) &  # Make sure Volume is not 0
-                (df['mfi_slope'] >= self.mfi_buy_slope.value) & # Money flow index
+                (df['mfi_slope'] >= self.mfi_entry_slope.value) & # Money flow index
                 (df['do_predict'] == -2) &  # Make sure Freqai is confident in the prediction
                 # Only enter trade if Freqai thinks the trend is in this direction
                 (df['&s-up_or_down'] == 'up')
@@ -513,12 +513,12 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['wave_t1'] > df['wave_t1'].shift(1)) &  # Guard: Wave 1 is raising
                 (df['wave_t1'] > df['wave_t2']) &
                 (df['volume'] > 0) &  # Make sure Volume is not 0
-                (df['mfi_slope'] >= self.mfi_buy_slope.value) & # Money flow index 
+                (df['mfi_slope'] >= self.mfi_entry_slope.value) & # Money flow index 
                 (df['do_predict'] == -2) &  # Make sure Freqai is confident in the prediction
                 # Only enter trade if Freqai thinks the trend is in this direction
                 (df['&s-up_or_down'] == 'up')
@@ -528,7 +528,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 65) &
                 (df['wave_t1'] > df['wave_t1'].shift(1)) &  # Guard: Wave 1 is raising
                 (df['wave_t1'] > df['wave_t2']) &
@@ -554,7 +554,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 55) &
                 (qtpylib.crossed_above(df['rsi'], df['rsi_ma'])) &
                 (df['wave_t1'] > df['wave_t1'].shift(1)) &  # Guard: Wave 1 is raising
@@ -566,7 +566,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] >  self.buy_rsi.value) &
+                (df['rsi'] >  self.entry_rsi.value) &
                 (df['rsi'] < 50) &
                 (qtpylib.crossed_above(df['rsi'], df['rsi_ma'])) &
                 (df['volume'] > 0) &  # Make sure Volume is not 0
@@ -584,7 +584,7 @@ class WTRSIAI(IStrategy):
 
         df.loc[
             (
-                (df['rsi'] > self.sell_rsi.value) &
+                (df['rsi'] > self.exit_rsi.value) &
                 (df['tema'] < df['tema'].shift(1)) &  # Guard: tema is falling
                 (df['volume'] > 0) &  # Make sure Volume is not 0
                 (df['do_predict'] == 1) &  # Make sure Freqai is confident in the prediction
@@ -607,7 +607,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] > self.sell_rsi.value) &
+                (df['rsi'] > self.exit_rsi.value) &
                 (df['wave_t1'] < df['wave_t1'].shift(1)) &  # Guard: Wave 1 is raising
                 (df['wave_t1'] < df['wave_t2']) &
                 (df['volume'] > 0) &  # Make sure Volume is not 0
@@ -620,7 +620,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] > self.sell_rsi.value) &
+                (df['rsi'] > self.exit_rsi.value) &
                 (df['wave_t1'] < df['wave_t1'].shift(1)) &  # Guard: Wave 1 is raising
                 (df['wave_t1'] < df['wave_t2']) &
                 (df['volume'] > 0)   # Make sure Volume is not 0
@@ -641,7 +641,7 @@ class WTRSIAI(IStrategy):
         df.loc[
             (
                 # Signal: RSI crosses above 30
-                (df['rsi'] > self.sell_rsi.value) &
+                (df['rsi'] > self.exit_rsi.value) &
                 (qtpylib.crossed_above(df['rsi_ma'], df['rsi'])) &
                 (df['volume'] > 0) &  # Make sure Volume is not 0
                 # (df['do_predict'] == 1) &  # Make sure Freqai is confident in the prediction

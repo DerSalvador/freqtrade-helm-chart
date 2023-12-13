@@ -70,9 +70,9 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
             ]
 
     # Buy hyperspace params:
-    buy_params = {
+    entry_params = {
         "antipump_threshold": 0.133,
-        "buy_btc_safe_1d": -0.311,
+        "entry_btc_safe_1d": -0.311,
         "clucha_bbdelta_close": 0.04796,
         "clucha_bbdelta_tail": 0.93112,
         "clucha_close_bblower": 0.01645,
@@ -88,8 +88,8 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
         "ewo_1_enabled": False,
         "ewo_1_rsi_14": 45,
         "ewo_1_rsi_4": 7,
-        "ewo_candles_buy": 13,
-        "ewo_candles_sell": 19,
+        "ewo_candles_entry": 13,
+        "ewo_candles_exit": 19,
         "ewo_high": 5.249,
         "ewo_high_offset": 1.04116,
         "ewo_low": -11.424,
@@ -142,9 +142,9 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
     timeframe = '1m'
 
     # Make sure these match or are not overridden in config
-    use_sell_signal = False
+    use_exit_signal = False
     exit_profit_only = False
-    ignore_roi_if_buy_signal = False
+    ignore_roi_if_entry_signal = False
 
     # Custom stoploss
     use_custom_stoploss = True
@@ -153,11 +153,11 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
     startup_candle_count = 200
 
     order_types = {
-        'buy': 'market',
-        'sell': 'market',
-        'emergencysell': 'market',
-        'forcebuy': "market",
-        'forcesell': 'market',
+        'entry': 'market',
+        'exit': 'market',
+        'emergencyexit': 'market',
+        'forceentry': "market",
+        'forceexit': 'market',
         'stoploss': 'market',
         'stoploss_on_exchange': False,
 
@@ -166,62 +166,62 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
     }
 
     # ClucHA
-    clucha_bbdelta_close = DecimalParameter(0.01,0.05, default=buy_params['clucha_bbdelta_close'], decimals=5, space='buy', optimize=True)
-    clucha_bbdelta_tail = DecimalParameter(0.7, 1.2, default=buy_params['clucha_bbdelta_tail'], decimals=5, space='buy', optimize=True)
-    clucha_close_bblower = DecimalParameter(0.001, 0.05, default=buy_params['clucha_close_bblower'], decimals=5, space='buy', optimize=True)
-    clucha_closedelta_close = DecimalParameter(0.001, 0.05, default=buy_params['clucha_closedelta_close'], decimals=5, space='buy', optimize=True)
-    clucha_rocr_1h = DecimalParameter(0.1, 1.0, default=buy_params['clucha_rocr_1h'], decimals=5, space='buy', optimize=True)
+    clucha_bbdelta_close = DecimalParameter(0.01,0.05, default=entry_params['clucha_bbdelta_close'], decimals=5, space='entry', optimize=True)
+    clucha_bbdelta_tail = DecimalParameter(0.7, 1.2, default=entry_params['clucha_bbdelta_tail'], decimals=5, space='entry', optimize=True)
+    clucha_close_bblower = DecimalParameter(0.001, 0.05, default=entry_params['clucha_close_bblower'], decimals=5, space='entry', optimize=True)
+    clucha_closedelta_close = DecimalParameter(0.001, 0.05, default=entry_params['clucha_closedelta_close'], decimals=5, space='entry', optimize=True)
+    clucha_rocr_1h = DecimalParameter(0.1, 1.0, default=entry_params['clucha_rocr_1h'], decimals=5, space='entry', optimize=True)
 
     # lambo1
-    lambo1_ema_14_factor = DecimalParameter(0.8, 1.2, decimals=3,  default=buy_params['lambo1_ema_14_factor'], space='buy', optimize=True)
-    lambo1_rsi_4_limit = IntParameter(5, 60, default=buy_params['lambo1_rsi_4_limit'], space='buy', optimize=True)
-    lambo1_rsi_14_limit = IntParameter(5, 60, default=buy_params['lambo1_rsi_14_limit'], space='buy', optimize=True)
+    lambo1_ema_14_factor = DecimalParameter(0.8, 1.2, decimals=3,  default=entry_params['lambo1_ema_14_factor'], space='entry', optimize=True)
+    lambo1_rsi_4_limit = IntParameter(5, 60, default=entry_params['lambo1_rsi_4_limit'], space='entry', optimize=True)
+    lambo1_rsi_14_limit = IntParameter(5, 60, default=entry_params['lambo1_rsi_14_limit'], space='entry', optimize=True)
 
     # lambo2
-    lambo2_ema_14_factor = DecimalParameter(0.8, 1.2, decimals=3,  default=buy_params['lambo2_ema_14_factor'], space='buy', optimize=True)
-    lambo2_rsi_4_limit = IntParameter(5, 60, default=buy_params['lambo2_rsi_4_limit'], space='buy', optimize=True)
-    lambo2_rsi_14_limit = IntParameter(5, 60, default=buy_params['lambo2_rsi_14_limit'], space='buy', optimize=True)
+    lambo2_ema_14_factor = DecimalParameter(0.8, 1.2, decimals=3,  default=entry_params['lambo2_ema_14_factor'], space='entry', optimize=True)
+    lambo2_rsi_4_limit = IntParameter(5, 60, default=entry_params['lambo2_rsi_4_limit'], space='entry', optimize=True)
+    lambo2_rsi_14_limit = IntParameter(5, 60, default=entry_params['lambo2_rsi_14_limit'], space='entry', optimize=True)
 
     # local_uptrend
-    local_trend_ema_diff = DecimalParameter(0, 0.2, default=buy_params['local_trend_ema_diff'], space='buy', optimize=True)
-    local_trend_bb_factor = DecimalParameter(0.8, 1.2, default=buy_params['local_trend_bb_factor'], space='buy', optimize=True)
-    local_trend_closedelta = DecimalParameter(5.0, 30.0, default=buy_params['local_trend_closedelta'], space='buy', optimize=True)
+    local_trend_ema_diff = DecimalParameter(0, 0.2, default=entry_params['local_trend_ema_diff'], space='entry', optimize=True)
+    local_trend_bb_factor = DecimalParameter(0.8, 1.2, default=entry_params['local_trend_bb_factor'], space='entry', optimize=True)
+    local_trend_closedelta = DecimalParameter(5.0, 30.0, default=entry_params['local_trend_closedelta'], space='entry', optimize=True)
 
     # ewo_1 and ewo_low
-    ewo_candles_buy = IntParameter(2, 30, default=buy_params['ewo_candles_buy'], space='buy', optimize=True)
-    ewo_candles_sell = IntParameter(2, 35, default=buy_params['ewo_candles_sell'], space='buy', optimize=True)
-    ewo_low_offset = DecimalParameter(0.7, 1.2, default=buy_params['ewo_low_offset'], decimals=5, space='buy', optimize=True)
-    ewo_high_offset = DecimalParameter(0.75, 1.5, default=buy_params['ewo_high_offset'], decimals=5, space='buy', optimize=True)
-    ewo_high = DecimalParameter(2.0, 15.0, default=buy_params['ewo_high'], space='buy', optimize=True)
-    ewo_1_rsi_14 = IntParameter(10, 100, default=buy_params['ewo_1_rsi_14'], space='buy', optimize=True)
-    ewo_1_rsi_4 = IntParameter(1, 50, default=buy_params['ewo_1_rsi_4'], space='buy', optimize=True)
-    ewo_low_rsi_4 = IntParameter(1, 50, default=buy_params['ewo_low_rsi_4'], space='buy', optimize=True)
-    ewo_low = DecimalParameter(-20.0, -8.0, default=buy_params['ewo_low'], space='buy', optimize=True)
+    ewo_candles_entry = IntParameter(2, 30, default=entry_params['ewo_candles_entry'], space='entry', optimize=True)
+    ewo_candles_exit = IntParameter(2, 35, default=entry_params['ewo_candles_exit'], space='entry', optimize=True)
+    ewo_low_offset = DecimalParameter(0.7, 1.2, default=entry_params['ewo_low_offset'], decimals=5, space='entry', optimize=True)
+    ewo_high_offset = DecimalParameter(0.75, 1.5, default=entry_params['ewo_high_offset'], decimals=5, space='entry', optimize=True)
+    ewo_high = DecimalParameter(2.0, 15.0, default=entry_params['ewo_high'], space='entry', optimize=True)
+    ewo_1_rsi_14 = IntParameter(10, 100, default=entry_params['ewo_1_rsi_14'], space='entry', optimize=True)
+    ewo_1_rsi_4 = IntParameter(1, 50, default=entry_params['ewo_1_rsi_4'], space='entry', optimize=True)
+    ewo_low_rsi_4 = IntParameter(1, 50, default=entry_params['ewo_low_rsi_4'], space='entry', optimize=True)
+    ewo_low = DecimalParameter(-20.0, -8.0, default=entry_params['ewo_low'], space='entry', optimize=True)
 
     # cofi
-    cofi_ema = DecimalParameter(0.6, 1.4, default=buy_params['cofi_ema'] , space='buy', optimize=True)
-    cofi_fastk = IntParameter(1, 100, default=buy_params['cofi_fastk'], space='buy', optimize=True)
-    cofi_fastd = IntParameter(1, 100, default=buy_params['cofi_fastd'], space='buy', optimize=True)
-    cofi_adx = IntParameter(1, 100, default=buy_params['cofi_adx'], space='buy', optimize=True)
-    cofi_ewo_high = DecimalParameter(1.0, 15.0, default=buy_params['cofi_ewo_high'], space='buy', optimize=True)
+    cofi_ema = DecimalParameter(0.6, 1.4, default=entry_params['cofi_ema'] , space='entry', optimize=True)
+    cofi_fastk = IntParameter(1, 100, default=entry_params['cofi_fastk'], space='entry', optimize=True)
+    cofi_fastd = IntParameter(1, 100, default=entry_params['cofi_fastd'], space='entry', optimize=True)
+    cofi_adx = IntParameter(1, 100, default=entry_params['cofi_adx'], space='entry', optimize=True)
+    cofi_ewo_high = DecimalParameter(1.0, 15.0, default=entry_params['cofi_ewo_high'], space='entry', optimize=True)
 
     # nfi32
-    nfi32_rsi_4 = IntParameter(1, 100, default=buy_params['nfi32_rsi_4'], space='buy', optimize=True)
-    nfi32_rsi_14 = IntParameter(1, 100, default=buy_params['nfi32_rsi_4'], space='buy', optimize=True)
-    nfi32_sma_factor = DecimalParameter(0.7, 1.2, default=buy_params['nfi32_sma_factor'], decimals=5, space='buy', optimize=True)
-    nfi32_cti_limit = DecimalParameter(-1.2, 0, default=buy_params['nfi32_cti_limit'], decimals=5, space='buy', optimize=True)
+    nfi32_rsi_4 = IntParameter(1, 100, default=entry_params['nfi32_rsi_4'], space='entry', optimize=True)
+    nfi32_rsi_14 = IntParameter(1, 100, default=entry_params['nfi32_rsi_4'], space='entry', optimize=True)
+    nfi32_sma_factor = DecimalParameter(0.7, 1.2, default=entry_params['nfi32_sma_factor'], decimals=5, space='entry', optimize=True)
+    nfi32_cti_limit = DecimalParameter(-1.2, 0, default=entry_params['nfi32_cti_limit'], decimals=5, space='entry', optimize=True)
 
-    buy_btc_safe_1d = DecimalParameter(-0.5, -0.015, default=buy_params['buy_btc_safe_1d'], optimize=True)
-    antipump_threshold = DecimalParameter(0, 0.4, default=buy_params['antipump_threshold'], space='buy', optimize=True)
+    entry_btc_safe_1d = DecimalParameter(-0.5, -0.015, default=entry_params['entry_btc_safe_1d'], optimize=True)
+    antipump_threshold = DecimalParameter(0, 0.4, default=entry_params['antipump_threshold'], space='entry', optimize=True)
 
-    ewo_1_enabled = BooleanParameter(default=buy_params['ewo_1_enabled'], space='buy', optimize=True)
-    ewo_low_enabled = BooleanParameter(default=buy_params['ewo_low_enabled'], space='buy', optimize=True)
-    cofi_enabled = BooleanParameter(default=buy_params['cofi_enabled'], space='buy', optimize=True)
-    lambo1_enabled = BooleanParameter(default=buy_params['lambo1_enabled'], space='buy', optimize=True)
-    lambo2_enabled = BooleanParameter(default=buy_params['lambo2_enabled'], space='buy', optimize=True)
-    local_trend_enabled = BooleanParameter(default=buy_params['local_trend_enabled'], space='buy', optimize=True)
-    nfi32_enabled = BooleanParameter(default=buy_params['nfi32_enabled'], space='buy', optimize=True)
-    clucha_enabled = BooleanParameter(default=buy_params['clucha_enabled'], space='buy', optimize=True)
+    ewo_1_enabled = BooleanParameter(default=entry_params['ewo_1_enabled'], space='entry', optimize=True)
+    ewo_low_enabled = BooleanParameter(default=entry_params['ewo_low_enabled'], space='entry', optimize=True)
+    cofi_enabled = BooleanParameter(default=entry_params['cofi_enabled'], space='entry', optimize=True)
+    lambo1_enabled = BooleanParameter(default=entry_params['lambo1_enabled'], space='entry', optimize=True)
+    lambo2_enabled = BooleanParameter(default=entry_params['lambo2_enabled'], space='entry', optimize=True)
+    local_trend_enabled = BooleanParameter(default=entry_params['local_trend_enabled'], space='entry', optimize=True)
+    nfi32_enabled = BooleanParameter(default=entry_params['nfi32_enabled'], space='entry', optimize=True)
+    clucha_enabled = BooleanParameter(default=entry_params['clucha_enabled'], space='entry', optimize=True)
 
 
     def informative_pairs(self):
@@ -329,15 +329,15 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
 
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         conditions = []
-        dataframe.loc[:, 'buy_tag'] = ''
+        dataframe.loc[:, 'entry_tag'] = ''
 
-        dataframe[f'ma_buy_{self.ewo_candles_buy.value}'] = ta.EMA(dataframe, timeperiod=int(self.ewo_candles_buy.value))
-        dataframe[f'ma_sell_{self.ewo_candles_sell.value}'] = ta.EMA(dataframe, timeperiod=int(self.ewo_candles_sell.value))
+        dataframe[f'ma_entry_{self.ewo_candles_entry.value}'] = ta.EMA(dataframe, timeperiod=int(self.ewo_candles_entry.value))
+        dataframe[f'ma_exit_{self.ewo_candles_exit.value}'] = ta.EMA(dataframe, timeperiod=int(self.ewo_candles_exit.value))
 
         is_btc_safe = (
-            (pct_change(dataframe['btc_1d'], dataframe['btc_1m']).fillna(0) > self.buy_btc_safe_1d.value) &
+            (pct_change(dataframe['btc_1d'], dataframe['btc_1m']).fillna(0) > self.entry_btc_safe_1d.value) &
             (dataframe['volume'] > 0)           # Make sure Volume is not 0
         )
 
@@ -351,7 +351,7 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
             (dataframe['rsi_4'] < int(self.lambo1_rsi_4_limit.value)) &
             (dataframe['rsi_14'] < int(self.lambo1_rsi_14_limit.value))
         )
-        dataframe.loc[lambo1, 'buy_tag'] += 'lambo1_'
+        dataframe.loc[lambo1, 'entry_tag'] += 'lambo1_'
         conditions.append(lambo1)
 
         lambo2 = (
@@ -360,7 +360,7 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
             (dataframe['rsi_4'] < int(self.lambo2_rsi_4_limit.value)) &
             (dataframe['rsi_14'] < int(self.lambo2_rsi_14_limit.value))
         )
-        dataframe.loc[lambo2, 'buy_tag'] += 'lambo2_'
+        dataframe.loc[lambo2, 'entry_tag'] += 'lambo2_'
         conditions.append(lambo2)
 
         local_uptrend = (
@@ -371,7 +371,7 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
             (dataframe['close'] < dataframe['bb_lowerband2'] * self.local_trend_bb_factor.value) &
             (dataframe['closedelta'] > dataframe['close'] * self.local_trend_closedelta.value / 1000 )
         )
-        dataframe.loc[local_uptrend, 'buy_tag'] += 'local_uptrend_'
+        dataframe.loc[local_uptrend, 'entry_tag'] += 'local_uptrend_'
         conditions.append(local_uptrend)
 
         nfi_32 = (
@@ -382,28 +382,28 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
             (dataframe['close'] < dataframe['sma_15'] * self.nfi32_sma_factor.value) &
             (dataframe['cti'] < self.nfi32_cti_limit.value)
         )
-        dataframe.loc[nfi_32, 'buy_tag'] += 'nfi_32_'
+        dataframe.loc[nfi_32, 'entry_tag'] += 'nfi_32_'
         conditions.append(nfi_32)
 
         ewo_1 = (
             bool(self.ewo_1_enabled.value) &
             (dataframe['rsi_4'] < self.ewo_1_rsi_4.value) &
-            (dataframe['close'] < (dataframe[f'ma_buy_{self.ewo_candles_buy.value}'] * self.ewo_low_offset.value)) &
+            (dataframe['close'] < (dataframe[f'ma_entry_{self.ewo_candles_entry.value}'] * self.ewo_low_offset.value)) &
             (dataframe['EWO'] > self.ewo_high.value) &
             (dataframe['rsi_14'] < self.ewo_1_rsi_14.value) &
-            (dataframe['close'] < (dataframe[f'ma_sell_{self.ewo_candles_sell.value}'] * self.ewo_high_offset.value))
+            (dataframe['close'] < (dataframe[f'ma_exit_{self.ewo_candles_exit.value}'] * self.ewo_high_offset.value))
         )
-        dataframe.loc[ewo_1, 'buy_tag'] += 'ewo1_'
+        dataframe.loc[ewo_1, 'entry_tag'] += 'ewo1_'
         conditions.append(ewo_1)
 
         ewo_low = (
             bool(self.ewo_low_enabled.value) &
             (dataframe['rsi_4'] <  self.ewo_low_rsi_4.value) &
-            (dataframe['close'] < (dataframe[f'ma_buy_{self.ewo_candles_buy.value}'] * self.ewo_low_offset.value)) &
+            (dataframe['close'] < (dataframe[f'ma_entry_{self.ewo_candles_entry.value}'] * self.ewo_low_offset.value)) &
             (dataframe['EWO'] < self.ewo_low.value) &
-            (dataframe['close'] < (dataframe[f'ma_sell_{self.ewo_candles_sell.value}'] * self.ewo_high_offset.value))
+            (dataframe['close'] < (dataframe[f'ma_exit_{self.ewo_candles_exit.value}'] * self.ewo_high_offset.value))
         )
-        dataframe.loc[ewo_low, 'buy_tag'] += 'ewo_low_'
+        dataframe.loc[ewo_low, 'entry_tag'] += 'ewo_low_'
         conditions.append(ewo_low)
 
         cofi = (
@@ -415,7 +415,7 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
             (dataframe['adx'] > self.cofi_adx.value) &
             (dataframe['EWO'] > self.cofi_ewo_high.value)
         )
-        dataframe.loc[cofi, 'buy_tag'] += 'cofi_'
+        dataframe.loc[cofi, 'entry_tag'] += 'cofi_'
         conditions.append(cofi)
 
         clucHA = (
@@ -434,46 +434,46 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
                 (dataframe['ha_close'] < self.clucha_close_bblower.value * dataframe['bb_lowerband'])
             ))
         )
-        dataframe.loc[clucHA, 'buy_tag'] += 'clucHA_'
+        dataframe.loc[clucHA, 'entry_tag'] += 'clucHA_'
         conditions.append(clucHA)
 
         dataframe.loc[
             # is_btc_safe &  # broken?
             # is_pump_safe &
             reduce(lambda x, y: x | y, conditions),
-            'buy'
+            'entry'
         ] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
         # dataframe.loc[
-        #     (dataframe['fisher'] > self.sell_fisher.value) &
+        #     (dataframe['fisher'] > self.exit_fisher.value) &
         #     (dataframe['ha_high'].le(dataframe['ha_high'].shift(1))) &
         #     (dataframe['ha_high'].shift(1).le(dataframe['ha_high'].shift(2))) &
         #     (dataframe['ha_close'].le(dataframe['ha_close'].shift(1))) &
         #     (dataframe['ema_fast'] > dataframe['ha_close']) &
-        #     ((dataframe['ha_close'] * self.sell_bbmiddle_close.value) > dataframe['bb_middleband']) &
+        #     ((dataframe['ha_close'] * self.exit_bbmiddle_close.value) > dataframe['bb_middleband']) &
         #     (dataframe['volume'] > 0)
         #     ,
-        #     'sell'
+        #     'exit'
         # ] = 1
 
         return dataframe
 
     def confirm_trade_exit(self, pair: str, trade: Trade, order_type: str, amount: float,
-                           rate: float, time_in_force: str, sell_reason: str,
+                           rate: float, time_in_force: str, exit_reason: str,
                            current_time: datetime, **kwargs) -> bool:
 
-        trade.sell_reason = sell_reason + "_" + trade.buy_tag
+        trade.exit_reason = exit_reason + "_" + trade.entry_tag
 
         return True
 
     # def confirm_trade_entry(self, pair: str, order_type: str, amount: float, rate: float,
     #                         time_in_force: str, current_time: datetime, **kwargs) -> bool:
     #     """
-    #     Called right before placing a buy order.
+    #     Called right before placing a entry order.
     #     Timing for this function is critical, so avoid doing heavy computations or
     #     network requests in this method.
 
@@ -488,7 +488,7 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
     #     :param time_in_force: Time in force. Defaults to GTC (Good-til-cancelled).
     #     :param current_time: datetime object, containing the current datetime
     #     :param **kwargs: Ensure to keep this here so updates to this won't break your strategy.
-    #     :return bool: When True is returned, then the buy-order is placed on the exchange.
+    #     :return bool: When True is returned, then the entry-order is placed on the exchange.
     #         False aborts the process
     #     """
     #     coin, currency = pair.split('/')
@@ -511,7 +511,7 @@ class ClucHAnix_BB_RPB_HO2(IStrategy):
     #     PairLocks.lock_pair(
     #         pair=pair,
     #         until=datetime.now(timezone.utc) + timedelta(minutes=5),
-    #         reason="Send 3c buy order"
+    #         reason="Send 3c entry order"
     #     )
 
     #     return False

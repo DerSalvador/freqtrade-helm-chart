@@ -26,51 +26,29 @@ from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParame
 from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 # --------------------------------
-
 # Add your lib to import here
 import talib.abstract as ta
 from functools import reduce
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-
 ##### SETINGS #####
-# It hyperopt just one set of params for all buy and sell strategies if true.
+# It hyperopt just one set of params for all entry and exit strategies if true.
 DUALFIT = False
 COUNT = 10
 GAP = 3
 ### END SETINGS ###
 
-
 class Dimond(IStrategy):
+    INTERFACE_VERSION = 3
     # ###################### RESULT PLACE ######################
     # *    6/700:      1 trades. 1/0/0 Wins/Draws/Losses. Avg profit  17.68%. Median profit  17.68%. Total profit  58.94100000 USDT (   5.89Σ%). Avg duration 0:00:00 min. Objective: 1.79949
-
     # Buy hyperspace params:
-    buy_params = {
-        "buy_fast": 31,
-        "buy_push": 0.72,
-        "buy_shift": -7,
-        "buy_slow": 2,
-    }
-
+    entry_params = {'entry_fast': 31, 'entry_push': 0.72, 'entry_shift': -7, 'entry_slow': 2}
     # Sell hyperspace params:
-    sell_params = {
-        "sell_fast": 17,
-        "sell_push": 1.493,
-        "sell_shift": -7,
-        "sell_slow": 28,
-    }
-
+    exit_params = {'exit_fast': 17, 'exit_push': 1.493, 'exit_shift': -7, 'exit_slow': 28}
     # ROI table:
-    minimal_roi = {
-        "0": 0.177,
-        "31": 0.059,
-        "61": 0.021,
-        "170": 0
-    }
-
+    minimal_roi = {'0': 0.177, '31': 0.059, '61': 0.021, '170': 0}
     # Stoploss:
     stoploss = -0.241
-
     # Trailing stop:
     trailing_stop = True
     trailing_stop_positive = 0.13
@@ -79,69 +57,40 @@ class Dimond(IStrategy):
     # Buy hypers
     timeframe = '5m'
     # #################### END OF RESULT PLACE ####################
-    buy_push = DecimalParameter(0, 2, decimals=3, default=1, space='buy')
-    buy_shift = IntParameter(-10, 0, default=-6, space='buy')
-    buy_fast = IntParameter(2, 50, default=9, space='buy')
-    buy_slow = IntParameter(2, 50, default=18, space='buy')
+    entry_push = DecimalParameter(0, 2, decimals=3, default=1, space='entry')
+    entry_shift = IntParameter(-10, 0, default=-6, space='entry')
+    entry_fast = IntParameter(2, 50, default=9, space='entry')
+    entry_slow = IntParameter(2, 50, default=18, space='entry')
     if not DUALFIT:
-        sell_push = DecimalParameter(
-            0, 2, decimals=3,  default=1, space='sell')
-        sell_shift = IntParameter(-10, 0, default=-6, space='sell')
-        sell_fast = IntParameter(2, 50, default=9, space='sell')
-        sell_slow = IntParameter(2, 50, default=18, space='sell')
+        exit_push = DecimalParameter(0, 2, decimals=3, default=1, space='exit')
+        exit_shift = IntParameter(-10, 0, default=-6, space='exit')
+        exit_fast = IntParameter(2, 50, default=9, space='exit')
+        exit_slow = IntParameter(2, 50, default=18, space='exit')
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe['buy_ema_fast'] = ta.SMA(
-            dataframe, timeperiod=int(self.buy_fast.value))
-        dataframe['buy_ema_slow'] = ta.SMA(
-            dataframe, timeperiod=int(self.buy_slow.value))
-
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe['entry_ema_fast'] = ta.SMA(dataframe, timeperiod=int(self.entry_fast.value))
+        dataframe['entry_ema_slow'] = ta.SMA(dataframe, timeperiod=int(self.entry_slow.value))
         conditions = []
-
-        conditions.append(
-            qtpylib.crossed_above(
-                dataframe['buy_ema_fast'].shift(self.buy_shift.value),
-                dataframe['buy_ema_slow'].shift(
-                    self.buy_shift.value)*self.buy_push.value
-            )
-        )
-
+        conditions.append(qtpylib.crossed_above(dataframe['entry_ema_fast'].shift(self.entry_shift.value), dataframe['entry_ema_slow'].shift(self.entry_shift.value) * self.entry_push.value))
         if conditions:
-            dataframe.loc[
-                reduce(lambda x, y: x & y, conditions),
-                'buy']=1
-
+            dataframe.loc[reduce(lambda x, y: x & y, conditions), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        push = self.buy_push.value
-        shift = self.buy_shift.value
-        ema_fast = dataframe['buy_ema_fast']
-        ema_slow = dataframe['buy_ema_slow']
-
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        push = self.entry_push.value
+        shift = self.entry_shift.value
+        ema_fast = dataframe['entry_ema_fast']
+        ema_slow = dataframe['entry_ema_slow']
         if not DUALFIT:
-            push = self.sell_push.value
-            shift = self.sell_shift.value
-            ema_fast = dataframe['sell_ema_fast'] = ta.SMA(
-                dataframe, timeperiod=int(self.buy_fast.value))
-            ema_slow = dataframe['sell_ema_slow'] = ta.SMA(
-                dataframe, timeperiod=int(self.buy_slow.value))
-
+            push = self.exit_push.value
+            shift = self.exit_shift.value
+            ema_fast = dataframe['exit_ema_fast'] = ta.SMA(dataframe, timeperiod=int(self.entry_fast.value))
+            ema_slow = dataframe['exit_ema_slow'] = ta.SMA(dataframe, timeperiod=int(self.entry_slow.value))
         conditions = []
-
-        conditions.append(
-            qtpylib.crossed_below(
-                ema_fast.shift(shift),
-                ema_slow.shift(shift)*push
-            )
-        )
-
+        conditions.append(qtpylib.crossed_below(ema_fast.shift(shift), ema_slow.shift(shift) * push))
         if conditions:
-            dataframe.loc[
-                reduce(lambda x, y: x & y, conditions),
-                'sell']=1
+            dataframe.loc[reduce(lambda x, y: x & y, conditions), 'exit_long'] = 1
         return dataframe
