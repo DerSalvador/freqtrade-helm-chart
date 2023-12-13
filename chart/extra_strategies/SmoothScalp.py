@@ -14,23 +14,15 @@ import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy  # noqa
 
-
 class SmoothScalp(IStrategy):
-    """
-        this strategy is based around the idea of generating a lot of potentatils buys and make tiny profits on each trade
-
-        we recommend to have at least 60 parallel trades at any time to cover non avoidable losses
-    """
-
+    INTERFACE_VERSION = 3
+    '\n        this strategy is based around the idea of generating a lot of potentatils entrys and make tiny profits on each trade\n\n        we recommend to have at least 60 parallel trades at any time to cover non avoidable losses\n    '
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
-    minimal_roi = {
-        "0": 0.01
-    }
+    minimal_roi = {'0': 0.01}
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
     # should not be below 3% loss
-
     stoploss = -0.5
     # Optimal timeframe for the strategy
     # the shorter the better
@@ -47,55 +39,22 @@ class SmoothScalp(IStrategy):
         dataframe['cci'] = ta.CCI(dataframe, timeperiod=20)
         dataframe['rsi'] = ta.RSI(dataframe, timeperiod=14)
         dataframe['mfi'] = ta.MFI(dataframe)
-
         # required for graphing
         bollinger = qtpylib.bollinger_bands(dataframe['close'], window=20, stds=2)
         dataframe['bb_lowerband'] = bollinger['lower']
         dataframe['bb_upperband'] = bollinger['upper']
         dataframe['bb_middleband'] = bollinger['mid']
-
         macd = ta.MACD(dataframe)
         dataframe['macd'] = macd['macd']
         dataframe['macdsignal'] = macd['macdsignal']
         dataframe['macdhist'] = macd['macdhist']
         dataframe['cci'] = ta.CCI(dataframe)
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                (
-                        (dataframe['open'] < dataframe['ema_low']) &
-                        (dataframe['adx'] > 30) &
-                        (dataframe['mfi'] < 30) &
-                        (
-                                (dataframe['fastk'] < 30) &
-                                (dataframe['fastd'] < 30) &
-                                (qtpylib.crossed_above(dataframe['fastk'], dataframe['fastd']))
-                        ) &
-                        (dataframe['cci'] < -150)
-                )
-
-            ),
-            'buy'] = 1
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[(dataframe['open'] < dataframe['ema_low']) & (dataframe['adx'] > 30) & (dataframe['mfi'] < 30) & ((dataframe['fastk'] < 30) & (dataframe['fastd'] < 30) & qtpylib.crossed_above(dataframe['fastk'], dataframe['fastd'])) & (dataframe['cci'] < -150), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                    (
-                            (
-                                (dataframe['open'] >= dataframe['ema_high'])
-
-                            ) |
-                            (
-                                    (qtpylib.crossed_above(dataframe['fastk'], 70)) |
-                                    (qtpylib.crossed_above(dataframe['fastd'], 70))
-
-                            )
-                    ) & (dataframe['cci'] > 150)
-            )
-            ,
-            'sell'] = 1
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[((dataframe['open'] >= dataframe['ema_high']) | (qtpylib.crossed_above(dataframe['fastk'], 70) | qtpylib.crossed_above(dataframe['fastd'], 70))) & (dataframe['cci'] > 150), 'exit_long'] = 1
         return dataframe

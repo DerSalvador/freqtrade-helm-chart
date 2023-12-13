@@ -1,10 +1,7 @@
-
 from freqtrade.strategy import DecimalParameter, IntParameter
-
 from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 # --------------------------------
-
 from pandas import DataFrame, Series
 from freqtrade.persistence import Trade
 from datetime import datetime
@@ -12,7 +9,6 @@ import talib.abstract as taa
 import ta
 from functools import reduce
 import numpy as np
-
 ###########################################################################################################
 ##                Dracula by 6h057                                                                       ##
 ##                                                                                                       ##
@@ -35,7 +31,6 @@ import numpy as np
 ##                                                                                                       ##
 ###########################################################################################################
 
-
 def EWO(dataframe, ema_length=5, ema2_length=35):
     df = dataframe.copy()
     ema1 = taa.EMA(df, timeperiod=ema_length)
@@ -55,32 +50,27 @@ def chaikin_money_flow(dataframe, n=20, fillna=False):
         pandas.Series: New feature generated.
     """
     df = dataframe.copy()
-    mfv = ((df['close'] - df['low']) - (df['high'] - df['close'])) / (df['high'] - df['low'])
+    mfv = (df['close'] - df['low'] - (df['high'] - df['close'])) / (df['high'] - df['low'])
     mfv = mfv.fillna(0.0)  # float division by zero
     mfv *= df['volume']
-    cmf = (mfv.rolling(n, min_periods=0).sum()
-           / df['volume'].rolling(n, min_periods=0).sum())
+    cmf = mfv.rolling(n, min_periods=0).sum() / df['volume'].rolling(n, min_periods=0).sum()
     if fillna:
         cmf = cmf.replace([np.inf, -np.inf], np.nan).fillna(0)
     return Series(cmf, name='cmf')
 
-class SupResFinder():
-    def isSupport(self, df, i):
-        support = df['bb_bbl_i'][i] == 1 and (
-            df['bb_bbl_i'][i+1] == 0 or df['close'][i+1] > df['open'][i+1]) and df['close'][i] < df['open'][i]
+class SupResFinder:
 
+    def isSupport(self, df, i):
+        support = df['bb_bbl_i'][i] == 1 and (df['bb_bbl_i'][i + 1] == 0 or df['close'][i + 1] > df['open'][i + 1]) and (df['close'][i] < df['open'][i])
         return support
 
     def isResistance(self, df, i):
-        resistance = df['bb_bbh_i'][i] == 1 and (
-            df['bb_bbh_i'][i+1] == 0 or df['close'][i+1] < df['open'][i+1]) and df['close'][i] > df['open'][i]
-
+        resistance = df['bb_bbh_i'][i] == 1 and (df['bb_bbh_i'][i + 1] == 0 or df['close'][i + 1] < df['open'][i + 1]) and (df['close'][i] > df['open'][i])
         return resistance
 
     def getSupport(self, df):
         levels = [df['close'][0]]
-
-        for i in range(1, df.shape[0]-2):
+        for i in range(1, df.shape[0] - 2):
             if self.isSupport(df, i):
                 o = df['open'][i]
                 c = df['close'][i]
@@ -94,8 +84,7 @@ class SupResFinder():
 
     def getResistance(self, df):
         levels = [df['open'][0]]
-
-        for i in range(1, df.shape[0]-2):
+        for i in range(1, df.shape[0] - 2):
             if self.isResistance(df, i):
                 o = df['open'][i]
                 c = df['close'][i]
@@ -107,34 +96,19 @@ class SupResFinder():
         levels.append(levels[-1])
         return levels
 
-
 class Dracula(IStrategy):
-
+    INTERFACE_VERSION = 3
     # Buy hyperspace params:
-    buy_params = {
-        "buy_bbt": 0.035,
-        "ewo_high": 5.638,
-        "ewo_low": -19.993,
-        "low_offset": 0.978,
-        "rsi_buy": 61,
-    }
-
+    entry_params = {'entry_bbt': 0.035, 'ewo_high': 5.638, 'ewo_low': -19.993, 'low_offset': 0.978, 'rsi_entry': 61}
     # Sell hyperspace params:
-    sell_params = {
-        "high_offset": 1.006
-    }
+    exit_params = {'high_offset': 1.006}
     # ROI table:
-    minimal_roi = {
-        "0": 10
-    }
-
-    info_timeframe = "5m"
+    minimal_roi = {'0': 10}
+    info_timeframe = '5m'
     # Stoploss:
     stoploss = -0.2
     min_lost = -0.005
-
-    buy_bbt = DecimalParameter(
-        0, 100, decimals=4, default=0.023, space='buy')
+    entry_bbt = DecimalParameter(0, 100, decimals=4, default=0.023, space='entry')
     # Buy hypers
     timeframe = '1m'
     # Protection
@@ -149,89 +123,65 @@ class Dracula(IStrategy):
     supResFinder = SupResFinder()
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe['bb_bbh'] = ta.volatility.bollinger_hband(close=dataframe["close"], window=20)
-        dataframe['bb_bbl'] = ta.volatility.bollinger_lband(close=dataframe["close"], window=20)
-
+        dataframe['bb_bbh'] = ta.volatility.bollinger_hband(close=dataframe['close'], window=20)
+        dataframe['bb_bbl'] = ta.volatility.bollinger_lband(close=dataframe['close'], window=20)
         dataframe['bb_bbh_i'] = dataframe['high'] >= dataframe['bb_bbh']
-        dataframe['bb_bbl_i'] = ta.volatility.bollinger_lband_indicator(
-            close=dataframe["low"], window=20)
+        dataframe['bb_bbl_i'] = ta.volatility.bollinger_lband_indicator(close=dataframe['low'], window=20)
         dataframe['bb_bbt'] = (dataframe['bb_bbh'] - dataframe['bb_bbl']) / dataframe['bb_bbh']
-
         dataframe['ema'] = taa.EMA(dataframe, timeperiod=150)
         dataframe['resistance'] = self.supResFinder.getResistance(dataframe)
         dataframe['support'] = self.supResFinder.getSupport(dataframe)
-
         dataframe['cmf'] = chaikin_money_flow(dataframe, 20)
-
         # RSI
         dataframe['rsi'] = taa.RSI(dataframe, timeperiod=14)
         return dataframe
 
-
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         prev = dataframe.shift(1)
         prev1 = dataframe.shift(2)
-        lost_protect = (dataframe['ema'] > (dataframe['close'] * 1.07)).rolling(10).sum() == 0
-
-        item_buy_logic = []
-        item_buy_logic.append(dataframe['volume'] > 0)
-        item_buy_logic.append(dataframe['cmf'] > 0)
-        item_buy_logic.append(prev['bb_bbl_i'] == 1)
-        item_buy_logic.append(prev['close'] >= prev1['support'])
-        item_buy_logic.append(prev['ema'] < prev['close'])
-        item_buy_logic.append((dataframe['open'] < dataframe['close']))
-        item_buy_logic.append(prev['open'] > prev['close'])
-        item_buy_logic.append((dataframe['bb_bbt'] > self.buy_bbt.value))
-        item_buy_logic.append(lost_protect)
-        dataframe.loc[
-            reduce(lambda x, y: x & y, item_buy_logic),
-            ['buy', 'buy_tag']] = (1, f'buy_1')
-
-        item_buy_logic = []
-        item_buy_logic.append(dataframe['volume'] > 0)
-        item_buy_logic.append(dataframe['cmf'] > 0)
-        item_buy_logic.append(dataframe['bb_bbl_i'] == 1)
-        item_buy_logic.append(dataframe['open'] >= prev1['support'])
-        item_buy_logic.append(prev['ema'] < prev['close'])
-        item_buy_logic.append((dataframe['open'] < dataframe['close']))
-        item_buy_logic.append((dataframe['bb_bbt'] > self.buy_bbt.value))
-        item_buy_logic.append(lost_protect)
-        dataframe.loc[
-            reduce(lambda x, y: x & y, item_buy_logic),
-            ['buy', 'buy_tag']] = (1, f'buy_2')
-
+        lost_protect = (dataframe['ema'] > dataframe['close'] * 1.07).rolling(10).sum() == 0
+        item_entry_logic = []
+        item_entry_logic.append(dataframe['volume'] > 0)
+        item_entry_logic.append(dataframe['cmf'] > 0)
+        item_entry_logic.append(prev['bb_bbl_i'] == 1)
+        item_entry_logic.append(prev['close'] >= prev1['support'])
+        item_entry_logic.append(prev['ema'] < prev['close'])
+        item_entry_logic.append(dataframe['open'] < dataframe['close'])
+        item_entry_logic.append(prev['open'] > prev['close'])
+        item_entry_logic.append(dataframe['bb_bbt'] > self.entry_bbt.value)
+        item_entry_logic.append(lost_protect)
+        dataframe.loc[reduce(lambda x, y: x & y, item_entry_logic), ['enter_long', 'enter_tag']] = (1, f'entry_1')
+        item_entry_logic = []
+        item_entry_logic.append(dataframe['volume'] > 0)
+        item_entry_logic.append(dataframe['cmf'] > 0)
+        item_entry_logic.append(dataframe['bb_bbl_i'] == 1)
+        item_entry_logic.append(dataframe['open'] >= prev1['support'])
+        item_entry_logic.append(prev['ema'] < prev['close'])
+        item_entry_logic.append(dataframe['open'] < dataframe['close'])
+        item_entry_logic.append(dataframe['bb_bbt'] > self.entry_bbt.value)
+        item_entry_logic.append(lost_protect)
+        dataframe.loc[reduce(lambda x, y: x & y, item_entry_logic), ['enter_long', 'enter_tag']] = (1, f'entry_2')
         return dataframe
 
-    def custom_sell(self, pair: str, trade: Trade, current_time: datetime, current_rate: float,
-                    current_profit: float, **kwargs):
+    def custom_exit(self, pair: str, trade: Trade, current_time: datetime, current_rate: float, current_profit: float, **kwargs):
         dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
         last_candle = dataframe.iloc[-1].squeeze()
         prev_candle = dataframe.iloc[-2].squeeze()
         prev1_candle = dataframe.iloc[-3].squeeze()
-        if prev_candle['bb_bbh_i'] == 1 \
-                and last_candle['close'] < last_candle['open'] \
-                and prev_candle['close'] > prev_candle['open'] \
-                and prev_candle['close'] < prev1_candle['resistance'] \
-                and last_candle['volume'] > 0:
-            return 'sell_signal_1_'+trade.buy_tag
-        elif last_candle['bb_bbh_i'] == 1 \
-                and last_candle['close'] < last_candle['open'] \
-                and last_candle['open'] < prev1_candle['resistance'] \
-                and last_candle['volume'] > 0:
-            return 'sell_signal_2_'+trade.buy_tag
-        elif last_candle['close'] < last_candle['open'] \
-            and last_candle['ema'] > (last_candle['close'] * 1.07) \
-                and last_candle['volume'] > 0:
-            return 'stop_loss_'+trade.buy_tag
-        elif (last_candle['close'] < last_candle['open']) and (last_candle['close'] <= (last_candle['bb_bbl'] * 1.002)) and current_profit >= 0:
-            return 'take_profit_'+trade.buy_tag
-        elif 'sma' in trade.buy_tag and current_profit >= 0.01:
+        if prev_candle['bb_bbh_i'] == 1 and last_candle['close'] < last_candle['open'] and (prev_candle['close'] > prev_candle['open']) and (prev_candle['close'] < prev1_candle['resistance']) and (last_candle['volume'] > 0):
+            return 'exit_signal_1_' + trade.entry_tag
+        elif last_candle['bb_bbh_i'] == 1 and last_candle['close'] < last_candle['open'] and (last_candle['open'] < prev1_candle['resistance']) and (last_candle['volume'] > 0):
+            return 'exit_signal_2_' + trade.entry_tag
+        elif last_candle['close'] < last_candle['open'] and last_candle['ema'] > last_candle['close'] * 1.07 and (last_candle['volume'] > 0):
+            return 'stop_loss_' + trade.entry_tag
+        elif last_candle['close'] < last_candle['open'] and last_candle['close'] <= last_candle['bb_bbl'] * 1.002 and (current_profit >= 0):
+            return 'take_profit_' + trade.entry_tag
+        elif 'sma' in trade.entry_tag and current_profit >= 0.01:
             return 'sma'
-        elif 'sma' in trade.buy_tag  and (last_candle['close'] > (last_candle['ema_49'] * self.high_offset.value)):
+        elif 'sma' in trade.entry_tag and last_candle['close'] > last_candle['ema_49'] * self.high_offset.value:
             return 'stop_loss_sma'
         return None
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[:, 'sell'] = 0
-
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[:, 'exit_long'] = 0
         return dataframe

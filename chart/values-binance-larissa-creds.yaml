@@ -1,3 +1,4 @@
+---
 kubernetes:
   nodePort: 32325
 
@@ -11,6 +12,19 @@ configcreds:
   dry_run_wallet: 800
   stake_amount: unlimited
   position_adjustment_enable: true
+  stoploss: -0.1
+  # Optimal timeframe for the strategy
+  timeframe: 5m
+  # trailing stoploss
+  trailing_stop: false
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.02
+  # run "populate_indicators" only for new candle
+  process_only_new_candles: true
+  # Experimental settings (configuration will overide these if set)
+  use_exit_signal: true
+  exit_profit_only: true
+  ignore_roi_if_entry_signal: false
   entry_pricing:
     price_side: other
     use_order_book: true
@@ -22,41 +36,41 @@ configcreds:
   exit_pricing:
     price_side: other
     use_order_book: true
-    order_book_top: 1    
+    order_book_top: 1
   exchange:
     name: binance
     # API Futures
     key: eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
     secret: qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy
-    # API Spot 
-    #key: B7M26i11tIFNDPGcXG8Yu3ZOoI6eB1LcOP3FMpXTgI8T7ejICD9yYxMGMZ1kFN0y
-    #secret: MAopXKz9eJMyN6vL6bxO57YyqeHW6fWISaFtz4CdWWCjHgA8gFBKIA5hqFDFePqy
+    # API Spot
+    # key: B7M26i11tIFNDPGcXG8Yu3ZOoI6eB1LcOP3FMpXTgI8T7ejICD9yYxMGMZ1kFN0y
+    # secret: MAopXKz9eJMyN6vL6bxO57YyqeHW6fWISaFtz4CdWWCjHgA8gFBKIA5hqFDFePqy
   telegram:
     enabled: true
     token: "6607555119:AAGqoNPH-3m1SECXrPeZdtRDgTuy5988BN0"
     chat_id: "6456658723"
   pairlists:
-  # - method: StaticPairList
-  - method: RemotePairList
-    number_assets: 50
-    pairlist_url: https://remotepairlist.com?q=422f8201e9d8a16b
-    mode: whitelist
-  - method: RemotePairList
-    number_assets: 50
-    mode: blacklist
-    pairlist_url: https://remotepairlist.com?q=8fc6625b0bc79a51
-  - method: AgeFilter
-    min_days_listed: 30
-  - method: PriceFilter
-    low_price_ratio: 0.003
-  - method: SpreadFilter
-    max_spread_ratio: 0.005
-  - method: RangeStabilityFilter
-    lookback_days: 3
+    # - method: StaticPairList
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=422f8201e9d8a16b
+      mode: whitelist
+    - method: RemotePairList
+      number_assets: 50
+      mode: blacklist
+      pairlist_url: https://remotepairlist.com?q=8fc6625b0bc79a51
+    - method: AgeFilter
+      min_days_listed: 30
+    - method: PriceFilter
+      low_price_ratio: 0.003
+    - method: SpreadFilter
+      max_spread_ratio: 0.005
+    - method: RangeStabilityFilter
+      lookback_days: 3
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: madrid_ribbon
+  strategy_name: Strategy002
   pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor 
+  freqaimodel: LightGBMRegressor

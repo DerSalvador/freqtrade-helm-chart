@@ -4,30 +4,18 @@ from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
 # --------------------------------
-
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 
-
 class MACD_TRI_EMA(IStrategy):
-    """
-
-    
-    """
-
+    INTERFACE_VERSION = 3
+    '\n\n    \n    '
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
-    minimal_roi = {
-        "120": 0.0,
-        "30": 0.04,
-        "15": 0.06,
-        "10": 0.15,
-    }
-
+    minimal_roi = {'120': 0.0, '30': 0.04, '15': 0.06, '10': 0.15}
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
     stoploss = -0.03
-
     # Optimal timeframe for the strategy
     timeframe = '5m'
 
@@ -35,24 +23,13 @@ class MACD_TRI_EMA(IStrategy):
         macd = ta.MACD(dataframe)
         dataframe['macd'] = macd['macd']
         dataframe['macdsignal'] = macd['macdsignal']
-        
         dataframe['tema'] = ta.TEMA(dataframe, timeperiod=13)
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                    qtpylib.crossed_above(dataframe['macd'], dataframe['macdsignal']) &
-                    (dataframe['close'].shift(1) > dataframe['tema'].shift(1)) 
-
-            ),
-            'buy'] = 1
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[qtpylib.crossed_above(dataframe['macd'], dataframe['macdsignal']) & (dataframe['close'].shift(1) > dataframe['tema'].shift(1)), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                   qtpylib.crossed_above(dataframe['macdsignal'], dataframe['macd'])
-            ),
-            'sell'] = 1
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[qtpylib.crossed_above(dataframe['macdsignal'], dataframe['macd']), 'exit_long'] = 1
         return dataframe

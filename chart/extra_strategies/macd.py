@@ -4,35 +4,21 @@ from pandas import DataFrame
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 from datetime import timedelta, datetime, timezone
-
 # --------------------------------
 
-
 class Macd(IStrategy):
-    """
-
-    author@: Gert Wohlgemuth
-
-    converted from:
-
-    https://github.com/sthewissen/Mynt/blob/master/src/Mynt.Core/Strategies/AwesomeMacd.cs
-
-    """
-
+    INTERFACE_VERSION = 3
+    '\n\n    author@: Gert Wohlgemuth\n\n    converted from:\n\n    https://github.com/sthewissen/Mynt/blob/master/src/Mynt.Core/Strategies/AwesomeMacd.cs\n\n    '
     # Minimal ROI designed for the strategy.
     # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
     # This attribute will be overridden if the config file contains "minimal_roi"
-
     # Optimal stoploss designed for the strategy
     stoploss = -0.1
-
     # Optimal timeframe for the strategy
     timeframe = '1h'
-
     use_custom_stoploss = True
 
-    def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
-                        current_rate: float, current_profit: float, **kwargs) -> float:
+    def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime, current_rate: float, current_profit: float, **kwargs) -> float:
         """
         Custom stoploss logic, returning the new distance relative to current_rate (as ratio).
         e.g. returning -0.05 would create a stoploss 5% below current_rate.
@@ -51,7 +37,7 @@ class Macd(IStrategy):
         :param **kwargs: Ensure to keep this here so updates to this won't break your strategy.
         :return float: New stoploss value, relative to the currentrate
         """
-        if current_profit > 0.3: 
+        if current_profit > 0.3:
             return -0.01 + current_profit
         # if pair in ('ONE/USDT', 'MATIC/USDT', 'CHZ/USDT', 'ENJ/USDT'):
         #     return -0.10
@@ -74,41 +60,24 @@ class Macd(IStrategy):
         return informative_pairs
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        
         macd = ta.MACD(dataframe)
-
         #---------------- INFORMATIVE ----------------
         inf_tf2 = '1d'
         # Get the informative pair
         informative = self.dp.get_pair_dataframe(pair=metadata['pair'], timeframe=inf_tf2)
         # Get the 14 day rsi
         #6, 25
-
         macd1d = ta.MACD(informative, 12, 26, 9)
         informative['macdhist'] = macd1d['macdhist']
         informative['macd'] = macd1d['macd']
         informative['macdsignal'] = macd1d['macdsignal']
-
         dataframe = merge_informative_pair(dataframe, informative, self.timeframe, inf_tf2, ffill=True)
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                    (
-                        dataframe['macdhist_1d'] > 0
-                         
-                    )
-            ),
-            'buy'] = 1
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[dataframe['macdhist_1d'] > 0, 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        dataframe.loc[
-            (
-                    (dataframe['macdhist_1d'] < 0) 
-
-            ),
-            'sell'] = 1
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[dataframe['macdhist_1d'] < 0, 'exit_long'] = 1
         return dataframe
