@@ -111,91 +111,91 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
         I modified it to better suit my taste and added Hyperopt for this strategy.
     '''
 
-    # (1) sell rework
+    # (1) exit rework
 
     ##########################################################################
 
     # Hyperopt result area
 
-    # buy space
-    buy_params = {
+    # entry space
+    entry_params = {
         "max_slip": 0.983,
         ##
-        "buy_bb_width_1h": 0.954,
-        "buy_roc_1h": 86,
+        "entry_bb_width_1h": 0.954,
+        "entry_roc_1h": 86,
         ##
-        "buy_threshold": 0.003,
-        "buy_bb_factor": 0.999,
+        "entry_threshold": 0.003,
+        "entry_bb_factor": 0.999,
         #
-        "buy_bb_delta": 0.025,
-        "buy_bb_width": 0.095,
+        "entry_bb_delta": 0.025,
+        "entry_bb_width": 0.095,
         ##
-        "buy_cci": -116,
-        "buy_cci_length": 25,
-        "buy_rmi": 49,
-        "buy_rmi_length": 17,
-        "buy_srsi_fk": 32,
+        "entry_cci": -116,
+        "entry_cci_length": 25,
+        "entry_rmi": 49,
+        "entry_rmi_length": 17,
+        "entry_srsi_fk": 32,
         ##
-        "buy_closedelta": 17.922,
-        "buy_ema_diff": 0.026,
+        "entry_closedelta": 17.922,
+        "entry_ema_diff": 0.026,
         ##
-        "buy_ema_high": 0.968,
-        "buy_ema_low": 0.935,
-        "buy_ewo": -5.001,
-        "buy_rsi": 23,
-        "buy_rsi_fast": 44,
+        "entry_ema_high": 0.968,
+        "entry_ema_low": 0.935,
+        "entry_ewo": -5.001,
+        "entry_rsi": 23,
+        "entry_rsi_fast": 44,
         ##
-        "buy_ema_high_2": 1.087,
-        "buy_ema_low_2": 0.970,
-        "buy_ewo_high_2": 4.179,
-        "buy_rsi_ewo_2": 35,
-        "buy_rsi_fast_ewo_2": 45,
+        "entry_ema_high_2": 1.087,
+        "entry_ema_low_2": 0.970,
+        "entry_ewo_high_2": 4.179,
+        "entry_rsi_ewo_2": 35,
+        "entry_rsi_fast_ewo_2": 45,
         ##
-        "buy_r_deadfish_bb_factor": 1.014,
-        "buy_r_deadfish_bb_width": 0.299,
-        "buy_r_deadfish_ema": 1.054,
-        "buy_r_deadfish_volume_factor": 1.59,
-        "buy_r_deadfish_cti": -0.115,
-        "buy_r_deadfish_r14": -44.34,
+        "entry_r_deadfish_bb_factor": 1.014,
+        "entry_r_deadfish_bb_width": 0.299,
+        "entry_r_deadfish_ema": 1.054,
+        "entry_r_deadfish_volume_factor": 1.59,
+        "entry_r_deadfish_cti": -0.115,
+        "entry_r_deadfish_r14": -44.34,
         ##
-        "buy_clucha_bbdelta_close": 0.049,
-        "buy_clucha_bbdelta_tail": 1.146,
-        "buy_clucha_close_bblower": 0.018,
-        "buy_clucha_closedelta_close": 0.017,
-        "buy_clucha_rocr_1h": 0.526,
+        "entry_clucha_bbdelta_close": 0.049,
+        "entry_clucha_bbdelta_tail": 1.146,
+        "entry_clucha_close_bblower": 0.018,
+        "entry_clucha_closedelta_close": 0.017,
+        "entry_clucha_rocr_1h": 0.526,
         ##
-        "buy_adx": 13,
-        "buy_ewo_high": 8.594,
-        "buy_fastd": 28,
-        "buy_fastk": 39,
+        "entry_adx": 13,
+        "entry_ewo_high": 8.594,
+        "entry_fastd": 28,
+        "entry_fastk": 39,
         ##
-        "buy_gumbo_ema": 1.121,
-        "buy_gumbo_ewo_low": -9.442,
-        "buy_gumbo_cti": -0.374,
-        "buy_gumbo_r14": -51.971,
+        "entry_gumbo_ema": 1.121,
+        "entry_gumbo_ewo_low": -9.442,
+        "entry_gumbo_cti": -0.374,
+        "entry_gumbo_r14": -51.971,
         ##
-        "buy_sqzmom_ema": 0.981,
-        "buy_sqzmom_ewo": -3.966,
-        "buy_sqzmom_r14": -45.068,
+        "entry_sqzmom_ema": 0.981,
+        "entry_sqzmom_ewo": -3.966,
+        "entry_sqzmom_r14": -45.068,
         ##
-        "buy_nfix_49_cti": -0.105,
-        "buy_nfix_49_r14": -81.827,
+        "entry_nfix_49_cti": -0.105,
+        "entry_nfix_49_r14": -81.827,
     }
 
-    # sell space
-    sell_params = {
+    # exit space
+    exit_params = {
         ##
-        "sell_cmf": -0.046,
-        "sell_ema": 0.988,
-        "sell_ema_close_delta": 0.022,
+        "exit_cmf": -0.046,
+        "exit_ema": 0.988,
+        "exit_ema_close_delta": 0.022,
         ##
-        "sell_deadfish_profit": -0.063,
-        "sell_deadfish_bb_factor": 0.954,
-        "sell_deadfish_bb_width": 0.043,
-        "sell_deadfish_volume_factor": 2.37,
+        "exit_deadfish_profit": -0.063,
+        "exit_deadfish_bb_factor": 0.954,
+        "exit_deadfish_bb_width": 0.043,
+        "exit_deadfish_volume_factor": 2.37,
         ##
-        "sell_cti_r_cti": 0.844,
-        "sell_cti_r_r": -19.99,
+        "exit_cti_r_cti": 0.844,
+        "exit_cti_r_r": -19.99,
     }
 
     minimal_roi = {
@@ -223,107 +223,107 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
     ## Buy params
 
     is_optimize_dip = False
-    buy_rmi = IntParameter(30, 50, default=35, optimize= is_optimize_dip)
-    buy_cci = IntParameter(-135, -90, default=-133, optimize= is_optimize_dip)
-    buy_srsi_fk = IntParameter(30, 50, default=25, optimize= is_optimize_dip)
-    buy_cci_length = IntParameter(25, 45, default=25, optimize = is_optimize_dip)
-    buy_rmi_length = IntParameter(8, 20, default=8, optimize = is_optimize_dip)
+    entry_rmi = IntParameter(30, 50, default=35, optimize= is_optimize_dip)
+    entry_cci = IntParameter(-135, -90, default=-133, optimize= is_optimize_dip)
+    entry_srsi_fk = IntParameter(30, 50, default=25, optimize= is_optimize_dip)
+    entry_cci_length = IntParameter(25, 45, default=25, optimize = is_optimize_dip)
+    entry_rmi_length = IntParameter(8, 20, default=8, optimize = is_optimize_dip)
 
     is_optimize_break = False
-    buy_bb_width = DecimalParameter(0.065, 0.135, default=0.095, optimize = is_optimize_break)
-    buy_bb_delta = DecimalParameter(0.018, 0.035, default=0.025, optimize = is_optimize_break)
+    entry_bb_width = DecimalParameter(0.065, 0.135, default=0.095, optimize = is_optimize_break)
+    entry_bb_delta = DecimalParameter(0.018, 0.035, default=0.025, optimize = is_optimize_break)
 
     is_optimize_local_uptrend = False
-    buy_ema_diff = DecimalParameter(0.022, 0.027, default=0.025, optimize = is_optimize_local_uptrend)
-    buy_bb_factor = DecimalParameter(0.990, 0.999, default=0.995, optimize = False)
-    buy_closedelta = DecimalParameter(12.0, 18.0, default=15.0, optimize = is_optimize_local_uptrend)
+    entry_ema_diff = DecimalParameter(0.022, 0.027, default=0.025, optimize = is_optimize_local_uptrend)
+    entry_bb_factor = DecimalParameter(0.990, 0.999, default=0.995, optimize = False)
+    entry_closedelta = DecimalParameter(12.0, 18.0, default=15.0, optimize = is_optimize_local_uptrend)
 
 
 
     is_optimize_ewo = False
-    buy_rsi_fast = IntParameter(35, 50, default=45, optimize = is_optimize_ewo)
-    buy_rsi = IntParameter(15, 35, default=35, optimize = is_optimize_ewo)
-    buy_ewo = DecimalParameter(-6.0, 5, default=-5.585, optimize = is_optimize_ewo)
-    buy_ema_low = DecimalParameter(0.9, 0.99, default=0.942 , optimize = is_optimize_ewo)
-    buy_ema_high = DecimalParameter(0.95, 1.2, default=1.084 , optimize = is_optimize_ewo)
+    entry_rsi_fast = IntParameter(35, 50, default=45, optimize = is_optimize_ewo)
+    entry_rsi = IntParameter(15, 35, default=35, optimize = is_optimize_ewo)
+    entry_ewo = DecimalParameter(-6.0, 5, default=-5.585, optimize = is_optimize_ewo)
+    entry_ema_low = DecimalParameter(0.9, 0.99, default=0.942 , optimize = is_optimize_ewo)
+    entry_ema_high = DecimalParameter(0.95, 1.2, default=1.084 , optimize = is_optimize_ewo)
 
     is_optimize_ewo_2 = False
-    buy_rsi_fast_ewo_2 = IntParameter(15, 50, default=45, optimize = is_optimize_ewo_2)
-    buy_rsi_ewo_2 = IntParameter(15, 50, default=35, optimize = is_optimize_ewo_2)
-    buy_ema_low_2 = DecimalParameter(0.90, 1.2, default=0.970 , optimize = is_optimize_ewo_2)
-    buy_ema_high_2 = DecimalParameter(0.90, 1.2, default=1.087 , optimize = is_optimize_ewo_2)
-    buy_ewo_high_2 = DecimalParameter(2, 12, default=4.179, optimize = is_optimize_ewo_2)
+    entry_rsi_fast_ewo_2 = IntParameter(15, 50, default=45, optimize = is_optimize_ewo_2)
+    entry_rsi_ewo_2 = IntParameter(15, 50, default=35, optimize = is_optimize_ewo_2)
+    entry_ema_low_2 = DecimalParameter(0.90, 1.2, default=0.970 , optimize = is_optimize_ewo_2)
+    entry_ema_high_2 = DecimalParameter(0.90, 1.2, default=1.087 , optimize = is_optimize_ewo_2)
+    entry_ewo_high_2 = DecimalParameter(2, 12, default=4.179, optimize = is_optimize_ewo_2)
 
     is_optimize_r_deadfish = False
-    buy_r_deadfish_ema = DecimalParameter(0.90, 1.2, default=1.087 , optimize = is_optimize_r_deadfish)
-    buy_r_deadfish_bb_width = DecimalParameter(0.03, 0.75, default=0.05 , optimize = is_optimize_r_deadfish)
-    buy_r_deadfish_bb_factor = DecimalParameter(0.90, 1.2, default=1.0 , optimize = is_optimize_r_deadfish)
-    buy_r_deadfish_volume_factor = DecimalParameter(1, 2.5, default=1.0 , optimize = is_optimize_r_deadfish)
+    entry_r_deadfish_ema = DecimalParameter(0.90, 1.2, default=1.087 , optimize = is_optimize_r_deadfish)
+    entry_r_deadfish_bb_width = DecimalParameter(0.03, 0.75, default=0.05 , optimize = is_optimize_r_deadfish)
+    entry_r_deadfish_bb_factor = DecimalParameter(0.90, 1.2, default=1.0 , optimize = is_optimize_r_deadfish)
+    entry_r_deadfish_volume_factor = DecimalParameter(1, 2.5, default=1.0 , optimize = is_optimize_r_deadfish)
 
     is_optimize_r_deadfish_protection = False
-    buy_r_deadfish_cti = DecimalParameter(-0.6, -0.0, default=-0.5 , optimize = is_optimize_r_deadfish_protection)
-    buy_r_deadfish_r14 = DecimalParameter(-60, -44, default=-60 , optimize = is_optimize_r_deadfish_protection)
+    entry_r_deadfish_cti = DecimalParameter(-0.6, -0.0, default=-0.5 , optimize = is_optimize_r_deadfish_protection)
+    entry_r_deadfish_r14 = DecimalParameter(-60, -44, default=-60 , optimize = is_optimize_r_deadfish_protection)
 
     is_optimize_clucha = False
-    buy_clucha_bbdelta_close = DecimalParameter(0.01,0.05, default=0.02206, optimize = is_optimize_clucha)
-    buy_clucha_bbdelta_tail = DecimalParameter(0.7, 1.2, default=1.02515, optimize = is_optimize_clucha)
-    buy_clucha_closedelta_close = DecimalParameter(0.001, 0.05, default=0.04401, optimize = is_optimize_clucha)
-    buy_clucha_rocr_1h = DecimalParameter(0.1, 1.0, default=0.47782, optimize = is_optimize_clucha)
+    entry_clucha_bbdelta_close = DecimalParameter(0.01,0.05, default=0.02206, optimize = is_optimize_clucha)
+    entry_clucha_bbdelta_tail = DecimalParameter(0.7, 1.2, default=1.02515, optimize = is_optimize_clucha)
+    entry_clucha_closedelta_close = DecimalParameter(0.001, 0.05, default=0.04401, optimize = is_optimize_clucha)
+    entry_clucha_rocr_1h = DecimalParameter(0.1, 1.0, default=0.47782, optimize = is_optimize_clucha)
 
     is_optimize_gumbo = False
-    buy_gumbo_ema = DecimalParameter(0.9, 1.2, default=0.97 , optimize = is_optimize_gumbo)
-    buy_gumbo_ewo_low = DecimalParameter(-12.0, 5, default=-5.585, optimize = is_optimize_gumbo)
+    entry_gumbo_ema = DecimalParameter(0.9, 1.2, default=0.97 , optimize = is_optimize_gumbo)
+    entry_gumbo_ewo_low = DecimalParameter(-12.0, 5, default=-5.585, optimize = is_optimize_gumbo)
 
     is_optimize_gumbo_protection = False
-    buy_gumbo_cti = DecimalParameter(-0.9, -0.0, default=-0.5 , optimize = is_optimize_gumbo_protection)
-    buy_gumbo_r14 = DecimalParameter(-100, -44, default=-60 , optimize = is_optimize_gumbo_protection)
+    entry_gumbo_cti = DecimalParameter(-0.9, -0.0, default=-0.5 , optimize = is_optimize_gumbo_protection)
+    entry_gumbo_r14 = DecimalParameter(-100, -44, default=-60 , optimize = is_optimize_gumbo_protection)
 
     is_optimize_sqzmom_protection = False
-    buy_sqzmom_ema = DecimalParameter(0.9, 1.2, default=0.97 , optimize = is_optimize_sqzmom_protection)
-    buy_sqzmom_ewo = DecimalParameter(-12 , 12, default= 0 , optimize = is_optimize_sqzmom_protection)
-    buy_sqzmom_r14 = DecimalParameter(-100, -22, default=-50 , optimize = is_optimize_sqzmom_protection)
+    entry_sqzmom_ema = DecimalParameter(0.9, 1.2, default=0.97 , optimize = is_optimize_sqzmom_protection)
+    entry_sqzmom_ewo = DecimalParameter(-12 , 12, default= 0 , optimize = is_optimize_sqzmom_protection)
+    entry_sqzmom_r14 = DecimalParameter(-100, -22, default=-50 , optimize = is_optimize_sqzmom_protection)
 
     is_optimize_nfix_49_protection = False
-    buy_nfix_49_cti = DecimalParameter(-0.9, -0.0, default=-0.5 , optimize = is_optimize_nfix_49_protection)
-    buy_nfix_49_r14 = DecimalParameter(-100, -44, default=-60 , optimize = is_optimize_nfix_49_protection)
+    entry_nfix_49_cti = DecimalParameter(-0.9, -0.0, default=-0.5 , optimize = is_optimize_nfix_49_protection)
+    entry_nfix_49_r14 = DecimalParameter(-100, -44, default=-60 , optimize = is_optimize_nfix_49_protection)
 
     is_optimize_btc_safe = False
-    buy_btc_safe = IntParameter(-300, 50, default=-200, optimize = is_optimize_btc_safe)
-    buy_btc_safe_1d = DecimalParameter(-0.075, -0.025, default=-0.05, optimize = is_optimize_btc_safe)
-    buy_threshold = DecimalParameter(0.003, 0.012, default=0.008, optimize = is_optimize_btc_safe)
+    entry_btc_safe = IntParameter(-300, 50, default=-200, optimize = is_optimize_btc_safe)
+    entry_btc_safe_1d = DecimalParameter(-0.075, -0.025, default=-0.05, optimize = is_optimize_btc_safe)
+    entry_threshold = DecimalParameter(0.003, 0.012, default=0.008, optimize = is_optimize_btc_safe)
 
     is_optimize_check = False
-    buy_roc_1h = IntParameter(-25, 200, default=10, optimize = is_optimize_check)
-    buy_bb_width_1h = DecimalParameter(0.3, 2.0, default=0.3, optimize = is_optimize_check)
+    entry_roc_1h = IntParameter(-25, 200, default=10, optimize = is_optimize_check)
+    entry_bb_width_1h = DecimalParameter(0.3, 2.0, default=0.3, optimize = is_optimize_check)
 
     ## Slippage params
 
     is_optimize_slip = False
-    max_slip = DecimalParameter(0.33, 1.00, default=0.33, decimals=3, optimize=is_optimize_slip , space='buy', load=True)
+    max_slip = DecimalParameter(0.33, 1.00, default=0.33, decimals=3, optimize=is_optimize_slip , space='entry', load=True)
 
     ## Sell params
 
-    sell_btc_safe = IntParameter(-400, -300, default=-365, optimize = False)
+    exit_btc_safe = IntParameter(-400, -300, default=-365, optimize = False)
 
-    is_optimize_sell_stoploss = False
-    sell_cmf = DecimalParameter(-0.4, 0.0, default=0.0, optimize = is_optimize_sell_stoploss)
-    sell_ema_close_delta = DecimalParameter(0.022, 0.027, default= 0.024, optimize = is_optimize_sell_stoploss)
-    sell_ema = DecimalParameter(0.97, 0.99, default=0.987 , optimize = is_optimize_sell_stoploss)
+    is_optimize_exit_stoploss = False
+    exit_cmf = DecimalParameter(-0.4, 0.0, default=0.0, optimize = is_optimize_exit_stoploss)
+    exit_ema_close_delta = DecimalParameter(0.022, 0.027, default= 0.024, optimize = is_optimize_exit_stoploss)
+    exit_ema = DecimalParameter(0.97, 0.99, default=0.987 , optimize = is_optimize_exit_stoploss)
 
     is_optimize_deadfish = False
-    sell_deadfish_bb_width = DecimalParameter(0.03, 0.75, default=0.05 , optimize = is_optimize_deadfish)
-    sell_deadfish_profit = DecimalParameter(-0.15, -0.05, default=-0.05 , optimize = is_optimize_deadfish)
-    sell_deadfish_bb_factor = DecimalParameter(0.90, 1.20, default=1.0 , optimize = is_optimize_deadfish)
-    sell_deadfish_volume_factor = DecimalParameter(1, 2.5, default=1.0 , optimize = is_optimize_deadfish)
+    exit_deadfish_bb_width = DecimalParameter(0.03, 0.75, default=0.05 , optimize = is_optimize_deadfish)
+    exit_deadfish_profit = DecimalParameter(-0.15, -0.05, default=-0.05 , optimize = is_optimize_deadfish)
+    exit_deadfish_bb_factor = DecimalParameter(0.90, 1.20, default=1.0 , optimize = is_optimize_deadfish)
+    exit_deadfish_volume_factor = DecimalParameter(1, 2.5, default=1.0 , optimize = is_optimize_deadfish)
 
     is_optimize_bleeding = False
-    sell_bleeding_cti = DecimalParameter(-0.9, -0.0, default=-0.5 , optimize = is_optimize_bleeding)
-    sell_bleeding_r14 = DecimalParameter(-100, -44, default=-60 , optimize = is_optimize_bleeding)
-    sell_bleeding_volume_factor = DecimalParameter(1, 2.5, default=1.0 , optimize = is_optimize_bleeding)
+    exit_bleeding_cti = DecimalParameter(-0.9, -0.0, default=-0.5 , optimize = is_optimize_bleeding)
+    exit_bleeding_r14 = DecimalParameter(-100, -44, default=-60 , optimize = is_optimize_bleeding)
+    exit_bleeding_volume_factor = DecimalParameter(1, 2.5, default=1.0 , optimize = is_optimize_bleeding)
 
     is_optimize_cti_r = False
-    sell_cti_r_cti = DecimalParameter(0.55, 1, default=0.5 , optimize = is_optimize_cti_r)
-    sell_cti_r_r = DecimalParameter(-15, 0, default=-20 , optimize = is_optimize_cti_r)
+    exit_cti_r_cti = DecimalParameter(0.55, 1, default=0.5 , optimize = is_optimize_cti_r)
+    exit_cti_r_r = DecimalParameter(-15, 0, default=-20 , optimize = is_optimize_cti_r)
 
     ############################################################################
 
@@ -371,8 +371,8 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
 
         # MOMDIV
         mom = momdiv(informative_1h)
-        informative_1h['momdiv_buy'] = mom['momdiv_buy']
-        informative_1h['momdiv_sell'] = mom['momdiv_sell']
+        informative_1h['momdiv_entry'] = mom['momdiv_entry']
+        informative_1h['momdiv_exit'] = mom['momdiv_exit']
         informative_1h['momdiv_coh'] = mom['momdiv_coh']
         informative_1h['momdiv_col'] = mom['momdiv_col']
 
@@ -427,7 +427,7 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
         return sl_new
 
     # From NFIX
-    def custom_sell(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float,
+    def custom_exit(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float,
                     current_profit: float, **kwargs):
 
         dataframe, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
@@ -439,74 +439,74 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
         max_profit = ((trade.max_rate - trade.open_rate) / trade.open_rate)
         max_loss = ((trade.open_rate - trade.min_rate) / trade.min_rate)
 
-        buy_tag = 'empty'
-        if hasattr(trade, 'buy_tag') and trade.buy_tag is not None:
-            buy_tag = trade.buy_tag
-        buy_tags = buy_tag.split()
+        entry_tag = 'empty'
+        if hasattr(trade, 'entry_tag') and trade.entry_tag is not None:
+            entry_tag = trade.entry_tag
+        entry_tags = entry_tag.split()
 
-        # sell trail
+        # exit trail
         if 0.012 > current_profit >= 0.0:
             if (max_profit > (current_profit + 0.045)) and (last_candle['rsi'] < 46.0):
-                return f"sell_profit_t_0_1( {buy_tag})"
+                return f"exit_profit_t_0_1( {entry_tag})"
             elif (max_profit > (current_profit + 0.025)) and (last_candle['rsi'] < 32.0):
-                return f"sell_profit_t_0_2( {buy_tag})"
+                return f"exit_profit_t_0_2( {entry_tag})"
             elif (max_profit > (current_profit + 0.05)) and (last_candle['rsi'] < 48.0):
-                return f"sell_profit_t_0_3( {buy_tag})"
+                return f"exit_profit_t_0_3( {entry_tag})"
         elif 0.02 > current_profit >= 0.012:
             if (max_profit > (current_profit + 0.01)) and (last_candle['rsi'] < 39.0):
-                return f"sell_profit_t_1_1( {buy_tag})"
+                return f"exit_profit_t_1_1( {entry_tag})"
             elif (max_profit > (current_profit + 0.035)) and (last_candle['rsi'] < 45.0) and (last_candle['cmf'] < -0.0) and (last_candle['cmf_1h'] < -0.0):
-                return f"sell_profit_t_1_2( {buy_tag})"
+                return f"exit_profit_t_1_2( {entry_tag})"
             elif (max_profit > (current_profit + 0.02)) and (last_candle['rsi'] < 40.0) and (last_candle['cmf'] < -0.0) and (last_candle['cti_1h'] > 0.8):
-                return f"sell_profit_t_1_4( {buy_tag})"
+                return f"exit_profit_t_1_4( {entry_tag})"
             elif (max_profit > (current_profit + 0.04)) and (last_candle['rsi'] < 49.0) and (last_candle['cmf_1h'] < -0.0):
-                return f"sell_profit_t_1_5( {buy_tag})"
+                return f"exit_profit_t_1_5( {entry_tag})"
             elif (max_profit > (current_profit + 0.06)) and (last_candle['rsi'] < 43.0) and (last_candle['cmf'] < -0.0):
-                return f"sell_profit_t_1_7( {buy_tag})"
+                return f"exit_profit_t_1_7( {entry_tag})"
             elif (max_profit > (current_profit + 0.025)) and (last_candle['rsi'] < 40.0) and (last_candle['cmf'] < -0.1) and (last_candle['rsi_1h'] < 50.0):
-                return f"sell_profit_t_1_9( {buy_tag})"
+                return f"exit_profit_t_1_9( {entry_tag})"
             elif (max_profit > (current_profit + 0.025)) and (last_candle['rsi'] < 46.0) and (last_candle['cmf'] < -0.0) and (last_candle['r_480_1h'] > -20.0):
-                return f"sell_profit_t_1_10( {buy_tag})"
+                return f"exit_profit_t_1_10( {entry_tag})"
             elif (max_profit > (current_profit + 0.025)) and (last_candle['rsi'] < 42.0):
-                return f"sell_profit_t_1_11( {buy_tag})"
+                return f"exit_profit_t_1_11( {entry_tag})"
             elif (max_profit > (current_profit + 0.01)) and (last_candle['rsi'] < 44.0) and (last_candle['cmf'] < -0.25):
-                return f"sell_profit_t_1_12( {buy_tag})"
+                return f"exit_profit_t_1_12( {entry_tag})"
 
-        # sell cti_r
+        # exit cti_r
         if 0.012 > current_profit >= 0.0 :
-            if (last_candle['cti'] > self.sell_cti_r_cti.value) and (last_candle['r_14'] > self.sell_cti_r_r.value):
-                return f"sell_profit_t_cti_r_0_1( {buy_tag})"
+            if (last_candle['cti'] > self.exit_cti_r_cti.value) and (last_candle['r_14'] > self.exit_cti_r_r.value):
+                return f"exit_profit_t_cti_r_0_1( {entry_tag})"
 
-        # main sell
+        # main exit
         if current_profit > 0.02:
-            if (last_candle['momdiv_sell_1h'] == True):
-                return f"signal_profit_q_momdiv_1h( {buy_tag})"
-            if (last_candle['momdiv_sell'] == True):
-                return f"signal_profit_q_momdiv( {buy_tag})"
+            if (last_candle['momdiv_exit_1h'] == True):
+                return f"signal_profit_q_momdiv_1h( {entry_tag})"
+            if (last_candle['momdiv_exit'] == True):
+                return f"signal_profit_q_momdiv( {entry_tag})"
             if (last_candle['momdiv_coh'] == True):
-                return f"signal_profit_q_momdiv_coh( {buy_tag})"
+                return f"signal_profit_q_momdiv_coh( {entry_tag})"
 
-        # sell bear
+        # exit bear
         if last_candle['close'] < last_candle['ema_200']:
             if 0.02 > current_profit >= 0.01:
                 if (last_candle['rsi'] < 34.0) and (last_candle['cmf'] < 0.0):
-                    return f"sell_profit_u_bear_1_1( {buy_tag})"
+                    return f"exit_profit_u_bear_1_1( {entry_tag})"
                 elif (last_candle['rsi'] < 44.0) and (last_candle['cmf'] < -0.4):
-                    return f"sell_profit_u_bear_1_2( {buy_tag})"
+                    return f"exit_profit_u_bear_1_2( {entry_tag})"
 
-        # sell quick
+        # exit quick
         if (0.06 > current_profit > 0.02) and (last_candle['rsi'] > 80.0):
-            return f"signal_profit_q_1( {buy_tag})"
+            return f"signal_profit_q_1( {entry_tag})"
 
         if (0.06 > current_profit > 0.02) and (last_candle['cti'] > 0.95):
-            return f"signal_profit_q_2( {buy_tag})"
+            return f"signal_profit_q_2( {entry_tag})"
 
         if (0.06 > current_profit > 0.02) and (last_candle['pm'] <= last_candle['pmax_thresh']) and (last_candle['close'] > last_candle['sma_21'] * 1.1):
-            return f"signal_profit_q_pmax_bull( {buy_tag})"
+            return f"signal_profit_q_pmax_bull( {entry_tag})"
         if (0.06 > current_profit > 0.02) and (last_candle['pm'] > last_candle['pmax_thresh']) and (last_candle['close'] > last_candle['sma_21'] * 1.016):
-            return f"signal_profit_q_pmax_bear( {buy_tag})"
+            return f"signal_profit_q_pmax_bear( {entry_tag})"
 
-        # sell scalp
+        # exit scalp
 
         if (
                 (current_profit < -0.05)
@@ -516,25 +516,25 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
                 and last_candle['rsi'] > previous_candle_1['rsi']
                 and (last_candle['rsi'] > (last_candle['rsi_1h'] + 10.0))
             ):
-            return f"sell_stoploss_u_e_1( {buy_tag})"
+            return f"exit_stoploss_u_e_1( {entry_tag})"
 
         # stoploss - deadfish
-        if (    (current_profit < self.sell_deadfish_profit.value)
+        if (    (current_profit < self.exit_deadfish_profit.value)
                 and (last_candle['close'] < last_candle['ema_200'])
-                and (last_candle['bb_width'] < self.sell_deadfish_bb_width.value)
-                and (last_candle['close'] > last_candle['bb_middleband2'] * self.sell_deadfish_bb_factor.value)
-                and (last_candle['volume_mean_12'] < last_candle['volume_mean_24'] * self.sell_deadfish_volume_factor.value)
+                and (last_candle['bb_width'] < self.exit_deadfish_bb_width.value)
+                and (last_candle['close'] > last_candle['bb_middleband2'] * self.exit_deadfish_bb_factor.value)
+                and (last_candle['volume_mean_12'] < last_candle['volume_mean_24'] * self.exit_deadfish_volume_factor.value)
             ):
-            return f"sell_stoploss_deadfish( {buy_tag})"
+            return f"exit_stoploss_deadfish( {entry_tag})"
 
         # stoploss - bleeding
         #if (    (current_profit < -0.05)
                 #and (last_candle['close'] < last_candle['ema_200'])
-                #and (last_candle['cti_mean_24'] < self.sell_bleeding_cti.value)
-                #and (last_candle['r_14_mean_24'] < self.sell_bleeding_r14.value)
-                #and (last_candle['volume_mean_12'] < last_candle['volume_mean_24'] * self.sell_bleeding_volume_factor.value)
+                #and (last_candle['cti_mean_24'] < self.exit_bleeding_cti.value)
+                #and (last_candle['r_14_mean_24'] < self.exit_bleeding_r14.value)
+                #and (last_candle['volume_mean_12'] < last_candle['volume_mean_24'] * self.exit_bleeding_volume_factor.value)
             #):
-            #return f"sell_stoploss_bleeding( {buy_tag})"
+            #return f"exit_stoploss_bleeding( {entry_tag})"
 
         return None
 
@@ -580,14 +580,14 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
         dataframe['bb_delta'] = ((dataframe['bb_lowerband2'] - dataframe['bb_lowerband3']) / dataframe['bb_lowerband2'])
 
         # CCI hyperopt
-        for val in self.buy_cci_length.range:
+        for val in self.entry_cci_length.range:
             dataframe[f'cci_length_{val}'] = ta.CCI(dataframe, val)
 
         dataframe['cci'] = ta.CCI(dataframe, 26)
         dataframe['cci_long'] = ta.CCI(dataframe, 170)
 
         # RMI hyperopt
-        for val in self.buy_rmi_length.range:
+        for val in self.entry_rmi_length.range:
             dataframe[f'rmi_length_{val}'] = RMI(dataframe, length=val, mom=4)
 
         # SRSI hyperopt
@@ -686,8 +686,8 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
 
         # MOMDIV
         mom = momdiv(dataframe)
-        dataframe['momdiv_buy'] = mom['momdiv_buy']
-        dataframe['momdiv_sell'] = mom['momdiv_sell']
+        dataframe['momdiv_entry'] = mom['momdiv_entry']
+        dataframe['momdiv_exit'] = mom['momdiv_exit']
         dataframe['momdiv_coh'] = mom['momdiv_coh']
         dataframe['momdiv_col'] = mom['momdiv_col']
 
@@ -738,15 +738,15 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
 
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
         conditions = []
-        dataframe.loc[:, 'buy_tag'] = ''
+        dataframe.loc[:, 'entry_tag'] = ''
 
         is_dip = (
-                (dataframe[f'rmi_length_{self.buy_rmi_length.value}'] < self.buy_rmi.value) &
-                (dataframe[f'cci_length_{self.buy_cci_length.value}'] <= self.buy_cci.value) &
-                (dataframe['srsi_fk'] < self.buy_srsi_fk.value)
+                (dataframe[f'rmi_length_{self.entry_rmi_length.value}'] < self.entry_rmi.value) &
+                (dataframe[f'cci_length_{self.entry_cci_length.value}'] <= self.entry_cci.value) &
+                (dataframe['srsi_fk'] < self.entry_srsi_fk.value)
             )
 
         is_sqzOff = (
@@ -756,65 +756,65 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
 
         is_break = (
 
-                (dataframe['bb_delta'] > self.buy_bb_delta.value) &
-                (dataframe['bb_width'] > self.buy_bb_width.value) &
-                (dataframe['closedelta'] > dataframe['close'] * self.buy_closedelta.value / 1000 ) &    # from BinH
-                (dataframe['close'] < dataframe['bb_lowerband3'] * self.buy_bb_factor.value)
+                (dataframe['bb_delta'] > self.entry_bb_delta.value) &
+                (dataframe['bb_width'] > self.entry_bb_width.value) &
+                (dataframe['closedelta'] > dataframe['close'] * self.entry_closedelta.value / 1000 ) &    # from BinH
+                (dataframe['close'] < dataframe['bb_lowerband3'] * self.entry_bb_factor.value)
             )
 
         is_local_uptrend = (                                                                            # from NFI next gen, credit goes to @iterativ
                 (dataframe['ema_26'] > dataframe['ema_12']) &
-                (dataframe['ema_26'] - dataframe['ema_12'] > dataframe['open'] * self.buy_ema_diff.value) &
+                (dataframe['ema_26'] - dataframe['ema_12'] > dataframe['open'] * self.entry_ema_diff.value) &
                 (dataframe['ema_26'].shift() - dataframe['ema_12'].shift() > dataframe['open'] / 100) &
-                (dataframe['close'] < dataframe['bb_lowerband2'] * self.buy_bb_factor.value) &
-                (dataframe['closedelta'] > dataframe['close'] * self.buy_closedelta.value / 1000 )
+                (dataframe['close'] < dataframe['bb_lowerband2'] * self.entry_bb_factor.value) &
+                (dataframe['closedelta'] > dataframe['close'] * self.entry_closedelta.value / 1000 )
             )
 
         is_ewo = (                                                                                      # from SMA offset
-                (dataframe['rsi_fast'] < self.buy_rsi_fast.value) &
-                (dataframe['close'] < dataframe['ema_8'] * self.buy_ema_low.value) &
-                (dataframe['EWO'] > self.buy_ewo.value) &
-                (dataframe['close'] < dataframe['ema_16'] * self.buy_ema_high.value) &
-                (dataframe['rsi'] < self.buy_rsi.value)
+                (dataframe['rsi_fast'] < self.entry_rsi_fast.value) &
+                (dataframe['close'] < dataframe['ema_8'] * self.entry_ema_low.value) &
+                (dataframe['EWO'] > self.entry_ewo.value) &
+                (dataframe['close'] < dataframe['ema_16'] * self.entry_ema_high.value) &
+                (dataframe['rsi'] < self.entry_rsi.value)
             )
 
         is_ewo_2 = (
                 (dataframe['ema_200_1h'] > dataframe['ema_200_1h'].shift(12)) &
                 (dataframe['ema_200_1h'].shift(12) > dataframe['ema_200_1h'].shift(24)) &
-                (dataframe['rsi_fast'] < self.buy_rsi_fast_ewo_2.value) &
-                (dataframe['close'] < dataframe['ema_8'] * self.buy_ema_low_2.value) &
-                (dataframe['EWO'] > self.buy_ewo_high_2.value) &
-                (dataframe['close'] < dataframe['ema_16'] * self.buy_ema_high_2.value) &
-                (dataframe['rsi'] < self.buy_rsi_ewo_2.value)
+                (dataframe['rsi_fast'] < self.entry_rsi_fast_ewo_2.value) &
+                (dataframe['close'] < dataframe['ema_8'] * self.entry_ema_low_2.value) &
+                (dataframe['EWO'] > self.entry_ewo_high_2.value) &
+                (dataframe['close'] < dataframe['ema_16'] * self.entry_ema_high_2.value) &
+                (dataframe['rsi'] < self.entry_rsi_ewo_2.value)
             )
 
         is_r_deadfish = (                                                                               # reverse deadfish
-                (dataframe['ema_100'] < dataframe['ema_200'] * self.buy_r_deadfish_ema.value) &
-                (dataframe['bb_width'] > self.buy_r_deadfish_bb_width.value) &
-                (dataframe['close'] < dataframe['bb_middleband2'] * self.buy_r_deadfish_bb_factor.value) &
-                (dataframe['volume_mean_12'] > dataframe['volume_mean_24'] * self.buy_r_deadfish_volume_factor.value) &
-                (dataframe['cti'] < self.buy_r_deadfish_cti.value) &
-                (dataframe['r_14'] < self.buy_r_deadfish_r14.value)
+                (dataframe['ema_100'] < dataframe['ema_200'] * self.entry_r_deadfish_ema.value) &
+                (dataframe['bb_width'] > self.entry_r_deadfish_bb_width.value) &
+                (dataframe['close'] < dataframe['bb_middleband2'] * self.entry_r_deadfish_bb_factor.value) &
+                (dataframe['volume_mean_12'] > dataframe['volume_mean_24'] * self.entry_r_deadfish_volume_factor.value) &
+                (dataframe['cti'] < self.entry_r_deadfish_cti.value) &
+                (dataframe['r_14'] < self.entry_r_deadfish_r14.value)
             )
 
         is_clucHA = (
-                (dataframe['rocr_1h'] > self.buy_clucha_rocr_1h.value ) &
+                (dataframe['rocr_1h'] > self.entry_clucha_rocr_1h.value ) &
                 (
                         (dataframe['bb_lowerband2_40'].shift() > 0) &
-                        (dataframe['bb_delta_cluc'] > dataframe['ha_close'] * self.buy_clucha_bbdelta_close.value) &
-                        (dataframe['ha_closedelta'] > dataframe['ha_close'] * self.buy_clucha_closedelta_close.value) &
-                        (dataframe['tail'] < dataframe['bb_delta_cluc'] * self.buy_clucha_bbdelta_tail.value) &
+                        (dataframe['bb_delta_cluc'] > dataframe['ha_close'] * self.entry_clucha_bbdelta_close.value) &
+                        (dataframe['ha_closedelta'] > dataframe['ha_close'] * self.entry_clucha_closedelta_close.value) &
+                        (dataframe['tail'] < dataframe['bb_delta_cluc'] * self.entry_clucha_bbdelta_tail.value) &
                         (dataframe['ha_close'] < dataframe['bb_lowerband2_40'].shift()) &
                         (dataframe['ha_close'] < dataframe['ha_close'].shift())
                 )
             )
 
         is_gumbo = (                                                                        # Modified from gumbo1, creadit goes to original author @raph92
-                (dataframe['EWO'] < self.buy_gumbo_ewo_low.value) &
+                (dataframe['EWO'] < self.entry_gumbo_ewo_low.value) &
                 (dataframe['bb_middleband2_1h'] >= dataframe['T3_1h']) &
-                (dataframe['T3'] <= dataframe['ema_8'] * self.buy_gumbo_ema.value) &
-                (dataframe['cti'] < self.buy_gumbo_cti.value) &
-                (dataframe['r_14'] < self.buy_gumbo_r14.value)
+                (dataframe['T3'] <= dataframe['ema_8'] * self.entry_gumbo_ema.value) &
+                (dataframe['cti'] < self.entry_gumbo_cti.value) &
+                (dataframe['r_14'] < self.entry_gumbo_r14.value)
             )
 
         is_sqzmom = (                                                                       # Modified from squeezeMomentum, credit goes to original author @LazyBear of TradingView
@@ -822,9 +822,9 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
                 (dataframe['linreg_val_20'].shift(2) > dataframe['linreg_val_20'].shift(1)) &
                 (dataframe['linreg_val_20'].shift(1) < dataframe['linreg_val_20']) &
                 (dataframe['linreg_val_20'] < 0) &
-                (dataframe['close'] < dataframe['ema_13'] * self.buy_sqzmom_ema.value) &
-                (dataframe['EWO'] < self.buy_sqzmom_ewo.value) &
-                (dataframe['r_14'] < self.buy_sqzmom_r14.value)
+                (dataframe['close'] < dataframe['ema_13'] * self.entry_sqzmom_ema.value) &
+                (dataframe['EWO'] < self.entry_sqzmom_ewo.value) &
+                (dataframe['r_14'] < self.entry_sqzmom_r14.value)
             )
 
         # NFI quick mode, credit goes to @iterativ
@@ -872,8 +872,8 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
                 (dataframe['close'].shift(3) < dataframe['ema_20'].shift(3) * 0.916) &
                 (dataframe['rsi'].shift(3) < 32.5) &
                 (dataframe['crsi'].shift(3) > 18.0) &
-                (dataframe['cti'] < self.buy_nfix_49_cti.value) &
-                (dataframe['r_14'] < self.buy_nfix_49_r14.value)
+                (dataframe['cti'] < self.entry_nfix_49_cti.value) &
+                (dataframe['r_14'] < self.entry_nfix_49_r14.value)
             )
 
         is_nfi7_33 = (
@@ -895,8 +895,8 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
             )
 
         is_additional_check = (
-                (dataframe['roc_1h'] < self.buy_roc_1h.value) &
-                (dataframe['bb_width_1h'] < self.buy_bb_width_1h.value)
+                (dataframe['roc_1h'] < self.entry_roc_1h.value) &
+                (dataframe['bb_width_1h'] < self.entry_bb_width_1h.value)
             )
 
         ## Additional Check
@@ -904,56 +904,56 @@ class BB_RPB_TSLmeneguzzo_2(IStrategy):
 
         ## Condition Append
         conditions.append(is_BB_checked)                                           # ~2.32 / 91.1% / 46.27%      D
-        dataframe.loc[is_BB_checked, 'buy_tag'] += 'bb '
+        dataframe.loc[is_BB_checked, 'entry_tag'] += 'bb '
 
         conditions.append(is_local_uptrend)                                        # ~3.28 / 92.4% / 69.72%
-        dataframe.loc[is_local_uptrend, 'buy_tag'] += 'local_uptrend '
+        dataframe.loc[is_local_uptrend, 'entry_tag'] += 'local_uptrend '
 
         conditions.append(is_ewo)                                                  # ~0.92 / 92.0% / 43.74%      D
-        dataframe.loc[is_ewo, 'buy_tag'] += 'ewo '
+        dataframe.loc[is_ewo, 'entry_tag'] += 'ewo '
 
         conditions.append(is_r_deadfish)                                           # ~0.99 / 86.9% / 21.93%      D
-        dataframe.loc[is_r_deadfish, 'buy_tag'] += 'r_deadfish '
+        dataframe.loc[is_r_deadfish, 'entry_tag'] += 'r_deadfish '
 
        # conditions.append(is_clucHA)                                               # ~7.2 / 92.5% / 97.98%       D
-       # dataframe.loc[is_clucHA, 'buy_tag'] += 'clucHA '
+       # dataframe.loc[is_clucHA, 'entry_tag'] += 'clucHA '
 
         #conditions.append(is_gumbo)                                                # ~2.63 / 90.6% / 41.49%      D
-        #dataframe.loc[is_gumbo, 'buy_tag'] += 'gumbo '
+        #dataframe.loc[is_gumbo, 'entry_tag'] += 'gumbo '
 
         conditions.append(is_sqzmom)                                               # ~3.14 / 92.4% / 64.14%      D
-        dataframe.loc[is_sqzmom, 'buy_tag'] += 'sqzmom '
+        dataframe.loc[is_sqzmom, 'entry_tag'] += 'sqzmom '
 
         conditions.append(is_nfi_13)                                               # ~0.4 / 100%                 D
-        dataframe.loc[is_nfi_13, 'buy_tag'] += 'nfi_13 '
+        dataframe.loc[is_nfi_13, 'entry_tag'] += 'nfi_13 '
 
         conditions.append(is_nfi_32)                                               # ~0.78 / 92.0 % / 37.41%     D
-        dataframe.loc[is_nfi_32, 'buy_tag'] += 'nfi_32 '
+        dataframe.loc[is_nfi_32, 'entry_tag'] += 'nfi_32 '
 
         conditions.append(is_nfi_33)                                               # ~0.11 / 100%                D
-        dataframe.loc[is_nfi_33, 'buy_tag'] += 'nfi_33 '
+        dataframe.loc[is_nfi_33, 'entry_tag'] += 'nfi_33 '
         
         conditions.append(is_nfix_49)                                              # ~0.33 / 100% / 0%           D
-        dataframe.loc[is_nfix_49, 'buy_tag'] += 'nfix_49 '
+        dataframe.loc[is_nfix_49, 'entry_tag'] += 'nfix_49 '
 
         conditions.append(is_nfi7_33)                                              # ~0.71 / 91.3% / 28.94%      D
-        dataframe.loc[is_nfi7_33, 'buy_tag'] += 'nfi7_33 '
+        dataframe.loc[is_nfi7_33, 'entry_tag'] += 'nfi7_33 '
 
         conditions.append(is_nfi7_37)                                              # ~0.46 / 92.6% / 17.05%      D
-        dataframe.loc[is_nfi7_37, 'buy_tag'] += 'nfi7_37 '
+        dataframe.loc[is_nfi7_37, 'entry_tag'] += 'nfi7_37 '
 
         if conditions:
             dataframe.loc[
                             
                             reduce(lambda x, y: x | y, conditions)
 
-                        , 'buy' ] = 1
+                        , 'entry' ] = 1
 
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
-        dataframe.loc[ (dataframe['volume'] > 0), 'sell' ] = 0
+        dataframe.loc[ (dataframe['volume'] > 0), 'exit' ] = 0
 
         return dataframe
 
@@ -1052,8 +1052,8 @@ def pmax(df, period, multiplier, length, MAtype, src):
 def momdiv(dataframe: DataFrame, mom_length: int = 10, bb_length: int = 20, bb_dev: float = 2.0, lookback: int = 30) -> DataFrame:
     mom: Series = ta.MOM(dataframe, timeperiod=mom_length)
     upperband, middleband, lowerband = ta.BBANDS(mom, timeperiod=bb_length, nbdevup=bb_dev, nbdevdn=bb_dev, matype=0)
-    buy = qtpylib.crossed_below(mom, lowerband)
-    sell = qtpylib.crossed_above(mom, upperband)
+    entry = qtpylib.crossed_below(mom, lowerband)
+    exit = qtpylib.crossed_above(mom, upperband)
     hh = dataframe['high'].rolling(lookback).max()
     ll = dataframe['low'].rolling(lookback).min()
     coh = dataframe['high'] >= hh
@@ -1062,8 +1062,8 @@ def momdiv(dataframe: DataFrame, mom_length: int = 10, bb_length: int = 20, bb_d
             "momdiv_mom": mom,
             "momdiv_upperb": upperband,
             "momdiv_lowerb": lowerband,
-            "momdiv_buy": buy,
-            "momdiv_sell": sell,
+            "momdiv_entry": entry,
+            "momdiv_exit": exit,
             "momdiv_coh": coh,
             "momdiv_col": col,
         }, index=dataframe['close'].index)

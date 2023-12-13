@@ -1,6 +1,6 @@
+---
 kubernetes:
   nodePort: 32324
-  
 configcreds:
   download_trades: true
   bot_name: freqtrading-binance-juliano
@@ -8,6 +8,19 @@ configcreds:
   dry_run_wallet: 50
   stake_amount: unlimited
   position_adjustment_enable: true
+  stoploss: -0.1
+  # Optimal timeframe for the strategy
+  timeframe: 5m
+  # trailing stoploss
+  trailing_stop: false
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.02
+  # run "populate_indicators" only for new candle
+  process_only_new_candles: true
+  # Experimental settings (configuration will overide these if set)
+  use_exit_signal: true
+  exit_profit_only: true
+  ignore_roi_if_entry_signal: false
   entry_pricing:
     price_side: other
     use_order_book: true
@@ -19,22 +32,20 @@ configcreds:
   exit_pricing:
     price_side: other
     use_order_book: true
-    order_book_top: 1    
+    order_book_top: 1
   exchange:
     name: binance
     key: HrLllzlPhN2BAAChE7iQdewMvawTuEwLGkWPYU1ZqlnxJ1uN1IdUernLvk6rU5cF
-    secret: >-
-      HSeKgVJP2XpL7AJWENZ54p2QexsWZq25jT3i8ywHpSLA7zKijo8yoKvFFTweTIYF
+    secret: HSeKgVJP2XpL7AJWENZ54p2QexsWZq25jT3i8ywHpSLA7zKijo8yoKvFFTweTIYF
 
   telegram:
     enabled: true
     token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
     chat_id: "1649376180"
- 
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: GodStraNew
+  strategy_name: Strategy001
   pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor 
+  freqaimodel: LightGBMRegressor

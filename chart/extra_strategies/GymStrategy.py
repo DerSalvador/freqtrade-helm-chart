@@ -1,17 +1,15 @@
 import numpy as np
 from pandas import DataFrame
-
 from freqtrade.strategy.interface import IStrategy
-
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 from stable_baselines3 import PPO
 
-
 class GymStrategy(IStrategy):
-    stoploss = -0.20
+    INTERFACE_VERSION = 3
+    stoploss = -0.2
     trailing_stop = False
-    ticker_interval = '5m'
+    timeframe = '5m'
     process_only_new_candles = False
     startup_candle_count: int = 20
     model = None
@@ -35,24 +33,19 @@ class GymStrategy(IStrategy):
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # ADX
         dataframe['adx'] = ta.ADX(dataframe)
-
         # Plus Directional Indicator / Movement
         dataframe['plus_dm'] = ta.PLUS_DM(dataframe)
         dataframe['plus_di'] = ta.PLUS_DI(dataframe)
-
         # # Minus Directional Indicator / Movement
         dataframe['minus_dm'] = ta.MINUS_DM(dataframe)
         dataframe['minus_di'] = ta.MINUS_DI(dataframe)
-
         # Aroon, Aroon Oscillator
         aroon = ta.AROON(dataframe)
         dataframe['aroonup'] = aroon['aroonup']
         dataframe['aroondown'] = aroon['aroondown']
         dataframe['aroonosc'] = ta.AROONOSC(dataframe)
-
         # Awesome Oscillator
         dataframe['ao'] = qtpylib.awesome_oscillator(dataframe)
-
         # # Keltner Channel
         # keltner = qtpylib.keltner_channel(dataframe)
         # dataframe["kc_upperband"] = keltner["upper"]
@@ -65,66 +58,47 @@ class GymStrategy(IStrategy):
         # dataframe["kc_width"] = (
         #     (dataframe["kc_upperband"] - dataframe["kc_lowerband"]) / dataframe["kc_middleband"]
         # )
-
         # Ultimate Oscillator
         dataframe['uo'] = ta.ULTOSC(dataframe)
-
         # Commodity Channel Index: values [Oversold:-100, Overbought:100]
         dataframe['cci'] = ta.CCI(dataframe)
-
         # RSI
         dataframe['rsi'] = ta.RSI(dataframe)
-
         # Inverse Fisher transform on RSI: values [-1.0, 1.0] (https://goo.gl/2JGGoy)
         rsi = 0.1 * (dataframe['rsi'] - 50)
         dataframe['fisher_rsi'] = (np.exp(2 * rsi) - 1) / (np.exp(2 * rsi) + 1)
-
         # Inverse Fisher transform on RSI normalized: values [0.0, 100.0] (https://goo.gl/2JGGoy)
         dataframe['fisher_rsi_norma'] = 50 * (dataframe['fisher_rsi'] + 1)
-
         # Stochastic Slow
         stoch = ta.STOCH(dataframe)
         dataframe['slowd'] = stoch['slowd']
         dataframe['slowk'] = stoch['slowk']
-
         # Stochastic Fast
         stoch_fast = ta.STOCHF(dataframe)
         dataframe['fastd'] = stoch_fast['fastd']
         dataframe['fastk'] = stoch_fast['fastk']
-
         # Stochastic RSI
         stoch_rsi = ta.STOCHRSI(dataframe)
         dataframe['fastd_rsi'] = stoch_rsi['fastd']
         dataframe['fastk_rsi'] = stoch_rsi['fastk']
-
         # MACD
         macd = ta.MACD(dataframe)
         dataframe['macd'] = macd['macd']
         dataframe['macdsignal'] = macd['macdsignal']
         dataframe['macdhist'] = macd['macdhist']
-
         # MFI
         dataframe['mfi'] = ta.MFI(dataframe)
-
         # # ROC
         dataframe['roc'] = ta.ROC(dataframe)
-
         # Overlap Studies
         # ------------------------------------
-
         # # Bollinger Bands
         bollinger = qtpylib.bollinger_bands(qtpylib.typical_price(dataframe), window=20, stds=2)
         dataframe['bb_lowerband'] = bollinger['lower']
         dataframe['bb_middleband'] = bollinger['mid']
         dataframe['bb_upperband'] = bollinger['upper']
-        dataframe["bb_percent"] = (
-            (dataframe["close"] - dataframe["bb_lowerband"]) /
-            (dataframe["bb_upperband"] - dataframe["bb_lowerband"])
-        )
-        dataframe["bb_width"] = (
-            (dataframe["bb_upperband"] - dataframe["bb_lowerband"]) / dataframe["bb_middleband"]
-        )
-
+        dataframe['bb_percent'] = (dataframe['close'] - dataframe['bb_lowerband']) / (dataframe['bb_upperband'] - dataframe['bb_lowerband'])
+        dataframe['bb_width'] = (dataframe['bb_upperband'] - dataframe['bb_lowerband']) / dataframe['bb_middleband']
         # # Bollinger Bands - Weighted (EMA based instead of SMA)
         # weighted_bollinger = qtpylib.weighted_bollinger_bands(
         #     qtpylib.typical_price(dataframe), window=20, stds=2
@@ -140,7 +114,6 @@ class GymStrategy(IStrategy):
         #     (dataframe["wbb_upperband"] - dataframe["wbb_lowerband"]) /
         #     dataframe["wbb_middleband"]
         # )
-
         # # EMA - Exponential Moving Average
         # dataframe['ema3'] = ta.EMA(dataframe, timeperiod=3)
         # dataframe['ema5'] = ta.EMA(dataframe, timeperiod=5)
@@ -148,7 +121,6 @@ class GymStrategy(IStrategy):
         # dataframe['ema21'] = ta.EMA(dataframe, timeperiod=21)
         # dataframe['ema50'] = ta.EMA(dataframe, timeperiod=50)
         # dataframe['ema100'] = ta.EMA(dataframe, timeperiod=100)
-
         # # SMA - Simple Moving Average
         # dataframe['sma3'] = ta.SMA(dataframe, timeperiod=3)
         # dataframe['sma5'] = ta.SMA(dataframe, timeperiod=5)
@@ -156,20 +128,16 @@ class GymStrategy(IStrategy):
         # dataframe['sma21'] = ta.SMA(dataframe, timeperiod=21)
         # dataframe['sma50'] = ta.SMA(dataframe, timeperiod=50)
         # dataframe['sma100'] = ta.SMA(dataframe, timeperiod=100)
-
         # Parabolic SAR
         # dataframe['sar'] = ta.SAR(dataframe)
-
         # TEMA - Triple Exponential Moving Average
         dataframe['tema'] = ta.TEMA(dataframe, timeperiod=9)
-
         # # Cycle Indicator
         # # ------------------------------------
         # # Hilbert Transform Indicator - SineWave
         # hilbert = ta.HT_SINE(dataframe)
         # dataframe['htsine'] = hilbert['sine']
         # dataframe['htleadsine'] = hilbert['leadsine']
-
         # # Pattern Recognition - Bullish candlestick patterns
         # # ------------------------------------
         # # Hammer: values [0, 100]
@@ -184,7 +152,6 @@ class GymStrategy(IStrategy):
         # dataframe['CDLMORNINGSTAR'] = ta.CDLMORNINGSTAR(dataframe) # values [0, 100]
         # # Three White Soldiers: values [0, 100]
         # dataframe['CDL3WHITESOLDIERS'] = ta.CDL3WHITESOLDIERS(dataframe) # values [0, 100]
-
         # # Pattern Recognition - Bearish candlestick patterns
         # # ------------------------------------
         # # Hanging Man: values [0, 100]
@@ -199,7 +166,6 @@ class GymStrategy(IStrategy):
         # dataframe['CDLEVENINGDOJISTAR'] = ta.CDLEVENINGDOJISTAR(dataframe)
         # # Evening Star: values [0, 100]
         # dataframe['CDLEVENINGSTAR'] = ta.CDLEVENINGSTAR(dataframe)
-
         # # Pattern Recognition - Bullish/Bearish candlestick patterns
         # # ------------------------------------
         # # Three Line Strike: values [0, -100, 100]
@@ -214,7 +180,6 @@ class GymStrategy(IStrategy):
         # dataframe['CDL3OUTSIDE'] = ta.CDL3OUTSIDE(dataframe) # values [0, -100, 100]
         # # Three Inside Up/Down: values [0, -100, 100]
         # dataframe['CDL3INSIDE'] = ta.CDL3INSIDE(dataframe) # values [0, -100, 100]
-
         # # Chart type
         # # ------------------------------------
         # # Heikin Ashi Strategy
@@ -223,92 +188,55 @@ class GymStrategy(IStrategy):
         # dataframe['ha_close'] = heikinashi['close']
         # dataframe['ha_high'] = heikinashi['high']
         # dataframe['ha_low'] = heikinashi['low']
-
         # Retrieve best bid and best ask from the orderbook
         # ------------------------------------
-        """
-        # first check if dataprovider is available
-        if self.dp:
-            if self.dp.runmode in ('live', 'dry_run'):
-                ob = self.dp.orderbook(metadata['pair'], 1)
-                dataframe['best_bid'] = ob['bids'][0][0]
-                dataframe['best_ask'] = ob['asks'][0][0]
-        """
-
+        "\n        # first check if dataprovider is available\n        if self.dp:\n            if self.dp.runmode in ('live', 'dry_run'):\n                ob = self.dp.orderbook(metadata['pair'], 1)\n                dataframe['best_bid'] = ob['bids'][0][0]\n                dataframe['best_ask'] = ob['asks'][0][0]\n        "
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         action, nan_list = self.rl_model_redict(dataframe)
-        dataframe.loc[action == 1, 'buy'] = 1
-        dataframe.loc[nan_list == True, 'buy'] = 0
+        dataframe.loc[action == 1, 'enter_long'] = 1
+        dataframe.loc[nan_list == True, 'enter_long'] = 0
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         action, nan_list = self.rl_model_redict(dataframe)
-        dataframe.loc[action == 2, 'sell'] = 1
-        dataframe.loc[nan_list == True, 'sell'] = 0
+        dataframe.loc[action == 2, 'exit_long'] = 1
+        dataframe.loc[nan_list == True, 'exit_long'] = 0
         return dataframe
 
     def rl_model_redict(self, dataframe):
-        data = np.array([
-            dataframe['adx'],
-            dataframe['plus_dm'],
-            dataframe['plus_di'],
-            dataframe['minus_dm'],
-            dataframe['minus_di'],
-            dataframe['aroonup'],
-            dataframe['aroondown'],
-            dataframe['aroonosc'],
-            dataframe['ao'],
-            # dataframe['kc_percent'],
-            # dataframe['kc_width'],
-            dataframe['uo'],
-            dataframe['cci'],
-            dataframe['rsi'],
-            dataframe['fisher_rsi'],
-            dataframe['slowd'],
-            dataframe['slowk'],
-            dataframe['fastd'],
-            dataframe['fastk'],
-            dataframe['fastd_rsi'],
-            dataframe['fastk_rsi'],
-            dataframe['macd'],
-            dataframe['macdsignal'],
-            dataframe['macdhist'],
-            dataframe['mfi'],
-            dataframe['roc'],
-            # row['bb_percent'],
-            # row['bb_width'],
-            # row['wbb_percent'],
-            # row['wbb_width'],
-            # dataframe['htsine'],
-            # dataframe['htleadsine'],
-            # row['CDLHAMMER'],
-            # row['CDLINVERTEDHAMMER'],
-            # row['CDLDRAGONFLYDOJI'],
-            # row['CDLPIERCING'],
-            # row['CDLMORNINGSTAR'],
-            # row['CDL3WHITESOLDIERS'],
-            # row['CDLHANGINGMAN'],
-            # row['CDLSHOOTINGSTAR'],
-            # row['CDLGRAVESTONEDOJI'],
-            # row['CDLDARKCLOUDCOVER'],
-            # row['CDLEVENINGDOJISTAR'],
-            # row['CDLEVENINGSTAR'],
-            # row['CDL3LINESTRIKE'],
-            # row['CDLSPINNINGTOP'],
-            # row['CDLENGULFING'],
-            # row['CDLHARAMI'],
-            # row['CDL3OUTSIDE'],
-            # row['CDL3INSIDE'],
-            # trad_status,
-            # (self.trade != None)
-        ], dtype=np.float)
-
+        # dataframe['kc_percent'],
+        # dataframe['kc_width'],
+        # row['bb_percent'],
+        # row['bb_width'],
+        # row['wbb_percent'],
+        # row['wbb_width'],
+        # dataframe['htsine'],
+        # dataframe['htleadsine'],
+        # row['CDLHAMMER'],
+        # row['CDLINVERTEDHAMMER'],
+        # row['CDLDRAGONFLYDOJI'],
+        # row['CDLPIERCING'],
+        # row['CDLMORNINGSTAR'],
+        # row['CDL3WHITESOLDIERS'],
+        # row['CDLHANGINGMAN'],
+        # row['CDLSHOOTINGSTAR'],
+        # row['CDLGRAVESTONEDOJI'],
+        # row['CDLDARKCLOUDCOVER'],
+        # row['CDLEVENINGDOJISTAR'],
+        # row['CDLEVENINGSTAR'],
+        # row['CDL3LINESTRIKE'],
+        # row['CDLSPINNINGTOP'],
+        # row['CDLENGULFING'],
+        # row['CDLHARAMI'],
+        # row['CDL3OUTSIDE'],
+        # row['CDL3INSIDE'],
+        # trad_status,
+        # (self.trade != None)
+        data = np.array([dataframe['adx'], dataframe['plus_dm'], dataframe['plus_di'], dataframe['minus_dm'], dataframe['minus_di'], dataframe['aroonup'], dataframe['aroondown'], dataframe['aroonosc'], dataframe['ao'], dataframe['uo'], dataframe['cci'], dataframe['rsi'], dataframe['fisher_rsi'], dataframe['slowd'], dataframe['slowk'], dataframe['fastd'], dataframe['fastk'], dataframe['fastd_rsi'], dataframe['fastk_rsi'], dataframe['macd'], dataframe['macdsignal'], dataframe['macdhist'], dataframe['mfi'], dataframe['roc']], dtype=np.float)
         data = data.reshape(-1, 24)
-
         nan_list = np.isnan(data).any(axis=1)
         data = np.nan_to_num(data)
         action, _ = self.model.predict(data, deterministic=True)
-
-        return action, nan_list
+        return (action, nan_list)

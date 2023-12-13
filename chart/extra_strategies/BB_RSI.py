@@ -1,61 +1,36 @@
-
 # --- Do not remove these libs ---
 from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
 # --------------------------------
-
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 
 class BB_RSI(IStrategy):
-    """
-    Strategy Bollinger Bands + RSI
-    author@: Leandro Handal
-    github@: https://github.com/lhandal
-
-    How to use it?
-    $ freqtrade trade --strategy BB_RSI
-    """
-
+    INTERFACE_VERSION = 3
+    '\n    Strategy Bollinger Bands + RSI\n    author@: Leandro Handal\n    github@: https://github.com/lhandal\n\n    How to use it?\n    $ freqtrade trade --strategy BB_RSI\n    '
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
-    minimal_roi = {
-
-        "0": 0.4,
-        "335": 0.18834,
-        "564": 0.07349,
-        "1097": 0
-    }
-
+    minimal_roi = {'0': 0.4, '335': 0.18834, '564': 0.07349, '1097': 0}
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
     stoploss = -0.06491
     # Optimal ticker interval for the strategy
-    ticker_interval = '1h'
-
+    timeframe = '1h'
     # trailing stoploss
     trailing_only_offset_is_reached = False
     trailing_stop = True
     trailing_stop_positive = 0.01036
     trailing_stop_positive_offset = 0.02409
-
     # run "populate_indicators" only for new candle
     process_only_new_candles = False
-
     # Experimental settings (configuration will overide these if set)
-    use_sell_signal = True
+    use_exit_signal = True
     exit_profit_only = True
-    ignore_roi_if_buy_signal = False
-
+    ignore_roi_if_entry_signal = False
     # Optional order type mapping
-    order_types = {
-        'buy': 'limit',
-        'sell': 'limit',
-        'stoploss': 'market',
-        'stoploss_on_exchange': False
-    }
+    order_types = {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
 
     def informative_pairs(self):
         """
@@ -78,49 +53,29 @@ class BB_RSI(IStrategy):
         you are using. Let uncomment only the indicator you are using in your strategies
         or your hyperopt configuration, otherwise you will waste your memory and CPU usage.
         """
-
         # RSI
         dataframe['rsi'] = ta.RSI(dataframe)
-
         # Bollinger Bands
         bollinger = qtpylib.bollinger_bands(qtpylib.typical_price(dataframe), window=20, stds=1)
         dataframe['bb_lowerband'] = bollinger['lower']
         dataframe['bb_middleband'] = bollinger['mid']
         dataframe['bb_upperband'] = bollinger['upper']
-
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the buy signal for the given dataframe
+        Based on TA indicators, populates the entry signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        dataframe.loc[
-            (
-
-                (dataframe['close'] < dataframe['bb_lowerband'])
-                &
-                (dataframe['rsi'] > 7)
-            ),
-            'buy'] = 1
-
+        dataframe.loc[(dataframe['close'] < dataframe['bb_lowerband']) & (dataframe['rsi'] > 7), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the sell signal for the given dataframe
+        Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        dataframe.loc[
-            (
-
-                (dataframe['close'] > dataframe['bb_upperband'])
-                &
-                (dataframe['rsi'] > 74)
-
-            ),
-            'sell'] = 1
+        dataframe.loc[(dataframe['close'] > dataframe['bb_upperband']) & (dataframe['rsi'] > 74), 'exit_long'] = 1
         return dataframe

@@ -1,3 +1,4 @@
+---
 configcreds:
   bot_name: freqtrade-kraken-stieves
   dry_run: false
@@ -14,9 +15,8 @@ configcreds:
     enabled: true
     token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"
     chat_id: "889071692"
-bot:  
+bot:
   enabled: true
   strategy_name: NostalgiaForInfinityX4
   pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor #  ReinforcementLearner
-    # freqaimodel: ReinforcementLearner # LightGBMRegressor
+  freqaimodel: LightGBMRegressor

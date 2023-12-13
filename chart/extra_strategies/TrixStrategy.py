@@ -5,16 +5,12 @@
 import numpy as np  # noqa
 import pandas as pd  # noqa
 from pandas import DataFrame
-
-from freqtrade.strategy import (BooleanParameter, CategoricalParameter, DecimalParameter,
-                                IStrategy, IntParameter)
-
+from freqtrade.strategy import BooleanParameter, CategoricalParameter, DecimalParameter, IStrategy, IntParameter
 # --------------------------------
 # Add your lib to import here
 import ta
-
-
 # This class is a sample. Feel free to customize it.
+
 class TrixStrategy(IStrategy):
     """
     Sources : 
@@ -69,77 +65,43 @@ class TrixStrategy(IStrategy):
 
     You must keep:
     - the lib in the section "Do not remove these libs"
-    - the methods: populate_indicators, populate_buy_trend, populate_sell_trend
+    - the methods: populate_indicators, populate_entry_trend, populate_exit_trend
     You should keep:
     - timeframe, minimal_roi, stoploss, trailing_*
     """
     # Strategy interface version - allow new iterations of the strategy interface.
     # Check the documentation or the Sample strategy to get the latest version.
-    INTERFACE_VERSION = 2
-
+    INTERFACE_VERSION = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi".
-    minimal_roi = {
-        "0": 100 # inactive
-    }
-
+    # inactive
+    minimal_roi = {'0': 100}
     # Optimal stoploss designed for the strategy.
     # This attribute will be overridden if the config file contains "stoploss".
-    stoploss = -0.99 # inactive
-
+    stoploss = -0.99  # inactive
     # Trailing stoploss
     trailing_stop = False
     # trailing_only_offset_is_reached = False
     # trailing_stop_positive = 0.01
     # trailing_stop_positive_offset = 0.0  # Disabled / not configured
-
     # Hyperoptable parameters
-    buy_stoch_rsi = DecimalParameter(0.5, 1, decimals=3, default=0.8, space="buy")
-    sell_stoch_rsi = DecimalParameter(0, 0.5, decimals=3, default=0.2, space="sell")
-
+    entry_stoch_rsi = DecimalParameter(0.5, 1, decimals=3, default=0.8, space='entry')
+    exit_stoch_rsi = DecimalParameter(0, 0.5, decimals=3, default=0.2, space='exit')
     # Optimal timeframe for the strategy.
     timeframe = '1h'
-
     # Run "populate_indicators()" only for new candle.
     process_only_new_candles = False
-
     # These values can be overridden in the "ask_strategy" section in the config.
-    use_sell_signal = True
+    use_exit_signal = True
     exit_profit_only = False
-    ignore_roi_if_buy_signal = False
-
+    ignore_roi_if_entry_signal = False
     # Number of candles the strategy requires before producing valid signals
     startup_candle_count: int = 21
-
     # Optional order type mapping.
-    order_types = {
-        'buy': 'limit',
-        'sell': 'limit',
-        'stoploss': 'market',
-        'stoploss_on_exchange': False
-    }
-
+    order_types = {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
     # Optional order time in force.
-    order_time_in_force = {
-        'buy': 'gtc',
-        'sell': 'gtc'
-    }
-
-    plot_config = {
-        'main_plot': {
-            'trix': {},
-        },
-        'subplots': {
-            "STOCH RSI": {
-                'stoch_rsi': {},
-            },
-            "TRIX": {
-                'trix_pct': {},
-                'trix_signal': {},
-                'trix_histo': {},
-            },
-        }
-    }
+    order_time_in_force = {'entry': 'gtc', 'exit': 'gtc'}
+    plot_config = {'main_plot': {'trix': {}}, 'subplots': {'STOCH RSI': {'stoch_rsi': {}}, 'TRIX': {'trix_pct': {}, 'trix_signal': {}, 'trix_histo': {}}}}
 
     def informative_pairs(self):
         """
@@ -165,55 +127,37 @@ class TrixStrategy(IStrategy):
         :param metadata: Additional information, like the currently traded pair
         :return: a Dataframe with all mandatory indicators for the strategies
         """
-
         # Momentum Indicators
         # ------------------------------------
-
         # # Stochastic RSI
         dataframe['stoch_rsi'] = ta.momentum.stochrsi(close=dataframe['close'], window=14, smooth1=3, smooth2=3)
-
         # Overlap Studies
         # ------------------------------------
-
         # -- Trix Indicator --
         trixLength = 9
         trixSignal = 21
         dataframe['trix'] = ta.trend.ema_indicator(ta.trend.ema_indicator(ta.trend.ema_indicator(close=dataframe['close'], window=trixLength), window=trixLength), window=trixLength)
-        dataframe['trix_pct'] = dataframe['trix'].pct_change()*100
-        dataframe['trix_signal'] = ta.trend.sma_indicator(dataframe['trix_pct'],trixSignal)
+        dataframe['trix_pct'] = dataframe['trix'].pct_change() * 100
+        dataframe['trix_signal'] = ta.trend.sma_indicator(dataframe['trix_pct'], trixSignal)
         dataframe['trix_histo'] = dataframe['trix_pct'] - dataframe['trix_signal']
-
         return dataframe
 
-    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the buy signal for the given dataframe
+        Based on TA indicators, populates the entry signal for the given dataframe
         :param dataframe: DataFrame populated with indicators
         :param metadata: Additional information, like the currently traded pair
-        :return: DataFrame with buy column
+        :return: DataFrame with entry column
         """
-        dataframe.loc[
-            (
-                (dataframe['trix_histo'] > 0) &
-                (dataframe['stoch_rsi'] < self.buy_stoch_rsi.value) &
-                (dataframe['volume'] > 0)
-            ),
-            'buy'] = 1
-
+        dataframe.loc[(dataframe['trix_histo'] > 0) & (dataframe['stoch_rsi'] < self.entry_stoch_rsi.value) & (dataframe['volume'] > 0), 'enter_long'] = 1
         return dataframe
 
-    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
-        Based on TA indicators, populates the sell signal for the given dataframe
+        Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame populated with indicators
         :param metadata: Additional information, like the currently traded pair
-        :return: DataFrame with sell column
+        :return: DataFrame with exit column
         """
-        dataframe.loc[
-            (
-                (dataframe['trix_histo'] < 0) &
-                (dataframe['stoch_rsi'] > self.sell_stoch_rsi.value) &
-                (dataframe['volume'] > 0)
-            ),
-            'sell'] = 1
+        dataframe.loc[(dataframe['trix_histo'] < 0) & (dataframe['stoch_rsi'] > self.exit_stoch_rsi.value) & (dataframe['volume'] > 0), 'exit_long'] = 1
         return dataframe
