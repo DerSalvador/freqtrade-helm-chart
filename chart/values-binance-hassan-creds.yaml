@@ -36,8 +36,8 @@ configcreds:
     order_book_top: 1
   exchange:
     name: binance
-    key: EvXcnxKsJ7OQHHkh9xjeMGrjgcl8Dj2Fgaoi0MuNUZgf9mxGluC45Uc8EFWb9ZJL
-    secret: gWa0htBqvwkdwLnUhY53LPdY4uHVoIW3ljUp2obKl1AdPe3O4nTIGHhVN1f0YNK6
+    key: SQVj4WE2YfDgq6kMbOdobyx8OmWGRt4l1aV9DsWGaDMoRKdIRLaa4wu82PUMWhVn
+    secret: rGreExUqQL6QMWmAaiWLuAehxUdoShSVHeWbJAHPApktT3nWE6UMBnmz0EDv9zD0
   telegram:
     enabled: true
     token: "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"

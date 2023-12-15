@@ -35,8 +35,8 @@ configcreds:
     order_book_top: 1
   exchange:
     name: binance
-    key: HrLllzlPhN2BAAChE7iQdewMvawTuEwLGkWPYU1ZqlnxJ1uN1IdUernLvk6rU5cF
-    secret: HSeKgVJP2XpL7AJWENZ54p2QexsWZq25jT3i8ywHpSLA7zKijo8yoKvFFTweTIYF
+    key: RCB5nWqiZJa0DnYRjuPbijmuacCY8cBkoVqshEv77O23yWEYvKhWlkVfcUdJVw5T
+    secret: MzvSLeBLWUQEqivtnQLasBY1lw8f1Sp4RJ8oXWq4zpKM0bL6PVZ2ZaOR70Y8UPPT
 
   telegram:
     enabled: true
