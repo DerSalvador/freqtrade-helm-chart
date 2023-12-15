@@ -6,16 +6,30 @@ configcreds:
   trading_mode: futures
   margin_mode: isolated
   max_open_trades: 5
-  stoploss: -0.09
-  timeframe: 1h
-  use_custom_stoploss: true
+  # NFIX4
+  stoploss: -0.99
+  timeframe: 5m
+  # Trailing stoploss (not used)
+  trailing_stop: false
+  trailing_only_offset_is_reached: true
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.03
+  use_custom_stoploss: false
+  has_downtime_protection: false
+  # Do you want to use the hold feature? (with hold-trades.json)
+  hold_support_enabled: true
+  # Run "populate_indicators()" only for new candle.
+  process_only_new_candles: true
+  # These values can be overridden in the "ask_strategy" section in the config.
+  use_exit_signal: true
+  exit_profit_only: false
+  ignore_roi_if_entry_signal: true
+  # Number of candles the strategy requires before producing valid signals
+  startup_candle_count: 800
+
   available_capital: 1500
   bot_name: freqtrading-binance-futures
   stake_amount_type: quote_currency
-  telegram:
-    enabled: true
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
   entry_pricing:
     price_side: other
     use_order_book: true
@@ -37,49 +51,49 @@ configcreds:
   position_adjustment_enable: true
   exchange:
     pair_blacklist: ["FLR/USDT:USDT", "(BNB)/USDT:.*", "NEO/USDT:USDT", "USTC/USDT:USDT", "USDC/USDT:USDT","ETH/USDT:USDT","YFI/USDT:USDT","SOL/USDT:USDT","BNB/USDT:USDT","ORDI/USDT:USDT","MKR/USDT:USDT",
-                    "AVAX/USDT:USDT", "BCH/USDT:USDT", "LTC/USDT:USDT", "INJ/USDT:USDT", "EGLD/USDT:USDT","LINK/USDT:USDT","TIA/USDT:USDT","ETC/USDT:USDT","XMR/USDT:USDT","DOT/USDT:USDT","DEFI/USDT:USDT",
-                    "ILV/USDT:USDT", "COMP/USDT:USDT", "FOOTBALL/USDT:USDT", "QNT/USDT:USDT", "OP/USDT:USDT","SSV/USDT:USDT","FIL/USDT:USDT","XVS/USDT:USDT","BSV/USDT:USDT","AXS/USDT:USDT","GMX/USDT:USDT",
-                    "RUNE/USDT:USDT", "DYDX/USDT:USDT", "KSM/USDT:USDT", "UNFI/USDT:USDT", "GAS/USDT:USDT","ADA/USDT:USDT","SNX/USDT:USDT","NEAR/USDT:USDT","XRP/USDT:USDT","ARB/USDT:USDT","BIGTIME/USDT:USDT",
-                    "RNDR/USDT:USDT", "IMX/USDT:USDT", "MASK/USDT:USDT", "WLD/USDT:USDT", "CYBER/USDT:USDT","APE/USDT:USDT","ENS/USDT:USDT","FXS/USDT:USDT","LDO/USDT:USDT","AR/USDT:USDT","STX/USDT:USDT",
-                    "HIGH/USDT:USDT", "LUNA2/USDT:USDT", "WAVES/USDT:USDT", "SUI/USDT:USDT", "EOS/USDT:USDT","SAND/USDT:USDT","DOGE/USDT:USDT","BADGER/USDT:USDT","QTUM/USDT:USDT","SUSHI/USDT:USDT",
-                    "FTM/USDT:USDT", "BLUR/USDT:USDT", "CAKE/USDT:USDT", "1000LUNC/USDT:USDT", "MINA/USDT:USDT","BAKE/USDT:USDT","CRV/USDT:USDT","PYTH/USDT:USDT","ANT/USDT:USDT","NTRN/USDT:USDT",
-                    "EDU/USDT:USDT", "MANA/USDT:USDT", "HOOK/USDT:USDT", "THETA/USDT:USDT", "MAGIC/USDT:USDT","JOE/USDT:USDT","ETHW/USDT:USDT","BAL/USDT:USDT","GMT/USDT:USDT","FLOW/USDT:USDT",
-                    "LQTY/USDT:USDT", "HIFI/USDT:USDT", "BAND/USDT:USDT", "COMBO/USDT:USDT", "GAL/USDT:USDT","SUPER/USDT:USDT","MTL/USDT:USDT","UMA/USDT:USDT","SEI/USDT:USDT","ALGO/USDT:USDT",
-                    "STRAX/USDT:USDT", "CVX/USDT:USDT", "AGLD/USDT:USDT", "KAVA/USDT:USDT", "IOTA/USDT:USDT","CELO/USDT:USDT","BLUEBIRD/USDT:USDT","ARK/USDT:USDT","BEL/USDT:USDT","CFX/USDT:USDT",
-                    "LIT/USDT:USDT", "TWT/USDT:USDT", "STG/USDT:USDT", "PENDLE/USDT:USDT", "MEME/USDT:USDT","SXP/USDT:USDT","RAD/USDT:USDT","ZRX/USDT:USDT","ARKM/USDT:USDT","KNC/USDT:USDT",
-                    "POWR/USDT:USDT", "RDNT/USDT:USDT", "ID/USDT:USDT", "1INCH/USDT:USDT", "GRT/USDT:USDT","BNT/USDT:USDT","SFP/USDT:USDT","WOO/USDT:USDT","PHB/USDT:USDT","CTK/USDT:USDT","
-                    C98/USDT:USDT", "KLAY/USDT:USDT", "MAV/USDT:USDT", "TRX/USDT:USDT", "XLM/USDT:USDT","LRC/USDT:USDT","1000BONK/USDT:USDT","GALA/USDT:USDT","LOOM/USDT:USDT","GLMR/USDT:USDT",
-                    "FRONT/USDT:USDT", "ONT/USDT:USDT", "BICO/USDT:USDT", "POLYX/USDT:USDT", "KAS/USDT:USDT","CTSI/USDT:USDT","BNX/USDT:USDT","ICX/USDT:USDT","STEEM/USDT:USDT","ONG/USDT:USDT",
-                    "AUDIO/USDT:USDT", "OGN/USDT:USDT", "RIF/USDT:USDT", "TOKEN/USDT:USDT", "ROSE/USDT:USDT","VET/USDT:USDT","DUSK/USDT:USDT","REN/USDT:USDT","ASTR/USDT:USDT","MDT/USDT:USDT",
-                    "1000XEC/USDT:USDT", "SKL/USDT:USDT", "WAXP/USDT:USDT", "IOTX/USDT:USDT", "ATA/USDT:USDT","ORBS/USDT:USDT","COTI/USDT:USDT","SNT/USDT:USDT","ZIL/USDT:USDT","XEM/USDT:USDT",
-                    "ARPA/USDT:USDT", "ANKR/USDT:USDT", "OXT/USDT:USDT", "ACH/USDT:USDT", "1000PEPE/USDT:USDT","TRU/USDT:USDT",
-                    "CELR/USDT:USDT", "RVN/USDT:USDT", "STMX/USDT:USDT", "IDEX/USDT:USDT", "ONE/USDT:USDT", "PEOPLE/USDT:USDT", "T/USDT:USDT", "STPT/USDT:USDT", "HOT/USDT:USDT", "IOST/USDT:USDT", 
-                    "SLP/USDT:USDT", "TLM/USDT:USDT", "AMB/USDT:USDT", "KEY/USDT:USDT", "REEF/USDT:USDT", "DGB/USDT:USDT", "MBL/USDT:USDT", "LEVER/USDT:USDT", "DENT/USDT:USDT", "CKB/USDT:USDT", 
-                    "SPELL/USDT:USDT", "1000SATS/USDT:USDT", "JTO/USDT:USDT"]
+                     "AVAX/USDT:USDT", "BCH/USDT:USDT", "LTC/USDT:USDT", "INJ/USDT:USDT", "EGLD/USDT:USDT","LINK/USDT:USDT","TIA/USDT:USDT","ETC/USDT:USDT","XMR/USDT:USDT","DOT/USDT:USDT","DEFI/USDT:USDT",
+                     "ILV/USDT:USDT", "COMP/USDT:USDT", "FOOTBALL/USDT:USDT", "QNT/USDT:USDT", "OP/USDT:USDT","SSV/USDT:USDT","FIL/USDT:USDT","XVS/USDT:USDT","BSV/USDT:USDT","AXS/USDT:USDT","GMX/USDT:USDT",
+                     "RUNE/USDT:USDT", "DYDX/USDT:USDT", "KSM/USDT:USDT", "UNFI/USDT:USDT", "GAS/USDT:USDT","ADA/USDT:USDT","SNX/USDT:USDT","NEAR/USDT:USDT","XRP/USDT:USDT","ARB/USDT:USDT","BIGTIME/USDT:USDT",
+                     "RNDR/USDT:USDT", "IMX/USDT:USDT", "MASK/USDT:USDT", "WLD/USDT:USDT", "CYBER/USDT:USDT","APE/USDT:USDT","ENS/USDT:USDT","FXS/USDT:USDT","LDO/USDT:USDT","AR/USDT:USDT","STX/USDT:USDT",
+                     "HIGH/USDT:USDT", "LUNA2/USDT:USDT", "WAVES/USDT:USDT", "SUI/USDT:USDT", "EOS/USDT:USDT","SAND/USDT:USDT","DOGE/USDT:USDT","BADGER/USDT:USDT","QTUM/USDT:USDT","SUSHI/USDT:USDT",
+                     "FTM/USDT:USDT", "BLUR/USDT:USDT", "CAKE/USDT:USDT", "1000LUNC/USDT:USDT", "MINA/USDT:USDT","BAKE/USDT:USDT","CRV/USDT:USDT","PYTH/USDT:USDT","ANT/USDT:USDT","NTRN/USDT:USDT",
+                     "EDU/USDT:USDT", "MANA/USDT:USDT", "HOOK/USDT:USDT", "THETA/USDT:USDT", "MAGIC/USDT:USDT","JOE/USDT:USDT","ETHW/USDT:USDT","BAL/USDT:USDT","GMT/USDT:USDT","FLOW/USDT:USDT",
+                     "LQTY/USDT:USDT", "HIFI/USDT:USDT", "BAND/USDT:USDT", "COMBO/USDT:USDT", "GAL/USDT:USDT","SUPER/USDT:USDT","MTL/USDT:USDT","UMA/USDT:USDT","SEI/USDT:USDT","ALGO/USDT:USDT",
+                     "STRAX/USDT:USDT", "CVX/USDT:USDT", "AGLD/USDT:USDT", "KAVA/USDT:USDT", "IOTA/USDT:USDT","CELO/USDT:USDT","BLUEBIRD/USDT:USDT","ARK/USDT:USDT","BEL/USDT:USDT","CFX/USDT:USDT",
+                     "LIT/USDT:USDT", "TWT/USDT:USDT", "STG/USDT:USDT", "PENDLE/USDT:USDT", "MEME/USDT:USDT","SXP/USDT:USDT","RAD/USDT:USDT","ZRX/USDT:USDT","ARKM/USDT:USDT","KNC/USDT:USDT",
+                     "POWR/USDT:USDT", "RDNT/USDT:USDT", "ID/USDT:USDT", "1INCH/USDT:USDT", "GRT/USDT:USDT","BNT/USDT:USDT","SFP/USDT:USDT","WOO/USDT:USDT","PHB/USDT:USDT","CTK/USDT:USDT","
+                     C98/USDT:USDT", "KLAY/USDT:USDT", "MAV/USDT:USDT", "TRX/USDT:USDT", "XLM/USDT:USDT","LRC/USDT:USDT","1000BONK/USDT:USDT","GALA/USDT:USDT","LOOM/USDT:USDT","GLMR/USDT:USDT",
+                     "FRONT/USDT:USDT", "ONT/USDT:USDT", "BICO/USDT:USDT", "POLYX/USDT:USDT", "KAS/USDT:USDT","CTSI/USDT:USDT","BNX/USDT:USDT","ICX/USDT:USDT","STEEM/USDT:USDT","ONG/USDT:USDT",
+                     "AUDIO/USDT:USDT", "OGN/USDT:USDT", "RIF/USDT:USDT", "TOKEN/USDT:USDT", "ROSE/USDT:USDT","VET/USDT:USDT","DUSK/USDT:USDT","REN/USDT:USDT","ASTR/USDT:USDT","MDT/USDT:USDT",
+                     "1000XEC/USDT:USDT", "SKL/USDT:USDT", "WAXP/USDT:USDT", "IOTX/USDT:USDT", "ATA/USDT:USDT","ORBS/USDT:USDT","COTI/USDT:USDT","SNT/USDT:USDT","ZIL/USDT:USDT","XEM/USDT:USDT",
+                     "ARPA/USDT:USDT", "ANKR/USDT:USDT", "OXT/USDT:USDT", "ACH/USDT:USDT", "1000PEPE/USDT:USDT","TRU/USDT:USDT",
+                     "CELR/USDT:USDT", "RVN/USDT:USDT", "STMX/USDT:USDT", "IDEX/USDT:USDT", "ONE/USDT:USDT", "PEOPLE/USDT:USDT", "T/USDT:USDT", "STPT/USDT:USDT", "HOT/USDT:USDT", "IOST/USDT:USDT", 
+                     "SLP/USDT:USDT", "TLM/USDT:USDT", "AMB/USDT:USDT", "KEY/USDT:USDT", "REEF/USDT:USDT", "DGB/USDT:USDT", "MBL/USDT:USDT", "LEVER/USDT:USDT", "DENT/USDT:USDT", "CKB/USDT:USDT", 
+                     "SPELL/USDT:USDT", "1000SATS/USDT:USDT", "JTO/USDT:USDT"]
     pair_whitelist: ["BTC/USDT:USDT", "ETH/USDT:USDT", "YFI/USDT:USDT",
-                    "SOL/USDT:USDT", "MKR/USDT:USDT", "BNB/USDT:USDT",
-                    "BCH/USDT:USDT",
-                    "LTC/USDT:USDT", "TRB/USDT:USDT", "AVAX/USDT:USDT",
-                    "LINK/USDT:USDT",
-                    "AAVE/USDT:USDT", "ORDI/USDT:USDT", "ILV/USDT:USDT",
-                    "BTCDOM/USDT:USDT",
-                    "XMR/USDT:USDT", "INJ/USDT:USDT", "TIA/USDT:USDT",
-                    "SSV/USDT:USDT",
-                    "ETC/USDT:USDT", "UNFI/USDT:USDT", "ATOM/USDT:USDT",
-                    "DEFI/USDT:USDT", "AXS/USDT:USDT", "COMP/USDT:USDT",
-                    "RUNE/USDT:USDT",
-                    "EGLD/USDT:USDT", "FOOTBALL/USDT:USDT", "GAS/USDT:USDT",
-                    "DOT/USDT:USDT",
-                    "UNI/USDT:USDT", "QNT/USDT:USDT", "APT/USDT:USDT",
-                    "FIL/USDT:USDT",
-                    "GMX/USDT:USDT", "WLD/USDT:USDT", "DYDX/USDT:USDT",
-                    "KSM/USDT:USDT",
-                    "APE/USDT:USDT", "BSV/USDT:USDT",
-                    "ZEC/USDT:USDT",
-                    "BLUR/USDT:USDT", "RNDR/USDT:USDT", "XRP/USDT:USDT",
-                    "DASH/USDT:USDT",
-                    "MATIC/USDT:USDT", "OP/USDT:USDT", "NEAR/USDT:USDT",
-                    "CYBER/USDT:USDT"]  
+                     "SOL/USDT:USDT", "MKR/USDT:USDT", "BNB/USDT:USDT",
+                     "BCH/USDT:USDT",
+                     "LTC/USDT:USDT", "TRB/USDT:USDT", "AVAX/USDT:USDT",
+                     "LINK/USDT:USDT",
+                     "AAVE/USDT:USDT", "ORDI/USDT:USDT", "ILV/USDT:USDT",
+                     "BTCDOM/USDT:USDT",
+                     "XMR/USDT:USDT", "INJ/USDT:USDT", "TIA/USDT:USDT",
+                     "SSV/USDT:USDT",
+                     "ETC/USDT:USDT", "UNFI/USDT:USDT", "ATOM/USDT:USDT",
+                     "DEFI/USDT:USDT", "AXS/USDT:USDT", "COMP/USDT:USDT",
+                     "RUNE/USDT:USDT",
+                     "EGLD/USDT:USDT", "FOOTBALL/USDT:USDT", "GAS/USDT:USDT",
+                     "DOT/USDT:USDT",
+                     "UNI/USDT:USDT", "QNT/USDT:USDT", "APT/USDT:USDT",
+                     "FIL/USDT:USDT",
+                     "GMX/USDT:USDT", "WLD/USDT:USDT", "DYDX/USDT:USDT",
+                     "KSM/USDT:USDT",
+                     "APE/USDT:USDT", "BSV/USDT:USDT",
+                     "ZEC/USDT:USDT",
+                     "BLUR/USDT:USDT", "RNDR/USDT:USDT", "XRP/USDT:USDT",
+                     "DASH/USDT:USDT",
+                     "MATIC/USDT:USDT", "OP/USDT:USDT", "NEAR/USDT:USDT",
+                     "CYBER/USDT:USDT"]  
     ccxt_config:
       enableRateLimit: true
       rateLimit: 2500
@@ -123,10 +137,14 @@ configcreds:
       min_rate_of_change: 0.03
       refresh_period: 1800
     - method: ShuffleFilter
+  telegram:
+    enabled: true
+    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "5711830404"    
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: AdxSmasS_v7
+  strategy_name: NostalgiaForInfinityX4
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
