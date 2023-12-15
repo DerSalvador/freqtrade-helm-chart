@@ -39,7 +39,7 @@ configcreds:
     order_book_top: 1
   exchange:
     name: binance
-    # API Futures
+    # API Futures 
     key: eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
     secret: qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy
     # API Spot
@@ -71,6 +71,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy002
+  strategy_name: BB_RPB_TSLmeneguzzo
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor

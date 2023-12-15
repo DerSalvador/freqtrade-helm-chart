@@ -4,15 +4,17 @@ kubernetes:
 
 configcreds:
   position_adjustment_enable: true
-  stoploss: -0.1
   # Optimal timeframe for the strategy
   timeframe: 5m
-  # trailing stoploss
+  # Run "populate_indicators()" only for new candle.
+  process_only_new_candles: true
+  stoploss: -0.99
+  # Custom stoploss
+  use_custom_stoploss: true
   trailing_stop: false
   trailing_stop_positive: 0.01
   trailing_stop_positive_offset: 0.02
   # run "populate_indicators" only for new candle
-  process_only_new_candles: true
   # Experimental settings (configuration will overide these if set)
   use_exit_signal: true
   exit_profit_only: true
@@ -31,6 +33,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy003
+  strategy_name: CombinedBinHClucAndMADV9
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
