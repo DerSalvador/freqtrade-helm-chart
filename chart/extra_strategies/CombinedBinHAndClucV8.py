@@ -55,8 +55,8 @@ class CombinedBinHAndClucV8(IStrategy):
     inf_1h = '1h'  # informative tf
     # Sell signal
     use_exit_signal = True
-    exit_profit_only = True  # it doesn't meant anything, just to guarantee there is a minimal profit.
-    exit_profit_offset = 0.001
+    exit_profit_only = True
+    exit_profit_offset = 0.001  # it doesn't meant anything, just to guarantee there is a minimal profit.
     ignore_roi_if_entry_signal = True
     # Trailing stoploss
     trailing_stop = False
