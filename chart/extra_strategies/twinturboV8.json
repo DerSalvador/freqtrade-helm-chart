@@ -1,0 +1,32 @@
+{
+  "strategy_name": "twinturboV8",
+  "params": {
+    "buy": {},
+    "sell": {},
+    "protection": {
+      "cooldown_lookback": 46,
+      "stop_duration": 5,
+      "use_stop_protection": true
+    },
+    "roi": {
+      "0": 0.221,
+      "18": 0.087,
+      "74": 0.025,
+      "192": 0
+    },
+    "stoploss": {
+      "stoploss": -0.343
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.029,
+      "trailing_stop_positive_offset": 0.069,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 7
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2023-12-17 17:47:50.994601+00:00"
+}

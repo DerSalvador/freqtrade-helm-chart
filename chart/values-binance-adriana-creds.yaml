@@ -1,0 +1,39 @@
+configcreds:
+  download_trades: true
+  bot_name: freqtrading-binance-adriana
+  dry_run: false
+  dry_run_wallet: 4000
+  stake_amount: unlimited
+  position_adjustment_enable: true
+  dry_run: false
+  dry_run_wallet: 4000
+  stake_amount: unlimited
+  position_adjustment_enable: true
+  entry_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1
+    price_last_balance: 0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1    
+  exchange:
+    name: binance
+    key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
+    secret: TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
+  telegram:
+    enabled: false
+    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "5711830404"
+
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: NostalgiaForInfinityX4 # Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor 
