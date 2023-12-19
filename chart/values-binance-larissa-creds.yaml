@@ -14,7 +14,7 @@ configcreds:
   position_adjustment_enable: true
   stoploss: -0.1
   # Optimal timeframe for the strategy
-  timeframe: 5m
+  timeframe: 1m
   # trailing stoploss
   trailing_stop: false
   trailing_stop_positive: 0.01
