@@ -9,24 +9,24 @@
       "use_stop_protection": true
     },
     "roi": {
-      "0": 0.221,
-      "18": 0.087,
-      "74": 0.025,
-      "192": 0
+      "0": 0.242,
+      "27": 0.049,
+      "73": 0.026,
+      "193": 0
     },
     "stoploss": {
-      "stoploss": -0.343
+      "stoploss": -0.339
     },
     "trailing": {
       "trailing_stop": true,
-      "trailing_stop_positive": 0.029,
-      "trailing_stop_positive_offset": 0.069,
-      "trailing_only_offset_is_reached": false
+      "trailing_stop_positive": 0.243,
+      "trailing_stop_positive_offset": 0.328,
+      "trailing_only_offset_is_reached": true
     },
     "max_open_trades": {
-      "max_open_trades": 7
+      "max_open_trades": 9
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2023-12-17 17:47:50.994601+00:00"
+  "export_time": "2023-12-17 18:08:43.900363+00:00"
 }
