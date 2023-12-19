@@ -41,6 +41,6 @@ configcreds:
     chat_id: "1759706931"
 bot:
   enabled: true
-  strategy_name: CombinedBinHAndClucV8
+  strategy_name: Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
