@@ -1,38 +1,28 @@
 {
   "strategy_name": "Strategy005",
   "params": {
-    "entry": {
-      "entry_fastd": 10,
-      "entry_fishRsiNorma": 83,
-      "entry_rsi": 9,
-      "entry_volumeAVG": 201
-    },
-    "exit": {
-      "exit_fishRsiNorma": 28,
-      "exit_minusDI": 84,
-      "exit_rsi": 3,
-      "exit_trigger": "sar-fisherRsi"
-    },
+    "buy": {},
+    "sell": {},
     "protection": {},
     "roi": {
-      "0": 0.22799999999999998,
-      "19": 0.053,
-      "49": 0.026,
-      "102": 0
+      "0": 0.134,
+      "36": 0.086,
+      "95": 0.025,
+      "193": 0
     },
     "stoploss": {
-      "stoploss": -0.092
+      "stoploss": -0.332
     },
     "trailing": {
       "trailing_stop": true,
-      "trailing_stop_positive": 0.317,
-      "trailing_stop_positive_offset": 0.366,
-      "trailing_only_offset_is_reached": false
+      "trailing_stop_positive": 0.144,
+      "trailing_stop_positive_offset": 0.22799999999999998,
+      "trailing_only_offset_is_reached": true
     },
     "max_open_trades": {
-      "max_open_trades": 7
+      "max_open_trades": 10
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2023-10-08 01:12:50.831522+00:00"
+  "export_time": "2023-12-18 01:27:23.935483+00:00"
 }
