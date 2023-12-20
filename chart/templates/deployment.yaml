@@ -22,10 +22,44 @@ spec:
           runAsUser: 0
         command:
         - bash
-        args: ["-c","chown -R ftuser:ftuser /sqlite; ls -ltra /sqlite" ] 
+        args: ["-c","chown -R ftuser:ftuser /sqlite; chown -R ftuser:ftuser /freqtrade; ls -ltra /sqlite; find /freqtrade" ] 
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
+      - name: freqtrade-strategy-updater-{{ .Release.Namespace }}
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        env:
+        - name: PYTHONPATH
+          value: /freqtrade:/freqtrade/user_data
+        command:
+        - freqtrade
+        args:
+        - strategy-updater
+{{- if .Values.bot.debug }}
+        - {{ .Values.bot.debuglevel }}
+{{- end }}
+        - --strategy-path
+        - /freqtrade/user_data/extra_strategies
+        - --strategy-list
+        - {{ .Values.bot.strategy_name }}
+        - --recursive-strategy-search
+        - --log-file 
+        - /tmp/freqtrade.log
+        - --data-dir
+        - /freqtrade/user_data/data
+        volumeMounts:
+        - name: nfi-hold-trades
+          subPath: nfi-hold-trades.json
+          mountPath: /freqtrade/user_data/nfi-hold-trades.json
+        - name: user-data
+          subPath: nfi-hold-trades.json
+          mountPath: /freqtrade/user_data
+        #- name: backtesting-data
+        #  mountPath: /freqtrade/user_data/data
+        - name: strategies
+          mountPath: /freqtrade/user_data/strategies
+        - name: extra-strategies
+          mountPath: /freqtrade/user_data/extra_strategies
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -35,7 +69,7 @@ spec:
               command: ["/bin/sh","-c","sleep 60"]
         env:
         - name: PYTHONPATH
-          value: $PYTHONPATH:/freqtrade/lib:/freqtrade/user_data/lib
+          value: /freqtrade:/freqtrade/user_data
         command:
         - freqtrade
         args:

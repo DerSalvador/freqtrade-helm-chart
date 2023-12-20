@@ -193,7 +193,7 @@ config:
 image:
   base:
     europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: 2023.10_freqai
+  tag: 2023.11_freqaitorch
 
 bot:
   debug: false

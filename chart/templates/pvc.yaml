@@ -31,7 +31,7 @@ spec:
   resources:
     requests:
       storage: {{ .Values.bot.pvc_size }}
----     
+---   
 #apiVersion: v1
 #kind: PersistentVolumeClaim
 #metadata:
