@@ -22,7 +22,7 @@ spec:
           runAsUser: 0
         command:
         - bash
-        args: ["-c","chown -R ftuser:ftuser /sqlite; chown -R ftuser:ftuser /freqtrade; ls -ltra /sqlite; find /freqtrade" ] 
+        args: ["-c","chown -R ftuser:ftuser /sqlite; chown -R ftuser:ftuser /freqtrade; ls -ltra /sqlite" ] 
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
