@@ -44,6 +44,6 @@ configcreds:
     chat_id: "6493643145"
 bot:
   enabled: true
-  strategy_name: Combined_NFIv6_SMA
+  strategy_name: TrixV15Strategy
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
