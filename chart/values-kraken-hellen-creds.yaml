@@ -44,6 +44,6 @@ configcreds:
     chat_id: "6493643145"
 bot:
   enabled: true
-  strategy_name: TrixV15Strategy
+  strategy_name: CryptoFrogHO2A
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor

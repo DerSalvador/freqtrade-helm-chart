@@ -34,11 +34,11 @@ class DoubleEMACrossoverWithTrend(IStrategy):
         # fast ema crosses above slow ema
         # Candle low is above EMA
         # Ensure this candle had volume (important for backtesting)
-        dataframe.loc[qtpylib.crossed_above(dataframe['ema9'], dataframe['ema21']) & (dataframe['low'] > dataframe['ema200']) & (dataframe['volume'] > 0), 'enter_long'] = 1
+        dataframe.loc[qtpylib.crossed_above(dataframe['ema9'], dataframe['ema21']) & (dataframe['low'] > dataframe['ema200']) & (dataframe['volume'] > 0), 'entry'] = 1
         return dataframe
 
     def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # fast ema crosses below slow ema
         # OR price is below trend ema
-        dataframe.loc[qtpylib.crossed_below(dataframe['ema9'], dataframe['ema21']) | (dataframe['low'] < dataframe['ema200']), 'exit_long'] = 1
+        dataframe.loc[qtpylib.crossed_below(dataframe['ema9'], dataframe['ema21']) | (dataframe['low'] < dataframe['ema200']), 'exit'] = 1
         return dataframe

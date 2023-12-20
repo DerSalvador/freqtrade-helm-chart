@@ -145,6 +145,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: ConsensusShort
+  strategy_name: ClucHAnix_hhll
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
