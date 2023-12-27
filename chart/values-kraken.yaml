@@ -27,9 +27,45 @@ nostalgiaforinfinity:
       XRP/USDT: 0.1
       XTZ/USDT: 0.1
 config:
+  stoploss: -0.99
+  trailing_stop: false
+  trailing_only_offset_is_reached: true
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.03
+  use_custom_stoploss: false
+  has_downtime_protection: false
+  # Do you want to use the hold feature? (with hold-trades.json)
+  hold_support_enabled: true
+  # Run "populate_indicators()" only for new candle.
+  process_only_new_candles: true
+  # These values can be overridden in the "ask_strategy" section in the config.
+  use_exit_signal: true
+  ignore_roi_if_entry_signal: true
+  # Number of candles the strategy requires before producing valid signals
+  # startup_candle_count: 720 # kraken doesnt provide 720 candles for 5m timeframe
+  stake_amount_type: quote_currency
+  entry_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1
+    price_last_balance: 0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1
+  dataformat_ohlcv: feather
+  dataformat_trades: feather
+  download_trades: false
+  dry_run: false
+  dry_run_wallet: 4000
+  stake_amount: unlimited
+  position_adjustment_enable: true
   trading_mode: spot
   include_timeframes: [1m, 5m, 15m, 30m, 1h, 4h, 1d]
-  max_open_trades: 5
+  max_open_trades: 3
   amend_last_stake_amount: true
   stake_currency: USDT
   tradable_balance_ratio: 0.99

@@ -1,17 +1,9 @@
+---
 kubernetes:
   nodePort: 32330
 
 configcreds:
-  download_trades: true
   bot_name: freqtrading-binance-adriana
-  dry_run: false
-  dry_run_wallet: 4000
-  stake_amount: unlimited
-  position_adjustment_enable: true
-  dry_run: false
-  dry_run_wallet: 4000
-  stake_amount: unlimited
-  position_adjustment_enable: true
   exchange:
     name: binance
     key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P

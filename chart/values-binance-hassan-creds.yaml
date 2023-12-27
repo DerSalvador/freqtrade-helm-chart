@@ -3,37 +3,7 @@ kubernetes:
   nodePort: 32323
 
 configcreds:
-  download_trades: true
   bot_name: freqtrading-binance-hassan
-  dry_run: false
-  dry_run_wallet: 4000
-  stake_amount: unlimited
-  position_adjustment_enable: true
-  stoploss: -0.1
-  # Optimal timeframe for the strategy
-  timeframe: 5m
-  # trailing stoploss
-  trailing_stop: false
-  trailing_stop_positive: 0.01
-  trailing_stop_positive_offset: 0.02
-  # run "populate_indicators" only for new candle
-  process_only_new_candles: true
-  # Experimental settings (configuration will overide these if set)
-  use_exit_signal: true
-  exit_profit_only: true
-  ignore_roi_if_entry_signal: false
-  entry_pricing:
-    price_side: other
-    use_order_book: true
-    order_book_top: 1
-    price_last_balance: 0
-    check_depth_of_market:
-      enabled: false
-      bids_to_ask_delta: 1
-  exit_pricing:
-    price_side: other
-    use_order_book: true
-    order_book_top: 1
   exchange:
     name: binance
     key: SQVj4WE2YfDgq6kMbOdobyx8OmWGRt4l1aV9DsWGaDMoRKdIRLaa4wu82PUMWhVn
