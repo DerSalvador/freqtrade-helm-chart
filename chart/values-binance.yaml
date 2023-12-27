@@ -28,26 +28,24 @@ nostalgiaforinfinity:
       XTZ/USDT: 0.1
 
 config:
-  trading_mode: spot
-  max_open_trades: 5
-  amend_last_stake_amount: true
-  stake_currency: USDT
-  tradable_balance_ratio: 0.99
-  fiat_display_currency: EUR
-  db_url: "sqlite:///user_data/tradesv3.sqlite"
-  cancel_open_orders_on_exit: false
-  exit_profit_only: true  
-  dry_run: false
-  dry_run_wallet: 4000
-  stake_amount: unlimited
-  position_adjustment_enable: true
-  order_types:
-    entry: "market"
-    force_entry: "market"
-    force_exit: "market"
-    exit: limit
-    stoploss: "market"
-    stoploss_on_exchange: false
+  stoploss: -0.99
+  trailing_stop: false
+  trailing_only_offset_is_reached: true
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.03
+  use_custom_stoploss: false
+  has_downtime_protection: false
+  # Do you want to use the hold feature? (with hold-trades.json)
+  hold_support_enabled: true
+  # Run "populate_indicators()" only for new candle.
+  process_only_new_candles: true
+  # These values can be overridden in the "ask_strategy" section in the config.
+  use_exit_signal: false
+  exit_profit_only: true
+  ignore_roi_if_entry_signal: true
+  # Number of candles the strategy requires before producing valid signals
+  startup_candle_count: 800
+  stake_amount_type: quote_currency
   entry_pricing:
     price_side: other
     use_order_book: true
@@ -62,7 +60,26 @@ config:
     order_book_top: 1
   dataformat_ohlcv: feather
   dataformat_trades: feather
-  download_trades: true
+  download_trades: false
+  dry_run: false
+  dry_run_wallet: 4000
+  stake_amount: unlimited
+  position_adjustment_enable: true
+  trading_mode: spot
+  max_open_trades: 3
+  amend_last_stake_amount: true
+  stake_currency: USDT
+  tradable_balance_ratio: 0.99
+  fiat_display_currency: EUR
+  db_url: "sqlite:///user_data/tradesv3.sqlite"
+  cancel_open_orders_on_exit: false
+  order_types:
+    entry: "market"
+    force_entry: "market"
+    force_exit: "market"
+    exit: limit
+    stoploss: "market"
+    stoploss_on_exchange: false
   # margin_mode: ""
   minimal_roi:
     "0": 0.8

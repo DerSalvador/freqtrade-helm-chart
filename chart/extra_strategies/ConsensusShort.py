@@ -368,8 +368,10 @@ class ConsensusShort(IStrategy):
                     current_profit: float, **kwargs):
 
         dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
-        last_candle = dataframe.iloc[-1].squeeze()
-
+        if (len(dataframe.iloc[-1]) > 0): 
+            last_candle = dataframe.iloc[-1].squeeze()
+        else:
+            print("Dataframe iloc is zero...")            
         trade_dur = int((current_time.timestamp() - trade.open_date_utc.timestamp()) // 60)
         max_profit = max(0, trade.calc_profit_ratio(trade.max_rate))
         pullback_value = max(0, (max_profit - self.csell_pullback_amount.value))

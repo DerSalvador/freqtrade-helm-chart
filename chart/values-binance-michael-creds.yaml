@@ -3,24 +3,8 @@ kubernetes:
   nodePort: 32326
 
 configcreds:
-  position_adjustment_enable: true
-  # Optimal timeframe for the strategy
   timeframe: 5m
-  # Run "populate_indicators()" only for new candle.
-  process_only_new_candles: true
-  stoploss: -0.99
-  # Custom stoploss
-  use_custom_stoploss: true
-  trailing_stop: false
-  trailing_stop_positive: 0.01
-  trailing_stop_positive_offset: 0.02
-  # run "populate_indicators" only for new candle
-  # Experimental settings (configuration will overide these if set)
-  use_exit_signal: true
-  exit_profit_only: true
-  ignore_roi_if_entry_signal: false
   bot_name: freqtrading-binance-michael
-  available_capital: 1500
   exchange:
     name: binance
     key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm

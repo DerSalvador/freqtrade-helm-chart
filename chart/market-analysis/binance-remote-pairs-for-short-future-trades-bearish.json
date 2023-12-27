@@ -1,0 +1,5 @@
+{
+    "method": "RemotePairList",
+    "number_assets": 50,
+    "pairlist_url" : "https://remotepairlist.com?q=9572841e582ad800"
+},
