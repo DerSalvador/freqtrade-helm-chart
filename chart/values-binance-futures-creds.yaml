@@ -103,6 +103,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: ConsensusShort
+  strategy_name: ReinforcedQuickie
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
