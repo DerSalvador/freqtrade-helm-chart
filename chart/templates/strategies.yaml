@@ -7,6 +7,6 @@ data:
 {{- if .Values.strategies }}
 {{ .Values.strategies | toYaml | indent 2 }}
 {{- else }}
-{{ (.Files.Glob "strategies/*.py").AsConfig | indent 2 }}
+{{ (.Files.Glob "extra_strategies/Strategy*.py").AsConfig | indent 2 }}
 {{- end }}
 {{- end }}
