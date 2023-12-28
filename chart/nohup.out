@@ -1,0 +1,20 @@
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 2.043933125s
+* Restarting the docker service may improve performance.
+
+X Exiting due to GUEST_STATUS: Unable to get machine status: state: unknown state "minikube": docker container inspect minikube --format=<no value>: exit status 255
+stdout:
+
+stderr:
+
+* 
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                          │
+│    * If the above advice does not help, please let us know:                                                              │
+│      https://github.com/kubernetes/minikube/issues/new/choose                                                            │
+│                                                                                                                          │
+│    * Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.                                 │
+│    * Please also attach the following file to the GitHub issue:                                                          │
+│    * - /var/folders/pz/0x5jy9vx3wb7l6mxn0sw_x7r0000gn/T/minikube_mount_c8e3c784e1ac6df54b6312c33429ea12839c6354_0.log    │
+│                                                                                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
