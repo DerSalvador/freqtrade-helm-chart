@@ -1,20 +1,82 @@
-! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 2.043933125s
-* Restarting the docker service may improve performance.
-
-X Exiting due to GUEST_STATUS: Unable to get machine status: state: unknown state "minikube": docker container inspect minikube --format=<no value>: exit status 255
-stdout:
-
-stderr:
-
-* 
-╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│                                                                                                                          │
-│    * If the above advice does not help, please let us know:                                                              │
-│      https://github.com/kubernetes/minikube/issues/new/choose                                                            │
-│                                                                                                                          │
-│    * Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.                                 │
-│    * Please also attach the following file to the GitHub issue:                                                          │
-│    * - /var/folders/pz/0x5jy9vx3wb7l6mxn0sw_x7r0000gn/T/minikube_mount_c8e3c784e1ac6df54b6312c33429ea12839c6354_0.log    │
-│                                                                                                                          │
-╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-
+Error from server (NotFound): pods "kaniko" not found
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana
+service/freqtrade-binance-adriana unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures
+service/freqtrade-binance-futures unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan
+service/freqtrade-binance-hassan unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano
+service/freqtrade-binance-juliano unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa
+service/freqtrade-binance-larissa unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael
+service/freqtrade-binance-michael unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana
+service/freqtrade-kraken-adriana unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen
+service/freqtrade-kraken-hellen unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael
+service/freqtrade-kraken-michael unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start
+{
+  "status": "already running"
+}
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves
+service/freqtrade-kraken-stieves unchanged
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start
+{
+  "status": "already running"
+}
+--------- Restarted 10 bots....
