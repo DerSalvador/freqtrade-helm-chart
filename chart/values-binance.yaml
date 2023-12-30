@@ -28,6 +28,7 @@ nostalgiaforinfinity:
       XTZ/USDT: 0.1
 
 config:
+  timeframe: 5m
   stoploss: -0.99
   trailing_stop: false
   trailing_only_offset_is_reached: true
@@ -208,9 +209,8 @@ config:
     process_throttle_secs: 5
 
 image:
-  base:
-    europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: 2023.11_freqaitorch
+  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+  tag: 1e63edcb795203597263473becf0c8dad797fb6c2db3adb4c032084a435a665e # 2023.12_freqaitorch as base image
 
 bot:
   debug: false
