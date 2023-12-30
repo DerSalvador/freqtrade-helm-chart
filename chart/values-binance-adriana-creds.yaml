@@ -17,6 +17,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy005
+  strategy_name: NostalgiaForInfinityXw
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor 
