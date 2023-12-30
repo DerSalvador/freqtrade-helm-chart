@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32321
 
 configcreds:
+  max_open_trades: 5
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
@@ -103,6 +104,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: ReinforcedQuickie
+  strategy_name: NostalgiaForInfinityX4
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
