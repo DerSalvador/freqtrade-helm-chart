@@ -6,6 +6,9 @@ configcreds:
   # trading_mode: futures
   # margin_mode: isolated
   bot_name: freqtrading-binance-larissa
+  timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited  
   exchange:
     name: binance
     # API Futures 

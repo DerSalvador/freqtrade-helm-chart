@@ -29,7 +29,7 @@ nostalgiaforinfinity:
 
 config:
   timeframe: 5m
-  stoploss: -0.99
+  stoploss: -0.10
   trailing_stop: false
   trailing_only_offset_is_reached: true
   trailing_stop_positive: 0.01
@@ -61,7 +61,7 @@ config:
     order_book_top: 1
   dataformat_ohlcv: feather
   dataformat_trades: feather
-  download_trades: false
+  download_trades: true
   dry_run: false
   dry_run_wallet: 4000
   stake_amount: unlimited
@@ -83,29 +83,9 @@ config:
     stoploss_on_exchange: false
   # margin_mode: ""
   minimal_roi:
-    "0": 0.8
-    "1": 0.78
-    "2": 0.75
-    "3": 0.73
-    "5": 0.7
-    "8": 0.68
-    "13": 0.65
-    "21": 0.63
-    "34": 0.6
-    "55": 0.5
-    "89": 0.4
-    "144": 0.45
-    "233": 0.3
-    "377": 0.25
-    "610": 0.2
-    "987": 0.18
-    "1597": 0.15
-    "2584": 0.13
-    "4181": 0.05
-    "5281": 0.03
-    "6381": 0.02
-    "7481": 0.01
-    "20160": 0
+    "0": 0.1
+    "20160": 0.09
+    "40160": 0
   unfilledtimeout:
     entry: 10
     exit: 30
@@ -124,8 +104,7 @@ config:
       options:
         defaultType: spot
         leverage: 10
-    pair_whitelist: [
-      "BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT",
+    pair_whitelist: ["BTC/USDT", "USDC/USDT", "ETH/USDT", "DOT/USDT", "XMR/USDT",
       "LTC/USDT", "XRP/USDT", "ADA/USDT", "DAI/USDT", "SOL/USDT",
       "LINK/USDT", "EOS/USDT", "DOGE/USDT", "MATIC/USDT", "ATOM/USDT",
       "BCH/USDT", "SHIB/USDT", "AVAX/USDT", "ALGO/USDT", "APE/USDT",
@@ -150,15 +129,15 @@ config:
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 60
-    - method: RemotePairList
-      number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=bb2fa95e801034dd
-      processing_mode: append
-      mode: blacklist
-      sort_key: quoteVolume
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 60
+    #- method: RemotePairList
+    #  number_assets: 50
+    #  pairlist_url: https://remotepairlist.com?q=871bd95939aea5a8
+    #  processing_mode: append
+    #  mode: blacklist
+    #  sort_key: quoteVolume
+    #  refresh_period: 900
+    #  keep_pairlist_on_failure: true
+    #  read_timeout: 60
     - method: AgeFilter
       min_days_listed: 3
     - method: PriceFilter
@@ -170,7 +149,55 @@ config:
       min_rate_of_change: 0.03
       refresh_period: 1800
     - method: ShuffleFilter
-
+  freqai:
+    enabled: true
+    fit_live_predictions_candles: 300
+    purge_old_models: true
+    train_period_days: 30
+    identifier: unique-id
+    live_retrain_hours: 1
+    feature_parameters:
+      include_timeframes:
+        - 5m
+      include_corr_pairlist:
+        - ATOM/USDT
+        - MATIC/USDT
+        - ADA/USDT
+        - ALGO/USDT
+        - APE/USDT
+        - ATOM/USDT
+        - AVAX/USDT
+        - BCH/USDT
+        - BTC/USDT
+        - DAI/USDT
+        - DOGE/USDT
+        - DOT/USDT
+        - EOS/USDT
+        - ETH/USDT
+        - LINK/USDT
+        - LTC/USDT
+        - MANA/USDT
+        - MATIC/USDT
+        - SHIB/USDT
+        - SOL/USDT
+        - XMR/USDT
+        - XRP/USDT
+        - XTZ/USDT
+      label_period_candles: 20
+      include_shifted_candles: 2
+      DI_threshold: 0.9
+      weight_factor: 0.9
+      principal_component_analysis: false
+      use_SVM_to_remove_outliers: true
+      indicator_periods_candles:
+        - 3
+        - 10
+        - 20
+    data_split_parameters:
+      test_size: 0
+      random_state: 1
+    model_training_parameters:
+      n_estimators: 800
   telegram:
     keyboard:
       - - /forcelong
