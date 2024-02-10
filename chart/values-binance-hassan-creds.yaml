@@ -1,13 +1,61 @@
 ---
 kubernetes:
   nodePort: 32323
-
 configcreds:
   bot_name: freqtrading-binance-hassan
+  timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited
   exchange:
     name: binance
     key: SQVj4WE2YfDgq6kMbOdobyx8OmWGRt4l1aV9DsWGaDMoRKdIRLaa4wu82PUMWhVn
     secret: rGreExUqQL6QMWmAaiWLuAehxUdoShSVHeWbJAHPApktT3nWE6UMBnmz0EDv9zD0
+    pair_whitelist: 
+      - ETC/USDT
+      - BIFI/USDT
+      - DOT/USDT
+      - EGLD/USDT
+      - RUNE/USDT
+      - FIL/USDT
+      - BTC/USDT
+      - ILV/USDT
+      - ENS/USDT
+      - AAVE/USDT
+      - ETH/USDT
+      - WBTC/USDT
+      - MASK/USDT
+      - MKR/USDT
+      - KSM/USDT
+      - CYBER/USDT
+      - TRB/USDT
+      - APT/USDT
+      - AVAX/USDT
+      - ATOM/USDT
+      - AUCTION/USDT
+      - GMX/USDT
+      - ACE/USDT
+      - COMP/USDT
+      - LINK/USDT
+      - ALCX/USDT
+      - ARB/USDT
+      - WBETH/USDT
+      - LDO/USDT
+      - BCH/USDT
+      - LTC/USDT
+      - SOL/USDT
+      - ORDI/USDT
+      - QNT/USDT
+      - KP3R/USDT
+      - INJ/USDT
+      - MOVR/USDT
+      - ICP/USDT
+      - BNB/USDT
+      - NEAR/USDT
+      - SSV/USDT
+      - XMR/USDT
+      - TIA/USDT
+      - YFI/USDT
+      - OP/USDT
   telegram:
     enabled: true
     token: "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"
@@ -16,6 +64,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: Strategy001_custom_exit
+  strategy_name: LongShortRangeTradingMachetesV1
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor

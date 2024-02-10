@@ -4,6 +4,8 @@ kubernetes:
 
 configcreds:
   timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited
   bot_name: freqtrading-binance-michael
   exchange:
     name: binance
