@@ -5,6 +5,8 @@ kubernetes:
 configcreds:
   bot_name: freqtrade-kraken-michael
   timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited
   exchange:
     name: kraken
     key: ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
@@ -15,6 +17,6 @@ configcreds:
     chat_id: "1759706931"
 bot:
   enabled: true
-  strategy_name: Strategy005
+  strategy_name: DevilStra
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor

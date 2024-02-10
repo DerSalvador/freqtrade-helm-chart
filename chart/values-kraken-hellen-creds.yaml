@@ -1,13 +1,33 @@
 ---
 kubernetes:
   nodePort: 32328
-
 configcreds:
   bot_name: freqtrade-kraken-hellen
+  timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited
   exchange:
     name: kraken
     key: 54UnpzC561cUBlNh1D/5+3C8pyKKZs8lFYNhI1HcLxmn+jo8JybDGgWM
     secret: GHHfmkJ2xnAwnutoOpux1n/cbG8+Hz3zjltsslfU4DybEfJ2gMedqbi/STzph2S1YuDvFaqpTe8n5D7+6bkVfw==
+    pair_whitelist: 
+      - BTC/USDT
+      - APE/USDT
+      - DOGE/USDT
+      - DOT/USDT
+      - XTZ/USDT
+      - AVAX/USDT
+      - ALGO/USDT
+      - XRP/USDT
+      - SOL/USDT
+      - ETH/USDT
+      - MATIC/USDT
+      - XMR/USDT
+      - ATOM/USDT
+      - LTC/USDT
+      - MANA/USDT
+      - ADA/USDT
+      - EOS/USDT
   telegram:
     enabled: true
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"

@@ -1,22 +1,68 @@
 ---
 kubernetes:
   nodePort: 32330
-
 configcreds:
   bot_name: freqtrading-binance-adriana
+  timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited
   exchange:
     name: binance
     key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
     secret: TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
+    pair_whitelist: 
+      - BNB/USDT
+      - SSV/USDT
+      - KP3R/USDT
+      - LINK/USDT
+      - OP/USDT
+      - ARB/USDT
+      - TRB/USDT
+      - GMX/USDT
+      - MASK/USDT
+      - AUCTION/USDT
+      - AAVE/USDT
+      - KSM/USDT
+      - SOL/USDT
+      - ACE/USDT
+      - TIA/USDT
+      - FIL/USDT
+      - YFI/USDT
+      - RNDR/USDT
+      - ETH/USDT
+      - XMR/USDT
+      - WBETH/USDT
+      - AVAX/USDT
+      - MOVR/USDT
+      - LTC/USDT
+      - LDO/USDT
+      - ORDI/USDT
+      - WBTC/USDT
+      - EGLD/USDT
+      - ICP/USDT
+      - ATOM/USDT
+      - RUNE/USDT
+      - ETC/USDT
+      - QNT/USDT
+      - ILV/USDT
+      - APT/USDT
+      - NEAR/USDT
+      - ENS/USDT
+      - BTC/USDT
+      - CYBER/USDT
+      - DOT/USDT
+      - BCH/USDT
+      - INJ/USDT
+      - COMP/USDT
+      - MKR/USDT
   telegram:
     enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
-
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityXw
+  strategy_name: HPStrategyTFJPAConfirmV1
   pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor 
+  freqaimodel: LightGBMRegressor

@@ -4,6 +4,9 @@ kubernetes:
 
 configcreds:
   bot_name: freqtrade-kraken-adriana
+  timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited
   exchange:
     name: kraken
     key: +H4NKdY1EIWMVwq4s+qOymZATOYoQPvND+wCMzo+jasiN+zScLEVPODo
@@ -16,56 +19,6 @@ configcreds:
     # Stefan chat_id: "743804896"
     # Adriana token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     # Adriana chat_id: "6274423445"
-  freqai:
-    enabled: false
-    fit_live_predictions_candles: 300
-    purge_old_models: true
-    train_period_days: 15
-    identifier: unique-id
-    live_retrain_hours: 1
-    feature_parameters:
-      include_timeframes:
-        - 4h
-      include_corr_pairlist:
-        - ATOM/USDT
-        - MATIC/USDT
-        - ADA/USDT
-        - ALGO/USDT
-        - APE/USDT
-        - ATOM/USDT
-        - AVAX/USDT
-        - BCH/USDT
-        - BTC/USDT
-        - DAI/USDT
-        - DOGE/USDT
-        - DOT/USDT
-        - EOS/USDT
-        - ETH/USDT
-        - EURT/USDT
-        - LINK/USDT
-        - LTC/USDT
-        - MANA/USDT
-        - MATIC/USDT
-        - SHIB/USDT
-        - SOL/USDT
-        - XMR/USDT
-        - XRP/USDT
-        - XTZ/USDT
-      label_period_candles: 20
-      include_shifted_candles: 2
-      DI_threshold: 0.9
-      weight_factor: 0.9
-      principal_component_analysis: false
-      use_SVM_to_remove_outliers: true
-      indicator_periods_candles:
-        - 3
-        - 10
-        - 20
-    data_split_parameters:
-      test_size: 0
-      random_state: 1
-    model_training_parameters:
-      n_estimators: 800
 bot:
   enabled: true
   strategy_name: Strategy004
