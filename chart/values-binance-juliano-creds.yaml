@@ -3,6 +3,9 @@ kubernetes:
   nodePort: 32324
 configcreds:
   bot_name: freqtrading-binance-juliano
+  timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited  
   exchange:
     name: binance
     key: RCB5nWqiZJa0DnYRjuPbijmuacCY8cBkoVqshEv77O23yWEYvKhWlkVfcUdJVw5T
