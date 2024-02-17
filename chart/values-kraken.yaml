@@ -118,8 +118,8 @@ config:
     - method: SpreadFilter
       max_spread_ratio: 0.008
     - method: RangeStabilityFilter
-      lookback_days: 3
-      min_rate_of_change: 0.03
+      lookback_days: 30
+      min_rate_of_change: 0.01
       refresh_period: 900
     - method: ShuffleFilter
     - method: StaticPairList
