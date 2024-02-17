@@ -221,7 +221,7 @@ config:
 #  tag: 2023.11_freqaitorch
 image:
   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256 # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: 5d6c0ba5b69c89978a3353831164745e98e9fef0e134a29fa8108ad65c1dcfcf # 2023.11_freqaitorch
+  tag: 4e74f75c56cb3dd6b3cd58b2ffb37b0d297fd5f521f56f4ebee292e69b40b16d # 5d6c0ba5b69c89978a3353831164745e98e9fef0e134a29fa8108ad65c1dcfcf # 2023.11_freqaitorch
 backtesting:
   enabled: false
   download_data: false
