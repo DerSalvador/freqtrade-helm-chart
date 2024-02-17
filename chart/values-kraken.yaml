@@ -76,7 +76,7 @@ config:
   exit_profit_only: true
   margin_mode: ""
   minimal_roi:
-    "0": 0.1
+    "0": 0.3
     "20160": 0.09
     "40160": 0
   unfilledtimeout:
