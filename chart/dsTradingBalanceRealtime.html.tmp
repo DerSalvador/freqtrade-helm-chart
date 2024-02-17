@@ -1,171 +1,169 @@
-<h2>USDT 11 Bots: 15383.03</h2>
-Freqtrade Bots Report: 2024-02-17 13-01-42<br>
-Next Report: Sat Feb 17 13:56:42 CET 2024<br>
+<h2>USDT 11 Bots: 15343.73</h2>
+Freqtrade Bots Report: 2024-02-17 21-01-29<br>
+Next Report: Sat Feb 17 21:56:29 CET 2024<br>
 <hr><b>binance-adriana</b><br>
 Started: 2023-12-18 21:47:00<br>
-Strategy: HPStrategyTFJPAConfirmV1<br><b>
-Value: 56.11</b><br>
+Strategy: Anomaly<br><b>
+Value: 55.05</b><br>
 Trading Mode: spot<br>
-Last Order Date: Wed Feb 14 06:06:21 CET 2024<br>
+Last Order Date: <br>
 Max Open Trades: 3.0<br>
-Open:        3<br>
-Wallets:        8<br>
-Balances: <br>BTC: 0.49USD, BotManaged: false<br>
-LTC: 23.69USD, BotManaged: true<br>
-ETH: 15.53USD, BotManaged: true<br>
-USDT: 0.78USD, BotManaged: true<br>
-LINK: 14.39USD, BotManaged: true<br>
-XMR: 0.11USD, BotManaged: false<br>
-DOT: 0.05USD, BotManaged: false<br>
-WBETH: 1.07USD, BotManaged: false<br>
+Open:        0<br>
+Wallets:        1<br>
+Balances: <br>BNB: 55.05USD, BotManaged: false<br>
 <hr><b>binance-futures-larissa</b><br>
 Started: 2024-02-12 17:13:23<br>
 Strategy: TaSearchLevelH15m<br><b>
-Value: 2219.41</b><br>
+Value: 2219.06</b><br>
 Trading Mode: futures<br>
-Last Order Date: Tue Feb 13 21:07:20 CET 2024<br>
+Last Order Date: <br>
 Max Open Trades: 3.0<br>
-Open:        1<br>
+Open:        0<br>
 Wallets:        2<br>
-Balances: <br>USDT: 1513.84USD, BotManaged: true<br>
-ATOM/USDT:USDT: 705.57USD, BotManaged: true<br>
+Balances: <br>
 <hr><b>binance-futures</b><br>
 Started: 2023-12-07 10:38:03<br>
 Strategy: BinHV27_short<br><b>
-Value: 2055.41</b><br>
+Value: 2055.39</b><br>
 Trading Mode: futures<br>
 Last Order Date: Sat Jan 20 13:07:19 CET 2024<br>
 Max Open Trades: 8.0<br>
 Open:        1<br>
 Wallets:        2<br>
 Balances: <br>USDT: 2020.69USD, BotManaged: true<br>
-APT/USDT:USDT: 34.72USD, BotManaged: true<br>
+APT/USDT:USDT: 34.7USD, BotManaged: true<br>
 <hr><b>binance-hassan</b><br>
 Started: 2023-12-03 11:25:35<br>
-Strategy: LongShortRangeTradingMachetesV1<br><b>
-Value: 121.12</b><br>
+Strategy: DWT_Leveraged2<br><b>
+Value: 121.18</b><br>
 Trading Mode: spot<br>
-Last Order Date: Tue Dec 19 09:16:18 CET 2023<br>
+Last Order Date: Fri Dec 15 11:45:30 CET 2023<br>
 Max Open Trades: 3.0<br>
-Open:        4<br>
-Wallets:        4<br>
-Balances: <br>
+Open:        2<br>
+Wallets:        2<br>
+Balances: <br>USDT: 121.09USD, BotManaged: true<br>
+XMR: 0.09USD, BotManaged: false<br>
 <hr><b>binance-juliano</b><br>
 Started: 2023-12-05 12:33:49<br>
 Strategy: NostalgiaForInfinityX3<br><b>
-Value: 23.19</b><br>
+Value: 23.05</b><br>
 Trading Mode: spot<br>
 Last Order Date: Thu Dec 28 01:45:51 CET 2023<br>
 Max Open Trades: 3.0<br>
 Open:        3<br>
 Wallets:       10<br>
-Balances: <br>BTC: 6.2USD, BotManaged: true<br>
+Balances: <br>BTC: 6.16USD, BotManaged: true<br>
 USDT: 4.06USD, BotManaged: true<br>
 XMR: 0.12USD, BotManaged: false<br>
 ATOM: 0.1USD, BotManaged: false<br>
-DOT: 4.39USD, BotManaged: true<br>
-TRB: 1.25USD, BotManaged: false<br>
+DOT: 4.36USD, BotManaged: true<br>
+TRB: 1.23USD, BotManaged: false<br>
 EGLD: 0.57USD, BotManaged: false<br>
 AVAX: 0.78USD, BotManaged: false<br>
 FIL: 0.06USD, BotManaged: false<br>
-AXS: 5.67USD, BotManaged: true<br>
+AXS: 5.62USD, BotManaged: true<br>
 <hr><b>binance-larissa</b><br>
 Started: 2023-12-16 09:09:59<br>
 Strategy: twinturboV8<br><b>
-Value: 6.12</b><br>
+Value: 6.07</b><br>
 Trading Mode: spot<br>
 Last Order Date: Thu Dec 28 01:45:51 CET 2023<br>
 Max Open Trades: 3.0<br>
 Open:        0<br>
 Wallets:       10<br>
-Balances: <br>TRB: 3.68USD, BotManaged: false<br>
+Balances: <br>TRB: 3.63USD, BotManaged: false<br>
 KSM: 0.02USD, BotManaged: false<br>
 UMA: 0.37USD, BotManaged: false<br>
-KP3R: 0.74USD, BotManaged: false<br>
+KP3R: 0.75USD, BotManaged: false<br>
 ICP: 0.09USD, BotManaged: false<br>
 MASK: 0.33USD, BotManaged: false<br>
 MOVR: 0.02USD, BotManaged: false<br>
-ENS: 0.16USD, BotManaged: false<br>
+ENS: 0.17USD, BotManaged: false<br>
 ORDI: 0.66USD, BotManaged: false<br>
-XAI: 0.05USD, BotManaged: false<br>
+XAI: 0.04USD, BotManaged: false<br>
 <hr><b>binance-michael</b><br>
 Started: 2023-12-03 12:34:49<br>
 Strategy: ClucHAnix_BB_RPB_MOD<br><b>
-Value: 2.20</b><br>
+Value: 2.16</b><br>
 Trading Mode: spot<br>
-Last Order Date: Tue Jan  9 09:41:18 CET 2024<br>
-Max Open Trades: <br>
-Open:        3<br>
+Last Order Date: Thu Dec 28 01:45:51 CET 2023<br>
+Max Open Trades: 3.0<br>
+Open:        0<br>
 Wallets:        3<br>
 Balances: <br>USDT: 0.49USD, BotManaged: true<br>
 SHIB: 0USD, BotManaged: false<br>
-TIA: 1.71USD, BotManaged: false<br>
+TIA: 1.67USD, BotManaged: false<br>
 <hr><b>kraken-adriana</b><br>
 Started: 2024-02-16 07:41:07<br>
 Strategy: BuyRegions<br><b>
-Value: 54.64</b><br>
+Value: 54.19</b><br>
 Trading Mode: spot<br>
 Last Order Date: Sat Feb 17 11:36:48 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        3<br>
 Wallets:        7<br>
-Balances: <br>ADA: 6.14USD, BotManaged: true<br>
-ALGO: 18.35USD, BotManaged: false<br>
-ATOM: 6.07USD, BotManaged: true<br>
+Balances: <br>ADA: 6.16USD, BotManaged: true<br>
+ALGO: 18.11USD, BotManaged: false<br>
+ATOM: 6.09USD, BotManaged: true<br>
 MATIC: 0USD, BotManaged: false<br>
 USDT: 0.17USD, BotManaged: true<br>
-XTZ: 17.8USD, BotManaged: false<br>
-XRP: 6.11USD, BotManaged: true<br>
+XTZ: 17.6USD, BotManaged: false<br>
+XRP: 6.06USD, BotManaged: true<br>
 <hr><b>kraken-hellen</b><br>
 Started: 2023-12-03 12:52:58<br>
-Strategy: ClucHAnix_BB_RPB_MOD<br><b>
-Value: 732.51</b><br>
+Strategy: TSPredict<br><b>
+Value: 734.15</b><br>
 Trading Mode: spot<br>
 Last Order Date: Sat Feb 17 11:26:01 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        2<br>
 Wallets:        7<br>
-Balances: <br>
+Balances: <br>DOT: 236.26USD, BotManaged: true<br>
+EOS: 244.81USD, BotManaged: true<br>
+LINK: 0USD, BotManaged: false<br>
+MATIC: 0USD, BotManaged: false<br>
+USDT: 253.08USD, BotManaged: true<br>
+XMR: 0USD, BotManaged: false<br>
+EUR: 0USD, BotManaged: false<br>
 <hr><b>kraken-michael</b><br>
 Started: 2023-12-06 15:06:00<br>
 Strategy: DevilStra<br><b>
-Value: 6942.98</b><br>
+Value: 6930.91</b><br>
 Trading Mode: spot<br>
-Last Order Date: Thu Feb 15 22:01:18 CET 2024<br>
+Last Order Date: Sat Feb 17 11:26:01 CET 2024<br>
 Max Open Trades: 3.0<br>
-Open:        3<br>
+Open:        2<br>
 Wallets:        6<br>
-Balances: <br>ATOM: 2314.16USD, BotManaged: true<br>
-AVAX: 2230.16USD, BotManaged: true<br>
+Balances: <br>ATOM: 2317.63USD, BotManaged: true<br>
+AVAX: 2224.55USD, BotManaged: true<br>
 CHF: 0USD, BotManaged: false<br>
 USDT: 98.29USD, BotManaged: true<br>
-LTC: 2300.37USD, BotManaged: true<br>
+LTC: 2290.44USD, BotManaged: true<br>
 XRP: 0USD, BotManaged: false<br>
 <hr><b>kraken-stieves</b><br>
 Started: 2023-12-06 15:38:13<br>
 Strategy: BinClucMadSMA<br><b>
-Value: 3169.34</b><br>
+Value: 3142.52</b><br>
 Trading Mode: spot<br>
-Last Order Date: Fri Feb 16 06:42:02 CET 2024<br>
+Last Order Date: Sat Feb 17 11:26:01 CET 2024<br>
 Max Open Trades: 3.0<br>
-Open:        1<br>
+Open:        0<br>
 Wallets:        5<br>
-Balances: <br>ATOM: 1025.96USD, BotManaged: true<br>
+Balances: <br>ATOM: 0USD, BotManaged: false<br>
 AVAX: 0USD, BotManaged: false<br>
 CHF: 0USD, BotManaged: false<br>
-USDT: 2143.39USD, BotManaged: true<br>
+USDT: 3142.52USD, BotManaged: true<br>
 XRP: 0USD, BotManaged: false<br>
 <hr>
 <hr>
 <b>Kubernetes Events:</b><br>
-
-<hr><hr>History:<br><b>2024-02-14 00-01-21: 15083.58</b>
-<hr><hr>History:<br><b>2024-02-14 01-00-17: 15080.31</b>
-<hr><hr>History:<br><b>2024-02-14 02-01-28: 15034.01</b>
-<hr><hr>History:<br><b>2024-02-14 03-01-35: 15036.28</b>
-<hr><hr>History:<br><b>2024-02-14 05-01-30: 15097.13</b>
-<hr><hr>History:<br><b>2024-02-14 06-01-28: 15122.28</b>
-<hr><hr>History:<br><b>2024-02-14 08-01-27: 15156.75</b>
+kraken-hellen   19m         Warning   FailedAttachVolume       pod/freqtrade-kraken-hellen-6cb7889479-vbkf6    Multi-Attach error for volume "pvc-a302eaf5-3f5e-4fdd-a2b7-d865c711f4a1" Volume is already used by pod(s) freqtrade-kraken-hellen-56dfd9bbc7-p5vfs<br>$
+kraken-hellen   19m         Warning   FailedAttachVolume       pod/freqtrade-kraken-hellen-6cb7889479-vbkf6    Multi-Attach error for volume "pvc-7dffd1e8-3f41-4f76-a515-7dd349044a0e" Volume is already used by pod(s) freqtrade-kraken-hellen-56dfd9bbc7-p5vfs<br>$
+kraken-hellen   19m         Warning   FailedAttachVolume       pod/freqtrade-kraken-hellen-6cb7889479-vbkf6    Multi-Attach error for volume "pvc-f4de19f5-9912-4e45-9e3e-13d73879261e" Volume is already used by pod(s) freqtrade-kraken-hellen-56dfd9bbc7-p5vfs<br>$
+kraken-hellen   19m         Warning   FailedAttachVolume       pod/freqtrade-kraken-hellen-6cb7889479-twqr2    Multi-Attach error for volume "pvc-7dffd1e8-3f41-4f76-a515-7dd349044a0e" Volume is already used by pod(s) freqtrade-kraken-hellen-56dfd9bbc7-p5vfs<br>$
+kraken-hellen   19m         Warning   FailedAttachVolume       pod/freqtrade-kraken-hellen-6cb7889479-twqr2    Multi-Attach error for volume "pvc-a302eaf5-3f5e-4fdd-a2b7-d865c711f4a1" Volume is already used by pod(s) freqtrade-kraken-hellen-56dfd9bbc7-p5vfs<br>$
+kraken-hellen   19m         Warning   FailedAttachVolume       pod/freqtrade-kraken-hellen-6cb7889479-twqr2    Multi-Attach error for volume "pvc-f4de19f5-9912-4e45-9e3e-13d73879261e" Volume is already used by pod(s) freqtrade-kraken-hellen-56dfd9bbc7-p5vfs<br>$
+kraken-hellen   18m         Warning   FailedPreStopHook        pod/freqtrade-kraken-hellen-56dfd9bbc7-p5vfs    PreStopHook failed<br>$
 <hr><hr>History:<br><b>2024-02-14 09-01-26: 15165.34</b>
 <hr><hr>History:<br><b>2024-02-14 10-01-25: 15265.87</b>
 <hr><hr>History:<br><b>2024-02-14 11-01-23: 15320.95</b>
@@ -190,3 +188,10 @@ XRP: 0USD, BotManaged: false<br>
 <hr><hr>History:<br><b>2024-02-17 11-02-44: 15387.23</b>
 <hr><hr>History:<br><b>2024-02-17 12-01-40: 15371.47</b>
 <hr><hr>History:<br><b>2024-02-17 13-01-42: 15383.03</b>
+<hr><hr>History:<br><b>2024-02-17 15-01-47: 15263.65</b>
+<hr><hr>History:<br><b>2024-02-17 16-01-43: 15199.35</b>
+<hr><hr>History:<br><b>2024-02-17 17-01-41: 15263.93</b>
+<hr><hr>History:<br><b>2024-02-17 18-01-39: 15365.26</b>
+<hr><hr>History:<br><b>2024-02-17 19-01-42: 15347.65</b>
+<hr><hr>History:<br><b>2024-02-17 20-18-41: 15350.92</b>
+<hr><hr>History:<br><b>2024-02-17 21-01-29: 15343.73</b>
