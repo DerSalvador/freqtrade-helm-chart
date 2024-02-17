@@ -1,0 +1,160 @@
+---
+kubernetes:
+  nodePort: 32331
+configcreds:
+  max_open_trades: 3
+  minimal_roi:
+    "0": 0.05
+  stoploss: -0.05
+  trailing_stop: true
+  trailing_stop_positive: 0.05
+  trailing_stop_positive_offset: 0.2
+  trailing_only_offset_is_reached: true  
+  trading_mode: futures
+  margin_mode: isolated
+  timeframe: 15m
+  stake_amount: unlimited
+  bot_name: freqtrading-binance-futures-larissa
+  freqai:
+    enabled: true
+    fit_live_predictions_candles: 300
+    purge_old_models: true
+    train_period_days: 30
+    identifier: unique-id
+    live_retrain_hours: 1
+    feature_parameters:
+      include_timeframes:
+        - 15m
+      include_corr_pairlist:
+        - ATOM/USDT
+        - MATIC/USDT
+        - ADA/USDT
+        - ALGO/USDT
+        - APE/USDT
+        - ATOM/USDT
+        - AVAX/USDT
+        - BCH/USDT
+        - BTC/USDT
+        - DAI/USDT
+        - DOGE/USDT
+        - DOT/USDT
+        - EOS/USDT
+        - ETH/USDT
+        - LINK/USDT
+        - LTC/USDT
+        - MANA/USDT
+        - MATIC/USDT
+        - SHIB/USDT
+        - SOL/USDT
+        - XMR/USDT
+        - XRP/USDT
+        - XTZ/USDT
+      label_period_candles: 20
+      include_shifted_candles: 2
+      DI_threshold: 0.9
+      weight_factor: 0.9
+      principal_component_analysis: false
+      use_SVM_to_remove_outliers: true
+      indicator_periods_candles:
+        - 3
+        - 10
+        - 20
+    data_split_parameters:
+      test_size: 0
+      random_state: 1
+    model_training_parameters:
+      n_estimators: 800  
+  exchange:
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 1200
+      options:
+        defaultType: future
+        leverage: 100
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 1200
+      options:
+        defaultType: future
+        leverage: 100
+    name: binance
+    key: eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
+    secret: qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy
+    pair_blacklist: []
+    pair_whitelist: []
+      # - ILV/USDT:USDT
+      # - ZEC/USDT:USDT
+      # - COMP/USDT:USDT
+      # - AXS/USDT:USDT
+      # - BCH/USDT:USDT
+      # - LDO/USDT:USDT
+      # - NEO/USDT:USDT
+      # - ICP/USDT:USDT
+      # - LINK/USDT:USDT
+      # - MATIC/USDT:USDT
+      # - INJ/USDT:USDT
+      # - AVAX/USDT:USDT
+      # - MKR/USDT:USDT
+      # - WLD/USDT:USDT
+      # - DOT/USDT:USDT
+      # - DYDX/USDT:USDT
+      # - GMX/USDT:USDT
+      # - DASH/USDT:USDT
+      # - APT/USDT:USDT
+      # - NEAR/USDT:USDT
+      # - LTC/USDT:USDT
+      # - ATOM/USDT:USDT
+      # - EGLD/USDT:USDT
+      # - FIL/USDT:USDT
+      # - ENS/USDT:USDT
+      # - STX/USDT:USDT
+      # - ETC/USDT:USDT
+      # - XMR/USDT:USDT
+      # - YFI/USDT:USDT
+      # - QNT/USDT:USDT
+      # - UNI/USDT:USDT
+      # - PERP/USDT:USDT
+      # - SSV/USDT:USDT
+      # - KSM/USDT:USDT
+      # - CYBER/USDT:USDT
+      # - AAVE/USDT:USDT
+      # - RUNE/USDT:USDT
+  pairlists:
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=4eed8c01974dba13
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 600
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      mode: blacklist
+      pairlist_url: https://remotepairlist.com?q=08f55c8e02529216
+      processing_mode: append
+      refresh_period: 600
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: AgeFilter
+      min_days_listed: 30
+    - method: PriceFilter
+      low_price_ratio: 0.003
+    - method: SpreadFilter
+      max_spread_ratio: 0.005
+    - method: RangeStabilityFilter
+      lookback_days: 3
+      min_rate_of_change: 0.03
+      refresh_period: 1800
+    - method: ShuffleFilter
+  telegram:
+    enabled: true
+    token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
+    chat_id: "743804896"
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: TaSearchLevelH15m
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor

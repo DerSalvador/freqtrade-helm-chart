@@ -7,8 +7,21 @@ configcreds:
   timeframe: 5m
   trading_mode: spot
   stake_amount: unlimited
+  
   exchange:
     name: kraken
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 3000
+      options:
+        defaultType: spot
+        leverage: 10
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 3000
+      options:
+        defaultType: spot
+        leverage: 10  
     key: +H4NKdY1EIWMVwq4s+qOymZATOYoQPvND+wCMzo+jasiN+zScLEVPODo
     secret: jOrx0aLMbRzOjAoagVx0nU1fW2qzTvvT+2bZQNIehqjKfieATglkZ+o92QJm9AuCCdmH4k3owys+nWHKlCEJmw==
   telegram:
@@ -21,6 +34,12 @@ configcreds:
     # Adriana chat_id: "6274423445"
 bot:
   enabled: true
-  strategy_name: Strategy004
+  strategy_name: Anomaly
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
+
+image:
+  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256 # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+  tag: 4e74f75c56cb3dd6b3cd58b2ffb37b0d297fd5f521f56f4ebee292e69b40b16d # 2024.1_freqaitorch_ds_2
+  
+
