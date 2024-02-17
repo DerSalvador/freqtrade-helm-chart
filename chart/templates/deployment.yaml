@@ -140,6 +140,7 @@ spec:
         #  mountPath: /freqtrade/user_data/data
         - name: strategies
           mountPath: /freqtrade/user_data/strategies
+          # subPath:
         - name: extra-strategies
           mountPath: /freqtrade/user_data/extra_strategies
         - name: configcreds

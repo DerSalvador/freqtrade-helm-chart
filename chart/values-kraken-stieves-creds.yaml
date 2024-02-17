@@ -12,13 +12,13 @@ configcreds:
     secret: 7WUb1oOKiy13s45HBDO9s+LMzjw6SXpsLAYuKC5biErZ83Wjt+fTY/QL7s2R6qG/5NCLr2EyxGJE1tqVMshJgQ==
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 2500
+      rateLimit: 3000
       options:
         defaultType: spot
         leverage: 10
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 2500
+      rateLimit: 3000
       options:
         defaultType: spot
         leverage: 10    
@@ -42,13 +42,13 @@ configcreds:
       - SOL/USDT
       - BTC/USDT
   telegram:
-    enabled: true
+    enabled: false
     token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
     chat_id: "743804896"
     # token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
     # chat_id: "743804896"
 bot:
   enabled: true
-  strategy_name: DevilStra
+  strategy_name: BinClucMadSMA
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
