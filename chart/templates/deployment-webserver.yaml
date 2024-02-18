@@ -1,0 +1,116 @@
+{{- if .Values.bot.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: freqtrade-webserver-{{ .Release.Namespace }}
+spec:
+  selector:
+    matchLabels:
+      app: freqtrade-webserver-{{ .Release.Namespace }}
+  template:
+    metadata:
+      labels:
+        app: freqtrade-webserver-{{ .Release.Namespace }}
+    spec:
+      initContainers:
+      - name: copy-configmap-files-to-default
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        command:
+        - bash
+        args: ["-c","cp -r /strategies-data-configmap/*  /freqtrade/user_data/extra_strategies/; find /freqtrade/user_data/extra_strategies/; find /freqtrade/user_data/strategies/" ] 
+        volumeMounts:
+        - mountPath: /freqtrade/user_data/strategies
+          name: strategies-default
+          readOnly: false
+        - name: configmap-strategies
+          mountPath: /strategies-data-configmap
+          readOnly: false
+        - name: extra-strategies
+          mountPath: /freqtrade/user_data/extra_strategies
+          readOnly: false          
+      - name: take-sqlite-dir-ownership
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        command:
+        - bash
+        args: ["-c","chown -R ftuser:ftuser /sqlite; chown -R ftuser:ftuser /freqtrade; find /sqlite" ] 
+        volumeMounts:
+        - mountPath: /sqlite
+          name: sqlite    
+      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
+      containers:
+      - name: freqtrade-webserver-{{ .Release.Namespace }}
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - webserver
+{{- if .Values.bot.debug }}
+        - {{ .Values.bot.debuglevel }}
+{{- end }}
+        - --config
+        - /freqtrade/config/config-{{ .Release.Namespace }}.json
+        - --config
+        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+        - --log-file 
+        - /tmp/freqtrade-webserver.log
+        - --data-dir
+        - /freqtrade/user_data/data
+        volumeMounts:
+        - name: nfi-hold-trades
+          subPath: nfi-hold-trades.json
+          mountPath: /freqtrade/user_data/nfi-hold-trades.json
+          readOnly: false
+        - name: user-data
+          subPath: nfi-hold-trades.json
+          mountPath: /freqtrade/user_data
+          readOnly: false
+        - name: strategies-default
+          mountPath: /freqtrade/user_data/strategies
+          readOnly: false
+        - name: extra-strategies
+          mountPath: /freqtrade/user_data/extra_strategies
+          readOnly: false
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+        - name: sqlite
+          mountPath: /sqlite
+        ports:
+        - name: api
+          containerPort: {{ .Values.config.api_server.listen_port }}
+      imagePullSecrets:
+      - name: do-dersalvador-registry
+      volumes:
+      - name: strategies-default
+        persistentVolumeClaim:
+          claimName: freqtrade-strategies   
+      - name: user-data
+        persistentVolumeClaim:
+          claimName: freqtrade-user-data
+      - name: extra-strategies
+        persistentVolumeClaim:
+          claimName: freqtrade-extra-strategies
+      - name: configcreds
+        configMap:
+          name: freqtrade-config-creds-{{ .Release.Namespace }}
+      - name: nfi-hold-trades
+        configMap:
+          name: freqtrade-nfi-hold-trades-{{ .Release.Namespace }}
+      - name: config
+        configMap:
+          name: freqtrade-config-{{ .Release.Namespace }}
+      - name: configmap-strategies
+        configMap:
+          name: freqtrade-strategies-{{ .Release.Namespace }}
+      - name: sqlite
+        persistentVolumeClaim:
+          claimName: freqtrade-sqlite
+---
+{{- end }}

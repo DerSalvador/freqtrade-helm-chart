@@ -9,7 +9,6 @@ import talib.abstract as ta
 class Strategy004(IStrategy):
     INTERFACE_VERSION = 3
     '\n    Strategy 004\n    author@: Gerald Lonlas\n    github@: https://github.com/freqtrade/freqtrade-strategies\n\n    How to use it?\n    > python3 ./freqtrade/main.py -s Strategy004\n    '
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {'60': 0.01, '30': 0.03, '20': 0.04, '0': 0.05}
@@ -23,7 +22,7 @@ class Strategy004(IStrategy):
     trailing_stop_positive = 0.01
     trailing_stop_positive_offset = 0.02
     # run "populate_indicators" only for new candle
-    process_only_new_candles = True
+    process_only_new_candles = False
     # Experimental settings (configuration will overide these if set)
     use_exit_signal = True
     exit_profit_only = True
@@ -71,10 +70,7 @@ class Strategy004(IStrategy):
         dataframe['slowfastd-previous'] = dataframe.slowfastd.shift(1)
         # EMA - Exponential Moving Average
         dataframe['ema5'] = ta.EMA(dataframe, timeperiod=5)
-        # get the rolling volume mean for the last hour (12x5)
-        # Note: dataframe['volume'].mean() uses the whole dataframe in 
-        # backtesting hence will have lookahead, but would be fine for dry/live use
-        dataframe['mean-volume'] = dataframe['volume'].rolling(12).mean()
+        dataframe['mean-volume'] = dataframe['volume'].mean()
         return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:

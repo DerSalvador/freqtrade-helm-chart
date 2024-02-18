@@ -15,6 +15,24 @@ spec:
     spec:
       # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       initContainers:
+      - name: copy-configmap-files-to-default
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        command:
+        - bash
+        args: ["-c","find /strategies-data-configmap/ -name '*' -type f -exec cp {} /freqtrade/user_data/strategies/ ';'; find /freqtrade/user_data/extra_strategies/; find /freqtrade/user_data/strategies/" ] 
+        volumeMounts:
+        - mountPath: /freqtrade/user_data/strategies
+          name: strategies-default
+          readOnly: false
+        - name: configmap-strategies
+          mountPath: /strategies-data-configmap
+          readOnly: false
+        - name: extra-strategies
+          mountPath: /freqtrade/user_data/extra_strategies
+          readOnly: false          
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         securityContext:
@@ -22,10 +40,40 @@ spec:
           runAsUser: 0
         command:
         - bash
-        args: ["-c","chown -R ftuser:ftuser /sqlite; chown -R ftuser:ftuser /freqtrade; ls -ltra /sqlite" ] 
+        args: ["-c","chown -R ftuser:ftuser /sqlite; chown -R ftuser:ftuser /freqtrade; find /sqlite" ] 
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
+#       - name: freqtrade-list-strategies-{{ .Release.Namespace }}
+#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+#         command:
+#         - freqtrade
+#         args:
+#         - list-strategies
+#         - --recursive-strategy-search
+#         - --strategy-path
+#         - /freqtrade/user_data/extra_strategies        
+# {{- if .Values.bot.debug }}
+#         - {{ .Values.bot.debuglevel }}
+# {{- end }}
+#         - --config
+#         - /freqtrade/config/config-{{ .Release.Namespace }}.json
+#         - --config
+#         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+#         volumeMounts:
+#         - mountPath: /freqtrade/user_data/strategies
+#           name: strategies-default
+#         - name: configmap-strategies
+#           mountPath: /strategies-default
+#         - name: extra-strategies
+#           mountPath: /freqtrade/user_data/extra_strategies
+#           readOnly: false          
+#         - name: configcreds
+#           mountPath: /freqtrade/configcreds
+#         - name: config
+#           mountPath: /freqtrade/config
+#         - name: sqlite
+#           mountPath: /sqlite          
 # {{- if ne .Values.bot.strategy_name "Strategy005" }}
 #       - name: freqtrade-strategy-updater-{{ .Release.Namespace }}
 #         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -133,16 +181,20 @@ spec:
         - name: nfi-hold-trades
           subPath: nfi-hold-trades.json
           mountPath: /freqtrade/user_data/nfi-hold-trades.json
+          readOnly: false
         - name: user-data
           subPath: nfi-hold-trades.json
           mountPath: /freqtrade/user_data
-        #- name: backtesting-data
-        #  mountPath: /freqtrade/user_data/data
-        - name: strategies
+          readOnly: false
+        - name: strategies-default
           mountPath: /freqtrade/user_data/strategies
-          # subPath:
+          readOnly: false
         - name: extra-strategies
           mountPath: /freqtrade/user_data/extra_strategies
+          readOnly: false
+        - name: configmap-strategies
+          mountPath: /strategies-data-configmap
+          readOnly: false          
         - name: configcreds
           mountPath: /freqtrade/configcreds
         - name: config
@@ -158,6 +210,9 @@ spec:
       #- name: backtesting-data
       #  persistentVolumeClaim:
       #    claimName: freqtrade-backtesting-data
+      - name: strategies-default
+        persistentVolumeClaim:
+          claimName: freqtrade-strategies   
       - name: user-data
         persistentVolumeClaim:
           claimName: freqtrade-user-data
@@ -173,7 +228,7 @@ spec:
       - name: config
         configMap:
           name: freqtrade-config-{{ .Release.Namespace }}
-      - name: strategies
+      - name: configmap-strategies
         configMap:
           name: freqtrade-strategies-{{ .Release.Namespace }}
       - name: sqlite
