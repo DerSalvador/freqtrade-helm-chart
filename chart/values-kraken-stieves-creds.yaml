@@ -49,6 +49,6 @@ configcreds:
     # chat_id: "743804896"
 bot:
   enabled: true
-  strategy_name: BinClucMadSMA
+  strategy_name: NNPredict
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
