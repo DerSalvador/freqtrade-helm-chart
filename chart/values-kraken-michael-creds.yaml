@@ -5,6 +5,7 @@ kubernetes:
 configcreds:
   bot_name: freqtrade-kraken-michael
   timeframe: 5m
+  stoploss: -0.99
   trading_mode: spot
   stake_amount: unlimited
   exchange:
@@ -17,6 +18,6 @@ configcreds:
     chat_id: "1759706931"
 bot:
   enabled: true
-  strategy_name: DevilStra
+  strategy_name: NNTC
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
