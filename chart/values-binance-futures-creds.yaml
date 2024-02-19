@@ -98,6 +98,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: BinHV27_short
+  strategy_name: DWT_LongShort
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
