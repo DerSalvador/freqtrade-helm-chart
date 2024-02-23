@@ -1,63 +1,52 @@
-<h2>USDT 6 Bots: 15167.69</h2>
-Freqtrade Bots Report: 2024-02-22 17-00-51<br>
-Next Report: Thu Feb 22 17:55:51 CET 2024<br>
+<h2>USDT 5 Bots: 12685.79</h2>
+Freqtrade Bots Report: 2024-02-23 10-00-52<br>
+Next Report: Fri Feb 23 10:55:52 CET 2024<br>
 <hr><b>binance-futures</b><br>
 Started: 2024-02-21 23:59:14<br>
 Strategy: DWT_LongShort<br><b>
-Value: 2071.81</b><br>
+Value: 2119.37</b><br>
 Trading Mode: futures<br>
-Last Order Date: <br>
+Last Order Date: Thu Feb 22 08:29:36 CET 2024<br>
 Max Open Trades: 8.0<br>
-Open:        0<br>
+Open:        8<br>
 Wallets:       16<br>
 Balances: <br>USDT: 30.48USD, BotManaged: true<br>
-INJ/USDT:USDT: 262.63USD, BotManaged: true<br>
-XMR/USDT:USDT: 233.94USD, BotManaged: true<br>
-OP/USDT:USDT: 10USD, BotManaged: true<br>
-KSM/USDT:USDT: 9.17USD, BotManaged: true<br>
-RNDR/USDT:USDT: 194.39USD, BotManaged: true<br>
-STX/USDT:USDT: 259.39USD, BotManaged: true<br>
-DOT/USDT:USDT: 236.06USD, BotManaged: true<br>
-APT/USDT:USDT: 9.82USD, BotManaged: true<br>
-LPT/USDT:USDT: 253.43USD, BotManaged: true<br>
-EGLD/USDT:USDT: 268.01USD, BotManaged: true<br>
-AUCTION/USDT:USDT: 10.01USD, BotManaged: true<br>
-MASK/USDT:USDT: 9.09USD, BotManaged: true<br>
-SSV/USDT:USDT: 10.06USD, BotManaged: true<br>
-ZEN/USDT:USDT: 13.56USD, BotManaged: true<br>
-MOVR/USDT:USDT: 261.55USD, BotManaged: true<br>
-<hr><b>binance-futures-larissa</b><br>
-Started: 2024-02-22 00:37:41<br>
-Strategy: TaSearchLevelH15m<br><b>
-Value: 2347.98</b><br>
-Trading Mode: futures<br>
-Last Order Date: <br>
-Max Open Trades: 3.0<br>
-Open:        0<br>
-Wallets:        2<br>
-Balances: <br>USDT: 1610.72USD, BotManaged: true<br>
-ATOM/USDT:USDT: 737.26USD, BotManaged: true<br>
+INJ/USDT:USDT: 274.51USD, BotManaged: true<br>
+XMR/USDT:USDT: 238.08USD, BotManaged: true<br>
+OP/USDT:USDT: 10.26USD, BotManaged: true<br>
+KSM/USDT:USDT: 9.63USD, BotManaged: true<br>
+RNDR/USDT:USDT: 199.11USD, BotManaged: true<br>
+STX/USDT:USDT: 264.87USD, BotManaged: true<br>
+DOT/USDT:USDT: 227.27USD, BotManaged: true<br>
+APT/USDT:USDT: 9.7USD, BotManaged: true<br>
+LPT/USDT:USDT: 260.2USD, BotManaged: true<br>
+EGLD/USDT:USDT: 276.49USD, BotManaged: true<br>
+AUCTION/USDT:USDT: 10.71USD, BotManaged: true<br>
+MASK/USDT:USDT: 9.04USD, BotManaged: true<br>
+SSV/USDT:USDT: 10.54USD, BotManaged: true<br>
+ZEN/USDT:USDT: 14.28USD, BotManaged: true<br>
+MOVR/USDT:USDT: 274.2USD, BotManaged: true<br>
 <hr><b>binance-hassan</b><br>
-Started: <br>
+Started: 2024-02-23 07:55:36<br>
 Strategy: NNTC<br><b>
 Value: 121.09</b><br>
 Trading Mode: spot<br>
-Last Order Date: <br>
-Max Open Trades: <br>
+Last Order Date: Thu Feb 22 08:29:36 CET 2024<br>
+Max Open Trades: 3.0<br>
 Open:        0<br>
 Wallets:        1<br>
 Balances: <br>USDT: 121.09USD, BotManaged: true<br>
 <hr><b>kraken-hellen</b><br>
 Started: 2024-02-22 00:20:10<br>
 Strategy: TSPredict<br><b>
-Value: 735.93</b><br>
+Value: 728.76</b><br>
 Trading Mode: spot<br>
-Last Order Date: <br>
+Last Order Date: Thu Feb 22 08:29:36 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        0<br>
 Wallets:        7<br>
-Balances: <br>DOT: 237.04USD, BotManaged: false<br>
-EOS: 245.8USD, BotManaged: false<br>
+Balances: <br>DOT: 228.4USD, BotManaged: false<br>
+EOS: 247.28USD, BotManaged: false<br>
 LINK: 0USD, BotManaged: false<br>
 MATIC: 0USD, BotManaged: false<br>
 USDT: 253.08USD, BotManaged: true<br>
@@ -66,45 +55,33 @@ EUR: 0USD, BotManaged: false<br>
 <hr><b>kraken-michael</b><br>
 Started: 2024-02-21 21:58:57<br>
 Strategy: NNTC<br><b>
-Value: 6756.97</b><br>
+Value: 6652.33</b><br>
 Trading Mode: spot<br>
-Last Order Date: Thu Feb 22 14:41:06 CET 2024<br>
+Last Order Date: Thu Feb 22 23:21:08 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        3<br>
-Wallets:        8<br>
-Balances: <br>APE: 2213.51USD, BotManaged: true<br>
-CHF: 0USD, BotManaged: false<br>
-MANA: 0USD, BotManaged: false<br>
-MATIC: 2262.13USD, BotManaged: true<br>
-SOL: 0USD, BotManaged: false<br>
-USDT: 62.12USD, BotManaged: true<br>
-DOGE: 2219.21USD, BotManaged: true<br>
-XRP: 0USD, BotManaged: false<br>
+Wallets:        0<br>
+Balances: <br>
 <hr><b>kraken-stieves</b><br>
 Started: 2024-02-22 00:23:15<br>
 Strategy: NNTC<br><b>
-Value: 3133.91</b><br>
+Value: 3064.24</b><br>
 Trading Mode: spot<br>
-Last Order Date: Thu Feb 22 12:21:53 CET 2024<br>
+Last Order Date: Thu Feb 22 22:42:07 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        3<br>
 Wallets:        7<br>
-Balances: <br>ATOM: 0USD, BotManaged: false<br>
+Balances: <br>APE: 993.63USD, BotManaged: true<br>
+ATOM: 1024.12USD, BotManaged: true<br>
 AVAX: 0USD, BotManaged: false<br>
 CHF: 0USD, BotManaged: false<br>
-DOT: 1041.34USD, BotManaged: true<br>
-EOS: 1032.97USD, BotManaged: true<br>
-USDT: 28.67USD, BotManaged: true<br>
-XRP: 1030.93USD, BotManaged: true<br>
+USDT: 29.18USD, BotManaged: true<br>
+LTC: 1017.3USD, BotManaged: true<br>
+XRP: 0USD, BotManaged: false<br>
 <hr>
 <hr>
 <b>Kubernetes Events:</b><br>
-binance-hassan   56m         Warning   BackOff             pod/freqtrade-binance-hassan-694fd87c97-b466v    Back-off restarting failed container freqtrade-binance-hassan in pod freqtrade-binance-hassan-694fd87c97-b466v_binance-hassan(0e7ff62f-692f-4000-acc9-6c54592fd21a)<br>$
-binance-hassan   36m         Warning   BackOff             pod/freqtrade-binance-hassan-577c48dc4c-ss6mw    Back-off restarting failed container freqtrade-binance-hassan in pod freqtrade-binance-hassan-577c48dc4c-ss6mw_binance-hassan(49b2b5e3-efcf-4ff6-88ea-ebe81cc286db)<br>$
-binance-hassan   5m36s       Warning   BackOff             pod/freqtrade-binance-hassan-577c48dc4c-9bsdq    Back-off restarting failed container freqtrade-binance-hassan in pod freqtrade-binance-hassan-577c48dc4c-9bsdq_binance-hassan(37eea2c0-9c48-4542-918f-665e5b54e073)<br>$
-<hr><hr>History:<br><b>2024-02-18 22-01-37: 15374.83</b>
-<hr><hr>History:<br><b>2024-02-18 23-01-35: 15408.82</b>
-<hr><hr>History:<br><b>2024-02-19 00-01-28: 15437.84</b>
+binance-futures-larissa   43m         Warning   FailedPreStopHook   pod/freqtrade-binance-futures-larissa-58bbfcc995-vd2jg              PreStopHook failed<br>$
 <hr><hr>History:<br><b>2024-02-20 01-25-20: 15223.60</b>
 <hr><hr>History:<br><b>2024-02-20 02-02-00: 15208.11</b>
 <hr><hr>History:<br><b>2024-02-20 03-02-31: 15224.12</b>
@@ -133,3 +110,6 @@ binance-hassan   5m36s       Warning   BackOff             pod/freqtrade-binance
 <hr><hr>History:<br><b>2024-02-22 15-55-39: 15038.51</b>
 <hr><hr>History:<br><b>2024-02-22 16-00-48: 15037.87</b>
 <hr><hr>History:<br><b>2024-02-22 17-00-51: 15167.69</b>
+<hr><hr>History:<br><b>2024-02-23 08-00-50: 15120.10</b>
+<hr><hr>History:<br><b>2024-02-23 09-01-02: 15093.99</b>
+<hr><hr>History:<br><b>2024-02-23 10-00-52: 12685.79</b>
