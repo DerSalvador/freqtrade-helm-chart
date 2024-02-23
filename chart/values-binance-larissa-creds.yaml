@@ -43,6 +43,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: twinturboV8
+  strategy_name: NNTC
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
