@@ -31,7 +31,7 @@ config:
   timeframe: 5m
   stoploss: -0.10
   trailing_stop: false
-  trailing_only_offset_is_reached: true
+  trailing_only_offset_is_reached: false
   trailing_stop_positive: 0.01
   trailing_stop_positive_offset: 0.03
   use_custom_stoploss: false
@@ -230,20 +230,20 @@ config:
       - "http://0.0.0.0:8084"
     username: freqtrade
     password: "&&Liz270117!!"
-  initial_state: running
+  initial_state: stopped
   force_entry_enable: true
   internals:
     process_throttle_secs: 5
 
 image:
   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: 4e74f75c56cb3dd6b3cd58b2ffb37b0d297fd5f521f56f4ebee292e69b40b16d # 2023.12_freqaitorch as base image
+  tag: 114f1608c5c95e5ec1a36e2af95c5b13f58e2f653b0ec73b37b83ab690030a3b # 2023.12_freqaitorch as base image
 
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  pvc_size: 1Gi
+  pvc_size: 2Gi
   freqaimodel: LightGBMRegressor
 
 backtesting:
