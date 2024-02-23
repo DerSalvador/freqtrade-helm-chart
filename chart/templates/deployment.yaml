@@ -64,14 +64,14 @@ spec:
         - sh
         - -c
         - |
-          echo rm -f /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
-          rm -f /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+          for rf in `echo Example_Strat_With_FileLogging MasterMoniGoManiHyperStrategy freqtrade.pth`; do
+            echo rm -f /home/ftuser/.local/lib/python3.11/site-packages/${rf}*
+            rm -f /home/ftuser/.local/lib/python3.11/site-packages/${rf}*
+            echo rm -f /extra_strategies/${rf}*
+            rm -f /extra_strategies/${rf}*
+          done
           echo rm -rf /freqtrade/user_data/strategies/*; 
           rm -rf /freqtrade/user_data/strategies/*; 
-          echo rm -f /extra_strategies/MasterMoniGoManiHyperStrategy*
-          rm -f /extra_strategies/MasterMoniGoManiHyperStrategy*
-          echo rm -f /freqtrade/user_data/strategies/MasterMoniGoManiHyperStrategy*
-          rm -f /freqtrade/user_data/strategies/MasterMoniGoManiHyperStrategy*
           echo Copying strategy {{ .Values.bot.strategy_name }} to default path;  
           # cp -r /extra_strategies/{{ .Values.bot.strategy_name }}* /freqtrade/user_data/strategies/; 
           # cp -r /extra_strategies/models* /freqtrade/user_data/strategies/;
