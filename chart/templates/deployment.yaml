@@ -15,24 +15,35 @@ spec:
     spec:
       # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       initContainers:
-      - name: copy-configmap-files-to-default
-        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-        securityContext:
-          allowPrivilegeEscalation: false
-          runAsUser: 0
-        command:
-        - bash
-        args: ["-c","find /strategies-data-configmap/ -name '*' -type f -exec cp {} /freqtrade/user_data/strategies/ ';'; find /freqtrade/user_data/extra_strategies/; find /freqtrade/user_data/strategies/" ] 
-        volumeMounts:
-        - mountPath: /freqtrade/user_data/strategies
-          name: strategies-default
-          readOnly: false
-        - name: configmap-strategies
-          mountPath: /strategies-data-configmap
-          readOnly: false
-        - name: extra-strategies
-          mountPath: /freqtrade/user_data/extra_strategies
-          readOnly: false          
+      # - name: add-freqtrade-to-python-path
+      #   image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+      #   securityContext:
+      #     allowPrivilegeEscalation: false
+      #     runAsUser: 0
+      #   command:
+      #   # - bash
+      #   # args: ["-c","export FTP="/home/ftuser/.local/lib/python3.11/site-packages\n/extra_strategies"; echo '/freqtrade/freqtrade' > $FTP/freqtrade.pth; echo extended python path with: $(cat $FTP/freqtrade.pth)" ] 
+      #   - bash
+      #   - -c
+      #   - |
+      #     export EXPYPATH="/home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth"
+      #     rm -f $EXPYPATH
+      #     # WARNING: Dont adjust indention here for file EXPYPATH
+      #     cat >>$EXPYPATH <<EOF
+      #     /freqtrade/freqtrade
+      #     /extra_strategies
+      #     EOF
+      #     echo Extended python path with: $EXPYPATH
+      #     cat $EXPYPATH
+      #   volumeMounts:
+      #   - name: freqtrade-pythonpath 
+      #     subPath: freqtrade.pth
+      #     mountPath: /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+      #     readOnly: false
+      #   - name: user-data
+      #     subPath: freqtrade.pth
+      #     mountPath: /home/ftuser/.local/lib/python3.11/site-packages/
+      #     readOnly: false          
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         securityContext:
@@ -44,103 +55,147 @@ spec:
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
-#       - name: freqtrade-list-strategies-{{ .Release.Namespace }}
-#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-#         command:
-#         - freqtrade
-#         args:
-#         - list-strategies
-#         - --recursive-strategy-search
-#         - --strategy-path
-#         - /freqtrade/user_data/extra_strategies        
-# {{- if .Values.bot.debug }}
-#         - {{ .Values.bot.debuglevel }}
-# {{- end }}
-#         - --config
-#         - /freqtrade/config/config-{{ .Release.Namespace }}.json
-#         - --config
-#         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-#         volumeMounts:
-#         - mountPath: /freqtrade/user_data/strategies
-#           name: strategies-default
-#         - name: configmap-strategies
-#           mountPath: /strategies-default
-#         - name: extra-strategies
-#           mountPath: /freqtrade/user_data/extra_strategies
-#           readOnly: false          
-#         - name: configcreds
-#           mountPath: /freqtrade/configcreds
-#         - name: config
-#           mountPath: /freqtrade/config
-#         - name: sqlite
-#           mountPath: /sqlite          
-# {{- if ne .Values.bot.strategy_name "Strategy005" }}
-#       - name: freqtrade-strategy-updater-{{ .Release.Namespace }}
-#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-#         #env:
-#         #- name: PYTHONPATH
-#         #  value: /freqtrade:/freqtrade/user_data
-#         command:
-#         - freqtrade
-#         args:
-#         - strategy-updater
-# {{- if .Values.bot.debug }}
-#         - {{ .Values.bot.debuglevel }}
-# {{- end }}
-#         - --strategy-path
-#         - /freqtrade/user_data/extra_strategies
-#         - --strategy-list
-#         - {{ .Values.bot.strategy_name }}
-#         - --recursive-strategy-search
-#         - --log-file 
-#         - /tmp/freqtrade.log
-#         - --data-dir
-#         - /freqtrade/user_data/data
-#         volumeMounts:
-#         - name: nfi-hold-trades
-#           subPath: nfi-hold-trades.json
-#           mountPath: /freqtrade/user_data/nfi-hold-trades.json
-#         - name: user-data
-#           subPath: nfi-hold-trades.json
-#           mountPath: /freqtrade/user_data
-#         #- name: backtesting-data
-#         #  mountPath: /freqtrade/user_data/data
-#         - name: strategies
-#           mountPath: /freqtrade/user_data/strategies
-#         - name: extra-strategies
-#           mountPath: /freqtrade/user_data/extra_strategies
-# {{- end }}
-#       - name: freqtrade-test-pairs-{{ .Release.Namespace }}
-#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-#         # env:
-#         # - name: PYTHONPATH
-#         #  value: /freqtrade:/freqtrade/user_data
-#         command:
-#         - freqtrade
-#         args:
-#         - test-pairlist
-# {{- if .Values.bot.debug }}
-#         - {{ .Values.bot.debuglevel }}
-# {{- end }}
-#         - --config
-#         - /freqtrade/config/config-{{ .Release.Namespace }}.json
-#         - --config
-#         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-#         volumeMounts:
-#         - name: nfi-hold-trades
-#           subPath: nfi-hold-trades.json
-#           mountPath: /freqtrade/user_data/nfi-hold-trades.json
-#         - name: user-data
-#           subPath: nfi-hold-trades.json
-#           mountPath: /freqtrade/user_data
-#         - name: strategies
-#           mountPath: /freqtrade/user_data/strategies
-#         - name: extra-strategies
-#           mountPath: /freqtrade/user_data/extra_strategies      
-#         - name: configcreds
-#           mountPath: /freqtrade/configcreds
-#         - name: config
-#           mountPath: /freqtrade/config
+      - name: copy-strategy-to-default
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        command: 
+        - sh
+        - -c
+        - |
+          echo rm -f /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+          rm -f /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+          echo rm -rf /freqtrade/user_data/strategies/*; 
+          rm -rf /freqtrade/user_data/strategies/*; 
+          echo rm -f /extra_strategies/MasterMoniGoManiHyperStrategy*
+          rm -f /extra_strategies/MasterMoniGoManiHyperStrategy*
+          echo rm -f /freqtrade/user_data/strategies/MasterMoniGoManiHyperStrategy*
+          rm -f /freqtrade/user_data/strategies/MasterMoniGoManiHyperStrategy*
+          echo Copying strategy {{ .Values.bot.strategy_name }} to default path;  
+          # cp -r /extra_strategies/{{ .Values.bot.strategy_name }}* /freqtrade/user_data/strategies/; 
+          # cp -r /extra_strategies/models* /freqtrade/user_data/strategies/;
+          cp -r /extra_strategies/* /freqtrade/user_data/strategies/;
+          find /freqtrade/user_data/strategies/;
+          # cp -r /freqtrade/freqtrade/utils /freqtrade/user_data/strategies/;
+          # find  /freqtrade/user_data/strategies/utils;
+        volumeMounts:
+        # - name: freqtrade-pythonpath 
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+        #   readOnly: false
+        # - name: user-data
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/
+        #   readOnly: false
+        - name: strategies-default
+          mountPath: /freqtrade/user_data/strategies
+          readOnly: false
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false        
+      - name: freqtrade-list-strategies-{{ .Release.Namespace }}
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - list-strategies
+        - --recursive-strategy-search
+        # - --strategy-path
+        # - /freqtrade/user_data/extra_strategies        
+{{- if .Values.bot.debug }}
+        - {{ .Values.bot.debuglevel }}
+{{- end }}
+        - --config
+        - /freqtrade/config/config-{{ .Release.Namespace }}.json
+        - --config
+        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+        volumeMounts:
+        # - name: freqtrade-pythonpath 
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+        #   readOnly: false
+        # - name: user-data
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/
+        #   readOnly: false
+        - name: strategies-default
+          mountPath: /freqtrade/user_data/strategies
+          readOnly: false        
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false      
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+        - name: sqlite
+          mountPath: /sqlite          
+      - name: freqtrade-strategy-updater-{{ .Release.Namespace }}
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - strategy-updater
+{{- if .Values.bot.debug }}
+        - {{ .Values.bot.debuglevel }}
+{{- end }}
+        # - --strategy-path
+        # - /freqtrade/user_data/extra_strategies
+        - --strategy-list
+        - {{ .Values.bot.strategy_name }}
+        - --recursive-strategy-search
+        - --log-file 
+        - /tmp/freqtrade.log
+        - --data-dir
+        - /freqtrade/user_data/data
+        volumeMounts:
+        # - name: freqtrade-pythonpath 
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+        #   readOnly: false
+        # - name: user-data
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/
+        #   readOnly: false      
+        - name: strategies-default
+          mountPath: /freqtrade/user_data/strategies
+          readOnly: false
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false  
+      - name: freqtrade-test-pairs-{{ .Release.Namespace }}
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - test-pairlist
+{{- if .Values.bot.debug }}
+        - {{ .Values.bot.debuglevel }}
+{{- end }}
+        - --config
+        - /freqtrade/config/config-{{ .Release.Namespace }}.json
+        - --config
+        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+        volumeMounts:
+        # - name: freqtrade-pythonpath 
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+        #   readOnly: false
+        # - name: user-data
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/
+        #   readOnly: false        
+        - name: strategies-default
+          mountPath: /freqtrade/user_data/strategies
+          readOnly: false
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false  
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -148,9 +203,6 @@ spec:
           preStop:
             exec:
               command: ["/bin/sh","-c","sleep 60"]
-        #env:
-        #- name: PYTHONPATH
-        #  value: /freqtrade:/freqtrade/user_data
         command:
         - freqtrade
         args:
@@ -162,8 +214,8 @@ spec:
         - /freqtrade/config/config-{{ .Release.Namespace }}.json
         - --config
         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-        - --strategy-path
-        - /freqtrade/user_data/extra_strategies
+        # - --strategy-path
+        # - /freqtrade/user_data/extra_strategies
         - --strategy
         - {{ .Values.bot.strategy_name }}
         - --db-url
@@ -178,23 +230,31 @@ spec:
         - --data-dir
         - /freqtrade/user_data/data
         volumeMounts:
-        - name: nfi-hold-trades
-          subPath: nfi-hold-trades.json
-          mountPath: /freqtrade/user_data/nfi-hold-trades.json
-          readOnly: false
+        # - name: freqtrade-pythonpath 
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
+        #   readOnly: false
+        # - name: user-data
+        #   subPath: freqtrade.pth
+        #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/
+        #   readOnly: false    
+        # - name: nfi-hold-trades
+        #   subPath: nfi-hold-trades.json
+        #   mountPath: /freqtrade/user_data/nfi-hold-trades.json
+        #   readOnly: false
+        # - name: user-data
+        #   subPath: nfi-hold-trades.json
+        #   mountPath: /freqtrade/user_data
+        #   readOnly: false
         - name: user-data
-          subPath: nfi-hold-trades.json
           mountPath: /freqtrade/user_data
-          readOnly: false
+          readOnly: false   
         - name: strategies-default
           mountPath: /freqtrade/user_data/strategies
           readOnly: false
-        - name: extra-strategies
-          mountPath: /freqtrade/user_data/extra_strategies
-          readOnly: false
-        - name: configmap-strategies
-          mountPath: /strategies-data-configmap
-          readOnly: false          
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false      
         - name: configcreds
           mountPath: /freqtrade/configcreds
         - name: config
@@ -207,18 +267,15 @@ spec:
       imagePullSecrets:
       - name: deploy-key-gcr
       volumes:
-      #- name: backtesting-data
-      #  persistentVolumeClaim:
-      #    claimName: freqtrade-backtesting-data
       - name: strategies-default
         persistentVolumeClaim:
           claimName: freqtrade-strategies   
       - name: user-data
         persistentVolumeClaim:
           claimName: freqtrade-user-data
-      - name: extra-strategies
-        persistentVolumeClaim:
-          claimName: freqtrade-extra-strategies
+      # - name: extra-strategies
+      #   persistentVolumeClaim:
+      #     claimName: freqtrade-extra-strategies
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
@@ -228,11 +285,11 @@ spec:
       - name: config
         configMap:
           name: freqtrade-config-{{ .Release.Namespace }}
-      - name: configmap-strategies
-        configMap:
-          name: freqtrade-strategies-{{ .Release.Namespace }}
       - name: sqlite
         persistentVolumeClaim:
           claimName: freqtrade-sqlite
+      - name: freqtrade-pythonpath
+        persistentVolumeClaim:
+          claimName: freqtrade-pythonpath         
 ---
 {{- end }}

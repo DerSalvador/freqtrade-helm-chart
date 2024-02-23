@@ -49,6 +49,6 @@ configcreds:
     # chat_id: "743804896"
 bot:
   enabled: true
-  strategy_name: NNPredict
+  strategy_name: NNTC
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
