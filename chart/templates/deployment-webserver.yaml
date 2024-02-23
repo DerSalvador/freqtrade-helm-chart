@@ -13,24 +13,6 @@ spec:
         app: freqtrade-webserver-{{ .Release.Namespace }}
     spec:
       initContainers:
-      - name: copy-configmap-files-to-default
-        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-        securityContext:
-          allowPrivilegeEscalation: false
-          runAsUser: 0
-        command:
-        - bash
-        args: ["-c","cp -r /strategies-data-configmap/*  /freqtrade/user_data/extra_strategies/; find /freqtrade/user_data/extra_strategies/; find /freqtrade/user_data/strategies/" ] 
-        volumeMounts:
-        - mountPath: /freqtrade/user_data/strategies
-          name: strategies-default
-          readOnly: false
-        - name: configmap-strategies
-          mountPath: /strategies-data-configmap
-          readOnly: false
-        - name: extra-strategies
-          mountPath: /freqtrade/user_data/extra_strategies
-          readOnly: false          
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         securityContext:
@@ -62,20 +44,23 @@ spec:
         - --data-dir
         - /freqtrade/user_data/data
         volumeMounts:
-        - name: nfi-hold-trades
-          subPath: nfi-hold-trades.json
-          mountPath: /freqtrade/user_data/nfi-hold-trades.json
-          readOnly: false
+        # - name: nfi-hold-trades
+        #   subPath: nfi-hold-trades.json
+        #   mountPath: /freqtrade/user_data/nfi-hold-trades.json
+        #   readOnly: false
+        # - name: user-data
+        #   subPath: nfi-hold-trades.json
+        #   mountPath: /freqtrade/user_data
+        #   readOnly: false
         - name: user-data
-          subPath: nfi-hold-trades.json
           mountPath: /freqtrade/user_data
-          readOnly: false
+          readOnly: false          
         - name: strategies-default
           mountPath: /freqtrade/user_data/strategies
           readOnly: false
-        - name: extra-strategies
-          mountPath: /freqtrade/user_data/extra_strategies
-          readOnly: false
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false      
         - name: configcreds
           mountPath: /freqtrade/configcreds
         - name: config
@@ -86,7 +71,7 @@ spec:
         - name: api
           containerPort: {{ .Values.config.api_server.listen_port }}
       imagePullSecrets:
-      - name: do-dersalvador-registry
+      - name: deploy-key-gcr
       volumes:
       - name: strategies-default
         persistentVolumeClaim:
@@ -106,9 +91,9 @@ spec:
       - name: config
         configMap:
           name: freqtrade-config-{{ .Release.Namespace }}
-      - name: configmap-strategies
-        configMap:
-          name: freqtrade-strategies-{{ .Release.Namespace }}
+      # - name: configmap-strategies
+      #   configMap:
+      #     name: freqtrade-strategies-{{ .Release.Namespace }}
       - name: sqlite
         persistentVolumeClaim:
           claimName: freqtrade-sqlite

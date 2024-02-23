@@ -38,8 +38,3 @@ bot:
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 
-image:
-  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256 # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: 4e74f75c56cb3dd6b3cd58b2ffb37b0d297fd5f521f56f4ebee292e69b40b16d # 2024.1_freqaitorch_ds_2
-  
-
