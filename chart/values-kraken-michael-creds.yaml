@@ -19,5 +19,4 @@ configcreds:
 bot:
   enabled: true
   strategy_name: NNTC
-  pvc_size: 1Gi
   freqaimodel: LightGBMRegressor

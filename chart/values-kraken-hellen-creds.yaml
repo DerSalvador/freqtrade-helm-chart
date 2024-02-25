@@ -34,6 +34,5 @@ configcreds:
     chat_id: "6493643145"
 bot:
   enabled: true
-  strategy_name: ClucHAnix_BB_RPB_MOD
-  pvc_size: 1Gi
+  strategy_name: NNTC
   freqaimodel: LightGBMRegressor

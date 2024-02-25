@@ -22,5 +22,4 @@ configcreds:
 bot:
   enabled: true
   strategy_name: Strategy001
-  pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
