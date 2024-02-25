@@ -212,16 +212,19 @@ config:
       - "http://0.0.0.0:8084"
     username: freqtrade
     password: "&&Liz270117!!"
-  initial_state: stopped
+  initial_state: running
   force_entry_enable: true
   internals:
     process_throttle_secs: 5
-#image:
-#  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-#  tag: 2023.11_freqaitorch
+bot:
+  webserver_deployment: false   
+  pvc_size: 4Gi
+  debug: false
+  debuglevel: -vvv
+  enabled: true  
 image:
   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256 # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: 114f1608c5c95e5ec1a36e2af95c5b13f58e2f653b0ec73b37b83ab690030a3b # 5d6c0ba5b69c89978a3353831164745e98e9fef0e134a29fa8108ad65c1dcfcf # 2023.11_freqaitorch
+  tag: df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 5d6c0ba5b69c89978a3353831164745e98e9fef0e134a29fa8108ad65c1dcfcf # 2023.11_freqaitorch
 backtesting:
   enabled: false
   download_data: false
@@ -229,11 +232,11 @@ backtesting:
   timeframes: 1h
   strategy_list: Strategy005
   fee:
-  pvc_size: 2Gi
+  pvc_size: 4Gi
   results:
     enable_export: false
     reader_enabled: false
-    pvc_size: 1Gi
+    pvc_size: 4Gi
 ingress:
   enabled: true
 create_config_configmap: true
