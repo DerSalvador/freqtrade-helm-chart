@@ -4,10 +4,12 @@ kubernetes:
 configcreds:
   max_open_trades: 3
   minimal_roi:
-    "0": 0.05
-  stoploss: -0.05
-  trailing_stop: true
-  trailing_stop_positive: 0.05
+    "0": 0.1
+    "20160": 0.09
+    "40160": 0
+  stoploss: -0.99
+  trailing_stop: false
+  trailing_stop_positive: 0.99
   trailing_stop_positive_offset: 0.2
   trailing_only_offset_is_reached: true  
   trading_mode: futures
@@ -16,7 +18,7 @@ configcreds:
   stake_amount: unlimited
   bot_name: freqtrading-binance-futures-larissa
   freqai:
-    enabled: true
+    enabled: false
     fit_live_predictions_candles: 300
     purge_old_models: true
     train_period_days: 30

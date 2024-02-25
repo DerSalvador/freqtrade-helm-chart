@@ -9,7 +9,7 @@ from pandas import DataFrame
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy # noqa
-from freqtrade.strategy.hyper import CategoricalParameter, DecimalParameter, IntParameter
+from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParameter
 from freqtrade.strategy.strategy_helper import merge_informative_pair
 
 import Config
