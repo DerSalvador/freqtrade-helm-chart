@@ -34,7 +34,6 @@ configcreds:
     # Adriana chat_id: "6274423445"
 bot:
   enabled: true
-  strategy_name: Anomaly
-  pvc_size: 1Gi
+  strategy_name: NNTC
   freqaimodel: LightGBMRegressor
 

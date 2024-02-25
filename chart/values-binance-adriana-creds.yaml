@@ -63,6 +63,6 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: HPStrategyTFJPAConfirmV1
+  strategy_name: NNTC
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
