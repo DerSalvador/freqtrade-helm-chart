@@ -2,7 +2,7 @@
 kubernetes:
   nodePort: 32321
 configcreds:
-  max_open_trades: 8
+  max_open_trades: 5
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
@@ -24,65 +24,28 @@ configcreds:
     name: binance
     key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
     secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
-    pair_whitelist: 
-      - ILV/USDT:USDT
-      - ZEC/USDT:USDT
-      - COMP/USDT:USDT
-      - AXS/USDT:USDT
-      - BCH/USDT:USDT
-      - LDO/USDT:USDT
-      - NEO/USDT:USDT
-      - ICP/USDT:USDT
-      - LINK/USDT:USDT
-      - MATIC/USDT:USDT
-      - INJ/USDT:USDT
-      - AVAX/USDT:USDT
-      - MKR/USDT:USDT
-      - WLD/USDT:USDT
-      - DOT/USDT:USDT
-      - DYDX/USDT:USDT
-      - GMX/USDT:USDT
-      - DASH/USDT:USDT
-      - APT/USDT:USDT
-      - NEAR/USDT:USDT
-      - LTC/USDT:USDT
-      - ATOM/USDT:USDT
-      - EGLD/USDT:USDT
-      - FIL/USDT:USDT
-      - ENS/USDT:USDT
-      - STX/USDT:USDT
-      - ETC/USDT:USDT
-      - XMR/USDT:USDT
-      - YFI/USDT:USDT
-      - QNT/USDT:USDT
-      - UNI/USDT:USDT
-      - PERP/USDT:USDT
-      - SSV/USDT:USDT
-      - KSM/USDT:USDT
-      - CYBER/USDT:USDT
-      - AAVE/USDT:USDT
-      - RUNE/USDT:USDT
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=4eed8c01974dba13
+      pairlist_url: https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 600
       keep_pairlist_on_failure: true
       read_timeout: 120
-    #- method: RemotePairList
-    #  number_assets: 50
-    #  mode: blacklist
-    #  pairlist_url: https://remotepairlist.com?q=08f55c8e02529216
-    #  processing_mode: append
-    #  refresh_period: 600
-    #  keep_pairlist_on_failure: true
-    #  read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      mode: blacklist
+      pairlist_url: https://remotepairlist.com?q=3e362027334fd860
+      processing_mode: append
+      refresh_period: 600
+      keep_pairlist_on_failure: true
+      read_timeout: 120
     - method: AgeFilter
       min_days_listed: 30
     - method: PriceFilter
       low_price_ratio: 0.003
+      min_price: 50
     - method: SpreadFilter
       max_spread_ratio: 0.005
     - method: RangeStabilityFilter
@@ -94,10 +57,16 @@ configcreds:
     enabled: true
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
+
+image:
+  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+  tag: 0c273f730d71c0d305bf9d9cb22fecc44b81a8c75806c077ce3eaeae6072c9b6 # 2023.12_freqaitorch as base image
+
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: DWT_LongShort
+  # Short Trades only
+  strategy_name: TaSearchLevelH15m
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
