@@ -1,3 +1,4 @@
 ---
 kubernetes:
   nodeNameBackTestingResultsReader: dynamicValues1
+  copyContainer: true

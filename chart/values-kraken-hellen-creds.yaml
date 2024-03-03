@@ -8,26 +8,8 @@ configcreds:
   stake_amount: unlimited
   exchange:
     name: kraken
-    key: 54UnpzC561cUBlNh1D/5+3C8pyKKZs8lFYNhI1HcLxmn+jo8JybDGgWM
-    secret: GHHfmkJ2xnAwnutoOpux1n/cbG8+Hz3zjltsslfU4DybEfJ2gMedqbi/STzph2S1YuDvFaqpTe8n5D7+6bkVfw==
-    pair_whitelist: 
-      - BTC/USDT
-      - APE/USDT
-      - DOGE/USDT
-      - DOT/USDT
-      - XTZ/USDT
-      - AVAX/USDT
-      - ALGO/USDT
-      - XRP/USDT
-      - SOL/USDT
-      - ETH/USDT
-      - MATIC/USDT
-      - XMR/USDT
-      - ATOM/USDT
-      - LTC/USDT
-      - MANA/USDT
-      - ADA/USDT
-      - EOS/USDT
+    key: X6beWu84orWoCoXmAD0jVRcVBRAJ3VhlhZpu7TGKSiGifT6UWCHH3Jf8
+    secret: YhuqDH/BGwTevnUIBr8o9Kaw6fnjqNP3NZ/wF9nX3Dk4Efz1Uc2qyzT2RALy2rMJjdsjgOl7c4kC654NatBYuA==
   telegram:
     enabled: true
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"
