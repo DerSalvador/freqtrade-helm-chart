@@ -4,6 +4,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: freqtrade-{{ .Release.Namespace }}
+  labels:
+    app: freqtrade
+    env: production   # Adding a label named env with value production
 spec:
   selector:
     matchLabels:
@@ -65,6 +68,7 @@ spec:
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
+{{- if .Values.kubernetes.copyContainer }}          
       - name: copy-strategy-to-default
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         securityContext:
@@ -93,6 +97,7 @@ spec:
         - name: strategies-default
           mountPath: /freqtrade/user_data/strategies
           readOnly: false  
+{{- end }}
       - name: freqtrade-list-strategies-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:

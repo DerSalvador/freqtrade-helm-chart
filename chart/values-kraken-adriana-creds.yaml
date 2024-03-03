@@ -28,10 +28,6 @@ configcreds:
     enabled: true
     token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     chat_id: "6274423445"
-    # Stefan token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
-    # Stefan chat_id: "743804896"
-    # Adriana token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
-    # Adriana chat_id: "6274423445"
 bot:
   enabled: true
   strategy_name: NNTC
