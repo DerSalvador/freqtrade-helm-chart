@@ -1,42 +1,51 @@
-<h2>USDT 11 Bots: 16508.75</h2>
-Freqtrade Bots Report: 2024-03-03 00-00-10<br>
-Next Report: Sun Mar  3 00:55:11 CET 2024<br>
+<h2>USDT 11 Bots: 17077.55</h2>
+Freqtrade Bots Report: 2024-03-04 19-12-57<br>
+Next Report: Mon Mar  4 20:07:57 CET 2024<br>
 <hr><b>binance-adriana</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 13:21:47<br>
 Strategy: NNTC<br><b>
-Value: 63.72</b><br>
+Value: 64.56</b><br>
 <br>
 Trading Mode: spot<br>
 Last Order Date: <br>
 Max Open Trades: 3.0<br>
 Open:        0<br>
 Wallets:        1<br>
-Balances: <br>BNB: 63.72USD, BotManaged: false<br>
+Balances: <br>BNB: 64.56USD, BotManaged: false<br>
 <hr><b>binance-futures</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 10:30:15<br>
 Strategy: TaSearchLevelH15m<br><b>
-Value: 1536.99</b><br>
+Value: 1671.93</b><br>
+Open Positions:<br>
+<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>binance<td>ETH/USDT:USDT</td><td>2024-03-03T04:36:07Z</td><td>2.0</td> <td>true</td><td>true</td><td>199.99328</td> <td>399.98656</td><td>3448.16</td> <td>5064.828442231001</td> <td>-11.34345589065565</td><td>-197.69827135</td><tr>
+<tr><td>binance<td>EGLD/USDT:USDT</td><td>2024-03-03T23:46:44Z</td><td>5.0</td> <td>true</td><td>true</td><td>201.175256</td> <td>1005.87628</td><td>72.3652</td> <td>85.263736802</td> <td>68.23530433825289</td><td>-198.68255582</td><tr>
+<tr><td>binance<td>TRB/USDT:USDT</td><td>2024-03-04T17:48:04Z</td><td>5.0</td> <td>true</td><td>false</td><td>199.784886</td> <td>998.92443</td><td>114.8189</td> <td>94.2898690055</td> <td>3.8728938106165303</td><td>-198.68496197</td><tr>
+<tr><td>binance<td>LTC/USDT:USDT</td><td>2024-03-04T18:00:12Z</td><td>5.0</td> <td>true</td><td>false</td><td>201.69912</td> <td>1008.4956</td><td>88.62</td> <td>72.0228190115</td> <td>6.7235060674337</td><td>-200.513893</td><tr> </table>
 <br>
 Trading Mode: futures<br>
-Last Order Date: <br>
+Last Order Date: Mon Mar  4 19:00:12 CET 2024<br>
 Max Open Trades: 5.0<br>
-Open:        0<br>
-Wallets:        5<br>
-Balances: <br>USDT: 1018.03USD, BotManaged: true<br>
-XMR/USDT:USDT: 189.43USD, BotManaged: true<br>
-DASH/USDT:USDT: 55.29USD, BotManaged: true<br>
-GMX/USDT:USDT: 173.69USD, BotManaged: true<br>
-AXS/USDT:USDT: 99.91USD, BotManaged: true<br>
+Open:        4<br>
+Wallets:        9<br>
+Balances: <br>USDT: 212.83USD, BotManaged: true<br>
+XMR/USDT:USDT: 187.83USD, BotManaged: true<br>
+DASH/USDT:USDT: 53.09USD, BotManaged: true<br>
+LTC/USDT:USDT: 211.97USD, BotManaged: true<br>
+TRB/USDT:USDT: 204.22USD, BotManaged: true<br>
+GMX/USDT:USDT: 246.81USD, BotManaged: true<br>
+ETH/USDT:USDT: 187.69USD, BotManaged: true<br>
+EGLD/USDT:USDT: 272.48USD, BotManaged: true<br>
+AXS/USDT:USDT: 95.02USD, BotManaged: true<br>
 <hr><b>binance-futures-larissa</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 03:43:53<br>
 Strategy: DWT_LongShort<br><b>
-Value: 642.94</b><br>
+Value: 606.97</b><br>
 Open Positions:<br>
-<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>binance<td>QNT/USDT:USDT</td><td>5.0</td> <td>true</td><td>true</td><td>427.34860012</td> <td>2136.74300058</td> <td>137.573856435</td> <td>-161.7518572365662</td><td>-418.68972174</td><tr>
-<tr><td>binance<td>NMR/USDT:USDT</td><td>5.0</td> <td>true</td><td>true</td><td>427.3152</td> <td>2136.576</td> <td>38.8437960775</td> <td>-43.53774636631924</td><td>-412.63223432</td><tr> </table>
+<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>binance<td>QNT/USDT:USDT</td><td>2024-03-01T10:12:19Z</td><td>5.0</td> <td>true</td><td>true</td><td>427.34860012</td> <td>2136.74300058</td><td>116.7619126</td> <td>137.573856435</td> <td>-255.7809488092123</td><td>-408.31563832</td><tr>
+<tr><td>binance<td>NMR/USDT:USDT</td><td>2024-03-01T11:10:43Z</td><td>5.0</td> <td>true</td><td>true</td><td>427.3152</td> <td>2136.576</td><td>33.28</td> <td>38.8437960775</td> <td>3.60389984720814</td><td>-402.67287261</td><tr> </table>
 <br>
 Trading Mode: futures<br>
 Last Order Date: Fri Mar  1 12:10:43 CET 2024<br>
@@ -44,8 +53,8 @@ Max Open Trades: 3.0<br>
 Open:        2<br>
 Wallets:        3<br>
 Balances: <br>USDT: 0USD, BotManaged: true<br>
-NMR/USDT:USDT: 381.26USD, BotManaged: true<br>
-QNT/USDT:USDT: 261.68USD, BotManaged: true<br>
+NMR/USDT:USDT: 443.19USD, BotManaged: true<br>
+QNT/USDT:USDT: 163.78USD, BotManaged: true<br>
 <hr><b>binance-hassan</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 04:00:40<br>
@@ -62,170 +71,302 @@ Balances: <br>USDT: 121.09USD, BotManaged: true<br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 12:45:27<br>
 Strategy: NNTC<br><b>
-Value: 27.32</b><br>
+Value: 28.09</b><br>
 <br>
 Trading Mode: spot<br>
 Last Order Date: Fri Mar  1 12:10:43 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        0<br>
 Wallets:        9<br>
-Balances: <br>BTC: 7.42USD, BotManaged: false<br>
+Balances: <br>BTC: 8.02USD, BotManaged: false<br>
 USDT: 4.06USD, BotManaged: true<br>
 ATOM: 0.12USD, BotManaged: false<br>
-DOT: 5.45USD, BotManaged: false<br>
-TRB: 1.22USD, BotManaged: false<br>
-EGLD: 0.65USD, BotManaged: false<br>
-AVAX: 0.86USD, BotManaged: false<br>
-FIL: 0.08USD, BotManaged: false<br>
-AXS: 7.46USD, BotManaged: false<br>
+DOT: 5.7USD, BotManaged: false<br>
+TRB: 1.15USD, BotManaged: false<br>
+EGLD: 0.67USD, BotManaged: false<br>
+AVAX: 0.83USD, BotManaged: false<br>
+FIL: 0.09USD, BotManaged: false<br>
+AXS: 7.47USD, BotManaged: false<br>
 <hr><b>binance-larissa</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 09:55:34<br>
 Strategy: NNTC<br><b>
-Value: 0.00</b><br>
+Value: 485.47</b><br>
+Open Positions:<br>
+<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>binance<td>TIA/USDT</td><td>2024-03-04T10:11:16Z</td><td>1.0</td> <td>true</td><td>false</td><td>164.447388</td> <td>164.447388</td><td>15.828076923076923</td> <td>null</td> <td>-5.3043083271455</td><td>-161.5458695</td><tr>
+<tr><td>binance<td>ORDI/USDT</td><td>2024-03-04T10:16:20Z</td><td>1.0</td> <td>true</td><td>false</td><td>164.02269312</td> <td>164.02269312</td><td>85.514</td> <td>null</td> <td>-3.90483180751619</td><td>-161.8617467</td><tr>
+<tr><td>binance<td>ATOM/USDT</td><td>2024-03-04T10:26:25Z</td><td>1.0</td> <td>true</td><td>false</td><td>164.7163188</td> <td>164.7163188</td><td>12.491</td> <td>null</td> <td>-3.2497319280183397</td><td>-163.15015888</td><tr> </table>
 <br>
 Trading Mode: spot<br>
-Last Order Date: Fri Mar  1 12:10:43 CET 2024<br>
+Last Order Date: Mon Mar  4 11:26:25 CET 2024<br>
 Max Open Trades: 3.0<br>
-Open:        0<br>
-Wallets:        1<br>
-Balances: <br>USDT: 0USD, BotManaged: true<br>
+Open:        3<br>
+Wallets:        4<br>
+Balances: <br>BNB: 6.13USD, BotManaged: false<br>
+ATOM: 161.5USD, BotManaged: true<br>
+ORDI: 159.1USD, BotManaged: true<br>
+TIA: 158.75USD, BotManaged: true<br>
 <hr><b>binance-michael</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 13:34:43<br>
 Strategy: NNTC<br><b>
-Value: 4651.37</b><br>
+Value: 4661.35</b><br>
 Open Positions:<br>
-<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>binance<td>ORDI/USDT</td><td>1.0</td> <td>true</td><td>false</td><td>1318.99369599</td> <td>1318.99369599</td> <td>null</td> <td>9.48466884322801</td><td>-1306.87361471</td><tr>
-<tr><td>binance<td>TRB/USDT</td><td>1.0</td> <td>true</td><td>false</td><td>1317.9528279</td> <td>1317.9528279</td> <td>null</td> <td>-0.22664714860577</td><td>-1304.90971313</td><tr>
-<tr><td>binance<td>ETH/USDT</td><td>1.0</td> <td>true</td><td>false</td><td>1318.17225825</td> <td>1318.17225825</td> <td>null</td> <td>0.10814846228774</td><td>-1306.27638232</td><tr> </table>
+<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>binance<td>TRB/USDT</td><td>2024-03-02T22:26:08Z</td><td>1.0</td> <td>true</td><td>false</td><td>1317.9528279</td> <td>1317.9528279</td><td>122.26803521779425</td> <td>null</td> <td>-74.20505532942535</td><td>-1304.90971313</td><tr>
+<tr><td>binance<td>ETH/USDT</td><td>2024-03-02T22:46:11Z</td><td>1.0</td> <td>true</td><td>false</td><td>1318.17225825</td> <td>1318.17225825</td><td>3405.14</td> <td>null</td> <td>52.41069985885996</td><td>-1306.27638232</td><tr>
+<tr><td>binance<td>ORDI/USDT</td><td>2024-03-04T08:01:18Z</td><td>1.0</td> <td>true</td><td>false</td><td>1360.83674106</td> <td>1360.83674106</td><td>86.48882158730159</td> <td>null</td> <td>-47.33254101359325</td><td>-1348.23678918</td><tr> </table>
 <br>
 Trading Mode: spot<br>
-Last Order Date: Sat Mar  2 23:46:11 CET 2024<br>
+Last Order Date: Mon Mar  4 09:01:18 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        3<br>
 Wallets:        7<br>
-Balances: <br>ETH: 1320.5USD, BotManaged: true<br>
-USDT: 42.03USD, BotManaged: true<br>
-TRB: 1320.02USD, BotManaged: true<br>
+Balances: <br>ETH: 1377.3USD, BotManaged: true<br>
+USDT: 152.42USD, BotManaged: true<br>
+TRB: 1238.85USD, BotManaged: true<br>
 SHIB: 0USD, BotManaged: false<br>
-ORDI: 1329.21USD, BotManaged: true<br>
-TIA: 639.06USD, BotManaged: false<br>
-ACE: 0.54USD, BotManaged: false<br>
+ORDI: 1310.39USD, BotManaged: true<br>
+TIA: 581.83USD, BotManaged: false<br>
+ACE: 0.56USD, BotManaged: false<br>
 <hr><b>kraken-adriana</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 13:51:35<br>
 Strategy: NNTC<br><b>
-Value: 67.75</b><br>
+Value: 69.95</b><br>
 <br>
 Trading Mode: spot<br>
-Last Order Date: Sat Mar  2 23:46:11 CET 2024<br>
+Last Order Date: Mon Mar  4 09:01:18 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        0<br>
 Wallets:        7<br>
 Balances: <br>ADA: 0USD, BotManaged: false<br>
-ATOM: 21.92USD, BotManaged: false<br>
+ATOM: 22.34USD, BotManaged: false<br>
 MANA: 0USD, BotManaged: false<br>
 MATIC: 0USD, BotManaged: false<br>
 USDT: 1.28USD, BotManaged: true<br>
-BTC: 21.11USD, BotManaged: false<br>
-XRP: 23.44USD, BotManaged: false<br>
+BTC: 22.71USD, BotManaged: false<br>
+XRP: 23.63USD, BotManaged: false<br>
 <hr><b>kraken-hellen</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 13:25:46<br>
 Strategy: NNTC<br><b>
-Value: 878.26</b><br>
+Value: 859.04</b><br>
+Open Positions:<br>
+<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>kraken<td>AVAX/USDT</td><td>2024-03-03T02:00:31Z</td><td>1.0</td> <td>true</td><td>false</td><td>287.9479393</td> <td>287.9479393</td><td>43.95</td> <td>null</td> <td>-13.68717337953213</td><td>-285.82151544</td><tr> </table>
 <br>
 Trading Mode: spot<br>
-Last Order Date: Sat Mar  2 23:46:11 CET 2024<br>
+Last Order Date: Sun Mar  3 03:00:35 CET 2024<br>
 Max Open Trades: 3.0<br>
-Open:        0<br>
-Wallets:        6<br>
-Balances: <br>APE: 335.07USD, BotManaged: false<br>
-AVAX: 339.61USD, BotManaged: false<br>
+Open:        1<br>
+Wallets:        5<br>
+Balances: <br>AVAX: 274.71USD, BotManaged: true<br>
 LINK: 0USD, BotManaged: false<br>
-USDT: 203.58USD, BotManaged: true<br>
+USDT: 584.33USD, BotManaged: true<br>
 XMR: 0USD, BotManaged: false<br>
 EUR: 0USD, BotManaged: false<br>
 <hr><b>kraken-michael</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 09:26:41<br>
 Strategy: NNTC<br><b>
-Value: 8518.26</b><br>
+Value: 8508.03</b><br>
 Open Positions:<br>
-<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>kraken<td>ETH/USDT</td><td>1.0</td> <td>true</td><td>false</td><td>2498.92826994</td> <td>2498.92826994</td> <td>null</td> <td>-36.54904963819043</td><td>-2478.98660567</td><tr>
-<tr><td>kraken<td>XMR/USDT</td><td>1.0</td> <td>true</td><td>false</td><td>2715.36038614</td> <td>2715.36038614</td> <td>null</td> <td>7.98782459045353</td><td>-2693.58502613</td><tr> </table>
+<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>kraken<td>LINK/USDT</td><td>2024-03-03T05:20:43Z</td><td>1.0</td> <td>true</td><td>false</td><td>2829.20533395</td> <td>2829.20533395</td><td>21.19839</td> <td>null</td> <td>-153.66705636620205</td><td>-2806.62746289</td><tr>
+<tr><td>kraken<td>AVAX/USDT</td><td>2024-03-04T14:05:33Z</td><td>1.0</td> <td>true</td><td>false</td><td>2878.89623885</td> <td>2878.89623885</td><td>42.77</td> <td>null</td> <td>-63.95480220132202</td><td>-2855.76814094</td><tr> </table>
 <br>
 Trading Mode: spot<br>
-Last Order Date: Sat Mar  2 00:46:54 CET 2024<br>
+Last Order Date: Mon Mar  4 15:06:16 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        2<br>
 Wallets:        7<br>
-Balances: <br>CHF: 0USD, BotManaged: false<br>
+Balances: <br>AVAX: 2823.7USD, BotManaged: true<br>
+CHF: 0USD, BotManaged: false<br>
+LINK: 2676.3USD, BotManaged: true<br>
 MANA: 0USD, BotManaged: false<br>
 SOL: 0USD, BotManaged: false<br>
-USDT: 3314.17USD, BotManaged: true<br>
-ETH: 2468.62USD, BotManaged: true<br>
+USDT: 3008.03USD, BotManaged: true<br>
 DOGE: 0USD, BotManaged: false<br>
-XMR: 2735.48USD, BotManaged: true<br>
 <hr><b>kraken-stieves</b><br>
 <b><small>Trader is: live running</small></b><br>
 Started: 2024-02-25 04:55:44<br>
 Strategy: NNTC<br><b>
-Value: 1.05</b><br>
+Value: 1.07</b><br>
 Open Positions:<br>
-<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>kraken<td>AVAX/USDT</td><td>1.0</td> <td>true</td><td>false</td><td>10.7709541</td> <td>10.7709541</td> <td>null</td> <td>0.05014133035608001</td><td>-10.69057781</td><tr> </table>
+<style>table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style> <table><th>Exchange</th><th>Pair</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Liquidation Price</th><th>Total Profit Fiat</th><th>Stop Loss Distance</th> <tr><td>kraken<td>AVAX/USDT</td><td>2024-02-29T12:47:33Z</td><td>1.0</td> <td>true</td><td>false</td><td>10.7709541</td> <td>10.7709541</td><td>42.62</td> <td>null</td> <td>-0.31747869620817</td><td>-10.69057781</td><tr> </table>
 <br>
 Trading Mode: spot<br>
 Last Order Date: Fri Mar  1 23:26:07 CET 2024<br>
 Max Open Trades: 3.0<br>
 Open:        1<br>
 Wallets:        3<br>
-Balances: <br>ATOM: 1.05USD, BotManaged: false<br>
+Balances: <br>ATOM: 1.07USD, BotManaged: false<br>
 CHF: 0USD, BotManaged: false<br>
 XRP: 0USD, BotManaged: false<br>
 <hr>
 <hr>
 <b>Kubernetes Events:</b><br>
-binance-adriana           freqtrade-binance-adriana                    1/1     1            1           6d10h$<br>
-binance-futures-larissa   freqtrade-binance-futures-larissa            1/1     1            1           6d20h$<br>
-binance-futures           freqtrade-binance-futures                    1/1     1            1           6d13h$<br>
-binance-hassan            freqtrade-binance-hassan                     1/1     1            1           6d19h$<br>
-binance-juliano           freqtrade-binance-juliano                    1/1     1            1           6d10h$<br>
-binance-larissa           freqtrade-binance-larissa                    1/1     1            1           6d13h$<br>
-binance-michael           freqtrade-binance-michael                    1/1     1            1           6d9h$<br>
-kraken-adriana            freqtrade-kraken-adriana                     1/1     1            1           6d9h$<br>
-kraken-hellen             freqtrade-kraken-hellen                      1/1     1            1           6d9h$<br>
-kraken-michael            freqtrade-kraken-michael                     1/1     1            1           6d13h$<br>
-kraken-stieves            freqtrade-kraken-stieves                     1/1     1            1           6d19h$<br><br>
-<hr><hr>History:<br><b>2024-03-01 19-01-35: 16467.65</b>
-<hr><hr>History:<br><b>2024-03-01 21-01-29: 16387.70</b>
-<hr><hr>History:<br><b>2024-03-01 22-01-14: 16409.29</b>
-<hr><hr>History:<br><b>2024-03-01 23-01-13: 16484.33</b>
-<hr><hr>History:<br><b>2024-03-01 23-31-45: 16660.60</b>
-<hr><hr>History:<br><b>2024-03-02 00-07-48: 16503.05</b>
-<hr><hr>History:<br><b>2024-03-02 01-01-31: 16565.40</b>
-<hr><hr>History:<br><b>2024-03-02 02-01-30: 16551.50</b>
-<hr><hr>History:<br><b>2024-03-02 03-01-30: 16438.30</b>
-<hr><hr>History:<br><b>2024-03-02 04-01-31: 16295.75</b>
-<hr><hr>History:<br><b>2024-03-02 05-01-28: 16254.30</b>
-<hr><hr>History:<br><b>2024-03-02 06-01-26: 16266.96</b>
-<hr><hr>History:<br><b>2024-03-02 07-01-29: 16298.61</b>
-<hr><hr>History:<br><b>2024-03-02 08-01-31: 16317.22</b>
-<hr><hr>History:<br><b>2024-03-02 09-01-30: 16421.09</b>
-<hr><hr>History:<br><b>2024-03-02 10-01-27: 16475.30</b>
-<hr><hr>History:<br><b>2024-03-02 11-01-33: 16409.12</b>
-<hr><hr>History:<br><b>: 16451.89</b>
-<hr><hr>History:<br><b>: 16533.21</b>
-<hr><hr>History:<br><b>: 16603.03</b>
-<hr><hr>History:<br><b>: 16555.40</b>
-<hr><hr>History:<br><b>: 16531.31</b>
-<hr><hr>History:<br><b>: 16520.09</b>
-<hr><hr>History:<br><b>: 16556.88</b>
-<hr><hr>History:<br><b>: 16450.23</b>
-<hr><hr>History:<br><b>: 16477.88</b>
-<hr><hr>History:<br><b>2024-03-02 22-01-37: 16499.25</b>
-<hr><hr>History:<br><b>2024-03-02 23-03-03: 16490.03</b>
-<hr><hr>History:<br><b>2024-03-02 23-26-31: 16510.02</b>
-<hr><hr>History:<br><b>2024-03-02 23-45-09: 16475.92</b>
-<hr><hr>History:<br><b>2024-03-03 00-00-10: 16508.75</b>
+binance-adriana           freqtrade-binance-adriana                    1/1     1            1           8d$<br>
+binance-futures-larissa   freqtrade-binance-futures-larissa            1/1     1            1           8d$<br>
+binance-futures           freqtrade-binance-futures                    1/1     1            1           8d$<br>
+binance-hassan            freqtrade-binance-hassan                     1/1     1            1           8d$<br>
+binance-juliano           freqtrade-binance-juliano                    1/1     1            1           8d$<br>
+binance-larissa           freqtrade-binance-larissa                    1/1     1            1           8d$<br>
+binance-michael           freqtrade-binance-michael                    1/1     1            1           8d$<br>
+kraken-adriana            freqtrade-kraken-adriana                     1/1     1            1           8d$<br>
+kraken-hellen             freqtrade-kraken-hellen                      1/1     1            1           8d$<br>
+kraken-michael            freqtrade-kraken-michael                     1/1     1            1           8d$<br>
+kraken-stieves            freqtrade-kraken-stieves                     1/1     1            1           8d$<br><br>
+<b>Whitelists:</b><br>
+---------------<br>$
+Whitelist for binance-adriana<br>$
+[<br>$
+  "ORDI/USDT",<br>$
+  "APT/USDT",<br>$
+  "UNI/USDT",<br>$
+  "NEO/USDT",<br>$
+  "SOL/USDT",<br>$
+  "ETH/USDT",<br>$
+  "AVAX/USDT",<br>$
+  "ETC/USDT",<br>$
+  "ATOM/USDT",<br>$
+  "ACE/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for binance-futures<br>$
+[<br>$
+  "TRB/USDT:USDT",<br>$
+  "BCH/USDT:USDT",<br>$
+  "LTC/USDT:USDT",<br>$
+  "ETH/USDT:USDT",<br>$
+  "EGLD/USDT:USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for binance-futures-larissa<br>$
+[<br>$
+  "ETC/USDT:USDT",<br>$
+  "AVAX/USDT:USDT",<br>$
+  "ORDI/USDT:USDT",<br>$
+  "QNT/USDT:USDT",<br>$
+  "NMR/USDT:USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for binance-hassan<br>$
+[<br>$
+  "ATOM/USDT",<br>$
+  "ORDI/USDT",<br>$
+  "ETC/USDT",<br>$
+  "AVAX/USDT",<br>$
+  "NEO/USDT",<br>$
+  "ACE/USDT",<br>$
+  "ETH/USDT",<br>$
+  "SOL/USDT",<br>$
+  "APT/USDT",<br>$
+  "UNI/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for binance-juliano<br>$
+[<br>$
+  "AVAX/USDT",<br>$
+  "APT/USDT",<br>$
+  "SOL/USDT",<br>$
+  "ORDI/USDT",<br>$
+  "NEO/USDT",<br>$
+  "ATOM/USDT",<br>$
+  "ETC/USDT",<br>$
+  "ETH/USDT",<br>$
+  "ACE/USDT",<br>$
+  "UNI/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for binance-larissa<br>$
+[<br>$
+  "ORDI/USDT",<br>$
+  "ETC/USDT",<br>$
+  "UNI/USDT",<br>$
+  "ATOM/USDT",<br>$
+  "SOL/USDT",<br>$
+  "AVAX/USDT",<br>$
+  "APT/USDT",<br>$
+  "ACE/USDT",<br>$
+  "ETH/USDT",<br>$
+  "NEO/USDT",<br>$
+  "TIA/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for binance-michael<br>$
+[<br>$
+  "NEO/USDT",<br>$
+  "UNI/USDT",<br>$
+  "ETC/USDT",<br>$
+  "ACE/USDT",<br>$
+  "ORDI/USDT",<br>$
+  "SOL/USDT",<br>$
+  "APT/USDT",<br>$
+  "ETH/USDT",<br>$
+  "AVAX/USDT",<br>$
+  "ATOM/USDT",<br>$
+  "TRB/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for kraken-adriana<br>$
+[<br>$
+  "AVAX/USDT",<br>$
+  "SOL/USDT",<br>$
+  "ATOM/USDT",<br>$
+  "ETH/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for kraken-hellen<br>$
+[<br>$
+  "ATOM/USDT",<br>$
+  "ETH/USDT",<br>$
+  "AVAX/USDT",<br>$
+  "SOL/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for kraken-michael<br>$
+[<br>$
+  "AVAX/USDT",<br>$
+  "SOL/USDT",<br>$
+  "ATOM/USDT",<br>$
+  "ETH/USDT",<br>$
+  "LINK/USDT"<br>$
+]<br>$
+---------------<br>$
+Whitelist for kraken-stieves<br>$
+[<br>$
+  "ETH/USDT",<br>$
+  "ATOM/USDT",<br>$
+  "SOL/USDT",<br>$
+  "AVAX/USDT"<br>$
+]<br>$
+<hr><hr>History:<br><b>2024-03-04 01-00-11: 16526.18</b>
+<hr><hr>History:<br><b>2024-03-04 02-45-10: 16669.35</b>
+<hr><hr>History:<br><b>2024-03-04 03-00-09: 16630.41</b>
+<hr><hr>History:<br><b>2024-03-04 03-45-09: 16686.22</b>
+<hr><hr>History:<br><b>2024-03-04 04-00-09: 16673.89</b>
+<hr><hr>History:<br><b>2024-03-04 04-45-10: 16624.56</b>
+<hr><hr>History:<br><b>2024-03-04 05-00-10: 16610.44</b>
+<hr><hr>History:<br><b>2024-03-04 05-45-11: 16663.30</b>
+<hr><hr>History:<br><b>2024-03-04 06-00-11: 16651.55</b>
+<hr><hr>History:<br><b>2024-03-04 06-45-10: 16638.47</b>
+<hr><hr>History:<br><b>2024-03-04 07-00-09: 16633.82</b>
+<hr><hr>History:<br><b>2024-03-04 07-45-09: 16704.57</b>
+<hr><hr>History:<br><b>2024-03-04 08-00-10: 16659.70</b>
+<hr><hr>History:<br><b>2024-03-04 08-45-09: 16634.58</b>
+<hr><hr>History:<br><b>2024-03-04 09-00-09: 16696.11</b>
+<hr><hr>History:<br><b>2024-03-04 10-00-09: 16709.34</b>
+<hr><hr>History:<br><b>2024-03-04 10-45-10: 16692.85</b>
+<hr><hr>History:<br><b>2024-03-04 11-00-11: 17229.57</b>
+<hr><hr>History:<br><b>2024-03-04 11-45-15: 17716.80</b>
+<hr><hr>History:<br><b>2024-03-04 12-00-09: 17256.38</b>
+<hr><hr>History:<br><b>2024-03-04 12-45-10: 17269.08</b>
+<hr><hr>History:<br><b>2024-03-04 13-00-11: 17225.28</b>
+<hr><hr>History:<br><b>2024-03-04 13-45-10: 17297.49</b>
+<hr><hr>History:<br><b>2024-03-04 14-00-08: 17313.44</b>
+<hr><hr>History:<br><b>2024-03-04 15-00-09: 17271.08</b>
+<hr><hr>History:<br><b>2024-03-04 15-16-58: 17377.51</b>
+<hr><hr>History:<br><b>2024-03-04 15-45-12: 17414.79</b>
+<hr><hr>History:<br><b>2024-03-04 16-00-10: 17338.79</b>
+<hr><hr>History:<br><b>2024-03-04 17-00-10: 17347.20</b>
+<hr><hr>History:<br><b>2024-03-04 18-07-57: 17174.79</b>
+<hr><hr>History:<br><b>2024-03-04 19-12-57: 17077.55</b>
