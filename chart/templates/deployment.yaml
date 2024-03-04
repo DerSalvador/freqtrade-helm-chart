@@ -159,30 +159,30 @@ spec:
         - name: strategies-default
           mountPath: /freqtrade/user_data/strategies
           readOnly: false
-      - name: freqtrade-test-pairs-{{ .Release.Namespace }}
-        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-        command:
-        - freqtrade
-        args:
-        - test-pairlist
-{{- if .Values.bot.debug }}
-        - {{ .Values.bot.debuglevel }}
-{{- end }}
-        - --config
-        - /freqtrade/config/config-{{ .Release.Namespace }}.json
-        - --config
-        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-        volumeMounts:
-        # - name: extra-strategies
-        #   mountPath: /extra_strategies
-        #   readOnly: false             
-        - name: strategies-default
-          mountPath: /freqtrade/user_data/strategies
-          readOnly: false
-        - name: configcreds
-          mountPath: /freqtrade/configcreds
-        - name: config
-          mountPath: /freqtrade/config
+#       - name: freqtrade-test-pairs-{{ .Release.Namespace }}
+#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+#         command:
+#         - freqtrade
+#         args:
+#         - test-pairlist
+# {{- if .Values.bot.debug }}
+#         - {{ .Values.bot.debuglevel }}
+# {{- end }}
+#         - --config
+#         - /freqtrade/config/config-{{ .Release.Namespace }}.json
+#         - --config
+#         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+#         volumeMounts:
+#         # - name: extra-strategies
+#         #   mountPath: /extra_strategies
+#         #   readOnly: false             
+#         - name: strategies-default
+#           mountPath: /freqtrade/user_data/strategies
+#           readOnly: false
+#         - name: configcreds
+#           mountPath: /freqtrade/configcreds
+#         - name: config
+#           mountPath: /freqtrade/config
       containers:
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
