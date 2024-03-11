@@ -6,6 +6,9 @@ configcreds:
   timeframe: 5m
   trading_mode: spot
   stake_amount: unlimited
+  minimal_roi:
+    "0": 0.05
+  stoploss: -0.05  
   exchange:
     name: kraken
     key: QK9S+Sg47ZZWJHhXPXxNs43kH5i4m+ZpHe9sI1PBYmUX3eg5C6z6Wamt
