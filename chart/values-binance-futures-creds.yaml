@@ -5,7 +5,7 @@ configcreds:
   max_open_trades: 5
   trading_mode: futures
   margin_mode: isolated
-  timeframe: 5m
+  timeframe: 15m
   stake_amount: unlimited
   bot_name: freqtrading-binance-futures
   exchange:
@@ -27,20 +27,28 @@ configcreds:
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
-      refresh_period: 600
+      refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 120
     - method: RemotePairList
       number_assets: 50
-      mode: blacklist
-      pairlist_url: https://remotepairlist.com?q=3e362027334fd860
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
       processing_mode: append
-      refresh_period: 600
+      refresh_period: 900
       keep_pairlist_on_failure: true
-      read_timeout: 120
+      read_timeout: 120      
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   mode: blacklist
+    #   pairlist_url: https://remotepairlist.com?q=3e362027334fd860
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120
     - method: AgeFilter
       min_days_listed: 30
     - method: PriceFilter
