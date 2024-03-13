@@ -1,87 +1,91 @@
-<h2>USDT 11 Bots: 17849.63</h2>
+<h2 id=top>11 Bots: 16907.69 USDT</h2>
+<h2><a href=#kubernetes>Kubernetes</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=#whitelist>Whitelist</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=#history>History</a></h2>
 <h3>Version: 2024.1</h3>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head>
-Freqtrade Bots Report: 2024-03-11 14-00-12<br>
-Next Report: Mon Mar 11 14:40:12 CET 2024<br>
+<div><b class=bigger>Total Open Positions: 18</b></div><hr>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head>
+Freqtrade Bots Report: 2024-03-13 17-40-13<br>
+Next Report: Wed Mar 13 18:35:13 CET 2024<br>
 <hr><b class=botheader >binance-futures</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 10:30:15<br>
-Strategy: TaSearchLevelH15m<br><b>
-Value: 1469.07</b><br>
+<b class=bigger>Strategy: TaSearchLevelH15m</b><br>
+<b class=bigger>Value: 1298.93</b><br>
 Trading Mode: futures<br>
-Exchange: binance<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>ETH/USDT:USDT</b></td><td>0.12 / 0.12</td><td class=tdspecialbg><b>-60.61</b></td><td>2024-03-03T04:36:07Z</td><td  class=tdspecialbg>2.0</td> <td>true</td><td>true</td><td>199.99</td> <td>399.99</td><td>3448.16</td> <td>4056</td> <td>5064.83</td> <td>-193.66</td><tr>
-<tr><td class=tdspecialbg><b>BCH/USDT:USDT</b></td><td>2.08 / 2.08</td><td class=tdspecialbg><b>29.8</b></td><td>2024-03-09T17:14:04Z</td><td  class=tdspecialbg>5.0</td> <td>true</td><td>false</td><td>177.72</td> <td>888.58</td><td>426.38</td> <td>442.22</td> <td>347.14</td> <td>-176.33</td><tr>
-<tr><td class=tdspecialbg><b>ORDI/USDT:USDT</b></td><td>11.7 / 11.71</td><td class=tdspecialbg><b>-6.03</b></td><td>2024-03-09T20:19:27Z</td><td  class=tdspecialbg>5.0</td> <td>true</td><td>false</td><td>177.54</td> <td>887.7</td><td>75.87</td> <td>75.75</td> <td>61.83</td> <td>-180.82</td><tr> </table>
+Exchange: binance<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>ETH/USDT:USDT</b></td><td>0.12 / 0.12</td><td class=tdspecialbg><b>-50.15</b></td><td>2024-03-03T04:36:07Z</td><td  class=tdspecialbg>2.0</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >199.99</td> <td>399.99</td><td class=tdspecialbg >3448.16</td> <td class=tdspecialbg >3974</td> <td  class=tdspecialbg >5064.83</td> <td>-191.94</td><tr>
+<tr><td class=tdspecialbg><b>BCH/USDT:USDT</b></td><td>2.08 / 2.08</td><td class=tdspecialbg><b>9.3</b></td><td>2024-03-09T17:14:04Z</td><td  class=tdspecialbg>5.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >177.72</td> <td>888.58</td><td class=tdspecialbg >426.38</td> <td class=tdspecialbg >431.44</td> <td  class=tdspecialbg >347.14</td> <td>-176.21</td><tr>
+<tr><td class=tdspecialbg><b>LTC/USDT:USDT</b></td><td>20.75 / 20.75</td><td class=tdspecialbg><b>-2.87</b></td><td>2024-03-12T15:01:06Z</td><td  class=tdspecialbg>10.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >198.68</td> <td>1986.81</td><td class=tdspecialbg >95.75</td> <td class=tdspecialbg >95.88</td> <td  class=tdspecialbg >87</td> <td>-202.24</td><tr>
+<tr><td class=tdspecialbg><b>SOL/USDT:USDT</b></td><td>12 / 12.79</td><td class=tdspecialbg><b>-43.73</b></td><td>2024-03-13T07:21:18Z</td><td  class=tdspecialbg>10.0</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >183.58</td> <td>1835.76</td><td class=tdspecialbg >152.98</td> <td class=tdspecialbg >157.02</td> <td  class=tdspecialbg >166.65</td> <td>-181.19</td><tr> </table>
 <br>
-Last Order Date: Sat Mar  9 21:19:27 CET 2024<br>
+Last Order Date: Wed Sep 16 12:12:47 CET 56167<br>
 Max Open Trades: 5.0<br>
-Open:        3<br>
-Wallets:        7<br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>471.13</td><td>481.5</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>XMR/USDT:USDT</td><td>197.13</td><td>0</td><td>short</td><td>2.159</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>DASH/USDT:USDT</td><td>42.33</td><td>0</td><td>short</td><td>4.414</td><td class=tdspecialbg>2.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>GMX/USDT:USDT</td><td>227.88</td><td>0</td><td>short</td><td>27.18</td><td class=tdspecialbg>5.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>ETH/USDT:USDT</td><td>134.91</td><td>0</td><td>short</td><td>0.116</td><td class=tdspecialbg>2.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>ORDI/USDT:USDT</td><td>171.4</td><td>0</td><td>long</td><td>11.7</td><td class=tdspecialbg>5.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>BCH/USDT:USDT</td><td>213.92</td><td>0</td><td>long</td><td>2.084</td><td class=tdspecialbg>5.0</td><td>true</td></tr> </table>
+Open:        4<br>
+Wallets:        8<br><br>
+<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>219.38</td><td>229.28</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>XMR/USDT:USDT</td><td>196.51</td><td>0</td><td>short</td><td>2.159</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>DASH/USDT:USDT</td><td>38.7</td><td>0</td><td>short</td><td>4.414</td><td class=tdspecialbg>2.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>LTC/USDT:USDT</td><td>200.87</td><td>0</td><td>long</td><td>20.75</td><td class=tdspecialbg>10.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>SOL/USDT:USDT</td><td>133.97</td><td>0</td><td>short</td><td>12.0</td><td class=tdspecialbg>10.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>GMX/USDT:USDT</td><td>164.35</td><td>0</td><td>short</td><td>27.18</td><td class=tdspecialbg>5.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>ETH/USDT:USDT</td><td>144.47</td><td>0</td><td>short</td><td>0.116</td><td class=tdspecialbg>2.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>BCH/USDT:USDT</td><td>190.8</td><td>0</td><td>long</td><td>2.084</td><td class=tdspecialbg>5.0</td><td>true</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
-<tr><td>2024-03-11</td><td>139.57</td><td>0.16</td><td>886.8151156615002</td><td>127.95</td><td>2</td></tr>
-<tr><td>2024-03-04</td><td>-120.24</td><td>-0.12</td><td>1007.0565424815002</td><td>-110.23</td><td>6</td></tr>
-<tr><td>2024-02-26</td><td>181.66</td><td>0.22</td><td>825.3975197115001</td><td>166.54</td><td>25</td></tr>
-<tr><td>2024-02-19</td><td>17.79</td><td>0.02</td><td>807.6118988315001</td><td>16.31</td><td>3</td></tr>
+<tr><td>2024-03-11</td><td>115.83</td><td>0.13</td><td>863.52454879996</td><td>105.84</td><td>8</td></tr>
+<tr><td>2024-03-04</td><td>-120.24</td><td>-0.12</td><td>983.76597561996</td><td>-109.88</td><td>6</td></tr>
+<tr><td>2024-02-26</td><td>181.66</td><td>0.23</td><td>802.10695284996</td><td>166</td><td>25</td></tr>
+<tr><td>2024-02-19</td><td>17.79</td><td>0.02</td><td>784.3213319699599</td><td>16.25</td><td>3</td></tr>
 </table>
 <hr><b class=botheader >binance-futures-larissa</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 03:43:53<br>
-Strategy: DWT_LongShort<br><b>
-Value: 2536.40</b><br>
+<b class=bigger>Strategy: DWT_LongShort</b><br>
+<b class=bigger>Value: 1397.64</b><br>
 Trading Mode: futures<br>
-Exchange: binance<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>QNT/USDT:USDT</b></td><td>18.3 / 18.32</td><td class=tdspecialbg><b>-2.36</b></td><td>2024-03-01T10:12:19Z</td><td  class=tdspecialbg>5.0</td> <td>true</td><td>true</td><td>427.35</td> <td>2136.74</td><td>116.76</td> <td>119.07</td> <td>137.57</td> <td>-383.58</td><tr>
-<tr><td class=tdspecialbg><b>NMR/USDT:USDT</b></td><td>94.1 / 94.16</td><td class=tdspecialbg><b>-265.91</b></td><td>2024-03-10T07:31:00Z</td><td  class=tdspecialbg>5.0</td> <td>true</td><td>false</td><td>930.84</td> <td>4654.19</td><td>49.46</td> <td>46.58</td> <td>40.75</td> <td>-939.96</td><tr> </table>
+Exchange: binance<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>XRP/USDT:USDT</b></td><td>13100.6 / 13100.69</td><td class=tdspecialbg><b>-339.42</b></td><td>2024-03-12T01:02:01Z</td><td  class=tdspecialbg>10.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >927.13</td> <td>9271.29</td><td class=tdspecialbg >0.71</td> <td class=tdspecialbg >0.68</td> <td  class=tdspecialbg >0.64</td> <td>-948.92</td><tr>
+<tr><td class=tdspecialbg><b>IOTA/USDT:USDT</b></td><td>14436.2 / 14436.21</td><td class=tdspecialbg><b>-10.71</b></td><td>2024-03-13T16:31:39Z</td><td  class=tdspecialbg>10.0</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >579.89</td> <td>5798.88</td><td class=tdspecialbg >0.4</td> <td class=tdspecialbg >0.4</td> <td  class=tdspecialbg >0.43</td> <td>-579.35</td><tr> </table>
 <br>
-Last Order Date: Sun Mar 10 08:31:00 CET 2024<br>
+Last Order Date: Sun Oct  2 16:30:12 CET 56168<br>
 Max Open Trades: 3.0<br>
 Open:        2<br>
-Wallets:        3<br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>1422.83</td><td>1450.92</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>NMR/USDT:USDT</td><td>658.7</td><td>0</td><td>long</td><td>94.1</td><td class=tdspecialbg>5.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>QNT/USDT:USDT</td><td>426.78</td><td>0</td><td>short</td><td>18.3</td><td class=tdspecialbg>5.0</td><td>true</td></tr> </table>
+Wallets:        3<br><br>
+<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>231.29</td><td>248.85</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>XRP/USDT:USDT</td><td>562.94</td><td>0</td><td>long</td><td>13100.6</td><td class=tdspecialbg>10.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>IOTA/USDT:USDT</td><td>585.86</td><td>0</td><td>short</td><td>14436.2</td><td class=tdspecialbg>10.0</td><td>true</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
-<tr><td>2024-03-11</td><td>0</td><td>0</td><td>2781.01513315692</td><td>0</td><td>0</td></tr>
-<tr><td>2024-03-04</td><td>1964.53</td><td>2.41</td><td>816.48853853692</td><td>1800.99</td><td>9</td></tr>
-<tr><td>2024-02-26</td><td>-1086.43</td><td>-0.57</td><td>1902.9170197469202</td><td>-995.99</td><td>15</td></tr>
-<tr><td>2024-02-19</td><td>23.78</td><td>0.01</td><td>1879.1370126169202</td><td>21.8</td><td>2</td></tr>
+<tr><td>2024-03-11</td><td>-985.31</td><td>-0.36</td><td>2723.6155061628</td><td>-900.29</td><td>3</td></tr>
+<tr><td>2024-03-04</td><td>1964.53</td><td>2.59</td><td>759.0889115428001</td><td>1795.03</td><td>9</td></tr>
+<tr><td>2024-02-26</td><td>-1086.43</td><td>-0.59</td><td>1845.5173927528003</td><td>-992.69</td><td>15</td></tr>
+<tr><td>2024-02-19</td><td>23.78</td><td>0.01</td><td>1821.7373856228003</td><td>21.73</td><td>2</td></tr>
 </table>
 <hr><b class=botheader >binance-michael</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 13:34:43<br>
-Strategy: NNTC<br><b>
-Value: 3075.17</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 3344.28</b><br>
 Trading Mode: spot<br>
-Exchange: binance<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>MKR/USDT</b></td><td>0.21 / 0.21</td><td class=tdspecialbg><b>37.64</b></td><td>2024-03-09T18:23:41Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>499.82</td> <td>499.82</td><td>2417</td> <td>2621</td> <td>0</td> <td>-494.93</td><tr>
-<tr><td class=tdspecialbg><b>LTC/USDT</b></td><td>5.64 / 5.65</td><td class=tdspecialbg><b>36.03</b></td><td>2024-03-09T19:26:22Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>499.78</td> <td>499.78</td><td>88.56</td> <td>95.72</td> <td>0</td> <td>-495.23</td><tr>
-<tr><td class=tdspecialbg><b>WLD/USDT</b></td><td>46.7 / 46.88</td><td class=tdspecialbg><b>-38.2</b></td><td>2024-03-09T20:16:26Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>498.87</td> <td>498.87</td><td>10.67</td> <td>9.8</td> <td>0</td> <td>-493.81</td><tr> </table>
+Exchange: binance<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>MKR/USDT</b></td><td>0.21 / 0.21</td><td class=tdspecialbg><b>71.74</b></td><td>2024-03-09T18:23:41Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >499.82</td> <td>499.82</td><td class=tdspecialbg >2417</td> <td class=tdspecialbg >2801</td> <td  class=tdspecialbg >0</td> <td>-494.93</td><tr>
+<tr><td class=tdspecialbg><b>LTC/USDT</b></td><td>5.64 / 5.65</td><td class=tdspecialbg><b>37.46</b></td><td>2024-03-09T19:26:22Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >499.78</td> <td>499.78</td><td class=tdspecialbg >88.56</td> <td class=tdspecialbg >95.99</td> <td  class=tdspecialbg >0</td> <td>-495.23</td><tr>
+<tr><td class=tdspecialbg><b>WLD/USDT</b></td><td>46.7 / 46.88</td><td class=tdspecialbg><b>-53.67</b></td><td>2024-03-09T20:16:26Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >498.87</td> <td>498.87</td><td class=tdspecialbg >10.67</td> <td class=tdspecialbg >9.44</td> <td  class=tdspecialbg >0</td> <td>-493.81</td><tr> </table>
 <br>
-Last Order Date: Sat Mar  9 21:16:26 CET 2024<br>
+Last Order Date: Sat Mar 25 19:03:12 CET 56158<br>
 Max Open Trades: 3.0<br>
 Open:        3<br>
-Wallets:       12<br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>LTC</td><td>540.26</td><td>5.64</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+Wallets:       12<br><br>
+<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>LTC</td><td>541.67</td><td>5.64</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
 <tr><td  class=tdspecialbg>ETH</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>USDT</td><td>1.47</td><td>16.62</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
 <tr><td  class=tdspecialbg>BCH</td><td>0</td><td>0.2</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>MKR</td><td>541.97</td><td>0.21</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>MKR</td><td>578.97</td><td>0.21</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
 <tr><td  class=tdspecialbg>TRB</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>INJ</td><td>0</td><td>34.67</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>SHIB</td><td>0</td><td>0.15</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>WLD</td><td>457.71</td><td>46.75</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>WLD</td><td>440.8</td><td>46.75</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
 <tr><td  class=tdspecialbg>ORDI</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>TIA</td><td>0</td><td>0.05</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>ACE</td><td>0</td><td>0.04</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr> </table>
@@ -89,52 +93,48 @@ Wallets:       12<br>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
 <tr><td>2024-03-11</td><td>0</td><td>0</td><td>1499.9357140317</td><td>0</td><td>0</td></tr>
-<tr><td>2024-03-04</td><td>130.81</td><td>0.1</td><td>1369.1259512417</td><td>119.73</td><td>1</td></tr>
-<tr><td>2024-02-26</td><td>68.63</td><td>0.05</td><td>1300.5006955617</td><td>62.81</td><td>1</td></tr>
+<tr><td>2024-03-04</td><td>130.81</td><td>0.1</td><td>1369.1259512417</td><td>119.85</td><td>1</td></tr>
+<tr><td>2024-02-26</td><td>68.63</td><td>0.05</td><td>1300.5006955617</td><td>62.88</td><td>1</td></tr>
 <tr><td>2024-02-19</td><td>0</td><td>0</td><td>1300.5006955617</td><td>0</td><td>0</td></tr>
 </table>
 <hr><b class=botheader >kraken-michael</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 09:26:41<br>
-Strategy: NNTC<br><b>
-Value: 9065.99</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 9157.43</b><br>
 Trading Mode: spot<br>
-Exchange: kraken<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>BCH/USDT</b></td><td>6.78 / 6.78</td><td class=tdspecialbg><b>-17.16</b></td><td>2024-03-11T11:20:28Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>2999.71</td> <td>2999.71</td><td>442.57</td> <td>441.57</td> <td>0</td> <td>-2975.74</td><tr>
-<tr><td class=tdspecialbg><b>ATOM/USDT</b></td><td>219.57 / 219.57</td><td class=tdspecialbg><b>-35.01</b></td><td>2024-03-11T11:45:30Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>2997.3</td> <td>2997.3</td><td>13.65</td> <td>13.53</td> <td>0</td> <td>-2973.37</td><tr> </table>
+Exchange: kraken<br><br>
 <br>
-Last Order Date: Mon Mar 11 12:45:34 CET 2024<br>
+Last Order Date: <br>
 Max Open Trades: 3.0<br>
-Open:        2<br>
-Wallets:        7<br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ATOM</td><td>2983.56</td><td>219.57</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>BCH</td><td>3004.12</td><td>6.78</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>CHF</td><td>0</td><td>0.51</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+Open:        0<br>
+Wallets:        5<br><br>
+<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>CHF</td><td>0</td><td>0.51</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>MANA</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>SOL</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>USDT</td><td>2987.56</td><td>3078.32</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>USDT</td><td>9065.86</td><td>9157.43</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
 <tr><td  class=tdspecialbg>DOGE</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
-<tr><td>2024-03-11</td><td>98.9</td><td>0.01</td><td>8885.679546259411</td><td>90.44</td><td>2</td></tr>
-<tr><td>2024-03-04</td><td>361.15</td><td>0.04</td><td>8524.52844530941</td><td>330.26</td><td>15</td></tr>
-<tr><td>2024-02-26</td><td>1227.02</td><td>0.17</td><td>7297.51095605941</td><td>1122.08</td><td>32</td></tr>
-<tr><td>2024-02-19</td><td>0</td><td>0</td><td>7297.51095605941</td><td>0</td><td>0</td></tr>
+<tr><td>2024-03-11</td><td>168.63</td><td>0.02</td><td>8897.2317390834</td><td>154.51</td><td>7</td></tr>
+<tr><td>2024-03-04</td><td>361.15</td><td>0.04</td><td>8536.0806381334</td><td>330.91</td><td>15</td></tr>
+<tr><td>2024-02-26</td><td>1227.02</td><td>0.17</td><td>7309.063148883401</td><td>1124.26</td><td>32</td></tr>
+<tr><td>2024-02-19</td><td>0</td><td>0</td><td>7309.063148883401</td><td>0</td><td>0</td></tr>
 </table>
 <hr><b class=botheader >kraken-stieves</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 04:55:44<br>
-Strategy: NNTC<br><b>
-Value: 1.19</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 1.19</b><br>
 Trading Mode: spot<br>
-Exchange: kraken<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>AVAX/USDT</b></td><td>0.25 / 0.25</td><td class=tdspecialbg><b>0.79</b></td><td>2024-02-29T12:47:33Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>10.77</td> <td>10.77</td><td>42.62</td> <td>46.75</td> <td>0</td> <td>-0.59</td><tr> </table>
+Exchange: kraken<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>AVAX/USDT</b></td><td>0.25 / 0.25</td><td class=tdspecialbg><b>2.32</b></td><td>2024-02-29T12:47:33Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >10.77</td> <td>10.77</td><td class=tdspecialbg >42.62</td> <td class=tdspecialbg >53.4</td> <td  class=tdspecialbg >0</td> <td>-0.59</td><tr> </table>
 <br>
-Last Order Date: Fri Mar  1 23:26:07 CET 2024<br>
+Last Order Date: Sat Jul 28 20:16:40 CET 56136<br>
 Max Open Trades: 3.0<br>
 Open:        1<br>
-Wallets:        3<br>
+Wallets:        3<br><br>
 <table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ATOM</td><td>0</td><td>0.09</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>CHF</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>XRP</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr> </table>
@@ -147,133 +147,137 @@ Wallets:        3<br>
 <tr><td>2024-02-19</td><td>0.03</td><td>0</td><td>12.56839097197</td><td>0.03</td><td>2</td></tr>
 </table>
 <hr><b class=botheader >kraken-hellen</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 13:25:46<br>
-Strategy: NNTC<br><b>
-Value: 901.16</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 918.51</b><br>
 Trading Mode: spot<br>
-Exchange: kraken<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>LINK/USDT</b></td><td>14.03 / 14.03</td><td class=tdspecialbg><b>2.39</b></td><td>2024-03-11T04:15:06Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>297.04</td> <td>297.04</td><td>21.17</td> <td>21.47</td> <td>0</td> <td>-16.36</td><tr>
-<tr><td class=tdspecialbg><b>DOT/USDT</b></td><td>27.57 / 27.57</td><td class=tdspecialbg><b>-3.41</b></td><td>2024-03-11T11:00:46Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>296.93</td> <td>296.93</td><td>10.77</td> <td>10.69</td> <td>0</td> <td>-16.35</td><tr>
-<tr><td class=tdspecialbg><b>BCH/USDT</b></td><td>0.67 / 0.67</td><td class=tdspecialbg><b>-0.87</b></td><td>2024-03-11T11:15:44Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>295.55</td> <td>295.55</td><td>440.87</td> <td>441.74</td> <td>0</td> <td>-16.21</td><tr> </table>
+Exchange: kraken<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>AVAX/USDT</b></td><td>5.58 / 5.58</td><td class=tdspecialbg><b>-8.28</b></td><td>2024-03-13T00:10:10Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >305.93</td> <td>305.93</td><td class=tdspecialbg >54.84</td> <td class=tdspecialbg >53.5</td> <td  class=tdspecialbg >0</td> <td>-16.84</td><tr>
+<tr><td class=tdspecialbg><b>ETH/USDT</b></td><td>0.08 / 0.08</td><td class=tdspecialbg><b>-5.21</b></td><td>2024-03-13T12:30:25Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >305.67</td> <td>305.67</td><td class=tdspecialbg >4032.88</td> <td class=tdspecialbg >3978.62</td> <td  class=tdspecialbg >0</td> <td>-16.83</td><tr> </table>
 <br>
-Last Order Date: Mon Mar 11 12:15:47 CET 2024<br>
+Last Order Date: Mon Apr 18 05:09:58 CET 56168<br>
 Max Open Trades: 3.0<br>
-Open:        3<br>
-Wallets:        6<br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>BCH</td><td>296.17</td><td>0.67</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>DOT</td><td>295.2</td><td>27.57</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>LINK</td><td>301.52</td><td>14.03</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>USDT</td><td>-0.7</td><td>8.28</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+Open:        2<br>
+Wallets:        6<br><br>
+<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>AVAX</td><td>295.67</td><td>5.58</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>LINK</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>USDT</td><td>312.49</td><td>321.82</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>ETH</td><td>301.02</td><td>0.08</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
 <tr><td  class=tdspecialbg>XMR</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>EUR</td><td>0</td><td>0.02</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
-<tr><td>2024-03-11</td><td>-10.57</td><td>-0.01</td><td>899.3816836263405</td><td>-9.67</td><td>2</td></tr>
-<tr><td>2024-03-04</td><td>37.84</td><td>0.04</td><td>861.5465072463405</td><td>34.62</td><td>22</td></tr>
-<tr><td>2024-02-26</td><td>145.71</td><td>0.2</td><td>715.8337047863406</td><td>133.34</td><td>44</td></tr>
-<tr><td>2024-02-19</td><td>0.68</td><td>0</td><td>715.1492320163406</td><td>0.63</td><td>1</td></tr>
+<tr><td>2024-03-11</td><td>24.39</td><td>0.03</td><td>899.705006393068</td><td>22.32</td><td>12</td></tr>
+<tr><td>2024-03-04</td><td>37.84</td><td>0.04</td><td>861.8698300130679</td><td>34.63</td><td>22</td></tr>
+<tr><td>2024-02-26</td><td>145.71</td><td>0.2</td><td>716.157027553068</td><td>133.37</td><td>44</td></tr>
+<tr><td>2024-02-19</td><td>0.68</td><td>0</td><td>715.4725547830681</td><td>0.63</td><td>1</td></tr>
 </table>
 <hr><b class=botheader >kraken-adriana</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 13:51:35<br>
-Strategy: NNTC<br><b>
-Value: 73.18</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 74.69</b><br>
 Trading Mode: spot<br>
-Exchange: kraken<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>DOT/USDT</b></td><td>2.25 / 2.25</td><td class=tdspecialbg><b>-0.28</b></td><td>2024-03-11T11:00:46Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>24.25</td> <td>24.25</td><td>10.77</td> <td>10.69</td> <td>0</td> <td>-1.34</td><tr>
-<tr><td class=tdspecialbg><b>BCH/USDT</b></td><td>0.05 / 0.05</td><td class=tdspecialbg><b>-0.06</b></td><td>2024-03-11T11:15:53Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>24.23</td> <td>24.23</td><td>441.11</td> <td>442.15</td> <td>0</td> <td>-1.33</td><tr> </table>
+Exchange: kraken<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>USDC/USDT</b></td><td>24.74 / 24.74</td><td class=tdspecialbg><b>-0.11</b></td><td>2024-03-13T02:51:02Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >24.73</td> <td>24.73</td><td class=tdspecialbg >1</td> <td class=tdspecialbg >1</td> <td  class=tdspecialbg >0</td> <td>-1.33</td><tr>
+<tr><td class=tdspecialbg><b>DOGE/USDT</b></td><td>146.63 / 146.63</td><td class=tdspecialbg><b>-0.15</b></td><td>2024-03-13T12:36:17Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >24.83</td> <td>24.83</td><td class=tdspecialbg >0.17</td> <td class=tdspecialbg >0.17</td> <td  class=tdspecialbg >0</td> <td>-1.37</td><tr>
+<tr><td class=tdspecialbg><b>XRP/USDT</b></td><td>36.14 / 36.14</td><td class=tdspecialbg><b>-0.23</b></td><td>2024-03-13T13:26:28Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >24.79</td> <td>24.79</td><td class=tdspecialbg >0.69</td> <td class=tdspecialbg >0.68</td> <td  class=tdspecialbg >0</td> <td>-1.37</td><tr> </table>
 <br>
-Last Order Date: Mon Mar 11 12:16:02 CET 2024<br>
-Max Open Trades: 3.0<br>
-Open:        2<br>
-Wallets:        6<br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ADA</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>BCH</td><td>24.27</td><td>0.05</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>DOT</td><td>24.06</td><td>2.25</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>MANA</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>MATIC</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>USDT</td><td>24.12</td><td>24.85</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr> </table>
-<hr>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
-<tr><td>2024-03-11</td><td>-0.9</td><td>-0.01</td><td>73.50066663305927</td><td>-0.82</td><td>2</td></tr>
-<tr><td>2024-03-04</td><td>2.07</td><td>0.03</td><td>71.43395540305927</td><td>1.89</td><td>13</td></tr>
-<tr><td>2024-02-26</td><td>8.94</td><td>0.14</td><td>62.495096523059274</td><td>8.18</td><td>27</td></tr>
-<tr><td>2024-02-19</td><td>0.2</td><td>0</td><td>62.294202763059275</td><td>0.18</td><td>2</td></tr>
-</table>
-<hr><b class=botheader >binance-larissa</b><br>
-<b><small>Trader is: live running</small></b><br>
-Started: 2024-02-25 09:55:34<br>
-Strategy: NNTC<br><b>
-Value: 494.21</b><br>
-Trading Mode: spot<br>
-Exchange: binance<br>
-<html><head><style>.botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=5>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>TIA/USDT</b></td><td>10.3 / 10.43</td><td class=tdspecialbg><b>2.45</b></td><td>2024-03-04T10:11:16Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>164.45</td> <td>164.45</td><td>15.83</td> <td>16.12</td> <td>0</td> <td>-8.44</td><tr>
-<tr><td class=tdspecialbg><b>ETH/USDT</b></td><td>0.04 / 0.04</td><td class=tdspecialbg><b>4.27</b></td><td>2024-03-10T12:40:50Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>156.11</td> <td>156.11</td><td>3922.27</td> <td>4045.39</td> <td>0</td> <td>-8.03</td><tr>
-<tr><td class=tdspecialbg><b>LINK/USDT</b></td><td>7.13 / 7.13</td><td class=tdspecialbg><b>-0.18</b></td><td>2024-03-11T03:35:38Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td>false</td><td>152.67</td> <td>152.67</td><td>21.41</td> <td>21.42</td> <td>0</td> <td>-7.85</td><tr> </table>
-<br>
-Last Order Date: Mon Mar 11 04:35:38 CET 2024<br>
+Last Order Date: <br>
 Max Open Trades: 3.0<br>
 Open:        3<br>
-Wallets:        7<br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ETH</td><td>161.19</td><td>0.04</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>BNB</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>USDT</td><td>0.02</td><td>4.8</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>LINK</td><td>152.77</td><td>7.13</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
-<tr><td  class=tdspecialbg>ATOM</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>ORDI</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>TIA</td><td>166.24</td><td>10.39</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr> </table>
+Wallets:        7<br><br>
+<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ADA</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>MANA</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>MATIC</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>USDT</td><td>-0.04</td><td>0.71</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>DOGE</td><td>24.68</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>XRP</td><td>24.59</td><td>36.14</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>USDC</td><td>24.71</td><td>24.74</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
-<tr><td>2024-03-11</td><td>-8.42</td><td>-0.02</td><td>481.66601047999995</td><td>-7.7</td><td>1</td></tr>
-<tr><td>2024-03-04</td><td>-6.77</td><td>-0.01</td><td>488.43410606</td><td>-6.19</td><td>2</td></tr>
-<tr><td>2024-02-26</td><td>0</td><td>0</td><td>488.43410606</td><td>0</td><td>0</td></tr>
-<tr><td>2024-02-19</td><td>0</td><td>0</td><td>488.43410606</td><td>0</td><td>0</td></tr>
+<tr><td>2024-03-11</td><td>0.88</td><td>0.01</td><td>73.43825087110339</td><td>0.8</td><td>14</td></tr>
+<tr><td>2024-03-04</td><td>2.07</td><td>0.03</td><td>71.3715396411034</td><td>1.89</td><td>13</td></tr>
+<tr><td>2024-02-26</td><td>8.94</td><td>0.14</td><td>62.4326807611034</td><td>8.18</td><td>27</td></tr>
+<tr><td>2024-02-19</td><td>0.2</td><td>0</td><td>62.2317870011034</td><td>0.18</td><td>2</td></tr>
+</table>
+<hr><b class=botheader >binance-larissa</b><br>
+<b><small><br><br>Trader is live running</small></b><br>
+Started: 2024-02-25 09:55:34<br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 471.64</b><br>
+Trading Mode: spot<br>
+Exchange: binance<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>ETH/USDT</b></td><td>0.04 / 0.04</td><td class=tdspecialbg><b>1.91</b></td><td>2024-03-10T12:40:50Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >156.11</td> <td>156.11</td><td class=tdspecialbg >3922.27</td> <td class=tdspecialbg >3980.54</td> <td  class=tdspecialbg >0</td> <td>-8.03</td><tr>
+<tr><td class=tdspecialbg><b>BTC/USDT</b></td><td>0 / 0</td><td class=tdspecialbg><b>0.14</b></td><td>2024-03-13T12:41:22Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >154.04</td> <td>154.04</td><td class=tdspecialbg >72660</td> <td class=tdspecialbg >72842.78</td> <td  class=tdspecialbg >0</td> <td>-7.93</td><tr> </table>
+<br>
+Last Order Date: Mon Apr 25 18:36:29 CET 56168<br>
+Max Open Trades: 3.0<br>
+Open:        2<br>
+Wallets:        8<br><br>
+<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>BTC</td><td>154.46</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>ETH</td><td>158.49</td><td>0.04</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>BNB</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>USDT</td><td>145.13</td><td>149.72</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>ATOM</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>PEPE</td><td>0</td><td>0.14</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>ORDI</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>TIA</td><td>0</td><td>0.09</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr> </table>
+<hr>
+<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
+<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
+<tr><td>2024-03-11</td><td>-26.46</td><td>-0.05</td><td>481.7296455942</td><td>-24.22</td><td>7</td></tr>
+<tr><td>2024-03-04</td><td>-6.77</td><td>-0.01</td><td>488.49774117420003</td><td>-6.19</td><td>2</td></tr>
+<tr><td>2024-02-26</td><td>0</td><td>0</td><td>488.49774117420003</td><td>0</td><td>0</td></tr>
+<tr><td>2024-02-19</td><td>0</td><td>0</td><td>488.49774117420003</td><td>0</td><td>0</td></tr>
 </table>
 <hr><b class=botheader >binance-juliano</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 12:45:27<br>
-Strategy: NNTC<br><b>
-Value: 30.66</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 30.93</b><br>
 Trading Mode: spot<br>
-Exchange: binance<br>
+Exchange: binance<br><br>
+<html><head><style> .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head> <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td class=tdspecialbg><b>PEPE/USDT</b></td><td>156128 / 156285.3</td><td class=tdspecialbg><b>0.03</b></td><td>2024-03-13T13:36:23Z</td><td  class=tdspecialbg>1.0</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >1.34</td> <td>1.34</td><td class=tdspecialbg >0</td> <td class=tdspecialbg >0</td> <td  class=tdspecialbg >0</td> <td>-0.07</td><tr> </table>
 <br>
-Last Order Date: Mon Mar 11 04:35:38 CET 2024<br>
+Last Order Date: Thu Jun  2 23:28:56 CET 56168<br>
 Max Open Trades: 3.0<br>
-Open:        0<br>
-Wallets:        9<br>
+Open:        1<br>
+Wallets:       11<br><br>
 <table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>BTC</td><td>0</td><td>0</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>USDT</td><td>4.02</td><td>4.06</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
+<tr><td  class=tdspecialbg>USDT</td><td>2.68</td><td>2.72</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr>
 <tr><td  class=tdspecialbg>ATOM</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>DOT</td><td>0</td><td>0.58</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>TRB</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>EGLD</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>AVAX</td><td>0</td><td>0.02</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
 <tr><td  class=tdspecialbg>FIL</td><td>0</td><td>0.01</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
-<tr><td  class=tdspecialbg>AXS</td><td>0</td><td>0.71</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr> </table>
+<tr><td  class=tdspecialbg>AXS</td><td>0</td><td>0.71</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>SHIB</td><td>0</td><td>0.52</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr>
+<tr><td  class=tdspecialbg>PEPE</td><td>1.37</td><td>156130.7</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr>
-<tr><td>2024-03-11</td><td>0</td><td>0</td><td>4.0190508864</td><td>0</td><td>0</td></tr>
-<tr><td>2024-03-04</td><td>0</td><td>0</td><td>4.0190508864</td><td>0</td><td>0</td></tr>
-<tr><td>2024-02-26</td><td>0</td><td>0</td><td>4.0190508864</td><td>0</td><td>0</td></tr>
-<tr><td>2024-02-19</td><td>0</td><td>0</td><td>4.0190508864</td><td>0</td><td>0</td></tr>
+<tr><td>2024-03-11</td><td>-0.01</td><td>-0</td><td>4.017741536324</td><td>-0.01</td><td>6</td></tr>
+<tr><td>2024-03-04</td><td>0</td><td>0</td><td>4.017741536324</td><td>0</td><td>0</td></tr>
+<tr><td>2024-02-26</td><td>0</td><td>0</td><td>4.017741536324</td><td>0</td><td>0</td></tr>
+<tr><td>2024-02-19</td><td>0</td><td>0</td><td>4.017741536324</td><td>0</td><td>0</td></tr>
 </table>
 <hr><b class=botheader >binance-hassan</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 04:00:40<br>
-Strategy: NNTC<br><b>
-Value: 121.09</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 121.09</b><br>
 Trading Mode: spot<br>
-Exchange: binance<br>
+Exchange: binance<br><br>
 <br>
-Last Order Date: Mon Mar 11 04:35:38 CET 2024<br>
+Last Order Date: <br>
 Max Open Trades: 3.0<br>
 Open:        0<br>
-Wallets:        1<br>
+Wallets:        1<br><br>
 <table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>119.88</td><td>121.09</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>true</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
@@ -284,17 +288,17 @@ Wallets:        1<br>
 <tr><td>2024-02-19</td><td>0</td><td>0</td><td>119.876192964</td><td>0</td><td>0</td></tr>
 </table>
 <hr><b class=botheader >binance-adriana</b><br>
-<b><small>Trader is: live running</small></b><br>
+<b><small><br><br>Trader is live running</small></b><br>
 Started: 2024-02-25 13:21:47<br>
-Strategy: NNTC<br><b>
-Value: 81.51</b><br>
+<b class=bigger>Strategy: NNTC</b><br>
+<b class=bigger>Value: 91.36</b><br>
 Trading Mode: spot<br>
-Exchange: binance<br>
+Exchange: binance<br><br>
 <br>
-Last Order Date: Mon Mar 11 04:35:38 CET 2024<br>
+Last Order Date: <br>
 Max Open Trades: 3.0<br>
 Open:        0<br>
-Wallets:        1<br>
+Wallets:        1<br><br>
 <table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>BNB</td><td>0</td><td>0.16</td><td>long</td><td>0.0</td><td class=tdspecialbg>1.0</td><td>false</td></tr> </table>
 <hr>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr>
@@ -305,60 +309,59 @@ Wallets:        1<br>
 <tr><td>2024-02-19</td><td>0</td><td>0</td><td>0.0</td><td>0</td><td>0</td></tr>
 </table>
 <hr>
-<hr>
-<div><b>Total Open Positions: 19</b></div><hr>
-<b>Kubernetes Events:</b><br>
-<br>No Warning or Errors<br><hr>
-<b>Deployments:</b><br>
+<b><div id=kubernetes><br>Kubernetes Events:</b>&nbsp;&nbsp;<a href=#top>Top</a></div><br>
+<br>binance-michael           3m27s       Warning   FailedPreStopHook      pod/freqtrade-binance-michael-6494c64cc5-xh7qv    PreStopHook failed<br><hr>
+<b><div><br>Kubernetes Deployments:&nbsp;&nbsp;<a href=#top>Top</a></div></b><br>
 <html><head><style> .tdspecial { font-size: 14px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;}th, td {border: 1px solid black;padding: 8px;text-align: left;} </style><table>
 <tr><td>NAMESPACE</td><td>NAME</td><td>READY</td><td>UP-TO-DATE</td><td>AVAILABLE</td><td>AGE</td></tr>
-<tr><td>binance-adriana</td><td>freqtrade-binance-adriana</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
-<tr><td>binance-futures-larissa</td><td>freqtrade-binance-futures-larissa</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
-<tr><td>binance-futures</td><td>freqtrade-binance-futures</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
-<tr><td>binance-hassan</td><td>freqtrade-binance-hassan</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
-<tr><td>binance-juliano</td><td>freqtrade-binance-juliano</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
-<tr><td>binance-larissa</td><td>freqtrade-binance-larissa</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
-<tr><td>binance-michael</td><td>freqtrade-binance-michael</td><td>1/1</td><td>1</td><td>1</td><td>14d</td></tr>
-<tr><td>kraken-adriana</td><td>freqtrade-kraken-adriana</td><td>1/1</td><td>1</td><td>1</td><td>14d</td></tr>
-<tr><td>kraken-hellen</td><td>freqtrade-kraken-hellen</td><td>1/1</td><td>1</td><td>1</td><td>14d</td></tr>
-<tr><td>kraken-michael</td><td>freqtrade-kraken-michael</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
-<tr><td>kraken-stieves</td><td>freqtrade-kraken-stieves</td><td>1/1</td><td>1</td><td>1</td><td>15d</td></tr>
+<tr><td>binance-adriana</td><td>freqtrade-binance-adriana</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>binance-futures-larissa</td><td>freqtrade-binance-futures-larissa</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>binance-futures</td><td>freqtrade-binance-futures</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>binance-hassan</td><td>freqtrade-binance-hassan</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>binance-juliano</td><td>freqtrade-binance-juliano</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>binance-larissa</td><td>freqtrade-binance-larissa</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>binance-michael</td><td>freqtrade-binance-michael</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>kraken-adriana</td><td>freqtrade-kraken-adriana</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>kraken-hellen</td><td>freqtrade-kraken-hellen</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>kraken-michael</td><td>freqtrade-kraken-michael</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
+<tr><td>kraken-stieves</td><td>freqtrade-kraken-stieves</td><td>1/1</td><td>1</td><td>1</td><td>17d</td></tr>
 </table></head></html>
-<hr><b>Whitelists:</b><br>
+<hr><b><div id=whitelist><br>Whitelists:&nbsp;&nbsp;<a href=#top>Top</a></div></b><br>
 ---------------<br>
 <br>binance-adriana<br><br>
-[ ETC/USDT , LTC/USDT , RNDR/USDT , ICP/USDT , DOT/USDT , AVAX/USDT , FIL/USDT , AAVE/USDT , APT/USDT , SOL/USDT , ETH/USDT , ORDI/USDT , UNI/USDT , INJ/USDT , BCH/USDT , ATOM/USDT ]<br>
+[ XRP/USDT , ETH/USDT , AVAX/USDT , SOL/USDT , BNB/USDT , XLM/USDT , ALGO/USDT , DOGE/USDT , IOTA/USDT , PEPE/USDT , BTC/USDT ]<br>
 ---------------<br>
 <br>binance-futures<br><br>
-[ MKR/USDT:USDT , TRB/USDT:USDT , ETH/USDT:USDT , BCH/USDT:USDT , ORDI/USDT:USDT ]<br>
+[ EGLD/USDT:USDT , ETH/USDT:USDT , ORDI/USDT:USDT , AVAX/USDT:USDT , TRB/USDT:USDT , LTC/USDT:USDT , BCH/USDT:USDT , SOL/USDT:USDT ]<br>
 ---------------<br>
 <br>binance-futures-larissa<br><br>
-[ BCH/USDT:USDT , INJ/USDT:USDT , AAVE/USDT:USDT , ETC/USDT:USDT , QNT/USDT:USDT , NMR/USDT:USDT ]<br>
+[ XLM/USDT:USDT , ETC/USDT:USDT , MKR/USDT:USDT , BCH/USDT:USDT , SSV/USDT:USDT , SOL/USDT:USDT , IOTA/USDT:USDT , COMP/USDT:USDT , AAVE/USDT:USDT , XRP/USDT:USDT , ALGO/USDT:USDT ]<br>
 ---------------<br>
 <br>binance-hassan<br><br>
-[ ORDI/USDT , ICP/USDT , DOT/USDT , LTC/USDT , UNI/USDT , APT/USDT , SOL/USDT , BCH/USDT , ETH/USDT , RNDR/USDT , AAVE/USDT , ETC/USDT , FIL/USDT , INJ/USDT , ATOM/USDT , AVAX/USDT ]<br>
+[ BTC/USDT , ALGO/USDT , IOTA/USDT , DOGE/USDT , XRP/USDT , XLM/USDT , BNB/USDT , SOL/USDT , PEPE/USDT , AVAX/USDT , ETH/USDT ]<br>
 ---------------<br>
 <br>binance-juliano<br><br>
-[ ICP/USDT , BCH/USDT , AVAX/USDT , AAVE/USDT , FIL/USDT , APT/USDT , LTC/USDT , ETC/USDT , ETH/USDT , ATOM/USDT , DOT/USDT , ORDI/USDT , UNI/USDT , SOL/USDT , RNDR/USDT , INJ/USDT ]<br>
+[ XLM/USDT , ALGO/USDT , BTC/USDT , IOTA/USDT , SOL/USDT , AVAX/USDT , ETH/USDT , XRP/USDT , BNB/USDT , PEPE/USDT , DOGE/USDT ]<br>
 ---------------<br>
 <br>binance-larissa<br><br>
-[ DOT/USDT , LTC/USDT , INJ/USDT , SOL/USDT , FIL/USDT , RNDR/USDT , AVAX/USDT , ETH/USDT , ICP/USDT , UNI/USDT , BCH/USDT , ATOM/USDT , AAVE/USDT , APT/USDT , ORDI/USDT , ETC/USDT , TIA/USDT , LINK/USDT ]<br>
+[ XLM/USDT , DOGE/USDT , ALGO/USDT , AVAX/USDT , SOL/USDT , BNB/USDT , IOTA/USDT , BTC/USDT , XRP/USDT , PEPE/USDT , ETH/USDT ]<br>
 ---------------<br>
 <br>binance-michael<br><br>
-[ AAVE/USDT , AVAX/USDT , SOL/USDT , LTC/USDT , APT/USDT , ORDI/USDT , ETH/USDT , ETC/USDT , ATOM/USDT , INJ/USDT , UNI/USDT , BCH/USDT , ICP/USDT , FIL/USDT , RNDR/USDT , DOT/USDT , MKR/USDT , WLD/USDT ]<br>
+[ DOGE/USDT , ALGO/USDT , XLM/USDT , ETH/USDT , AVAX/USDT , PEPE/USDT , BNB/USDT , IOTA/USDT , BTC/USDT , XRP/USDT , SOL/USDT , MKR/USDT , LTC/USDT , WLD/USDT ]<br>
 ---------------<br>
 <br>kraken-adriana<br><br>
-[ DOT/USDT , ATOM/USDT , BCH/USDT , LTC/USDT , SOL/USDT , AVAX/USDT , ETH/USDT ]<br>
+[ XRP/USDT , ALGO/USDT , BTC/USDT , ETH/USDT , USDC/USDT , SOL/USDT , AVAX/USDT , DOGE/USDT ]<br>
 ---------------<br>
 <br>kraken-hellen<br><br>
-[ ATOM/USDT , AVAX/USDT , ETH/USDT , DOT/USDT , LTC/USDT , SOL/USDT , BCH/USDT , LINK/USDT ]<br>
+[ SOL/USDT , AVAX/USDT , ETH/USDT ]<br>
 ---------------<br>
 <br>kraken-michael<br><br>
-[ ETH/USDT , BCH/USDT , SOL/USDT , LTC/USDT , AVAX/USDT , DOT/USDT , ATOM/USDT ]<br>
+[ SOL/USDT ]<br>
 ---------------<br>
 <br>kraken-stieves<br><br>
-[ AVAX/USDT , BCH/USDT , SOL/USDT , ETH/USDT , LTC/USDT , ATOM/USDT , DOT/USDT ]<br>
-<hr>History:<br>
+[ XRP/USDT , ALGO/USDT , BTC/USDT , ETH/USDT , USDC/USDT , SOL/USDT , AVAX/USDT , DOGE/USDT ]<br>
+<hr>
+<hr><div id=history><br>History:&nbsp;&nbsp;<a href=#top>Top</a></div><br>
 <b>2024-03-07 22-00-12: 17969.53</b><br>
 <b>2024-03-07 17-00-22: 18136.75</b><br>
 <b>2024-03-07 18-00-12: 18080.14</b><br>
@@ -540,3 +543,96 @@ Wallets:        1<br>
 <b>2024-03-11 12-40-11: 17795.56</b><br>
 <b>2024-03-11 13-00-11: 17768.51</b><br>
 <b>2024-03-11 13-40-12: 17845.77</b><br>
+<b>2024-03-11 14-00-12: 17849.63</b><br>
+<b>2024-03-11 14-40-14: 17730.56</b><br>
+<b>2024-03-11 15-00-11: 17656.84</b><br>
+<b>2024-03-11 16-00-10: 17624.68</b><br>
+<b>2024-03-11 16-40-13: 17760.83</b><br>
+<b>2024-03-11 17-00-10: 17717.67</b><br>
+<b>2024-03-11 17-40-13: 17712.90</b><br>
+<b>2024-03-11 18-00-12: 17749.50</b><br>
+<b>2024-03-11 19-00-11: 17763.55</b><br>
+<b>2024-03-11 19-40-11: 17822.97</b><br>
+<b>2024-03-11 20-00-11: 17766.67</b><br>
+<b>2024-03-11 20-40-10: 17748.43</b><br>
+<b>2024-03-11 21-00-10: 17704.36</b><br>
+<b>2024-03-11 21-40-11: 17726.86</b><br>
+<b>2024-03-11 22-00-11: 17671.89</b><br>
+<b>2024-03-12 02-44-45: 17607.43</b><br>
+<b>2024-03-12 03-00-11: 17567.75</b><br>
+<b>2024-03-12 03-40-11: 17644.76</b><br>
+<b>2024-03-12 04-00-10: 17560.10</b><br>
+<b>2024-03-12 04-40-11: 17373.52</b><br>
+<b>2024-03-12 05-00-11: 17143.50</b><br>
+<b>2024-03-12 05-40-12: 17318.25</b><br>
+<b>2024-03-12 06-00-12: 17313.42</b><br>
+<b>2024-03-12 06-40-11: 17357.24</b><br>
+<b>2024-03-12 07-00-11: 17322.29</b><br>
+<b>2024-03-12 07-40-11: 17157.03</b><br>
+<b>2024-03-12 08-00-11: 17236.16</b><br>
+<b>2024-03-12 08-40-09: 17280.85</b><br>
+<b>2024-03-12 09-00-11: 17287.02</b><br>
+<b>2024-03-12 09-40-08: 16975.89</b><br>
+<b>2024-03-12 10-00-11: 16951.01</b><br>
+<b>2024-03-12 10-40-14: 17125.79</b><br>
+<b>2024-03-12 11-00-12: 17181.32</b><br>
+<b>2024-03-12 11-40-13: 17144.38</b><br>
+<b>2024-03-12 12-00-11: 17146.97</b><br>
+<b>2024-03-12 12-40-13: 17307.60</b><br>
+<b>2024-03-12 13-00-11: 17271.52</b><br>
+<b>2024-03-12 13-40-13: 17297.25</b><br>
+<b>2024-03-12 14-00-11: 17501.03</b><br>
+<b>2024-03-12 14-40-11: 17528.58</b><br>
+<b>2024-03-12 15-00-11: 17490.33</b><br>
+<b>2024-03-12 15-40-13: 17283.51</b><br>
+<b>2024-03-12 16-00-11: 17304.65</b><br>
+<b>2024-03-12 16-40-13: 17552.81</b><br>
+<b>2024-03-12 17-00-11: 17506.44</b><br>
+<b>2024-03-12 17-40-13: 17141.95</b><br>
+<b>2024-03-12 18-00-14: 16874.45</b><br>
+<b>2024-03-12 18-40-13: 16683.15</b><br>
+<b>2024-03-12 19-00-11: 16857.15</b><br>
+<b>2024-03-12 19-40-13: 17064.72</b><br>
+<b>2024-03-12 20-00-11: 17051.01</b><br>
+<b>2024-03-12 20-40-13: 17066.61</b><br>
+<b>2024-03-12 21-00-12: 17079.09</b><br>
+<b>2024-03-12 21-40-13: 16873.27</b><br>
+<b>2024-03-12 22-00-10: 17012.58</b><br>
+<b>2024-03-12 22-40-14: 16972.28</b><br>
+<b>2024-03-12 23-00-11: 17009.84</b><br>
+<b>2024-03-12 23-40-13: 16963.43</b><br>
+<b>2024-03-13 00-00-11: 16975.40</b><br>
+<b>2024-03-13 00-40-13: 17091.17</b><br>
+<b>2024-03-13 01-00-16: 17138.79</b><br>
+<b>2024-03-13 01-40-14: 17052.60</b><br>
+<b>2024-03-13 02-00-10: 17205.23</b><br>
+<b>2024-03-13 02-40-14: 17264.60</b><br>
+<b>2024-03-13 03-00-12: 17353.47</b><br>
+<b>2024-03-13 03-40-14: 17338.86</b><br>
+<b>2024-03-13 04-00-10: 17334.55</b><br>
+<b>2024-03-13 04-40-13: 17383.58</b><br>
+<b>2024-03-13 05-00-11: 17346.32</b><br>
+<b>2024-03-13 05-40-14: 17255.98</b><br>
+<b>2024-03-13 06-00-12: 17275.53</b><br>
+<b>2024-03-13 06-40-13: 17322.82</b><br>
+<b>2024-03-13 07-00-11: 17321.43</b><br>
+<b>2024-03-13 07-40-14: 17239.14</b><br>
+<b>2024-03-13 08-00-11: 17209.51</b><br>
+<b>2024-03-13 08-40-12: 17234.96</b><br>
+<b>2024-03-13 09-00-11: 17222.73</b><br>
+<b>2024-03-13 09-40-14: 17191.47</b><br>
+<b>2024-03-13 10-00-11: 17284.74</b><br>
+<b>2024-03-13 10-40-13: 17240.91</b><br>
+<b>2024-03-13 11-00-11: 17172.30</b><br>
+<b>2024-03-13 11-40-11: 17130.35</b><br>
+<b>2024-03-13 12-00-12: 17156.88</b><br>
+<b>2024-03-13 12-40-11: 17083.02</b><br>
+<b>2024-03-13 13-00-14: 17107.56</b><br>
+<b>2024-03-13 13-40-11: 17153.05</b><br>
+<b>2024-03-13 14-00-11: 17147.74</b><br>
+<b>2024-03-13 14-40-11: 17049.07</b><br>
+<b>2024-03-13 15-00-13: 16963.50</b><br>
+<b>2024-03-13 15-40-14: 16781.10</b><br>
+<b>2024-03-13 16-00-11: 16761.21</b><br>
+<b>2024-03-13 16-40-14: 16929.20</b><br>
+<b>2024-03-13 17-00-12: 16861.84</b><br>

@@ -109,33 +109,33 @@ config:
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=175979476d5fc223
-      processing_mode: append
+      pairlist_url: http://filekeys.com/remotepairlist-white-spot.json # https://remotepairlist.com?q=175979476d5fc223
+      processing_mode: filter
       mode: whitelist
       sort_key: quoteVolume
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 60
-    - method: RemotePairList
-      number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=ac822c0252729ed2
-      processing_mode: append
-      mode: blacklist
-      sort_key: quoteVolume
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 60
-    - method: AgeFilter
-      min_days_listed: 15
-    - method: PriceFilter
-      low_price_ratio: 0.003
-    - method: SpreadFilter
-      max_spread_ratio: 0.008
-    - method: RangeStabilityFilter
-      lookback_days: 30
-      min_rate_of_change: 0.01
-      refresh_period: 900
-    - method: ShuffleFilter
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   pairlist_url: https://remotepairlist.com?q=ac822c0252729ed2
+    #   processing_mode: filter
+    #   mode: blacklist
+    #   sort_key: quoteVolume
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 60
+    # - method: AgeFilter
+    #   min_days_listed: 15
+    # - method: PriceFilter
+    #   low_price_ratio: 0.003
+    # - method: SpreadFilter
+    #   max_spread_ratio: 0.008
+    # - method: RangeStabilityFilter
+    #   lookback_days: 30
+    #   min_rate_of_change: 0.01
+    #   refresh_period: 900
+    # - method: ShuffleFilter
   freqai:
     enabled: false
     fit_live_predictions_candles: 300
