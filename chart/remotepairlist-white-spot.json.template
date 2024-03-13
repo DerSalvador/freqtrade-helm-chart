@@ -1,0 +1,7 @@
+{
+    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", #pairs#],
+    "refresh_period": 900
+}
+
+
+

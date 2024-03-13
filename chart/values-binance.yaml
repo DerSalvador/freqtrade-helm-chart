@@ -109,7 +109,7 @@ config:
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=175979476d5fc223
+      pairlist_url: http://filekeys.com/remotepairlist-white-spot.json # https://remotepairlist.com?q=175979476d5fc223
       processing_mode: append
       mode: whitelist
       sort_key: quoteVolume
