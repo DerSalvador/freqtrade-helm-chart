@@ -4,12 +4,6 @@ kubernetes:
 
 configcreds:
   bot_name: freqtrade-kraken-adriana
-  timeframe: 5m
-  trading_mode: spot
-  stake_amount: unlimited
-  minimal_roi:
-    "0": 0.2
-  stoploss: -0.05  
   exchange:
     name: kraken
     ccxt_config:
