@@ -6,12 +6,6 @@ configcreds:
   # trading_mode: futures
   # margin_mode: isolated
   bot_name: freqtrading-binance-larissa
-  timeframe: 5m
-  trading_mode: spot
-  stake_amount: unlimited  
-  minimal_roi:
-    "0": 0.05
-  stoploss: -0.05
   # pairlists:
   #   - method: RemotePairList
   #     number_assets: 50
