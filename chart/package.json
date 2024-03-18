@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@pulumi/gitlab": "^6.9.0"
+  }
+}

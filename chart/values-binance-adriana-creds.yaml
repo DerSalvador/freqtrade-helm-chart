@@ -3,12 +3,6 @@ kubernetes:
   nodePort: 32330
 configcreds:
   bot_name: freqtrading-binance-adriana
-  timeframe: 5m
-  trading_mode: spot
-  stake_amount: unlimited
-  minimal_roi:
-    "0": 0.05
-  stoploss: -0.05  
   exchange:
     name: binance
     key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
