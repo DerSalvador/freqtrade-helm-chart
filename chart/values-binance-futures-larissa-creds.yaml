@@ -2,16 +2,14 @@
 kubernetes:
   nodePort: 32331
 configcreds:
+  leverage: 4
   max_open_trades: 3
-  stoploss: -0.99
   trailing_stop: false
   trailing_stop_positive: 0.99
   trailing_stop_positive_offset: 0.2
   trailing_only_offset_is_reached: true  
   trading_mode: futures
   margin_mode: isolated
-  timeframe: 15m
-  stake_amount: unlimited
   bot_name: freqtrading-binance-futures-larissa
   freqai:
     enabled: false
@@ -76,12 +74,12 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
-    secret: qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy
+    key: Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY # eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
+    secret: JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url:  https://remotepairlist.com?q=5f29a5242f9965b4 #  http://filekeys.com/remotepairlist-white-futures.json # https://remotepairlist.com?q=5f29a5242f9965b4
+      pairlist_url: https://remotepairlist.com?q=6ed672791d1040c0 #  https://remotepairlist.com?q=5f29a5242f9965b4 #  http://filekeys.com/remotepairlist-white-futures.json # https://remotepairlist.com?q=5f29a5242f9965b4
       mode: whitelist
       processing_mode: append
       refresh_period: 900
@@ -103,17 +101,17 @@ configcreds:
     #   refresh_period: 900
     #   keep_pairlist_on_failure: true
     #   read_timeout: 120
-    - method: AgeFilter
-      min_days_listed: 30
-    - method: PriceFilter
-      low_price_ratio: 0.01
-    - method: SpreadFilter
-      max_spread_ratio: 0.1
-    - method: RangeStabilityFilter
-      lookback_days: 3
-      min_rate_of_change: 0.1
-      refresh_period: 1800
-    - method: ShuffleFilter
+    # - method: AgeFilter
+    #   min_days_listed: 30
+    # - method: PriceFilter
+    #   low_price_ratio: 0.01
+    # - method: SpreadFilter
+    #   max_spread_ratio: 0.1
+    # - method: RangeStabilityFilter
+    #   lookback_days: 3
+    #   min_rate_of_change: 0.1
+    #   refresh_period: 1800
+    # - method: ShuffleFilter
   telegram:
     enabled: true
     token: "6905337607:AAH6DrgfnKmG8NV9m0RTZuf2wLcJ7MveMkQ"
