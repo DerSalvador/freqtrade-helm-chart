@@ -3,28 +3,22 @@ kubernetes:
   nodePort: 32322
 configcreds:
   bot_name: freqtrade-kraken-stieves
-  timeframe: 5m
-  trading_mode: spot
-  stake_amount: unlimited
-  minimal_roi:
-    "0": 0.2
-  stoploss: -0.05  
   exchange:
     name: kraken
     key: QK9S+Sg47ZZWJHhXPXxNs43kH5i4m+ZpHe9sI1PBYmUX3eg5C6z6Wamt
     secret: drj/i700KYoDcxQ+4aWSQrqadCzXLhMxCBMyrDocH0RK7WjdJFTCPcpQhuSLg3+4u4mV+mlbNM5hkJ2zH0jn/Q==
-    ccxt_config:
-      enableRateLimit: true
-      rateLimit: 3000
-      options:
-        defaultType: spot
-        leverage: 10
-    ccxt_async_config:
-      enableRateLimit: true
-      rateLimit: 3000
-      options:
-        defaultType: spot
-        leverage: 10    
+    # ccxt_config:
+    #   enableRateLimit: true
+    #   rateLimit: 3000
+    #   options:
+    #     defaultType: spot
+    #     leverage: 10
+    # ccxt_async_config:
+    #   enableRateLimit: true
+    #   rateLimit: 3000
+    #   options:
+    #     defaultType: spot
+    #     leverage: 10    
   telegram:
     enabled: false
     token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"

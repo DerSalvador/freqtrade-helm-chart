@@ -3,12 +3,6 @@ kubernetes:
   nodePort: 32323
 configcreds:
   bot_name: freqtrading-binance-hassan
-  timeframe: 5m
-  trading_mode: spot
-  stake_amount: unlimited
-  minimal_roi:
-    "0": 0.05
-  stoploss: -0.05  
   exchange:
     name: binance
     key: SQVj4WE2YfDgq6kMbOdobyx8OmWGRt4l1aV9DsWGaDMoRKdIRLaa4wu82PUMWhVn
