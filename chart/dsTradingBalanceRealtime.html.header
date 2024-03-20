@@ -1,7 +1,7 @@
 <html><head><style> .nochbigger { font-size: 24px; }   .bigger { font-size: 22px; } .botheader {border: 1px solid black; padding: 4px; font-size: 22px;  background-color: #afeeee; } .tdspecialbg { font-size: 20px; background-color: #ffde7d; } .tdspecial { font-size: 20px; } table { .small-text { font-size: 10px;  } border-collapse: collapse;width: 50%;} th, td {border: 1px solid black;padding: 8px;text-align: left;} </style></head>
-<h2>Freqtrade Bots Report: 2024-03-19 18-07-27</h2>
-<small>Next Report: Tue Mar 19 19:02:27 CET 2024</small><br>
-<h2 id=top>11 Bots: 13348.59 USDT</h2>
+<h2>Freqtrade Bots Report: 2024-03-20 10-07-34</h2>
+<small>Next Report: Wed Mar 20 11:02:34 CET 2024</small><br>
+<h2 id=top>11 Bots: 13084.24 USDT</h2>
 <h2><a href=#kubernetes>Kubernetes</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=#whitelist>Whitelist</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=#history>History</a></h2>
 <h3>Version: 2024.1</h3>
-<div><b class=bigger>Total Open Positions: 17</b></div><hr>
+<div><b class=bigger>Total Open Positions: 19</b></div><hr>
