@@ -74,8 +74,8 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
-    secret: qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy
+    key: Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY # eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
+    secret: JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
   pairlists:
     - method: RemotePairList
       number_assets: 50
