@@ -25,7 +25,7 @@ def sign_request(data):
 def transfer_spot_to_funding(asset, amount):
     path = '/sapi/v1/asset/transfer'
     params = {
-        'type': 'MAIN_FUNDING',  # Change this accordingly if necessary. MAIN_UMFUTURE is for transferring from Spot Wallet to USDT-M Futures Wallet
+        'type': 'MAIN_FUNDING',  # Change this accordingly if necessary. MAIN_UMFUTURE is for transferring from Spot Wallet to Funding Wallet
         'asset': asset,
         'amount': amount,
         'timestamp': get_timestamp()
