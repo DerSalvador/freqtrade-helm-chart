@@ -9,9 +9,43 @@ spec:
   type: NodePort
   ports:
   - protocol: TCP
-    port: 80
+    port: {{ .Values.kubernetes.nodePort }}
     targetPort: api
     nodePort: {{ .Values.kubernetes.nodePort }}
   selector:
     app: freqtrade-{{ .Release.Namespace }}
 {{- end }}
+---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: freqtrade-{{ .Release.Namespace }}
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /
+# spec:
+#   ingressClassName: freqtrade-{{ .Release.Namespace }}
+#   rules:
+#   - http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: freqtrade-{{ .Release.Namespace }}
+#             port:
+#               number: 80
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: IngressClass
+# metadata:
+#   labels:
+#     app.kubernetes.io/component: controller
+#   name: freqtrade-{{ .Release.Namespace }}
+#   annotations:
+#     ingressclass.kubernetes.io/is-default-class: "true"
+# spec:
+#   controller: k8s.io/ingress-nginx
+#   parameters:
+#     apiGroup: ingressclass.kubernetes.io
+#     kind: IngressParameters
+#     name: external-lb  
