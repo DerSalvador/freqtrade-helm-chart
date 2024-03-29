@@ -2,6 +2,7 @@
 kubernetes:
   nodePort: 32323
 configcreds:
+  stake_amount: 50
   bot_name: freqtrading-binance-hassan
   exchange:
     name: binance
