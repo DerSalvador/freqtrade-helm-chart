@@ -1,6 +1,6 @@
 ---
 kubernetes:
-  nodePort: 32327
+  nodePort: 32391
 
 configcreds:
   bot_name: freqtrade-kraken-adriana

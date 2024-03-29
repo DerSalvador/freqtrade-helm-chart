@@ -1,0 +1,31 @@
+---
+kubernetes:
+  nodePort: 32332
+
+configcreds:
+  bot_name: freqtrade-kraken-juliano
+  exchange:
+    name: kraken
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 3000
+      options:
+        defaultType: spot
+        leverage: 10
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 3000
+      options:
+        defaultType: spot
+        leverage: 10  
+    key: YrLGEJKEwEzSCB0xvyJF4Hcz/J7lgOXC8mYlsz8fpMGOjUSJWt6QyEIr
+    secret: qEPDODFjDfIS4ZEUYS0b6WqT4kYvyaT4EkcsSeeU9oBIFnST7doV0lciaruv+ThwNmeDK8/tdrz2jYzkkChQ6g==
+  telegram:
+    enabled: true
+    token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
+    chat_id: "6274423445"
+bot:
+  enabled: true
+  strategy_name: NNTC
+  freqaimodel: LightGBMRegressor
+
