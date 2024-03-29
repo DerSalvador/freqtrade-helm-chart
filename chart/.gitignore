@@ -1,0 +1,10 @@
+**/.venv/*
+**/*/nohup.out
+**/*/takeprofit.allbots*
+**/*/takeprofit.allbots.[0-9]*
+**/*/history.allbots
+dsTradingBalanceRealtime.html
+dsTradingBalanceRealtime.html.*
+**/*/dsTradingBalanceRealtime.html.*
+**/*history.allbots
+**/*remotepairlist*.json
