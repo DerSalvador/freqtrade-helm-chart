@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32325
 
 configcreds:
+  stake_amount: 50
   # trading_mode: futures
   # margin_mode: isolated
   bot_name: freqtrading-binance-larissa
