@@ -1,1 +1,7 @@
+**/.venv/*
+**/*/nohup.out
+**/*/takeprofit.allbots
 **/*/takeprofit.allbots.[0-9]*
+**/*/history.allbots
+**/*/dsTradingBalanceRealtime.html
+**/*history.allbots
