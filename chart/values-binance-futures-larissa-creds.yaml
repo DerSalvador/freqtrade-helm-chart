@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32331
 configcreds:
   leverage: 4
-  max_open_trades: 3
+  max_open_trades: 9
   trailing_stop: false
   trailing_stop_positive: 0.99
   trailing_stop_positive_offset: 0.2

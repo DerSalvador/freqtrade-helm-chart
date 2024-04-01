@@ -91,9 +91,6 @@ spec:
           cp -r /extra_strategies/{{ .Values.bot.strategy_name }}* /freqtrade/user_data/strategies/
           find /freqtrade
         volumeMounts:
-        # - name: extra-strategies
-        #   mountPath: /extra_strategies
-        #   readOnly: false            
         - name: strategies-default
           mountPath: /freqtrade/user_data/strategies
           readOnly: false  
@@ -235,9 +232,6 @@ spec:
       imagePullSecrets:
       - name: deploy-key-gcr
       volumes:
-      # - name: extra-strategies
-      #   persistentVolumeClaim:
-      #     claimName: freqtrade-extra-strategies  
       - name: strategies-default
         persistentVolumeClaim:
           claimName: freqtrade-strategies   
