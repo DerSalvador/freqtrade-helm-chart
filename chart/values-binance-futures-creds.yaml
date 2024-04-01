@@ -2,7 +2,7 @@
 kubernetes:
   nodePort: 32321
 configcreds:
-  max_open_trades: 3
+  max_open_trades: 9
   trading_mode: futures
   margin_mode: isolated
   timeframe: 15m
@@ -70,7 +70,7 @@ image:
   tag: 0c273f730d71c0d305bf9d9cb22fecc44b81a8c75806c077ce3eaeae6072c9b6 # 2023.12_freqaitorch as base image
 
 bot:
-  debug: false
+  debug: true
   debuglevel: -vvv
   enabled: true
   # Short Trades only

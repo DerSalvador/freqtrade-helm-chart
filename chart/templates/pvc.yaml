@@ -32,17 +32,17 @@ spec:
     requests:
       storage: {{ .Values.bot.pvc_size }}
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: freqtrade-user-data
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: {{ .Values.bot.pvc_size }}
----
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: freqtrade-user-data
+# spec:
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: {{ .Values.bot.pvc_size }}
+# ---
 # apiVersion: v1
 # kind: PersistentVolumeClaim
 # metadata:
