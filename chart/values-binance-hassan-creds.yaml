@@ -21,8 +21,8 @@ bot:
   freqaimodel: LightGBMRegressor
 
 # image:
-#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-#   tag: d42b9362d2133d29f2b3e9ab239d5c21811fbb39d86463e36b2080c90a652436 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256  # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 70d67433d7561fbb2131d449186c79042ef2f276cea0efb092a0061621686b63 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
 
    
 
