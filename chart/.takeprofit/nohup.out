@@ -154,4 +154,58 @@ Internal Server ErrorUsing Endpoint on 35.205.159.255:32325
 {"result":"Created exit order for trade 31."}100   131    0     0  100   131      0     25  0:00:05  0:00:05 --:--:--    25100   133    0     0  100   133      0      9  0:00:14  0:00:13  0:00:01     0100   131    0     0  100   131      0     13  0:00:10  0:00:09  0:00:01     0100   131    0     0  100   131      0     21  0:00:06  0:00:06 --:--:--     0100   133    0     0  100   133      0      8  0:00:16  0:00:14  0:00:02     0100   131    0     0  100   131      0     12  0:00:10  0:00:10 --:--:--     0100   131    0     0  100   131      0     18  0:00:07  0:00:07 --:--:--     0100   133    0     0  100   133      0      8  0:00:16  0:00:15  0:00:01     0100   131    0     0  100   131      0     11  0:00:11  0:00:11 --:--:--     0100   131    0     0  100   131      0     15  0:00:08  0:00:08 --:--:--     0100   133    0     0  100   133      0      7  0:00:19  0:00:16  0:00:03     0100   131    0     0  100   131      0     10  0:00:13  0:00:12  0:00:01     0100   131    0     0  100   131      0     14  0:00:09  0:00:09 --:--:--     0100   133    0     0  100   133      0      7  0:00:19  0:00:17  0:00:02     0100   131    0     0  100   131      0      9  0:00:14  0:00:13  0:00:01     0100   131    0     0  100   131      0     12  0:00:10  0:00:10 --:--:--     0100   133    0     0  100   133      0      6  0:00:22  0:00:19  0:00:03     0100   131    0     0  100   131      0      9  0:00:14  0:00:14 --:--:--     0 74   175    0     0  100   131      0      8  0:00:16  0:00:15  0:00:01     0100   175  100    44  100   131      2      8  0:00:22  0:00:15  0:00:07    12
 {"result":"Created exit order for trade 7."}100   131    0     0  100   131      0     11  0:00:11  0:00:11 --:--:--     0100   133    0     0  100   133      0      6  0:00:22  0:00:20  0:00:02     0100   131    0     0  100   131      0     10  0:00:13  0:00:12  0:00:01     0100   133    0     0  100   133      0      6  0:00:22  0:00:21  0:00:01     0100   131    0     0  100   131      0      9  0:00:14  0:00:13  0:00:01     0100   133    0     0  100   133      0      6  0:00:22  0:00:22 --:--:--     0100   131    0     0  100   131      0      9  0:00:14  0:00:14 --:--:--     0100   133    0     0  100   133      0      5  0:00:26  0:00:23  0:00:03     0100   131    0     0  100   131      0      8  0:00:16  0:00:15  0:00:01     0100   133    0     0  100   133      0      5  0:00:26  0:00:24  0:00:02     0100   131    0     0  100   131      0      8  0:00:16  0:00:16 --:--:--     0100   133    0     0  100   133      0      5  0:00:26  0:00:25  0:00:01     0100   131    0     0  100   131      0      7  0:00:18  0:00:17  0:00:01     0100   133    0     0  100   133      0      5  0:00:26  0:00:26 --:--:--     0100   131    0     0  100   131      0      7  0:00:18  0:00:18 --:--:--     0100   133    0     0  100   133      0      4  0:00:33  0:00:27  0:00:06     0100   131    0     0  100   131      0      6  0:00:21  0:00:19  0:00:02     0100   133    0     0  100   133      0      4  0:00:33  0:00:28  0:00:05     0100   131    0     0  100   131      0      6  0:00:21  0:00:20  0:00:01     0100   133    0     0  100   133      0      4  0:00:33  0:00:29  0:00:04     0 74   178    0     0  100   133      0      4  0:00:33  0:00:29  0:00:04     0100   178  100    45  100   133      1      4  0:00:45  0:00:29  0:00:16    12
 {"result":"Created exit order for trade 29."}100   131    0     0  100   131      0      6  0:00:21  0:00:21 --:--:--     0100   131    0     0  100   131      0      5  0:00:26  0:00:22  0:00:04     0100   131    0     0  100   131      0      5  0:00:26  0:00:23  0:00:03     0100   131    0     0  100   131      0      5  0:00:26  0:00:24  0:00:02     0100   131    0     0  100   131      0      5  0:00:26  0:00:25  0:00:01     0100   131    0     0  100   131      0      4  0:00:32  0:00:26  0:00:06     0100   131    0     0  100   131      0      4  0:00:32  0:00:27  0:00:05     0100   175  100    44  100   131      1      4  0:00:44  0:00:27  0:00:17    10
-{"result":"Created exit order for trade 9."}
+{"result":"Created exit order for trade 9."}Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "29",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-16h-01m-02s-tradeid-29",  
+  "ordertype": "market"
+}
+{"result":"Created exit order for trade 29."}Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "10",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-16h-06m-23s-tradeid-10",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "11",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-16h-06m-24s-tradeid-11",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "12",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-16h-06m-25s-tradeid-12",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "13",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-16h-06m-26s-tradeid-13",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "14",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-16h-06m-27s-tradeid-14",  
+  "ordertype": "market"
+}
+{"result":"Created exit order for trade 10."}{"result":"Created exit order for trade 11."}{"result":"Created exit order for trade 12."}{"result":"Created exit order for trade 13."}{"result":"Created exit order for trade 14."}Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "25",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-19h-29m-01s-tradeid-25",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "28",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-19h-29m-03s-tradeid-28",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "30",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-19h-29m-04s-tradeid-30",  
+  "ordertype": "market"
+}
+{"result":"Created exit order for trade 25."}{"result":"Created exit order for trade 28."}{"result":"Created exit order for trade 30."}
