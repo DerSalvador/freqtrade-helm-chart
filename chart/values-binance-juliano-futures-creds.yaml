@@ -1,0 +1,21 @@
+---
+kubernetes:
+  nodePort: 32333
+
+configcreds:
+  trading_mode: futures
+  margin_mode: isolated  
+  stake_amount: unlimited
+  bot_name: freqtrade-kraken-michael
+  exchange:
+    name: binance
+    key: 7hYocq4QubefqJFFqCBEPvc9OlmcIkOXT1xpAMS05htTfrhABT9bFQzSmyWnpo7r # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
+    secret: 8ERNEZyel3VxNyNQ8raIgtz967x5JRUZoDcW2THHUcTJFGhagdvcOSbYZKnB4Qhv # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
+  telegram:
+    enabled: false
+    token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
+    chat_id: "1649376180"
+bot:
+  enabled: true
+  strategy_name: AdxSmasS_v7
+  freqaimodel: LightGBMRegressor

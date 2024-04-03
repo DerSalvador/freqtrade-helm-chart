@@ -1,0 +1,25 @@
+---
+kubernetes:
+  nodePort: 32391
+
+configcreds:
+  bot_name: freqtrade-kraken-adriana
+  timeframe: 5m
+  trading_mode: spot
+  stake_amount: unlimited
+  exchange:
+    name: kraken
+    key: +H4NKdY1EIWMVwq4s+qOymZATOYoQPvND+wCMzo+jasiN+zScLEVPODo
+    secret: jOrx0aLMbRzOjAoagVx0nU1fW2qzTvvT+2bZQNIehqjKfieATglkZ+o92QJm9AuCCdmH4k3owys+nWHKlCEJmw==
+  telegram:
+    enabled: false
+    token: ""
+    chat_id: ""
+    # Stefan token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
+    # Stefan chat_id: "743804896"
+    # Adriana token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
+    # Adriana chat_id: "6274423445"
+bot:
+  enabled: true
+  strategy_name: Strategy001
+  freqaimodel: LightGBMRegressor
