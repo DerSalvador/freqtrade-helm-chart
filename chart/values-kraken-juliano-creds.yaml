@@ -21,7 +21,7 @@ configcreds:
     key: YrLGEJKEwEzSCB0xvyJF4Hcz/J7lgOXC8mYlsz8fpMGOjUSJWt6QyEIr
     secret: qEPDODFjDfIS4ZEUYS0b6WqT4kYvyaT4EkcsSeeU9oBIFnST7doV0lciaruv+ThwNmeDK8/tdrz2jYzkkChQ6g==
   telegram:
-    enabled: true
+    enabled: false
     token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     chat_id: "6274423445"
 bot:
