@@ -9,7 +9,7 @@ configcreds:
     secret: MzvSLeBLWUQEqivtnQLasBY1lw8f1Sp4RJ8oXWq4zpKM0bL6PVZ2ZaOR70Y8UPPT
 
   telegram:
-    enabled: true
+    enabled: false
     token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
     chat_id: "1649376180"
 bot:
