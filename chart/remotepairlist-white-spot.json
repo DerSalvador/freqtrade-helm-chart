@@ -1,5 +1,5 @@
 {
-    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "FDUSD/USDT", "BTC/USDT", "USDC/USDT", "ENA/USDT", "ETH/USDT", "SOL/USDT", "W/USDT", "DOGE/USDT", "BNB/USDT", "BOME/USDT"],
+    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "FDUSD/USDT", "USDC/USDT", "ETH/USDT", "ENA/USDT", "SOL/USDT", "BNB/USDT", "DOGE/USDT", "XRP/USDT", "BCH/USDT"],
     "refresh_period": 900
 }
 
