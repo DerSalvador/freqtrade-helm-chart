@@ -30,7 +30,7 @@ nostalgiaforinfinity:
 config:
   stake_amount: unlimited
   minimal_roi:
-    "0": 0.2
+    "0": 0.5
     "40160": 0.09
     "80160": 0
   timeframe: 5m
@@ -94,13 +94,13 @@ config:
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 2000
       options:
         defaultType: spot
         leverage: 10
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 2000
       options:
         defaultType: spot
         leverage: 10
