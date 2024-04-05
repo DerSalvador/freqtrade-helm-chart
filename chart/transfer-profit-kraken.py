@@ -9,6 +9,11 @@ import hashlib
 import time
 import os
 from urllib.parse import urlencode
+import logging
+
+# Enable DEBUG log level for requests
+logging.basicConfig()
+logging.getLogger('requests').setLevel(logging.DEBUG)
 
 # Read Kraken API key and secret stored in environment variables
 api_url = "https://api.kraken.com"
@@ -30,6 +35,13 @@ def kraken_request(uri_path, data, api_key, api_sec):
     # print("API-Sign: {}".format(signature))
     # get_kraken_signature() as defined in the 'Authentication' section
     headers['API-Sign'] = get_kraken_signature(uri_path, data, api_sec)
+    print ("Request: " + api_url + uri_path)
+    print ("Header: ")
+    for key, value in headers.items():
+        print(f'{key}: {value}', end=' ')
+    print ("Data: ")
+    for key, value in data.items():
+        print(f'{key}: {value}', end=' ')
     req = requests.post((api_url + uri_path), headers=headers, data=data)
     return req
 
@@ -52,7 +64,7 @@ if __name__ == '__main__':
         parser.add_argument('api_secret', type=str, help='Binance API secret')
         parser.add_argument('asset', type=str, help='Asset symbol to transfer, e.g., USDT')
         parser.add_argument('amount', type=str, help='Amount to transfer, e.g., 5')
-        parser.add_argument('funding_type', type=str, default='MAIN_FUNDING', choices=['Spot Wallet', 'Funding Wallet', 'Futures Wallet'], help='Type of funding transfer. Allowed values are Spot Wallet, Funding Wallet, Futures Wallet')
+        parser.add_argument('funding_type', type=str, default='Futures Wallet', choices=['Spot Wallet', 'Funding Wallet', 'Futures Wallet'], help='Type of funding transfer. Allowed values are Spot Wallet, Funding Wallet, Futures Wallet')
         
         args = parser.parse_args()
 
