@@ -101,7 +101,7 @@ spec:
         - freqtrade
         args:
         - list-strategies
-        # - --recursive-strategy-search   
+        - --recursive-strategy-search   
 {{- if .Values.bot.debug }}
         - {{ .Values.bot.debuglevel }}
 {{- end }}
@@ -202,7 +202,7 @@ spec:
         - {{ .Values.bot.strategy_name }}
         - --db-url
         - sqlite:////sqlite/tradesv3.sqlite
-        # - --recursive-strategy-search
+        - --recursive-strategy-search
         - --freqaimodel 
         - {{ .Values.bot.freqaimodel }}
         - --freqaimodel-path 
