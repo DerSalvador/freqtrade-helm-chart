@@ -208,4 +208,70 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forc
   "entry_tag": "forceexit-script-wirsinddieguten-2024-04-03-19h-29m-04s-tradeid-30",  
   "ordertype": "market"
 }
-{"result":"Created exit order for trade 25."}{"result":"Created exit order for trade 28."}{"result":"Created exit order for trade 30."}
+{"result":"Created exit order for trade 25."}{"result":"Created exit order for trade 28."}{"result":"Created exit order for trade 30."}Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "35",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-44m-41s-tradeid-35",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "37",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-44m-42s-tradeid-37",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "39",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-44m-42s-tradeid-39",  
+  "ordertype": "market"
+}
+{"result":"Created exit order for trade 37."}{"result":"Created exit order for trade 39."}{"result":"Created exit order for trade 35."}Using Endpoint on 35.233.38.30:32335
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "2",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-50m-44s-tradeid-2",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "7",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-50m-47s-tradeid-7",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "9",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-50m-49s-tradeid-9",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "17",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-50m-50s-tradeid-17",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "18",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-50m-50s-tradeid-18",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32334
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "2",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-50m-56s-tradeid-2",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32334
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "5",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-50m-56s-tradeid-5",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32332
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "9",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-05-06h-51m-07s-tradeid-9",  
+  "ordertype": "market"
+}
+{"result":"Created exit order for trade 7."}{"result":"Created exit order for trade 2."}{"result":"Created exit order for trade 2."}{"result":"Created exit order for trade 9."}{"result":"Created exit order for trade 9."}{"result":"Created exit order for trade 5."}{"result":"Created exit order for trade 17."}{"result":"Created exit order for trade 18."}

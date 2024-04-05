@@ -8,3 +8,12 @@ dsTradingBalanceRealtime.html.*
 **/*/dsTradingBalanceRealtime.html.*
 **/*history.allbots
 **/*remotepairlist*.json
+.takeprofit/goshort.trades
+.takeprofit/history.allbots.last2days
+.takeprofit/history.allbots.last2days.binance
+.takeprofit/history.allbots.last2days.kraken
+.takeprofit/nohup.out
+.takeprofit/takeprofit.allbots
+.takeprofit/takeprofit.allbots.success
+remotepairlist-white-futures.json
+remotepairlist-white-spot.json
