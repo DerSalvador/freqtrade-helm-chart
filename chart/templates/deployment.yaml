@@ -68,33 +68,33 @@ spec:
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
-{{- if .Values.kubernetes.copyContainer }}          
-      - name: copy-strategy-to-default
-        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-        securityContext:
-          allowPrivilegeEscalation: false
-          runAsUser: 0
-        command: 
-        - sh
-        - -c
-        - |
-          set -x
-          # echo sed -i '' -e '/freqtrade/d' /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth 
-          # sed -i '' -e 's/freqtrade/freqtrade\/freqtrade/g' /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth 
-          for rf in `echo Example_Strat_With_FileLogging MasterMoniGoManiHyperStrategy freqtrade.pth`; do
-            echo "find / -name ${rf}* -exec rm -f {}"
-            find / -name "${rf}*" -exec rm -f {} ";"
-          done
-          rm -rf /freqtrade/user_data/strategies/*
-          cp -r /extra_strategies/* /freqtrade/user_data/strategies/
-          echo Copying strategy {{ .Values.bot.strategy_name }}* to default path
-          cp -r /extra_strategies/{{ .Values.bot.strategy_name }}* /freqtrade/user_data/strategies/
-          find /freqtrade
-        volumeMounts:
-        - name: strategies-default
-          mountPath: /freqtrade/user_data/strategies
-          readOnly: false  
-{{- end }}
+# {{- if .Values.kubernetes.copyContainer }}          
+#       - name: copy-strategy-to-default
+#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+#         securityContext:
+#           allowPrivilegeEscalation: false
+#           runAsUser: 0
+#         command: 
+#         - sh
+#         - -c
+#         - |
+#           set -x
+#           # echo sed -i '' -e '/freqtrade/d' /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth 
+#           # sed -i '' -e 's/freqtrade/freqtrade\/freqtrade/g' /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth 
+#           for rf in `echo Example_Strat_With_FileLogging MasterMoniGoManiHyperStrategy freqtrade.pth`; do
+#             echo "find / -name ${rf}* -exec rm -f {}"
+#             find / -name "${rf}*" -exec rm -f {} ";"
+#           done
+#           rm -rf /freqtrade/user_data/strategies/*
+#           cp -r /extra_strategies/* /freqtrade/user_data/strategies/
+#           echo Copying strategy {{ .Values.bot.strategy_name }}* to default path
+#           cp -r /extra_strategies/{{ .Values.bot.strategy_name }}* /freqtrade/user_data/strategies/
+#           find /freqtrade
+#         volumeMounts:
+#         - name: strategies-default
+#           mountPath: /freqtrade/user_data/strategies
+#           readOnly: false  
+# {{- end }}
       - name: freqtrade-list-strategies-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
