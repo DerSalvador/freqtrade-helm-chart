@@ -5,8 +5,8 @@ configcreds:
   bot_name: freqtrading-binance-hassan
   exchange:
     name: binance
-    key: SQVj4WE2YfDgq6kMbOdobyx8OmWGRt4l1aV9DsWGaDMoRKdIRLaa4wu82PUMWhVn
-    secret: rGreExUqQL6QMWmAaiWLuAehxUdoShSVHeWbJAHPApktT3nWE6UMBnmz0EDv9zD0
+    key: byguDVxWAiaLUhT0FjoxcPHp0fVYtPAjIUY5ish459dBARt8fJputqeL8OcXeTqI
+    secret: 0aHY2r0Y8UUmKcjsyCwbVXTAwmMeCnH5gRSzx7Vt74OqVkGQWBTusFp7DMJkL0vV
   telegram:
     enabled: false
     token: "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"
