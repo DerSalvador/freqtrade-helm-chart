@@ -29,7 +29,7 @@ nostalgiaforinfinity:
 config:
   trading_mode: spot
   minimal_roi:
-    "0": 0.2
+    "0": 0.9
     "40160": 0.09
     "80160": 0  
   timeframe: 5m
@@ -70,11 +70,11 @@ config:
   stake_amount: unlimited
   position_adjustment_enable: true
   include_timeframes: [1m, 5m, 15m, 30m, 1h, 4h, 1d]
-  max_open_trades: 3
+  max_open_trades: 5
   amend_last_stake_amount: true
   stake_currency: USDT
   tradable_balance_ratio: 0.99
-  fiat_display_currency: EUR
+  # fiat_display_currency: USD
   db_url: "sqlite:///user_data/tradesv3.sqlite"
   cancel_open_orders_on_exit: false
   exit_profit_only: true
@@ -94,13 +94,13 @@ config:
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 2000
       options:
         defaultType: spot
         leverage: 10
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 2000
       options:
         defaultType: spot
         leverage: 10
