@@ -32,7 +32,6 @@ import sys
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent))
-sys.path.append(str(Path(__file__).parent.parent))
 
 import logging
 import warnings
@@ -41,8 +40,7 @@ log = logging.getLogger(__name__)
 # log.setLevel(logging.DEBUG)
 warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
 
-
-import  utils.custom_indicators as cta
+import custom_indicators as cta
 from finta import TA as fta
 
 from sklearn.model_selection import RandomizedSearchCV, train_test_split
@@ -82,7 +80,7 @@ np.random.seed(seed)
 from keras import layers
 from tqdm import tqdm
 
-from utils.CompressionAutoEncoder import CompressionAutoEncoder
+from CompressionAutoEncoder import CompressionAutoEncoder
 
 from AnomalyDetector_AEnc import AnomalyDetector_AEnc
 from AnomalyDetector_LOF import AnomalyDetector_LOF
@@ -96,10 +94,8 @@ from AnomalyDetector_GMix import AnomalyDetector_GMix
 from AnomalyDetector_DBSCAN import AnomalyDetector_DBSCAN
 from AnomalyDetector_Ensemble import AnomalyDetector_Ensemble
 
-from utils.DataframeUtils import DataframeUtils, ScalerType
-from utils.DataframePopulator import DataframePopulator, DatasetType
-import utils.TrainingSignals as TrainingSignals
-from utils.Environment import Environment
+from DataframeUtils import DataframeUtils, ScalerType
+from DataframePopulator import DataframePopulator
 
 """
 ####################################################################################
@@ -208,6 +204,8 @@ class Anomaly(IStrategy):
     buy_classifier_list = {}
     sell_classifier_list = {}
 
+    ignore_exit_signals = False # set to True if you don't want to process sell/exit signals (let custom sell do it)
+
     # debug flags
     first_time = True  # mostly for debug
     first_run = True  # used to identify first time through buy/sell populate funcs
@@ -243,62 +241,59 @@ class Anomaly(IStrategy):
     classifier_type = ClassifierType.Ensemble # controls which classifier is used
     # classifier_type = ClassifierType.DBSCAN # controls which classifier is used
 
-    dataset_type = DatasetType.DEFAULT
-    signal_type = TrainingSignals.SignalType.Profit  # should override this
-    training_signals = None
-
     ###################################
 
     # Strategy Specific Variable Storage
 
     ## Hyperopt Variables
 
-    '''
-    # trailing stoploss
-    tstop_start = DecimalParameter(0.0, 0.06, default=0.015, decimals=3, space='sell', load=True, optimize=True)
-    tstop_ratio = DecimalParameter(0.7, 0.99, default=0.9, decimals=3, space='sell', load=True, optimize=True)
+    if use_simpler_custom_stoploss:
+        sell_params = {
+            "pHSL": -0.068,
+            "pPF_1": 0.008,
+            "pPF_2": 0.098,
+            "pSL_1": 0.02,
+            "pSL_2": 0.065,
+        }
 
-    # profit threshold exit
-    profit_threshold = DecimalParameter(0.005, 0.065, default=0.025, decimals=3, space='sell', load=True, optimize=True)
-    use_profit_threshold = CategoricalParameter([True, False], default=True, space='sell', load=True, optimize=True)
+        # hard stoploss profit
+        pHSL = DecimalParameter(-0.200, -0.010, default=-0.08, decimals=3, space='sell', load=True)
 
-    # loss threshold exit
-    loss_threshold = DecimalParameter(-0.065, -0.005, default=-0.046, decimals=3, space='sell', load=True, optimize=True)
-    use_loss_threshold = CategoricalParameter([True, False], default=True, space='sell', load=True, optimize=True)
+        # profit threshold 1, trigger point, SL_1 is used
+        pPF_1 = DecimalParameter(0.008, 0.020, default=0.016, decimals=3, space='sell', load=True)
+        pSL_1 = DecimalParameter(0.008, 0.020, default=0.011, decimals=3, space='sell', load=True)
 
-    # use exit signal? 
-    enable_exit_signal = CategoricalParameter([True, False], default=False, space='sell', load=True, optimize=True)
+        # profit threshold 2, SL_2 is used
+        pPF_2 = DecimalParameter(0.040, 0.100, default=0.080, decimals=3, space='sell', load=True)
+        pSL_2 = DecimalParameter(0.020, 0.070, default=0.040, decimals=3, space='sell', load=True)
 
-    '''
+    else:
 
+        # Custom Sell Profit (formerly Dynamic ROI)
+        cexit_roi_type = CategoricalParameter(['static', 'decay', 'step'], default='step', space='sell', load=True,
+                                              optimize=True)
+        cexit_roi_time = IntParameter(720, 1440, default=720, space='sell', load=True, optimize=True)
+        cexit_roi_start = DecimalParameter(0.01, 0.05, default=0.01, space='sell', load=True, optimize=True)
+        cexit_roi_end = DecimalParameter(0.0, 0.01, default=0, space='sell', load=True, optimize=True)
+        cexit_trend_type = CategoricalParameter(['rmi', 'ssl', 'candle', 'any', 'none'], default='any', space='sell',
+                                                load=True, optimize=True)
+        cexit_pullback = CategoricalParameter([True, False], default=True, space='sell', load=True, optimize=True)
+        cexit_pullback_amount = DecimalParameter(0.005, 0.03, default=0.01, space='sell', load=True, optimize=True)
+        cexit_pullback_respect_roi = CategoricalParameter([True, False], default=False, space='sell', load=True,
+                                                          optimize=True)
+        cexit_endtrend_respect_roi = CategoricalParameter([True, False], default=False, space='sell', load=True,
+                                                          optimize=True)
 
-    # enable entry/exit guards (safer vs profit)
-    enable_entry_guards = CategoricalParameter([True, False], default=False, space='buy', load=True, optimize=True)
-    entry_guard_fwr = DecimalParameter(-1.0, 0.0, default=-0.0, decimals=1, space='buy', load=True, optimize=True)
+        # Custom Stoploss
+        cstop_loss_threshold = DecimalParameter(-0.05, -0.01, default=-0.03, space='sell', load=True, optimize=True)
+        cstop_bail_how = CategoricalParameter(['roc', 'time', 'any', 'none'], default='none', space='sell', load=True,
+                                              optimize=True)
+        cstop_bail_roc = DecimalParameter(-5.0, -1.0, default=-3.0, space='sell', load=True, optimize=True)
+        cstop_bail_time = IntParameter(60, 1440, default=720, space='sell', load=True, optimize=True)
+        cstop_bail_time_trend = CategoricalParameter([True, False], default=True, space='sell', load=True,
+                                                     optimize=True)
+        cstop_max_stoploss = DecimalParameter(-0.30, -0.01, default=-0.10, space='sell', load=True, optimize=True)
 
-    enable_exit_guards = CategoricalParameter([True, False], default=False, space='sell', load=True, optimize=True)
-    exit_guard_fwr = DecimalParameter(0.0, 1.0, default=0.0, decimals=1, space='sell', load=True, optimize=True)
-
-    # use exit signal? 
-    enable_exit_signal = CategoricalParameter([True, False], default=True, space='sell', load=True, optimize=True)
-
-    # Custom Stoploss
-    cstop_enable = CategoricalParameter([True, False], default=False, space='sell', load=True, optimize=True)
-    cstop_start = DecimalParameter(0.0, 0.060, default=0.019, decimals=3, space='sell', load=True, optimize=True)
-    cstop_ratio = DecimalParameter(0.7, 0.999, default=0.8, decimals=3, space='sell', load=True, optimize=True)
-
-    # Custom Exit
-    # profit threshold exit
-    cexit_profit_threshold = DecimalParameter(0.005, 0.065, default=0.033, decimals=3, space='sell', load=True, optimize=True)
-    cexit_use_profit_threshold = CategoricalParameter([True, False], default=True, space='sell', load=True, optimize=True)
-
-    # loss threshold exit
-    cexit_loss_threshold = DecimalParameter(-0.065, -0.005, default=-0.046, decimals=3, space='sell', load=True, optimize=True)
-    cexit_use_loss_threshold = CategoricalParameter([True, False], default=False, space='sell', load=True, optimize=True)
-
-    cexit_fwr_overbought = DecimalParameter(0.90, 1.00, default=0.98, decimals=2, space='sell', load=True, optimize=True)
-    cexit_fwr_take_profit = DecimalParameter(0.90, 1.00, default=0.90, decimals=2, space='sell', load=True, optimize=True)
- 
     ################################
 
     # subclasses should override the following 4 functions - this is here as an example
@@ -312,38 +307,57 @@ class Anomaly(IStrategy):
 
 
     def get_train_buy_signals(self, future_df: DataFrame):
+        series = np.where(
+            (
+                    (future_df['mfi'] <= 30) & # loose guard
+                    (future_df['dwt_gain'] <= future_df['future_loss_threshold']) &  # loss exceeds threshold
 
-        signals = None
+                    (future_df['future_profit_max'] >= future_df['future_profit_threshold']) & # future profit exceeds threshold
+                    (future_df['future_max'] > future_df['dwt_recent_max']) # future window max exceeds prior window max
+            ), 1.0, 0.0)
 
-        if self.training_signals.check_indicators(future_df):
-            signals = self.training_signals.get_entry_training_signals(future_df)
-        else:
-            print("    ERROR: Missing indicators in dataframe")
-
-        if signals is None:
-            signals = pd.Series(np.zeros(np.shape(future_df)[0], dtype=float))
-
-        return signals
+        return series
 
     def get_train_sell_signals(self, future_df: DataFrame):
+        series = np.where(
+            (
+                    (future_df['mfi'] >= 70) & # loose guard
+                    (future_df['dwt_gain'] >= future_df['future_profit_threshold']) & # profit exceeds threshold
 
-        signals = None
+                    (future_df['future_loss_min'] <= future_df['future_loss_threshold']) & # future loss exceeds threshold
+                    (future_df['future_min'] < future_df['dwt_recent_min']) # future window max exceeds prior window max
+            ), 1.0, 0.0)
 
-        if self.training_signals.check_indicators(future_df):
-            signals = self.training_signals.get_exit_training_signals(future_df)
+        return series
 
-        if signals is None:
-            signals = pd.Series(np.zeros(np.shape(future_df)[0], dtype=float))
 
-        return signals
+    # provide additional buy/sell signals
+    # These usually repeat the (backward-looking) guards from the training signal criteria. This helps filter out
+    # bad predictions (Machine Learning is not perfect)
 
-    # override the following to add strategy-specific criteria to the (main) buy/sell conditions
 
     def get_strategy_entry_guard_conditions(self, dataframe: DataFrame):
-        return self.training_signals.get_entry_guard_conditions(dataframe)
+
+        # buys = None
+        buys = np.where(
+            (
+                    (dataframe['mfi'] <= 40) #&
+                    # (dataframe['dwt_loss'] <= dataframe['loss_threshold'])   #  loss exceeds threshold
+            ), 1.0, 0.0)
+
+        return buys
 
     def get_strategy_exit_guard_conditions(self, dataframe: DataFrame):
-        return self.training_signals.get_exit_guard_conditions(dataframe)
+
+        # sells = None
+
+        sells = np.where(
+            (
+                    (dataframe['mfi'] >= 60) &
+                    (dataframe['dwt_profit'] >= dataframe['profit_threshold'])  # profit exceeds threshold
+            ), 1.0, 0.0)
+
+        return sells
 
     ################################
 
@@ -360,49 +374,6 @@ class Anomaly(IStrategy):
 
     ###################################
 
-    def print_strategy_info(self):
-
-        print("")
-        print("Strategy Parameters/Flags")
-        print("")
-        print(f"    Dataset Type:           {self.dataset_type} ({self.dataset_type.value})")
-        print(f"    Signal Type:            {self.signal_type} ({self.training_signals.get_signal_name()})")
-        print(f"    Classifier Type:        {self.classifier_type}")
-        print(f"    Lookahead:              {self.lookahead_hours} hours ({self.curr_lookahead} candles)")
-        print(f"    n_profit_stddevs:       {self.n_profit_stddevs}")
-        print(f"    n_loss_stddevs:         {self.n_loss_stddevs}")
-        print("")
-        
-    ################################
-
-    # run data augmentation techniques
-    def augment_training_signals(self, buys, sells):
-
-        # Trick 1: artificially extend positive signals one entry earlier
-
-        bidx = np.where(buys > 0)[0]  # index of buy entries
-        # set the entry before each buy signal, unless it's the first item
-        if len(bidx) > 0:  # there are some buys
-            start = 1 if (bidx[0] == 0) else 0
-            if len(bidx) >= start:
-                buys[bidx[start:] - 1] = 1.0
-
-        sidx = np.where(sells > 0)[0]  # index of sell entries
-        # set the entry before each sell signal, unless it's the first item
-        if len(sidx) > 0:  # there are some sells
-            start = 1 if (sidx[0] == 0) else 0
-            if len(sidx) >= start:
-                sells[sidx[start:] - 1] = 1.0
-
-        # Trick 2: sells override buys
-        buys[np.where(sells > 0)[0]] = 0.0
-
-        # Trick 3: if a buy is followed by a sell, override the buy
-        buys[np.where(sells[:-1] == 1)[0] + 1] = 0.0
-
-        return buys, sells
-    
-    ################################
     """
     Indicator Definitions
     """
@@ -414,15 +385,8 @@ class Anomaly(IStrategy):
         self.curr_pair = curr_pair
 
         self.set_state(curr_pair, self.State.POPULATE)
+        self.curr_lookahead = int(12 * self.lookahead_hours)
         self.dbg_curr_df = dataframe
-
-        if self.training_signals is None:
-            self.training_signals = TrainingSignals.create_training_signals(self.signal_type, self.curr_lookahead)
-            self.curr_lookahead = self.training_signals.get_lookahead()
-            self.n_loss_stddevs = self.training_signals.get_n_loss_stddevs()
-            self.n_profit_stddevs = self.training_signals.get_n_profit_stddevs()
-            self.lookahead_hours = float(self.curr_lookahead / 12.0)
-
 
         if self.dataframeUtils is None:
             self.dataframeUtils = DataframeUtils()
@@ -442,16 +406,12 @@ class Anomaly(IStrategy):
 
         if Anomaly.first_time:
             Anomaly.first_time = False
-            print("------------------")
-            print(self.__class__.__name__)
-            print("------------------")
+            print("")
             print("***************************************")
             print("** Warning: startup can be very slow **")
             print("***************************************")
 
-            Environment().print_environment()
-
-            self.print_strategy_info()
+            print("    Lookahead: ", self.curr_lookahead, " candles (", self.lookahead_hours, " hours)")
 
         print("")
         print(curr_pair)
@@ -494,47 +454,15 @@ class Anomaly(IStrategy):
         return dataframe
 
     ###################################
-    
-    # fast curve smoothing utility
-    def smooth(self, y, window):
-        box = np.ones(window)/window
-        y_smooth = np.convolve(np.nan_to_num(y), box, mode='same')
-        y_smooth = np.round(y_smooth, decimals=3) #Hack: constrain to 3 decimal places (should be elsewhere, but convenient here)
-        return np.nan_to_num(y_smooth)
-    
 
     # add indicators used by stoploss/custom sell logic
     def add_stoploss_indicators(self, dataframe, pair) -> DataFrame:
-
-        '''
         if not pair in self.custom_trade_info:
             self.custom_trade_info[pair] = {}
             if not 'had_trend' in self.custom_trade_info[pair]:
                 self.custom_trade_info[pair]['had_trend'] = False
 
         dataframe = self.dataframePopulator.add_stoploss_indicators(dataframe)
-
-        '''
-        
-        # add backward looking gain. (default is not waht we need)
-        dataframe['bgain'] = 100.0 * (dataframe['close'] - dataframe['close'].shift(self.curr_lookahead)) / \
-                            dataframe['close'].shift(self.curr_lookahead)
-
-        dataframe['bgain'] = self.smooth(dataframe['bgain'], self.curr_lookahead) # takes care of edge effects
-
-        dataframe['bprofit'] = dataframe['bgain'].clip(lower=0.0)
-        dataframe['bloss'] = dataframe['bgain'].clip(upper=0.0)
-
-
-        # add thresholds (used by buy/sell and custom exit)
-        win_size = 32
-        dataframe['target_profit'] = dataframe['bprofit'].rolling(window=win_size).mean() + \
-            2.0 * dataframe['bprofit'].rolling(window=win_size).std()
-        dataframe['target_loss'] = -abs(dataframe['bloss'].rolling(window=win_size).mean()) - \
-            2.0 * abs(dataframe['bloss'].rolling(window=win_size).std())
-
-        dataframe['target_profit'] = np.nan_to_num(dataframe['target_profit'])
-        dataframe['target_loss'] = np.nan_to_num(dataframe['target_loss'])
 
         return dataframe
 
@@ -553,20 +481,14 @@ class Anomaly(IStrategy):
         future_df['train_sell'] = 0.0
 
         # use sequence trends as criteria
-        buys = self.get_train_buy_signals(future_df)
-        sells = self.get_train_sell_signals(future_df)
-        # run data augmentation techniques
-        buys, sells = self.augment_training_signals(buys, sells)
+        future_df['train_buy'] = self.get_train_buy_signals(future_df)
+        future_df['train_sell'] = self.get_train_sell_signals(future_df)
 
-        # use sequence trends as criteria
-        future_df['train_buy'] = buys
-        future_df['train_sell'] = sells
-
-        # buys = future_df['train_buy'].copy()
+        buys = future_df['train_buy'].copy()
         if buys.sum() < 3:
             print("OOPS! <3 ({:.0f}) buy signals generated. Check training criteria".format(buys.sum()))
 
-        # sells = future_df['train_sell'].copy()
+        sells = future_df['train_sell'].copy()
         if buys.sum() < 3:
             print("OOPS! <3 ({:.0f}) sell signals generated. Check training criteria".format(sells.sum()))
 
@@ -594,14 +516,9 @@ class Anomaly(IStrategy):
 
         return
 
+    # empty func. Meant to be overridden by subclass
     def save_debug_indicators(self, future_df: DataFrame):
-        dbg_list = self.training_signals.get_debug_indicators()
-
-        if len(dbg_list) > 0:
-            # print(f"    Adding debug indicators: {dbg_list}")
-            for indicator in dbg_list:
-                self.add_debug_indicator(future_df, indicator)
-
+        pass
         return
 
     # adds an indicator to the main frame for debug (e.g. plotting). Column will be prefixed with '%', which will
@@ -702,7 +619,7 @@ class Anomaly(IStrategy):
         else:
             self.buy_classifier = self.buy_classifier_list[self.curr_pair]
 
-        if self.enable_exit_signal.value:
+        if not self.ignore_exit_signals:
             if self.curr_pair not in self.sell_classifier_list:
                 self.sell_classifier = self.get_classifier(full_df_norm.shape[1], "Sell")
                 self.sell_classifier_list[self.curr_pair] = self.sell_classifier
@@ -723,13 +640,9 @@ class Anomaly(IStrategy):
         #                                                                                       random_state=rand_st,
         #                                                                                       shuffle=False)
         # use the back portion of data for training, front for testing
-        # df_test, df_train = self.dataframeUtils.split_dataframe(full_df_norm, (1.0 - train_ratio))
-        # test_buys, train_buys = self.dataframeUtils.split_array(buys, (1.0 - train_ratio))
-        # test_sells, train_sells = self.dataframeUtils.split_array(sells, (1.0 - train_ratio))
-
-        df_train, df_test = self.dataframeUtils.split_dataframe(full_df_norm, train_ratio)
-        train_buys, test_buys = self.dataframeUtils.split_array(buys, train_ratio)
-        train_sells, test_sells = self.dataframeUtils.split_array(sells, train_ratio)
+        df_test, df_train = self.dataframeUtils.split_dataframe(full_df_norm, (1.0 - train_ratio))
+        test_buys, train_buys = self.dataframeUtils.split_array(buys, (1.0 - train_ratio))
+        test_sells, train_sells = self.dataframeUtils.split_array(sells, (1.0 - train_ratio))
 
         if self.dbg_verbose:
             print("     dataframe:", full_df_norm.shape, ' -> train:', df_train.shape, " + test:", df_test.shape)
@@ -751,7 +664,7 @@ class Anomaly(IStrategy):
         self.buy_classifier.train(df_train, df_test, train_buys, test_buys, force_train=force_train)
 
         # Sell Classifier
-        if self.enable_exit_signal.value:
+        if not self.ignore_exit_signals:
             self.sell_classifier.train(df_train, df_test, train_sells, test_sells, force_train=force_train)
 
 
@@ -762,14 +675,14 @@ class Anomaly(IStrategy):
                 pred_buys = self.buy_classifier.predict(df_test)
                 print("")
                 print("Testing - Buy Signals (", type(self.buy_classifier).__name__, ")")
-                print(classification_report(test_buy_labels, pred_buys, zero_division=0))
+                print(classification_report(test_buy_labels, pred_buys))
                 print("")
 
             if not (self.sell_classifier is None):
                 pred_sells = self.sell_classifier.predict(df_test)
                 print("")
                 print("Testing - Sell Signals (", type(self.sell_classifier).__name__, ")")
-                print(classification_report(test_sell_labels, pred_sells, zero_division=0))
+                print(classification_report(test_sell_labels, pred_sells))
                 print("")
 
         # if running 'plot', reconstruct the original dataframe for display
@@ -940,17 +853,22 @@ class Anomaly(IStrategy):
                 # self.show_debug_info(curr_pair)
                 self.show_all_debug_info()
 
-       # add some fairly loose guards, to help prevent 'bad' predictions
+        # add some fairly loose guards, to help prevent 'bad' predictions
 
-        if self.enable_entry_guards.value:
-            # some trading volume
-            conditions.append(dataframe['volume'] > 0)
+        # # ATR in buy range
+        # conditions.append(dataframe['atr_signal'] > 0.0)
 
-            # # MFI
-            # conditions.append(dataframe['mfi'] < 50.0)
+        # some trading volume
+        conditions.append(dataframe['volume'] > 0)
 
-            # Fisher/Williams in buy region
-            conditions.append(dataframe['fisher_wr'] <= -0.5)
+        # # Fisher RSI + Williams combo
+        # conditions.append(dataframe['fisher_wr'] < -0.7)
+
+        # MFI
+        # conditions.append(dataframe['mfi'] < 30.0)
+
+        # # below TEMA
+        # conditions.append(dataframe['close'] < dataframe['tema'])
 
         # add strategy-specific conditions (from subclass)
         strat_cond = self.get_strategy_entry_guard_conditions(dataframe)
@@ -962,9 +880,7 @@ class Anomaly(IStrategy):
 
         # PCA/Classifier triggers
         anomaly_cond = (
-            # (qtpylib.crossed_above(dataframe['predict_buy'], 0.5))
-            dataframe['predict_buy'] > 0.5
- 
+            (qtpylib.crossed_above(dataframe['predict_buy'], 0.5))
         )
         conditions.append(anomaly_cond)
 
@@ -991,29 +907,29 @@ class Anomaly(IStrategy):
 
         self.set_state(curr_pair, self.State.RUNNING)
 
-        if not self.enable_exit_signal.value:
-            dataframe['exit_long'] = 0
-            return dataframe
-        
         if not self.dp.runmode.value in ('hyperopt'):
             if Anomaly.first_run:
                 Anomaly.first_run = False  # note use of clas variable, not instance variable
                 # self.show_debug_info(curr_pair)
                 self.show_all_debug_info()
-        # if we are to ignore exit signals, just set exit column to 0s and return
-        if not self.enable_exit_signal.value:
+
+        if self.ignore_exit_signals:
             dataframe['exit_long'] = 0
             return dataframe
-        
-        if self.enable_exit_guards.value:
-            conditions.append(dataframe['volume'] > 0)
 
-            # # MFI
-            # conditions.append(dataframe['mfi'] > 50.0)
+        # conditions.append(dataframe['volume'] > 0)
 
-            # Fisher/Williams in sell region
-            conditions.append(dataframe['fisher_wr'] >= 0.5)
+        # # ATR in sell range
+        # conditions.append(dataframe['atr_signal'] <= 0.0)
 
+        # # above Bollinger mid-point
+        # conditions.append(dataframe['close'] > dataframe['bb_middleband'])
+
+        # # Fisher RSI + Williams combo
+        # conditions.append(dataframe['fisher_wr'] > 0.5)
+
+        # MFI
+        # conditions.append(dataframe['mfi'] > 70.0)
 
         # add strategy-specific conditions (from subclass)
         strat_cond = self.get_strategy_exit_guard_conditions(dataframe)
@@ -1022,8 +938,7 @@ class Anomaly(IStrategy):
 
         # PCA triggers
         anomaly_cond = (
-            # qtpylib.crossed_above(dataframe['predict_sell'], 0.5)
-            dataframe['predict_sell'] > 0.5
+            qtpylib.crossed_above(dataframe['predict_sell'], 0.5)
         )
 
         conditions.append(anomaly_cond)
@@ -1043,78 +958,212 @@ class Anomaly(IStrategy):
     Custom Stoploss
     """
 
-    # simplified version of custom trailing stoploss
-    def custom_stoploss(self, pair: str, trade: Trade, current_time: datetime, current_rate: float,
+    def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime, current_rate: float,
                         current_profit: float, **kwargs) -> float:
 
-        # if enable, use custom trailing ratio, else use default system
-        if self.cstop_enable.value:
-            # if current profit is above start value, then set stoploss at fraction of current profit
-            if current_profit > self.cstop_start.value:
-                return current_profit * self.cstop_ratio.value
+        if self.use_simpler_custom_stoploss:
+            return self.simpler_custom_stoploss(pair, trade, current_time, current_rate, current_profit)
+        else:
+            return self.complex_custom_stoploss(pair, trade, current_time, current_rate, current_profit)
 
-        # return min(-0.001, max(stoploss_from_open(0.05, current_profit), -0.99))
-        return self.stoploss
+    def complex_custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime, current_rate: float,
+                                current_profit: float) -> float:
 
+        # self.set_state(pair, self.State.STOPLOSS)
+
+        dataframe, last_updated = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+        last_candle = dataframe.iloc[-1].squeeze()
+        trade_dur = int((current_time.timestamp() - trade.open_date_utc.timestamp()) // 60)
+        in_trend = self.custom_trade_info[trade.pair]['had_trend']
+
+        # limit stoploss
+        if current_profit < self.cstop_max_stoploss.value:
+            return 0.01
+
+        # Determine how we sell when we are in a loss
+        if current_profit < self.cstop_loss_threshold.value:
+            if self.cstop_bail_how.value == 'roc' or self.cstop_bail_how.value == 'any':
+                # Dynamic bailout based on rate of change
+                if last_candle['sroc'] <= self.cstop_bail_roc.value:
+                    return 0.01
+            if self.cstop_bail_how.value == 'time' or self.cstop_bail_how.value == 'any':
+                # Dynamic bailout based on time, unless time_trend is true and there is a potential reversal
+                if trade_dur > self.cstop_bail_time.value:
+                    if self.cstop_bail_time_trend.value == True and in_trend == True:
+                        return 1
+                    else:
+                        return 0.01
+        return 1
+
+    ## Custom Trailing stoploss ( credit to Perkmeister for this custom stoploss to help the strategy ride a green candle )
+    def simpler_custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
+                                current_rate: float, current_profit: float) -> float:
+
+        # hard stoploss profit
+        HSL = self.pHSL.value
+        PF_1 = self.pPF_1.value
+        SL_1 = self.pSL_1.value
+        PF_2 = self.pPF_2.value
+        SL_2 = self.pSL_2.value
+
+        # For profits between PF_1 and PF_2 the stoploss (sl_profit) used is linearly interpolated
+        # between the values of SL_1 and SL_2. For all profits above PL_2 the sl_profit value
+        # rises linearly with current profit, for profits below PF_1 the hard stoploss profit is used.
+
+        if (current_profit > PF_2):
+            sl_profit = SL_2 + (current_profit - PF_2)
+        elif (current_profit > PF_1):
+            sl_profit = SL_1 + ((current_profit - PF_1) * (SL_2 - SL_1) / (PF_2 - PF_1))
+        else:
+            sl_profit = HSL
+
+        # Only for hyperopt invalid return
+        if (sl_profit >= current_profit):
+            return -0.99
+
+        return min(-0.01, max(stoploss_from_open(sl_profit, current_profit), -0.99))
+
+        # if current_profit < 0.02:
+        #     return -1  # return a value bigger than the initial stoploss to keep using the initial stoploss
+
+        # # After reaching the desired offset, allow the stoploss to trail by half the profit
+        # desired_stoploss = current_profit / 4
+        #
+        # # Use a minimum of 0.5% and a maximum of 10%
+        # return max(min(desired_stoploss, 0.10), 0.005)
 
     ###################################
 
     """
-    Custom Exit
-    (Note that this runs even if use_custom_stoploss is False)
+    Custom Sell
     """
 
-    # simplified version of custom exit
-
-    def custom_exit(self, pair: str, trade: Trade, current_time: 'datetime', current_rate: float,
+    def custom_exit(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float,
                     current_profit: float, **kwargs):
+
+        # Mod: just take the profit:
 
         dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
         last_candle = dataframe.iloc[-1].squeeze()
-        
 
-        if not self.use_custom_stoploss:
+        # Above 3%, sell if MFA > 90
+        if current_profit > 0.03:
+            if last_candle['mfi'] > 90:
+                return 'mfi_90'
+
+        # Mod: strong sell signal, in profit
+        if (current_profit > 0) and (last_candle['fisher_wr'] > 0.98):
+                return 'fwr_98'
+
+        # Mod: Sell any positions at a loss if they are held for more than two days.
+        if current_profit < 0.0 and (current_time - trade.open_date_utc).days >= 2:
+            return 'unclog'
+
+        if self.use_simpler_custom_stoploss:
+            return self.simpler_custom_exit(pair, trade, current_time, current_rate, current_profit)
+        else:
+            return self.complex_custom_exit(pair, trade, current_time, current_rate, current_profit)
+
+    def complex_custom_exit(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float,
+                            current_profit: float):
+
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+        last_candle = dataframe.iloc[-1].squeeze()
+
+        trade_dur = int((current_time.timestamp() - trade.open_date_utc.timestamp()) // 60)
+        max_profit = max(0, trade.calc_profit_ratio(trade.max_rate))
+        pullback_value = max(0, (max_profit - self.cexit_pullback_amount.value))
+        in_trend = False
+
+        # Mod: just take the profit:
+        # Above 3%, sell if MFA > 90
+        if current_profit > 0.03:
+            if last_candle['mfi'] > 90:
+                return 'mfi_90'
+
+        # Mod: strong sell signal, in profit
+        if (current_profit > 0) and (last_candle['fisher_wr'] > 0.98):
+                return 'fwr_98'
+
+        # Sell any positions at a loss if they are held for more than one day.
+        if current_profit < 0.0 and (current_time - trade.open_date_utc).days >= 2:
+            return 'unclog'
+
+        # Determine our current ROI point based on the defined type
+        if self.cexit_roi_type.value == 'static':
+            min_roi = self.cexit_roi_start.value
+        elif self.cexit_roi_type.value == 'decay':
+            min_roi = cta.linear_decay(self.cexit_roi_start.value, self.cexit_roi_end.value, 0,
+                                       self.cexit_roi_time.value, trade_dur)
+        elif self.cexit_roi_type.value == 'step':
+            if trade_dur < self.cexit_roi_time.value:
+                min_roi = self.cexit_roi_start.value
+            else:
+                min_roi = self.cexit_roi_end.value
+
+        # Determine if there is a trend
+        if self.cexit_trend_type.value == 'rmi' or self.cexit_trend_type.value == 'any':
+            if last_candle['rmi_up_trend'] == 1:
+                in_trend = True
+        if self.cexit_trend_type.value == 'ssl' or self.cexit_trend_type.value == 'any':
+            if last_candle['ssl_dir'] == 1:
+                in_trend = True
+        if self.cexit_trend_type.value == 'candle' or self.cexit_trend_type.value == 'any':
+            if last_candle['candle_up_trend'] == 1:
+                in_trend = True
+
+        # Don't sell if we are in a trend unless the pullback threshold is met
+        if in_trend == True and current_profit > 0:
+            # Record that we were in a trend for this trade/pair for a more useful sell message later
+            self.custom_trade_info[trade.pair]['had_trend'] = True
+            # If pullback is enabled and profit has pulled back allow a sell, maybe
+            if self.cexit_pullback.value == True and (current_profit <= pullback_value):
+                if self.cexit_pullback_respect_roi.value == True and current_profit > min_roi:
+                    return 'intrend_pullback_roi'
+                elif self.cexit_pullback_respect_roi.value == False:
+                    if current_profit > min_roi:
+                        return 'intrend_pullback_roi'
+                    else:
+                        return 'intrend_pullback_noroi'
+            # We are in a trend and pullback is disabled or has not happened or various criteria were not met, hold
+            return None
+        # If we are not in a trend, just use the roi value
+        elif in_trend == False:
+            if self.custom_trade_info[trade.pair]['had_trend']:
+                if current_profit > min_roi:
+                    self.custom_trade_info[trade.pair]['had_trend'] = False
+                    return 'trend_roi'
+                elif self.cexit_endtrend_respect_roi.value == False:
+                    self.custom_trade_info[trade.pair]['had_trend'] = False
+                    return 'trend_noroi'
+            elif current_profit > min_roi:
+                return 'notrend_roi'
+        else:
             return None
 
-        # strong sell signal, in profit
-        if (current_profit > 0) and (last_candle['fisher_wr'] >= self.cexit_fwr_overbought.value):
-            return 'fwr_overbought'
+    def simpler_custom_exit(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float,
+                            current_profit: float):
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+        last_candle = dataframe.iloc[-1].squeeze()
 
-        # Above 1%, sell if Fisher/Williams in sell range
-        if current_profit > 0.01:
-            if last_candle['fisher_wr'] >= self.cexit_fwr_take_profit.value:
-                return 'take_profit'
- 
+        # Above 5% profit, sell
+        if current_profit > 0.05:
+            return 'profit_5'
 
-        # check profit against ROI target. This sort of emulates the freqtrade roi approach, but is much simpler
-        if self.cexit_use_profit_threshold.value:
-            if (current_profit >= self.cexit_profit_threshold.value):
-                return 'cexit_profit_threshold'
+        # Above 2%, sell if MFA > 90
+        if current_profit > 0.02:
+            if last_candle['mfi'] > 90:
+                return 'mfi_90'
 
-        # check loss against threshold. This sort of emulates the freqtrade stoploss approach, but is much simpler
-        if self.cexit_use_loss_threshold.value:
-            if (current_profit <= self.cexit_loss_threshold.value):
-                return 'cexit_loss_threshold'
-              
-        # Sell any positions if open for >= 1 day with any level of profit
-        if ((current_time - trade.open_date_utc).days >= 1) & (current_profit > 0):
-            return 'unclog_1'
-        
-        # Sell any positions at a loss if they are held for more than 7 days.
-        if (current_time - trade.open_date_utc).days >= 7:
-            return 'unclog_7'
-        
-        ''' not a gain-based strat
-        # big drop predicted. Should also trigger an exit signal, but this might be quicker (and will likely be 'market' sell)
-        if (current_profit > 0) and (last_candle['predicted_gain'] <= last_candle['target_loss']):
-            return 'predict_drop'
-        
-        '''
+        # Mod: strong sell signal, in profit
+        if (current_profit > 0) and (last_candle['fisher_wr'] > 0.98):
+                return 'fwr_98'
 
-        # if in profit and exit signal is set, sell (even if exit signals are disabled)
-        if (current_profit > 0) and (last_candle['exit_long'] > 0):
-            return 'exit_signal'
+        # Sell any positions at a loss if they are held for more than one day.
+        if current_profit < 0.0 and (current_time - trade.open_date_utc).days >= 2:
+            return 'unclog'
 
         return None
 
-    #######################
+
+#######################

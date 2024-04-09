@@ -4,7 +4,7 @@
 from datetime import datetime
 from enum import Enum
 from functools import reduce
-
+import os
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
@@ -892,7 +892,7 @@ class NNTC(IStrategy):
                      clf_name
 
         root_dir = group_dir + "/models/" + model_name
-
+        
         # category = "NNTC_" + \
         #              self.training_signals.get_signal_name() + "_" + \
         #              clf_name
@@ -905,7 +905,9 @@ class NNTC(IStrategy):
             model_name = model_name + "_" + tag
 
         model_path = root_dir + "/" + model_name + ".keras"
-
+        print("Looking for model in Path " + model_path)
+        if not os.path.exists(model_path):
+            raise FileNotFoundError(f"The file '{model_path}' does not exist.")
         return model_path
 
     #######################################
