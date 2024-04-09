@@ -17,7 +17,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NNTC
+  strategy_name: Anomaly
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 # image:
