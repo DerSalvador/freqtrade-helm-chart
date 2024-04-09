@@ -1,0 +1,25 @@
+---
+kubernetes:
+  nodePort: 32336
+
+configcreds:
+  stake_amount: 50
+  bot_name: freqtrading-binance-fouzi
+  exchange:
+    name: binance
+    key: HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG
+    secret: GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM
+  telegram:
+    enabled: true
+    token: "6720698140:AAHZpVP9AJWeaaSQdL5g9eoP1AqK5z3fo7k"
+    chat_id: "631010653"
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: NNTC
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
