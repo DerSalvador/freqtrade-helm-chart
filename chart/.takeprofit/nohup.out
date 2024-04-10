@@ -400,4 +400,544 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32329/api/v1/forc
   "entry_tag": "forceexit-script-wirsinddieguten-2024-04-08-13h-44m-27s-tradeid-2",  
   "ordertype": "market"
 }
-{"result":"Created exit order for trade 7."}{"result":"Created exit order for trade 2."}
+{"result":"Created exit order for trade 7."}{"result":"Created exit order for trade 2."}Using Endpoint on 35.233.38.30:32335
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "18",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-37m-35s-tradeid-18",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32335
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "21",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-37m-38s-tradeid-21",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "93",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-37m-47s-tradeid-93",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "95",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-37m-50s-tradeid-95",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "96",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-37m-51s-tradeid-96",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "97",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-37m-52s-tradeid-97",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "98",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-37m-53s-tradeid-98",  
+  "ordertype": "market"
+}
+Internal Server ErrorInternal Server ErrorUsing Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "34",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-38m-50s-tradeid-34",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "35",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-38m-51s-tradeid-35",  
+  "ordertype": "market"
+}
+Internal Server Error{"result":"Created exit order for trade 95."}Internal Server ErrorUsing Endpoint on 35.233.38.30:32334
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "11",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-09h-40m-08s-tradeid-11",  
+  "ordertype": "market"
+}
+Internal Server ErrorInternal Server ErrorInternal Server Error{"result":"Created exit order for trade 97."}{"result":"Created exit order for trade 98."}Using Endpoint on 35.233.38.30:32335
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "18",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-10h-45m-56s-tradeid-18",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32335
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "21",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-10h-45m-56s-tradeid-21",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "93",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-10h-46m-06s-tradeid-93",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32321
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "96",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-10h-46m-11s-tradeid-96",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "34",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-10h-46m-28s-tradeid-34",  
+  "ordertype": "market"
+}
+Using Endpoint on 35.233.38.30:32331
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "35",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-10h-46m-28s-tradeid-35",  
+  "ordertype": "market"
+}
+Internal Server ErrorUsing Endpoint on 35.233.38.30:32334
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+  "tradeid": "11",
+  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-10h-47m-03s-tradeid-11",  
+  "ordertype": "market"
+}
+Internal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server ErrorUsing Endpoint on 35.233.38.30:32335
+********************************************************************************
+Warning: Forcexit already running for bot binance-adriana-futures and tradeid 21
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 84
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 93
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 96
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 27
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 34
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 35
+********************************************************************************
+Using Endpoint on 35.233.38.30:32335
+********************************************************************************
+Warning: Forcexit already running for bot binance-adriana-futures and tradeid 21
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 84
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 93
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 96
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 27
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 34
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 35
+********************************************************************************
+Using Endpoint on 35.233.38.30:32335
+********************************************************************************
+Warning: Forcexit already running for bot binance-adriana-futures and tradeid 21
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 84
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 93
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 96
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 27
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 34
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 35
+********************************************************************************
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "18",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-36m-49s-tradeid-18",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "21",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-36m-51s-tradeid-21",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=msantana  192917  189403  0 23:37 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-futures 93
+msantana  194609  194606  0 23:37 pts/0    00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-futures 93
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 93
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=msantana  192995  189403  0 23:37 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-futures 96
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 96
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "97",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-22s-tradeid-97",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "98",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-22s-tradeid-98",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "99",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-23s-tradeid-99",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "100",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-23s-tradeid-100",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "101",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-24s-tradeid-101",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "27",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-31s-tradeid-27",  
+	  "ordertype": "market"
+	}
+Internal Server ErrorUsing Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "34",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-37s-tradeid-34",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "35",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-38s-tradeid-35",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32334
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "11",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-09-23h-37m-55s-tradeid-11",  
+	  "ordertype": "market"
+	}
+Internal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server Error{"result":"Created exit order for trade 97."}Internal Server Error{"result":"Created exit order for trade 98."}{"result":"Created exit order for trade 99."}{"result":"Created exit order for trade 100."}{"result":"Created exit order for trade 101."}Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "18",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-52m-40s-tradeid-18",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "20",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-52m-40s-tradeid-20",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "21",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-52m-41s-tradeid-21",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "94",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-53m-16s-tradeid-94",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=msantana  225510  225507  0 11:53 pts/0    00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-futures 95
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures and tradeid 95
+********************************************************************************
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "97",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-53m-18s-tradeid-97",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "98",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-53m-19s-tradeid-98",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "27",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-53m-22s-tradeid-27",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "34",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-53m-27s-tradeid-34",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "35",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-53m-28s-tradeid-35",  
+	  "ordertype": "market"
+	}
+Internal Server ErrorUsing Endpoint on 35.233.38.30:32334
+Running Forceexit already? RUNNING=
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "11",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-11h-53m-43s-tradeid-11",  
+	  "ordertype": "market"
+	}
+Internal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server Error{"result":"Created exit order for trade 94."}Internal Server ErrorInternal Server Error{"result":"Created exit order for trade 98."}Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "18",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-04s-tradeid-18",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=msantana 1447666 1447664  0 15:21 pts/0    00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-adriana-futures 20
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+********************************************************************************
+Warning: Forcexit already running for bot binance-adriana-futures and tradeid 20
+********************************************************************************
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "21",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-06s-tradeid-21",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32336
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "5",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-13s-tradeid-5",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "93",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-15s-tradeid-93",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "94",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-16s-tradeid-94",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "97",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-18s-tradeid-97",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "102",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-20s-tradeid-102",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "27",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-22s-tradeid-27",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=msantana 1453757 1453753  0 15:21 pts/0    00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-futures-larissa 32
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start
+{
+  "status": "already running"
+}
+********************************************************************************
+Warning: Forcexit already running for bot binance-futures-larissa and tradeid 32
+********************************************************************************
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "33",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-26s-tradeid-33",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "34",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-26s-tradeid-34",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "35",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-27s-tradeid-35",  
+	  "ordertype": "market"
+	}
+{"result":"Created exit order for trade 5."}Using Endpoint on 35.233.38.30:32334
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "1",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-40s-tradeid-1",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32334
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "11",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-10-15h-21m-43s-tradeid-11",  
+	  "ordertype": "market"
+	}
+Internal Server ErrorInternal Server ErrorInternal Server Error{"result":"Created exit order for trade 93."}Internal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server ErrorInternal Server Error{"result":"Created exit order for trade 102."}
