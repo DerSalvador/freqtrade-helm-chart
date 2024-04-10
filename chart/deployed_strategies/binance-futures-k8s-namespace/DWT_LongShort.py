@@ -60,7 +60,7 @@ class DWT_LongShort(IStrategy):
     }
 
     # Stoploss:
-    stoploss = -0.10
+    stoploss = -0.99
 
     # Trailing stop:
     trailing_stop = False
@@ -71,11 +71,11 @@ class DWT_LongShort(IStrategy):
     timeframe = '5m'
     inf_timeframe = '15m'
 
-    use_custom_stoploss = True
+    use_custom_stoploss = False
 
     # Recommended
     use_exit_signal = True
-    exit_profit_only = False
+    exit_profit_only = True
     ignore_roi_if_entry_signal = True
 
     # Required
@@ -405,6 +405,9 @@ class DWT_LongShort(IStrategy):
         # set entry tags
         dataframe.loc[short_dwt_cond, 'enter_tag'] += 'short_dwt_entry '
 
+        # Set leverage
+        dataframe['leverage'] = 15  # example leverage of 1x, adjust accordingly
+        
         if short_conditions:
             dataframe.loc[reduce(lambda x, y: x & y, short_conditions), 'enter_short'] = 1
 
@@ -470,7 +473,11 @@ class DWT_LongShort(IStrategy):
 
         return dataframe
 
+    def leverage(self, pair: str, current_time: datetime, current_rate: float,
+                 proposed_leverage: float, max_leverage: float, entry_tag: Optional[str],
+                 side: str, **kwargs) -> float:
 
+        return 10
     ###################################
 
     # the custom stoploss/exit logic is adapted from Solipsis by werkkrew (https://github.com/werkkrew/freqtrade-strategies)
