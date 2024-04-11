@@ -1031,4 +1031,82 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forc
 	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-08h-30m-45s-tradeid-11",  
 	  "ordertype": "market"
 	}
-Internal Server ErrorInternal Server Error{"result":"Created exit order for trade 104."}
+Internal Server ErrorInternal Server Error{"result":"Created exit order for trade 104."}Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "18",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-10h-26m-11s-tradeid-18",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "20",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-10h-26m-12s-tradeid-20",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "21",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-10h-26m-13s-tradeid-21",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "108",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-10h-26m-29s-tradeid-108",  
+	  "ordertype": "market"
+	}
+Internal Server ErrorUsing Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "35",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-10h-27m-27s-tradeid-35",  
+	  "ordertype": "market"
+	}
+{"result":"Created exit order for trade 108."}Internal Server ErrorInternal Server ErrorInternal Server ErrorUsing Endpoint on 35.233.38.30:32334
+Running Forceexit already? RUNNING=msantana  311831  296151  0 10:29 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-juliano-futures 11
+msantana  311840  288194  0 10:29 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-juliano-futures 11
+msantana  311841  311831  0 10:29 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-juliano-futures 11
+msantana  311856  311840  0 10:29 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-juliano-futures 11
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start
+{
+  "status": "already running"
+}
+********************************************************************************
+Warning: Forcexit already running for bot binance-juliano-futures and tradeid 11
+********************************************************************************
