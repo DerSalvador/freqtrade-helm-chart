@@ -1217,4 +1217,65 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32334/api/v1/forc
 	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-16h-42m-37s-tradeid-11",  
 	  "ordertype": "market"
 	}
-Internal Server Error
+Internal Server ErrorUsing Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=msantana 4027275 4024177  0 20:22 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-adriana-futures 18
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+********************************************************************************
+Warning: Forcexit already running for bot binance-adriana-futures and tradeid 18
+********************************************************************************
+Using Endpoint on 35.233.38.30:32335
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "21",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-20h-22m-39s-tradeid-21",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32321
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "94",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-20h-23m-13s-tradeid-94",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32331
+Running Forceexit already? RUNNING=
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start
+{
+  "status": "already running"
+}
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {
+	  "tradeid": "35",
+	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-11-20h-23m-25s-tradeid-35",  
+	  "ordertype": "market"
+	}
+Using Endpoint on 35.233.38.30:32334
+Running Forceexit already? RUNNING=msantana 4039740       1  0 20:22 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-juliano-futures 11
+Found quick parameter, dont creating node port for API access
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start
+{
+  "status": "already running"
+}
+********************************************************************************
+Warning: Forcexit already running for bot binance-juliano-futures and tradeid 11
+********************************************************************************
+Internal Server ErrorInternal Server ErrorInternal Server Error
