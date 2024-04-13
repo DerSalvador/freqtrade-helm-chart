@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32326
 
 configcreds:
-  available_capital: 3227
+  available_capital: 2500
   stake_amount: 50
   bot_name: freqtrading-binance-michael
   exchange:
