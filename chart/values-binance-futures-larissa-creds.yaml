@@ -2,6 +2,7 @@
 kubernetes:
   nodePort: 32331
 configcreds:
+  available_capital: 212 
   leverage: 4
   max_open_trades: 9
   trailing_stop: false

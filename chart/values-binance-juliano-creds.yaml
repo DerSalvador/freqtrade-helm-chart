@@ -2,6 +2,7 @@
 kubernetes:
   nodePort: 32324
 configcreds:
+  available_capital: 25 
   bot_name: freqtrading-binance-juliano
   exchange:
     name: binance

@@ -2,6 +2,7 @@
 kubernetes:
   nodePort: 32322
 configcreds:
+  available_capital: 1
   bot_name: freqtrade-kraken-stieves
   exchange:
     name: kraken
