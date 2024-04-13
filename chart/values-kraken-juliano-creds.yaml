@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32332
 
 configcreds:
+  available_capital: 82
   bot_name: freqtrade-kraken-juliano
   exchange:
     name: kraken

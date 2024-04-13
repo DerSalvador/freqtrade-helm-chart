@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32327
 
 configcreds:
+  available_capital: 60
   bot_name: freqtrade-kraken-adriana
   exchange:
     name: kraken
