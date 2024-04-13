@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32391
 
 configcreds:
+  available_capital: 100
   bot_name: freqtrade-kraken-adriana
   timeframe: 5m
   trading_mode: spot

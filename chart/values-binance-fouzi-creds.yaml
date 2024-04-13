@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32336
 
 configcreds:
+  available_capital: 481 
   stake_amount: 50
   bot_name: freqtrading-binance-fouzi
   exchange:

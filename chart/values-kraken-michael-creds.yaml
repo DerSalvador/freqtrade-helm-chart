@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32329
 
 configcreds:
+  available_capital: 716
   stake_amount: 200
   bot_name: freqtrade-kraken-michael
   exchange:
