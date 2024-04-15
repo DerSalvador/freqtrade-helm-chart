@@ -122,7 +122,7 @@ bot:
   debuglevel: -vvv
   enabled: true
   # DWT_LongShort only long futures
-  strategy_name: AdxSmasS_v7
+  strategy_name: DWT_LongShort
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 # image:
