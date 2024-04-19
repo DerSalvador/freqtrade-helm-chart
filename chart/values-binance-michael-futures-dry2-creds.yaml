@@ -72,7 +72,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: TSPredict
+  strategy_name: DWT_LongShort
   pvc_size: 3Gi
   freqaimodel: ReinforcementLearner # LightGBMRegressor
 # image:
