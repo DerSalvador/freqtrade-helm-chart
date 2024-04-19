@@ -6,8 +6,8 @@ configcreds:
   trading_mode: futures
   margin_mode: isolated  
   dry_run: true
-  dry_run_wallet: 5000000  
-  available_capital: 5000000
+  dry_run_wallet: 7000000  
+  available_capital: 7000000
   #stake_amount: 50
   bot_name: freqtrading-binance-michael-dry1
   exchange:
