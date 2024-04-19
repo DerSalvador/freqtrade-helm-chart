@@ -22,7 +22,7 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 #  7hYocq4QubefqJFFqCBEPvc9OlmcIkOXT1xpAMS05htTfrhABT9bFQzSmyWnpo7r # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
+    key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76  # 7hYocq4QubefqJFFqCBEPvc9OlmcIkOXT1xpAMS05htTfrhABT9bFQzSmyWnpo7r # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
     secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd #  8ERNEZyel3VxNyNQ8raIgtz967x5JRUZoDcW2THHUcTJFGhagdvcOSbYZKnB4Qhv # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
   pairlists:
     - method: RemotePairList
