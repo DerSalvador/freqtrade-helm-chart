@@ -2,7 +2,7 @@
 kubernetes:
   nodePort: 32331
 configcreds:
-  available_capital: 212 
+  available_capital: 793
   leverage: 4
   max_open_trades: 9
   trailing_stop: false
@@ -75,8 +75,8 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY # eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
-    secret: JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
+    key: gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR # Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY # eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
+    secret: H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg # JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
   pairlists:
     - method: RemotePairList
       number_assets: 50

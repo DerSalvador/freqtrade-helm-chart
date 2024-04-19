@@ -29,8 +29,8 @@ configcreds:
   #     read_timeout: 60  
   exchange:
     name: binance
-    key: Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY
-    secret: JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
+    key: gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR #  Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY
+    secret: H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg # JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
   telegram:
     enabled: true
     token: "6607555119:AAGqoNPH-3m1SECXrPeZdtRDgTuy5988BN0"
