@@ -4,7 +4,7 @@ kubernetes:
 
 configcreds:
   available_capital: 1697
-  stake_amount: 50
+  #stake_amount: 50
   bot_name: freqtrading-binance-michael
   exchange:
     name: binance
