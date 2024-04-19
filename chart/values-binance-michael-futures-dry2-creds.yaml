@@ -9,7 +9,7 @@ configcreds:
   dry_run_wallet: 7000000  
   available_capital: 7000000
   #stake_amount: 50
-  bot_name: freqtrading-binance-michael-dry1
+  bot_name: freqtrading-binance-michael-futures-dry2
   exchange:
     name: binance
     key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
@@ -19,7 +19,7 @@ configcreds:
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
     chat_id: "5711830404"
   freqai:
-    enabled: false
+    enabled: true
     fit_live_predictions_candles: 300
     purge_old_models: true
     train_period_days: 30
@@ -72,7 +72,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NNPredict
+  strategy_name: TSPredict
   pvc_size: 3Gi
   freqaimodel: ReinforcementLearner # LightGBMRegressor
 # image:
