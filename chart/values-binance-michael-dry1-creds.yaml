@@ -71,7 +71,7 @@ bot:
   debuglevel: -vvv
   enabled: true
   strategy_name: NNPredict
-  pvc_size: 1Gi
+  pvc_size: 3Gi
   freqaimodel: ReinforcementLearner # LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
