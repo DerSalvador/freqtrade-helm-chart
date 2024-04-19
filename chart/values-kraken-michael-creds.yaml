@@ -4,7 +4,7 @@ kubernetes:
 
 configcreds:
   available_capital: 716
-  stake_amount: 200
+  stake_amount: unlimited
   bot_name: freqtrade-kraken-michael
   exchange:
     name: kraken

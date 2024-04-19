@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32325
 
 configcreds:
-  stake_amount: 50
+  #stake_amount: 50
   available_capital: 1
   # trading_mode: futures
   # margin_mode: isolated
