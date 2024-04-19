@@ -70,15 +70,9 @@ bot:
   debug: true
   debuglevel: -vvv
   enabled: true
-<<<<<<< HEAD
   strategy_name: BuyRegions
   pvc_size: 1Gi
   freqaimodel: ReinforcementLearner # LightGBMRegressor # 
-=======
-  strategy_name: NNPredict
-  pvc_size: 3Gi
-  freqaimodel: ReinforcementLearner # LightGBMRegressor
->>>>>>> 4cfb2f051c731b8411d858ee27b28508a4e268ce
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
 #   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
