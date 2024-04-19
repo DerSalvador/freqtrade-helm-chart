@@ -56,15 +56,15 @@ spec:
         - bash
         - -c
         - |
-          # echo chown -R ftuser:ftuser /sqlite 
-          # echo chown -R ftuser:ftuser /freqtrade
-          # # echo chown -R ftuser:ftuser /extra_strategies
+          echo chown -R ftuser:ftuser /sqlite 
+          echo chown -R ftuser:ftuser /freqtrade
+          # echo chown -R ftuser:ftuser /extra_strategies
           # echo chmod -R 777 /extra_strategies
-          # chown -R ftuser:ftuser /sqlite 
-          # chown -R ftuser:ftuser /freqtrade
-          # # chown -R ftuser:ftuser /extra_strategies
-          # # chmod -R 777 /extra_strategies
-          # find /sqlite       
+          chown -R ftuser:ftuser /sqlite 
+          chown -R ftuser:ftuser /freqtrade
+          # chown -R ftuser:ftuser /extra_strategies
+          # chmod -R 777 /extra_strategies
+          find /sqlite       
         volumeMounts:
         - mountPath: /sqlite
           name: sqlite
