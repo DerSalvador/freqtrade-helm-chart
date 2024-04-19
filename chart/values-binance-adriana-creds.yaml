@@ -16,7 +16,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: 
+  strategy_name: NNPredict
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 # image:
