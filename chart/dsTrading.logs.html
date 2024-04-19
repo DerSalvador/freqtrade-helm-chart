@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Fri Apr 19 20:05:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Fri Apr 19 20:12:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -17,13 +17,11 @@
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
 <tr><td nowrap><small>341455 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
-<tr><td nowrap><small>346714 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi</small></td></tr>
-<tr><td nowrap><small>354287 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 50</small></td></tr>
-<tr><td nowrap><small>354288 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingRestartAllTrader.sh</small></td></tr>
-<tr><td nowrap><small>354289 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>354290 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
-<tr><td nowrap><small>354291 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>354334 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>364274 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures</small></td></tr>
+<tr><td nowrap><small>373434 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>373435 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 50</small></td></tr>
+<tr><td nowrap><small>373437 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>373483 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -4575,486 +4573,63 @@ Reload Configs...<br>
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-  "close_rate": null,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": null,<br>
-  "close_profit_pct": null,<br>
-  "close_profit_abs": null,<br>
-  "profit_ratio": -0.03527203,<br>
-  "profit_pct": -3.53,<br>
-  "profit_abs": -1.55719031,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 0,<br>
-  "realized_profit_ratio": null,<br>
-  "exit_reason": null,<br>
-  "exit_order_status": null,<br>
-  "stop_loss_abs": 0.13897,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
   "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.13897,<br>
+  "initial_stop_loss_abs": 0.0018,<br>
   "initial_stop_loss_ratio": -0.99,<br>
   "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.11118,<br>
-  "max_rate": 0.11252,<br>
+  "min_rate": 0.1681,<br>
+  "max_rate": 0.1873,<br>
   "has_open_orders": false,<br>
   "orders": [<br>
     {<br>
-      "pair": "XLM/USDT:USDT",<br>
-      "order_id": "11992730800",<br>
+      "pair": "ALGO/USDT",<br>
+      "order_id": "1757585370",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 1586,<br>
-      "safe_price": 0.1114,<br>
-      "cost": 176.6804,<br>
-      "filled": 1586,<br>
+      "amount": 291,<br>
+      "safe_price": 0.1714,<br>
+      "cost": 49.8774,<br>
+      "filled": 291,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713124256333,<br>
+      "order_filled_timestamp": 1713124256333,<br>
+      "ft_fee_base": 0.291,<br>
+      "ft_order_tag": "anom_entry "<br>
+    },<br>
+    {<br>
+      "pair": "ALGO/USDT",<br>
+      "order_id": "1758337903",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 290,<br>
+      "safe_price": 0.1866,<br>
+      "cost": 54.114,<br>
+      "filled": 290,<br>
       "ft_order_side": "sell",<br>
       "order_type": "market",<br>
       "is_open": false,<br>
-      "order_timestamp": 1713544247898,<br>
-      "order_filled_timestamp": 1713544247898,<br>
+      "order_timestamp": 1713165909206,<br>
+      "order_filled_timestamp": 1713165909206,<br>
       "ft_fee_base": null,<br>
-      "ft_order_tag": ""<br>
+      "ft_order_tag": "force_exit"<br>
     }<br>
   ],<br>
-  "leverage": 4,<br>
+  "leverage": 1,<br>
   "interest_rate": 0,<br>
-  "liquidation_price": 0.1358691025,<br>
+  "liquidation_price": null,<br>
   "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
+  "trading_mode": "spot",<br>
   "amount_precision": 0,<br>
-  "price_precision": 5,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": 0.026700000000000015,<br>
-  "stoploss_current_dist_pct": 23.78,<br>
-  "stoploss_current_dist_ratio": 0.23781954,<br>
-  "stoploss_entry_dist": -43.92456341,<br>
-  "stoploss_entry_dist_ratio": -0.99493858,<br>
-  "current_rate": 0.11227,<br>
-  "total_profit_abs": -1.55719031,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": -0.0352544<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/trades/26/reload<br>
-{"trade_id":26,"pair":"XRP/USDT:USDT","base_currency":"XRP","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":318.2,"amount_requested":318.27699355,"stake_amount":39.9341,"max_stake_amount":159.7364,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.0798682,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-19 16:48:26","open_timestamp":1713545306497,"open_fill_date":"2024-04-19 16:48:26","open_fill_timestamp":1713545306381,"open_rate":0.502,"open_rate_requested":0.5024,"open_trade_value":159.6565318,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.03989445,"profit_pct":-3.99,"profit_abs":-1.59235235,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.6262,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.6262,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.4999,"max_rate":0.507,"has_open_orders":false,"orders":[{"pair":"XRP/USDT:USDT","order_id":"55014809068","status":"closed","remaining":0.0,"amount":318.2,"safe_price":0.502,"cost":159.7364,"filled":318.2,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713545306381,"order_filled_timestamp":1713545306381,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.618116467,"funding_fees":0.0,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.11970000000000003,"stoploss_current_dist_pct":23.63,"stoploss_current_dist_ratio":0.23632774,"stoploss_entry_dist":-39.69993662,"stoploss_entry_dist_ratio":-0.99463357,"current_rate":0.5065,"total_profit_abs":-1.59235235,"total_profit_fiat":null,"total_profit_ratio":-0.0398745}{<br>
-  "trade_id": 26,<br>
-  "pair": "XRP/USDT:USDT",<br>
-  "base_currency": "XRP",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": true,<br>
-  "is_short": true,<br>
-  "exchange": "binance",<br>
-  "amount": 318.2,<br>
-  "amount_requested": 318.27699355,<br>
-  "stake_amount": 39.9341,<br>
-  "max_stake_amount": 159.7364,<br>
-  "strategy": "AdxSmasS_v7",<br>
-  "enter_tag": "",<br>
-  "timeframe": 15,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 0.0798682,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0005,<br>
-  "fee_close_cost": null,<br>
-  "fee_close_currency": null,<br>
-  "open_date": "2024-04-19 16:48:26",<br>
-  "open_timestamp": 1713545306497,<br>
-  "open_fill_date": "2024-04-19 16:48:26",<br>
-  "open_fill_timestamp": 1713545306381,<br>
-  "open_rate": 0.502,<br>
-  "open_rate_requested": 0.5024,<br>
-  "open_trade_value": 159.6565318,<br>
-  "close_date": null,<br>
-  "close_timestamp": null,<br>
-  "close_rate": null,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": null,<br>
-  "close_profit_pct": null,<br>
-  "close_profit_abs": null,<br>
-  "profit_ratio": -0.03989445,<br>
-  "profit_pct": -3.99,<br>
-  "profit_abs": -1.59235235,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 0,<br>
-  "realized_profit_ratio": null,<br>
-  "exit_reason": null,<br>
-  "exit_order_status": null,<br>
-  "stop_loss_abs": 0.6262,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.6262,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.4999,<br>
-  "max_rate": 0.507,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "55014809068",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 318.2,<br>
-      "safe_price": 0.502,<br>
-      "cost": 159.7364,<br>
-      "filled": 318.2,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713545306381,<br>
-      "order_filled_timestamp": 1713545306381,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": ""<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 0.618116467,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 1,<br>
   "price_precision": 4,<br>
   "precision_mode": 2,<br>
-  "stoploss_current_dist": 0.11970000000000003,<br>
-  "stoploss_current_dist_pct": 23.63,<br>
-  "stoploss_current_dist_ratio": 0.23632774,<br>
-  "stoploss_entry_dist": -39.69993662,<br>
-  "stoploss_entry_dist_ratio": -0.99463357,<br>
-  "current_rate": 0.5065,<br>
-  "total_profit_abs": -1.59235235,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": -0.0398745<br>
-}<br>
-Reload Trades...<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/trades<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/trades/18/reload<br>
-{"trade_id":18,"pair":"BCH/USDT:USDT","base_currency":"BCH","quote_currency":"USDT","is_open":false,"is_short":true,"exchange":"binance","amount":0.069,"amount_requested":0.06928525,"stake_amount":11.7864075,"max_stake_amount":47.14563,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.023572815,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":0.01844347,"fee_close_currency":"USDT","open_date":"2024-04-07 17:45:38","open_timestamp":1712511938509,"open_fill_date":"2024-04-07 17:45:38","open_fill_timestamp":1712511938385,"open_rate":683.27,"open_rate_requested":683.32,"open_trade_value":47.12205719,"close_date":"2024-04-13 10:54:43","close_timestamp":1713005683000,"close_rate":534.59333,"close_rate_requested":null,"close_profit":0.8672519461439977,"close_profit_pct":86.73,"close_profit_abs":10.21667395,"profit_ratio":0.8672519461439977,"profit_pct":86.73,"profit_abs":10.21667395,"profit_fiat":null,"realized_profit":10.21667395,"realized_profit_ratio":0.8672519461439977,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":852.37,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":852.37,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":512.23,"max_rate":711.96,"has_open_orders":false,"orders":[{"pair":"BCH/USDT:USDT","order_id":"26716801191","status":"closed","remaining":0.0,"amount":0.069,"safe_price":683.27,"cost":47.14563,"filled":0.069,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1712511938385,"order_filled_timestamp":1712511938385,"ft_fee_base":null,"ft_order_tag":""},{"pair":"BCH/USDT:USDT","order_id":"26893340410","status":"closed","remaining":0.0,"amount":0.069,"safe_price":534.59333,"cost":36.88694,"filled":0.069,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713005683817,"order_filled_timestamp":1713005683000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":840.308062002,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":317.77666999999997,"stoploss_current_dist_pct":59.44,"stoploss_current_dist_ratio":0.59442693,"stoploss_entry_dist":-11.72087958,"stoploss_entry_dist_ratio":-0.99493785,"current_rate":534.59333,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 18,<br>
-  "pair": "BCH/USDT:USDT",<br>
-  "base_currency": "BCH",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": true,<br>
-  "exchange": "binance",<br>
-  "amount": 0.069,<br>
-  "amount_requested": 0.06928525,<br>
-  "stake_amount": 11.7864075,<br>
-  "max_stake_amount": 47.14563,<br>
-  "strategy": "AdxSmasS_v7",<br>
-  "enter_tag": "",<br>
-  "timeframe": 15,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 0.023572815,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0005,<br>
-  "fee_close_cost": 0.01844347,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-04-07 17:45:38",<br>
-  "open_timestamp": 1712511938509,<br>
-  "open_fill_date": "2024-04-07 17:45:38",<br>
-  "open_fill_timestamp": 1712511938385,<br>
-  "open_rate": 683.27,<br>
-  "open_rate_requested": 683.32,<br>
-  "open_trade_value": 47.12205719,<br>
-  "close_date": "2024-04-13 10:54:43",<br>
-  "close_timestamp": 1713005683000,<br>
-  "close_rate": 534.59333,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": 0.8672519461439977,<br>
-  "close_profit_pct": 86.73,<br>
-  "close_profit_abs": 10.21667395,<br>
-  "profit_ratio": 0.8672519461439977,<br>
-  "profit_pct": 86.73,<br>
-  "profit_abs": 10.21667395,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 10.21667395,<br>
-  "realized_profit_ratio": 0.8672519461439977,<br>
-  "exit_reason": "sold_on_exchange",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 852.37,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 852.37,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 512.23,<br>
-  "max_rate": 711.96,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "BCH/USDT:USDT",<br>
-      "order_id": "26716801191",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 0.069,<br>
-      "safe_price": 683.27,<br>
-      "cost": 47.14563,<br>
-      "filled": 0.069,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1712511938385,<br>
-      "order_filled_timestamp": 1712511938385,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": ""<br>
-    },<br>
-    {<br>
-      "pair": "BCH/USDT:USDT",<br>
-      "order_id": "26893340410",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 0.069,<br>
-      "safe_price": 534.59333,<br>
-      "cost": 36.88694,<br>
-      "filled": 0.069,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713005683817,<br>
-      "order_filled_timestamp": 1713005683000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 840.308062002,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 3,<br>
-  "price_precision": 2,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": 317.77666999999997,<br>
-  "stoploss_current_dist_pct": 59.44,<br>
-  "stoploss_current_dist_ratio": 0.59442693,<br>
-  "stoploss_entry_dist": -11.72087958,<br>
-  "stoploss_entry_dist_ratio": -0.99493785,<br>
-  "current_rate": 534.59333,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/trades/20/reload<br>
-{"trade_id":20,"pair":"XLM/USDT:USDT","base_currency":"XLM","quote_currency":"USDT","is_open":false,"is_short":true,"exchange":"binance","amount":88.0,"amount_requested":88.43191879,"stake_amount":2.926,"max_stake_amount":11.704,"strategy":"AdxSmasS_v7","enter_tag":"forceenter-short-script-wirsinddieguten-binance-adriana-futures-2024-04-08-13h-43m-12s-4x","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.005852,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":0.00501116,"fee_close_currency":"USDT","open_date":"2024-04-08 13:43:26","open_timestamp":1712583806391,"open_fill_date":"2024-04-08 13:43:26","open_fill_timestamp":1712583806270,"open_rate":0.133,"open_rate_requested":0.13307,"open_trade_value":11.698148,"close_date":"2024-04-13 10:54:47","close_timestamp":1713005687000,"close_rate":0.11389,"close_rate_requested":null,"close_profit":0.5713098654590454,"close_profit_pct":57.13,"close_profit_abs":1.67081684,"profit_ratio":0.5713098654590454,"profit_pct":57.13,"profit_abs":1.67081684,"profit_fiat":null,"realized_profit":1.67081684,"realized_profit_ratio":0.5713098654590454,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":0.16591,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.16591,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.10896,"max_rate":0.13558,"has_open_orders":false,"orders":[{"pair":"XLM/USDT:USDT","order_id":"11932651761","status":"closed","remaining":0.0,"amount":88.0,"safe_price":0.133,"cost":11.704,"filled":88.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1712583806270,"order_filled_timestamp":1712583806270,"ft_fee_base":null,"ft_order_tag":"forceenter-short-script-wirsinddieguten-binance-adriana-futures-2024-04-08-13h-43m-12s-4x"},{"pair":"XLM/USDT:USDT","order_id":"11953140916","status":"closed","remaining":0.0,"amount":88.0,"safe_price":0.11389,"cost":10.02232,"filled":88.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713005687428,"order_filled_timestamp":1713005687000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.1369491025,"funding_fees":0.0,"trading_mode":"futures","amount_precision":0.0,"price_precision":5.0,"precision_mode":2,"stoploss_current_dist":0.05202,"stoploss_current_dist_pct":45.68,"stoploss_current_dist_ratio":0.45675652,"stoploss_entry_dist":-2.90923204,"stoploss_entry_dist_ratio":-0.99476671,"current_rate":0.11389,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 20,<br>
-  "pair": "XLM/USDT:USDT",<br>
-  "base_currency": "XLM",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": true,<br>
-  "exchange": "binance",<br>
-  "amount": 88,<br>
-  "amount_requested": 88.43191879,<br>
-  "stake_amount": 2.926,<br>
-  "max_stake_amount": 11.704,<br>
-  "strategy": "AdxSmasS_v7",<br>
-  "enter_tag": "forceenter-short-script-wirsinddieguten-binance-adriana-futures-2024-04-08-13h-43m-12s-4x",<br>
-  "timeframe": 15,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 0.005852,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0005,<br>
-  "fee_close_cost": 0.00501116,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-04-08 13:43:26",<br>
-  "open_timestamp": 1712583806391,<br>
-  "open_fill_date": "2024-04-08 13:43:26",<br>
-  "open_fill_timestamp": 1712583806270,<br>
-  "open_rate": 0.133,<br>
-  "open_rate_requested": 0.13307,<br>
-  "open_trade_value": 11.698148,<br>
-  "close_date": "2024-04-13 10:54:47",<br>
-  "close_timestamp": 1713005687000,<br>
-  "close_rate": 0.11389,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": 0.5713098654590454,<br>
-  "close_profit_pct": 57.13,<br>
-  "close_profit_abs": 1.67081684,<br>
-  "profit_ratio": 0.5713098654590454,<br>
-  "profit_pct": 57.13,<br>
-  "profit_abs": 1.67081684,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 1.67081684,<br>
-  "realized_profit_ratio": 0.5713098654590454,<br>
-  "exit_reason": "sold_on_exchange",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 0.16591,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.16591,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.10896,<br>
-  "max_rate": 0.13558,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "XLM/USDT:USDT",<br>
-      "order_id": "11932651761",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 88,<br>
-      "safe_price": 0.133,<br>
-      "cost": 11.704,<br>
-      "filled": 88,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1712583806270,<br>
-      "order_filled_timestamp": 1712583806270,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "forceenter-short-script-wirsinddieguten-binance-adriana-futures-2024-04-08-13h-43m-12s-4x"<br>
-    },<br>
-    {<br>
-      "pair": "XLM/USDT:USDT",<br>
-      "order_id": "11953140916",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 88,<br>
-      "safe_price": 0.11389,<br>
-      "cost": 10.02232,<br>
-      "filled": 88,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713005687428,<br>
-      "order_filled_timestamp": 1713005687000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 0.1369491025,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 0,<br>
-  "price_precision": 5,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": 0.05202,<br>
-  "stoploss_current_dist_pct": 45.68,<br>
-  "stoploss_current_dist_ratio": 0.45675652,<br>
-  "stoploss_entry_dist": -2.90923204,<br>
-  "stoploss_entry_dist_ratio": -0.99476671,<br>
-  "current_rate": 0.11389,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/trades/21/reload<br>
-{"trade_id":21,"pair":"ALGO/USDT:USDT","base_currency":"ALGO","quote_currency":"USDT","is_open":false,"is_short":true,"exchange":"binance","amount":99.2,"amount_requested":99.23944115,"stake_amount":6.07104,"max_stake_amount":24.28416,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.01214208,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":0.00951328,"fee_close_currency":"USDT","open_date":"2024-04-08 19:01:35","open_timestamp":1712602895991,"open_fill_date":"2024-04-08 19:01:35","open_fill_timestamp":1712602895875,"open_rate":0.2448,"open_rate_requested":0.2447,"open_trade_value":24.27201792,"close_date":"2024-04-13 10:54:41","close_timestamp":1713005681000,"close_rate":0.1918,"close_rate_requested":null,"close_profit":0.8628775171899675,"close_profit_pct":86.29,"close_profit_abs":5.23594464,"profit_ratio":0.8628775171899675,"profit_pct":86.29,"profit_abs":5.23594464,"profit_fiat":null,"realized_profit":5.23594464,"realized_profit_ratio":0.8628775171899675,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":0.3053,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.3053,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.18,"max_rate":0.2469,"has_open_orders":false,"orders":[{"pair":"ALGO/USDT:USDT","order_id":"10372625194","status":"closed","remaining":0.0,"amount":99.2,"safe_price":0.2448,"cost":24.28416,"filled":99.2,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1712602895875,"order_filled_timestamp":1712602895875,"ft_fee_base":null,"ft_order_tag":""},{"pair":"ALGO/USDT:USDT","order_id":"10396741852","status":"closed","remaining":0.0,"amount":99.2,"safe_price":0.1918,"cost":19.02656,"filled":99.2,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713005681033,"order_filled_timestamp":1713005681000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.2162126265,"funding_fees":0.0,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.11350000000000002,"stoploss_current_dist_pct":59.18,"stoploss_current_dist_ratio":0.59176225,"stoploss_entry_dist":-6.02888496,"stoploss_entry_dist_ratio":-0.99355315,"current_rate":0.1918,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 21,<br>
-  "pair": "ALGO/USDT:USDT",<br>
-  "base_currency": "ALGO",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": true,<br>
-  "exchange": "binance",<br>
-  "amount": 99.2,<br>
-  "amount_requested": 99.23944115,<br>
-  "stake_amount": 6.07104,<br>
-  "max_stake_amount": 24.28416,<br>
-  "strategy": "AdxSmasS_v7",<br>
-  "enter_tag": "",<br>
-  "timeframe": 15,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 0.01214208,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0005,<br>
-  "fee_close_cost": 0.00951328,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-04-08 19:01:35",<br>
-  "open_timestamp": 1712602895991,<br>
-  "open_fill_date": "2024-04-08 19:01:35",<br>
-  "open_fill_timestamp": 1712602895875,<br>
-  "open_rate": 0.2448,<br>
-  "open_rate_requested": 0.2447,<br>
-  "open_trade_value": 24.27201792,<br>
-  "close_date": "2024-04-13 10:54:41",<br>
-  "close_timestamp": 1713005681000,<br>
-  "close_rate": 0.1918,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": 0.8628775171899675,<br>
-  "close_profit_pct": 86.29,<br>
-  "close_profit_abs": 5.23594464,<br>
-  "profit_ratio": 0.8628775171899675,<br>
-  "profit_pct": 86.29,<br>
-  "profit_abs": 5.23594464,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 5.23594464,<br>
-  "realized_profit_ratio": 0.8628775171899675,<br>
-  "exit_reason": "sold_on_exchange",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 0.3053,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.3053,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.18,<br>
-  "max_rate": 0.2469,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "ALGO/USDT:USDT",<br>
-      "order_id": "10372625194",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 99.2,<br>
-      "safe_price": 0.2448,<br>
-      "cost": 24.28416,<br>
-      "filled": 99.2,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1712602895875,<br>
-      "order_filled_timestamp": 1712602895875,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": ""<br>
-    },<br>
-    {<br>
-      "pair": "ALGO/USDT:USDT",<br>
-      "order_id": "10396741852",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 99.2,<br>
-      "safe_price": 0.1918,<br>
-      "cost": 19.02656,<br>
-      "filled": 99.2,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713005681033,<br>
-      "order_filled_timestamp": 1713005681000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 0.2162126265,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 1,<br>
-  "price_precision": 4,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": 0.11350000000000002,<br>
-  "stoploss_current_dist_pct": 59.18,<br>
-  "stoploss_current_dist_ratio": 0.59176225,<br>
-  "stoploss_entry_dist": -6.02888496,<br>
-  "stoploss_entry_dist_ratio": -0.99355315,<br>
-  "current_rate": 0.1918,<br>
+  "stoploss_current_dist": -0.1848,<br>
+  "stoploss_current_dist_pct": -99.04,<br>
+  "stoploss_current_dist_ratio": -0.9903537,<br>
+  "stoploss_entry_dist": -49.23295308,<br>
+  "stoploss_entry_dist_ratio": -0.98949361,<br>
+  "current_rate": 0.1866,<br>
   "total_profit_abs": 0,<br>
   "total_profit_fiat": null,<br>
   "total_profit_ratio": null<br>
@@ -5064,314 +4639,444 @@ Running already? RUNNING=<br>
 Reload Positions...<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/status<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/status<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/149/reload<br>
+{"trade_id":149,"pair":"LTC/USDT:USDT","base_currency":"LTC","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":20.764,"amount_requested":5.39301604,"stake_amount":400.258025,"max_stake_amount":1601.0321,"strategy":"AdxSmasS_v7","enter_tag":"forceenter-short-script-wirsinddieguten-binance-futures-2024-04-13-22h-11m-03s-4","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.8005160499999999,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-13 22:11:28","open_timestamp":1713046288300,"open_fill_date":"2024-04-13 22:11:28","open_fill_timestamp":1713046288184,"open_rate":77.1061500674244,"open_rate_requested":78.61,"open_trade_value":1600.23158395,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.21240896,"profit_pct":-21.24,"profit_abs":-84.97588299,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":92.7,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":92.7,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":73.78,"max_rate":82.71,"has_open_orders":false,"orders":[{"pair":"LTC/USDT:USDT","order_id":"30403420376","status":"closed","remaining":0.0,"amount":5.393,"safe_price":74.31,"cost":400.75383,"filled":5.393,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713046288093,"order_filled_timestamp":1713046288184,"ft_fee_base":null,"ft_order_tag":"forceenter-short-script-wirsinddieguten-binance-futures-2024-04-13-22h-11m-03s-4"},{"pair":"LTC/USDT:USDT","order_id":"30451995879","status":"closed","remaining":0.0,"amount":5.119,"safe_price":78.17,"cost":400.15223,"filled":5.119,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713226531766,"order_filled_timestamp":1713226531766,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-16-00h-14m-46s-4"},{"pair":"LTC/USDT:USDT","order_id":"30453744130","status":"closed","remaining":0.0,"amount":5.164,"safe_price":77.49,"cost":400.15836,"filled":5.164,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713233566989,"order_filled_timestamp":1713233566989,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-16-02h-12m-00s-4"},{"pair":"LTC/USDT:USDT","order_id":"30476238412","status":"closed","remaining":0.0,"amount":5.088,"safe_price":78.61,"cost":399.96768,"filled":5.088,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713349102308,"order_filled_timestamp":1713349102308,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-17-10h-17m-00s-4"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":94.99988718237122,"funding_fees":0.84137618,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":11.540000000000006,"stoploss_current_dist_pct":14.22,"stoploss_current_dist_ratio":0.14218827,"stoploss_entry_dist":-324.71225127,"stoploss_entry_dist_ratio":-0.81166315,"current_rate":81.16,"total_profit_abs":-84.97588299,"total_profit_fiat":null,"total_profit_ratio":-0.21230276}{<br>
+  "trade_id": 149,<br>
+  "pair": "LTC/USDT:USDT",<br>
+  "base_currency": "LTC",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 20.764,<br>
+  "amount_requested": 5.39301604,<br>
+  "stake_amount": 400.258025,<br>
+  "max_stake_amount": 1601.0321,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "forceenter-short-script-wirsinddieguten-binance-futures-2024-04-13-22h-11m-03s-4",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.8005160499999999,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-13 22:11:28",<br>
+  "open_timestamp": 1713046288300,<br>
+  "open_fill_date": "2024-04-13 22:11:28",<br>
+  "open_fill_timestamp": 1713046288184,<br>
+  "open_rate": 77.1061500674244,<br>
+  "open_rate_requested": 78.61,<br>
+  "open_trade_value": 1600.23158395,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": -0.21606995,<br>
+  "profit_pct": -21.61,<br>
+  "profit_abs": -86.44049063,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 92.7,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 92.7,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 73.78,<br>
+  "max_rate": 82.71,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "LTC/USDT:USDT",<br>
+      "order_id": "30403420376",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 5.393,<br>
+      "safe_price": 74.31,<br>
+      "cost": 400.75383,<br>
+      "filled": 5.393,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713046288093,<br>
+      "order_filled_timestamp": 1713046288184,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-short-script-wirsinddieguten-binance-futures-2024-04-13-22h-11m-03s-4"<br>
+    },<br>
+    {<br>
+      "pair": "LTC/USDT:USDT",<br>
+      "order_id": "30451995879",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 5.119,<br>
+      "safe_price": 78.17,<br>
+      "cost": 400.15223,<br>
+      "filled": 5.119,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713226531766,<br>
+      "order_filled_timestamp": 1713226531766,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-16-00h-14m-46s-4"<br>
+    },<br>
+    {<br>
+      "pair": "LTC/USDT:USDT",<br>
+      "order_id": "30453744130",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 5.164,<br>
+      "safe_price": 77.49,<br>
+      "cost": 400.15836,<br>
+      "filled": 5.164,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713233566989,<br>
+      "order_filled_timestamp": 1713233566989,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-16-02h-12m-00s-4"<br>
+    },<br>
+    {<br>
+      "pair": "LTC/USDT:USDT",<br>
+      "order_id": "30476238412",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 5.088,<br>
+      "safe_price": 78.61,<br>
+      "cost": 399.96768,<br>
+      "filled": 5.088,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713349102308,<br>
+      "order_filled_timestamp": 1713349102308,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-17-10h-17m-00s-4"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 94.99988718237122,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 11.510000000000005,<br>
+  "stoploss_current_dist_pct": 14.18,<br>
+  "stoploss_current_dist_ratio": 0.14176623,<br>
+  "stoploss_entry_dist": -325.55362745,<br>
+  "stoploss_entry_dist_ratio": -0.81376628,<br>
+  "current_rate": 81.19,<br>
+  "total_profit_abs": -86.44049063,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.21596192<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/169/reload<br>
+{"trade_id":169,"pair":"ETH/USDT:USDT","base_currency":"ETH","quote_currency":"USDT","is_open":true,"is_short":false,"exchange":"binance","amount":0.13,"amount_requested":0.13046442,"stake_amount":99.655075,"max_stake_amount":398.6203,"strategy":"DWT_LongShort","enter_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-18-15h-56m-29s-4","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.19931015,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-18 15:56:42","open_timestamp":1713455802735,"open_fill_date":"2024-04-18 15:56:42","open_fill_timestamp":1713455802615,"open_rate":3066.31,"open_rate_requested":3065.97,"open_trade_value":398.81961015,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":0.0296038,"profit_pct":2.96,"profit_abs":2.95164391,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":2307.4,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":2307.4,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":2865.49,"max_rate":3125.03,"has_open_orders":false,"orders":[{"pair":"ETH/USDT:USDT","order_id":"8389765673284127473","status":"closed","remaining":0.0,"amount":0.13,"safe_price":3066.31,"cost":398.6203,"filled":0.13,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713455802615,"order_filled_timestamp":1713455802615,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-18-15h-56m-29s-4"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":2348.2332442315,"funding_fees":-0.09691134,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":-785.44,"stoploss_current_dist_pct":-25.4,"stoploss_current_dist_ratio":-0.25395429,"stoploss_entry_dist":-99.10450249,"stoploss_entry_dist_ratio":-0.99397823,"current_rate":3092.84,"total_profit_abs":2.95164391,"total_profit_fiat":null,"total_profit_ratio":0.0296186}{<br>
+  "trade_id": 169,<br>
+  "pair": "ETH/USDT:USDT",<br>
+  "base_currency": "ETH",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": false,<br>
+  "exchange": "binance",<br>
+  "amount": 0.13,<br>
+  "amount_requested": 0.13046442,<br>
+  "stake_amount": 99.655075,<br>
+  "max_stake_amount": 398.6203,<br>
+  "strategy": "DWT_LongShort",<br>
+  "enter_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-18-15h-56m-29s-4",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.19931015,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-18 15:56:42",<br>
+  "open_timestamp": 1713455802735,<br>
+  "open_fill_date": "2024-04-18 15:56:42",<br>
+  "open_fill_timestamp": 1713455802615,<br>
+  "open_rate": 3066.31,<br>
+  "open_rate_requested": 3065.97,<br>
+  "open_trade_value": 398.81961015,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": 0.03028908,<br>
+  "profit_pct": 3.03,<br>
+  "profit_abs": 3.01996955,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 2307.4,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 2307.4,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 2865.49,<br>
+  "max_rate": 3125.03,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "8389765673284127473",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.13,<br>
+      "safe_price": 3066.31,<br>
+      "cost": 398.6203,<br>
+      "filled": 0.13,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713455802615,<br>
+      "order_filled_timestamp": 1713455802615,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-18-15h-56m-29s-4"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 2348.2332442315,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -785.2199999999998,<br>
+  "stoploss_current_dist_pct": -25.39,<br>
+  "stoploss_current_dist_ratio": -0.25390122,<br>
+  "stoploss_entry_dist": -99.00759115,<br>
+  "stoploss_entry_dist_ratio": -0.99300625,<br>
+  "current_rate": 3092.62,<br>
+  "total_profit_abs": 3.01996955,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": 0.03030422<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/171/reload<br>
+{"trade_id":171,"pair":"IOTA/USDT:USDT","base_currency":"IOTA","quote_currency":"USDT","is_open":true,"is_short":false,"exchange":"binance","amount":1767.5,"amount_requested":1767.56517897,"stake_amount":99.952125,"max_stake_amount":399.8085,"strategy":"DWT_LongShort","enter_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-40m-45s-4","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.19990425,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-19 07:41:02","open_timestamp":1713512462907,"open_fill_date":"2024-04-19 07:41:02","open_fill_timestamp":1713512462791,"open_rate":0.2262,"open_rate_requested":0.2263,"open_trade_value":400.00840425,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":0.04289615,"profit_pct":4.29,"profit_abs":4.28970483,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.1703,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.1703,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.2248,"max_rate":0.2319,"has_open_orders":false,"orders":[{"pair":"IOTA/USDT:USDT","order_id":"7615138948","status":"closed","remaining":0.0,"amount":1767.5,"safe_price":0.2262,"cost":399.8085,"filled":1767.5,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713512462791,"order_filled_timestamp":1713512462791,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-40m-45s-4"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.1748028055,"funding_fees":-0.08035054999999999,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":-0.058599999999999985,"stoploss_current_dist_pct":-25.6,"stoploss_current_dist_ratio":-0.25600699,"stoploss_entry_dist":-99.23400743,"stoploss_entry_dist_ratio":-0.99231923,"current_rate":0.2289,"total_profit_abs":4.28970483,"total_profit_fiat":null,"total_profit_ratio":0.0429176}{<br>
+  "trade_id": 171,<br>
+  "pair": "IOTA/USDT:USDT",<br>
+  "base_currency": "IOTA",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": false,<br>
+  "exchange": "binance",<br>
+  "amount": 1767.5,<br>
+  "amount_requested": 1767.56517897,<br>
+  "stake_amount": 99.952125,<br>
+  "max_stake_amount": 399.8085,<br>
+  "strategy": "DWT_LongShort",<br>
+  "enter_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-40m-45s-4",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.19990425,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-19 07:41:02",<br>
+  "open_timestamp": 1713512462907,<br>
+  "open_fill_date": "2024-04-19 07:41:02",<br>
+  "open_fill_timestamp": 1713512462791,<br>
+  "open_rate": 0.2262,<br>
+  "open_rate_requested": 0.2263,<br>
+  "open_trade_value": 400.00840425,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": 0.04369964,<br>
+  "profit_pct": 4.37,<br>
+  "profit_abs": 4.37005537,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 0.1703,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 0.1703,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 0.2248,<br>
+  "max_rate": 0.2319,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "IOTA/USDT:USDT",<br>
+      "order_id": "7615138948",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 1767.5,<br>
+      "safe_price": 0.2262,<br>
+      "cost": 399.8085,<br>
+      "filled": 1767.5,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713512462791,<br>
+      "order_filled_timestamp": 1713512462791,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-40m-45s-4"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 0.1748028055,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 1,<br>
+  "price_precision": 4,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -0.058599999999999985,<br>
+  "stoploss_current_dist_pct": -25.6,<br>
+  "stoploss_current_dist_ratio": -0.25600699,<br>
+  "stoploss_entry_dist": -99.15365688,<br>
+  "stoploss_entry_dist_ratio": -0.99151574,<br>
+  "current_rate": 0.2289,<br>
+  "total_profit_abs": 4.37005537,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": 0.04372149<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/173/reload<br>
+{"trade_id":173,"pair":"SOL/USDT:USDT","base_currency":"SOL","quote_currency":"USDT","is_open":true,"is_short":false,"exchange":"binance","amount":2.0,"amount_requested":2.78770899,"stake_amount":71.72,"max_stake_amount":286.88,"strategy":"DWT_LongShort","enter_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-50m-22s-4","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.14344,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-19 07:50:36","open_timestamp":1713513036570,"open_fill_date":"2024-04-19 07:50:36","open_fill_timestamp":1713513036445,"open_rate":143.44,"open_rate_requested":143.487,"open_trade_value":287.02344,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":0.0280769,"profit_pct":2.81,"profit_abs":2.01468176,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":107.939,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":107.939,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":141.832,"max_rate":147.388,"has_open_orders":false,"orders":[{"pair":"SOL/USDT:USDT","order_id":"48483282286","status":"closed","remaining":0.0,"amount":2.0,"safe_price":143.44,"cost":286.88,"filled":2.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713513036445,"order_filled_timestamp":1713513036445,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-50m-22s-4"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":109.91245312999999,"funding_fees":-0.01927724,"trading_mode":"futures","amount_precision":0.0,"price_precision":3.0,"precision_mode":2,"stoploss_current_dist":-36.662000000000006,"stoploss_current_dist_pct":-25.35,"stoploss_current_dist_ratio":-0.25353905,"stoploss_entry_dist":-71.27265624,"stoploss_entry_dist_ratio":-0.993266,"current_rate":144.601,"total_profit_abs":2.01468176,"total_profit_fiat":null,"total_profit_ratio":0.02809093}{<br>
+  "trade_id": 173,<br>
+  "pair": "SOL/USDT:USDT",<br>
+  "base_currency": "SOL",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": false,<br>
+  "exchange": "binance",<br>
+  "amount": 2,<br>
+  "amount_requested": 2.78770899,<br>
+  "stake_amount": 71.72,<br>
+  "max_stake_amount": 286.88,<br>
+  "strategy": "DWT_LongShort",<br>
+  "enter_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-50m-22s-4",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.14344,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-19 07:50:36",<br>
+  "open_timestamp": 1713513036570,<br>
+  "open_fill_date": "2024-04-19 07:50:36",<br>
+  "open_fill_timestamp": 1713513036445,<br>
+  "open_rate": 143.44,<br>
+  "open_rate_requested": 143.487,<br>
+  "open_trade_value": 287.02344,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": 0.03004491,<br>
+  "profit_pct": 3,<br>
+  "profit_abs": 2.155898,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 107.939,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 107.939,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 141.832,<br>
+  "max_rate": 147.388,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "SOL/USDT:USDT",<br>
+      "order_id": "48483282286",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 2,<br>
+      "safe_price": 143.44,<br>
+      "cost": 286.88,<br>
+      "filled": 2,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713513036445,<br>
+      "order_filled_timestamp": 1713513036445,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-19-07h-50m-22s-4"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 109.91245312999999,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 0,<br>
+  "price_precision": 3,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -36.72300000000001,<br>
+  "stoploss_current_dist_pct": -25.39,<br>
+  "stoploss_current_dist_ratio": -0.25385381,<br>
+  "stoploss_entry_dist": -71.253379,<br>
+  "stoploss_entry_dist_ratio": -0.99299735,<br>
+  "current_rate": 144.662,<br>
+  "total_profit_abs": 2.155898,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": 0.03005993<br>
+}<br>
 Reload Trades...<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/trades<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/2/reload<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/trades<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/83/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/3/reload<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/101/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/4/reload<br>
-{"trade_id":4,"pair":"IOTA/USDT","base_currency":"IOTA","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":645.0,"amount_requested":234.74178404,"stake_amount":148.026258,"max_stake_amount":197.655258,"strategy":"Anomaly","enter_tag":"anom_entry ","timeframe":5,"fee_open":0.001,"fee_open_cost":0.14802625800000002,"fee_open_currency":"IOTA","fee_close":0.001,"fee_close_cost":0.054522,"fee_close_currency":"USDT","open_date":"2024-04-14 03:10:52","open_timestamp":1713064252448,"open_fill_date":"2024-04-14 03:10:52","open_fill_timestamp":1713064252326,"open_rate":0.22922584651406236,"open_rate_requested":0.213,"open_trade_value":147.99852167,"close_date":"2024-04-16 13:35:52","close_timestamp":1713274552000,"close_rate":0.234,"close_rate_requested":0.2342,"close_profit":0.09608069075987698,"close_profit_pct":9.61,"close_profit_abs":4.788849,"profit_ratio":0.09608069075987698,"profit_pct":9.61,"profit_abs":4.788849,"profit_fiat":null,"realized_profit":4.788849,"realized_profit_ratio":0.09608069075987698,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":0.0024,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.0022,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.2113,"max_rate":0.2345,"has_open_orders":false,"orders":[{"pair":"IOTA/USDT","order_id":"1014567531","status":"closed","remaining":0.0,"amount":234.0,"safe_price":0.213,"cost":49.842,"filled":234.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713064252326,"order_filled_timestamp":1713064252326,"ft_fee_base":0.234,"ft_order_tag":"anom_entry "},{"pair":"IOTA/USDT","order_id":"1014862158","status":"closed","remaining":0.0,"amount":233.0,"safe_price":0.234,"cost":54.522,"filled":233.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713076277050,"order_filled_timestamp":1713076277050,"ft_fee_base":null,"ft_order_tag":"force_exit"},{"pair":"IOTA/USDT","order_id":"1015052174","status":"closed","remaining":0.0,"amount":213.0,"safe_price":0.2345,"cost":49.9485,"filled":213.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713087956166,"order_filled_timestamp":1713087956000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"IOTA/USDT","order_id":"1017003922","status":"closed","remaining":0.0,"amount":210.0,"safe_price":0.2376,"cost":49.896,"filled":210.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713188453370,"order_filled_timestamp":1713188453000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"IOTA/USDT","order_id":"1019107264","status":"closed","remaining":0.0,"amount":222.0,"safe_price":0.2163,"cost":48.0186,"filled":222.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713274552548,"order_filled_timestamp":1713274552000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":0.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":-0.2316,"stoploss_current_dist_pct":-98.97,"stoploss_current_dist_ratio":-0.98974359,"stoploss_entry_dist":-146.45206967,"stoploss_entry_dist_ratio":-0.9895509,"current_rate":0.234,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}<br><br><hr>##++<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/103/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/106/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/107/reload<br>
+Internal Server Error<br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
-The Service "freqtrade-binance-michael-dry1" is invalid: spec.ports[0].nodePort: Invalid value: 32336: provided port is already allocated<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
-service/freqtrade-kraken-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
-service/freqtrade-kraken-hellen unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
-service/freqtrade-kraken-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
-service/freqtrade-kraken-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
-service/freqtrade-kraken-stieves unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
---------- Restarted 16 bots....<br>
-"Finished at: 20240419-194512"<br>
-20240419-195001<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
-service/freqtrade-binance-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
-service/freqtrade-binance-adriana-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
-service/freqtrade-binance-fouzi unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
-service/freqtrade-binance-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
-service/freqtrade-binance-futures-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
-service/freqtrade-binance-hassan unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
-service/freqtrade-binance-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
-service/freqtrade-binance-juliano-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
-service/freqtrade-binance-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
-service/freqtrade-binance-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
-The Service "freqtrade-binance-michael-dry1" is invalid: spec.ports[0].nodePort: Invalid value: 32336: provided port is already allocated<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
-service/freqtrade-kraken-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
-service/freqtrade-kraken-hellen unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
-service/freqtrade-kraken-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
-service/freqtrade-kraken-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
-service/freqtrade-kraken-stieves unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
---------- Restarted 16 bots....<br>
-"Finished at: 20240419-195011"<br>
-20240419-195501<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
-service/freqtrade-binance-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
-service/freqtrade-binance-adriana-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
-service/freqtrade-binance-fouzi unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
-service/freqtrade-binance-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
-service/freqtrade-binance-futures-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
-service/freqtrade-binance-hassan unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
-service/freqtrade-binance-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
-service/freqtrade-binance-juliano-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
-service/freqtrade-binance-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
-service/freqtrade-binance-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
 {<br>
   "status": "already running"<br>
 }<br>
@@ -5579,6 +5284,299 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/
 --------- Restarted 16 bots....<br>
 "Finished at: 20240419-200011"<br>
 20240419-200501<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
+service/freqtrade-binance-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
+service/freqtrade-binance-adriana-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
+service/freqtrade-binance-fouzi unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
+service/freqtrade-binance-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
+service/freqtrade-binance-futures-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
+service/freqtrade-binance-hassan unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
+service/freqtrade-binance-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
+service/freqtrade-binance-juliano-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
+service/freqtrade-binance-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
+service/freqtrade-binance-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
+The Service "freqtrade-binance-michael-dry1" is invalid: spec.ports[0].nodePort: Invalid value: 32336: provided port is already allocated<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
+service/freqtrade-kraken-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
+service/freqtrade-kraken-hellen unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
+service/freqtrade-kraken-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
+service/freqtrade-kraken-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
+service/freqtrade-kraken-stieves unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+--------- Restarted 16 bots....<br>
+"Finished at: 20240419-200511"<br>
+20240419-201001<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
+service/freqtrade-binance-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
+service/freqtrade-binance-adriana-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
+service/freqtrade-binance-fouzi unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
+service/freqtrade-binance-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
+service/freqtrade-binance-futures-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
+service/freqtrade-binance-hassan unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
+service/freqtrade-binance-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
+service/freqtrade-binance-juliano-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
+service/freqtrade-binance-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
+service/freqtrade-binance-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
+The Service "freqtrade-binance-michael-dry1" is invalid: spec.ports[0].nodePort: Invalid value: 32336: provided port is already allocated<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
+service/freqtrade-kraken-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
+service/freqtrade-kraken-hellen unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
+service/freqtrade-kraken-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
+service/freqtrade-kraken-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
+service/freqtrade-kraken-stieves unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+--------- Restarted 16 bots....<br>
+"Finished at: 20240419-201011"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -5600,12 +5598,12 @@ setBotVariables binance-adriana-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 215.67037656000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 215.67037656000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 22 with PAIR=BTC/USDT because profit absolut -0.93 is less then profit to take 5[0m<br>
+[34mChecking Stake Sum 215.81781066000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 215.81781066000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 22 with PAIR=BTC/USDT because profit absolut -1.26 is less then profit to take 5[0m<br>
 [33mAdd tradeid 22 with PAIR=BTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:03 PAIR=BTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=22 PROFIT_ABS=-0.93 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TIMESTAMP=2024-04-19:20:11:03 PAIR=BTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=22 PROFIT_ABS=-1.26 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
 setBotVariables binance-adriana-futures<br>
 [33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
@@ -5613,12 +5611,12 @@ setBotVariables binance-adriana-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 215.67037656000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 215.67037656000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 23 with PAIR=IOTA/USDT because profit absolut -1.81 is less then profit to take 5[0m<br>
+[34mChecking Stake Sum 215.81781066000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 215.81781066000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 23 with PAIR=IOTA/USDT because profit absolut -1.27 is less then profit to take 5[0m<br>
 [33mAdd tradeid 23 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:04 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=23 PROFIT_ABS=-1.81 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TIMESTAMP=2024-04-19:20:11:04 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=23 PROFIT_ABS=-1.27 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
 setBotVariables binance-adriana-futures<br>
 [33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
@@ -5626,12 +5624,12 @@ setBotVariables binance-adriana-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 215.67037656000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 215.67037656000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 24 with PAIR=ALGO/USDT because profit absolut -0.78 is less then profit to take 5[0m<br>
+[34mChecking Stake Sum 215.81781066000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 215.81781066000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 24 with PAIR=ALGO/USDT because profit absolut -0.28 is less then profit to take 5[0m<br>
 [33mAdd tradeid 24 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:05 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=24 PROFIT_ABS=-0.78 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TIMESTAMP=2024-04-19:20:11:05 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=24 PROFIT_ABS=-0.28 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
 setBotVariables binance-adriana-futures<br>
 [33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
@@ -5639,12 +5637,12 @@ setBotVariables binance-adriana-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 215.67037656000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 215.67037656000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 25 with PAIR=XLM/USDT because profit absolut -1.56 is less then profit to take 5[0m<br>
+[34mChecking Stake Sum 215.81781066000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 215.81781066000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 25 with PAIR=XLM/USDT because profit absolut -1.14 is less then profit to take 5[0m<br>
 [33mAdd tradeid 25 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:06 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=25 PROFIT_ABS=-1.56 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TIMESTAMP=2024-04-19:20:11:06 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=25 PROFIT_ABS=-1.14 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
 setBotVariables binance-adriana-futures<br>
 [33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
@@ -5652,12 +5650,12 @@ setBotVariables binance-adriana-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 215.67037656000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 215.67037656000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[34mChecking Stake Sum 215.81781066000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 215.81781066000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
 [31mIgnoring tradeid 26 with PAIR=XRP/USDT because profit absolut -1.59 is less then profit to take 5[0m<br>
 [33mAdd tradeid 26 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:07 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=26 PROFIT_ABS=-1.59 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TIMESTAMP=2024-04-19:20:11:07 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=26 PROFIT_ABS=-1.59 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -5693,12 +5691,12 @@ setBotVariables binance-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
-[34mChecking Stake Sum 11863.07882002 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 11863.07882002 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
-[31mIgnoring tradeid 149 with PAIR=LTC/USDT because profit absolut -88.09 is less then profit to take 50[0m<br>
+[34mChecking Stake Sum 11861.476875 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 11861.476875 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
+[31mIgnoring tradeid 149 with PAIR=LTC/USDT because profit absolut -87.06 is less then profit to take 50[0m<br>
 [33mAdd tradeid 149 with PAIR=LTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:09 PAIR=LTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=149 PROFIT_ABS=-88.09 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:09 PAIR=LTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=149 PROFIT_ABS=-87.06 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-futures<br>
 [33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-futures is futures[0m<br>
@@ -5706,12 +5704,12 @@ setBotVariables binance-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
-[34mChecking Stake Sum 11863.07882002 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 11863.07882002 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
-[31mIgnoring tradeid 169 with PAIR=ETH/USDT because profit absolut 3.39 is less then profit to take 50[0m<br>
+[34mChecking Stake Sum 11861.476875 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 11861.476875 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
+[31mIgnoring tradeid 169 with PAIR=ETH/USDT because profit absolut 2.89 is less then profit to take 50[0m<br>
 [33mAdd tradeid 169 with PAIR=ETH/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:10 PAIR=ETH/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=169 PROFIT_ABS=3.39 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:10 PAIR=ETH/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=169 PROFIT_ABS=2.89 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-futures<br>
 [33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-futures is futures[0m<br>
@@ -5719,12 +5717,12 @@ setBotVariables binance-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
-[34mChecking Stake Sum 11863.07882002 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 11863.07882002 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
-[31mIgnoring tradeid 171 with PAIR=IOTA/USDT because profit absolut 5.00 is less then profit to take 50[0m<br>
+[34mChecking Stake Sum 11861.476875 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 11861.476875 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
+[31mIgnoring tradeid 171 with PAIR=IOTA/USDT because profit absolut 4.02 is less then profit to take 50[0m<br>
 [33mAdd tradeid 171 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:11 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=171 PROFIT_ABS=5.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:11 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=171 PROFIT_ABS=4.02 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-futures<br>
 [33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-futures is futures[0m<br>
@@ -5732,12 +5730,12 @@ setBotVariables binance-futures<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
-[34mChecking Stake Sum 11863.07882002 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 11863.07882002 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
-[31mIgnoring tradeid 173 with PAIR=SOL/USDT because profit absolut 2.54 is less then profit to take 50[0m<br>
+[34mChecking Stake Sum 11861.476875 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 11861.476875 is greater than 2000, leaving PROFIT_TO_TAKE=50 as is[0m<br>
+[31mIgnoring tradeid 173 with PAIR=SOL/USDT because profit absolut 2.11 is less then profit to take 50[0m<br>
 [33mAdd tradeid 173 with PAIR=SOL/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:13 PAIR=SOL/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=173 PROFIT_ABS=2.54 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:13 PAIR=SOL/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=173 PROFIT_ABS=2.11 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -5761,10 +5759,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
 [34mChecking Stake Sum 779.72996851 for bot binance-futures-larissa between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 779.72996851 is between 500 and 2000, set PROFIT_TO_TAKE to half 25[0m<br>
-[31mIgnoring tradeid 69 with PAIR=ALGO/USDT because profit absolut 1.13 is less then profit to take 25[0m<br>
+[31mIgnoring tradeid 69 with PAIR=ALGO/USDT because profit absolut 0.68 is less then profit to take 25[0m<br>
 [33mAdd tradeid 69 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:14 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=69 PROFIT_ABS=1.13 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
+TIMESTAMP=2024-04-19:20:11:14 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=69 PROFIT_ABS=0.68 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
 setBotVariables binance-futures-larissa<br>
 [33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
@@ -5774,10 +5772,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
 [34mChecking Stake Sum 779.72996851 for bot binance-futures-larissa between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 779.72996851 is between 500 and 2000, set PROFIT_TO_TAKE to half 25[0m<br>
-[31mIgnoring tradeid 70 with PAIR=XLM/USDT because profit absolut 0.62 is less then profit to take 25[0m<br>
+[31mIgnoring tradeid 70 with PAIR=XLM/USDT because profit absolut 0.39 is less then profit to take 25[0m<br>
 [33mAdd tradeid 70 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:15 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=70 PROFIT_ABS=0.62 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
+TIMESTAMP=2024-04-19:20:11:15 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=70 PROFIT_ABS=0.39 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
 setBotVariables binance-futures-larissa<br>
 [33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
@@ -5787,10 +5785,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
 [34mChecking Stake Sum 779.72996851 for bot binance-futures-larissa between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 779.72996851 is between 500 and 2000, set PROFIT_TO_TAKE to half 25[0m<br>
-[31mIgnoring tradeid 72 with PAIR=IOTA/USDT because profit absolut -0.31 is less then profit to take 25[0m<br>
+[31mIgnoring tradeid 72 with PAIR=IOTA/USDT because profit absolut -0.74 is less then profit to take 25[0m<br>
 [33mAdd tradeid 72 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:16 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=72 PROFIT_ABS=-0.31 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
+TIMESTAMP=2024-04-19:20:11:16 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=72 PROFIT_ABS=-0.74 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -5814,10 +5812,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/balance<br>
 [34mChecking Stake Sum 128.262681096 for bot binance-hassan between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 128.262681096 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 6 with PAIR=ETH/USDT because profit absolut 0.10 is less then profit to take 5[0m<br>
+[31mIgnoring tradeid 6 with PAIR=ETH/USDT because profit absolut 0.09 is less then profit to take 5[0m<br>
 [33mAdd tradeid 6 with PAIR=ETH/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:18 PAIR=ETH/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-hassan TRADEID=6 PROFIT_ABS=0.10 API_KEY=byguDVxWAiaLUhT0FjoxcPHp0fVYtPAjIUY5ish459dBARt8fJputqeL8OcXeTqI API_SECRET=0aHY2r0Y8UUmKcjsyCwbVXTAwmMeCnH5gRSzx7Vt74OqVkGQWBTusFp7DMJkL0vV<br>
+TIMESTAMP=2024-04-19:20:11:18 PAIR=ETH/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-hassan TRADEID=6 PROFIT_ABS=0.09 API_KEY=byguDVxWAiaLUhT0FjoxcPHp0fVYtPAjIUY5ish459dBARt8fJputqeL8OcXeTqI API_SECRET=0aHY2r0Y8UUmKcjsyCwbVXTAwmMeCnH5gRSzx7Vt74OqVkGQWBTusFp7DMJkL0vV<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -5855,10 +5853,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
 [34mChecking Stake Sum 119.56002826000001 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 119.56002826000001 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 1 with PAIR=IOTA/USDT because profit absolut -0.81 is less then profit to take 5[0m<br>
+[31mIgnoring tradeid 1 with PAIR=IOTA/USDT because profit absolut -1.33 is less then profit to take 5[0m<br>
 [33mAdd tradeid 1 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:20 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=1 PROFIT_ABS=-0.81 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+TIMESTAMP=2024-04-19:20:11:20 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=1 PROFIT_ABS=-1.33 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
 setBotVariables binance-juliano-futures<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
@@ -5868,10 +5866,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
 [34mChecking Stake Sum 119.56002826000001 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 119.56002826000001 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 2 with PAIR=ALGO/USDT because profit absolut -0.53 is less then profit to take 5[0m<br>
+[31mIgnoring tradeid 2 with PAIR=ALGO/USDT because profit absolut -0.31 is less then profit to take 5[0m<br>
 [33mAdd tradeid 2 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:21 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=2 PROFIT_ABS=-0.53 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+TIMESTAMP=2024-04-19:20:11:21 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=2 PROFIT_ABS=-0.31 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
 setBotVariables binance-juliano-futures<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
@@ -5881,10 +5879,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
 [34mChecking Stake Sum 119.56002826000001 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 119.56002826000001 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 3 with PAIR=XLM/USDT because profit absolut -0.73 is less then profit to take 5[0m<br>
+[31mIgnoring tradeid 3 with PAIR=XLM/USDT because profit absolut -0.55 is less then profit to take 5[0m<br>
 [33mAdd tradeid 3 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:22 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=3 PROFIT_ABS=-0.73 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+TIMESTAMP=2024-04-19:20:11:22 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=3 PROFIT_ABS=-0.55 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
 setBotVariables binance-juliano-futures<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
@@ -5894,10 +5892,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
 [34mChecking Stake Sum 119.56002826000001 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 119.56002826000001 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 4 with PAIR=XRP/USDT because profit absolut -0.95 is less then profit to take 5[0m<br>
+[31mIgnoring tradeid 4 with PAIR=XRP/USDT because profit absolut -0.89 is less then profit to take 5[0m<br>
 [33mAdd tradeid 4 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:23 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=4 PROFIT_ABS=-0.95 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+TIMESTAMP=2024-04-19:20:11:23 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=4 PROFIT_ABS=-0.89 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -5935,10 +5933,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
 [34mChecking Stake Sum 1326.4586497153 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 1326.4586497153 is between 500 and 2000, set PROFIT_TO_TAKE to half 25[0m<br>
-[31mIgnoring tradeid 6 with PAIR=XRP/USDT because profit absolut 0.70 is less then profit to take 25[0m<br>
+[31mIgnoring tradeid 6 with PAIR=XRP/USDT because profit absolut 0.68 is less then profit to take 25[0m<br>
 [33mAdd tradeid 6 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:25 PAIR=XRP/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=6 PROFIT_ABS=0.70 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:25 PAIR=XRP/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=6 PROFIT_ABS=0.68 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-michael<br>
 [33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-michael is spot[0m<br>
@@ -5948,10 +5946,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
 [34mChecking Stake Sum 1326.4586497153 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 1326.4586497153 is between 500 and 2000, set PROFIT_TO_TAKE to half 25[0m<br>
-[31mIgnoring tradeid 7 with PAIR=ENA/USDT because profit absolut -0.45 is less then profit to take 25[0m<br>
+[31mIgnoring tradeid 7 with PAIR=ENA/USDT because profit absolut -0.69 is less then profit to take 25[0m<br>
 [33mAdd tradeid 7 with PAIR=ENA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:26 PAIR=ENA/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=7 PROFIT_ABS=-0.45 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:27 PAIR=ENA/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=7 PROFIT_ABS=-0.69 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-michael<br>
 [33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-michael is spot[0m<br>
@@ -5961,10 +5959,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
 [34mChecking Stake Sum 1326.4586497153 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 1326.4586497153 is between 500 and 2000, set PROFIT_TO_TAKE to half 25[0m<br>
-[31mIgnoring tradeid 8 with PAIR=XLM/USDT because profit absolut -0.01 is less then profit to take 25[0m<br>
+[31mIgnoring tradeid 8 with PAIR=XLM/USDT because profit absolut -0.14 is less then profit to take 25[0m<br>
 [33mAdd tradeid 8 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:28 PAIR=XLM/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=8 PROFIT_ABS=-0.01 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:28 PAIR=XLM/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=8 PROFIT_ABS=-0.14 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-michael<br>
 [33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-michael is spot[0m<br>
@@ -5974,10 +5972,10 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
 [34mChecking Stake Sum 1326.4586497153 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
 [34mStake sum 1326.4586497153 is between 500 and 2000, set PROFIT_TO_TAKE to half 25[0m<br>
-[31mIgnoring tradeid 9 with PAIR=IOTA/USDT because profit absolut 0.18 is less then profit to take 25[0m<br>
+[31mIgnoring tradeid 9 with PAIR=IOTA/USDT because profit absolut 0.03 is less then profit to take 25[0m<br>
 [33mAdd tradeid 9 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:29 PAIR=IOTA/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=9 PROFIT_ABS=0.18 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:29 PAIR=IOTA/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=9 PROFIT_ABS=0.03 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-michael<br>
 [33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-michael is spot[0m<br>
@@ -5990,7 +5988,7 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v
 [31mIgnoring tradeid 10 with PAIR=FDUSD/USDT because profit absolut 0.00 is less then profit to take 25[0m<br>
 [33mAdd tradeid 10 with PAIR=FDUSD/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-19:20:04:30 PAIR=FDUSD/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=10 PROFIT_ABS=0.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-19:20:11:30 PAIR=FDUSD/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=10 PROFIT_ABS=0.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -6075,8 +6073,8 @@ Trying Taking Profit for Bot kraken-stieves with ForceExit with Minimum Profit o
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/status<br>
-"Finished at 20240419-200433"<br>
-20240419-200501<br>
+"Finished at 20240419-201133"<br>
+20240419-201201<br>
 Running Take Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -6089,21 +6087,6 @@ Minium Profit to take 50<br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-20240419-181201<br><br>
-FORCEEXITS=msantana 4073940 4073937  0 18:12 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
-Running already? RUNNING=msantana 4073940 4073937  0 18:12 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
-[31mdsTradingTransferProfit.sh already running, exiting[0m<br><br>
-"Finished at 20240419-181201"<br><br>
-20240419-181401<br><br>
-FORCEEXITS=msantana 4077962 4077959  0 18:14 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
-Running already? RUNNING=msantana 4077962 4077959  0 18:14 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
-[31mdsTradingTransferProfit.sh already running, exiting[0m<br><br>
-"Finished at 20240419-181401"<br><br>
-20240419-181601<br><br>
-FORCEEXITS=msantana 4084623 4084620  0 18:16 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
-Running already? RUNNING=msantana 4084623 4084620  0 18:16 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
-[31mdsTradingTransferProfit.sh already running, exiting[0m<br><br>
-"Finished at 20240419-181602"<br><br>
 20240419-181801<br><br>
 FORCEEXITS=msantana 4088900 4088896  0 18:18 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
 Running already? RUNNING=msantana 4088900 4088896  0 18:18 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
@@ -6374,6 +6357,21 @@ FORCEEXITS=msantana  350994  350990  0 20:04 ?        00:00:00 /bin/sh -c /bin/z
 Running already? RUNNING=msantana  350994  350990  0 20:04 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
 [31mdsTradingTransferProfit.sh already running, exiting[0m<br><br>
 "Finished at 20240419-200401"<br><br>
+20240419-200601<br><br>
+FORCEEXITS=msantana  358369  358364  0 20:06 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
+Running already? RUNNING=msantana  358369  358364  0 20:06 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
+[31mdsTradingTransferProfit.sh already running, exiting[0m<br><br>
+"Finished at 20240419-200601"<br><br>
+20240419-200801<br><br>
+FORCEEXITS=msantana  362791  362786  0 20:08 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
+Running already? RUNNING=msantana  362791  362786  0 20:08 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
+[31mdsTradingTransferProfit.sh already running, exiting[0m<br><br>
+"Finished at 20240419-200801"<br><br>
+20240419-201001<br><br>
+FORCEEXITS=msantana  365872  365865  0 20:10 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
+Running already? RUNNING=msantana  365872  365865  0 20:10 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a>><b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> 2>&1<br><br>
+[31mdsTradingTransferProfit.sh already running, exiting[0m<br><br>
+"Finished at 20240419-201001"<br><br>
 <br><br><hr>##++<br><br>
 + + + + + /tmp/<b id=<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a>><b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> + + + + <br><br>
 ++++<br><br>
@@ -6548,13 +6546,13 @@ Creating snapshot(s) snapshot-wirsinddieguten-18-04-2024-00-00...<br><br>
 ............................................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240418-000052"<br><br>
 20240418-050001<br><br>
-Creating snap100  791k  100  791k    0     0   355k      0  0:00:02  0:00:02 --:--:--  355k<br>
-shot(s) snapshot-wirsinddieguten-18-04-2024-05-00...<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-18-04-2024-05-00...<br><br>
 ...................................................................................................................................................................................................done.<br><br>
 "Finished at 20240418-050044"<br><br>
 20240418-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-18-04-2024-10-00...<br><br>
-....................................................................................................................................................................................................done.<br><br>
+............................................................................................................................................100  790k  100  790k    0     0   385k      0  0:00:02  0:00:02 --:--:--  385k<br>
+........................................................done.<br><br>
 "Finished at 20240418-100044"<br><br>
 20240418-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-18-04-2024-15-00...<br><br>
@@ -6585,35 +6583,15 @@ Creating snapshot(s) snapshot-wirsinddieguten-19-04-2024-20-00...<br><br>
 ..................................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240419-200051"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 19 20:04 /tmp/tmp.eWgIn1uQ6O<br>
+-rw------- 1 msantana msantana 0 Apr 19 20:11 /tmp/tmp.KA5UNs0WGC<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240419-200408"<br>
-20240419-200501<br>
+"Finished at: 20240419-201107"<br>
+20240419-201201<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
-"Finished at 20240419-164601"<br>
-20240419-164801<br>
-FORCEEXITS=msantana 3704473 3704468  0 16:48 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
-Running already? RUNNING=msantana 3704473 3704468  0 16:48 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
-[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
-"Finished at 20240419-164801"<br>
-20240419-165001<br>
-FORCEEXITS=msantana 3706747 3706743  0 16:50 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
-Running already? RUNNING=msantana 3706747 3706743  0 16:50 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
-[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
-"Finished at 20240419-165001"<br>
-20240419-165201<br>
-FORCEEXITS=msantana 3712168 3712164  0 16:52 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
-Running already? RUNNING=msantana 3712168 3712164  0 16:52 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
-[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
-"Finished at 20240419-165201"<br>
-20240419-165401<br>
-FORCEEXITS=msantana 3716462 3716457  0 16:54 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
-Running already? RUNNING=msantana 3716462 3716457  0 16:54 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
 [31mdsTradingTransferProfit.sh already running, exiting[0m<br>
 "Finished at 20240419-165401"<br>
 20240419-165601<br>
@@ -7094,6 +7072,26 @@ FORCEEXITS=msantana  350994  350990  0 20:04 ?        00:00:00 /bin/sh -c /bin/z
 Running already? RUNNING=msantana  350994  350990  0 20:04 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
 [31mdsTradingTransferProfit.sh already running, exiting[0m<br>
 "Finished at 20240419-200401"<br>
+20240419-200601<br>
+FORCEEXITS=msantana  358369  358364  0 20:06 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+Running already? RUNNING=msantana  358369  358364  0 20:06 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
+"Finished at 20240419-200601"<br>
+20240419-200801<br>
+FORCEEXITS=msantana  362791  362786  0 20:08 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+Running already? RUNNING=msantana  362791  362786  0 20:08 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
+"Finished at 20240419-200801"<br>
+20240419-201001<br>
+FORCEEXITS=msantana  365872  365865  0 20:10 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+Running already? RUNNING=msantana  365872  365865  0 20:10 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
+"Finished at 20240419-201001"<br>
+20240419-201201<br>
+FORCEEXITS=msantana  373428  373425  0 20:12 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+Running already? RUNNING=msantana  373428  373425  0 20:12 ?        00:00:00 /bin/sh -c /bin/zsh -c "export PATH=\"$PATH:/home/msantana/.local/bin/:/bin:/usr/bin:/usr/local/bin:/home/msantana/.krew/bin:/home/msantana/.kubectx:/home/msantana/dersalvador/general_purpose_scripts:/home/msantana/Library/Python/3.9/bin:/home/msantana/google-cloud-sdk/bin\"; echo \"$(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1; CTX=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 dsTradingTransferProfit.sh >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1"; echo \"Finished at $(date +%Y%m%d-%H%M%S)\" >>/tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> 2>&1<br>
+[31mdsTradingTransferProfit.sh already running, exiting[0m<br>
+"Finished at 20240419-201201"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -7304,4 +7302,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-19-04-2024-20-00...<br>
 ..................................................................................................................................................................................................................................done.<br>
 "Finished at 20240419-200051"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Apr 19 20:05 /tmp/tmp.X5ttz2rhox
+-rw------- 1 msantana msantana 0 Apr 19 20:12 /tmp/tmp.H55mJJKsh7
