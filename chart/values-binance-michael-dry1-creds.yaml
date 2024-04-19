@@ -1,6 +1,6 @@
 ---
 kubernetes:
-  nodePort: 32336
+  nodePort: 32337
 
 configcreds:
   dry_run: true
