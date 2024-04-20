@@ -29,11 +29,7 @@ configcreds:
       policy_type: MlpPolicy
       model_reward_parameters:
         rr: 1
-<<<<<<< HEAD
         profit_aim: 0.5
-=======
-        profit_aim: 0.5    
->>>>>>> 65dab4e94e8d589d4188bd4ab6014e8ebdc49e4c
     enabled: true
     fit_live_predictions_candles: 300
     purge_old_models: true
