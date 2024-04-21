@@ -56,16 +56,21 @@ spec:
         - bash
         - -c
         - |
+          rm -rf /extra_strategies/lost+found
           echo chown -R ftuser:ftuser /sqlite 
           echo chown -R ftuser:ftuser /freqtrade
+          echo chown -R ftuser:ftuser /extra_strategies
           # echo chown -R ftuser:ftuser /extra_strategies
           # echo chmod -R 777 /extra_strategies
           chown -R ftuser:ftuser /sqlite 
           chown -R ftuser:ftuser /freqtrade
-          # chown -R ftuser:ftuser /extra_strategies
-          # chmod -R 777 /extra_strategies
+          chown -R ftuser:ftuser /extra_strategies
+          chmod -R 777 /extra_strategies
           find /sqlite       
         volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
         - mountPath: /sqlite
           name: sqlite
 {{- if .Values.kubernetes.copyContainer }}          
@@ -79,12 +84,17 @@ spec:
         - -c
         - |
           set -x
-          # cp -r /extra_strategies/* /freqtrade/user_data/strategies/
+          echo cp -r /extra_strategies/* /freqtrade/user_data/strategies/
+          cp -r /extra_strategies/* /freqtrade/user_data/strategies/
           # echo Copying strategy {{ .Values.bot.strategy_name }}* to default path
           # cp -r /extra_strategies/{{ .Values.bot.strategy_name }}* /freqtrade/user_data/strategies/
           # cp -r /freqtrade/user_data/strategies/. /freqtrade/user_data/extra_strategies/ 
-          # find /freqtrade
-        # volumeMounts:
+          echo find /extra_strategies
+          find /extra_strategies
+        volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
         # - name: strategies-default
         #   mountPath: /freqtrade/user_data/strategies
         #   readOnly: false  
@@ -99,8 +109,8 @@ spec:
         - {{ .Values.bot.debuglevel }}
 {{- end }}
         - --recursive-strategy-search
-        # - --strategy-path
-        # - /freqtrade/user_data/extra_strategies
+        - --strategy-path
+        - /extra_strategies
         - --config
         - /freqtrade/config/config-{{ .Release.Namespace }}.json
         - --config
@@ -116,6 +126,9 @@ spec:
           mountPath: /freqtrade/config
         - name: sqlite
           mountPath: /sqlite
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false             
         # - name: freqtrade-pythonpath 
         #   subPath: freqtrade.pth
         #   mountPath: /home/ftuser/.local/lib/python3.11/site-packages/freqtrade.pth
@@ -142,15 +155,18 @@ spec:
         - --strategy-list
         - {{ .Values.bot.strategy_name }}
         # - --recursive-strategy-search
-        # - --strategy-path
-        # - /freqtrade/user_data/extra_strategies
+        - --strategy-path
+        - /extra_strategies
         - --log-file 
         - /tmp/freqtrade.log
         - --datadir
         - /freqtrade/user_data/data
         - --userdir
         - /freqtrade/user_data 
-        # volumeMounts:         
+        volumeMounts:         
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
         # - name: strategies-default
         #   mountPath: /freqtrade/user_data/strategies
         #   readOnly: false
@@ -204,7 +220,7 @@ spec:
         - --config
         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
         - --strategy-path
-        - /freqtrade/user_data/strategies
+        - /extra_strategies
         - --strategy
         - {{ .Values.bot.strategy_name }}
         - --db-url
@@ -222,9 +238,9 @@ spec:
         - /freqtrade/user_data 
 
         volumeMounts:
-        # - name: extra-strategies
-        #   mountPath: /extra_strategies
-        #   readOnly: false          
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
         # - name: strategies-default
         #   mountPath: /freqtrade/user_data/strategies
         #   readOnly: false  
@@ -240,9 +256,9 @@ spec:
       imagePullSecrets:
       - name: deploy-key-gcr
       volumes:
-      # - name: strategies-default
-      #   persistentVolumeClaim:
-      #     claimName: freqtrade-strategies   
+      - name: extra-strategies
+        persistentVolumeClaim:
+          claimName: freqtrade-extra-strategies   
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
