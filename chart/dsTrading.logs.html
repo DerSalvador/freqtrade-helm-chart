@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Sun Apr 21 05:48:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Sun Apr 21 05:56:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -16,13 +16,13 @@
 <div><a href=#dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</a><br><br></div>
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
-<tr><td nowrap><small>325703 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 10</small></td></tr>
-<tr><td nowrap><small>331018 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 10</small></td></tr>
-<tr><td nowrap><small>331019 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 GET balance --quick</small></td></tr>
-<tr><td nowrap><small>332081 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>332084 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferProfit.sh</small></td></tr>
-<tr><td nowrap><small>332085 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>332134 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>372292 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh</small></td></tr>
+<tr><td nowrap><small>373485 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 10</small></td></tr>
+<tr><td nowrap><small>373486 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>373488 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferProfit.sh</small></td></tr>
+<tr><td nowrap><small>373489 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>373546 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>373548 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -5110,318 +5110,6 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/
   "status": "already running"<br>
 }<br>
 --------- Restarted 17 bots....<br>
-"Finished at: 20240421-053013"<br>
-20240421-053501<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
-service/freqtrade-binance-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
-service/freqtrade-binance-adriana-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
-service/freqtrade-binance-fouzi unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
-service/freqtrade-binance-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
-service/freqtrade-binance-futures-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
-service/freqtrade-binance-hassan unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
-service/freqtrade-binance-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
-service/freqtrade-binance-juliano-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
-service/freqtrade-binance-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
-service/freqtrade-binance-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
-service/freqtrade-binance-michael-dry1 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
-service/freqtrade-binance-michael-futures-dry2 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
-service/freqtrade-kraken-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
-service/freqtrade-kraken-hellen unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
-service/freqtrade-kraken-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
-service/freqtrade-kraken-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
-service/freqtrade-kraken-stieves unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
---------- Restarted 17 bots....<br>
-"Finished at: 20240421-053513"<br>
-20240421-054001<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
-service/freqtrade-binance-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
-service/freqtrade-binance-adriana-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
-service/freqtrade-binance-fouzi unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
-service/freqtrade-binance-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
-service/freqtrade-binance-futures-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
-service/freqtrade-binance-hassan unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
-service/freqtrade-binance-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
-service/freqtrade-binance-juliano-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
-service/freqtrade-binance-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
-service/freqtrade-binance-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
-service/freqtrade-binance-michael-dry1 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
-service/freqtrade-binance-michael-futures-dry2 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
-service/freqtrade-kraken-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
-service/freqtrade-kraken-hellen unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
-service/freqtrade-kraken-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
-service/freqtrade-kraken-michael unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
-service/freqtrade-kraken-stieves unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
---------- Restarted 17 bots....<br>
 "Finished at: 20240421-054015"<br>
 20240421-054501<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
@@ -5579,18 +5267,676 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/
 }<br>
 --------- Restarted 17 bots....<br>
 "Finished at: 20240421-054514"<br>
+20240421-055001<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
+service/freqtrade-binance-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
+service/freqtrade-binance-adriana-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
+service/freqtrade-binance-fouzi unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
+service/freqtrade-binance-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
+service/freqtrade-binance-futures-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
+service/freqtrade-binance-hassan unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
+service/freqtrade-binance-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
+service/freqtrade-binance-juliano-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
+service/freqtrade-binance-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
+service/freqtrade-binance-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
+service/freqtrade-binance-michael-dry1 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
+service/freqtrade-binance-michael-futures-dry2 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
+service/freqtrade-kraken-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
+service/freqtrade-kraken-hellen unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
+service/freqtrade-kraken-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
+service/freqtrade-kraken-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
+service/freqtrade-kraken-stieves unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+--------- Restarted 17 bots....<br>
+"Finished at: 20240421-055014"<br>
+20240421-055501<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
+service/freqtrade-binance-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
+service/freqtrade-binance-adriana-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
+service/freqtrade-binance-fouzi unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
+service/freqtrade-binance-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
+service/freqtrade-binance-futures-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
+service/freqtrade-binance-hassan unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
+service/freqtrade-binance-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
+service/freqtrade-binance-juliano-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
+service/freqtrade-binance-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael pipe kubectl apply -f - -n binance-michael<br>
+service/freqtrade-binance-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
+service/freqtrade-binance-michael-dry1 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
+service/freqtrade-binance-michael-futures-dry2 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
+service/freqtrade-kraken-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-hellen POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-hellen-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-hellen pipe kubectl apply -f - -n kraken-hellen<br>
+service/freqtrade-kraken-hellen unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32328/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
+service/freqtrade-kraken-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-michael-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-michael pipe kubectl apply -f - -n kraken-michael<br>
+service/freqtrade-kraken-michael unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-stieves POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-stieves pipe kubectl apply -f - -n kraken-stieves<br>
+service/freqtrade-kraken-stieves unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+--------- Restarted 17 bots....<br>
+"Finished at: 20240421-055514"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot kraken-michael with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32329/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot kraken-stieves with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/status<br>
+"Finished at 20240421-055324"<br>
+20240421-055401<br>
+Running Take Profit already? RUNNING=<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Transfering to FUNDING/FUTURES Wallet<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+Remove old backups<br>
+Minium Profit to take 10<br>
+Backup takeprofit.allbots to takeprofit.allbots.20240421055401<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 22 with PAIR=BTC/USDT because profit absolut 1.46 is less then profit to take 5[0m<br>
+[33mAdd tradeid 22 with PAIR=BTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:54:02 PAIR=BTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=22 PROFIT_ABS=1.46 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 23 with PAIR=IOTA/USDT because profit absolut -12.01 is less then profit to take 5[0m<br>
+[33mAdd tradeid 23 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:54:04 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=23 PROFIT_ABS=-12.01 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 24 with PAIR=ALGO/USDT because profit absolut -13.83 is less then profit to take 5[0m<br>
+[33mAdd tradeid 24 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:54:05 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=24 PROFIT_ABS=-13.83 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 25 with PAIR=XLM/USDT because profit absolut -6.88 is less then profit to take 5[0m<br>
+[33mAdd tradeid 25 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:54:07 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=25 PROFIT_ABS=-6.88 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 26 with PAIR=XRP/USDT because profit absolut -8.68 is less then profit to take 5[0m<br>
+[33mAdd tradeid 26 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:54:08 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=26 PROFIT_ABS=-8.68 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-futures with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/status<br>
+setBotVariables binance-futures<br>
+[33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
+[34mChecking Stake Sum 11812.2257701 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 11812.2257701 is greater than 2000, leaving PROFIT_TO_TAKE=10 as is[0m<br>
+[31mIgnoring tradeid 149 with PAIR=LTC/USDT because profit absolut -172.37 is less then profit to take 10[0m<br>
+[33mAdd tradeid 149 with PAIR=LTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:54:58 PAIR=LTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=149 PROFIT_ABS=-172.37 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-hassan with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-juliano with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/status<br>
+setBotVariables binance-juliano-futures<br>
+[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+20240421-055501<br>
+Running Take Profit already? RUNNING=msantana  360885  360881  0 05:54 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 10<br>
+msantana  365931  360885  0 05:55 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 10<br>
+[31mTake Profit already running, exiting[0m<br>
+"Finished at 20240421-055501"<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
+[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 2 with PAIR=ALGO/USDT because profit absolut -7.74 is less then profit to take 5[0m<br>
+[33mAdd tradeid 2 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:55:01 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=2 PROFIT_ABS=-7.74 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+setBotVariables binance-juliano-futures<br>
+[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
+[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 3 with PAIR=XLM/USDT because profit absolut -3.65 is less then profit to take 5[0m<br>
+[33mAdd tradeid 3 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:55:03 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=3 PROFIT_ABS=-3.65 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+setBotVariables binance-juliano-futures<br>
+[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
+[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 4 with PAIR=XRP/USDT because profit absolut -4.98 is less then profit to take 5[0m<br>
+[33mAdd tradeid 4 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:55:05 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=4 PROFIT_ABS=-4.98 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+setBotVariables binance-juliano-futures<br>
+[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
+[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
+[31mIgnoring tradeid 5 with PAIR=IOTA/USDT because profit absolut 0.15 is less then profit to take 5[0m<br>
+[33mAdd tradeid 5 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:55:07 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=5 PROFIT_ABS=0.15 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-larissa with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-michael with ForceExit with Minimum Profit of 10<br>
+-----------------------------------------------------------------------<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/status<br>
+setBotVariables binance-michael<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 794.0184055516 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 794.0184055516 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
+[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
+[31mIgnoring tradeid 11 with PAIR=ENA/USDT because profit absolut 0.73 is less then profit to take 5[0m<br>
+[33mAdd tradeid 11 with PAIR=ENA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:55:09 PAIR=ENA/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=11 PROFIT_ABS=0.73 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+setBotVariables binance-michael<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
+[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
+[31mIgnoring tradeid 12 with PAIR=XLM/USDT because profit absolut -0.14 is less then profit to take 5[0m<br>
+[33mAdd tradeid 12 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:55:11 PAIR=XLM/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=12 PROFIT_ABS=-0.14 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+setBotVariables binance-michael<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
+[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
 [31mIgnoring tradeid 13 with PAIR=FDUSD/USDT because profit absolut 0.00 is less then profit to take 5[0m<br>
 [33mAdd tradeid 13 with PAIR=FDUSD/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-21:05:46:10 PAIR=FDUSD/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=13 PROFIT_ABS=0.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-21:05:55:13 PAIR=FDUSD/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=13 PROFIT_ABS=0.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-michael<br>
 [33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-michael is spot[0m<br>
@@ -5598,12 +5944,12 @@ setBotVariables binance-michael<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 794.0184055516 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 794.0184055516 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
-[31mIgnoring tradeid 14 with PAIR=DOGE/USDT because profit absolut 0.57 is less then profit to take 5[0m<br>
+[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
+[31mIgnoring tradeid 14 with PAIR=DOGE/USDT because profit absolut 0.70 is less then profit to take 5[0m<br>
 [33mAdd tradeid 14 with PAIR=DOGE/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-21:05:46:12 PAIR=DOGE/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=14 PROFIT_ABS=0.57 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-21:05:55:15 PAIR=DOGE/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=14 PROFIT_ABS=0.70 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 setBotVariables binance-michael<br>
 [33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-michael is spot[0m<br>
@@ -5611,16 +5957,19 @@ setBotVariables binance-michael<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 794.0184055516 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 794.0184055516 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
-[31mIgnoring tradeid 15 with PAIR=BTC/USDT because profit absolut 0.19 is less then profit to take 5[0m<br>
+[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
+[31mIgnoring tradeid 15 with PAIR=BTC/USDT because profit absolut 0.15 is less then profit to take 5[0m<br>
 [33mAdd tradeid 15 with PAIR=BTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-21:05:46:13 PAIR=BTC/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=15 PROFIT_ABS=0.19 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-21:05:55:16 PAIR=BTC/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=15 PROFIT_ABS=0.15 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
 -----------------------------------------------------------------------<br>
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-michael-dry1 with ForceExit with Minimum Profit of 10<br>
@@ -5628,6 +5977,19 @@ Trying Taking Profit for Bot binance-michael-dry1 with ForceExit with Minimum Pr
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/status<br>
+setBotVariables binance-michael-dry1<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-michael-dry1 is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/balance<br>
+[34mChecking Stake Sum 499924969.84907866 for bot binance-michael-dry1 between thresholds bottom=500, mid=2000[0m<br>
+[34mStake sum 499924969.84907866 is greater than 2000, leaving PROFIT_TO_TAKE=10 as is[0m<br>
+[31mIgnoring tradeid 40 with PAIR=FDUSD/USDT because profit absolut -18000.00 is less then profit to take 10[0m<br>
+[33mAdd tradeid 40 with PAIR=FDUSD/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-21:05:55:18 PAIR=FDUSD/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael-dry1 TRADEID=40 PROFIT_ABS=-18000.00 API_KEY=0 API_SECRET=0<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -5712,8 +6074,8 @@ Trying Taking Profit for Bot kraken-stieves with ForceExit with Minimum Profit o
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/status<br>
-"Finished at 20240421-054617"<br>
-20240421-054701<br>
+"Finished at 20240421-055522"<br>
+20240421-055601<br>
 Running Take Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -5721,374 +6083,21 @@ Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Trans
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take 10<br>
-Backup takeprofit.allbots to takeprofit.allbots.20240421054701<br>
-cp: cannot create regular file 'takeprofit.allbots.20240421054701': File exists<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-adriana with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status<br>
-setBotVariables binance-adriana-futures<br>
-[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 22 with PAIR=BTC/USDT because profit absolut 1.30 is less then profit to take 5[0m<br>
-[33mAdd tradeid 22 with PAIR=BTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:03 PAIR=BTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=22 PROFIT_ABS=1.30 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
-setBotVariables binance-adriana-futures<br>
-[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 23 with PAIR=IOTA/USDT because profit absolut -11.47 is less then profit to take 5[0m<br>
-[33mAdd tradeid 23 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:04 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=23 PROFIT_ABS=-11.47 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
-setBotVariables binance-adriana-futures<br>
-[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 24 with PAIR=ALGO/USDT because profit absolut -13.33 is less then profit to take 5[0m<br>
-[33mAdd tradeid 24 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:06 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=24 PROFIT_ABS=-13.33 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
-setBotVariables binance-adriana-futures<br>
-[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 25 with PAIR=XLM/USDT because profit absolut -6.57 is less then profit to take 5[0m<br>
-[33mAdd tradeid 25 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:07 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=25 PROFIT_ABS=-6.57 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
-setBotVariables binance-adriana-futures<br>
-[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
-[34mChecking Stake Sum 180.94626741000002 for bot binance-adriana-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 180.94626741000002 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 26 with PAIR=XRP/USDT because profit absolut -8.36 is less then profit to take 5[0m<br>
-[33mAdd tradeid 26 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:09 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=26 PROFIT_ABS=-8.36 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/status<br>
-setBotVariables binance-futures<br>
-[33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
-[34mChecking Stake Sum 11812.2257701 for bot binance-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 11812.2257701 is greater than 2000, leaving PROFIT_TO_TAKE=10 as is[0m<br>
-[31mIgnoring tradeid 149 with PAIR=LTC/USDT because profit absolut -168.63 is less then profit to take 10[0m<br>
-[33mAdd tradeid 149 with PAIR=LTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:11 PAIR=LTC/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=149 PROFIT_ABS=-168.63 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-hassan with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/status<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 2 with PAIR=ALGO/USDT because profit absolut -7.57 is less then profit to take 5[0m<br>
-[33mAdd tradeid 2 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:15 PAIR=ALGO/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=2 PROFIT_ABS=-7.57 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 3 with PAIR=XLM/USDT because profit absolut -3.59 is less then profit to take 5[0m<br>
-[33mAdd tradeid 3 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:16 PAIR=XLM/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=3 PROFIT_ABS=-3.59 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 4 with PAIR=XRP/USDT because profit absolut -4.85 is less then profit to take 5[0m<br>
-[33mAdd tradeid 4 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:18 PAIR=XRP/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=4 PROFIT_ABS=-4.85 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[34mChecking Stake Sum 105.46346087 for bot binance-juliano-futures between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 105.46346087 is less than 500, set PROFIT_TO_TAKE=5[0m<br>
-[31mIgnoring tradeid 5 with PAIR=IOTA/USDT because profit absolut 0.27 is less then profit to take 5[0m<br>
-[33mAdd tradeid 5 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:19 PAIR=IOTA/USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=5 PROFIT_ABS=0.27 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-larissa with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-michael with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/status<br>
-setBotVariables binance-michael<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
-[31mIgnoring tradeid 11 with PAIR=ENA/USDT because profit absolut 0.36 is less then profit to take 5[0m<br>
-[33mAdd tradeid 11 with PAIR=ENA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:41 PAIR=ENA/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=11 PROFIT_ABS=0.36 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-setBotVariables binance-michael<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
-[31mIgnoring tradeid 12 with PAIR=XLM/USDT because profit absolut -0.14 is less then profit to take 5[0m<br>
-[33mAdd tradeid 12 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:43 PAIR=XLM/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=12 PROFIT_ABS=-0.14 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-setBotVariables binance-michael<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
-[31mIgnoring tradeid 13 with PAIR=FDUSD/USDT because profit absolut 0.00 is less then profit to take 5[0m<br>
-[33mAdd tradeid 13 with PAIR=FDUSD/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:44 PAIR=FDUSD/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=13 PROFIT_ABS=0.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-setBotVariables binance-michael<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
-[31mIgnoring tradeid 14 with PAIR=DOGE/USDT because profit absolut 0.52 is less then profit to take 5[0m<br>
-[33mAdd tradeid 14 with PAIR=DOGE/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:46 PAIR=DOGE/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=14 PROFIT_ABS=0.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-setBotVariables binance-michael<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-michael is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32326/api/v1/balance<br>
-[34mChecking Stake Sum 791.7812515898 for bot binance-michael between thresholds bottom=500, mid=2000[0m<br>
-[34mStake sum 791.7812515898 is between 500 and 2000, set PROFIT_TO_TAKE to half 5[0m<br>
-[31mIgnoring tradeid 15 with PAIR=BTC/USDT because profit absolut 0.16 is less then profit to take 5[0m<br>
-[33mAdd tradeid 15 with PAIR=BTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-21:05:47:47 PAIR=BTC/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=15 PROFIT_ABS=0.16 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-michael-dry1 with ForceExit with Minimum Profit of 10<br>
------------------------------------------------------------------------<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/status<br>
-setBotVariables binance-michael-dry1<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-michael-dry1 is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/balance<br>
-20240421-054801<br>
-Running Take Profit already? RUNNING=msantana  325703  325695  0 05:47 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 10<br>
-msantana  331018  325703  0 05:47 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 10<br>
-[31mTake Profit already running, exiting[0m<br>
-"Finished at 20240421-054801"<br>
+Backup takeprofit.allbots to takeprofit.allbots.20240421055601<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+...........................................................................................................................................................................................................................done.<br><br>
+"Finished at 20240410-150049"<br><br>
+20240410-200001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-10-04-2024-20-00...<br><br>
+...........................................................................................................................................................................................................done.<br><br>
+"Finished at 20240410-200045"<br><br>
+20240411-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-11-04-2024-00-00...<br><br>
+.........................................................................................................................................................................................................done.<br><br>
 "Finished at 20240411-000050"<br><br>
 20240411-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-11-04-2024-05-00...<br><br>
@@ -6228,7 +6237,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-17-04-2024-20-00...<br><br>
 "Finished at 20240417-200041"<br><br>
 20240418-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-18-04-2024-00-00...<br><br>
-............................................................................................................................................................................................................................................done.<br><br>
+......................................................................................................................................................................................................................<br>
+.......................done.<br><br>
 "Finished at 20240418-000052"<br><br>
 20240418-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-18-04-2024-05-00...<br><br>
@@ -6260,8 +6270,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-19-04-2024-10-00...<br><br>
 "Finished at 20240419-100044"<br><br>
 20240419-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-19-04-2024-15-00...<br><br>
-..........................................100  599k  100  599k    0     0   319k      0  0:00:01  0:00:01 --:--:--  319k<br>
-.....................................................................................................................................................................................done.<br><br>
+...............................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240419-150049"<br><br>
 20240419-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-19-04-2024-20-00...<br><br>
@@ -6277,7 +6286,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-20-04-2024-05-00...<br><br>
 "Finished at 20240420-050048"<br><br>
 20240420-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-20-04-2024-10-00...<br><br>
-.................................................................................................................................................................................................................................................................................done.<br><br>
+..............................................................................................................................................................100  570k  100  570k    0     0   301k      0  0:00:01  0:00:01 --:--:--  301k<br>
+...................................................................................................................done.<br><br>
 "Finished at 20240420-100100"<br><br>
 20240420-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-20-04-2024-15-00...<br><br>
@@ -6296,312 +6306,294 @@ Creating snapshot(s) snapshot-wirsinddieguten-21-04-2024-05-00...<br><br>
 ....................................................................................................................................................................................................done.<br><br>
 "Finished at 20240421-050044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 21 05:47 /tmp/tmp.OaF2LWgMpj<br>
-...................................................................................................................done.<br><br>
+-rw------- 1 msantana msantana 0 Apr 21 05:55 /tmp/tmp.JFRjGr0wqM<br>
+...............................................................................................................................done.<br><br>
 "Finished at 20240421-000044"<br><br>
 20240421-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-21-04-2024-05-00...<br><br>
 ....................................................................................................................................................................................................done.<br><br>
 "Finished at 20240421-050044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 21 05:47 /tmp/tmp.OaF2LWgMpj<br>
+-rw------- 1 msantana msantana 0 Apr 21 05:55 /tmp/tmp.JFRjGr0wqM<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240421-054707"<br>
-Length: 640,723 [619,731 to go]<br>
-       [ skipped 20K ]<br>
-   0K ,,,,,,,,,, ,,,,,,,,,, ,.....<br>
-05:47:08 (dsTrading.logs.html) - `686.6K/s' [640723]<br>
+"Finished at: 20240421-055507"<br>
+05:55:07 (dsTrading.logs.html) - `125.5K/s' [650385]<br>
 <br>
-Length: 650,385 [608,401 to go]<br>
-       [ skipped 41K ]<br>
-   0K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,......<br>
-05:47:09 (dsTrading.logs.html) - `570.6K/s' [650385]<br>
+Length: 640,723 [584,915 to go]<br>
+       [ skipped 54K ]<br>
+   50K ,,,,,..... <br>
+05:55:08 (dsTrading.logs.html) - `715.9K/s' [640723]<br>
 <br>
-Length: 640,723 [27,859 to go]<br>
-       [ skipped 598K ]<br>
-  550K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,.  98% 686.6K/s<br>
-  618K <br>
-05:47:10 (dsTrading.logs.html) - `55.48K/s' [640723]<br>
+Length: 650,385 [538,769 to go]<br>
+       [ skipped 109K ]<br>
+  100K ,,,,,,,,,. ....<br>
+05:55:09 (dsTrading.logs.html) - `592.6K/s' [650385]<br>
 <br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:10 (dsTrading.logs.html) - ` 3.74K/s' [650385]<br>
+Length: 640,723 [58,067 to go]<br>
+       [ skipped 569K ]<br>
+  550K ,,,,,,,,,, ,,,,,,,,,. <br>
+05:55:10 (dsTrading.logs.html) - `97.85K/s' [640723]<br>
 <br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:11 (dsTrading.logs.html) - ` 3.83K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:12 (dsTrading.logs.html) - ` 3.74K/s' [650385]<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:11 (dsTrading.logs.html) - ` 4.25K/s' [650385]<br>
 <br>
 Length: 640,723<br>
-    0K ......<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:13 (dsTrading.logs.html) - `757.1K/s' [640723]<br>
+    0K ....Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.05:55:12 (dsTrading.logs.html) - ` 4.25K/s' [650385]<br>
 <br>
-05:47:13 (dsTrading.logs.html) - ` 4.19K/s' [650385]<br>
 <br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:15 (dsTrading.logs.html) - ` 4.19K/s' [650385]<br>
+05:55:12 (dsTrading.logs.html) - `699.5K/s' [640723]<br>
 <br>
-05:47:15 (dsTrading.logs.html) - ` 4.19K/s' [640723]<br>
+Length: 650,385 [285,329 to go]<br>
+       [ skipped 356K ]<br>
+  350K ,,,,,,,.Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.05:55:14 (dsTrading.logs.html) - ` 4.28K/s' [640723]<br>
 <br>
-Length: 650,385<br>
-    0K Length: 640,723<br>
-    0K ...........<br>
-.<br>
-05:47:17 (dsTrading.logs.html) - `696.0K/s' [650385]<br>
-<br>
-05:47:17 (dsTrading.logs.html) - `710.5K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:19 (dsTrading.logs.html) - ` 4.04K/s' [650385]<br>
-<br>
-05:47:19 (dsTrading.logs.html) - ` 3.97K/s' [640723]<br>
-<br>
-Length: 650,385<br>
-    0K .Length: 640,723<br>
-    0K ......<br>
-..05:47:21 (dsTrading.logs.html) - `667.5K/s' [650385]<br>
-<br>
-.<br>
-05:47:21 (dsTrading.logs.html) - `714.2K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:22 (dsTrading.logs.html) - ` 3.73K/s' [650385]<br>
-<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:23 (dsTrading.logs.html) - ` 3.82K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:24 (dsTrading.logs.html) - ` 3.81K/s' [650385]<br>
+. .<br>
+05:55:14 (dsTrading.logs.html) - `404.1K/s' [650385]<br>
 <br>
 Length: 640,723<br>
-    0K .....<br>
-05:47:25 (dsTrading.logs.html) - `643.2K/s' [640723]<br>
+    0K ..Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.05:55:16 (dsTrading.logs.html) - ` 3.82K/s' [650385]<br>
 <br>
-Length: 650,385 [649,873 to go]<br>
-       [ skipped 0K ]<br>
-    0K ,.....<br>
-05:47:26 (dsTrading.logs.html) - `668.1K/s' [650385]<br>
+..<br>
+05:55:16 (dsTrading.logs.html) - `714.1K/s' [640723]<br>
 <br>
-Length: 640,723<br>
-    0K .....<br>
-05:47:27 (dsTrading.logs.html) - `665.0K/s' [640723]<br>
+Length: 650,385 [470,673 to go]<br>
+       [ skipped 175K ]<br>
+  150K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,..Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.05:55:18 (dsTrading.logs.html) - ` 3.91K/s' [640723]<br>
 <br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:28 (dsTrading.logs.html) - ` 3.83K/s' [650385]<br>
-<br>
-Length: 640,723<br>
-    0K ....Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-.<br>
-05:47:29 (dsTrading.logs.html) - ` 3.73K/s' [650385]<br>
-<br>
-05:47:29 (dsTrading.logs.html) - `776.1K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:31 (dsTrading.logs.html) - ` 3.83K/s' [650385]<br>
-<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:31 (dsTrading.logs.html) - ` 3.73K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:32 (dsTrading.logs.html) - ` 3.74K/s' [650385]<br>
+. <br>
+05:55:18 (dsTrading.logs.html) - `504.0K/s' [650385]<br>
 <br>
 Length: 640,723<br>
-    0K ......<br>
-05:47:33 (dsTrading.logs.html) - `710.0K/s' [640723]<br>
-<br>
-Length: 650,385 [649,873 to go]<br>
-       [ skipped 0K ]<br>
-    0K ,.....<br>
-Length: 640,723<br>
-    0K 05:47:34 (dsTrading.logs.html) - `708.1K/s' [650385]<br>
-<br>
-.....<br>
-05:47:35 (dsTrading.logs.html) - `776.2K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:36 (dsTrading.logs.html) - ` 3.75K/s' [650385]<br>
-<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:37 (dsTrading.logs.html) - ` 4.19K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:37 (dsTrading.logs.html) - ` 3.82K/s' [650385]<br>
-<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:38 (dsTrading.logs.html) - ` 3.83K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:39 (dsTrading.logs.html) - ` 3.82K/s' [650385]<br>
-<br>
-Length: 640,723<br>
-    0K .....<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:41 (dsTrading.logs.html) - `711.7K/s' [640723]<br>
-<br>
-05:47:41 (dsTrading.logs.html) - ` 3.75K/s' [650385]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:42 (dsTrading.logs.html) - ` 3.82K/s' [650385]<br>
-<br>
-05:47:42 (dsTrading.logs.html) - ` 3.83K/s' [640723]<br>
-<br>
-Length: 650,385<br>
-    0K .Length: 640,723<br>
-    0K ........<br>
-.05:47:44 (dsTrading.logs.html) - `777.4K/s' [650385]<br>
-<br>
-.<br>
-05:47:44 (dsTrading.logs.html) - `712.7K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:46 (dsTrading.logs.html) - ` 4.16K/s' [650385]<br>
-<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:46 (dsTrading.logs.html) - ` 4.18K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:47 (dsTrading.logs.html) - ` 3.83K/s' [650385]<br>
-<br>
-Length: 640,723<br>
-    0K ......<br>
-05:47:48 (dsTrading.logs.html) - `779.6K/s' [640723]<br>
-<br>
-Length: 650,385 [649,873 to go]<br>
-       [ skipped 0K ]<br>
-    0K ,.....<br>
-Length: 640,723<br>
-    0K 05:47:49 (dsTrading.logs.html) - `688.8K/s' [650385]<br>
-<br>
-.....<br>
-05:47:50 (dsTrading.logs.html) - `593.9K/s' [640723]<br>
-<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:51 (dsTrading.logs.html) - ` 4.18K/s' [650385]<br>
-<br>
-Length: 640,723<br>
-    0K ...Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-.05:47:52 (dsTrading.logs.html) - ` 4.18K/s' [650385]<br>
-<br>
-.<br>
-05:47:53 (dsTrading.logs.html) - `710.8K/s' [640723]<br>
-<br>
-Length: 650,385 [245,393 to go]<br>
-       [ skipped 395K ]<br>
-  350K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,..Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-.<br>
-05:47:54 (dsTrading.logs.html) - ` 4.20K/s' [640723]<br>
-<br>
-05:47:54 (dsTrading.logs.html) - `309.0K/s' [650385]<br>
-<br>
-Length: 640,723<br>
-    0K ..Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-.05:47:56 (dsTrading.logs.html) - ` 3.83K/s' [650385]<br>
+    0K ...Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.05:55:19 (dsTrading.logs.html) - ` 4.28K/s' [650385]<br>
 <br>
 ...<br>
-05:47:56 (dsTrading.logs.html) - `680.0K/s' [640723]<br>
+05:55:20 (dsTrading.logs.html) - `716.9K/s' [640723]<br>
 <br>
-Length: 650,385 [567,953 to go]<br>
-       [ skipped 80K ]<br>
-   50K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,....<br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:47:58 (dsTrading.logs.html) - ` 3.83K/s' [640723]<br>
+Length: 650,385 [471,697 to go]<br>
+       [ skipped 174K ]<br>
+  150K ,,,,,,,,,, ,,,,,,,,,, ,,,,,...Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.<br>
+05:55:21 (dsTrading.logs.html) - ` 3.91K/s' [640723]<br>
 <br>
-05:47:58 (dsTrading.logs.html) - `598.6K/s' [650385]<br>
+05:55:22 (dsTrading.logs.html) - `504.3K/s' [650385]<br>
 <br>
-Length: 640,723 [6,867 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-Length: 650,385 [16,529 to go]<br>
-       [ skipped 619K ]<br>
-  600K ,,,,,,,,,, ,,,,,,,,,<br>
-05:48:00 (dsTrading.logs.html) - ` 3.84K/s' [640723]<br>
+Length: 640,723<br>
+    0K ..Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.05:55:23 (dsTrading.logs.html) - ` 3.81K/s' [650385]<br>
 <br>
-05:48:00 (dsTrading.logs.html) - ` 3.82K/s' [650385]<br>
+..<br>
+05:55:24 (dsTrading.logs.html) - `603.6K/s' [640723]<br>
+<br>
+Length: 650,385 [516,753 to go]<br>
+       [ skipped 130K ]<br>
+  100K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,....<br>
+Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:25 (dsTrading.logs.html) - `620.4K/s' [650385]<br>
+<br>
+05:55:25 (dsTrading.logs.html) - ` 4.27K/s' [640723]<br>
 <br>
 Length: 650,385<br>
     0K Length: 640,723<br>
-    0K 20240421-054801<br>
+    0K .........<br>
+.<br>
+05:55:27 (dsTrading.logs.html) - `714.8K/s' [650385]<br>
+<br>
+05:55:27 (dsTrading.logs.html) - `716.4K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:29 (dsTrading.logs.html) - ` 3.83K/s' [650385]<br>
+<br>
+Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:29 (dsTrading.logs.html) - ` 3.91K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+Length: 640,723<br>
+    0K 05:55:30 (dsTrading.logs.html) - ` 3.91K/s' [650385]<br>
+<br>
+.....<br>
+05:55:31 (dsTrading.logs.html) - `785.4K/s' [640723]<br>
+<br>
+Length: 650,385 [649,873 to go]<br>
+       [ skipped 0K ]<br>
+    0K ,.......<br>
+Length: 640,723 [640,211 to go]<br>
+       [ skipped 0K ]<br>
+    0K ,05:55:33 (dsTrading.logs.html) - `697.4K/s' [650385]<br>
+<br>
+.....<br>
+05:55:34 (dsTrading.logs.html) - `641.0K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:34 (dsTrading.logs.html) - ` 4.27K/s' [650385]<br>
+<br>
+Length: 640,723<br>
+    0K ....Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.<br>
+05:55:36 (dsTrading.logs.html) - ` 4.17K/s' [650385]<br>
+<br>
+05:55:36 (dsTrading.logs.html) - `716.5K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:37 (dsTrading.logs.html) - ` 3.91K/s' [650385]<br>
+<br>
+Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:37 (dsTrading.logs.html) - ` 3.82K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:39 (dsTrading.logs.html) - ` 3.90K/s' [650385]<br>
+<br>
+Length: 640,723<br>
+    0K .....<br>
+05:55:40 (dsTrading.logs.html) - `717.6K/s' [640723]<br>
+<br>
+Length: 650,385 [649,873 to go]<br>
+       [ skipped 0K ]<br>
+    0K ,.....<br>
+Length: 640,723<br>
+    0K 05:55:41 (dsTrading.logs.html) - `633.2K/s' [650385]<br>
+<br>
+.....<br>
+05:55:42 (dsTrading.logs.html) - `658.7K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:43 (dsTrading.logs.html) - ` 3.82K/s' [650385]<br>
+<br>
+Length: 640,723<br>
+    0K .....<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:44 (dsTrading.logs.html) - `712.8K/s' [640723]<br>
+<br>
+05:55:44 (dsTrading.logs.html) - ` 3.74K/s' [650385]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:46 (dsTrading.logs.html) - ` 3.89K/s' [650385]<br>
+<br>
+05:55:46 (dsTrading.logs.html) - ` 3.81K/s' [640723]<br>
+<br>
+Length: 650,385<br>
+    0K Length: 640,723<br>
+    0K .........<br>
+.<br>
+05:55:48 (dsTrading.logs.html) - `714.1K/s' [650385]<br>
+<br>
+05:55:48 (dsTrading.logs.html) - `695.2K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:49 (dsTrading.logs.html) - ` 4.25K/s' [650385]<br>
+<br>
+Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:50 (dsTrading.logs.html) - ` 3.80K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:51 (dsTrading.logs.html) - ` 4.27K/s' [650385]<br>
+<br>
+Length: 640,723<br>
+    0K ......<br>
+05:55:52 (dsTrading.logs.html) - `672.5K/s' [640723]<br>
+<br>
+Length: 650,385 [649,873 to go]<br>
+       [ skipped 0K ]<br>
+    0K ,.....<br>
+05:55:53 (dsTrading.logs.html) - `660.4K/s' [650385]<br>
+<br>
+Length: 640,723<br>
+    0K .....<br>
+05:55:54 (dsTrading.logs.html) - `717.5K/s' [640723]<br>
+<br>
+Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+05:55:55 (dsTrading.logs.html) - ` 4.27K/s' [650385]<br>
+<br>
+Length: 640,723<br>
+    0K ...Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.05:55:56 (dsTrading.logs.html) - ` 3.82K/s' [650385]<br>
+<br>
+.<br>
+05:55:56 (dsTrading.logs.html) - `617.2K/s' [640723]<br>
+<br>
+Length: 650,385 [346,769 to go]<br>
+       [ skipped 296K ]<br>
+  250K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,..Length: 640,723 [2,259 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+.  67%  3.82K/s<br>
+  429K 05:55:58 (dsTrading.logs.html) - ` 4.28K/s' [640723]<br>
+<br>
+.<br>
+05:55:58 (dsTrading.logs.html) - `452.1K/s' [650385]<br>
+<br>
+Length: 640,723<br>
+    0K .Length: 650,385 [11,921 to go]<br>
+       [ skipped 623K ]<br>
+  600K ,,,,,,,,,, ,,,,,,,,,, ,,,,<br>
+..05:56:00 (dsTrading.logs.html) - ` 3.77K/s' [650385]<br>
+<br>
+....<br>
+05:56:00 (dsTrading.logs.html) - `699.3K/s' [640723]<br>
+<br>
+20240421-055601<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-[0;32m-------------------------------------------------------[0m<br>
-[0;32mProcessing Bot binance-futures[0m<br>
-[0;32m-------------------------------------------------------[0m<br>
-AVAILABLE_CAPITAL=12000<br>
-[33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures is futures[0m<br>
-SUM_BALANCE_USDT=dsTradingGetCurrencyField.sh binance-futures USDT .est_stake<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
 service/freqtrade-binance-futures unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -6661,6 +6653,10 @@ AVAILABLE_CAPITAL=221<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
 SUM_BALANCE_USDT=dsTradingGetCurrencyField.sh binance-juliano-futures USDT .est_stake<br>
+20240421-055301<br>
+Running Transfer Profit already? RUNNING=msantana  355265  355264  0 05:52 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferProfit.sh<br>
+[31mTransfer Profit already running, exiting[0m<br>
+Finished at 20240421-055301<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
 service/freqtrade-binance-juliano-futures unchanged<br>
@@ -6711,8 +6707,8 @@ helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-mic
 service/freqtrade-binance-michael-dry1 unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/balance<br>
-SUM_BALANCE_USDT=0.00<br>
-[33mSum Balance USDT 0.00 is less or equal than available capital 500000000.00, doing nothing[0m<br>
+SUM_BALANCE_USDT=490924069.65<br>
+[33mSum Balance USDT 490924069.65 is less or equal than available capital 500000000.00, doing nothing[0m<br>
 [0;32m-------------------------------------------------------[0m<br>
 [0;32m-------------------------------------------------------[0m<br>
 [0;32mProcessing Bot binance-michael-futures-dry2[0m<br>
@@ -6803,8 +6799,8 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/balance<br>
 SUM_BALANCE_USDT=0.05<br>
 [33mSum Balance USDT 0.05 is less or equal than available capital 1.00, doing nothing[0m<br>
-Finished at 20240421-054601<br>
-20240421-054701<br>
+Finished at 20240421-055201<br>
+20240421-055401<br>
 Running Transfer Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -6812,7 +6808,7 @@ Starting Script dsTradingTransferProfit.sh: Checking profit with forceexit and T
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take <br>
-Backup .takeprofit/takeprofit.allbots to .takeprofit/takeprofit.allbots.20240421054701<br>
+Backup .takeprofit/takeprofit.allbots to .takeprofit/takeprofit.allbots.20240421055401<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 Checking realized profits in Trades and trying transfering to FUNDING/FUTURES Wallet<br>
@@ -6924,6 +6920,10 @@ helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-jul
 service/freqtrade-binance-juliano unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/balance<br>
+20240421-055501<br>
+Running Transfer Profit already? RUNNING=msantana  360889  360888  0 05:54 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferProfit.sh<br>
+[31mTransfer Profit already running, exiting[0m<br>
+Finished at 20240421-055501<br>
 SUM_BALANCE_USDT=0.00<br>
 [33mSum Balance USDT 0.00 is less or equal than available capital 25.00, doing nothing[0m<br>
 [0;32m-------------------------------------------------------[0m<br>
@@ -7076,8 +7076,8 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255, 
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32322/api/v1/balance<br>
 SUM_BALANCE_USDT=0.05<br>
 [33mSum Balance USDT 0.05 is less or equal than available capital 1.00, doing nothing[0m<br>
-Finished at 20240421-054701<br>
-20240421-054801<br>
+Finished at 20240421-055401<br>
+20240421-055601<br>
 Running Transfer Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -7085,7 +7085,7 @@ Starting Script dsTradingTransferProfit.sh: Checking profit with forceexit and T
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take <br>
-Backup .takeprofit/takeprofit.allbots to .takeprofit/takeprofit.allbots.20240421054801<br>
+Backup .takeprofit/takeprofit.allbots to .takeprofit/takeprofit.allbots.20240421055601<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 Checking realized profits in Trades and trying transfering to FUNDING/FUTURES Wallet<br>
@@ -7332,4 +7332,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-21-04-2024-05-00...<br>
 ....................................................................................................................................................................................................done.<br>
 "Finished at 20240421-050044"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Apr 21 05:48 /tmp/tmp.nrS1VO4Rbk
+-rw------- 1 msantana msantana 0 Apr 21 05:56 /tmp/tmp.8NmIya70kx
