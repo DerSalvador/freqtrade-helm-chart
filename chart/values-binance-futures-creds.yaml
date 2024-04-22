@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32321
 configcreds:
   position_adjustment_enable: false
-  available_capital: 12000 
+  available_capital: 19061
   max_open_trades: 9
   trading_mode: futures
   margin_mode: isolated
@@ -64,8 +64,10 @@ configcreds:
     # - method: ShuffleFilter
   telegram:
     enabled: true
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA" #  "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "1759706931" # "5711830404"
+      #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+      #chat_id: "5711830404"
 
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
