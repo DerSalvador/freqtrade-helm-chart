@@ -65,7 +65,7 @@ config:
   dry_run: false
   dry_run_wallet: 4000
   stake_amount: unlimited
-  position_adjustment_enable: true
+  position_adjustment_enable: false
   trading_mode: spot
   max_open_trades: 3
   amend_last_stake_amount: true

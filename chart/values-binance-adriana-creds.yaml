@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32330
 configcreds:
   available_capital: 100 
+  position_adjustment_enable: false    
   bot_name: freqtrading-binance-adriana
   exchange:
     name: binance
