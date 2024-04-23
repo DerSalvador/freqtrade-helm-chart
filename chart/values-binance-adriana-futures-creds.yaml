@@ -61,6 +61,7 @@ configcreds:
     #   min_rate_of_change: 0.03
     #   refresh_period: 1800
     # - method: ShuffleFilter
+  position_adjustment_enable: false
   telegram:
     enabled: false
     token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
