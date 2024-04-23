@@ -1,0 +1,83 @@
+---
+kubernetes:
+  nodePort: 32321
+configcreds:
+  position_adjustment_enable: false
+  available_capital: 19061
+  max_open_trades: 9
+  trading_mode: futures
+  margin_mode: isolated
+  timeframe: 15m
+  bot_name: freqtrading-binance-futures
+  exchange:
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 1200
+      options:
+        defaultType: future
+        leverage: 100
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 1200
+      options:
+        defaultType: future
+        leverage: 100
+    name: binance
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+  pairlists:
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120      
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   mode: blacklist
+    #   pairlist_url: https://remotepairlist.com?q=3e362027334fd860
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120
+    # - method: AgeFilter
+    #   min_days_listed: 30
+    # - method: PriceFilter
+    #   low_price_ratio: 0.003
+    #   min_price: 50
+    # - method: SpreadFilter
+    #   max_spread_ratio: 0.005
+    # - method: RangeStabilityFilter
+    #   lookback_days: 3
+    #   min_rate_of_change: 0.03
+    #   refresh_period: 1800
+    # - method: ShuffleFilter
+  telegram:
+    enabled: true
+    token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA" #  "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "1759706931" # "5711830404"
+      #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+      #chat_id: "5711830404"
+
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  # Short Trades only
+  strategy_name: DWT_LongShort
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor
