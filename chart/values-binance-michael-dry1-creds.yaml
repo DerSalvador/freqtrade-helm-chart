@@ -10,8 +10,8 @@ configcreds:
   bot_name: freqtrading-binance-michael-dry1
   exchange:
     name: binance
-    key: 
-    secret: 
+    key: ""
+    secret: "" 
   telegram:
     enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
