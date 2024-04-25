@@ -27,7 +27,7 @@ configcreds:
     chat_id: "6274423445"
 bot:
   enabled: true
-  strategy_name: Anomaly
+  strategy_name: NNTC
   freqaimodel: LightGBMRegressor
 
 # image:
