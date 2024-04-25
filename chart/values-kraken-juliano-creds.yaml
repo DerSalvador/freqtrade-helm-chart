@@ -27,7 +27,7 @@ configcreds:
     chat_id: "6274423445"
 bot:
   enabled: true
-  strategy_name: DWT_Leveraged2
+  strategy_name: AlwaysBuy
   freqaimodel: LightGBMRegressor
 
 # image:
