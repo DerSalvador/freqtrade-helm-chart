@@ -91,21 +91,22 @@ config:
     exit: 30
     exit_timeout_count: 0
     unit: minutes
+  order_time_in_force:
+    entry: "FOK" # Fill or Kill ( all or nothinh )
+    exit: "GTC" # Good till canceled (partially filling)
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 800
       options:
         defaultType: spot
         leverage: 10
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 800
       options:
         defaultType: spot
         leverage: 10
-    pair_whitelist_disabled: []
-    pair_blacklist_disabled: []
     pair_blacklist: [
       # Exchange
       "(BNB)/.*",
@@ -131,29 +132,6 @@ config:
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 60
-    # - method: StaticPairList
-    #   processing_mode: append
-    #   mode: blacklist
-    # - method: RemotePairList
-    #   number_assets: 50
-    #   pairlist_url: https://remotepairlist.com?q=ac822c0252729ed2
-    #   processing_mode: append
-    #   mode: blacklist
-    #   sort_key: quoteVolume
-    #   refresh_period: 900
-    #   keep_pairlist_on_failure: true
-    #   read_timeout: 60
-    # - method: AgeFilter
-    #   min_days_listed: 3
-    # - method: PriceFilter
-    #   low_price_ratio: 0.003
-    # - method: SpreadFilter
-    #   max_spread_ratio: 0.008
-    # - method: RangeStabilityFilter
-    #   lookback_days: 3
-    #   min_rate_of_change: 0.03
-    #   refresh_period: 1800
-    # - method: ShuffleFilter
   freqai:
     rl_config:
       train_cycles: 25
