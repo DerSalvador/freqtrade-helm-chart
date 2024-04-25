@@ -11,13 +11,13 @@ configcreds:
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 800
       options:
         defaultType: future
         leverage: 100
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 1200
+      rateLimit: 800
       options:
         defaultType: future
         leverage: 100
