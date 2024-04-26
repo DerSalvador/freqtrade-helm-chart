@@ -14,6 +14,7 @@ configcreds:
     enabled: true
     token: "6720698140:AAHZpVP9AJWeaaSQdL5g9eoP1AqK5z3fo7k"
     chat_id: "631010653"
+  position_adjustment_enable: false      
   freqai:
     rl_config:
       train_cycles: 25
