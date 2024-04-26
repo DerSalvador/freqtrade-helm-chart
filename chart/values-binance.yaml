@@ -34,8 +34,8 @@ config:
     "40160": 0.09
     "80160": 0
   timeframe: 5m
-  stoploss: -0.10
-  trailing_stop: true
+  stoploss: -0.99
+  trailing_stop: false
   trailing_only_offset_is_reached: true
   trailing_stop_positive: 0.01
   trailing_stop_positive_offset: 0.03
@@ -47,7 +47,7 @@ config:
   process_only_new_candles: true
   # These values can be overridden in the "ask_strategy" section in the config.
   use_exit_signal: false
-  exit_profit_only: true
+  exit_profit_only: false
   ignore_roi_if_entry_signal: true
   # Number of candles the strategy requires before producing valid signals
   startup_candle_count: 800
