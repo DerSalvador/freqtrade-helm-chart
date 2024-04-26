@@ -29,7 +29,7 @@ nostalgiaforinfinity:
 config:
   trading_mode: spot
   minimal_roi:
-    "0": 0.9
+    "0": 0.5
     "40160": 0.09
     "80160": 0  
   timeframe: 5m
