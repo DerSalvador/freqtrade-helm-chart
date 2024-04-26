@@ -2,6 +2,22 @@
 kubernetes:
   nodePort: 32321
 configcreds:
+  initial_state: stopped
+  stoploss: -0.99
+  trailing_stop: False
+  trailing_only_offset_is_reached: False                                                               
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.04    
+  order_types:
+    entry: "limit"
+    exit": "limit"
+    emergency_exit: "market"
+    stoploss: "market"
+    stoploss_on_exchange: False
+    stoploss_on_exchange_interval: 60
+    stoploss_on_exchange_limit_ratio: 0.99
+  use_custom_stoploss: false
+  has_downtime_protection: false
   position_adjustment_enable: false
   available_capital: 19061
   max_open_trades: 9
