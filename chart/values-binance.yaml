@@ -34,9 +34,9 @@ config:
     "40160": 0.09
     "80160": 0
   timeframe: 5m
-  stoploss: -0.99
-  trailing_stop: false
-  trailing_only_offset_is_reached: false
+  stoploss: -0.10
+  trailing_stop: true
+  trailing_only_offset_is_reached: true
   trailing_stop_positive: 0.01
   trailing_stop_positive_offset: 0.03
   use_custom_stoploss: false
