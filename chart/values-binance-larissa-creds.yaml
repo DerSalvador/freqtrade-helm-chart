@@ -39,7 +39,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NNTC
+  strategy_name: AlwaysBuy
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 # image:
