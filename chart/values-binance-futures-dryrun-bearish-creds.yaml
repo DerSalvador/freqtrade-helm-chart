@@ -1,15 +1,23 @@
 ---
 kubernetes:
-  nodePort: 32341
+  nodePort: 32343
 configcreds:
+# AdxSmas_V7
+  can_short: True
+  # Minimal ROI designed for the strategy.
+  # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
+  # This attribute will be overridden if the config file contains "minimal_roi"
+  # Optimal stoploss designed for the strategy
+  # Optimal timeframe for the strategy
+  timeframe: 1h
+# end
   dry_run: true
-  dry_run_wallet: 10000
+  dry_run_wallet: 50000
   position_adjustment_enable: false
-  available_capital: 10000
-  max_open_trades: 2
+  available_capital: 50000
+  max_open_trades: 4
   trading_mode: futures
   margin_mode: isolated
-  timeframe: 15m
   bot_name: freqtrading-binance-stieves-futures-dryrun-bullish
   exchange:
     ccxt_config:
