@@ -86,7 +86,7 @@ bot:
   debug: true
   debuglevel: -vvv
   enabled: true
-  strategy_name: BuyRegions
+  strategy_name: NostalgiaForInfinityX4
   pvc_size: 1Gi
   freqaimodel: ReinforcementLearner # LightGBMRegressor # 
 # image:
