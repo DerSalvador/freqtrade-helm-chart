@@ -1,0 +1,106 @@
+---
+kubernetes:
+  nodePort: 32346
+configcreds:
+# DWT_Short
+  can_short: True
+    # Trailing stop:
+  trailing_stop: False
+  trailing_stop_positive: 0
+  trailing_stop_positive_offset: 0.0
+  trailing_only_offset_is_reached: False
+  timeframe: 5m
+  inf_timeframe: 15m
+
+  use_custom_stoploss: True
+
+  # Recommended
+  use_exit_signal: True
+  exit_profit_only: False
+  ignore_roi_if_entry_signal: True
+
+  # Required
+  startup_candle_count: 128  # must be power of 2
+
+  process_only_new_candles: True
+# end
+  dry_run: true
+  dry_run_wallet: 50000
+  position_adjustment_enable: false
+  available_capital: 50000
+  max_open_trades: 4
+  trading_mode: futures
+  margin_mode: isolated
+  bot_name: freqtrading-binance-stieves-futures-dryrun-short-strategy
+  exchange:
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 800
+      options:
+        defaultType: future
+        leverage: 100
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 800
+      options:
+        defaultType: future
+        leverage: 100
+    name: binance
+    key: "" # "yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6"
+    secret: "" # "rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv"
+  pairlists:
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=74d7adf2466ccf4d  # bearish Futures  https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120      
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   mode: blacklist
+    #   pairlist_url: https://remotepairlist.com?q=3e362027334fd860
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120
+    # - method: AgeFilter
+    #   min_days_listed: 30
+    # - method: PriceFilter
+    #   low_price_ratio: 0.003
+    #   min_price: 50
+    # - method: SpreadFilter
+    #   max_spread_ratio: 0.005
+    # - method: RangeStabilityFilter
+    #   lookback_days: 3
+    #   min_rate_of_change: 0.03
+    #   refresh_period: 1800
+    # - method: ShuffleFilter
+  telegram:
+    enabled: false
+    token: 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    chat_id: "7015989617" # "889071692"
+      #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+      #chat_id: "5711830404"
+
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  # Short Trades only
+  strategy_name: DWT_short
+  pvc_size: 2Gi
+  freqaimodel: LightGBMRegressor
