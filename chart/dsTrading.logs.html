@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Sat Apr 27 12:15:02 UTC 2024</h2><hr>
+<h2>Trading Logs: Sat Apr 27 12:16:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -19,12 +19,12 @@
 <tr><td nowrap><small>824902 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
 <tr><td nowrap><small>908087 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi</small></td></tr>
 <tr><td nowrap><small>980112 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>980113 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>980114 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingRestartAllTrader.sh</small></td></tr>
-<tr><td nowrap><small>980116 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
-<tr><td nowrap><small>980139 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>980170 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>980172 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>985319 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>985322 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferProfit.sh</small></td></tr>
+<tr><td nowrap><small>985346 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>985554 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start --quick</small></td></tr>
+<tr><td nowrap><small>985583 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferProfit.sh</small></td></tr>
+<tr><td nowrap><small>985584 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael GET trades --quick</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -4576,11 +4576,6 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-  "profit_abs": -0.22554,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 0,<br>
-  "realized_profit_ratio": null,<br>
-  "exit_reason": null,<br>
   "exit_order_status": null,<br>
   "stop_loss_abs": 0.0024,<br>
   "stop_loss_ratio": -0.99,<br>
@@ -5076,148 +5071,15 @@ Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/28/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/29/reload<br>
-<br><br><hr>##++<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/30/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/31/reload<br>
+Internal Server Error<br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
-service/freqtrade-binance-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
-service/freqtrade-binance-juliano-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
-service/freqtrade-binance-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
-service/freqtrade-binance-michael-dry1 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-dry1, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
-service/freqtrade-binance-michael-futures-dry2 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-futures-dry2, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures pipe kubectl apply -f - -n binance-stieves-futures<br>
-service/freqtrade-binance-stieves-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32340/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures-dryrun POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures-dryrun pipe kubectl apply -f - -n binance-stieves-futures-dryrun<br>
-service/freqtrade-binance-stieves-futures-dryrun unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
-service/freqtrade-kraken-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
-service/freqtrade-kraken-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
---------- Restarted 15 bots....<br>
-"Finished at: 20240427-115514"<br>
-20240427-120001<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
-service/freqtrade-binance-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
-{<br>
-  "status": "starting trader ..."<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
-service/freqtrade-binance-adriana-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
-{<br>
-  "status": "starting trader ..."<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
-service/freqtrade-binance-fouzi unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "starting trader ..."<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
-service/freqtrade-binance-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "starting trader ..."<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
-service/freqtrade-binance-futures-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "starting trader ..."<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
 service/freqtrade-binance-hassan unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
@@ -5581,474 +5443,148 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/
 --------- Restarted 15 bots....<br>
 "Finished at: 20240427-121012"<br>
 20240427-121502<br>
-<br><br><hr>##++<br>
-+ + + + + /tmp/<b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
-++++<br>
-+ + + + + <b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
-++<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: DOGE/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=29976*0.10=2997.60[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 2997.60<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 86 with PAIR=DOGE/USDT:USDT because profit absolut -30.77 is less then profit to take 2997.60[0m<br>
-[33mAdd tradeid 86 with PAIR=DOGE/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:13 PAIR=DOGE/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=86 PROFIT_ABS=-30.77 OPEN_RATE=0.16 CURRENT_RATE=0.15 MAX_STAKE_AMOUNT=29976 PROFIT_TO_TAKE=2997.60 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
-TRADE_PROFIT_ROW=90#-28.71917619#1000SHIB/USDT:USDT#11079#4#0.03#0.02#29993#0.02#-71.19#false<br>
-[34mamount: 11079[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.02[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-futures-larissa<br>
-[33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
+service/freqtrade-binance-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
+service/freqtrade-binance-adriana-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
+service/freqtrade-binance-fouzi unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
+service/freqtrade-binance-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
+service/freqtrade-binance-futures-larissa unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: 1000SHIB/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=29993*0.10=2999.30[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 2999.30<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 90 with PAIR=1000SHIB/USDT:USDT because profit absolut -28.72 is less then profit to take 2999.30[0m<br>
-[33mAdd tradeid 90 with PAIR=1000SHIB/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:14 PAIR=1000SHIB/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=90 PROFIT_ABS=-28.72 OPEN_RATE=0.03 CURRENT_RATE=0.02 MAX_STAKE_AMOUNT=29993 PROFIT_TO_TAKE=2999.30 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
-TRADE_PROFIT_ROW=91#-18.64403442#XRP/USDT:USDT#546.4#4#0.55#0.52#30007#0.42#-74.73#false<br>
-[34mamount: 546.4[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.52[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-futures-larissa<br>
-[33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: XRP/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=30007*0.10=3000.70[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 3000.70<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 91 with PAIR=XRP/USDT:USDT because profit absolut -18.64 is less then profit to take 3000.70[0m<br>
-[33mAdd tradeid 91 with PAIR=XRP/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:14 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=91 PROFIT_ABS=-18.64 OPEN_RATE=0.55 CURRENT_RATE=0.52 MAX_STAKE_AMOUNT=30007 PROFIT_TO_TAKE=3000.70 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
-TRADE_PROFIT_ROW=93#-13.01649837#ALGO/USDT:USDT#444.6#4#0.23#0.2#10017#0.17#-24.39#false<br>
-[34mamount: 444.6[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.2[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-futures-larissa<br>
-[33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: ALGO/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=10017*0.10=1001.70[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 1001.70<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 93 with PAIR=ALGO/USDT:USDT because profit absolut -13.02 is less then profit to take 1001.70[0m<br>
-[33mAdd tradeid 93 with PAIR=ALGO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:15 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=93 PROFIT_ABS=-13.02 OPEN_RATE=0.23 CURRENT_RATE=0.2 MAX_STAKE_AMOUNT=10017 PROFIT_TO_TAKE=1001.70 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
-TRADE_PROFIT_ROW=94#-11.49170017#IOTA/USDT:USDT#384.9#4#0.26#0.23#9996#0.2#-24.88#false<br>
-[34mamount: 384.9[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.23[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-futures-larissa<br>
-[33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: IOTA/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=9996*0.10=999.60[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 999.60<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 94 with PAIR=IOTA/USDT:USDT because profit absolut -11.49 is less then profit to take 999.60[0m<br>
-[33mAdd tradeid 94 with PAIR=IOTA/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:16 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=94 PROFIT_ABS=-11.49 OPEN_RATE=0.26 CURRENT_RATE=0.23 MAX_STAKE_AMOUNT=9996 PROFIT_TO_TAKE=999.60 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
-TRADE_PROFIT_ROW=96#-5.51549203#XLM/USDT:USDT#838#4#0.12#0.11#9998#0.09#-24.86#false<br>
-[34mamount: 838[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.11[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-futures-larissa<br>
-[33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: XLM/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=9998*0.10=999.80[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 999.80<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 96 with PAIR=XLM/USDT:USDT because profit absolut -5.52 is less then profit to take 999.80[0m<br>
-[33mAdd tradeid 96 with PAIR=XLM/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:16 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=96 PROFIT_ABS=-5.52 OPEN_RATE=0.12 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=9998 PROFIT_TO_TAKE=999.80 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
-TRADE_PROFIT_ROW=97#-8.46854317#LTC/USDT:USDT#2.83#10#88.33#85.44#24997#80.33#-25.02#false<br>
-[34mamount: 2.83[0m<br>
-[34mleverage: 10[0m<br>
-[34mcurrent_rate: 85.44[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-futures-larissa<br>
-[33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: LTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=24997*0.10=2499.70[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 2499.70<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 97 with PAIR=LTC/USDT:USDT because profit absolut -8.47 is less then profit to take 2499.70[0m<br>
-[33mAdd tradeid 97 with PAIR=LTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:17 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=97 PROFIT_ABS=-8.47 OPEN_RATE=88.33 CURRENT_RATE=85.44 MAX_STAKE_AMOUNT=24997 PROFIT_TO_TAKE=2499.70 API_KEY=gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR API_SECRET=H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
+service/freqtrade-binance-hassan unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
 {<br>
   "status": "already running"<br>
 }<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/status<br>
-TRADE_PROFIT_ROW=49#-0.46861172#BONK/USDT#206317#1#0#0#552#0#-5.47#false<br>
-[34mamount: 206317[0m<br>
-[34mleverage: 1[0m<br>
-[34mcurrent_rate: 0[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-hassan<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-hassan is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-hassan, pair: BONK/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=552*0.10=55.20[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-hassan with ForceExit with Minimum Profit of 55.20<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 49 with PAIR=BONK/USDT because profit absolut -0.47 is less then profit to take 55.20[0m<br>
-[33mAdd tradeid 49 with PAIR=BONK/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:17 PAIR=BONK/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-hassan TRADEID=49 PROFIT_ABS=-0.47 OPEN_RATE=0 CURRENT_RATE=0 MAX_STAKE_AMOUNT=552 PROFIT_TO_TAKE=55.20 API_KEY=byguDVxWAiaLUhT0FjoxcPHp0fVYtPAjIUY5ish459dBARt8fJputqeL8OcXeTqI API_SECRET=0aHY2r0Y8UUmKcjsyCwbVXTAwmMeCnH5gRSzx7Vt74OqVkGQWBTusFp7DMJkL0vV<br>
-TRADE_PROFIT_ROW=51#-0.24193256#SHIB/USDT#215990#1#0#0#553#0#-5.48#false<br>
-[34mamount: 215990[0m<br>
-[34mleverage: 1[0m<br>
-[34mcurrent_rate: 0[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-hassan<br>
-[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-hassan is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-hassan, pair: SHIB/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=553*0.10=55.30[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-hassan with ForceExit with Minimum Profit of 55.30<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 51 with PAIR=SHIB/USDT because profit absolut -0.24 is less then profit to take 55.30[0m<br>
-[33mAdd tradeid 51 with PAIR=SHIB/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:18 PAIR=SHIB/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-hassan TRADEID=51 PROFIT_ABS=-0.24 OPEN_RATE=0 CURRENT_RATE=0 MAX_STAKE_AMOUNT=553 PROFIT_TO_TAKE=55.30 API_KEY=byguDVxWAiaLUhT0FjoxcPHp0fVYtPAjIUY5ish459dBARt8fJputqeL8OcXeTqI API_SECRET=0aHY2r0Y8UUmKcjsyCwbVXTAwmMeCnH5gRSzx7Vt74OqVkGQWBTusFp7DMJkL0vV<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
+service/freqtrade-binance-juliano unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
 {<br>
   "status": "already running"<br>
 }<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
+service/freqtrade-binance-juliano-futures unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
 {<br>
   "status": "already running"<br>
 }<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/status<br>
-TRADE_PROFIT_ROW=3#-1.30450346#XLM/USDT:USDT#874#4#0.11#0.11#9738#0.14#-24.12#true<br>
-[34mamount: 874[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.11[0m<br>
-[34mis_short: true[0m<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: XLM/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=9738*0.10=973.80[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 973.80<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 3 with PAIR=XLM/USDT:USDT because profit absolut -1.30 is less then profit to take 973.80[0m<br>
-[33mAdd tradeid 3 with PAIR=XLM/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:19 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=3 PROFIT_ABS=-1.30 OPEN_RATE=0.11 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=9738 PROFIT_TO_TAKE=973.80 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-TRADE_PROFIT_ROW=4#-2.61508918#XRP/USDT:USDT#184.1#4#0.5#0.52#9238#0.62#-22.84#true<br>
-[34mamount: 184.1[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.52[0m<br>
-[34mis_short: true[0m<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: XRP/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=9238*0.10=923.80[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 923.80<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 4 with PAIR=XRP/USDT:USDT because profit absolut -2.62 is less then profit to take 923.80[0m<br>
-[33mAdd tradeid 4 with PAIR=XRP/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:20 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=4 PROFIT_ABS=-2.62 OPEN_RATE=0.5 CURRENT_RATE=0.52 MAX_STAKE_AMOUNT=9238 PROFIT_TO_TAKE=923.80 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-TRADE_PROFIT_ROW=9#-6.23320939#DOGE/USDT:USDT#784#4#0.15#0.15#11989#0.12#-25.24#false<br>
-[34mamount: 784[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.15[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: DOGE/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=11989*0.10=1198.90[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 1198.90<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 9 with PAIR=DOGE/USDT:USDT because profit absolut -6.23 is less then profit to take 1198.90[0m<br>
-[33mAdd tradeid 9 with PAIR=DOGE/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:20 PAIR=DOGE/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=9 PROFIT_ABS=-6.23 OPEN_RATE=0.15 CURRENT_RATE=0.15 MAX_STAKE_AMOUNT=11989 PROFIT_TO_TAKE=1198.90 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-TRADE_PROFIT_ROW=13#-4.59686777#ALGO/USDT:USDT#181.3#4#0.22#0.2#4003#0.17#-9.85#false<br>
-[34mamount: 181.3[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.2[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: ALGO/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=4003*0.10=400.30[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 400.30<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 13 with PAIR=ALGO/USDT:USDT because profit absolut -4.60 is less then profit to take 400.30[0m<br>
-[33mAdd tradeid 13 with PAIR=ALGO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:21 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=13 PROFIT_ABS=-4.60 OPEN_RATE=0.22 CURRENT_RATE=0.2 MAX_STAKE_AMOUNT=4003 PROFIT_TO_TAKE=400.30 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-TRADE_PROFIT_ROW=14#-2.02601396#1000SHIB/USDT:USDT#1551#4#0.03#0.02#3999#0.02#-9.95#false<br>
-[34mamount: 1551[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 0.02[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: 1000SHIB/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=3999*0.10=399.90[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 399.90<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 14 with PAIR=1000SHIB/USDT:USDT because profit absolut -2.03 is less then profit to take 399.90[0m<br>
-[33mAdd tradeid 14 with PAIR=1000SHIB/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:21 PAIR=1000SHIB/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=14 PROFIT_ABS=-2.03 OPEN_RATE=0.03 CURRENT_RATE=0.02 MAX_STAKE_AMOUNT=3999 PROFIT_TO_TAKE=399.90 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-TRADE_PROFIT_ROW=18#-0.38849561#AVAX/USDT:USDT#2#4#34.01#34.17#6802#41.87#-16.91#true<br>
-[34mamount: 2[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 34.17[0m<br>
-[34mis_short: true[0m<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: AVAX/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=6802*0.10=680.20[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 680.20<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 18 with PAIR=AVAX/USDT:USDT because profit absolut -0.39 is less then profit to take 680.20[0m<br>
-[33mAdd tradeid 18 with PAIR=AVAX/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:22 PAIR=AVAX/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=18 PROFIT_ABS=-0.39 OPEN_RATE=34.01 CURRENT_RATE=34.17 MAX_STAKE_AMOUNT=6802 PROFIT_TO_TAKE=680.20 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
+service/freqtrade-binance-larissa unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
 {<br>
   "status": "already running"<br>
 }<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
+service/freqtrade-binance-michael-dry1 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-dry1, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
+service/freqtrade-binance-michael-futures-dry2 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-futures-dry2, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures pipe kubectl apply -f - -n binance-stieves-futures<br>
+service/freqtrade-binance-stieves-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32340/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures-dryrun POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures-dryrun pipe kubectl apply -f - -n binance-stieves-futures-dryrun<br>
+service/freqtrade-binance-stieves-futures-dryrun unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
+service/freqtrade-kraken-adriana unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
 {<br>
   "status": "already running"<br>
 }<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/status<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
-Found quick parameter, dont creating node port for API access<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
+service/freqtrade-kraken-juliano unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
 {<br>
   "status": "already running"<br>
 }<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/status<br>
-TRADE_PROFIT_ROW=26#-0.12113845#XRP/USDT#11.12#1#0.52#0.52#581#0#-5.78#false<br>
-[34mamount: 11.12[0m<br>
-[34mleverage: 1[0m<br>
-[34mcurrent_rate: 0.52[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables kraken-juliano<br>
-[33mGetting trading_mode from base config ./values-kraken.yaml[0m<br>
-[0;32mTrading Mode for Bot kraken-juliano is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: kraken-juliano, pair: XRP/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=581*0.10=58.10[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot kraken-juliano with ForceExit with Minimum Profit of 58.10<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 26 with PAIR=XRP/USDT because profit absolut -0.12 is less then profit to take 58.10[0m<br>
-[33mAdd tradeid 26 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:23 PAIR=XRP/USDT TRADING_MODE=spot EXCHANGE=kraken BOT=kraken-juliano TRADEID=26 PROFIT_ABS=-0.12 OPEN_RATE=0.52 CURRENT_RATE=0.52 MAX_STAKE_AMOUNT=581 PROFIT_TO_TAKE=58.10 API_KEY=YrLGEJKEwEzSCB0xvyJF4Hcz/J7lgOXC8mYlsz8fpMGOjUSJWt6QyEIr API_SECRET=qEPDODFjDfIS4ZEUYS0b6WqT4kYvyaT4EkcsSeeU9oBIFnST7doV0lciaruv+ThwNmeDK8/tdrz2jYzkkChQ6g==<br>
-TRADE_PROFIT_ROW=37#-0.0975075#ALGO/USDT#29.11#1#0.2#0.2#574#0#-5.7#false<br>
-[34mamount: 29.11[0m<br>
-[34mleverage: 1[0m<br>
-[34mcurrent_rate: 0.2[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables kraken-juliano<br>
-[33mGetting trading_mode from base config ./values-kraken.yaml[0m<br>
-[0;32mTrading Mode for Bot kraken-juliano is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: kraken-juliano, pair: ALGO/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=574*0.10=57.40[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot kraken-juliano with ForceExit with Minimum Profit of 57.40<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 37 with PAIR=ALGO/USDT because profit absolut -0.10 is less then profit to take 57.40[0m<br>
-[33mAdd tradeid 37 with PAIR=ALGO/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:24 PAIR=ALGO/USDT TRADING_MODE=spot EXCHANGE=kraken BOT=kraken-juliano TRADEID=37 PROFIT_ABS=-0.10 OPEN_RATE=0.2 CURRENT_RATE=0.2 MAX_STAKE_AMOUNT=574 PROFIT_TO_TAKE=57.40 API_KEY=YrLGEJKEwEzSCB0xvyJF4Hcz/J7lgOXC8mYlsz8fpMGOjUSJWt6QyEIr API_SECRET=qEPDODFjDfIS4ZEUYS0b6WqT4kYvyaT4EkcsSeeU9oBIFnST7doV0lciaruv+ThwNmeDK8/tdrz2jYzkkChQ6g==<br>
-TRADE_PROFIT_ROW=38#-0.14407708#BTC/USDT#0#1#63956.3#63092.3#672#0#-6.68#false<br>
-[34mamount: 0[0m<br>
-[34mleverage: 1[0m<br>
-[34mcurrent_rate: 63092.3[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables kraken-juliano<br>
-[33mGetting trading_mode from base config ./values-kraken.yaml[0m<br>
-[0;32mTrading Mode for Bot kraken-juliano is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: kraken-juliano, pair: BTC/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=672*0.10=67.20[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot kraken-juliano with ForceExit with Minimum Profit of 67.20<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 38 with PAIR=BTC/USDT because profit absolut -0.14 is less then profit to take 67.20[0m<br>
-[33mAdd tradeid 38 with PAIR=BTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-27:12:14:24 PAIR=BTC/USDT TRADING_MODE=spot EXCHANGE=kraken BOT=kraken-juliano TRADEID=38 PROFIT_ABS=-0.14 OPEN_RATE=63956.3 CURRENT_RATE=63092.3 MAX_STAKE_AMOUNT=672 PROFIT_TO_TAKE=67.20 API_KEY=YrLGEJKEwEzSCB0xvyJF4Hcz/J7lgOXC8mYlsz8fpMGOjUSJWt6QyEIr API_SECRET=qEPDODFjDfIS4ZEUYS0b6WqT4kYvyaT4EkcsSeeU9oBIFnST7doV0lciaruv+ThwNmeDK8/tdrz2jYzkkChQ6g==<br>
-TRADE_PROFIT_ROW=39#-0.02062676#ETH/USDT#0#1#3121.71#3136.92#656#0#-6.52#false<br>
-[34mamount: 0[0m<br>
-[34mleverage: 1[0m<br>
-[34mcurrent_rate: 3136.92[0m<br>
-[34mis_short: false[0m<br>
-setBotVariables kraken-juliano<br>
-[33mGetting trading_mode from base config ./values-kraken.yaml[0m<br>
-[0;32mTrading Mode for Bot kraken-juliano is spot[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: kraken-juliano, pair: ETH/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=656*0.10=65.60[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot kraken-juliano with ForceExit with Minimum Profit of 65.60<br>
------------------------------------------------------------------------<br>
+--------- Restarted 15 bots....<br>
+"Finished at: 20240427-121509"<br>
+<br><br><hr>##++<br>
++ + + + + /tmp/<b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
+++++<br>
++ + + + + <b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
+++<br>
 [31mIgnoring tradeid 39 with PAIR=ETH/USDT because profit absolut -0.02 is less then profit to take 65.60[0m<br>
 [33mAdd tradeid 39 with PAIR=ETH/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
@@ -6086,11 +5622,477 @@ Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Trans
 Remove old backups<br>
 Minium Profit to take <br>
 Backup takeprofit.allbots to takeprofit.allbots.20240427121502<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/status<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status<br>
+TRADE_PROFIT_ROW=25#-2.36909645#XLM/USDT:USDT#1586#4#0.11#0.11#17668#0.14#-43.78#true<br>
+[34mamount: 1586[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.11[0m<br>
+[34mis_short: true[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: XLM/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=17668*0.10=1766.80[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 1766.80<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 25 with PAIR=XLM/USDT:USDT because profit absolut -2.37 is less then profit to take 1766.80[0m<br>
+[33mAdd tradeid 25 with PAIR=XLM/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:34 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=25 PROFIT_ABS=-2.37 OPEN_RATE=0.11 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=17668 PROFIT_TO_TAKE=1766.80 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TRADE_PROFIT_ROW=26#-4.40884731#XRP/USDT:USDT#318.2#4#0.5#0.52#15974#0.62#-39.52#true<br>
+[34mamount: 318.2[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.52[0m<br>
+[34mis_short: true[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: XRP/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=15974*0.10=1597.40[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 1597.40<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 26 with PAIR=XRP/USDT:USDT because profit absolut -4.41 is less then profit to take 1597.40[0m<br>
+[33mAdd tradeid 26 with PAIR=XRP/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:34 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=26 PROFIT_ABS=-4.41 OPEN_RATE=0.5 CURRENT_RATE=0.52 MAX_STAKE_AMOUNT=15974 PROFIT_TO_TAKE=1597.40 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TRADE_PROFIT_ROW=27#-1.17927966#ETH/USDT:USDT#0.01#4#3228.42#3137.28#3874#2472.76#-9.67#false<br>
+[34mamount: 0.01[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 3137.28[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: ETH/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=3874*0.10=387.40[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 387.40<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 27 with PAIR=ETH/USDT:USDT because profit absolut -1.18 is less then profit to take 387.40[0m<br>
+[33mAdd tradeid 27 with PAIR=ETH/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:35 PAIR=ETH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=27 PROFIT_ABS=-1.18 OPEN_RATE=3228.42 CURRENT_RATE=3137.28 MAX_STAKE_AMOUNT=3874 PROFIT_TO_TAKE=387.40 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TRADE_PROFIT_ROW=33#0.04640679#BCH/USDT:USDT#0.17#4#472.49#471.74#7891#581.36#-19.62#true<br>
+[34mamount: 0.17[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 471.74[0m<br>
+[34mis_short: true[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: BCH/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=7891*0.10=789.10[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 789.10<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 33 with PAIR=BCH/USDT:USDT because profit absolut 0.05 is less then profit to take 789.10[0m<br>
+[33mAdd tradeid 33 with PAIR=BCH/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:35 PAIR=BCH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=33 PROFIT_ABS=0.05 OPEN_RATE=472.49 CURRENT_RATE=471.74 MAX_STAKE_AMOUNT=7891 PROFIT_TO_TAKE=789.10 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TRADE_PROFIT_ROW=34#-2.52518235#LTC/USDT:USDT#0.96#4#82.89#85.45#7916#102.09#-19.68#true<br>
+[34mamount: 0.96[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 85.45[0m<br>
+[34mis_short: true[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: LTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=7916*0.10=791.60[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 791.60<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 34 with PAIR=LTC/USDT:USDT because profit absolut -2.53 is less then profit to take 791.60[0m<br>
+[33mAdd tradeid 34 with PAIR=LTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:36 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=34 PROFIT_ABS=-2.53 OPEN_RATE=82.89 CURRENT_RATE=85.45 MAX_STAKE_AMOUNT=7916 PROFIT_TO_TAKE=791.60 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TRADE_PROFIT_ROW=39#0.511243#SOL/USDT:USDT#1#50#136.43#137.08#13643#134.48#-2.84#false<br>
+[34mamount: 1[0m<br>
+[34mleverage: 50[0m<br>
+[34mcurrent_rate: 137.08[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: SOL/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=13643*0.10=1364.30[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 1364.30<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 39 with PAIR=SOL/USDT:USDT because profit absolut 0.51 is less then profit to take 1364.30[0m<br>
+[33mAdd tradeid 39 with PAIR=SOL/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:37 PAIR=SOL/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=39 PROFIT_ABS=0.51 OPEN_RATE=136.43 CURRENT_RATE=137.08 MAX_STAKE_AMOUNT=13643 PROFIT_TO_TAKE=1364.30 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+TRADE_PROFIT_ROW=40#-1.20276718#ALGO/USDT:USDT#415.6#4#0.19#0.2#8009#0.24#-19.87#true<br>
+[34mamount: 415.6[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.2[0m<br>
+[34mis_short: true[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: ALGO/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=8009*0.10=800.90[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 800.90<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 40 with PAIR=ALGO/USDT:USDT because profit absolut -1.20 is less then profit to take 800.90[0m<br>
+[33mAdd tradeid 40 with PAIR=ALGO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:37 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=40 PROFIT_ABS=-1.20 OPEN_RATE=0.19 CURRENT_RATE=0.2 MAX_STAKE_AMOUNT=8009 PROFIT_TO_TAKE=800.90 API_KEY=E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN API_SECRET=1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/status<br>
+TRADE_PROFIT_ROW=55#-0.465137#SOL/USDT#0.05#1#145.88#136.86#729#0#-7.23#false<br>
+[34mamount: 0.05[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 136.86[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: SOL/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=729*0.10=72.90[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 72.90<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 55 with PAIR=SOL/USDT because profit absolut -0.47 is less then profit to take 72.90[0m<br>
+[33mAdd tradeid 55 with PAIR=SOL/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:55 PAIR=SOL/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=55 PROFIT_ABS=-0.47 OPEN_RATE=145.88 CURRENT_RATE=136.86 MAX_STAKE_AMOUNT=729 PROFIT_TO_TAKE=72.90 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=56#-0.123652#XLM/USDT#76#1#0.11#0.11#868#0#-8.6#false<br>
+[34mamount: 76[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 0.11[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: XLM/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=868*0.10=86.80[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 86.80<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 56 with PAIR=XLM/USDT because profit absolut -0.12 is less then profit to take 86.80[0m<br>
+[33mAdd tradeid 56 with PAIR=XLM/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:56 PAIR=XLM/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=56 PROFIT_ABS=-0.12 OPEN_RATE=0.11 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=868 PROFIT_TO_TAKE=86.80 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=57#-0.1686576#XRP/USDT#16#1#0.53#0.52#840#0#-8.33#false<br>
+[34mamount: 16[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 0.52[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: XRP/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=840*0.10=84.00[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 84.00<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 57 with PAIR=XRP/USDT because profit absolut -0.17 is less then profit to take 84.00[0m<br>
+[33mAdd tradeid 57 with PAIR=XRP/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:56 PAIR=XRP/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=57 PROFIT_ABS=-0.17 OPEN_RATE=0.53 CURRENT_RATE=0.52 MAX_STAKE_AMOUNT=840 PROFIT_TO_TAKE=84.00 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=60#-0.2235083#BTC/USDT#0#1#64678.06#63086.53#841#0#-8.33#false<br>
+[34mamount: 0[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 63086.53[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: BTC/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=841*0.10=84.10[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 84.10<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 60 with PAIR=BTC/USDT because profit absolut -0.22 is less then profit to take 84.10[0m<br>
+[33mAdd tradeid 60 with PAIR=BTC/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:57 PAIR=BTC/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=60 PROFIT_ABS=-0.22 OPEN_RATE=64678.06 CURRENT_RATE=63086.53 MAX_STAKE_AMOUNT=841 PROFIT_TO_TAKE=84.10 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=61#-0.08372957#ETH/USDT#0#1#3162.83#3138.12#854#0#-8.46#false<br>
+[34mamount: 0[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 3138.12[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: ETH/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=854*0.10=85.40[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 85.40<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 61 with PAIR=ETH/USDT because profit absolut -0.08 is less then profit to take 85.40[0m<br>
+[33mAdd tradeid 61 with PAIR=ETH/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:57 PAIR=ETH/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=61 PROFIT_ABS=-0.08 OPEN_RATE=3162.83 CURRENT_RATE=3138.12 MAX_STAKE_AMOUNT=854 PROFIT_TO_TAKE=85.40 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=62#-1.08966911#WIF/USDT#2.81#1#3.08#2.7#868#0#-8.58#false<br>
+[34mamount: 2.81[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 2.7[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: WIF/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=868*0.10=86.80[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 86.80<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 62 with PAIR=WIF/USDT because profit absolut -1.09 is less then profit to take 86.80[0m<br>
+[33mAdd tradeid 62 with PAIR=WIF/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:58 PAIR=WIF/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=62 PROFIT_ABS=-1.09 OPEN_RATE=3.08 CURRENT_RATE=2.7 MAX_STAKE_AMOUNT=868 PROFIT_TO_TAKE=86.80 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=64#-0.47557396#SHIB/USDT#337234#1#0#0#870#0#-8.62#false<br>
+[34mamount: 337234[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 0[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: SHIB/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=870*0.10=87.00[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 87.00<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 64 with PAIR=SHIB/USDT because profit absolut -0.48 is less then profit to take 87.00[0m<br>
+[33mAdd tradeid 64 with PAIR=SHIB/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:58 PAIR=SHIB/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=64 PROFIT_ABS=-0.48 OPEN_RATE=0 CURRENT_RATE=0 MAX_STAKE_AMOUNT=870 PROFIT_TO_TAKE=87.00 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=65#-0.2111544#IOTA/USDT#36#1#0.24#0.23#847#0#-8.4#false<br>
+[34mamount: 36[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 0.23[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: IOTA/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=847*0.10=84.70[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 84.70<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 65 with PAIR=IOTA/USDT because profit absolut -0.21 is less then profit to take 84.70[0m<br>
+[33mAdd tradeid 65 with PAIR=IOTA/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:59 PAIR=IOTA/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=65 PROFIT_ABS=-0.21 OPEN_RATE=0.24 CURRENT_RATE=0.23 MAX_STAKE_AMOUNT=847 PROFIT_TO_TAKE=84.70 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+TRADE_PROFIT_ROW=66#-0.79685255#BONK/USDT#325108#1#0#0#869#0#-8.61#false<br>
+[34mamount: 325108[0m<br>
+[34mleverage: 1[0m<br>
+[34mcurrent_rate: 0[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-fouzi<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-fouzi is spot[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-fouzi, pair: BONK/USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=869*0.10=86.90[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-fouzi with ForceExit with Minimum Profit of 86.90<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 66 with PAIR=BONK/USDT because profit absolut -0.80 is less then profit to take 86.90[0m<br>
+[33mAdd tradeid 66 with PAIR=BONK/USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:15:59 PAIR=BONK/USDT TRADING_MODE=spot EXCHANGE=binance BOT=binance-fouzi TRADEID=66 PROFIT_ABS=-0.80 OPEN_RATE=0 CURRENT_RATE=0 MAX_STAKE_AMOUNT=869 PROFIT_TO_TAKE=86.90 API_KEY=HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG API_SECRET=GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/status<br>
+TRADE_PROFIT_ROW=185#-11.30181733#ETH/USDT:USDT#0.12#4#3221.45#3135.46#39946#2467.57#-99.46#false<br>
+[34mamount: 0.12[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 3135.46[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-futures<br>
+[33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-futures, pair: ETH/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=39946*0.10=3994.60[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-futures with ForceExit with Minimum Profit of 3994.60<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 185 with PAIR=ETH/USDT:USDT because profit absolut -11.30 is less then profit to take 3994.60[0m<br>
+[33mAdd tradeid 185 with PAIR=ETH/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:16:00 PAIR=ETH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=185 PROFIT_ABS=-11.30 OPEN_RATE=3221.45 CURRENT_RATE=3135.46 MAX_STAKE_AMOUNT=39946 PROFIT_TO_TAKE=3994.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=191#-148.04350291#BTC/USDT:USDT#0.05#3#66235.7#63043.5#298061#45461.56#-987.57#false<br>
+[34mamount: 0.05[0m<br>
+[34mleverage: 3[0m<br>
+[34mcurrent_rate: 63043.5[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-futures<br>
+[33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-futures, pair: BTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=298061*0.10=29806.10[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-futures with ForceExit with Minimum Profit of 29806.10<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 191 with PAIR=BTC/USDT:USDT because profit absolut -148.04 is less then profit to take 29806.10[0m<br>
+[33mAdd tradeid 191 with PAIR=BTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:16:01 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=191 PROFIT_ABS=-148.04 OPEN_RATE=66235.7 CURRENT_RATE=63043.5 MAX_STAKE_AMOUNT=298061 PROFIT_TO_TAKE=29806.10 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=199#-22.54418857#XLM/USDT:USDT#3354#4#0.12#0.11#39990#0.09#-99.41#false<br>
+[34mamount: 3354[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.11[0m<br>
+[34mis_short: false[0m<br>
+setBotVariables binance-futures<br>
+[33mGetting trading_mode from config ./values-binance-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/balance<br>
+20240427-121601<br>
+Running Take Profit already? RUNNING=msantana  980112  980106  0 12:15 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh<br>
+msantana  985266  980112  0 12:16 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh<br>
+[31mTake Profit already running, exiting[0m<br>
+"Finished at 20240427-121601"<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-futures, pair: XLM/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=39990*0.10=3999.00[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-futures with ForceExit with Minimum Profit of 3999.00<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 199 with PAIR=XLM/USDT:USDT because profit absolut -22.54 is less then profit to take 3999.00[0m<br>
+[33mAdd tradeid 199 with PAIR=XLM/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-27:12:16:01 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=199 PROFIT_ABS=-22.54 OPEN_RATE=0.12 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=39990 PROFIT_TO_TAKE=3999.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+[0;32m-------------------------------------------------------[0m<br><br>
+[0;32mProcessing Bot binance-larissa[0m<br><br>
+[0;32m-------------------------------------------------------[0m<br><br>
 AVAILABLE_CAPITAL=1<br><br>
 [33mGetting trading_mode from base config ./values-binance.yaml[0m<br><br>
 [0;32mTrading Mode for Bot binance-larissa is spot[0m<br><br>
@@ -6477,7 +6479,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-22-04-2024-00-00...<br><br>
 .........................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240422-000047"<br><br>
 20240422-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-22-04-2024-05-00...<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-04-2024-05-00.. 98  524k   98  517k    0     0   348k      0  0:00:01  0:00:01 --:--:--  348k.<br><br>
 ........................................................................................................................................................................................................done.<br><br>
 "Finished at 20240422-050044"<br><br>
 20240422-100001<br><br>
@@ -6574,11 +6576,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br>
 "Finished at 20240426-200045"<br><br>
 20240427-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-00-00...<br><br>
-..................................................................................................................................................100  524k  100  524k    0     0   398k      0  0:00:01  0:00:01 --:--:--  398k<br>
-....................................................................done.<br><br>
-"Finished at 20240427-000049"<br><br>
-20240427-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br>
+..................................................................................................................................................100  524k  100  524k    0     0   353k      0  0:00:01  0:00:01 --:--:--  353k<br>
+ snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br>
 ...............................................................................................................................................................................................................done.<br><br>
 "Finished at 20240427-050046"<br><br>
 20240427-100001<br><br>
@@ -6586,47 +6585,16 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br>
 ......................................................................................................................................................................................................done.<br><br>
 "Finished at 20240427-100044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 27 12:14 /tmp/tmp.UqBewYZ5Nm<br>
+-rw------- 1 msantana msantana 0 Apr 27 12:15 /tmp/tmp.MD6Gp4afMy<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240427-121406"<br>
-20240427-121502<br>
+"Finished at: 20240427-121506"<br>
+20240427-121601<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferProfit.sh.log>dsTradingTransferProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-TRADING_MODE is: futures<br>
-EXCHANGE is: binance<br>
-BOT is: binance-stieves-futures<br>
-TRADEID is: -1<br>
-PROFIT_ABS is: 4000.00<br>
-API_KEY is: yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6<br>
-API_SECRET is: rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-Checking profit from Bot: binance-stieves-futures<br>
-""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
-Processing only trades which has been completed<br>
-AVAILABLE_CAPITAL=6800<br>
-[33mGetting trading_mode from config ./values-binance-stieves-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-stieves-futures is futures[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32340/api/v1/trades<br>
-[31mProfit for Trade -1 not yet realized for binance-stieves-futures on binance[0m<br>
-""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
-""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
-Processing next profit...TIMESTAMP=2024-04-27:06:14:36 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=4000.00 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
-TIMESTAMP=2024-04-27:06:14:36 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=4000.00 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:14:36 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=4000.00 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TRADING_MODE is: futures<br>
-EXCHANGE is: binance<br>
-BOT is: binance-stieves-futures<br>
-TRADEID is: -1<br>
-PROFIT_ABS is: 4000.00<br>
-API_KEY is: yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6<br>
-API_SECRET is: rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-Checking profit from Bot: binance-stieves-futures<br>
 """"""""""""""""""""""""""""""""""""""""""""""""""""<br>
 Processing only trades which has been completed<br>
 AVAILABLE_CAPITAL=6800<br>
@@ -7096,6 +7064,37 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v
 SUM_BALANCE_USDT=19.32<br>
 [33mSum Balance USDT 19.32 is less or equal than available capital 82.00, doing nothing[0m<br>
 Finished at 20240427-121401<br>
+20240427-121601<br>
+Running Transfer Profit already? RUNNING=<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+Starting Script dsTradingTransferProfit.sh: Checking profit with forceexit and Transfering to FUNDING/FUTURES Wallet<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+Remove old backups<br>
+Minium Profit to take <br>
+Backup .takeprofit/takeprofit.allbots to .takeprofit/takeprofit.allbots.20240427121601<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+Checking realized profits in Trades and trying transfering to FUNDING/FUTURES Wallet<br>
+------------------------------------------------------------------------------------------------------------------------<br>
+""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
+""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
+Processing next profit...TIMESTAMP=2024-04-22:08:30:10 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
+TIMESTAMP=2024-04-22:08:30:10 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-22:08:30:10 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADING_MODE is: spot<br>
+EXCHANGE is: binance<br>
+BOT is: binance-michael<br>
+TRADEID is: -1<br>
+PROFIT_ABS is: 452.52<br>
+API_KEY is: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+API_SECRET is: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Checking profit from Bot: binance-michael<br>
+""""""""""""""""""""""""""""""""""""""""""""""""""""<br>
+Processing only trades which has been completed<br>
+AVAILABLE_CAPITAL=1697<br>
+[33mGetting trading_mode from base config ./values-binance.yaml[0m<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -7458,4 +7457,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br>
 ......................................................................................................................................................................................................done.<br>
 "Finished at 20240427-100044"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Apr 27 12:15 /tmp/tmp.MD6Gp4afMy
+-rw------- 1 msantana msantana 0 Apr 27 12:16 /tmp/tmp.ckWW77h7L5
