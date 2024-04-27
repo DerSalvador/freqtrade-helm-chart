@@ -1,14 +1,16 @@
 ---
 kubernetes:
-  nodePort: 32340
+  nodePort: 32341
 configcreds:
-  position_adjustment_enable: false
-  available_capital: 6800
-  max_open_trades: 9
+  dry_run: true
+  dry_run_wallet: 50000
+  position_adjustment_enable: true
+  available_capital: 50000
+  max_open_trades: 2
   trading_mode: futures
   margin_mode: isolated
   timeframe: 15m
-  bot_name: freqtrading-binance-stieves-futures
+  bot_name: freqtrading-binance-shortlong-futures-dryrun
   exchange:
     ccxt_config:
       enableRateLimit: true
@@ -23,8 +25,8 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: "yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6"
-    secret: "rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv"
+    key: "" # "yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6"
+    secret: "" # "rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv"
   pairlists:
     - method: RemotePairList
       number_assets: 50
@@ -63,9 +65,9 @@ configcreds:
     #   refresh_period: 1800
     # - method: ShuffleFilter
   telegram:
-    enabled: true
-    token: 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
-    chat_id: "889071692"
+    enabled: false
+    token: 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    chat_id: "7015989617" # "889071692"
       #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
       #chat_id: "5711830404"
 
