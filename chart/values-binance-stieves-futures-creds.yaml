@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32340
 configcreds:
   position_adjustment_enable: false
-  available_capital: 2000
+  available_capital: 6800
   max_open_trades: 9
   trading_mode: futures
   margin_mode: isolated
@@ -12,19 +12,19 @@ configcreds:
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 800
+      rateLimit: 1000
       options:
         defaultType: future
         leverage: 100
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 800
+      rateLimit: 1000
       options:
         defaultType: future
         leverage: 100
     name: binance
-    key: "yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6"
-    secret: "rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv"
+    key: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
+    secret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"
   pairlists:
     - method: RemotePairList
       number_assets: 50

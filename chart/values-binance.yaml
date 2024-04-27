@@ -97,13 +97,13 @@ config:
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 800
+      rateLimit: 1000
       options:
         defaultType: spot
         leverage: 10
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 800
+      rateLimit: 1000
       options:
         defaultType: spot
         leverage: 10
