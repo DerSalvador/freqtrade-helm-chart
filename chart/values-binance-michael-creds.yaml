@@ -13,7 +13,7 @@ configcreds:
   telegram:
     enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    chat_id: "1759706931" # "5711830404"
 bot:
   debug: false
   debuglevel: -vvv

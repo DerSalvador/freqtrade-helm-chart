@@ -75,8 +75,14 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR # Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY # eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
-    secret: H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg # JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR # Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY # eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7
+    # secret: H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg # JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
+  telegram:
+    enabled: true
+    token: 6980577520:AAFqUv1J5m3inrRE4s0z4MQPbfrVsliNxbg # "6905337607:AAH6DrgfnKmG8NV9m0RTZuf2wLcJ7MveMkQ"
+    chat_id: "1759706931" # "6560340088"
   pairlists:
     - method: RemotePairList
       number_assets: 50
@@ -113,10 +119,6 @@ configcreds:
     #   min_rate_of_change: 0.1
     #   refresh_period: 1800
     # - method: ShuffleFilter
-  telegram:
-    enabled: true
-    token: "6905337607:AAH6DrgfnKmG8NV9m0RTZuf2wLcJ7MveMkQ"
-    chat_id: "6560340088"
 bot:
   debug: false
   debuglevel: -vvv

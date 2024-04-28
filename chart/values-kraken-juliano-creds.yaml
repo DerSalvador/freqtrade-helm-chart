@@ -24,7 +24,7 @@ configcreds:
   telegram:
     enabled: false
     token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
-    chat_id: "6274423445"
+    chat_id:  "1759706931" # "6274423445"
 bot:
   enabled: true
   strategy_name: AlwaysBuy
