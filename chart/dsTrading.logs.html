@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Sun Apr 28 06:30:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Sun Apr 28 06:34:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -14,11 +14,10 @@
 <table border=1><tr><th>Trading Processes</th></tr>
 <tr><td nowrap><small>688367 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
 <tr><td nowrap><small>1107493 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano</small></td></tr>
-<tr><td nowrap><small>1111672 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
-<tr><td nowrap><small>1167066 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingRestartAllTrader.sh</small></td></tr>
-<tr><td nowrap><small>1167067 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>1167068 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
-<tr><td nowrap><small>1167086 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>1170839 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingConvertAllNonBotManagedCurrencies.sh</small></td></tr>
+<tr><td nowrap><small>1170840 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>1170841 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>1170859 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -1035,506 +1034,507 @@ Using Endpoint on 35.233.38.30:32332<br>
 ++++<br>
 + + + + + <b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-<tr><td>Last Order Date</td><td>2024-04-27 13:00:57.056000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>7</td></tr><br>
-<tr><td>Currencies</td><td>9</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>6.76</td><td>6.76</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>DOGE/USDT:USDT</td><td>27.58</td><td>0</td><td>long</td><td>784</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XLM/USDT:USDT</td><td>21.01</td><td>0</td><td>short</td><td>874</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO/USDT:USDT</td><td>6.3</td><td>0</td><td>long</td><td>181.3</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>SOL/USDT:USDT</td><td>48.4</td><td>0</td><td>long</td><td>5</td><td class=tdspecialbg>50</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP/USDT:USDT</td><td>19.26</td><td>0</td><td>short</td><td>184.1</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>IOTA/USDT:USDT</td><td>13.49</td><td>0</td><td>short</td><td>264.2</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>1000SHIB/USDT:USDT</td><td>8.78</td><td>0</td><td>long</td><td>1551</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>AVAX/USDT:USDT</td><td>15.18</td><td>0</td><td>short</td><td>2</td><td class=tdspecialbg>4</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-<table><tr><th class=tdspecialbg colspan=3>Binance Wallets</th></tr><br>
-<tr><th>Wallet</th><th>Balance</th><th>Currency</th></tr><br>
-<tr><td>Spot</td><td>0.00000223</td><td>BTC</td></tr><br>
-<tr><td>Funding</td><td>0.00013566</td><td>BTC</td></tr><br>
-<tr><td>Cross Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Isolated Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>USDⓈ-M Futures</td><td>0.0025653</td><td>BTC</td></tr><br>
-<tr><td>COIN-M Futures</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Earn</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Options</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Trading Bots</td><td>0</td><td>BTC</td></tr><br>
-</table><br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>-58.57</td><td>-0.26</td><td>226.81697926</td><td>0</td><td>11</td></tr><br>
-<tr><td>2024-04-15</td><td>5.82</td><td>0.03</td><td>221</td><td>0</td><td>1</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>221</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>221</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-michael-futures-dry2>10. binance-michael-futures-dry2&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is dry_run running</small></b><br><br>
-Trading Mode: <b>futures</b><br><br>
-Exchange: <b>binance</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>3</td><td class=tdspecialbg><b>DOGE/USDT:USDT</b></td><td>251 / 251.1</td><td class=tdspecialbg><b>-2.46</b></td><td>2024-04-21T14:03:02Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >10</td> <td>39.98</td><td class=tdspecialbg >0.16</td> <td class=tdspecialbg >0.15</td> <td  class=tdspecialbg >0.12</td> <td>-9.96</td><tr><br>
-<tr><td  class=tdspecialbg>5</td><td class=tdspecialbg><b>XRP/USDT:USDT</b></td><td>76.1 / 76.13</td><td class=tdspecialbg><b>-0.27</b></td><td>2024-04-21T14:10:36Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >10</td> <td>39.99</td><td class=tdspecialbg >0.53</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0.4</td> <td>-9.96</td><tr><br>
-<tr><td  class=tdspecialbg>6</td><td class=tdspecialbg><b>ENA/USDT:USDT</b></td><td>10 / 10.57</td><td class=tdspecialbg><b>-1.03</b></td><td>2024-04-24T01:02:23Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9.46</td> <td>9.46</td><td class=tdspecialbg >0.95</td> <td class=tdspecialbg >0.84</td> <td  class=tdspecialbg >0</td> <td>-9.37</td><tr><br>
-<tr><td  class=tdspecialbg>8</td><td class=tdspecialbg><b>XLM/USDT:USDT</b></td><td>337 / 337.84</td><td class=tdspecialbg><b>-0.94</b></td><td>2024-04-24T01:05:18Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9.98</td> <td>39.91</td><td class=tdspecialbg >0.12</td> <td class=tdspecialbg >0.12</td> <td  class=tdspecialbg >0.09</td> <td>-9.91</td><tr><br>
-<tr><td  class=tdspecialbg>9</td><td class=tdspecialbg><b>1000SHIB/USDT:USDT</b></td><td>1480 / 1480.33</td><td class=tdspecialbg><b>-3.07</b></td><td>2024-04-24T01:09:02Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >10</td> <td>40</td><td class=tdspecialbg >0.03</td> <td class=tdspecialbg >0.02</td> <td  class=tdspecialbg >0.02</td> <td>-9.94</td><tr><br>
-<tr><td  class=tdspecialbg>10</td><td class=tdspecialbg><b>ALGO/USDT:USDT</b></td><td>169.6 / 169.64</td><td class=tdspecialbg><b>-6.01</b></td><td>2024-04-24T06:04:17Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9.99</td> <td>39.96</td><td class=tdspecialbg >0.24</td> <td class=tdspecialbg >0.2</td> <td  class=tdspecialbg >0.18</td> <td>-9.74</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-04-19 21:49:34</td></tr><br>
-<tr><td>DryRun</td><td>true</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>7000000</td></tr><br>
-<tr><td><b>Strategy</b></td><td>NostalgiaForInfinityX4</td></tr><br>
-<tr><td><b>Value</b></td><td>7000009.88</td></tr><br>
-<tr><td>FreqAI enabled</td><td>true</td></tr><br>
-<tr><td>FreqAI Model</td><td>ReinforcementLearner</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-24 06:04:17.507000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>6</td></tr><br>
-<tr><td>Currencies</td><td>7</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>6999950.46</td><td>6999950.46</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>DOGE/USDT:USDT</td><td>10</td><td>0</td><td>long</td><td>251</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP/USDT:USDT</td><td>10</td><td>0</td><td>long</td><td>76.1</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ENA/USDT:USDT</td><td>9.46</td><td>0</td><td>long</td><td>10</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XLM/USDT:USDT</td><td>9.98</td><td>0</td><td>long</td><td>337</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>1000SHIB/USDT:USDT</td><td>10</td><td>0</td><td>long</td><td>1480</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO/USDT:USDT</td><td>9.99</td><td>0</td><td>long</td><td>169.6</td><td class=tdspecialbg>4</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-Usage: usage api-key api-secret<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>9.88</td><td>0</td><td>7000000</td><td>0</td><td>4</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>7000000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>7000000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>7000000</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-shortlong-futures-dryrun>11. binance-shortlong-futures-dryrun&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is dry_run running</small></b><br><br>
-Trading Mode: <b>futures</b><br><br>
-Exchange: <b>binance</b><br><br>
-<b style="color: red;">No open Positions</b><br><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-04-27 12:52:49</td></tr><br>
-<tr><td>DryRun</td><td>true</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>50000</td></tr><br>
-<tr><td><b>Strategy</b></td><td>NostalgiaForInfinityX4</td></tr><br>
-<tr><td><b>Value</b></td><td>50000.00</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>No last order timestamp</td></tr><br>
-<tr><td>Max Open Trades</td><td>4</td></tr><br>
-<tr><td>Open</td><td>0</td></tr><br>
-<tr><td>Currencies</td><td>1</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>50000</td><td>50000</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-Usage: usage api-key api-secret<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>0</td><td>0</td><td>50000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>50000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>50000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>50000</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-stieves-futures>12. binance-stieves-futures&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>futures</b><br><br>
-Exchange: <b>binance</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>32</td><td class=tdspecialbg><b>AVAX/USDT:USDT</b></td><td>25 / 25.13</td><td class=tdspecialbg><b>-19.46</b></td><td>2024-04-27T00:47:16Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >213.1</td> <td>852.39</td><td class=tdspecialbg >34.1</td> <td class=tdspecialbg >34.84</td> <td  class=tdspecialbg >41.98</td> <td>-211.81</td><tr><br>
-<tr><td  class=tdspecialbg>34</td><td class=tdspecialbg><b>BTC/USDT:USDT</b></td><td>0.01 / 0.01</td><td class=tdspecialbg><b>-11.78</b></td><td>2024-04-27T05:17:05Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >204.64</td> <td>818.56</td><td class=tdspecialbg >62965.9</td> <td class=tdspecialbg >63815.8</td> <td  class=tdspecialbg >77599.36</td> <td>-203.42</td><tr><br>
-<tr><td  class=tdspecialbg>36</td><td class=tdspecialbg><b>IOTA/USDT:USDT</b></td><td>13284.4 / 13284.49</td><td class=tdspecialbg><b>-88.29</b></td><td>2024-04-27T13:00:48Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >761</td> <td>3043.99</td><td class=tdspecialbg >0.23</td> <td class=tdspecialbg >0.24</td> <td  class=tdspecialbg >0.28</td> <td>-755.5</td><tr><br>
-<tr><td  class=tdspecialbg>37</td><td class=tdspecialbg><b>ALGO/USDT:USDT</b></td><td>15447.9 / 15447.99</td><td class=tdspecialbg><b>-36.84</b></td><td>2024-04-27T15:00:49Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >761.2</td> <td>3044.78</td><td class=tdspecialbg >0.2</td> <td class=tdspecialbg >0.2</td> <td  class=tdspecialbg >0.24</td> <td>-755.52</td><tr><br>
-<tr><td  class=tdspecialbg>38</td><td class=tdspecialbg><b>BCH/USDT:USDT</b></td><td>6.41 / 6.41</td><td class=tdspecialbg><b>-45.88</b></td><td>2024-04-27T16:00:51Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >761.17</td> <td>3044.68</td><td class=tdspecialbg >474.92</td> <td class=tdspecialbg >481.51</td> <td  class=tdspecialbg >584.6</td> <td>-757.47</td><tr><br>
-<tr><td  class=tdspecialbg>39</td><td class=tdspecialbg><b>XRP/USDT:USDT</b></td><td>5907.4 / 5907.46</td><td class=tdspecialbg><b>-50.35</b></td><td>2024-04-27T17:00:51Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >761.02</td> <td>3044.08</td><td class=tdspecialbg >0.52</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0.63</td> <td>-756.64</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-04-23 20:54:06</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>3000</td></tr><br>
-<tr><td><b>Strategy</b></td><td>AdxSmasS_v7</td></tr><br>
-<tr><td><b>Value</b></td><td>6601.33</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-27 17:00:51.835000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>6</td></tr><br>
-<tr><td>Currencies</td><td>7</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>-320.88</td><td>3397.58</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO/USDT:USDT</td><td>719.72</td><td>0</td><td>short</td><td>15447.9</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP/USDT:USDT</td><td>712.14</td><td>0</td><td>short</td><td>5907.4</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>IOTA/USDT:USDT</td><td>675.67</td><td>0</td><td>short</td><td>13284.4</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BCH/USDT:USDT</td><td>711.61</td><td>0</td><td>short</td><td>6.411</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>AVAX/USDT:USDT</td><td>192.47</td><td>0</td><td>short</td><td>25</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BTC/USDT:USDT</td><td>192.13</td><td>0</td><td>short</td><td>0.013</td><td class=tdspecialbg>4</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-<table><tr><th class=tdspecialbg colspan=3>Binance Wallets</th></tr><br>
-<tr><th>Wallet</th><th>Balance</th><th>Currency</th></tr><br>
-<tr><td>Spot</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Funding</td><td>0.00412137</td><td>BTC</td></tr><br>
-<tr><td>Cross Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Isolated Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>USDⓈ-M Futures</td><td>0.10366729</td><td>BTC</td></tr><br>
-<tr><td>COIN-M Futures</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Earn</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Options</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Trading Bots</td><td>0</td><td>BTC</td></tr><br>
-</table><br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>141.24</td><td>0.05</td><td>3000</td><td>0</td><td>33</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>3000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>3000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>3000</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-stieves-futures-dryrun>13. binance-stieves-futures-dryrun&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is dry_run running</small></b><br><br>
-Trading Mode: <b>futures</b><br><br>
-Exchange: <b>binance</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>12</td><td class=tdspecialbg><b>ALGO/USDT:USDT</b></td><td>9682.8 / 9682.87</td><td class=tdspecialbg><b>-62.39</b></td><td>2024-04-27T10:45:31Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >466.95</td> <td>1867.81</td><td class=tdspecialbg >0.19</td> <td class=tdspecialbg >0.2</td> <td  class=tdspecialbg >0.24</td> <td>-463.42</td><tr><br>
-<tr><td  class=tdspecialbg>13</td><td class=tdspecialbg><b>IOTA/USDT:USDT</b></td><td>8149.3 / 8149.33</td><td class=tdspecialbg><b>-53.29</b></td><td>2024-04-27T13:00:29Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >466.95</td> <td>1867.82</td><td class=tdspecialbg >0.23</td> <td class=tdspecialbg >0.24</td> <td  class=tdspecialbg >0.28</td> <td>-463.37</td><tr><br>
-<tr><td  class=tdspecialbg>14</td><td class=tdspecialbg><b>BCH/USDT:USDT</b></td><td>3.94 / 3.94</td><td class=tdspecialbg><b>-29.86</b></td><td>2024-04-27T16:00:30Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >466.9</td> <td>1867.59</td><td class=tdspecialbg >474.37</td> <td class=tdspecialbg >481.49</td> <td  class=tdspecialbg >584.23</td> <td>-464.21</td><tr><br>
-<tr><td  class=tdspecialbg>15</td><td class=tdspecialbg><b>XRP/USDT:USDT</b></td><td>3625.4 / 3625.44</td><td class=tdspecialbg><b>-31.25</b></td><td>2024-04-27T17:00:38Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >466.95</td> <td>1867.81</td><td class=tdspecialbg >0.52</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0.63</td> <td>-463.93</td><tr><br>
-<tr><td  class=tdspecialbg>16</td><td class=tdspecialbg><b>BTC/USDT:USDT</b></td><td>0.03 / 0.03</td><td class=tdspecialbg><b>-17.37</b></td><td>2024-04-27T18:45:43Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >458.65</td> <td>1834.6</td><td class=tdspecialbg >63262</td> <td class=tdspecialbg >63810.8</td> <td  class=tdspecialbg >77987.43</td> <td>-455.69</td><tr><br>
-<tr><td  class=tdspecialbg>17</td><td class=tdspecialbg><b>LTC/USDT:USDT</b></td><td>22.23 / 22.23</td><td class=tdspecialbg><b>-22.4</b></td><td>2024-04-28T01:15:42Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >466.95</td> <td>1867.79</td><td class=tdspecialbg >84.01</td> <td class=tdspecialbg >84.95</td> <td  class=tdspecialbg >103.47</td> <td>-463.9</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-04-26 17:57:03</td></tr><br>
-<tr><td>DryRun</td><td>true</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>4000</td></tr><br>
-<tr><td><b>Strategy</b></td><td>AdxSmasS_v7</td></tr><br>
-<tr><td><b>Value</b></td><td>4202.61</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-28 01:15:42.179000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>6</td></tr><br>
-<tr><td>Currencies</td><td>7</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>1409.25</td><td>1409.25</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO/USDT:USDT</td><td>466.95</td><td>0</td><td>short</td><td>9682.8</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>IOTA/USDT:USDT</td><td>466.95</td><td>0</td><td>short</td><td>8149.3</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BCH/USDT:USDT</td><td>466.9</td><td>0</td><td>short</td><td>3.937</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP/USDT:USDT</td><td>466.95</td><td>0</td><td>short</td><td>3625.4</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BTC/USDT:USDT</td><td>458.65</td><td>0</td><td>short</td><td>0.029</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>LTC/USDT:USDT</td><td>466.95</td><td>0</td><td>short</td><td>22.233</td><td class=tdspecialbg>4</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-Usage: usage api-key api-secret<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>202.61</td><td>0.05</td><td>3999.9999999999995</td><td>0</td><td>11</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>3999.9999999999995</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>3999.9999999999995</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>3999.9999999999995</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-michael-dry1>14. binance-michael-dry1&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is dry_run running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>binance</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>179</td><td class=tdspecialbg><b>IOTA/USDT</b></td><td>900000 / 900000</td><td class=tdspecialbg><b>4620.6</b></td><td>2024-04-27T15:35:27Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >207180</td> <td>207180</td><td class=tdspecialbg >0.23</td> <td class=tdspecialbg >0.24</td> <td  class=tdspecialbg >0</td> <td>-205229.34</td><tr><br>
-<tr><td  class=tdspecialbg>180</td><td class=tdspecialbg><b>BTC/USDT</b></td><td>142.86 / 142.86</td><td class=tdspecialbg><b>99636.88</b></td><td>2024-04-27T15:35:29Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9000528.56</td> <td>9000528.56</td><td class=tdspecialbg >63003.71</td> <td class=tdspecialbg >63828</td> <td  class=tdspecialbg >0</td> <td>-8919613.39</td><tr><br>
-<tr><td  class=tdspecialbg>181</td><td class=tdspecialbg><b>XLM/USDT</b></td><td>9000000 / 9000000</td><td class=tdspecialbg><b>14131.8</b></td><td>2024-04-27T15:40:30Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >1026000</td> <td>1026000</td><td class=tdspecialbg >0.11</td> <td class=tdspecialbg >0.12</td> <td  class=tdspecialbg >0</td> <td>-1016236.8</td><tr><br>
-<tr><td  class=tdspecialbg>182</td><td class=tdspecialbg><b>XRP/USDT</b></td><td>9222449 / 9222449</td><td class=tdspecialbg><b>51273.13</b></td><td>2024-04-27T15:40:32Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >4767083.89</td> <td>4767083.89</td><td class=tdspecialbg >0.52</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0</td> <td>-4723942.19</td><tr><br>
-<tr><td  class=tdspecialbg>183</td><td class=tdspecialbg><b>DOGE/USDT</b></td><td>9000000 / 9000000</td><td class=tdspecialbg><b>34691.85</b></td><td>2024-04-27T15:40:34Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >1310400</td> <td>1310400</td><td class=tdspecialbg >0.15</td> <td class=tdspecialbg >0.15</td> <td  class=tdspecialbg >0</td> <td>-1298583.54</td><tr><br>
-<tr><td  class=tdspecialbg>184</td><td class=tdspecialbg><b>SOL/USDT</b></td><td>65516.48 / 65516.49</td><td class=tdspecialbg><b>347192.79</b></td><td>2024-04-27T15:50:30Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9011791.82</td> <td>9011791.82</td><td class=tdspecialbg >137.55</td> <td class=tdspecialbg >143.13</td> <td  class=tdspecialbg >0</td> <td>-8930481.29</td><tr><br>
-<tr><td  class=tdspecialbg>185</td><td class=tdspecialbg><b>ALGO/USDT</b></td><td>922327 / 922327</td><td class=tdspecialbg><b>1756.02</b></td><td>2024-04-27T16:10:35Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >181606.19</td> <td>181606.19</td><td class=tdspecialbg >0.2</td> <td class=tdspecialbg >0.2</td> <td  class=tdspecialbg >0</td> <td>-179944.98</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-04-19 19:36:22</td></tr><br>
-<tr><td>DryRun</td><td>true</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>50000</td></tr><br>
-<tr><td><b>Strategy</b></td><td>NostalgiaForInfinityX4</td></tr><br>
-<tr><td><b>Value</b></td><td>192980.35</td></tr><br>
-<tr><td>FreqAI enabled</td><td>true</td></tr><br>
-<tr><td>FreqAI Model</td><td>ReinforcementLearner</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-27 16:10:35.886000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>7</td></tr><br>
-<tr><td>Currencies</td><td>8</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>IOTA</td><td>212220</td><td>900000</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BTC</td><td>9117317.11</td><td>142.86</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XLM</td><td>1043100</td><td>9000000</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP</td><td>4828874.3</td><td>9222449</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>DOGE</td><td>1347930</td><td>9000000</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>SOL</td><td>9379994.44</td><td>65516.48</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO</td><td>183819.77</td><td>922327</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>USDT</td><td>-25920275.27</td><td>-25920275.27</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-Usage: usage api-key api-secret<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>-291094.75</td><td>0</td><td>-124590.07056098973</td><td>0</td><td>71</td></tr><br>
-<tr><td>2024-04-15</td><td>-174590.07</td><td>-3.49</td><td>50000.00000000026</td><td>0</td><td>46</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>50000.00000000026</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>50000.00000000026</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-michael-futures-dry2>15. binance-michael-futures-dry2&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is dry_run running</small></b><br><br>
-Trading Mode: <b>futures</b><br><br>
-Exchange: <b>binance</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>3</td><td class=tdspecialbg><b>DOGE/USDT:USDT</b></td><td>251 / 251.1</td><td class=tdspecialbg><b>-2.46</b></td><td>2024-04-21T14:03:02Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >10</td> <td>39.98</td><td class=tdspecialbg >0.16</td> <td class=tdspecialbg >0.15</td> <td  class=tdspecialbg >0.12</td> <td>-9.96</td><tr><br>
-<tr><td  class=tdspecialbg>5</td><td class=tdspecialbg><b>XRP/USDT:USDT</b></td><td>76.1 / 76.13</td><td class=tdspecialbg><b>-0.27</b></td><td>2024-04-21T14:10:36Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >10</td> <td>39.99</td><td class=tdspecialbg >0.53</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0.4</td> <td>-9.96</td><tr><br>
-<tr><td  class=tdspecialbg>6</td><td class=tdspecialbg><b>ENA/USDT:USDT</b></td><td>10 / 10.57</td><td class=tdspecialbg><b>-1.03</b></td><td>2024-04-24T01:02:23Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9.46</td> <td>9.46</td><td class=tdspecialbg >0.95</td> <td class=tdspecialbg >0.84</td> <td  class=tdspecialbg >0</td> <td>-9.37</td><tr><br>
-<tr><td  class=tdspecialbg>8</td><td class=tdspecialbg><b>XLM/USDT:USDT</b></td><td>337 / 337.84</td><td class=tdspecialbg><b>-0.94</b></td><td>2024-04-24T01:05:18Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9.98</td> <td>39.91</td><td class=tdspecialbg >0.12</td> <td class=tdspecialbg >0.12</td> <td  class=tdspecialbg >0.09</td> <td>-9.91</td><tr><br>
-<tr><td  class=tdspecialbg>9</td><td class=tdspecialbg><b>1000SHIB/USDT:USDT</b></td><td>1480 / 1480.33</td><td class=tdspecialbg><b>-3.07</b></td><td>2024-04-24T01:09:02Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >10</td> <td>40</td><td class=tdspecialbg >0.03</td> <td class=tdspecialbg >0.02</td> <td  class=tdspecialbg >0.02</td> <td>-9.94</td><tr><br>
-<tr><td  class=tdspecialbg>10</td><td class=tdspecialbg><b>ALGO/USDT:USDT</b></td><td>169.6 / 169.64</td><td class=tdspecialbg><b>-6.01</b></td><td>2024-04-24T06:04:17Z</td><td  class=tdspecialbg>4</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9.99</td> <td>39.96</td><td class=tdspecialbg >0.24</td> <td class=tdspecialbg >0.2</td> <td  class=tdspecialbg >0.18</td> <td>-9.74</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-04-19 21:49:34</td></tr><br>
-<tr><td>DryRun</td><td>true</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>7000000</td></tr><br>
-<tr><td><b>Strategy</b></td><td>NostalgiaForInfinityX4</td></tr><br>
-<tr><td><b>Value</b></td><td>7000009.88</td></tr><br>
-<tr><td>FreqAI enabled</td><td>true</td></tr><br>
-<tr><td>FreqAI Model</td><td>ReinforcementLearner</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-24 06:04:17.507000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>6</td></tr><br>
-<tr><td>Currencies</td><td>7</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>6999950.46</td><td>6999950.46</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>DOGE/USDT:USDT</td><td>10</td><td>0</td><td>long</td><td>251</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP/USDT:USDT</td><td>10</td><td>0</td><td>long</td><td>76.1</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ENA/USDT:USDT</td><td>9.46</td><td>0</td><td>long</td><td>10</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XLM/USDT:USDT</td><td>9.98</td><td>0</td><td>long</td><td>337</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>1000SHIB/USDT:USDT</td><td>10</td><td>0</td><td>long</td><td>1480</td><td class=tdspecialbg>4</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO/USDT:USDT</td><td>9.99</td><td>0</td><td>long</td><td>169.6</td><td class=tdspecialbg>4</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-Usage: usage api-key api-secret<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>9.88</td><td>0</td><td>7000000</td><td>0</td><td>4</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>7000000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>7000000</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>7000000</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=kraken-juliano>16. kraken-juliano&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>kraken</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>41</td><td class=tdspecialbg><b>DOGE/USDT</b></td><td>63 / 63</td><td class=tdspecialbg><b>0.22</b></td><td>2024-04-27T13:01:11Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >9.14</td> <td>9.14</td><td class=tdspecialbg >0.15</td> <td class=tdspecialbg >0.15</td> <td  class=tdspecialbg >0</td> <td>-9.09</td><tr><br>
-<tr><td  class=tdspecialbg>42</td><td class=tdspecialbg><b>XRP/USDT</b></td><td>11.6 / 11.6</td><td class=tdspecialbg><b>0.04</b></td><td>2024-04-27T13:03:05Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >5.98</td> <td>5.98</td><td class=tdspecialbg >0.52</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0</td> <td>-5.95</td><tr><br>
-<tr><td  class=tdspecialbg>43</td><td class=tdspecialbg><b>ALGO/USDT</b></td><td>30.27 / 30.27</td><td class=tdspecialbg><b>-0</b></td><td>2024-04-27T13:03:44Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >5.98</td> <td>5.98</td><td class=tdspecialbg >0.2</td> <td class=tdspecialbg >0.2</td> <td  class=tdspecialbg >0</td> <td>-5.95</td><tr><br>
-<tr><td  class=tdspecialbg>44</td><td class=tdspecialbg><b>ETH/USDT</b></td><td>0 / 0</td><td class=tdspecialbg><b>-0.05</b></td><td>2024-04-27T13:35:26Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >0.03</td> <td>6.62</td><td class=tdspecialbg >3138.67</td> <td class=tdspecialbg >3312.26</td> <td  class=tdspecialbg >0</td> <td>-0.03</td><tr><br>
-<tr><td  class=tdspecialbg>45</td><td class=tdspecialbg><b>SOL/USDT</b></td><td>0.05 / 0.05</td><td class=tdspecialbg><b>0.18</b></td><td>2024-04-27T13:36:05Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >7.28</td> <td>7.28</td><td class=tdspecialbg >138.63</td> <td class=tdspecialbg >143.11</td> <td  class=tdspecialbg >0</td> <td>-7.23</td><tr><br>
-<tr><td  class=tdspecialbg>46</td><td class=tdspecialbg><b>BTC/USDT</b></td><td>0 / 0</td><td class=tdspecialbg><b>0.01</b></td><td>2024-04-27T13:38:02Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >6.64</td> <td>6.64</td><td class=tdspecialbg >63191.3</td> <td class=tdspecialbg >63838.7</td> <td  class=tdspecialbg >0</td> <td>-6.6</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-03-29 20:52:58</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>82</td></tr><br>
-<tr><td><b>Strategy</b></td><td>AlwaysBuy</td></tr><br>
-<tr><td><b>Value</b></td><td>76.54</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-27 13:38:29.933000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>6</td></tr><br>
-<tr><td>Currencies</td><td>8</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ALGO</td><td>6.05</td><td>67.62</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>SOL</td><td>7.52</td><td>0.11</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>USDC</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>USDT</td><td>17.84</td><td>17.84</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ETH</td><td>0.03</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BTC</td><td>6.7</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>DOGE</td><td>9.45</td><td>63.01</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP</td><td>6.07</td><td>11.99</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>-1.66</td><td>-0.02</td><td>81.6054879</td><td>0</td><td>22</td></tr><br>
-<tr><td>2024-04-15</td><td>-0.39</td><td>-0</td><td>82</td><td>0</td><td>2</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>82</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>82</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=kraken-adriana>17. kraken-adriana&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>kraken</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>2</td><td class=tdspecialbg><b>XRP/USDT</b></td><td>10.5 / 10.5</td><td class=tdspecialbg><b>-0.04</b></td><td>2024-04-28T06:11:45Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >5.5</td> <td>5.5</td><td class=tdspecialbg >0.52</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0</td> <td>-5.47</td><tr><br>
-<tr><td  class=tdspecialbg>3</td><td class=tdspecialbg><b>ALGO/USDT</b></td><td>26.25 / 26.25</td><td class=tdspecialbg><b>-0.06</b></td><td>2024-04-28T06:12:24Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >5.25</td> <td>5.25</td><td class=tdspecialbg >0.2</td> <td class=tdspecialbg >0.2</td> <td  class=tdspecialbg >0</td> <td>-5.22</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-03-28 23:08:36</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>60</td></tr><br>
-<tr><td><b>Strategy</b></td><td>AlwaysBuy</td></tr><br>
-<tr><td><b>Value</b></td><td>57.31</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-28 06:13:18.757000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>2</td></tr><br>
-<tr><td>Currencies</td><td>9</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ADA</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO</td><td>5.24</td><td>26.67</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>MANA</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>MATIC</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>SOL</td><td>0</td><td>0.05</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>USDC</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>USDT</td><td>20.11</td><td>20.11</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BTC</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>XRP</td><td>5.49</td><td>33.15</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>0.04</td><td>0</td><td>60</td><td>0</td><td>1</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>60</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>60</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>60</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-larissa>18. binance-larissa&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>binance</b><br><br>
-<b style="color: red;">No open Positions</b><br><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-04-09 08:35:08</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>1</td></tr><br>
-<tr><td><b>Strategy</b></td><td>AlwaysBuy</td></tr><br>
-<tr><td><b>Value</b></td><td>1.00</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>No last order timestamp</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>0</td></tr><br>
-<tr><td>Currencies</td><td>2</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>1</td><td>1</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>PEPE</td><td>0</td><td>0.14</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr> </table><br>
-<hr><br>
-<br><br>
-<table><tr><th class=tdspecialbg colspan=3>Binance Wallets</th></tr><br>
-<tr><th>Wallet</th><th>Balance</th><th>Currency</th></tr><br>
-<tr><td>Spot</td><td>0.00001566</td><td>BTC</td></tr><br>
-<tr><td>Funding</td><td>0.00347298</td><td>BTC</td></tr><br>
-<tr><td>Cross Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Isolated Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>USDⓈ-M Futures</td><td>0.00770483</td><td>BTC</td></tr><br>
-<tr><td>COIN-M Futures</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Earn</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Options</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Trading Bots</td><td>0</td><td>BTC</td></tr><br>
-</table><br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-juliano>19. binance-juliano&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>binance</b><br><br>
-<b style="color: red;">No open Positions</b><br><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-03-29 15:49:03</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>25</td></tr><br>
-<tr><td><b>Strategy</b></td><td>AlwaysBuy</td></tr><br>
-<tr><td><b>Value</b></td><td>0.02</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>No last order timestamp</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>0</td></tr><br>
-<tr><td>Currencies</td><td>1</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>BNB</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr> </table><br>
-<hr><br>
-<br><br>
-<table><tr><th class=tdspecialbg colspan=3>Binance Wallets</th></tr><br>
-<tr><th>Wallet</th><th>Balance</th><th>Currency</th></tr><br>
-<tr><td>Spot</td><td>0.00000223</td><td>BTC</td></tr><br>
-<tr><td>Funding</td><td>0.00013568</td><td>BTC</td></tr><br>
-<tr><td>Cross Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Isolated Margin</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>USDⓈ-M Futures</td><td>0.00257051</td><td>BTC</td></tr><br>
-<tr><td>COIN-M Futures</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Earn</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Options</td><td>0</td><td>BTC</td></tr><br>
-<tr><td>Trading Bots</td><td>0</td><td>BTC</td></tr><br>
-</table><br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-04-22</td><td>0</td><td>0</td><td>25</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-15</td><td>0</td><td>0</td><td>25</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-08</td><td>0</td><td>0</td><td>25</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-04-01</td><td>0</td><td>0</td><td>25</td><td>0</td><td>0</td></tr><br>
-</table><br>
-<hr><b class=botheader id=binance-hassan>20. binance-hassan&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>binance</b><br><br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>51</td><td class=tdspecialbg><b>BONK/USDT</b></td><td>178028 / 178028.15</td><td class=tdspecialbg><b>0.4</b></td><td>2024-04-27T13:01:30Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >4.3</td> <td>4.3</td><td class=tdspecialbg >0</td> <td class=tdspecialbg >0</td> <td  class=tdspecialbg >0</td> <td>-4.26</td><tr><br>
-<tr><td  class=tdspecialbg>52</td><td class=tdspecialbg><b>XLM/USDT</b></td><td>65 / 66.43</td><td class=tdspecialbg><b>0.17</b></td><td>2024-04-27T13:35:10Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >7.44</td> <td>7.44</td><td class=tdspecialbg >0.11</td> <td class=tdspecialbg >0.12</td> <td  class=tdspecialbg >0</td> <td>-7.27</td><tr><br>
-<tr><td  class=tdspecialbg>53</td><td class=tdspecialbg><b>XRP/USDT</b></td><td>13 / 14.55</td><td class=tdspecialbg><b>0.09</b></td><td>2024-04-27T13:35:28Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >7.21</td> <td>7.21</td><td class=tdspecialbg >0.52</td> <td class=tdspecialbg >0.52</td> <td  class=tdspecialbg >0</td> <td>-6.64</td><tr><br>
-<tr><td  class=tdspecialbg>54</td><td class=tdspecialbg><b>IOTA/USDT</b></td><td>31 / 32.65</td><td class=tdspecialbg><b>0.17</b></td><td>2024-04-27T13:35:45Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >7.34</td> <td>7.34</td><td class=tdspecialbg >0.23</td> <td class=tdspecialbg >0.24</td> <td  class=tdspecialbg >0</td> <td>-7.06</td><tr><br>
-<tr><td  class=tdspecialbg>55</td><td class=tdspecialbg><b>BTC/USDT</b></td><td>0 / 0</td><td class=tdspecialbg><b>0.05</b></td><td>2024-04-27T13:36:03Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >6.95</td> <td>6.95</td><td class=tdspecialbg >63212.32</td> <td class=tdspecialbg >63824.99</td> <td  class=tdspecialbg >0</td> <td>-6.26</td><tr><br>
-<tr><td  class=tdspecialbg>56</td><td class=tdspecialbg><b>ETH/USDT</b></td><td>0 / 0</td><td class=tdspecialbg><b>0.36</b></td><td>2024-04-27T13:36:20Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >7.22</td> <td>7.22</td><td class=tdspecialbg >3141.81</td> <td class=tdspecialbg >3311.56</td> <td  class=tdspecialbg >0</td> <td>-6.85</td><tr><br>
-<tr><td  class=tdspecialbg>57</td><td class=tdspecialbg><b>DOGE/USDT</b></td><td>50 / 51.25</td><td class=tdspecialbg><b>0.15</b></td><td>2024-04-27T13:36:37Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >7.45</td> <td>7.45</td><td class=tdspecialbg >0.15</td> <td class=tdspecialbg >0.15</td> <td  class=tdspecialbg >0</td> <td>-7.25</td><tr> </table><br>
-<table><br>
-<tr><td>Freqtrade Version</td><td>2024.3</td></tr><br>
-<tr><td>Started</td><td>2024-03-28 23:01:28</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>100</td></tr><br>
-<tr><td><b>Strategy</b></td><td>AlwaysBuy</td></tr><br>
-<tr><td><b>Value</b></td><td>90.50</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>LightGBMRegressor</td></tr><br>
-<tr><td>Last Order Date</td><td>2024-04-27 13:36:37.384000</td></tr><br>
-<tr><td>Max Open Trades</td><td>6</td></tr><br>
-<tr><td>Open</td><td>7</td></tr><br>
-<tr><td>Currencies</td><td>13</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>BTC</td><td>6.38</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ETH</td><td>7.28</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BNB</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>USDT</td><td>6.63</td><td>6.63</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>IOTA</td><td>7.3</td><td>33.9</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XRP</td><td>6.8</td><td>15.96</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XLM</td><td>7.53</td><td>68.74</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ALGO</td><td>0</td><td>2.89</td><td>long</td><t<br><br><hr>##++<br>
+<b>2024-04-20 05-03-22: 15635.14</b><br><br>
+<b>2024-04-20 04-43-54: 15625.66</b><br><br>
+<b>2024-04-20 04-24-44: 15611.19</b><br><br>
+<b>2024-04-20 03-43-03: 15613.66</b><br><br>
+<b>2024-04-20 03-23-39: 15629.98</b><br><br>
+<b>2024-04-20 03-03-06: 15641.27</b><br><br>
+<b>2024-04-20 02-42-54: 15639.71</b><br><br>
+<b>2024-04-20 02-24-41: 15630.64</b><br><br>
+<b>2024-04-20 02-03-16: 15613.55</b><br><br>
+<b>2024-04-20 01-42-52: 15601.75</b><br><br>
+<b>2024-04-20 01-23-00: 15592.59</b><br><br>
+<b>2024-04-20 01-03-30: 15584.36</b><br><br>
+<b>2024-04-20 00-43-38: 15601.14</b><br><br>
+<b>2024-04-20 00-23-07: 15591.35</b><br><br>
+<b>2024-04-20 00-03-16: 15615.25</b><br><br>
+<b>2024-04-19 23-44-16: 15607.38</b><br><br>
+<b>2024-04-19 23-23-51: 15606.66</b><br><br>
+<b>2024-04-19 23-03-10: 15628.18</b><br><br>
+<b>2024-04-19 22-54-27: 15630.01</b><br><br>
+<b>2024-04-19 22-42-54: 15630.19</b><br><br>
+<b>2024-04-19 22-24-41: 15644.59</b><br><br>
+<b>2024-04-19 22-19-01: 15654.62</b><br><br>
+<b>2024-04-19 22-12-43: 15650.54</b><br><br>
+<b>2024-04-19 22-03-26: 15642.21</b><br><br>
+<b>2024-04-19 21-54-59: 15640.53</b><br><br>
+<b>2024-04-19 21-43-15: 15645.62</b><br><br>
+<b>2024-04-19 20-23-29: 15650.57</b><br><br>
+<b>2024-04-19 19-42-35: 16056.16</b><br><br>
+<b>2024-04-19 19-22-35: 16057.35</b><br><br>
+<b>2024-04-19 19-13-19: 15658.74</b><br><br>
+<b>2024-04-19 19-02-48: 15642.21</b><br><br>
+<b>2024-04-19 18-42-32: 16053.78</b><br><br>
+<b>2024-04-19 18-22-52: 16054.94</b><br><br>
+<b>2024-04-19 18-02-48: 15655.89</b><br><br>
+<b>2024-04-19 17-42-32: 15648.87</b><br><br>
+<b>2024-04-19 17-23-59: 15652.81</b><br><br>
+<b>2024-04-19 17-02-26: 15641.66</b><br><br>
+<b>2024-04-19 16-42-22: 15624.80</b><br><br>
+<b>2024-04-19 16-24-05: 15707.47</b><br><br>
+<b>2024-04-19 15-47-26: 15733.24</b><br><br>
+<b>2024-04-19 15-22-33: 15724.53</b><br><br>
+<b>2024-04-19 15-02-41: 15729.25</b><br><br>
+<b>2024-04-19 14-42-22: 15692.16</b><br><br>
+<b>2024-04-19 14-23-43: 15702.89</b><br><br>
+<b>2024-04-19 14-02-44: 15719.77</b><br><br>
+<b>2024-04-19 13-42-20: 15726.30</b><br><br>
+<b>2024-04-19 13-24-04: 15682.00</b><br><br>
+<b>2024-04-19 13-02-43: 15709.20</b><br><br>
+<b>2024-04-19 12-43-13: 15724.93</b><br><br>
+<b>2024-04-19 12-24-04: 15707.55</b><br><br>
+<b>2024-04-19 11-42-27: 15724.74</b><br><br>
+<b>2024-04-19 11-22-39: 15704.32</b><br><br>
+<b>2024-04-19 11-02-41: 15666.80</b><br><br>
+<b>2024-04-19 10-43-56: 15653.38</b><br><br>
+<b>2024-04-19 10-22-56: 15686.58</b><br><br>
+<b>2024-04-19 10-03-42: 15678.66</b><br><br>
+<b>2024-04-19 09-42-22: 15636.65</b><br><br>
+<b>2024-04-19 09-22-52: 15618.87</b><br><br>
+<b>2024-04-19 09-02-39: 15611.10</b><br><br>
+<b>2024-04-19 08-42-58: 15580.88</b><br><br>
+<b>2024-04-19 08-24-06: 15707.56</b><br><br>
+<b>2024-04-19 08-04-05: 15485.28</b><br><br>
+<b>2024-04-19 07-42-22: 15491.94</b><br><br>
+<b>2024-04-19 07-22-24: 15492.93</b><br><br>
+<b>2024-04-19 07-02-37: 15623.52</b><br><br>
+<b>2024-04-19 06-42-22: 15454.19</b><br><br>
+<b>2024-04-19 06-23-34: 15389.05</b><br><br>
+<b>2024-04-19 06-02-49: 15402.96</b><br><br>
+<b>2024-04-19 05-42-41: 15386.15</b><br><br>
+<b>2024-04-19 05-24-11: 15399.88</b><br><br>
+<b>2024-04-19 05-02-54: 15423.75</b><br><br>
+<b>2024-04-19 04-42-22: 15421.18</b><br><br>
+<b>2024-04-19 04-23-55: 15365.89</b><br><br>
+<b>2024-04-19 03-42-30: 15326.74</b><br><br>
+<b>2024-04-19 03-22-39: 15276.95</b><br><br>
+<b>2024-04-19 03-02-42: 15180.18</b><br><br>
+<b>2024-04-19 02-43-11: 15153.51</b><br><br>
+<b>2024-04-19 02-23-44: 15209.44</b><br><br>
+<b>2024-04-19 02-02-45: 15245.44</b><br><br>
+<b>2024-04-19 01-42-24: 15315.22</b><br><br>
+<b>2024-04-19 01-23-15: 15320.21</b><br><br>
+<b>2024-04-19 01-02-40: 15344.82</b><br><br>
+<b>2024-04-19 00-43-12: 15350.21</b><br><br>
+<b>2024-04-19 00-24-05: 15336.10</b><br><br>
+<b>2024-04-18 23-42-21: 15351.46</b><br><br>
+<b>2024-04-18 23-22-34: 15356.39</b><br><br>
+<b>2024-04-18 23-04-15: 15340.51</b><br><br>
+<b>2024-04-18 22-42-23: 15345.19</b><br><br>
+<b>2024-04-18 22-24-51: 15340.10</b><br><br>
+<b>2024-04-18 22-03-44: 15347.89</b><br><br>
+<b>2024-04-18 21-42-20: 15347.85</b><br><br>
+<b>2024-04-18 21-22-32: 15346.31</b><br><br>
+<b>2024-04-18 21-04-09: 15342.68</b><br><br>
+<b>2024-04-18 20-42-40: 15341.46</b><br><br>
+<b>2024-04-18 20-24-01: 15336.68</b><br><br>
+<b>2024-04-18 19-42-24: 15327.15</b><br><br>
+<b>2024-04-18 19-23-23: 16008.55</b><br><br>
+<b>2024-04-18 19-02-36: 15328.95</b><br><br>
+<b>2024-04-18 18-42-33: 15320.93</b><br><br>
+<b>2024-04-18 18-23-34: 15340.12</b><br><br>
+<b>2024-04-18 18-03-19: 15341.67</b><br><br>
+<b>2024-04-18 17-42-23: 15338.19</b><br><br>
+<b>2024-04-18 17-23-15: 15338.25</b><br><br>
+<b>2024-04-18 17-02-44: 15338.73</b><br><br>
+<b>2024-04-18 16-43-05: 15336.37</b><br><br>
+<b>2024-04-18 16-23-04: 15317.87</b><br><br>
+<b>2024-04-18 15-43-09: 15363.31</b><br><br>
+<b>2024-04-18 15-22-34: 15630.47</b><br><br>
+<b>2024-04-18 15-03-26: 15775.64</b><br><br>
+<b>2024-04-18 14-42-21: 15881.79</b><br><br>
+<b>2024-04-18 14-22-37: 15845.63</b><br><br>
+<b>2024-04-18 14-02-50: 15532.21</b><br><br>
+<b>2024-04-18 13-43-09: 15501.44</b><br><br>
+<b>2024-04-18 13-23-39: 15457.33</b><br><br>
+<b>2024-04-18 13-02-44: 15447.75</b><br><br>
+<b>2024-04-18 12-54-20: 13905.31</b><br><br>
+<b>2024-04-18 12-41-22: 13343.53</b><br><br>
+<b>2024-04-18 12-22-12: 13552.98</b><br><br>
+<b>2024-04-18 11-41-24: 13672.56</b><br><br>
+<b>2024-04-18 11-21-48: 13465.31</b><br><br>
+<b>2024-04-18 11-01-38: 13324.69</b><br><br>
+<b>2024-04-18 10-41-24: 13273.47</b><br><br>
+<b>2024-04-18 10-21-53: 13187.49</b><br><br>
+<b>2024-04-18 10-02-30: 13157.54</b><br><br>
+<b>2024-04-18 09-41-24: 13115.58</b><br><br>
+<b>2024-04-18 09-21-45: 13170.33</b><br><br>
+<b>2024-04-18 09-02-26: 13122.93</b><br><br>
+<b>2024-04-18 08-41-24: 13160.75</b><br><br>
+<b>2024-04-18 08-23-02: 13051.04</b><br><br>
+<b>2024-04-18 07-46-30: 13070.02</b><br><br>
+<b>2024-04-18 07-21-29: 13127.15</b><br><br>
+<b>2024-04-18 07-01-44: 13085.26</b><br><br>
+<b>2024-04-18 06-41-24: 13085.82</b><br><br>
+<b>2024-04-18 06-22-21: 13172.88</b><br><br>
+<b>2024-04-18 06-02-29: 13375.45</b><br><br>
+<b>2024-04-18 05-41-24: 13491.67</b><br><br>
+<b>2024-04-18 05-22-06: 13522.46</b><br><br>
+<b>2024-04-18 05-01-38: 13730.04</b><br><br>
+<b>2024-04-18 04-41-23: 13735.54</b><br><br>
+<b>2024-04-18 04-32-03: 13785.09</b><br><br>
+<b>2024-04-18 04-22-00: 14049.08</b><br><br>
+<b>2024-04-18 03-41-25: 14102.76</b><br><br>
+<b>2024-04-18 03-21-53: 14079.14</b><br><br>
+<b>2024-04-18 03-02-47: 13892.18</b><br><br>
+<b>2024-04-18 02-41-43: 13817.25</b><br><br>
+<b>2024-04-18 02-22-00: 14027.60</b><br><br>
+<b>2024-04-18 02-02-46: 13897.72</b><br><br>
+<b>2024-04-18 01-41-25: 13936.39</b><br><br>
+<b>2024-04-18 01-21-46: 13912.97</b><br><br>
+<b>2024-04-18 01-02-40: 13754.69</b><br><br>
+<b>2024-04-18 00-41-24: 13529.47</b><br><br>
+<b>2024-04-18 00-22-15: 13721.11</b><br><br>
+<b>2024-04-17 23-41-23: 13737.13</b><br><br>
+<b>2024-04-17 23-22-13: 13547.13</b><br><br>
+<b>2024-04-17 23-02-57: 13688.08</b><br><br>
+<b>2024-04-17 22-41-24: 13590.96</b><br><br>
+<b>2024-04-17 22-22-04: 13572.54</b><br><br>
+<b>2024-04-17 22-02-34: 13539.77</b><br><br>
+<b>2024-04-17 21-41-25: 13558.84</b><br><br>
+<b>2024-04-17 21-22-36: 13618.41</b><br><br>
+<b>2024-04-17 21-02-48: 13713.14</b><br><br>
+<b>2024-04-17 20-41-26: 13564.40</b><br><br>
+<b>2024-04-17 20-22-03: 13559.24</b><br><br>
+<b>2024-04-17 19-41-23: 13653.09</b><br><br>
+<b>2024-04-17 19-22-05: 13553.96</b><br><br>
+<b>2024-04-17 19-02-58: 13344.44</b><br><br>
+<b>2024-04-17 18-41-25: 13308.15</b><br><br>
+<b>2024-04-17 18-21-53: 13545.69</b><br><br>
+<b>2024-04-17 18-02-31: 13919.36</b><br><br>
+<b>2024-04-17 17-41-23: 13793.06</b><br><br>
+<b>2024-04-17 17-21-53: 13630.31</b><br><br>
+<b>2024-04-17 17-02-25: 13648.72</b><br><br>
+<b>2024-04-17 16-41-23: 13810.94</b><br><br>
+<b>2024-04-17 16-22-03: 13672.49</b><br><br>
+<b>2024-04-17 15-41-23: 13722.71</b><br><br>
+<b>2024-04-17 15-21-49: 13785.82</b><br><br>
+<b>2024-04-17 15-01-46: 13783.96</b><br><br>
+<b>2024-04-17 14-41-21: 13778.84</b><br><br>
+<b>2024-04-17 14-22-03: 13732.21</b><br><br>
+<b>2024-04-17 14-03-01: 13958.82</b><br><br>
+<b>2024-04-17 13-41-30: 13955.31</b><br><br>
+<b>2024-04-17 13-22-03: 13942.95</b><br><br>
+<b>2024-04-17 13-01-40: 14014.08</b><br><br>
+<b>2024-04-17 12-41-25: 13976.55</b><br><br>
+<b>2024-04-17 12-23-15: 14044.42</b><br><br>
+<b>2024-04-17 11-41-26: 14212.41</b><br><br>
+<b>2024-04-17 11-22-01: 14238.89</b><br><br>
+<b>2024-04-17 11-01-39: 14242.92</b><br><br>
+<b>2024-04-17 10-42-36: 14245.89</b><br><br>
+<b>2024-04-17 10-22-27: 14340.67</b><br><br>
+<b>2024-04-17 10-03-13: 14335.85</b><br><br>
+<b>2024-04-17 09-45-56: 14343.70</b><br><br>
+<b>2024-04-17 09-21-31: 14333.61</b><br><br>
+<b>2024-04-17 09-03-53: 14343.15</b><br><br>
+<b>2024-04-17 08-43-58: 14350.84</b><br><br>
+<b>2024-04-17 08-22-55: 14323.28</b><br><br>
+<b>2024-04-17 07-41-26: 14351.06</b><br><br>
+<b>2024-04-17 07-22-13: 14392.53</b><br><br>
+<b>2024-04-17 07-03-06: 14417.40</b><br><br>
+<b>2024-04-17 06-41-39: 14427.10</b><br><br>
+<b>2024-04-17 06-21-46: 14404.67</b><br><br>
+<b>2024-04-17 06-02-31: 14409.16</b><br><br>
+<b>2024-04-17 05-41-24: 14436.58</b><br><br>
+<b>2024-04-17 05-21-46: 14450.38</b><br><br>
+<b>2024-04-17 05-03-03: 14439.20</b><br><br>
+<b>2024-04-17 04-41-41: 14422.53</b><br><br>
+<b>2024-04-17 04-21-53: 14383.26</b><br><br>
+<b>2024-04-17 03-41-24: 14389.39</b><br><br>
+<b>2024-04-17 03-21-45: 14405.08</b><br><br>
+<b>2024-04-17 03-03-07: 14368.03</b><br><br>
+<b>2024-04-17 02-41-47: 14376.67</b><br><br>
+<b>2024-04-17 02-21-52: 14364.67</b><br><br>
+<b>2024-04-17 02-02-34: 14372.86</b><br><br>
+<b>2024-04-17 01-41-26: 14334.30</b><br><br>
+<b>2024-04-17 01-21-48: 14278.58</b><br><br>
+<b>2024-04-17 01-03-01: 14316.54</b><br><br>
+<b>2024-04-17 00-41-23: 14254.16</b><br><br>
+<b>2024-04-17 00-21-54: 14252.34</b><br><br>
+<b>2024-04-16 23-41-24: 14270.96</b><br><br>
+<b>2024-04-16 23-21-23: 14249.97</b><br><br>
+<b>2024-04-16 23-03-05: 14273.94</b><br><br>
+<b>2024-04-16 22-41-41: 14266.98</b><br><br>
+<b>2024-04-16 22-21-33: 14268.58</b><br><br>
+<b>2024-04-16 22-02-49: 14286.60</b><br><br>
+<b>2024-04-16 21-41-26: 14271.88</b><br><br>
+<b>2024-04-16 21-21-39: 14234.17</b><br><br>
+<b>2024-04-16 21-03-03: 14204.20</b><br><br>
+<b>2024-04-16 20-41-39: 14212.13</b><br><br>
+<b>2024-04-16 20-21-38: 14214.61</b><br><br>
+<b>2024-04-16 20-02-21: 14212.08</b><br><br>
+<b>2024-04-16 19-41-25: 14227.03</b><br><br>
+<b>2024-04-16 19-21-30: 14223.02</b><br><br>
+<b>2024-04-16 19-03-02: 14222.86</b><br><br>
+<b>2024-04-16 18-41-39: 14214.66</b><br><br>
+<b>2024-04-16 18-21-32: 14185.36</b><br><br>
+<b>2024-04-16 18-02-32: 14178.40</b><br><br>
+<b>2024-04-16 17-41-24: 14183.20</b><br><br>
+<b>2024-04-16 17-21-27: 14201.38</b><br><br>
+<b>2024-04-16 17-03-00: 14196.39</b><br><br>
+<b>2024-04-16 16-41-38: 14144.90</b><br><br>
+<b>2024-04-16 16-21-58: 14120.75</b><br><br>
+<b>2024-04-16 15-41-25: 14164.18</b><br><br>
+<b>2024-04-16 15-21-46: 14194.54</b><br><br>
+<b>2024-04-16 15-03-04: 14225.27</b><br><br>
+<b>2024-04-16 14-41-41: 14246.35</b><br><br>
+<b>2024-04-16 14-21-30: 14251.21</b><br><br>
+<b>2024-04-16 14-02-32: 14266.16</b><br><br>
+<b>2024-04-16 13-41-28: 14283.09</b><br><br>
+<b>2024-04-16 13-22-03: 14254.32</b><br><br>
+<b>2024-04-16 13-03-03: 14311.41</b><br><br>
+<b>2024-04-16 12-41-42: 14335.65</b><br><br>
+<b>2024-04-16 12-21-35: 14344.55</b><br><br>
+<b>2024-04-16 11-41-24: 14305.52</b><br><br>
+<b>2024-04-16 11-21-44: 14319.78</b><br><br>
+<b>2024-04-16 11-03-12: 14322.34</b><br><br>
+<b>2024-04-16 10-41-22: 14344.73</b><br><br>
+<b>2024-04-16 10-21-44: 14349.29</b><br><br>
+<b>2024-04-16 10-02-30: 14336.36</b><br><br>
+<b>2024-04-16 09-41-24: 14343.12</b><br><br>
+<b>2024-04-16 09-22-56: 14330.76</b><br><br>
+<b>2024-04-16 09-01-54: 14362.12</b><br><br>
+<b>2024-04-16 08-41-23: 14364.75</b><br><br>
+<b>2024-04-16 08-21-30: 14362.85</b><br><br>
+<b>2024-04-16 07-41-22: 14378.79</b><br><br>
+<b>2024-04-16 07-21-56: 14380.49</b><br><br>
+<b>2024-04-16 07-01-37: 14387.34</b><br><br>
+<b>2024-04-16 06-41-22: 14382.46</b><br><br>
+<b>2024-04-16 06-21-30: 14384.62</b><br><br>
+<b>2024-04-16 06-03-55: 14389.10</b><br><br>
+<b>2024-04-16 05-41-42: 14383.21</b><br><br>
+<b>2024-04-16 05-21-51: 14401.43</b><br><br>
+<b>2024-04-16 05-01-36: 14423.34</b><br><br>
+<b>2024-04-16 04-41-23: 14419.35</b><br><br>
+<b>2024-04-16 04-22-39: 14373.29</b><br><br>
+<b>2024-04-16 03-41-28: 14369.53</b><br><br>
+<b>2024-04-16 03-21-32: 14359.46</b><br><br>
+<b>2024-04-16 03-01-51: 14401.84</b><br><br>
+<b>2024-04-16 02-41-26: 14394.63</b><br><br>
+<b>2024-04-16 02-21-46: 14421.36</b><br><br>
+<b>2024-04-16 02-02-03: 14336.50</b><br><br>
+<b>2024-04-16 01-41-41: 14345.84</b><br><br>
+<b>2024-04-16 01-21-30: 14348.71</b><br><br>
+<b>2024-04-16 01-01-39: 14412.94</b><br><br>
+<b>2024-04-16 00-41-23: 14414.32</b><br><br>
+<b>2024-04-16 00-23-50: 14383.17</b><br><br>
+<b>2024-04-15 23-41-23: 14376.39</b><br><br>
+<b>2024-04-15 23-21-23: 14373.89</b><br><br>
+<b>2024-04-15 23-01-39: 14365.80</b><br><br>
+<b>2024-04-15 22-43-15: 14373.26</b><br><br>
+<b>2024-04-15 22-22-05: 14379.53</b><br><br>
+<b>2024-04-15 22-02-33: 14383.34</b><br><br>
+<b>2024-04-15 21-42-50: 14380.33</b><br><br>
+<b>2024-04-15 21-35-41: 14383.65</b><br><br>
+<b>2024-04-15 21-30-33: 14375.13</b><br><br>
+<b>2024-04-15 21-26-21: 14370.60</b><br><br>
+<b>2024-04-15 21-21-44: 14375.69</b><br><br>
+<b>2024-04-15 21-01-58: 14368.47</b><br><br>
+<b>2024-04-15 20-41-25: 14374.04</b><br><br>
+<b>2024-04-15 20-21-31: 14357.08</b><br><br>
+<b>2024-04-15 19-41-24: 14370.11</b><br><br>
+<b>2024-04-15 19-21-51: 14436.63</b><br><br>
+<b>2024-04-15 19-01-56: 14383.59</b><br><br>
+<b>2024-04-15 18-41-23: 14401.70</b><br><br>
+<b>2024-04-15 18-21-47: 14367.94</b><br><br>
+<b>2024-04-15 18-02-28: 14386.73</b><br><br>
+<b>2024-04-15 17-41-24: 14386.51</b><br><br>
+<b>2024-04-15 17-21-55: 14379.55</b><br><br>
+<b>2024-04-15 17-01-57: 14368.26</b><br><br>
+<b>2024-04-15 16-41-41: 14369.52</b><br><br>
+<b>2024-04-15 16-21-46: 14380.68</b><br><br>
+<b>2024-04-15 15-41-22: 14380.22</b><br><br>
+<b>2024-04-15 15-21-38: 14380.22</b><br><br>
+<b>2024-04-15 15-02-14: 14360.79</b><br><br>
+<b>2024-04-15 14-41-22: 14369.96</b><br><br>
+<b>2024-04-15 14-22-19: 14329.83</b><br><br>
+<b>2024-04-15 14-02-27: 14322.16</b><br><br>
+<b>2024-04-15 13-41-22: 14337.83</b><br><br>
+<b>2024-04-15 13-21-49: 14315.82</b><br><br>
+<b>2024-04-15 13-01-41: 14312.04</b><br><br>
+<b>2024-04-15 12-41-29: 14312.15</b><br><br>
+<b>2024-04-15 12-34-59: 14312.27</b><br><br>
+<b>2024-04-15 12-23-30: 14314.60</b><br><br>
+<b>2024-04-15 11-41-24: 14315.13</b><br><br>
+<b>2024-04-15 11-22-04: 14286.65</b><br><br>
+<b>2024-04-15 11-02-32: 14290.16</b><br><br>
+<b>2024-04-15 10-41-23: 14343.70</b><br><br>
+<b>2024-04-15 10-21-34: 14359.47</b><br><br>
+<b>2024-04-15 10-02-04: 14440.11</b><br><br>
+<b>2024-04-15 09-41-25: 14508.72</b><br><br>
+<b>2024-04-15 09-22-45: 14572.14</b><br><br>
+<b>2024-04-15 09-01-40: 14550.83</b><br><br>
+<b>2024-04-15 08-41-26: 14589.06</b><br><br>
+<b>2024-04-15 08-21-27: 14564.90</b><br><br>
+<b>2024-04-15 07-41-22: 14962.42</b><br><br>
+<b>2024-04-15 07-21-55: 14967.48</b><br><br>
+<b>2024-04-15 07-01-40: 14962.99</b><br><br>
+<b>2024-04-15 06-41-24: 14965.68</b><br><br>
+<b>2024-04-15 06-21-30: 15049.47</b><br><br>
+<b>2024-04-15 06-01-48: 15044.39</b><br><br>
+<b>2024-04-15 05-42-33: 15046.59</b><br><br>
+<b>2024-04-15 05-21-30: 15061.09</b><br><br>
+<b>2024-04-15 05-01-41: 15078.11</b><br><br>
+<b>2024-04-15 04-41-24: 15079.41</b><br><br>
+<b>2024-04-15 04-21-47: 15072.87</b><br><br>
+<b>2024-04-15 03-41-29: 15059.96</b><br><br>
+<b>2024-04-15 03-21-49: 15068.38</b><br><br>
+<b>2024-04-15 03-01-39: 15077.23</b><br><br>
+<b>2024-04-15 02-41-23: 15075.08</b><br><br>
+<b>2024-04-15 02-22-03: 15066.11</b><br><br>
+<b>2024-04-15 02-02-23: 15060.95</b><br><br>
+<b>2024-04-15 01-41-23: 15069.52</b><br><br>
+<b>2024-04-15 01-21-29: 15089.35</b><br><br>
+<b>2024-04-15 01-01-41: 15077.66</b><br><br>
+<b>2024-04-15 00-41-25: 15062.16</b><br><br>
+<b>2024-04-15 00-23-05: 15057.49</b><br><br>
+<b>2024-04-14 23-41-44: 15028.07</b><br><br>
+<b>2024-04-14 23-21-23: 15026.60</b><br><br>
+<b>2024-04-14 23-01-38: 15039.70</b><br><br>
+<b>2024-04-14 22-41-22: 15038.56</b><br><br>
+<b>2024-04-14 22-21-29: 15072.22</b><br><br>
+<b>2024-04-14 22-01-45: 15932.04</b><br><br>
+<b>2024-04-14 21-41-41: 15963.39</b><br><br>
+<b>2024-04-14 21-24-16: 15962.13</b><br><br>
+<b>2024-04-14 21-03-19: 15958.71</b><br><br>
+<b>2024-04-14 20-41-21: 15940.62</b><br><br>
+<b>2024-04-14 20-23-05: 15910.49</b><br><br>
+<b>2024-04-14 19-43-33: 13936.40</b><br><br>
+<b>2024-04-14 19-21-23: 13934.13</b><br><br>
+<b>2024-04-14 19-01-38: 13919.96</b><br><br>
+<b>2024-04-14 18-41-21: 14162.21</b><br><br>
+<b>2024-04-14 18-23-15: 14187.22</b><br><br>
+<b>2024-04-14 18-03-48: 14203.54</b><br><br>
+<b>2024-04-14 17-41-22: 14202.89</b><br><br>
+<b>2024-04-14 17-22-55: 14250.61</b><br><br>
+<b>2024-04-14 17-03-18: 14182.75</b><br><br>
+<b>2024-04-14 16-41-20: 14161.79</b><br><br>
+<b>2024-04-14 16-23-01: 14195.95</b><br><br>
+<b>2024-04-14 16-02-28: 14205.71</b><br><br>
+<b>2024-04-14 15-41-20: 14207.62</b><br><br>
+<b>2024-04-14 15-23-50: 14217.45</b><br><br>
+<b>2024-04-14 15-03-27: 14203.27</b><br><br>
+<b>2024-04-14 14-41-20: 14210.60</b><br><br>
+<b>2024-04-14 14-23-20: 14232.64</b><br><br>
+<b>2024-04-14 14-03-46: 14219.18</b><br><br>
+<b>2024-04-14 13-41-21: 14198.80</b><br><br>
+<b>2024-04-14 13-22-40: 14172.66</b><br><br>
+<b>2024-04-14 13-02-12: 14171.58</b><br><br>
+<b>2024-04-14 12-41-41: 14190.02</b><br><br>
+<b>2024-04-14 12-23-11: 14188.41</b><br><br>
+<b>2024-04-14 11-42-31: 14213.91</b><br><br>
+<b>2024-04-14 11-21-39: 14197.76</b><br><br>
+<b>2024-04-14 11-01-56: 14149.46</b><br><br>
+<b>2024-04-14 10-41-58: 14135.81</b><br><br>
+<b>2024-04-14 10-21-40: 14158.34</b><br><br>
+<b>2024-04-14 10-02-11: 14152.98</b><br><br>
+<b>2024-04-14 09-41-35: 14164.61</b><br><br>
+<b>2024-04-14 09-21-35: 14125.69</b><br><br>
+<b>2024-04-14 09-01-50: 14125.63</b><br><br>
+<b>2024-04-14 08-41-34: 14097.87</b><br><br>
+<b>2024-04-14 08-21-33: 14117.77</b><br><br>
+<b>2024-04-14 08-01-46: 14120.94</b><br><br>
+<b>2024-04-14 07-41-38: 14124.64</b><br><br>
+<b>2024-04-14 07-38-49: 14128.85</b><br><br>
+<b>2024-04-14 03-03-04: 16414.31</b><br><br>
+<b>2024-04-14 02-45-29: 1642100  171k  100  171k    0     0   229k      0 --:--:-- --:--:-- --:--:--  229k<br>
+6.02</b><br><br>
+<b>2024-04-14 02-23-03: 16420.75</b><br><br>
+<b>2024-04-14 02-03-16: 16393.64</b><br><br>
+<b>2024-04-14 01-42-52: 16393.85</b><br><br>
+<b>2024-04-14 01-23-28: 16438.95</b><br><br>
+<b>2024-04-14 01-02-57: 16427.00</b><br><br>
+<b>2024-04-14 00-42-32: 16411.86</b><br><br>
+<b>2024-04-14 00-23-19: 16373.97</b><br><br>
+<b>2024-04-14 00-05-17: 16388.03</b><br><br>
+<b>2024-04-13 23-42-38: 16354.60</b><br><br>
+<b>2024-04-13 23-22-34: 16371.01</b><br><br>
+<b>2024-04-13 23-04-41: 16384.45</b><br><br>
+<b>2024-04-13 22-42-33: 16396.80</b><br><br>
+<b>2024-04-13 22-35-44: 17761.14</b><br><br>
+<b>2024-04-13 22-22-34: 18113.84</b><br><br>
+<b>2024-04-13 22-04-04: 15852.87</b><br><br>
+<b>2024-04-13 21-43-58: 15893.99</b><br><br>
+<b>2024-04-13 21-22-29: 15924.73</b><br><br>
+<b>2024-04-13 21-03-38: 15982.27</b><br><br>
+<b>2024-04-13 20-43-11: 18130.44</b><br><br>
+<b>2024-04-13 20-22-29: 17680.78</b><br><br>
+<b>2024-04-13 19-42-32: 18462.70</b><br><br>
+<b>2024-04-13 19-22-29: 18426.22</b><br><br>
+<b>2024-04-13 19-02-39: 18419.73</b><br><br>
+<b>2024-04-13 18-42-29: 18451.31</b><br><br>
+<b>2024-04-13 18-22-28: 18441.44</b><br><br>
+<b>2024-04-13 18-02-47: 18464.30</b><br><br>
+<b>2024-04-13 17-42-28: 18484.06</b><br><br>
+<b>2024-04-13 17-22-24: 18482.39</b><br><br>
+<b>2024-04-13 17-02-37: 18522.13</b><br><br>
+<b>2024-04-13 16-42-29: 18551.18</b><br><br>
+<b>2024-04-13 16-23-57: 18582.79</b><br><br>
+<b>2024-04-13 15-42-24: 18570.60</b><br><br>
+<b>2024-04-13 15-23-55: 18592.62</b><br><br>
+<b>2024-04-13 15-02-36: 18586.25</b><br><br>
+<b>2024-04-13 14-42-26: 18606.25</b><br><br>
+<b>2024-04-13 14-23-12: 18585.77</b><br><br>
+<b>2024-04-13 14-02-53: 18583.76</b><br><br>
+<b>2024-04-13 13-43-09: 18587.43</b><br><br>
+<b>2024-04-13 13-23-13: 18564.16</b><br><br>
+<b>2024-04-13 13-02-48: 18573.60</b><br><br>
+<b>2024-04-13 12-43-15: 18580.44</b><br><br>
+<b>2024-04-13 12-24-13: 18587.48</b><br><br>
+<b>2024-04-13 11-43-35: 18572.45</b><br><br>
+<b>2024-04-13 11-23-10: 18715.59</b><br><br>
+<b>2024-04-13 11-02-42: 18724.67</b><br><br>
+<b>2024-04-13 10-43-12: 18736.33</b><br><br>
+<b>2024-04-13 10-22-33: 18741.57</b><br><br>
+<b>2024-04-13 10-03-04: 18742.27</b><br><br>
+<b>2024-04-13 09-42-50: 18737.04</b><br><br>
+<b>2024-04-13 09-22-53: 18745.32</b><br><br>
+<b>2024-04-13 09-03-34: 18754.56</b><br><br>
+<b>2024-04-13 08-42-55: 18748.53</b><br><br>
+<b>2024-04-13 08-23-04: 18744.77</b><br><br>
+<b>2024-04-13 07-43-00: 18743.47</b><br><br>
+<b>2024-04-13 07-23-14: 18753.92</b><br><br>
+<b>2024-04-13 07-02-49: 18735.00</b><br><br>
+<b>2024-04-13 06-43-30: 18744.89</b><br><br>
+<b>2024-04-13 06-22-53: 18751.09</b><br><br>
+<b>2024-04-13 06-03-28: 18747.91</b><br><br>
+<b>2024-04-13 05-42-49: 18744.41</b><br><br>
+<b>2024-04-13 05-22-51: 18745.67</b><br><br>
+<b>2024-04-13 05-03-31: 18759.25</b><br><br>
+<b>2024-04-13 04-43-28: 18753.66</b><br><br>
+<b>2024-04-13 04-23-04: 18757.53</b><br><br>
+<b>2024-04-13 03-42-35: 18757.17</b><br><br>
+<b>2024-04-13 03-22-53: 18754.31</b><br><br>
+<b>2024-04-13 03-03-59: 18762.65</b><br><br>
+<b>2024-04-13 02-42-49: 18754.85</b><br><br>
+<b>2024-04-13 02-22-53: 18759.27</b><br><br>
+<b>2024-04-13 02-03-21: 18748.74</b><br><br>
+<b>2024-04-13 01-42-37: 18771.63</b><br><br>
+<b>2024-04-13 01-22-53: 18788.89</b><br><br>
+<b>2024-04-13 01-03-46: 18803.24</b><br><br>
+<b>2024-04-13 00-42-40: 18801.50</b><br><br>
+<b>2024-04-13 00-23-05: 18580.37</b><br><br>
+<b>2024-04-12 23-43-52: 18590.79</b><br><br>
+<b>2024-04-12 23-22-44: 18568.56</b><br><br>
+<b>2024-04-12 23-02-54: 18570.73</b><br><br>
+<b>2024-04-12 22-43-28: 18565.05</b><br><br>
+<b>2024-04-12 22-22-40: 18587.96</b><br><br>
+<b>2024-04-12 22-02-57: 18584.21</b><br><br>
+<b>2024-04-12 21-43-54: 20587.29</b><br><br>
+<b>2024-04-12 21-22-37: 20583.26</b><br><br>
+<b>2024-04-12 21-02-59: 20567.55</b><br><br>
+<b>2024-04-12 20-43-53: 20572.20</b><br><br>
+<b>2024-04-12 20-22-45: 20573.59</b><br><br>
+<b>2024-04-12 19-43-56: 20537.33</b><br><br>
+<b>2024-04-12 19-22-35: 20560.40</b><br><br>
+<b>2024-04-12 19-03-16: 20723.20</b><br><br>
+<b>2024-04-12 18-42-49: 21041.72</b><br><br>
+<b>2024-04-12 18-22-35: 19191.81</b><br><br>
+</html><br>
+<br>
+URL: http://filekeys.com/dsTradingBalanceRealtime.html<br>
+<br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -2044,7 +2044,6 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v
 ++++<br>
 + + + + + <b id=dsTradingConvertAllNonBotManagedCurrencies.sh.log>dsTradingConvertAllNonBotManagedCurrencies.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-larissa<br>
 convertAssetToUSDT.sh gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg PEPE 0.14 binance<br>
 python3 convertAssetToUSDT.py gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg PEPE 0.14 binance<br>
 WARNING:root:Volume $0.14 is less than Min Quantity $1.0 for pair PEPEUSDT<br>
@@ -2544,6 +2543,7 @@ Volume: 2.6e-05<br>
 <Response [200]><br>
 {'error': ['EGeneral:Invalid arguments:volume']}<br>
 "Finished at: 20240428-060539"<br>
+20240428-063401<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -3559,11 +3559,6 @@ Reload Configs...<br>
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714222985305,<br>
-      "order_filled_timestamp": 1714223069385,<br>
-      "ft_fee_base": null,<br>
       "ft_order_tag": "entry_reason"<br>
     }<br>
   ],<br>
@@ -4059,202 +4054,15 @@ Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/20/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/21/reload<br>
-<br><br><hr>##++<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/22/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/23/reload<br>
+Internal Server Error<br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-stieves-longshort POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-stieves-longshort-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-stieves-longshort pipe kubectl apply -f - -n binance-futures-stieves-longshort<br>
-service/freqtrade-binance-futures-stieves-longshort unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-stieves-longshort, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
-service/freqtrade-binance-hassan unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
-service/freqtrade-binance-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
-service/freqtrade-binance-juliano-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
-service/freqtrade-binance-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
-service/freqtrade-binance-michael-dry1 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-dry1, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
-service/freqtrade-binance-michael-futures-dry2 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-futures-dry2, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-shortlong-futures-dryrun POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-shortlong-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-shortlong-futures-dryrun pipe kubectl apply -f - -n binance-shortlong-futures-dryrun<br>
-service/freqtrade-binance-shortlong-futures-dryrun unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-shortlong-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v1/start<br>
-{<br>
-  "status": "starting trader ..."<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures pipe kubectl apply -f - -n binance-stieves-futures<br>
-service/freqtrade-binance-stieves-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32340/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures-dryrun POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures-dryrun pipe kubectl apply -f - -n binance-stieves-futures-dryrun<br>
-service/freqtrade-binance-stieves-futures-dryrun unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
-service/freqtrade-kraken-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
-service/freqtrade-kraken-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
---------- Restarted 21 bots....<br>
-"Finished at: 20240428-061513"<br>
-20240428-062001<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
-service/freqtrade-binance-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
-service/freqtrade-binance-adriana-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
-service/freqtrade-binance-fouzi unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
-service/freqtrade-binance-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bearish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bearish pipe kubectl apply -f - -n binance-futures-dryrun-bearish<br>
-service/freqtrade-binance-futures-dryrun-bearish unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bearish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32343/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bullish POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bullish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bullish pipe kubectl apply -f - -n binance-futures-dryrun-bullish<br>
-service/freqtrade-binance-futures-dryrun-bullish unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bullish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32342/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-long-strategy POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-long-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-long-strategy pipe kubectl apply -f - -n binance-futures-dryrun-long-strategy<br>
-service/freqtrade-binance-futures-dryrun-long-strategy unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-long-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32345/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-short-strategy POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-short-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-short-strategy pipe kubectl apply -f - -n binance-futures-dryrun-short-strategy<br>
-service/freqtrade-binance-futures-dryrun-short-strategy unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-short-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32346/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
 service/freqtrade-binance-futures-larissa unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
@@ -4564,33 +4372,202 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/
 --------- Restarted 21 bots....<br>
 "Finished at: 20240428-062512"<br>
 20240428-063001<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
+service/freqtrade-binance-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
+service/freqtrade-binance-adriana-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
+service/freqtrade-binance-fouzi unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
+service/freqtrade-binance-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bearish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bearish pipe kubectl apply -f - -n binance-futures-dryrun-bearish<br>
+service/freqtrade-binance-futures-dryrun-bearish unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bearish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32343/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bullish POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bullish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bullish pipe kubectl apply -f - -n binance-futures-dryrun-bullish<br>
+service/freqtrade-binance-futures-dryrun-bullish unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bullish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32342/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-long-strategy POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-long-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-long-strategy pipe kubectl apply -f - -n binance-futures-dryrun-long-strategy<br>
+service/freqtrade-binance-futures-dryrun-long-strategy unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-long-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32345/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-short-strategy POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-short-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-short-strategy pipe kubectl apply -f - -n binance-futures-dryrun-short-strategy<br>
+service/freqtrade-binance-futures-dryrun-short-strategy unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-short-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32346/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
+service/freqtrade-binance-futures-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-stieves-longshort POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-stieves-longshort-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-stieves-longshort pipe kubectl apply -f - -n binance-futures-stieves-longshort<br>
+service/freqtrade-binance-futures-stieves-longshort unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-stieves-longshort, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
+service/freqtrade-binance-hassan unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
+service/freqtrade-binance-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
+service/freqtrade-binance-juliano-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
+service/freqtrade-binance-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
+service/freqtrade-binance-michael-dry1 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-dry1, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
+service/freqtrade-binance-michael-futures-dry2 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-futures-dry2, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-shortlong-futures-dryrun POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-shortlong-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-shortlong-futures-dryrun pipe kubectl apply -f - -n binance-shortlong-futures-dryrun<br>
+service/freqtrade-binance-shortlong-futures-dryrun unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-shortlong-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures pipe kubectl apply -f - -n binance-stieves-futures<br>
+service/freqtrade-binance-stieves-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32340/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures-dryrun POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures-dryrun pipe kubectl apply -f - -n binance-stieves-futures-dryrun<br>
+service/freqtrade-binance-stieves-futures-dryrun unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
+service/freqtrade-kraken-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
+service/freqtrade-kraken-juliano unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+--------- Restarted 21 bots....<br>
+"Finished at: 20240428-063011"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-"Finished at 20240422-200045"<br><br><br>
-20240423-000001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-00-00...<br><br><br>
-........................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-000047"<br><br><br>
-20240423-050001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-05-00...<br><br><br>
-.......................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-050044"<br><br><br>
-20240423-100001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-10-00...<br><br><br>
-.......................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-100048"<br><br><br>
-20240423-150001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-15-00...<br><br><br>
-.....................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-150044"<br><br><br>
-20240423-200001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-20-00...<br><br><br>
-..................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-200040"<br><br><br>
-20240424-000001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-24-04-2024-00-00...<br><br><br>
 .....................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240424-000045"<br><br><br>
@@ -4639,8 +4616,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-05-00...<br><br><br>
 ....................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240426-050044"<br><br><br>
 20240426-100001<br><br><br>
-Cr100  415k  100  415k    0     0   317k      0  0:00:01  0:00:01 --:--:--  317k<br><br>
-eating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br><br>
 ..........................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240426-100047"<br><br><br>
 20240426-150001<br><br><br>
@@ -4653,8 +4629,27 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br><br>
 "Finished at 20240426-200045"<br><br><br>
 20240427-000001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-00-00...<br><br><br>
-......................................................................................................................................................................................................................done.<br><br><br>
+............................................................................................................................100  411k  100  411k    0     0   345k      0  0:00:01  0:00:01 --:--:--  345k<br><br>
+..........................................................................................done.<br><br><br>
 "Finished at 20240427-000049"<br><br><br>
+20240427-050001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br><br>
+...............................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-050046"<br><br><br>
+20240427-100001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br><br>
+......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-100044"<br><br><br>
+20240427-150001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br><br>
+........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-150044"<br><br><br>
+20240427-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br><br>
+.......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-200044"<br><br><br>
+20240428-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddiegu<br><br>
 20240427-050001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br><br>
 ...............................................................................................................................................................................................................done.<br><br><br>
@@ -4680,10 +4675,10 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-05-00...<br><br><br>
 ...................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240428-050043"<br><br><br>
 </body></html><br><br>
--rw------- 1 msantana msantana 0 Apr 28 06:28 /tmp/tmp.rpHPUiQf69<br><br>
+-rw------- 1 msantana msantana 0 Apr 28 06:30 /tmp/tmp.Rgl6SHWfxk<br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br>
-"Finished at: 20240428-062805"<br><br>
-20240428-062901<br><br>
+"Finished at: 20240428-063005"<br><br>
+20240428-063101<br><br>
 Running already? RUNNING=<br><br>
 <br><br><hr>##++<br><br>
 + + + + + /tmp/<b id=<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a>><b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> + + + + <br><br>
@@ -5032,12 +5027,12 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br>
 "Finished at 20240426-150045"<br><br>
 20240426-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br>
-.........................................................................................................................................................................................................done.<br><br>
+.............................................................................................................................................................................................100  378k  100  378k    0     0   287k      0  0:00:01  0:00:01 --:--:--  286k<br>
+............done.<br><br>
 "Finished at 20240426-200045"<br><br>
 20240427-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-00-00...<br><br>
-............................................................................................................................100  410k  100  410k    0     0   306k      0  0:00:01  0:00:01 --:--:--  306k<br>
-..........................................................................................done.<br><br>
+......................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240427-000049"<br><br>
 20240427-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br>
@@ -5053,21 +5048,25 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br>
 "Finished at 20240427-150044"<br><br>
 20240427-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br>
+....................................................................done.<br><br>
+"Finished at 20240427-150044"<br><br>
+20240427-200001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br>
 .......................................................................................................................................................................................................done.<br><br>
 "Finished at 20240427-200044"<br><br>
 20240428-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br><br>
-..................................................................................................................................................................................................done.<br><br>
+.............................................done.<br><br>
 "Finished at 20240428-000044"<br><br>
 20240428-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-05-00...<br><br>
 ...................................................................................................................................................................................................done.<br><br>
 "Finished at 20240428-050043"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 28 06:29 /tmp/tmp.WEnZGxUrci<br>
+-rw------- 1 msantana msantana 0 Apr 28 06:33 /tmp/tmp.xW49cmMkRX<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240428-062907"<br>
-20240428-063001<br>
+"Finished at: 20240428-063305"<br>
+20240428-063401<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -5447,4 +5446,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-05-00...<br>
 ...................................................................................................................................................................................................done.<br>
 "Finished at 20240428-050043"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Apr 28 06:30 /tmp/tmp.Rgl6SHWfxk
+-rw------- 1 msantana msantana 0 Apr 28 06:34 /tmp/tmp.T9b1gXSbqx
