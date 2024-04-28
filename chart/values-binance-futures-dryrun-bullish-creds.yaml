@@ -23,7 +23,7 @@ configcreds:
   dry_run_wallet: 50000
   position_adjustment_enable: false
   available_capital: 50000
-  max_open_trades: 2
+  max_open_trades: 6
   trading_mode: futures
   margin_mode: isolated
   bot_name: freqtrading-binance-stieves-futures-dryrun-bullish
