@@ -85,7 +85,7 @@ configcreds:
       n_estimators: 800
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvv
   enabled: true
   strategy_name: NostalgiaForInfinityX4
