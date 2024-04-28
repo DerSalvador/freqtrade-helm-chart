@@ -5,10 +5,6 @@ configcreds:
   dry_run_wallet: 4000
   stake_amount: unlimited
   position_adjustment_enable: true
-  dry_run: false
-  dry_run_wallet: 4000
-  stake_amount: unlimited
-  position_adjustment_enable: true
   entry_pricing:
     price_side: other
     use_order_book: true
@@ -23,13 +19,15 @@ configcreds:
     order_book_top: 1    
   exchange:
     name: binance
-    key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
-    secret: >-
-      TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
+    # secret: >-
+    #  TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
   telegram:
-    enabled: false
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    enabled: true
+    token: 7194749919:AAHEXWFtBp9u8QZVkrBgHmRgip33t8d_7DE # "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    chat_id: "1759706931" # "5711830404"
 
 bot:
   debug: false

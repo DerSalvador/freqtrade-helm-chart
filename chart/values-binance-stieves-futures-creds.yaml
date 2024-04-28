@@ -25,6 +25,12 @@ configcreds:
     name: binance
     key: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
     secret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"
+  telegram:
+    enabled: true
+    token: 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    chat_id: "889071692"  # "1759706931" # 
+      #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+      #chat_id: "5711830404"
   pairlists:
     - method: RemotePairList
       number_assets: 50
@@ -62,12 +68,6 @@ configcreds:
     #   min_rate_of_change: 0.03
     #   refresh_period: 1800
     # - method: ShuffleFilter
-  telegram:
-    enabled: true
-    token: 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
-    chat_id: "889071692"
-      #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-      #chat_id: "5711830404"
 
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
