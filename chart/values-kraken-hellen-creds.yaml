@@ -9,7 +9,7 @@ configcreds:
     key: X6beWu84orWoCoXmAD0jVRcVBRAJ3VhlhZpu7TGKSiGifT6UWCHH3Jf8
     secret: YhuqDH/BGwTevnUIBr8o9Kaw6fnjqNP3NZ/wF9nX3Dk4Efz1Uc2qyzT2RALy2rMJjdsjgOl7c4kC654NatBYuA==
   telegram:
-    enabled: true
+    enabled: false
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"
     chat_id: "6493643145"
 bot:
