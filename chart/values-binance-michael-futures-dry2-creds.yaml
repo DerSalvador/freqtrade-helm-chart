@@ -17,7 +17,7 @@ configcreds:
   telegram:
     enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
-    chat_id: "5711830404"
+    chat_id: "1759706931" #  "5711830404"
   freqai:
     rl_config:
       train_cycles: 25
@@ -85,7 +85,7 @@ configcreds:
       n_estimators: 800
 
 bot:
-  debug: false
+  debug: true
   debuglevel: -vvv
   enabled: true
   strategy_name: NostalgiaForInfinityX4
