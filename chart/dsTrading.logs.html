@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Sat Apr 27 21:59:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Sun Apr 28 04:46:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -12,300 +12,16 @@
 <div><a href=#dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</a><br><br></div>
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
-<tr><td nowrap><small>2615948 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
-<tr><td nowrap><small>3527043 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano</small></td></tr>
-<tr><td nowrap><small>3668188 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>3668196 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>688367 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
+<tr><td nowrap><small>716317 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi</small></td></tr>
+<tr><td nowrap><small>805256 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>805264 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-<br>
-<br>
-<br>
-wput --reupload --binary remotepairlist-white-futures-static.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
---12:00:06-- `remotepairlist-white-futures-static.json'<br>
-    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures-static.json<br>
-Connecting to 192.254.236.178:21... connected! encrypted!<br>
-Logging in as admin@filekeys.com ... Logged in!<br>
-Length: 148<br>
-    0K <br>
-12:00:09 (remotepairlist-white-futures-static.json) - ` 1018B/s' [148]<br>
-<br>
-FINISHED --12:00:09--<br>
-Transferred 148 bytes in 1 file at 53.00B/s<br>
-URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   148  100   148    0     0    494      0 --:--:-- --:--:-- --:--:--   493<br>
-{<br>
-    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
-Sending 10 most popular pairs from binance APO<br>
-10 most popular pairs<br>
-['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'BCCUSDT', 'NEOUSDT', 'LTCUSDT', 'QTUMUSDT', 'ADAUSDT', 'XRPUSDT', 'EOSUSDT', 'TUSDUSDT', 'IOTAUSDT', 'XLMUSDT', 'ONTUSDT', 'TRXUSDT', 'ETCUSDT', 'ICXUSDT', 'VENUSDT', 'NULSUSDT', 'VETUSDT', 'PAXUSDT', 'BCHABCUSDT', 'BCHSVUSDT', 'USDCUSDT', 'LINKUSDT', 'WAVESUSDT', 'BTTUSDT', 'USDSUSDT', 'ONGUSDT', 'HOTUSDT', 'ZILUSDT', 'ZRXUSDT', 'FETUSDT', 'BATUSDT', 'XMRUSDT', 'ZECUSDT', 'IOSTUSDT', 'CELRUSDT', 'DASHUSDT', 'NANOUSDT', 'OMGUSDT', 'THETAUSDT', 'ENJUSDT', 'MITHUSDT', 'MATICUSDT', 'ATOMUSDT', 'TFUELUSDT', 'ONEUSDT', 'FTMUSDT', 'ALGOUSDT', 'USDSBUSDT', 'GTOUSDT', 'ERDUSDT', 'DOGEUSDT', 'DUSKUSDT', 'ANKRUSDT', 'WINUSDT', 'COSUSDT', 'NPXSUSDT', 'COCOSUSDT', 'MTLUSDT', 'TOMOUSDT', 'PERLUSDT', 'DENTUSDT', 'MFTUSDT', 'KEYUSDT', 'STORMUSDT', 'DOCKUSDT', 'WANUSDT', 'FUNUSDT', 'CVCUSDT', 'CHZUSDT', 'BANDUSDT', 'BUSDUSDT', 'BEAMUSDT', 'XTZUSDT', 'RENUSDT', 'RVNUSDT', 'HCUSDT', 'HBARUSDT', 'NKNUSDT', 'STXUSDT', 'KAVAUSDT', 'ARPAUSDT', 'IOTXUSDT', 'RLCUSDT', 'MCOUSDT', 'CTXCUSDT', 'BCHUSDT', 'TROYUSDT', 'VITEUSDT', 'FTTUSDT', 'EURUSDT', 'OGNUSDT', 'DREPUSDT', 'BULLUSDT', 'BEARUSDT', 'ETHBULLUSDT', 'ETHBEARUSDT', 'TCTUSDT', 'WRXUSDT', 'BTSUSDT', 'LSKUSDT', 'BNTUSDT', 'LTOUSDT', 'EOSBULLUSDT', 'EOSBEARUSDT', 'XRPBULLUSDT', 'XRPBEARUSDT', 'STRATUSDT', 'AIONUSDT', 'MBLUSDT', 'COTIUSDT', 'BNBBULLUSDT', 'BNBBEARUSDT', 'STPTUSDT', 'WTCUSDT', 'DATAUSDT', 'XZCUSDT', 'SOLUSDT', 'CTSIUSDT', 'HIVEUSDT', 'CHRUSDT', 'BTCUPUSDT', 'BTCDOWNUSDT', 'GXSUSDT', 'ARDRUSDT', 'LENDUSDT', 'MDTUSDT', 'STMXUSDT', 'KNCUSDT', 'REPUSDT', 'LRCUSDT', 'PNTUSDT', 'COMPUSDT', 'BKRWUSDT', 'SCUSDT', 'ZENUSDT', 'SNXUSDT', 'ETHUPUSDT', 'ETHDOWNUSDT', 'ADAUPUSDT', 'ADADOWNUSDT', 'LINKUPUSDT', 'LINKDOWNUSDT', 'VTHOUSDT', 'DGBUSDT', 'GBPUSDT', 'SXPUSDT', 'MKRUSDT', 'DAIUSDT', 'DCRUSDT', 'STORJUSDT', 'BNBUPUSDT', 'BNBDOWNUSDT', 'XTZUPUSDT', 'XTZDOWNUSDT', 'MANAUSDT', 'AUDUSDT', 'YFIUSDT', 'BALUSDT', 'BLZUSDT', 'IRISUSDT', 'KMDUSDT', 'JSTUSDT', 'SRMUSDT', 'ANTUSDT', 'CRVUSDT', 'SANDUSDT', 'OCEANUSDT', 'NMRUSDT', 'DOTUSDT', 'LUNAUSDT', 'RSRUSDT', 'PAXGUSDT', 'WNXMUSDT', 'TRBUSDT', 'BZRXUSDT', 'SUSHIUSDT', 'YFIIUSDT', 'KSMUSDT', 'EGLDUSDT', 'DIAUSDT', 'RUNEUSDT', 'FIOUSDT', 'UMAUSDT', 'EOSUPUSDT', 'EOSDOWNUSDT', 'TRXUPUSDT', 'TRXDOWNUSDT', 'XRPUPUSDT', 'XRPDOWNUSDT', 'DOTUPUSDT', 'DOTDOWNUSDT', 'BELUSDT', 'WINGUSDT', 'LTCUPUSDT', 'LTCDOWNUSDT', 'UNIUSDT', 'NBSUSDT', 'OXTUSDT', 'SUNUSDT', 'AVAXUSDT', 'HNTUSDT', 'FLMUSDT', 'UNIUPUSDT', 'UNIDOWNUSDT', 'ORNUSDT', 'UTKUSDT', 'XVSUSDT', 'ALPHAUSDT', 'AAVEUSDT', 'NEARUSDT', 'SXPUPUSDT', 'SXPDOWNUSDT', 'FILUSDT', 'FILUPUSDT', 'FILDOWNUSDT', 'YFIUPUSDT', 'YFIDOWNUSDT', 'INJUSDT', 'AUDIOUSDT', 'CTKUSDT', 'BCHUPUSDT', 'BCHDOWNUSDT', 'AKROUSDT', 'AXSUSDT', 'HARDUSDT', 'DNTUSDT', 'STRAXUSDT', 'UNFIUSDT', 'ROSEUSDT', 'AVAUSDT', 'XEMUSDT', 'AAVEUPUSDT', 'AAVEDOWNUSDT', 'SKLUSDT', 'SUSDUSDT', 'SUSHIUPUSDT', 'SUSHIDOWNUSDT', 'XLMUPUSDT', 'XLMDOWNUSDT', 'GRTUSDT', 'JUVUSDT', 'PSGUSDT', '1INCHUSDT', 'REEFUSDT', 'OGUSDT', 'ATMUSDT', 'ASRUSDT', 'CELOUSDT', 'RIFUSDT', 'BTCSTUSDT', 'TRUUSDT', 'CKBUSDT', 'TWTUSDT', 'FIROUSDT', 'LITUSDT', 'SFPUSDT', 'DODOUSDT', 'CAKEUSDT', 'ACMUSDT', 'BADGERUSDT', 'FISUSDT', 'OMUSDT', 'PONDUSDT', 'DEGOUSDT', 'ALICEUSDT', 'LINAUSDT', 'PERPUSDT', 'RAMPUSDT', 'SUPERUSDT', 'CFXUSDT', 'EPSUSDT', 'AUTOUSDT', 'TKOUSDT', 'PUNDIXUSDT', 'TLMUSDT', '1INCHUPUSDT', '1INCHDOWNUSDT', 'BTGUSDT', 'MIRUSDT', 'BARUSDT', 'FORTHUSDT', 'BAKEUSDT', 'BURGERUSDT', 'SLPUSDT', 'SHIBUSDT', 'ICPUSDT', 'ARUSDT', 'POLSUSDT', 'MDXUSDT', 'MASKUSDT', 'LPTUSDT', 'NUUSDT', 'XVGUSDT', 'ATAUSDT', 'GTCUSDT', 'TORNUSDT', 'KEEPUSDT', 'ERNUSDT', 'KLAYUSDT', 'PHAUSDT', 'BONDUSDT', 'MLNUSDT', 'DEXEUSDT', 'C98USDT', 'CLVUSDT', 'QNTUSDT', 'FLOWUSDT', 'TVKUSDT', 'MINAUSDT', 'RAYUSDT', 'FARMUSDT', 'ALPACAUSDT', 'QUICKUSDT', 'MBOXUSDT', 'FORUSDT', 'REQUSDT', 'GHSTUSDT', 'WAXPUSDT', 'TRIBEUSDT', 'GNOUSDT', 'XECUSDT', 'ELFUSDT', 'DYDXUSDT', 'POLYUSDT', 'IDEXUSDT', 'VIDTUSDT', 'USDPUSDT', 'GALAUSDT', 'ILVUSDT', 'YGGUSDT', 'SYSUSDT', 'DFUSDT', 'FIDAUSDT', 'FRONTUSDT', 'CVPUSDT', 'AGLDUSDT', 'RADUSDT', 'BETAUSDT', 'RAREUSDT', 'LAZIOUSDT', 'CHESSUSDT', 'ADXUSDT', 'AUCTIONUSDT', 'DARUSDT', 'BNXUSDT', 'RGTUSDT', 'MOVRUSDT', 'CITYUSDT', 'ENSUSDT', 'KP3RUSDT', 'QIUSDT', 'PORTOUSDT', 'POWRUSDT', 'VGXUSDT', 'JASMYUSDT', 'AMPUSDT', 'PLAUSDT', 'PYRUSDT', 'RNDRUSDT', 'ALCXUSDT', 'SANTOSUSDT', 'MCUSDT', 'ANYUSDT', 'BICOUSDT', 'FLUXUSDT', 'FXSUSDT', 'VOXELUSDT', 'HIGHUSDT', 'CVXUSDT', 'PEOPLEUSDT', 'OOKIUSDT', 'SPELLUSDT', 'USTUSDT', 'JOEUSDT', 'ACHUSDT', 'IMXUSDT', 'GLMRUSDT', 'LOKAUSDT', 'SCRTUSDT', 'API3USDT', 'BTTCUSDT', 'ACAUSDT', 'ANCUSDT', 'XNOUSDT', 'WOOUSDT', 'ALPINEUSDT', 'TUSDT', 'ASTRUSDT', 'GMTUSDT', 'KDAUSDT', 'APEUSDT', 'BSWUSDT', 'BIFIUSDT', 'MULTIUSDT', 'STEEMUSDT', 'MOBUSDT', 'NEXOUSDT', 'REIUSDT', 'GALUSDT', 'LDOUSDT', 'EPXUSDT', 'OPUSDT', 'LEVERUSDT', 'STGUSDT', 'LUNCUSDT', 'GMXUSDT', 'NEBLUSDT', 'POLYXUSDT', 'APTUSDT', 'OSMOUSDT', 'HFTUSDT', 'PHBUSDT', 'HOOKUSDT', 'MAGICUSDT', 'HIFIUSDT', 'RPLUSDT', 'PROSUSDT', 'AGIXUSDT', 'GNSUSDT', 'SYNUSDT', 'VIBUSDT', 'SSVUSDT', 'LQTYUSDT', 'AMBUSDT', 'BETHUSDT', 'USTCUSDT', 'GASUSDT', 'GLMUSDT', 'PROMUSDT', 'QKCUSDT', 'UFTUSDT', 'IDUSDT', 'ARBUSDT', 'LOOMUSDT', 'OAXUSDT', 'RDNTUSDT', 'WBTCUSDT', 'EDUUSDT', 'SUIUSDT', 'AERGOUSDT', 'PEPEUSDT', 'FLOKIUSDT', 'ASTUSDT', 'SNTUSDT', 'COMBOUSDT', 'MAVUSDT', 'PENDLEUSDT', 'ARKMUSDT', 'WBETHUSDT', 'WLDUSDT', 'FDUSDUSDT', 'SEIUSDT', 'CYBERUSDT', 'ARKUSDT', 'CREAMUSDT', 'GFTUSDT', 'IQUSDT', 'NTRNUSDT', 'TIAUSDT', 'MEMEUSDT', 'ORDIUSDT', 'BEAMXUSDT', 'PIVXUSDT', 'VICUSDT', 'BLURUSDT', 'VANRYUSDT', 'AEURUSDT', 'JTOUSDT', '1000SATSUSDT', 'BONKUSDT', 'ACEUSDT', 'NFPUSDT', 'AIUSDT', 'XAIUSDT', 'MANTAUSDT', 'ALTUSDT', 'JUPUSDT', 'PYTHUSDT', 'RONINUSDT', 'DYMUSDT', 'PIXELUSDT', 'STRKUSDT', 'PORTALUSDT', 'PDAUSDT', 'AXLUSDT', 'WIFUSDT', 'METISUSDT', 'AEVOUSDT', 'BOMEUSDT', 'ETHFIUSDT', 'ENAUSDT', 'WUSDT', 'TNSRUSDT', 'SAGAUSDT', 'TAOUSDT', 'OMNIUSDT']<br>
-Top 10 most popular USDT trading pairs on Binance:<br>
-/tmp/tmp.M9bjsT52xn<br>
-BTC#USDT<br>
-ETH#USDT<br>
-USDC#USDT<br>
-SOL#USDT<br>
-FDUSD#USDT<br>
-PEPE#USDT<br>
-WIF#USDT<br>
-BNB#USDT<br>
-COS#USDT<br>
-DOGE#USDT<br>
-"BTC#USDT", "ETH#USDT", "USDC#USDT", "SOL#USDT", "FDUSD#USDT", "PEPE#USDT", "WIF#USDT", "BNB#USDT", "COS#USDT", "DOGE#USDT"<br>
-sed -e s/#pairs#/"BTC#USDT", "ETH#USDT", "USDC#USDT", "SOL#USDT", "FDUSD#USDT", "PEPE#USDT", "WIF#USDT", "BNB#USDT", "COS#USDT", "DOGE#USDT"/g remotepairlist-white-spot.json.template remotepairlist-white-spot.json<br>
-{<br>
-    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "USDC/USDT", "SOL/USDT", "FDUSD/USDT", "PEPE/USDT", "WIF/USDT", "BNB/USDT", "COS/USDT", "DOGE/USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-wput --reupload --binary remotepairlist-white-spot.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
---12:02:41-- `remotepairlist-white-spot.json'<br>
-    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-spot.json<br>
-Connecting to 192.254.236.178:21... connected! encrypted!<br>
-Logging in as admin@filekeys.com ... Logged in!<br>
-Length: 236<br>
-    0K <br>
-12:02:44 (remotepairlist-white-spot.json) - ` 4.90K/s' [236]<br>
-<br>
-FINISHED --12:02:44--<br>
-Transferred 748 bytes in 1 file at 257.1B/s<br>
-URL: http://filekeys.com/remotepairlist-white-spot.json<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   236  100   236    0     0    789      0 --:--:-- --:--:-- --:--:--   789<br>
-{<br>
-    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "USDC/USDT", "SOL/USDT", "FDUSD/USDT", "PEPE/USDT", "WIF/USDT", "BNB/USDT", "COS/USDT", "DOGE/USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-URL: http://filekeys.com/remotepairlist-white-spot.json<br>
-"Finished at 20240427-120244"<br>
-20240427-150001<br>
-Sending most popular futures pair list<br>
-10 most popular pairs<br>
-/tmp/tmp.OvXbH8r0EZ<br>
-1000SATS#USDT:USDT<br>
-1000PEPE#USDT:USDT<br>
-LEVER#USDT:USDT<br>
-BOME#USDT:USDT<br>
-1000BONK#USDT:USDT<br>
-SPELL#USDT:USDT<br>
-1000SHIB#USDT:USDT<br>
-1000PEPEUSDC#USDT:USDT<br>
-DENT#USDT:USDT<br>
-HOT#USDT:USDT<br>
-CKB#USDT:USDT<br>
-DOGE#USDT:USDT<br>
-REEF#USDT:USDT<br>
-RSR#USDT:USDT<br>
-DGB#USDT:USDT<br>
-HBAR#USDT:USDT<br>
-GALA#USDT:USDT<br>
-LINA#USDT:USDT<br>
-MEME#USDT:USDT<br>
-LOOM#USDT:USDT<br>
-"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "SPELL#USDT:USDT", "1000SHIB#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "CKB#USDT:USDT", "DOGE#USDT:USDT", "REEF#USDT:USDT", "RSR#USDT:USDT", "DGB#USDT:USDT", "HBAR#USDT:USDT", "GALA#USDT:USDT", "LINA#USDT:USDT", "MEME#USDT:USDT", "LOOM#USDT:USDT"<br>
-sed -e s/#pairs#/"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "SPELL#USDT:USDT", "1000SHIB#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "CKB#USDT:USDT", "DOGE#USDT:USDT", "REEF#USDT:USDT", "RSR#USDT:USDT", "DGB#USDT:USDT", "HBAR#USDT:USDT", "GALA#USDT:USDT", "LINA#USDT:USDT", "MEME#USDT:USDT", "LOOM#USDT:USDT"/g remotepairlist-white-futures.json.template remotepairlist-white-futures.json<br>
-{<br>
-    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "SPELL/USDT:USDT", "1000SHIB/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "CKB/USDT:USDT", "DOGE/USDT:USDT", "REEF/USDT:USDT", "RSR/USDT:USDT", "DGB/USDT:USDT", "HBAR/USDT:USDT", "GALA/USDT:USDT", "LINA/USDT:USDT", "MEME/USDT:USDT", "LOOM/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-wput --reupload --binary remotepairlist-white-futures.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
---15:00:03-- `remotepairlist-white-futures.json'<br>
-    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures.json<br>
-Connecting to 192.254.236.178:21... connected! encrypted!<br>
-Logging in as admin@filekeys.com ... Logged in!<br>
-Length: 430<br>
-    0K <br>
-15:00:06 (remotepairlist-white-futures.json) - ` 6.36K/s' [430]<br>
-<br>
-FINISHED --15:00:06--<br>
-Transferred 942 bytes in 1 file at 300.9B/s<br>
-URL: http://filekeys.com/remotepairlist-white-futures.json<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   430  100   430    0     0   1414      0 --:--:-- --:--:-- --:--:--  1414<br>
-{<br>
-    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "SPELL/USDT:USDT", "1000SHIB/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "CKB/USDT:USDT", "DOGE/USDT:USDT", "REEF/USDT:USDT", "RSR/USDT:USDT", "DGB/USDT:USDT", "HBAR/USDT:USDT", "GALA/USDT:USDT", "LINA/USDT:USDT", "MEME/USDT:USDT", "LOOM/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-URL: http://filekeys.com/remotepairlist-white-futures.json<br>
-{<br>
-    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-Sending static local pairlist<br>
-{<br>
-    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-wput --reupload --binary remotepairlist-white-futures-static.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
---15:00:07-- `remotepairlist-white-futures-static.json'<br>
-    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures-static.json<br>
-Connecting to 192.254.236.178:21... connected! encrypted!<br>
-Logging in as admin@filekeys.com ... Logged in!<br>
-Length: 148<br>
-    0K <br>
-15:00:09 (remotepairlist-white-futures-static.json) - `994.4B/s' [148]<br>
-<br>
-FINISHED --15:00:09--<br>
-Transferred 148 bytes in 1 file at 51.74B/s<br>
-URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   148  100   148    0     0    490      0 --:--:-- --:--:-- --:--:--   490<br>
-{<br>
-    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
-Sending 10 most popular pairs from binance APO<br>
-10 most popular pairs<br>
-['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'BCCUSDT', 'NEOUSDT', 'LTCUSDT', 'QTUMUSDT', 'ADAUSDT', 'XRPUSDT', 'EOSUSDT', 'TUSDUSDT', 'IOTAUSDT', 'XLMUSDT', 'ONTUSDT', 'TRXUSDT', 'ETCUSDT', 'ICXUSDT', 'VENUSDT', 'NULSUSDT', 'VETUSDT', 'PAXUSDT', 'BCHABCUSDT', 'BCHSVUSDT', 'USDCUSDT', 'LINKUSDT', 'WAVESUSDT', 'BTTUSDT', 'USDSUSDT', 'ONGUSDT', 'HOTUSDT', 'ZILUSDT', 'ZRXUSDT', 'FETUSDT', 'BATUSDT', 'XMRUSDT', 'ZECUSDT', 'IOSTUSDT', 'CELRUSDT', 'DASHUSDT', 'NANOUSDT', 'OMGUSDT', 'THETAUSDT', 'ENJUSDT', 'MITHUSDT', 'MATICUSDT', 'ATOMUSDT', 'TFUELUSDT', 'ONEUSDT', 'FTMUSDT', 'ALGOUSDT', 'USDSBUSDT', 'GTOUSDT', 'ERDUSDT', 'DOGEUSDT', 'DUSKUSDT', 'ANKRUSDT', 'WINUSDT', 'COSUSDT', 'NPXSUSDT', 'COCOSUSDT', 'MTLUSDT', 'TOMOUSDT', 'PERLUSDT', 'DENTUSDT', 'MFTUSDT', 'KEYUSDT', 'STORMUSDT', 'DOCKUSDT', 'WANUSDT', 'FUNUSDT', 'CVCUSDT', 'CHZUSDT', 'BANDUSDT', 'BUSDUSDT', 'BEAMUSDT', 'XTZUSDT', 'RENUSDT', 'RVNUSDT', 'HCUSDT', 'HBARUSDT', 'NKNUSDT', 'STXUSDT', 'KAVAUSDT', 'ARPAUSDT', 'IOTXUSDT', 'RLCUSDT', 'MCOUSDT', 'CTXCUSDT', 'BCHUSDT', 'TROYUSDT', 'VITEUSDT', 'FTTUSDT', 'EURUSDT', 'OGNUSDT', 'DREPUSDT', 'BULLUSDT', 'BEARUSDT', 'ETHBULLUSDT', 'ETHBEARUSDT', 'TCTUSDT', 'WRXUSDT', 'BTSUSDT', 'LSKUSDT', 'BNTUSDT', 'LTOUSDT', 'EOSBULLUSDT', 'EOSBEARUSDT', 'XRPBULLUSDT', 'XRPBEARUSDT', 'STRATUSDT', 'AIONUSDT', 'MBLUSDT', 'COTIUSDT', 'BNBBULLUSDT', 'BNBBEARUSDT', 'STPTUSDT', 'WTCUSDT', 'DATAUSDT', 'XZCUSDT', 'SOLUSDT', 'CTSIUSDT', 'HIVEUSDT', 'CHRUSDT', 'BTCUPUSDT', 'BTCDOWNUSDT', 'GXSUSDT', 'ARDRUSDT', 'LENDUSDT', 'MDTUSDT', 'STMXUSDT', 'KNCUSDT', 'REPUSDT', 'LRCUSDT', 'PNTUSDT', 'COMPUSDT', 'BKRWUSDT', 'SCUSDT', 'ZENUSDT', 'SNXUSDT', 'ETHUPUSDT', 'ETHDOWNUSDT', 'ADAUPUSDT', 'ADADOWNUSDT', 'LINKUPUSDT', 'LINKDOWNUSDT', 'VTHOUSDT', 'DGBUSDT', 'GBPUSDT', 'SXPUSDT', 'MKRUSDT', 'DAIUSDT', 'DCRUSDT', 'STORJUSDT', 'BNBUPUSDT', 'BNBDOWNUSDT', 'XTZUPUSDT', 'XTZDOWNUSDT', 'MANAUSDT', 'AUDUSDT', 'YFIUSDT', 'BALUSDT', 'BLZUSDT', 'IRISUSDT', 'KMDUSDT', 'JSTUSDT', 'SRMUSDT', 'ANTUSDT', 'CRVUSDT', 'SANDUSDT', 'OCEANUSDT', 'NMRUSDT', 'DOTUSDT', 'LUNAUSDT', 'RSRUSDT', 'PAXGUSDT', 'WNXMUSDT', 'TRBUSDT', 'BZRXUSDT', 'SUSHIUSDT', 'YFIIUSDT', 'KSMUSDT', 'EGLDUSDT', 'DIAUSDT', 'RUNEUSDT', 'FIOUSDT', 'UMAUSDT', 'EOSUPUSDT', 'EOSDOWNUSDT', 'TRXUPUSDT', 'TRXDOWNUSDT', 'XRPUPUSDT', 'XRPDOWNUSDT', 'DOTUPUSDT', 'DOTDOWNUSDT', 'BELUSDT', 'WINGUSDT', 'LTCUPUSDT', 'LTCDOWNUSDT', 'UNIUSDT', 'NBSUSDT', 'OXTUSDT', 'SUNUSDT', 'AVAXUSDT', 'HNTUSDT', 'FLMUSDT', 'UNIUPUSDT', 'UNIDOWNUSDT', 'ORNUSDT', 'UTKUSDT', 'XVSUSDT', 'ALPHAUSDT', 'AAVEUSDT', 'NEARUSDT', 'SXPUPUSDT', 'SXPDOWNUSDT', 'FILUSDT', 'FILUPUSDT', 'FILDOWNUSDT', 'YFIUPUSDT', 'YFIDOWNUSDT', 'INJUSDT', 'AUDIOUSDT', 'CTKUSDT', 'BCHUPUSDT', 'BCHDOWNUSDT', 'AKROUSDT', 'AXSUSDT', 'HARDUSDT', 'DNTUSDT', 'STRAXUSDT', 'UNFIUSDT', 'ROSEUSDT', 'AVAUSDT', 'XEMUSDT', 'AAVEUPUSDT', 'AAVEDOWNUSDT', 'SKLUSDT', 'SUSDUSDT', 'SUSHIUPUSDT', 'SUSHIDOWNUSDT', 'XLMUPUSDT', 'XLMDOWNUSDT', 'GRTUSDT', 'JUVUSDT', 'PSGUSDT', '1INCHUSDT', 'REEFUSDT', 'OGUSDT', 'ATMUSDT', 'ASRUSDT', 'CELOUSDT', 'RIFUSDT', 'BTCSTUSDT', 'TRUUSDT', 'CKBUSDT', 'TWTUSDT', 'FIROUSDT', 'LITUSDT', 'SFPUSDT', 'DODOUSDT', 'CAKEUSDT', 'ACMUSDT', 'BADGERUSDT', 'FISUSDT', 'OMUSDT', 'PONDUSDT', 'DEGOUSDT', 'ALICEUSDT', 'LINAUSDT', 'PERPUSDT', 'RAMPUSDT', 'SUPERUSDT', 'CFXUSDT', 'EPSUSDT', 'AUTOUSDT', 'TKOUSDT', 'PUNDIXUSDT', 'TLMUSDT', '1INCHUPUSDT', '1INCHDOWNUSDT', 'BTGUSDT', 'MIRUSDT', 'BARUSDT', 'FORTHUSDT', 'BAKEUSDT', 'BURGERUSDT', 'SLPUSDT', 'SHIBUSDT', 'ICPUSDT', 'ARUSDT', 'POLSUSDT', 'MDXUSDT', 'MASKUSDT', 'LPTUSDT', 'NUUSDT', 'XVGUSDT', 'ATAUSDT', 'GTCUSDT', 'TORNUSDT', 'KEEPUSDT', 'ERNUSDT', 'KLAYUSDT', 'PHAUSDT', 'BONDUSDT', 'MLNUSDT', 'DEXEUSDT', 'C98USDT', 'CLVUSDT', 'QNTUSDT', 'FLOWUSDT', 'TVKUSDT', 'MINAUSDT', 'RAYUSDT', 'FARMUSDT', 'ALPACAUSDT', 'QUICKUSDT', 'MBOXUSDT', 'FORUSDT', 'REQUSDT', 'GHSTUSDT', 'WAXPUSDT', 'TRIBEUSDT', 'GNOUSDT', 'XECUSDT', 'ELFUSDT', 'DYDXUSDT', 'POLYUSDT', 'IDEXUSDT', 'VIDTUSDT', 'USDPUSDT', 'GALAUSDT', 'ILVUSDT', 'YGGUSDT', 'SYSUSDT', 'DFUSDT', 'FIDAUSDT', 'FRONTUSDT', 'CVPUSDT', 'AGLDUSDT', 'RADUSDT', 'BETAUSDT', 'RAREUSDT', 'LAZIOUSDT', 'CHESSUSDT', 'ADXUSDT', 'AUCTIONUSDT', 'DARUSDT', 'BNXUSDT', 'RGTUSDT', 'MOVRUSDT', 'CITYUSDT', 'ENSUSDT', 'KP3RUSDT', 'QIUSDT', 'PORTOUSDT', 'POWRUSDT', 'VGXUSDT', 'JASMYUSDT', 'AMPUSDT', 'PLAUSDT', 'PYRUSDT', 'RNDRUSDT', 'ALCXUSDT', 'SANTOSUSDT', 'MCUSDT', 'ANYUSDT', 'BICOUSDT', 'FLUXUSDT', 'FXSUSDT', 'VOXELUSDT', 'HIGHUSDT', 'CVXUSDT', 'PEOPLEUSDT', 'OOKIUSDT', 'SPELLUSDT', 'USTUSDT', 'JOEUSDT', 'ACHUSDT', 'IMXUSDT', 'GLMRUSDT', 'LOKAUSDT', 'SCRTUSDT', 'API3USDT', 'BTTCUSDT', 'ACAUSDT', 'ANCUSDT', 'XNOUSDT', 'WOOUSDT', 'ALPINEUSDT', 'TUSDT', 'ASTRUSDT', 'GMTUSDT', 'KDAUSDT', 'APEUSDT', 'BSWUSDT', 'BIFIUSDT', 'MULTIUSDT', 'STEEMUSDT', 'MOBUSDT', 'NEXOUSDT', 'REIUSDT', 'GALUSDT', 'LDOUSDT', 'EPXUSDT', 'OPUSDT', 'LEVERUSDT', 'STGUSDT', 'LUNCUSDT', 'GMXUSDT', 'NEBLUSDT', 'POLYXUSDT', 'APTUSDT', 'OSMOUSDT', 'HFTUSDT', 'PHBUSDT', 'HOOKUSDT', 'MAGICUSDT', 'HIFIUSDT', 'RPLUSDT', 'PROSUSDT', 'AGIXUSDT', 'GNSUSDT', 'SYNUSDT', 'VIBUSDT', 'SSVUSDT', 'LQTYUSDT', 'AMBUSDT', 'BETHUSDT', 'USTCUSDT', 'GASUSDT', 'GLMUSDT', 'PROMUSDT', 'QKCUSDT', 'UFTUSDT', 'IDUSDT', 'ARBUSDT', 'LOOMUSDT', 'OAXUSDT', 'RDNTUSDT', 'WBTCUSDT', 'EDUUSDT', 'SUIUSDT', 'AERGOUSDT', 'PEPEUSDT', 'FLOKIUSDT', 'ASTUSDT', 'SNTUSDT', 'COMBOUSDT', 'MAVUSDT', 'PENDLEUSDT', 'ARKMUSDT', 'WBETHUSDT', 'WLDUSDT', 'FDUSDUSDT', 'SEIUSDT', 'CYBERUSDT', 'ARKUSDT', 'CREAMUSDT', 'GFTUSDT', 'IQUSDT', 'NTRNUSDT', 'TIAUSDT', 'MEMEUSDT', 'ORDIUSDT', 'BEAMXUSDT', 'PIVXUSDT', 'VICUSDT', 'BLURUSDT', 'VANRYUSDT', 'AEURUSDT', 'JTOUSDT', '1000SATSUSDT', 'BONKUSDT', 'ACEUSDT', 'NFPUSDT', 'AIUSDT', 'XAIUSDT', 'MANTAUSDT', 'ALTUSDT', 'JUPUSDT', 'PYTHUSDT', 'RONINUSDT', 'DYMUSDT', 'PIXELUSDT', 'STRKUSDT', 'PORTALUSDT', 'PDAUSDT', 'AXLUSDT', 'WIFUSDT', 'METISUSDT', 'AEVOUSDT', 'BOMEUSDT', 'ETHFIUSDT', 'ENAUSDT', 'WUSDT', 'TNSRUSDT', 'SAGAUSDT', 'TAOUSDT', 'OMNIUSDT']<br>
-Top 10 most popular USDT trading pairs on Binance:<br>
-/tmp/tmp.P4xhl6rIDx<br>
-BTC#USDT<br>
-ETH#USDT<br>
-SOL#USDT<br>
-USDC#USDT<br>
-FDUSD#USDT<br>
-PEPE#USDT<br>
-WIF#USDT<br>
-BNB#USDT<br>
-COS#USDT<br>
-DOGE#USDT<br>
-"BTC#USDT", "ETH#USDT", "SOL#USDT", "USDC#USDT", "FDUSD#USDT", "PEPE#USDT", "WIF#USDT", "BNB#USDT", "COS#USDT", "DOGE#USDT"<br>
-sed -e s/#pairs#/"BTC#USDT", "ETH#USDT", "SOL#USDT", "USDC#USDT", "FDUSD#USDT", "PEPE#USDT", "WIF#USDT", "BNB#USDT", "COS#USDT", "DOGE#USDT"/g remotepairlist-white-spot.json.template remotepairlist-white-spot.json<br>
-{<br>
-    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "SOL/USDT", "USDC/USDT", "FDUSD/USDT", "PEPE/USDT", "WIF/USDT", "BNB/USDT", "COS/USDT", "DOGE/USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-wput --reupload --binary remotepairlist-white-spot.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
---15:02:38-- `remotepairlist-white-spot.json'<br>
-    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-spot.json<br>
-Connecting to 192.254.236.178:21... connected! encrypted!<br>
-Logging in as admin@filekeys.com ... Logged in!<br>
-Length: 236<br>
-    0K <br>
-15:02:41 (remotepairlist-white-spot.json) - ` 1.56K/s' [236]<br>
-<br>
-FINISHED --15:02:41--<br>
-Transferred 236 bytes in 1 file at 74.50B/s<br>
-URL: http://filekeys.com/remotepairlist-white-spot.json<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   236  100   236    0     0    547      0 --:--:-- --:--:-- --:--:--   546<br>
-{<br>
-    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "SOL/USDT", "USDC/USDT", "FDUSD/USDT", "PEPE/USDT", "WIF/USDT", "BNB/USDT", "COS/USDT", "DOGE/USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-URL: http://filekeys.com/remotepairlist-white-spot.json<br>
-"Finished at 20240427-150241"<br>
-20240427-180001<br>
-Sending most popular futures pair list<br>
-10 most popular pairs<br>
-/tmp/tmp.xPHJI70js1<br>
-1000SATS#USDT:USDT<br>
-1000PEPE#USDT:USDT<br>
-LEVER#USDT:USDT<br>
-BOME#USDT:USDT<br>
-1000BONK#USDT:USDT<br>
-SPELL#USDT:USDT<br>
-1000SHIB#USDT:USDT<br>
-1000PEPEUSDC#USDT:USDT<br>
-DENT#USDT:USDT<br>
-HOT#USDT:USDT<br>
-DOGE#USDT:USDT<br>
-REEF#USDT:USDT<br>
-CKB#USDT:USDT<br>
-RSR#USDT:USDT<br>
-DGB#USDT:USDT<br>
-GALA#USDT:USDT<br>
-GLM#USDT:USDT<br>
-HBAR#USDT:USDT<br>
-LOOM#USDT:USDT<br>
-LINA#USDT:USDT<br>
-"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "SPELL#USDT:USDT", "1000SHIB#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "DOGE#USDT:USDT", "REEF#USDT:USDT", "CKB#USDT:USDT", "RSR#USDT:USDT", "DGB#USDT:USDT", "GALA#USDT:USDT", "GLM#USDT:USDT", "HBAR#USDT:USDT", "LOOM#USDT:USDT", "LINA#USDT:USDT"<br>
-sed -e s/#pairs#/"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "SPELL#USDT:USDT", "1000SHIB#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "DOGE#USDT:USDT", "REEF#USDT:USDT", "CKB#USDT:USDT", "RSR#USDT:USDT", "DGB#USDT:USDT", "GALA#USDT:USDT", "GLM#USDT:USDT", "HBAR#USDT:USDT", "LOOM#USDT:USDT", "LINA#USDT:USDT"/g remotepairlist-white-futures.json.template remotepairlist-white-futures.json<br>
-{<br>
-    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "SPELL/USDT:USDT", "1000SHIB/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "DOGE/USDT:USDT", "REEF/USDT:USDT", "CKB/USDT:USDT", "RSR/USDT:USDT", "DGB/USDT:USDT", "GALA/USDT:USDT", "GLM/USDT:USDT", "HBAR/USDT:USDT", "LOOM/USDT:USDT", "LINA/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-wput --reupload --binary remotepairlist-white-futures.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
---18:00:03-- `remotepairlist-white-futures.json'<br>
-    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures.json<br>
-Connecting to 192.254.236.178:21... connected! encrypted!<br>
-Logging in as admin@filekeys.com ... Logged in!<br>
-Length: 429<br>
-    0K <br>
-18:00:06 (remotepairlist-white-futures.json) - ` 6.18K/s' [429]<br>
-<br>
-FINISHED --18:00:06--<br>
-Transferred 941 bytes in 1 file at 271.9B/s<br>
-URL: http://filekeys.com/remotepairlist-white-futures.json<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   429  100   429    0     0   1361      0 --:--:-- --:--:-- --:--:--  1361<br>
-{<br>
-    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "SPELL/USDT:USDT", "1000SHIB/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "DOGE/USDT:USDT", "REEF/USDT:USDT", "CKB/USDT:USDT", "RSR/USDT:USDT", "DGB/USDT:USDT", "GALA/USDT:USDT", "GLM/USDT:USDT", "HBAR/USDT:USDT", "LOOM/USDT:USDT", "LINA/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-URL: http://filekeys.com/remotepairlist-white-futures.json<br>
-{<br>
-    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
-<br>
-<br>
-<br>
-Sending static local pairlist<br>
-{<br>
-    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
-    "refresh_period": 900<br>
-}<br>
 <br>
 <br>
 <br>
@@ -522,6 +238,290 @@ URL: http://filekeys.com/remotepairlist-white-spot.json<br>
 <br>
 URL: http://filekeys.com/remotepairlist-white-spot.json<br>
 "Finished at 20240427-210242"<br>
+20240428-000001<br>
+Sending most popular futures pair list<br>
+10 most popular pairs<br>
+/tmp/tmp.fJM2zkpzcW<br>
+1000SATS#USDT:USDT<br>
+1000PEPE#USDT:USDT<br>
+LEVER#USDT:USDT<br>
+BOME#USDT:USDT<br>
+1000BONK#USDT:USDT<br>
+1000SHIB#USDT:USDT<br>
+SPELL#USDT:USDT<br>
+1000PEPEUSDC#USDT:USDT<br>
+DENT#USDT:USDT<br>
+HOT#USDT:USDT<br>
+DOGE#USDT:USDT<br>
+REEF#USDT:USDT<br>
+CKB#USDT:USDT<br>
+GLM#USDT:USDT<br>
+RSR#USDT:USDT<br>
+DGB#USDT:USDT<br>
+GALA#USDT:USDT<br>
+HBAR#USDT:USDT<br>
+LOOM#USDT:USDT<br>
+LINA#USDT:USDT<br>
+"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "1000SHIB#USDT:USDT", "SPELL#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "DOGE#USDT:USDT", "REEF#USDT:USDT", "CKB#USDT:USDT", "GLM#USDT:USDT", "RSR#USDT:USDT", "DGB#USDT:USDT", "GALA#USDT:USDT", "HBAR#USDT:USDT", "LOOM#USDT:USDT", "LINA#USDT:USDT"<br>
+sed -e s/#pairs#/"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "1000SHIB#USDT:USDT", "SPELL#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "DOGE#USDT:USDT", "REEF#USDT:USDT", "CKB#USDT:USDT", "GLM#USDT:USDT", "RSR#USDT:USDT", "DGB#USDT:USDT", "GALA#USDT:USDT", "HBAR#USDT:USDT", "LOOM#USDT:USDT", "LINA#USDT:USDT"/g remotepairlist-white-futures.json.template remotepairlist-white-futures.json<br>
+{<br>
+    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "1000SHIB/USDT:USDT", "SPELL/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "DOGE/USDT:USDT", "REEF/USDT:USDT", "CKB/USDT:USDT", "GLM/USDT:USDT", "RSR/USDT:USDT", "DGB/USDT:USDT", "GALA/USDT:USDT", "HBAR/USDT:USDT", "LOOM/USDT:USDT", "LINA/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+wput --reupload --binary remotepairlist-white-futures.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
+--00:00:03-- `remotepairlist-white-futures.json'<br>
+    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures.json<br>
+Connecting to 192.254.236.178:21... connected! encrypted!<br>
+Logging in as admin@filekeys.com ... Logged in!<br>
+Length: 429<br>
+    0K <br>
+00:00:06 (remotepairlist-white-futures.json) - ` 3.13K/s' [429]<br>
+<br>
+FINISHED --00:00:06--<br>
+Transferred 429 bytes in 1 file at 145.9B/s<br>
+URL: http://filekeys.com/remotepairlist-white-futures.json<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   429  100   429    0     0   1415      0 --:--:-- --:--:-- --:--:--  1411<br>
+{<br>
+    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "1000SHIB/USDT:USDT", "SPELL/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "DOGE/USDT:USDT", "REEF/USDT:USDT", "CKB/USDT:USDT", "GLM/USDT:USDT", "RSR/USDT:USDT", "DGB/USDT:USDT", "GALA/USDT:USDT", "HBAR/USDT:USDT", "LOOM/USDT:USDT", "LINA/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+URL: http://filekeys.com/remotepairlist-white-futures.json<br>
+{<br>
+    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+Sending static local pairlist<br>
+{<br>
+    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+wput --reupload --binary remotepairlist-white-futures-static.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
+--00:00:06-- `remotepairlist-white-futures-static.json'<br>
+    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures-static.json<br>
+Connecting to 192.254.236.178:21... connected! encrypted!<br>
+Logging in as admin@filekeys.com ... Logged in!<br>
+Length: 148<br>
+    0K <br>
+00:00:09 (remotepairlist-white-futures-static.json) - `995.6B/s' [148]<br>
+<br>
+FINISHED --00:00:09--<br>
+Transferred 148 bytes in 1 file at 49.09B/s<br>
+URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   148  100   148    0     0    483      0 --:--:-- --:--:-- --:--:--   483<br>
+{<br>
+    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
+Sending 10 most popular pairs from binance APO<br>
+10 most popular pairs<br>
+['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'BCCUSDT', 'NEOUSDT', 'LTCUSDT', 'QTUMUSDT', 'ADAUSDT', 'XRPUSDT', 'EOSUSDT', 'TUSDUSDT', 'IOTAUSDT', 'XLMUSDT', 'ONTUSDT', 'TRXUSDT', 'ETCUSDT', 'ICXUSDT', 'VENUSDT', 'NULSUSDT', 'VETUSDT', 'PAXUSDT', 'BCHABCUSDT', 'BCHSVUSDT', 'USDCUSDT', 'LINKUSDT', 'WAVESUSDT', 'BTTUSDT', 'USDSUSDT', 'ONGUSDT', 'HOTUSDT', 'ZILUSDT', 'ZRXUSDT', 'FETUSDT', 'BATUSDT', 'XMRUSDT', 'ZECUSDT', 'IOSTUSDT', 'CELRUSDT', 'DASHUSDT', 'NANOUSDT', 'OMGUSDT', 'THETAUSDT', 'ENJUSDT', 'MITHUSDT', 'MATICUSDT', 'ATOMUSDT', 'TFUELUSDT', 'ONEUSDT', 'FTMUSDT', 'ALGOUSDT', 'USDSBUSDT', 'GTOUSDT', 'ERDUSDT', 'DOGEUSDT', 'DUSKUSDT', 'ANKRUSDT', 'WINUSDT', 'COSUSDT', 'NPXSUSDT', 'COCOSUSDT', 'MTLUSDT', 'TOMOUSDT', 'PERLUSDT', 'DENTUSDT', 'MFTUSDT', 'KEYUSDT', 'STORMUSDT', 'DOCKUSDT', 'WANUSDT', 'FUNUSDT', 'CVCUSDT', 'CHZUSDT', 'BANDUSDT', 'BUSDUSDT', 'BEAMUSDT', 'XTZUSDT', 'RENUSDT', 'RVNUSDT', 'HCUSDT', 'HBARUSDT', 'NKNUSDT', 'STXUSDT', 'KAVAUSDT', 'ARPAUSDT', 'IOTXUSDT', 'RLCUSDT', 'MCOUSDT', 'CTXCUSDT', 'BCHUSDT', 'TROYUSDT', 'VITEUSDT', 'FTTUSDT', 'EURUSDT', 'OGNUSDT', 'DREPUSDT', 'BULLUSDT', 'BEARUSDT', 'ETHBULLUSDT', 'ETHBEARUSDT', 'TCTUSDT', 'WRXUSDT', 'BTSUSDT', 'LSKUSDT', 'BNTUSDT', 'LTOUSDT', 'EOSBULLUSDT', 'EOSBEARUSDT', 'XRPBULLUSDT', 'XRPBEARUSDT', 'STRATUSDT', 'AIONUSDT', 'MBLUSDT', 'COTIUSDT', 'BNBBULLUSDT', 'BNBBEARUSDT', 'STPTUSDT', 'WTCUSDT', 'DATAUSDT', 'XZCUSDT', 'SOLUSDT', 'CTSIUSDT', 'HIVEUSDT', 'CHRUSDT', 'BTCUPUSDT', 'BTCDOWNUSDT', 'GXSUSDT', 'ARDRUSDT', 'LENDUSDT', 'MDTUSDT', 'STMXUSDT', 'KNCUSDT', 'REPUSDT', 'LRCUSDT', 'PNTUSDT', 'COMPUSDT', 'BKRWUSDT', 'SCUSDT', 'ZENUSDT', 'SNXUSDT', 'ETHUPUSDT', 'ETHDOWNUSDT', 'ADAUPUSDT', 'ADADOWNUSDT', 'LINKUPUSDT', 'LINKDOWNUSDT', 'VTHOUSDT', 'DGBUSDT', 'GBPUSDT', 'SXPUSDT', 'MKRUSDT', 'DAIUSDT', 'DCRUSDT', 'STORJUSDT', 'BNBUPUSDT', 'BNBDOWNUSDT', 'XTZUPUSDT', 'XTZDOWNUSDT', 'MANAUSDT', 'AUDUSDT', 'YFIUSDT', 'BALUSDT', 'BLZUSDT', 'IRISUSDT', 'KMDUSDT', 'JSTUSDT', 'SRMUSDT', 'ANTUSDT', 'CRVUSDT', 'SANDUSDT', 'OCEANUSDT', 'NMRUSDT', 'DOTUSDT', 'LUNAUSDT', 'RSRUSDT', 'PAXGUSDT', 'WNXMUSDT', 'TRBUSDT', 'BZRXUSDT', 'SUSHIUSDT', 'YFIIUSDT', 'KSMUSDT', 'EGLDUSDT', 'DIAUSDT', 'RUNEUSDT', 'FIOUSDT', 'UMAUSDT', 'EOSUPUSDT', 'EOSDOWNUSDT', 'TRXUPUSDT', 'TRXDOWNUSDT', 'XRPUPUSDT', 'XRPDOWNUSDT', 'DOTUPUSDT', 'DOTDOWNUSDT', 'BELUSDT', 'WINGUSDT', 'LTCUPUSDT', 'LTCDOWNUSDT', 'UNIUSDT', 'NBSUSDT', 'OXTUSDT', 'SUNUSDT', 'AVAXUSDT', 'HNTUSDT', 'FLMUSDT', 'UNIUPUSDT', 'UNIDOWNUSDT', 'ORNUSDT', 'UTKUSDT', 'XVSUSDT', 'ALPHAUSDT', 'AAVEUSDT', 'NEARUSDT', 'SXPUPUSDT', 'SXPDOWNUSDT', 'FILUSDT', 'FILUPUSDT', 'FILDOWNUSDT', 'YFIUPUSDT', 'YFIDOWNUSDT', 'INJUSDT', 'AUDIOUSDT', 'CTKUSDT', 'BCHUPUSDT', 'BCHDOWNUSDT', 'AKROUSDT', 'AXSUSDT', 'HARDUSDT', 'DNTUSDT', 'STRAXUSDT', 'UNFIUSDT', 'ROSEUSDT', 'AVAUSDT', 'XEMUSDT', 'AAVEUPUSDT', 'AAVEDOWNUSDT', 'SKLUSDT', 'SUSDUSDT', 'SUSHIUPUSDT', 'SUSHIDOWNUSDT', 'XLMUPUSDT', 'XLMDOWNUSDT', 'GRTUSDT', 'JUVUSDT', 'PSGUSDT', '1INCHUSDT', 'REEFUSDT', 'OGUSDT', 'ATMUSDT', 'ASRUSDT', 'CELOUSDT', 'RIFUSDT', 'BTCSTUSDT', 'TRUUSDT', 'CKBUSDT', 'TWTUSDT', 'FIROUSDT', 'LITUSDT', 'SFPUSDT', 'DODOUSDT', 'CAKEUSDT', 'ACMUSDT', 'BADGERUSDT', 'FISUSDT', 'OMUSDT', 'PONDUSDT', 'DEGOUSDT', 'ALICEUSDT', 'LINAUSDT', 'PERPUSDT', 'RAMPUSDT', 'SUPERUSDT', 'CFXUSDT', 'EPSUSDT', 'AUTOUSDT', 'TKOUSDT', 'PUNDIXUSDT', 'TLMUSDT', '1INCHUPUSDT', '1INCHDOWNUSDT', 'BTGUSDT', 'MIRUSDT', 'BARUSDT', 'FORTHUSDT', 'BAKEUSDT', 'BURGERUSDT', 'SLPUSDT', 'SHIBUSDT', 'ICPUSDT', 'ARUSDT', 'POLSUSDT', 'MDXUSDT', 'MASKUSDT', 'LPTUSDT', 'NUUSDT', 'XVGUSDT', 'ATAUSDT', 'GTCUSDT', 'TORNUSDT', 'KEEPUSDT', 'ERNUSDT', 'KLAYUSDT', 'PHAUSDT', 'BONDUSDT', 'MLNUSDT', 'DEXEUSDT', 'C98USDT', 'CLVUSDT', 'QNTUSDT', 'FLOWUSDT', 'TVKUSDT', 'MINAUSDT', 'RAYUSDT', 'FARMUSDT', 'ALPACAUSDT', 'QUICKUSDT', 'MBOXUSDT', 'FORUSDT', 'REQUSDT', 'GHSTUSDT', 'WAXPUSDT', 'TRIBEUSDT', 'GNOUSDT', 'XECUSDT', 'ELFUSDT', 'DYDXUSDT', 'POLYUSDT', 'IDEXUSDT', 'VIDTUSDT', 'USDPUSDT', 'GALAUSDT', 'ILVUSDT', 'YGGUSDT', 'SYSUSDT', 'DFUSDT', 'FIDAUSDT', 'FRONTUSDT', 'CVPUSDT', 'AGLDUSDT', 'RADUSDT', 'BETAUSDT', 'RAREUSDT', 'LAZIOUSDT', 'CHESSUSDT', 'ADXUSDT', 'AUCTIONUSDT', 'DARUSDT', 'BNXUSDT', 'RGTUSDT', 'MOVRUSDT', 'CITYUSDT', 'ENSUSDT', 'KP3RUSDT', 'QIUSDT', 'PORTOUSDT', 'POWRUSDT', 'VGXUSDT', 'JASMYUSDT', 'AMPUSDT', 'PLAUSDT', 'PYRUSDT', 'RNDRUSDT', 'ALCXUSDT', 'SANTOSUSDT', 'MCUSDT', 'ANYUSDT', 'BICOUSDT', 'FLUXUSDT', 'FXSUSDT', 'VOXELUSDT', 'HIGHUSDT', 'CVXUSDT', 'PEOPLEUSDT', 'OOKIUSDT', 'SPELLUSDT', 'USTUSDT', 'JOEUSDT', 'ACHUSDT', 'IMXUSDT', 'GLMRUSDT', 'LOKAUSDT', 'SCRTUSDT', 'API3USDT', 'BTTCUSDT', 'ACAUSDT', 'ANCUSDT', 'XNOUSDT', 'WOOUSDT', 'ALPINEUSDT', 'TUSDT', 'ASTRUSDT', 'GMTUSDT', 'KDAUSDT', 'APEUSDT', 'BSWUSDT', 'BIFIUSDT', 'MULTIUSDT', 'STEEMUSDT', 'MOBUSDT', 'NEXOUSDT', 'REIUSDT', 'GALUSDT', 'LDOUSDT', 'EPXUSDT', 'OPUSDT', 'LEVERUSDT', 'STGUSDT', 'LUNCUSDT', 'GMXUSDT', 'NEBLUSDT', 'POLYXUSDT', 'APTUSDT', 'OSMOUSDT', 'HFTUSDT', 'PHBUSDT', 'HOOKUSDT', 'MAGICUSDT', 'HIFIUSDT', 'RPLUSDT', 'PROSUSDT', 'AGIXUSDT', 'GNSUSDT', 'SYNUSDT', 'VIBUSDT', 'SSVUSDT', 'LQTYUSDT', 'AMBUSDT', 'BETHUSDT', 'USTCUSDT', 'GASUSDT', 'GLMUSDT', 'PROMUSDT', 'QKCUSDT', 'UFTUSDT', 'IDUSDT', 'ARBUSDT', 'LOOMUSDT', 'OAXUSDT', 'RDNTUSDT', 'WBTCUSDT', 'EDUUSDT', 'SUIUSDT', 'AERGOUSDT', 'PEPEUSDT', 'FLOKIUSDT', 'ASTUSDT', 'SNTUSDT', 'COMBOUSDT', 'MAVUSDT', 'PENDLEUSDT', 'ARKMUSDT', 'WBETHUSDT', 'WLDUSDT', 'FDUSDUSDT', 'SEIUSDT', 'CYBERUSDT', 'ARKUSDT', 'CREAMUSDT', 'GFTUSDT', 'IQUSDT', 'NTRNUSDT', 'TIAUSDT', 'MEMEUSDT', 'ORDIUSDT', 'BEAMXUSDT', 'PIVXUSDT', 'VICUSDT', 'BLURUSDT', 'VANRYUSDT', 'AEURUSDT', 'JTOUSDT', '1000SATSUSDT', 'BONKUSDT', 'ACEUSDT', 'NFPUSDT', 'AIUSDT', 'XAIUSDT', 'MANTAUSDT', 'ALTUSDT', 'JUPUSDT', 'PYTHUSDT', 'RONINUSDT', 'DYMUSDT', 'PIXELUSDT', 'STRKUSDT', 'PORTALUSDT', 'PDAUSDT', 'AXLUSDT', 'WIFUSDT', 'METISUSDT', 'AEVOUSDT', 'BOMEUSDT', 'ETHFIUSDT', 'ENAUSDT', 'WUSDT', 'TNSRUSDT', 'SAGAUSDT', 'TAOUSDT', 'OMNIUSDT']<br>
+Top 10 most popular USDT trading pairs on Binance:<br>
+/tmp/tmp.XiuBH0csED<br>
+BTC#USDT<br>
+ETH#USDT<br>
+SOL#USDT<br>
+USDC#USDT<br>
+FDUSD#USDT<br>
+PEPE#USDT<br>
+NEAR#USDT<br>
+BNB#USDT<br>
+WIF#USDT<br>
+GLM#USDT<br>
+"BTC#USDT", "ETH#USDT", "SOL#USDT", "USDC#USDT", "FDUSD#USDT", "PEPE#USDT", "NEAR#USDT", "BNB#USDT", "WIF#USDT", "GLM#USDT"<br>
+sed -e s/#pairs#/"BTC#USDT", "ETH#USDT", "SOL#USDT", "USDC#USDT", "FDUSD#USDT", "PEPE#USDT", "NEAR#USDT", "BNB#USDT", "WIF#USDT", "GLM#USDT"/g remotepairlist-white-spot.json.template remotepairlist-white-spot.json<br>
+{<br>
+    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "SOL/USDT", "USDC/USDT", "FDUSD/USDT", "PEPE/USDT", "NEAR/USDT", "BNB/USDT", "WIF/USDT", "GLM/USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+wput --reupload --binary remotepairlist-white-spot.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
+--00:02:39-- `remotepairlist-white-spot.json'<br>
+    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-spot.json<br>
+Connecting to 192.254.236.178:21... connected! encrypted!<br>
+Logging in as admin@filekeys.com ... Logged in!<br>
+Length: 236<br>
+    0K <br>
+00:02:42 (remotepairlist-white-spot.json) - ` 5.00K/s' [236]<br>
+<br>
+FINISHED --00:02:42--<br>
+Transferred 748 bytes in 1 file at 249.1B/s<br>
+URL: http://filekeys.com/remotepairlist-white-spot.json<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   236  100   236    0     0    548      0 --:--:-- --:--:-- --:--:--   547<br>
+{<br>
+    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "SOL/USDT", "USDC/USDT", "FDUSD/USDT", "PEPE/USDT", "NEAR/USDT", "BNB/USDT", "WIF/USDT", "GLM/USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+URL: http://filekeys.com/remotepairlist-white-spot.json<br>
+"Finished at 20240428-000242"<br>
+20240428-030001<br>
+Sending most popular futures pair list<br>
+10 most popular pairs<br>
+/tmp/tmp.YjmhfCHykH<br>
+1000SATS#USDT:USDT<br>
+1000PEPE#USDT:USDT<br>
+LEVER#USDT:USDT<br>
+BOME#USDT:USDT<br>
+1000BONK#USDT:USDT<br>
+SPELL#USDT:USDT<br>
+1000SHIB#USDT:USDT<br>
+1000PEPEUSDC#USDT:USDT<br>
+DENT#USDT:USDT<br>
+HOT#USDT:USDT<br>
+T#USDT:USDT<br>
+DOGE#USDT:USDT<br>
+GLM#USDT:USDT<br>
+REEF#USDT:USDT<br>
+CKB#USDT:USDT<br>
+DGB#USDT:USDT<br>
+RSR#USDT:USDT<br>
+GALA#USDT:USDT<br>
+LOOM#USDT:USDT<br>
+HBAR#USDT:USDT<br>
+"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "SPELL#USDT:USDT", "1000SHIB#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "T#USDT:USDT", "DOGE#USDT:USDT", "GLM#USDT:USDT", "REEF#USDT:USDT", "CKB#USDT:USDT", "DGB#USDT:USDT", "RSR#USDT:USDT", "GALA#USDT:USDT", "LOOM#USDT:USDT", "HBAR#USDT:USDT"<br>
+sed -e s/#pairs#/"1000SATS#USDT:USDT", "1000PEPE#USDT:USDT", "LEVER#USDT:USDT", "BOME#USDT:USDT", "1000BONK#USDT:USDT", "SPELL#USDT:USDT", "1000SHIB#USDT:USDT", "1000PEPEUSDC#USDT:USDT", "DENT#USDT:USDT", "HOT#USDT:USDT", "T#USDT:USDT", "DOGE#USDT:USDT", "GLM#USDT:USDT", "REEF#USDT:USDT", "CKB#USDT:USDT", "DGB#USDT:USDT", "RSR#USDT:USDT", "GALA#USDT:USDT", "LOOM#USDT:USDT", "HBAR#USDT:USDT"/g remotepairlist-white-futures.json.template remotepairlist-white-futures.json<br>
+{<br>
+    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "SPELL/USDT:USDT", "1000SHIB/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "T/USDT:USDT", "DOGE/USDT:USDT", "GLM/USDT:USDT", "REEF/USDT:USDT", "CKB/USDT:USDT", "DGB/USDT:USDT", "RSR/USDT:USDT", "GALA/USDT:USDT", "LOOM/USDT:USDT", "HBAR/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+wput --reupload --binary remotepairlist-white-futures.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
+--03:00:03-- `remotepairlist-white-futures.json'<br>
+    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures.json<br>
+Connecting to 192.254.236.178:21... connected! encrypted!<br>
+Logging in as admin@filekeys.com ... Logged in!<br>
+Length: 426<br>
+    0K <br>
+03:00:06 (remotepairlist-white-futures.json) - ` 6.18K/s' [426]<br>
+<br>
+FINISHED --03:00:06--<br>
+Transferred 938 bytes in 1 file at 263.9B/s<br>
+URL: http://filekeys.com/remotepairlist-white-futures.json<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   426  100   426    0     0   1396      0 --:--:-- --:--:-- --:--:--  1396<br>
+{<br>
+    "pairs": ["1000SATS/USDT:USDT", "1000PEPE/USDT:USDT", "LEVER/USDT:USDT", "BOME/USDT:USDT", "1000BONK/USDT:USDT", "SPELL/USDT:USDT", "1000SHIB/USDT:USDT", "1000PEPEUSDC/USDT:USDT", "DENT/USDT:USDT", "HOT/USDT:USDT", "T/USDT:USDT", "DOGE/USDT:USDT", "GLM/USDT:USDT", "REEF/USDT:USDT", "CKB/USDT:USDT", "DGB/USDT:USDT", "RSR/USDT:USDT", "GALA/USDT:USDT", "LOOM/USDT:USDT", "HBAR/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+URL: http://filekeys.com/remotepairlist-white-futures.json<br>
+{<br>
+    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+Sending static local pairlist<br>
+{<br>
+    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+wput --reupload --binary remotepairlist-white-futures-static.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
+--03:00:07-- `remotepairlist-white-futures-static.json'<br>
+    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-futures-static.json<br>
+Connecting to 192.254.236.178:21... connected! encrypted!<br>
+Logging in as admin@filekeys.com ... Logged in!<br>
+Length: 148<br>
+    0K <br>
+03:00:10 (remotepairlist-white-futures-static.json) - `970.8B/s' [148]<br>
+<br>
+FINISHED --03:00:10--<br>
+Transferred 148 bytes in 1 file at 51.32B/s<br>
+URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   148  100   148    0     0    485      0 --:--:-- --:--:-- --:--:--   485<br>
+{<br>
+    "pairs": ["XRP/USDT:USDT","XLM/USDT:USDT","XDC/USDT:USDT","IOTA/USDT:USDT","ALGO/USDT:USDT", "BTC/USDT:USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+URL: http://filekeys.com/remotepairlist-white-futures-static.json<br>
+Sending 10 most popular pairs from binance APO<br>
+10 most popular pairs<br>
+['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'BCCUSDT', 'NEOUSDT', 'LTCUSDT', 'QTUMUSDT', 'ADAUSDT', 'XRPUSDT', 'EOSUSDT', 'TUSDUSDT', 'IOTAUSDT', 'XLMUSDT', 'ONTUSDT', 'TRXUSDT', 'ETCUSDT', 'ICXUSDT', 'VENUSDT', 'NULSUSDT', 'VETUSDT', 'PAXUSDT', 'BCHABCUSDT', 'BCHSVUSDT', 'USDCUSDT', 'LINKUSDT', 'WAVESUSDT', 'BTTUSDT', 'USDSUSDT', 'ONGUSDT', 'HOTUSDT', 'ZILUSDT', 'ZRXUSDT', 'FETUSDT', 'BATUSDT', 'XMRUSDT', 'ZECUSDT', 'IOSTUSDT', 'CELRUSDT', 'DASHUSDT', 'NANOUSDT', 'OMGUSDT', 'THETAUSDT', 'ENJUSDT', 'MITHUSDT', 'MATICUSDT', 'ATOMUSDT', 'TFUELUSDT', 'ONEUSDT', 'FTMUSDT', 'ALGOUSDT', 'USDSBUSDT', 'GTOUSDT', 'ERDUSDT', 'DOGEUSDT', 'DUSKUSDT', 'ANKRUSDT', 'WINUSDT', 'COSUSDT', 'NPXSUSDT', 'COCOSUSDT', 'MTLUSDT', 'TOMOUSDT', 'PERLUSDT', 'DENTUSDT', 'MFTUSDT', 'KEYUSDT', 'STORMUSDT', 'DOCKUSDT', 'WANUSDT', 'FUNUSDT', 'CVCUSDT', 'CHZUSDT', 'BANDUSDT', 'BUSDUSDT', 'BEAMUSDT', 'XTZUSDT', 'RENUSDT', 'RVNUSDT', 'HCUSDT', 'HBARUSDT', 'NKNUSDT', 'STXUSDT', 'KAVAUSDT', 'ARPAUSDT', 'IOTXUSDT', 'RLCUSDT', 'MCOUSDT', 'CTXCUSDT', 'BCHUSDT', 'TROYUSDT', 'VITEUSDT', 'FTTUSDT', 'EURUSDT', 'OGNUSDT', 'DREPUSDT', 'BULLUSDT', 'BEARUSDT', 'ETHBULLUSDT', 'ETHBEARUSDT', 'TCTUSDT', 'WRXUSDT', 'BTSUSDT', 'LSKUSDT', 'BNTUSDT', 'LTOUSDT', 'EOSBULLUSDT', 'EOSBEARUSDT', 'XRPBULLUSDT', 'XRPBEARUSDT', 'STRATUSDT', 'AIONUSDT', 'MBLUSDT', 'COTIUSDT', 'BNBBULLUSDT', 'BNBBEARUSDT', 'STPTUSDT', 'WTCUSDT', 'DATAUSDT', 'XZCUSDT', 'SOLUSDT', 'CTSIUSDT', 'HIVEUSDT', 'CHRUSDT', 'BTCUPUSDT', 'BTCDOWNUSDT', 'GXSUSDT', 'ARDRUSDT', 'LENDUSDT', 'MDTUSDT', 'STMXUSDT', 'KNCUSDT', 'REPUSDT', 'LRCUSDT', 'PNTUSDT', 'COMPUSDT', 'BKRWUSDT', 'SCUSDT', 'ZENUSDT', 'SNXUSDT', 'ETHUPUSDT', 'ETHDOWNUSDT', 'ADAUPUSDT', 'ADADOWNUSDT', 'LINKUPUSDT', 'LINKDOWNUSDT', 'VTHOUSDT', 'DGBUSDT', 'GBPUSDT', 'SXPUSDT', 'MKRUSDT', 'DAIUSDT', 'DCRUSDT', 'STORJUSDT', 'BNBUPUSDT', 'BNBDOWNUSDT', 'XTZUPUSDT', 'XTZDOWNUSDT', 'MANAUSDT', 'AUDUSDT', 'YFIUSDT', 'BALUSDT', 'BLZUSDT', 'IRISUSDT', 'KMDUSDT', 'JSTUSDT', 'SRMUSDT', 'ANTUSDT', 'CRVUSDT', 'SANDUSDT', 'OCEANUSDT', 'NMRUSDT', 'DOTUSDT', 'LUNAUSDT', 'RSRUSDT', 'PAXGUSDT', 'WNXMUSDT', 'TRBUSDT', 'BZRXUSDT', 'SUSHIUSDT', 'YFIIUSDT', 'KSMUSDT', 'EGLDUSDT', 'DIAUSDT', 'RUNEUSDT', 'FIOUSDT', 'UMAUSDT', 'EOSUPUSDT', 'EOSDOWNUSDT', 'TRXUPUSDT', 'TRXDOWNUSDT', 'XRPUPUSDT', 'XRPDOWNUSDT', 'DOTUPUSDT', 'DOTDOWNUSDT', 'BELUSDT', 'WINGUSDT', 'LTCUPUSDT', 'LTCDOWNUSDT', 'UNIUSDT', 'NBSUSDT', 'OXTUSDT', 'SUNUSDT', 'AVAXUSDT', 'HNTUSDT', 'FLMUSDT', 'UNIUPUSDT', 'UNIDOWNUSDT', 'ORNUSDT', 'UTKUSDT', 'XVSUSDT', 'ALPHAUSDT', 'AAVEUSDT', 'NEARUSDT', 'SXPUPUSDT', 'SXPDOWNUSDT', 'FILUSDT', 'FILUPUSDT', 'FILDOWNUSDT', 'YFIUPUSDT', 'YFIDOWNUSDT', 'INJUSDT', 'AUDIOUSDT', 'CTKUSDT', 'BCHUPUSDT', 'BCHDOWNUSDT', 'AKROUSDT', 'AXSUSDT', 'HARDUSDT', 'DNTUSDT', 'STRAXUSDT', 'UNFIUSDT', 'ROSEUSDT', 'AVAUSDT', 'XEMUSDT', 'AAVEUPUSDT', 'AAVEDOWNUSDT', 'SKLUSDT', 'SUSDUSDT', 'SUSHIUPUSDT', 'SUSHIDOWNUSDT', 'XLMUPUSDT', 'XLMDOWNUSDT', 'GRTUSDT', 'JUVUSDT', 'PSGUSDT', '1INCHUSDT', 'REEFUSDT', 'OGUSDT', 'ATMUSDT', 'ASRUSDT', 'CELOUSDT', 'RIFUSDT', 'BTCSTUSDT', 'TRUUSDT', 'CKBUSDT', 'TWTUSDT', 'FIROUSDT', 'LITUSDT', 'SFPUSDT', 'DODOUSDT', 'CAKEUSDT', 'ACMUSDT', 'BADGERUSDT', 'FISUSDT', 'OMUSDT', 'PONDUSDT', 'DEGOUSDT', 'ALICEUSDT', 'LINAUSDT', 'PERPUSDT', 'RAMPUSDT', 'SUPERUSDT', 'CFXUSDT', 'EPSUSDT', 'AUTOUSDT', 'TKOUSDT', 'PUNDIXUSDT', 'TLMUSDT', '1INCHUPUSDT', '1INCHDOWNUSDT', 'BTGUSDT', 'MIRUSDT', 'BARUSDT', 'FORTHUSDT', 'BAKEUSDT', 'BURGERUSDT', 'SLPUSDT', 'SHIBUSDT', 'ICPUSDT', 'ARUSDT', 'POLSUSDT', 'MDXUSDT', 'MASKUSDT', 'LPTUSDT', 'NUUSDT', 'XVGUSDT', 'ATAUSDT', 'GTCUSDT', 'TORNUSDT', 'KEEPUSDT', 'ERNUSDT', 'KLAYUSDT', 'PHAUSDT', 'BONDUSDT', 'MLNUSDT', 'DEXEUSDT', 'C98USDT', 'CLVUSDT', 'QNTUSDT', 'FLOWUSDT', 'TVKUSDT', 'MINAUSDT', 'RAYUSDT', 'FARMUSDT', 'ALPACAUSDT', 'QUICKUSDT', 'MBOXUSDT', 'FORUSDT', 'REQUSDT', 'GHSTUSDT', 'WAXPUSDT', 'TRIBEUSDT', 'GNOUSDT', 'XECUSDT', 'ELFUSDT', 'DYDXUSDT', 'POLYUSDT', 'IDEXUSDT', 'VIDTUSDT', 'USDPUSDT', 'GALAUSDT', 'ILVUSDT', 'YGGUSDT', 'SYSUSDT', 'DFUSDT', 'FIDAUSDT', 'FRONTUSDT', 'CVPUSDT', 'AGLDUSDT', 'RADUSDT', 'BETAUSDT', 'RAREUSDT', 'LAZIOUSDT', 'CHESSUSDT', 'ADXUSDT', 'AUCTIONUSDT', 'DARUSDT', 'BNXUSDT', 'RGTUSDT', 'MOVRUSDT', 'CITYUSDT', 'ENSUSDT', 'KP3RUSDT', 'QIUSDT', 'PORTOUSDT', 'POWRUSDT', 'VGXUSDT', 'JASMYUSDT', 'AMPUSDT', 'PLAUSDT', 'PYRUSDT', 'RNDRUSDT', 'ALCXUSDT', 'SANTOSUSDT', 'MCUSDT', 'ANYUSDT', 'BICOUSDT', 'FLUXUSDT', 'FXSUSDT', 'VOXELUSDT', 'HIGHUSDT', 'CVXUSDT', 'PEOPLEUSDT', 'OOKIUSDT', 'SPELLUSDT', 'USTUSDT', 'JOEUSDT', 'ACHUSDT', 'IMXUSDT', 'GLMRUSDT', 'LOKAUSDT', 'SCRTUSDT', 'API3USDT', 'BTTCUSDT', 'ACAUSDT', 'ANCUSDT', 'XNOUSDT', 'WOOUSDT', 'ALPINEUSDT', 'TUSDT', 'ASTRUSDT', 'GMTUSDT', 'KDAUSDT', 'APEUSDT', 'BSWUSDT', 'BIFIUSDT', 'MULTIUSDT', 'STEEMUSDT', 'MOBUSDT', 'NEXOUSDT', 'REIUSDT', 'GALUSDT', 'LDOUSDT', 'EPXUSDT', 'OPUSDT', 'LEVERUSDT', 'STGUSDT', 'LUNCUSDT', 'GMXUSDT', 'NEBLUSDT', 'POLYXUSDT', 'APTUSDT', 'OSMOUSDT', 'HFTUSDT', 'PHBUSDT', 'HOOKUSDT', 'MAGICUSDT', 'HIFIUSDT', 'RPLUSDT', 'PROSUSDT', 'AGIXUSDT', 'GNSUSDT', 'SYNUSDT', 'VIBUSDT', 'SSVUSDT', 'LQTYUSDT', 'AMBUSDT', 'BETHUSDT', 'USTCUSDT', 'GASUSDT', 'GLMUSDT', 'PROMUSDT', 'QKCUSDT', 'UFTUSDT', 'IDUSDT', 'ARBUSDT', 'LOOMUSDT', 'OAXUSDT', 'RDNTUSDT', 'WBTCUSDT', 'EDUUSDT', 'SUIUSDT', 'AERGOUSDT', 'PEPEUSDT', 'FLOKIUSDT', 'ASTUSDT', 'SNTUSDT', 'COMBOUSDT', 'MAVUSDT', 'PENDLEUSDT', 'ARKMUSDT', 'WBETHUSDT', 'WLDUSDT', 'FDUSDUSDT', 'SEIUSDT', 'CYBERUSDT', 'ARKUSDT', 'CREAMUSDT', 'GFTUSDT', 'IQUSDT', 'NTRNUSDT', 'TIAUSDT', 'MEMEUSDT', 'ORDIUSDT', 'BEAMXUSDT', 'PIVXUSDT', 'VICUSDT', 'BLURUSDT', 'VANRYUSDT', 'AEURUSDT', 'JTOUSDT', '1000SATSUSDT', 'BONKUSDT', 'ACEUSDT', 'NFPUSDT', 'AIUSDT', 'XAIUSDT', 'MANTAUSDT', 'ALTUSDT', 'JUPUSDT', 'PYTHUSDT', 'RONINUSDT', 'DYMUSDT', 'PIXELUSDT', 'STRKUSDT', 'PORTALUSDT', 'PDAUSDT', 'AXLUSDT', 'WIFUSDT', 'METISUSDT', 'AEVOUSDT', 'BOMEUSDT', 'ETHFIUSDT', 'ENAUSDT', 'WUSDT', 'TNSRUSDT', 'SAGAUSDT', 'TAOUSDT', 'OMNIUSDT']<br>
+Top 10 most popular USDT trading pairs on Binance:<br>
+/tmp/tmp.eUhKqcmabW<br>
+BTC#USDT<br>
+ETH#USDT<br>
+SOL#USDT<br>
+USDC#USDT<br>
+FDUSD#USDT<br>
+PEPE#USDT<br>
+NEAR#USDT<br>
+BNB#USDT<br>
+GLM#USDT<br>
+WIF#USDT<br>
+"BTC#USDT", "ETH#USDT", "SOL#USDT", "USDC#USDT", "FDUSD#USDT", "PEPE#USDT", "NEAR#USDT", "BNB#USDT", "GLM#USDT", "WIF#USDT"<br>
+sed -e s/#pairs#/"BTC#USDT", "ETH#USDT", "SOL#USDT", "USDC#USDT", "FDUSD#USDT", "PEPE#USDT", "NEAR#USDT", "BNB#USDT", "GLM#USDT", "WIF#USDT"/g remotepairlist-white-spot.json.template remotepairlist-white-spot.json<br>
+{<br>
+    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "SOL/USDT", "USDC/USDT", "FDUSD/USDT", "PEPE/USDT", "NEAR/USDT", "BNB/USDT", "GLM/USDT", "WIF/USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+wput --reupload --binary remotepairlist-white-spot.json ftp://admin@filekeys.com:bwj-kca9GNF!mqz*acz@ftp.filekeys.com/<br>
+--03:02:36-- `remotepairlist-white-spot.json'<br>
+    => ftp://admin@filekeys.com:xxxxx@192.254.236.178:21/remotepairlist-white-spot.json<br>
+Connecting to 192.254.236.178:21... connected! encrypted!<br>
+Logging in as admin@filekeys.com ... Logged in!<br>
+Length: 236<br>
+    0K <br>
+03:02:39 (remotepairlist-white-spot.json) - ` 1.55K/s' [236]<br>
+<br>
+FINISHED --03:02:39--<br>
+Transferred 236 bytes in 1 file at 75.47B/s<br>
+URL: http://filekeys.com/remotepairlist-white-spot.json<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   236  100   236    0     0    519      0 --:--:-- --:--:-- --:--:--   518<br>
+{<br>
+    "pairs": [ "XLM/USDT", "XDC/USDT", "XRP/USDT", "IOTA/USDT", "ALGO/USDT", "BTC/USDT", "ETH/USDT", "SOL/USDT", "USDC/USDT", "FDUSD/USDT", "PEPE/USDT", "NEAR/USDT", "BNB/USDT", "GLM/USDT", "WIF/USDT"],<br>
+    "refresh_period": 900<br>
+}<br>
+<br>
+<br>
+<br>
+URL: http://filekeys.com/remotepairlist-white-spot.json<br>
+"Finished at 20240428-030239"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -1024,14 +1024,35 @@ Using Endpoint on 35.233.38.30:32332<br>
     "RemotePairList"<br>
   ]<br>
 }<br>
-"Finished at: 20240427-180707"<br>
-20240427-200001<br>
-"Finished at: 20240427-200001"<br>
+"Finished at: 20240428-020749"<br>
+20240428-040001<br>
+"Finished at: 20240428-040001"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+<b>2024-04-20 03-03-06: 15641.27</b><br><br>
+<b>2024-04-20 02-42-54: 15639.71</b><br><br>
+<b>2024-04-20 02-24-41: 15630.64</b><br><br>
+<b>2024-04-20 02-03-16: 15613.55</b><br><br>
+<b>2024-04-20 01-42-52: 15601.75</b><br><br>
+<b>2024-04-20 01-23-00: 15592.59</b><br><br>
+<b>2024-04-20 01-03-30: 15584.36</b><br><br>
+<b>2024-04-20 00-43-38: 15601.14</b><br><br>
+<b>2024-04-20 00-23-07: 15591.35</b><br><br>
+<b>2024-04-20 00-03-16: 15615.25</b><br><br>
+<b>2024-04-19 23-44-16: 15607.38</b><br><br>
+<b>2024-04-19 23-23-51: 15606.66</b><br><br>
+<b>2024-04-19 23-03-10: 15628.18</b><br><br>
+<b>2024-04-19 22-54-27: 15630.01</b><br><br>
+<b>2024-04-19 22-42-54: 15630.19</b><br><br>
+<b>2024-04-19 22-24-41: 15644.59</b><br><br>
+<b>2024-04-19 22-19-01: 15654.62</b><br><br>
+<b>2024-04-19 22-12-43: 15650.54</b><br><br>
+<b>2024-04-19 22-03-26: 15642.21</b><br><br>
+<b>2024-04-19 21-54-59: 15640.53</b><br><br>
+<b>2024-04-19 21-43-15: 15645.62</b><br><br>
 <b>2024-04-19 20-23-29: 15650.57</b><br><br>
 <b>2024-04-19 19-42-35: 16056.16</b><br><br>
 <b>2024-04-19 19-22-35: 16057.35</b><br><br>
@@ -1456,7 +1477,8 @@ Using Endpoint on 35.233.38.30:32332<br>
 <b>2024-04-13 11-43-35: 18572.45</b><br><br>
 <b>2024-04-13 11-23-10: 18715.59</b><br><br>
 <b>2024-04-13 11-02-42: 18724.67</b><br><br>
-<b>2024-04-13 10-43-12: 18736.33</b><br><br>
+<b>2024-04-13 10-43-12: 18736100  174k  100  174k    0     0   232k      0 --:--:-- --:--:-- --:--:--  231k<br>
+.33</b><br><br>
 <b>2024-04-13 10-22-33: 18741.57</b><br><br>
 <b>2024-04-13 10-03-04: 18742.27</b><br><br>
 <b>2024-04-13 09-42-50: 18737.04</b><br><br>
@@ -1493,8 +1515,7 @@ Using Endpoint on 35.233.38.30:32332<br>
 <b>2024-04-12 22-22-40: 18587.96</b><br><br>
 <b>2024-04-12 22-02-57: 18584.21</b><br><br>
 <b>2024-04-12 21-43-54: 20587.29</b><br><br>
-<b>100  173k  100  173k    0     0   212k      0 --:--:-- --:--:-- --:--:--  212k<br>
-2024-04-12 21-22-37: 20583.26</b><br><br>
+<b>2024-04-12 21-22-37: 20583.26</b><br><br>
 <b>2024-04-12 21-02-59: 20567.55</b><br><br>
 <b>2024-04-12 20-43-53: 20572.20</b><br><br>
 <b>2024-04-12 20-22-45: 20573.59</b><br><br>
@@ -1508,27 +1529,6 @@ Using Endpoint on 35.233.38.30:32332<br>
 <b>2024-04-12 17-22-38: 18194.83</b><br><br>
 <b>2024-04-12 17-03-11: 18181.46</b><br><br>
 <b>2024-04-12 16-44-38: 18177.37</b><br><br>
-<b>2024-04-12 16-22-43: 18178.36</b><br><br>
-<b>2024-04-12 15-44-19: 17817.68</b><br><br>
-<b>2024-04-12 15-22-40: 17881.90</b><br><br>
-<b>2024-04-12 15-03-14: 17933.76</b><br><br>
-<b>2024-04-12 14-42-40: 17970.37</b><br><br>
-<b>2024-04-12 14-22-38: 17815.91</b><br><br>
-<b>2024-04-12 14-03-20: 17828.89</b><br><br>
-<b>2024-04-12 13-42-51: 17690.46</b><br><br>
-<b>2024-04-12 13-22-33: 17539.48</b><br><br>
-<b>2024-04-12 13-03-17: 17379.84</b><br><br>
-<b>2024-04-12 12-43-24: 17309.38</b><br><br>
-<b>2024-04-12 12-22-38: 17135.10</b><br><br>
-<b>2024-04-12 11-43-24: 16950.67</b><br><br>
-<b>2024-04-12 11-22-35: 16926.24</b><br><br>
-<b>2024-04-12 11-03-11: 16938.17</b><br><br>
-<b>2024-04-12 10-43-53: 16948.92</b><br><br>
-<b>2024-04-12 10-22-38: 16943.13</b><br><br>
-<b>2024-04-12 10-03-24: 16911.12</b><br><br>
-<b>2024-04-12 09-42-46: 16911.28</b><br><br>
-<b>2024-04-12 09-22-33: 16970.42</b><br><br>
-<b>2024-04-12 09-03-11: 16940.76</b><br><br>
 </html><br>
 <br>
 URL: http://filekeys.com/dsTradingBalanceRealtime.html<br>
@@ -1537,8 +1537,6 @@ URL: http://filekeys.com/dsTradingBalanceRealtime.html<br>
 ++++<br>
 + + + + + <b id=dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-{<br>
-  "cancel_order_count": 0,<br>
   "result": "success",<br>
   "result_msg": "Deleted trade 49. Closed 0 open orders.",<br>
   "trade_id": 49<br>
@@ -2037,14 +2035,13 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v
 "ID: 41, Currency: DOGE/USDT"<br>
 "ID: 42, Currency: XRP/USDT"<br>
 "ID: 43, Currency: ALGO/USDT"<br>
+20240428-000001<br>
+"Finished at: 20240428-000001"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingConvertAllNonBotManagedCurrencies.sh.log>dsTradingConvertAllNonBotManagedCurrencies.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingConvertAllNonBotManagedCurrencies.sh.log>dsTradingConvertAllNonBotManagedCurrencies.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-larissa<br>
-convertAssetToUSDT.sh gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg PEPE 0.14 binance<br>
-python3 convertAssetToUSDT.py gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg PEPE 0.14 binance<br>
 WARNING:root:Volume $0.14 is less than Min Quantity $1.0 for pair PEPEUSDT<br>
 Key: gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR<br>
 Secret: H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg<br>
@@ -2178,8 +2175,11 @@ Placing Market Order for USDC 2.6e-05 on kraken<br>
 Volume: 2.6e-05<br>
 <Response [200]><br>
 {'error': ['EGeneral:Invalid arguments:volume']}<br>
-"Finished at: 20240427-210039"<br>
-20240427-213401<br>
+"Finished at: 20240428-033839"<br>
+20240428-040001<br>
+20240428-040001<br>
+"Finished at: 20240428-040001"<br>
+20240428-043401<br>
 #############################################################################################<br>
 ---------------------------------------------------------------------------------------------<br>
 <br>
@@ -2541,260 +2541,12 @@ Placing Market Order for USDC 2.6e-05 on kraken<br>
 Volume: 2.6e-05<br>
 <Response [200]><br>
 {'error': ['EGeneral:Invalid arguments:volume']}<br>
-"Finished at: 20240427-213853"<br>
+"Finished at: 20240428-043924"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-- 35.233.38.30<br>
-- 35.205.159.255<br>
-- 35.233.103.91<br>
-Finished at: 20240427-070001<br>
-20240427-080001<br>
-Finished at: 20240427-080001<br>
-20240427-090001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     70      0 --:--:-- --:--:-- --:--:--    70<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    118      0 --:--:-- --:--:-- --:--:--   118<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   113<br>
-35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 32321-32391<br>
-creationTimestamp: '2024-04-27T02:00:13.802-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '7715460171090165874'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
-- 35.233.38.30<br>
-- 35.205.159.255<br>
-- 35.233.103.91<br>
-Finished at: 20240427-090001<br>
-20240427-100001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     71      0 --:--:-- --:--:-- --:--:--    71100    13  100    13    0     0     71      0 --:--:-- --:--:-- --:--:--    71<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    111      0 --:--:-- --:--:-- --:--:--   111<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
-35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 32321-32391<br>
-creationTimestamp: '2024-04-27T03:00:12.011-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '7089636702523847235'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
-- 35.233.38.30<br>
-- 35.205.159.255<br>
-- 35.233.103.91<br>
-Finished at: 20240427-100001<br>
-20240427-110001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     76      0 --:--:-- --:--:-- --:--:--    76<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    109      0 --:--:-- --:--:-- --:--:--   109<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    103      0 --:--:-- --:--:-- --:--:--   103<br>
-35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 32321-32391<br>
-creationTimestamp: '2024-04-27T04:00:11.918-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '1576880297880937556'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
-- 35.233.38.30<br>
-- 35.205.159.255<br>
-- 35.233.103.91<br>
-Finished at: 20240427-110001<br>
-20240427-120001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     72      0 --:--:-- --:--:-- --:--:--    72<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     30      0 --:--:-- --:--:-- --:--:--    30<br>
-35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 32321-32391<br>
-creationTimestamp: '2024-04-27T05:00:14.955-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '69556242539959841'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
-- 35.233.38.30<br>
-- 35.205.159.255<br>
-- 35.233.103.91<br>
-Finished at: 20240427-120001<br>
-20240427-130001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     67      0 --:--:-- --:--:-- --:--:--    67<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    118      0 --:--:-- --:--:-- --:--:--   118<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    121      0 --:--:-- --:--:-- --:--:--   121<br>
-35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 32321-32391<br>
-creationTimestamp: '2024-04-27T06:00:20.513-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '5149424353707902987'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
-- 35.233.38.30<br>
-- 35.205.159.255<br>
-- 35.233.103.91<br>
-Finished at: 20240427-130001<br>
-20240427-140001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     69      0 --:--:-- --:--:-- --:--:--    69<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    103      0 --:--:-- --:--:-- --:--:--   103<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    114      0 --:--:-- --:--:-- --:--:--   114<br>
-35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 32321-32391<br>
-creationTimestamp: '2024-04-27T07:00:14.001-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '6394977767334656514'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
 - 35.233.38.30<br>
 - 35.205.159.255<br>
 - 35.233.103.91<br>
@@ -3047,17 +2799,259 @@ sourceRanges:<br>
 - 35.205.159.255<br>
 - 35.233.103.91<br>
 Finished at: 20240427-210001<br>
+20240427-220001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     76      0 --:--:-- --:--:-- --:--:--    76<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    110      0 --:--:-- --:--:-- --:--:--   109100    13  100    13    0     0    110      0 --:--:-- --:--:-- --:--:--   109<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     29      0 --:--:-- --:--:-- --:--:--    29<br>
+35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 32321-32391<br>
+creationTimestamp: '2024-04-27T15:00:16.037-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '622241614965820319'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.38.30<br>
+- 35.205.159.255<br>
+- 35.233.103.91<br>
+Finished at: 20240427-220001<br>
+20240427-230001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     71      0 --:--:-- --:--:-- --:--:--    71<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    107      0 --:--:-- --:--:-- --:--:--   107<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    119      0 --:--:-- --:--:-- --:--:--   120<br>
+35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 32321-32391<br>
+creationTimestamp: '2024-04-27T16:00:13.820-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '3022773161109241234'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.38.30<br>
+- 35.205.159.255<br>
+- 35.233.103.91<br>
+Finished at: 20240427-230001<br>
+20240428-000001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     72      0 --:--:-- --:--:-- --:--:--    72<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     29      0 --:--:-- --:--:-- --:--:--    29<br>
+35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 32321-32391<br>
+creationTimestamp: '2024-04-27T17:00:15.141-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '1829539862261280608'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.38.30<br>
+- 35.205.159.255<br>
+- 35.233.103.91<br>
+Finished at: 20240428-000001<br>
+20240428-010001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     75      0 --:--:-- --:--:-- --:--:--    75<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     19      0 --:--:-- --:--:-- --:--:--    19<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
+35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 32321-32391<br>
+creationTimestamp: '2024-04-27T18:00:13.441-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '2395975989097144690'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.38.30<br>
+- 35.205.159.255<br>
+- 35.233.103.91<br>
+Finished at: 20240428-010001<br>
+20240428-020001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     73      0 --:--:-- --:--:-- --:--:--    73<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    114      0 --:--:-- --:--:-- --:--:--   114<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    114      0 --:--:-- --:--:-- --:--:--   114<br>
+35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 32321-32391<br>
+creationTimestamp: '2024-04-27T19:00:12.840-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '3998395168741921603'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.38.30<br>
+- 35.205.159.255<br>
+- 35.233.103.91<br>
+Finished at: 20240428-020001<br>
+20240428-030001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     76      0 --:--:-- --:--:-- --:--:--    76<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   113<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
+35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 32321-32391<br>
+creationTimestamp: '2024-04-27T20:00:14.841-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '2190301240926143825'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.38.30<br>
+- 35.205.159.255<br>
+- 35.233.103.91<br>
+Finished at: 20240428-030001<br>
+20240428-040001<br>
+Finished at: 20240428-040001<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingReloadAllConfigs.sh.log>dsTradingReloadAllConfigs.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingReloadAllConfigs.sh.log>dsTradingReloadAllConfigs.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-}<br>
-"Finished at: 20240424-160004"<br>
-20240424-200001<br>
-Reload Configs...<br>
-"Finished at: 20240424-200001"<br>
-20240425-000001<br>
 Reload Configs...<br>
 "Finished at: 20240425-000001"<br>
 20240425-040001<br>
@@ -3552,55 +3546,20 @@ Reload Configs...<br>
 20240427-200001<br>
 Reload Configs...<br>
 "Finished at: 20240427-200001"<br>
+20240428-000001<br>
+Reload Configs...<br>
+"Finished at: 20240428-000001"<br>
+20240428-040001<br>
+Reload Configs...<br>
+"Finished at: 20240428-040001"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "spot",<br>
-  "amount_precision": 1e-08,<br>
-  "price_precision": 1e-05,<br>
-  "precision_mode": 4,<br>
-  "stoploss_current_dist": -0.5127299999999999,<br>
-  "stoploss_current_dist_pct": -99,<br>
-  "stoploss_current_dist_ratio": -0.99003649,<br>
-  "stoploss_entry_dist": -5.94929747,<br>
-  "stoploss_entry_dist_ratio": -0.99007526,<br>
-  "current_rate": 0.51789,<br>
-  "total_profit_abs": -0.02337884,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": -0.00390624<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/43/reload<br>
-{"trade_id":43,"pair":"ALGO/USDT","base_currency":"ALGO","quote_currency":"USDT","is_open":true,"is_short":false,"exchange":"kraken","amount":30.26639473,"amount_requested":30.26639474,"stake_amount":5.98124493,"max_stake_amount":5.98124493,"strategy":"AlwaysBuy","enter_tag":"entry_reason","timeframe":5,"fee_open":0.0040002,"fee_open_cost":0.02392617595515571,"fee_open_currency":"USDT","fee_close":0.0040002,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-27 13:03:44","open_timestamp":1714223024384,"open_fill_date":"2024-04-27 13:04:56","open_fill_timestamp":1714223096450,"open_rate":0.19762,"open_rate_requested":0.19763,"open_trade_value":6.0051711,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.00651276,"profit_pct":-0.65,"profit_abs":-0.03911021,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.00198,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.00198,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.1948,"max_rate":0.20096,"has_open_orders":false,"orders":[{"pair":"ALGO/USDT","order_id":"OLHSNX-22LMB-A4FT72","status":"closed","remaining":0.0,"amount":30.26639473,"safe_price":0.19762,"cost":5.9812449265426,"filled":30.26639473,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714223024360,"order_filled_timestamp":1714223096450,"ft_fee_base":null,"ft_order_tag":"entry_reason"}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":1e-8,"price_precision":0.00001,"precision_mode":4,"stoploss_current_dist":-0.19593,"stoploss_current_dist_pct":-99.0,"stoploss_current_dist_ratio":-0.98999545,"stoploss_entry_dist":-5.94548336,"stoploss_entry_dist_ratio":-0.99006061,"current_rate":0.19791,"total_profit_abs":-0.03911021,"total_profit_fiat":null,"total_profit_ratio":-0.00653881}{<br>
-  "trade_id": 43,<br>
-  "pair": "ALGO/USDT",<br>
-  "base_currency": "ALGO",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": true,<br>
-  "is_short": false,<br>
-  "exchange": "kraken",<br>
-  "amount": 30.26639473,<br>
-  "amount_requested": 30.26639474,<br>
-  "stake_amount": 5.98124493,<br>
-  "max_stake_amount": 5.98124493,<br>
-  "strategy": "AlwaysBuy",<br>
-  "enter_tag": "entry_reason",<br>
-  "timeframe": 5,<br>
-  "fee_open": 0.0040002,<br>
-  "fee_open_cost": 0.02392617595515571,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0040002,<br>
-  "fee_close_cost": null,<br>
-  "fee_close_currency": null,<br>
-  "open_date": "2024-04-27 13:03:44",<br>
-  "open_timestamp": 1714223024384,<br>
-  "open_fill_date": "2024-04-27 13:04:56",<br>
-  "open_fill_timestamp": 1714223096450,<br>
-  "open_rate": 0.19762,<br>
-  "open_rate_requested": 0.19763,<br>
-  "open_trade_value": 6.0051711,<br>
+  "open_rate": 63187.5,<br>
+  "open_rate_requested": 63187.5,<br>
+  "open_trade_value": 16.44517875,<br>
   "close_date": null,<br>
   "close_timestamp": null,<br>
   "close_rate": null,<br>
@@ -3608,41 +3567,41 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trad
   "close_profit": null,<br>
   "close_profit_pct": null,<br>
   "close_profit_abs": null,<br>
-  "profit_ratio": -0.00651276,<br>
-  "profit_pct": -0.65,<br>
-  "profit_abs": -0.03911021,<br>
+  "profit_ratio": 0.01148969,<br>
+  "profit_pct": 1.15,<br>
+  "profit_abs": 0.18895007,<br>
   "profit_fiat": null,<br>
   "realized_profit": 0,<br>
   "realized_profit_ratio": null,<br>
   "exit_reason": null,<br>
   "exit_order_status": null,<br>
-  "stop_loss_abs": 0.00198,<br>
+  "stop_loss_abs": 631.88,<br>
   "stop_loss_ratio": -0.99,<br>
   "stop_loss_pct": -99,<br>
   "stoploss_last_update": null,<br>
   "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.00198,<br>
+  "initial_stop_loss_abs": 631.88,<br>
   "initial_stop_loss_ratio": -0.99,<br>
   "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.1948,<br>
-  "max_rate": 0.20096,<br>
+  "min_rate": 62750,<br>
+  "max_rate": 64357.33,<br>
   "has_open_orders": false,<br>
   "orders": [<br>
     {<br>
-      "pair": "ALGO/USDT",<br>
-      "order_id": "OLHSNX-22LMB-A4FT72",<br>
+      "pair": "BTC/USDT",<br>
+      "order_id": "26857634910",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 30.26639473,<br>
-      "safe_price": 0.19762,<br>
-      "cost": 5.9812449265426,<br>
-      "filled": 30.26639473,<br>
+      "amount": 0.00027,<br>
+      "safe_price": 63187.5,<br>
+      "cost": 17.060625,<br>
+      "filled": 0.00027,<br>
       "ft_order_side": "buy",<br>
       "order_type": "market",<br>
       "is_open": false,<br>
-      "order_timestamp": 1714223024360,<br>
-      "order_filled_timestamp": 1714223096450,<br>
-      "ft_fee_base": null,<br>
+      "order_timestamp": 1714224995639,<br>
+      "order_filled_timestamp": 1714224995639,<br>
+      "ft_fee_base": 2.7e-07,<br>
       "ft_order_tag": "entry_reason"<br>
     }<br>
   ],<br>
@@ -3651,106 +3610,169 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trad
   "liquidation_price": null,<br>
   "funding_fees": 0,<br>
   "trading_mode": "spot",<br>
-  "amount_precision": 1e-08,<br>
-  "price_precision": 1e-05,<br>
-  "precision_mode": 4,<br>
-  "stoploss_current_dist": -0.19593,<br>
-  "stoploss_current_dist_pct": -99,<br>
-  "stoploss_current_dist_ratio": -0.98999545,<br>
-  "stoploss_entry_dist": -5.94548336,<br>
-  "stoploss_entry_dist_ratio": -0.99006061,<br>
-  "current_rate": 0.19791,<br>
-  "total_profit_abs": -0.03911021,<br>
+  "amount_precision": 5,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -63409.58,<br>
+  "stoploss_current_dist_pct": -99.01,<br>
+  "stoploss_current_dist_ratio": -0.99013327,<br>
+  "stoploss_entry_dist": -16.28105424,<br>
+  "stoploss_entry_dist_ratio": -0.9900199,<br>
+  "current_rate": 64041.46,<br>
+  "total_profit_abs": 0.18895007,<br>
   "total_profit_fiat": null,<br>
-  "total_profit_ratio": -0.00653881<br>
+  "total_profit_ratio": 0.0110863<br>
 }<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/44/reload<br>
-{"trade_id":44,"pair":"ETH/USDT","base_currency":"ETH","quote_currency":"USDT","is_open":true,"is_short":false,"exchange":"kraken","amount":8.68e-6,"amount_requested":0.00210869,"stake_amount":0.02724366,"max_stake_amount":6.61845066,"strategy":"AlwaysBuy","enter_tag":"entry_reason","timeframe":5,"fee_open":0.00399943,"fee_open_cost":0.000108959093516308,"fee_open_currency":"USDT","fee_close":0.00400022,"fee_close_cost":0.02637,"fee_close_currency":"USDT","open_date":"2024-04-27 13:35:26","open_timestamp":1714224926373,"open_fill_date":"2024-04-27 13:36:41","open_fill_timestamp":1714225001906,"open_rate":3138.67,"open_rate_requested":3138.68,"open_trade_value":0.02735261,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":-0.78,"close_profit_abs":-0.05180705,"profit_ratio":0.02471678,"profit_pct":2.47,"profit_abs":0.00067607,"profit_fiat":null,"realized_profit":-0.05180705,"realized_profit_ratio":-0.0077964888446970795,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":31.39,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":31.39,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":3138.67,"max_rate":3280.81,"has_open_orders":false,"orders":[{"pair":"ETH/USDT","order_id":"OWDD5Z-AVCGX-JISUH6","status":"closed","remaining":0.0,"amount":0.00210868,"safe_price":3138.67,"cost":6.6184506556,"filled":0.00210868,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714224926350,"order_filled_timestamp":1714225001906,"ft_fee_base":null,"ft_order_tag":"entry_reason"},{"pair":"ETH/USDT","order_id":"OKIWG6-5FZZM-V5YWUT","status":"closed","remaining":0.0,"amount":0.0021,"safe_price":3139.11,"cost":6.592131,"filled":0.0021,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714224910809,"order_filled_timestamp":1714224910000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":1e-8,"price_precision":0.01,"precision_mode":4,"stoploss_current_dist":-3210.69,"stoploss_current_dist_pct":-99.03,"stoploss_current_dist_ratio":-0.99031794,"stoploss_entry_dist":-0.02708124,"stoploss_entry_dist_ratio":-0.99007863,"current_rate":3242.08,"total_profit_abs":-0.05113098,"total_profit_fiat":null,"total_profit_ratio":-0.00772552}{<br>
-  "trade_id": 44,<br>
-  "pair": "ETH/USDT",<br>
-  "base_currency": "ETH",<br>
+Reload Trades...<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/trades<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/2/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/3/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/4/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/5/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/6/reload<br>
+{"trade_id":6,"pair":"ENA/USDT","base_currency":"ENA","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":42.4,"amount_requested":46.12546125,"stake_amount":49.94408592,"max_stake_amount":99.93368592,"strategy":"Anomaly","enter_tag":"anom_entry ","timeframe":5,"fee_open":0.001,"fee_open_cost":0.04994408592,"fee_open_currency":"ENA","fee_close":0.001,"fee_close_cost":0.05533007,"fee_close_currency":"USDT","open_date":"2024-04-14 13:45:44","open_timestamp":1713102344537,"open_fill_date":"2024-04-14 13:45:44","open_fill_timestamp":1713102344416,"open_rate":1.179,"open_rate_requested":1.084,"open_trade_value":49.98981988,"close_date":"2024-04-15 13:34:50","close_timestamp":1713188090000,"close_rate":1.201,"close_rate_requested":1.2,"close_profit":0.14787796451108887,"close_profit_pct":14.79,"close_profit_abs":4.020828,"profit_ratio":0.14787796451108887,"profit_pct":14.79,"profit_abs":4.020828,"profit_fiat":null,"realized_profit":14.792768050000001,"realized_profit_ratio":0.14787796451108887,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":0.011,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.011,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":1.053,"max_rate":1.199,"has_open_orders":false,"orders":[{"pair":"ENA/USDT","order_id":"73493109","status":"closed","remaining":0.0,"amount":46.12,"safe_price":1.084,"cost":49.99408,"filled":46.12,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713102344416,"order_filled_timestamp":1713102344416,"ft_fee_base":0.04612,"ft_order_tag":"anom_entry "},{"pair":"ENA/USDT","order_id":"75720887","status":"closed","remaining":0.0,"amount":46.07,"safe_price":1.201,"cost":55.33007,"filled":46.07,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713134234222,"order_filled_timestamp":1713134234222,"ft_fee_base":null,"ft_order_tag":"force_exit"},{"pair":"ENA/USDT","order_id":"75832553","status":"closed","remaining":0.0,"amount":44.0,"safe_price":1.211,"cost":53.284,"filled":44.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713135626403,"order_filled_timestamp":1713135626000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"ENA/USDT","order_id":"76119932","status":"closed","remaining":0.0,"amount":42.4,"safe_price":1.179,"cost":49.9896,"filled":42.4,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713140756800,"order_filled_timestamp":1713140756000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"ENA/USDT","order_id":"77976169","status":"closed","remaining":0.0,"amount":42.0,"safe_price":1.182,"cost":49.644,"filled":42.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713188090965,"order_filled_timestamp":1713188090000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":2.0,"price_precision":3.0,"precision_mode":2,"stoploss_current_dist":-1.1900000000000002,"stoploss_current_dist_pct":-99.08,"stoploss_current_dist_ratio":-0.99084097,"stoploss_entry_dist":-49.52388628,"stoploss_entry_dist_ratio":-0.99067943,"current_rate":1.201,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
+  "trade_id": 6,<br>
+  "pair": "ENA/USDT",<br>
+  "base_currency": "ENA",<br>
   "quote_currency": "USDT",<br>
-  "is_open": true,<br>
+  "is_open": false,<br>
   "is_short": false,<br>
-  "exchange": "kraken",<br>
-  "amount": 8.68e-06,<br>
-  "amount_requested": 0.00210869,<br>
-  "stake_amount": 0.02724366,<br>
-  "max_stake_amount": 6.61845066,<br>
-  "strategy": "AlwaysBuy",<br>
-  "enter_tag": "entry_reason",<br>
+  "exchange": "binance",<br>
+  "amount": 42.4,<br>
+  "amount_requested": 46.12546125,<br>
+  "stake_amount": 49.94408592,<br>
+  "max_stake_amount": 99.93368592,<br>
+  "strategy": "Anomaly",<br>
+  "enter_tag": "anom_entry ",<br>
   "timeframe": 5,<br>
-  "fee_open": 0.00399943,<br>
-  "fee_open_cost": 0.000108959093516308,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.00400022,<br>
-  "fee_close_cost": 0.02637,<br>
+  "fee_open": 0.001,<br>
+  "fee_open_cost": 0.04994408592,<br>
+  "fee_open_currency": "ENA",<br>
+  "fee_close": 0.001,<br>
+  "fee_close_cost": 0.05533007,<br>
   "fee_close_currency": "USDT",<br>
-  "open_date": "2024-04-27 13:35:26",<br>
-  "open_timestamp": 1714224926373,<br>
-  "open_fill_date": "2024-04-27 13:36:41",<br>
-  "open_fill_timestamp": 1714225001906,<br>
-  "open_rate": 3138.67,<br>
-  "open_rate_requested": 3138.68,<br>
-  "open_trade_value": 0.02735261,<br>
-  "close_date": null,<br>
-  "close_timestamp": null,<br>
-  "close_rate": null,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": null,<br>
-  "close_profit_pct": -0.78,<br>
-  "close_profit_abs": -0.05180705,<br>
-  "profit_ratio": 0.02430273,<br>
-  "profit_pct": 2.43,<br>
-  "profit_abs": 0.00066474,<br>
+  "open_date": "2024-04-14 13:45:44",<br>
+  "open_timestamp": 1713102344537,<br>
+  "open_fill_date": "2024-04-14 13:45:44",<br>
+  "open_fill_timestamp": 1713102344416,<br>
+  "open_rate": 1.179,<br>
+  "open_rate_requested": 1.084,<br>
+  "open_trade_value": 49.98981988,<br>
+  "close_date": "2024-04-15 13:34:50",<br>
+  "close_timestamp": 1713188090000,<br>
+  "close_rate": 1.201,<br>
+  "close_rate_requested": 1.2,<br>
+  "close_profit": 0.14787796451108887,<br>
+  "close_profit_pct": 14.79,<br>
+  "close_profit_abs": 4.020828,<br>
+  "profit_ratio": 0.14787796451108887,<br>
+  "profit_pct": 14.79,<br>
+  "profit_abs": 4.020828,<br>
   "profit_fiat": null,<br>
-  "realized_profit": -0.05180705,<br>
-  "realized_profit_ratio": -0.0077964888446970795,<br>
-  "exit_reason": null,<br>
-  "exit_order_status": null,<br>
-  "stop_loss_abs": 31.39,<br>
+  "realized_profit": 14.792768050000001,<br>
+  "realized_profit_ratio": 0.14787796451108887,<br>
+  "exit_reason": "sold_on_exchange",<br>
+  "exit_order_status": "closed",<br>
+  "stop_loss_abs": 0.011,<br>
   "stop_loss_ratio": -0.99,<br>
   "stop_loss_pct": -99,<br>
   "stoploss_last_update": null,<br>
   "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 31.39,<br>
+  "initial_stop_loss_abs": 0.011,<br>
   "initial_stop_loss_ratio": -0.99,<br>
   "initial_stop_loss_pct": -99,<br>
-  "min_rate": 3138.67,<br>
-  "max_rate": 3280.81,<br>
+  "min_rate": 1.053,<br>
+  "max_rate": 1.199,<br>
   "has_open_orders": false,<br>
   "orders": [<br>
     {<br>
-      "pair": "ETH/USDT",<br>
-      "order_id": "OWDD5Z-AVCGX-JISUH6",<br>
+      "pair": "ENA/USDT",<br>
+      "order_id": "73493109",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 0.00210868,<br>
-      "safe_price": 3138.67,<br>
-      "cost": 6.6184506556,<br>
-      "filled": 0.00210868,<br>
+      "amount": 46.12,<br>
+      "safe_price": 1.084,<br>
+      "cost": 49.99408,<br>
+      "filled": 46.12,<br>
       "ft_order_side": "buy",<br>
       "order_type": "market",<br>
       "is_open": false,<br>
-      "order_timestamp": 1714224926350,<br>
-      "order_filled_timestamp": 1714225001906,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "entry_reason"<br>
+      "order_timestamp": 1713102344416,<br>
+      "order_filled_timestamp": 1713102344416,<br>
+      "ft_fee_base": 0.04612,<br>
+      "ft_order_tag": "anom_entry "<br>
     },<br>
     {<br>
-      "pair": "ETH/USDT",<br>
-      "order_id": "OKIWG6-5FZZM-V5YWUT",<br>
+      "pair": "ENA/USDT",<br>
+      "order_id": "75720887",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 0.0021,<br>
-      "safe_price": 3139.11,<br>
-      "cost": 6.592131,<br>
-      "filled": 0.0021,<br>
+      "amount": 46.07,<br>
+      "safe_price": 1.201,<br>
+      "cost": 55.33007,<br>
+      "filled": 46.07,<br>
       "ft_order_side": "sell",<br>
       "order_type": "market",<br>
       "is_open": false,<br>
-      "order_timestamp": 1714224910809,<br>
-      "order_filled_timestamp": 1714224910000,<br>
+      "order_timestamp": 1713134234222,<br>
+      "order_filled_timestamp": 1713134234222,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "force_exit"<br>
+    },<br>
+    {<br>
+      "pair": "ENA/USDT",<br>
+      "order_id": "75832553",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 44,<br>
+      "safe_price": 1.211,<br>
+      "cost": 53.284,<br>
+      "filled": 44,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713135626403,<br>
+      "order_filled_timestamp": 1713135626000,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": null<br>
+    },<br>
+    {<br>
+      "pair": "ENA/USDT",<br>
+      "order_id": "76119932",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 42.4,<br>
+      "safe_price": 1.179,<br>
+      "cost": 49.9896,<br>
+      "filled": 42.4,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713140756800,<br>
+      "order_filled_timestamp": 1713140756000,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": null<br>
+    },<br>
+    {<br>
+      "pair": "ENA/USDT",<br>
+      "order_id": "77976169",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 42,<br>
+      "safe_price": 1.182,<br>
+      "cost": 49.644,<br>
+      "filled": 42,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713188090965,<br>
+      "order_filled_timestamp": 1713188090000,<br>
       "ft_fee_base": null,<br>
       "ft_order_tag": null<br>
     }<br>
@@ -3760,91 +3782,252 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trad
   "liquidation_price": null,<br>
   "funding_fees": 0,<br>
   "trading_mode": "spot",<br>
-  "amount_precision": 1e-08,<br>
-  "price_precision": 0.01,<br>
-  "precision_mode": 4,<br>
-  "stoploss_current_dist": -3209.38,<br>
-  "stoploss_current_dist_pct": -99.03,<br>
-  "stoploss_current_dist_ratio": -0.99031403,<br>
-  "stoploss_entry_dist": -0.02708124,<br>
-  "stoploss_entry_dist_ratio": -0.99007863,<br>
-  "current_rate": 3240.77,<br>
-  "total_profit_abs": -0.05114231,<br>
+  "amount_precision": 2,<br>
+  "price_precision": 3,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -1.1900000000000002,<br>
+  "stoploss_current_dist_pct": -99.08,<br>
+  "stoploss_current_dist_ratio": -0.99084097,<br>
+  "stoploss_entry_dist": -49.52388628,<br>
+  "stoploss_entry_dist_ratio": -0.99067943,<br>
+  "current_rate": 1.201,<br>
+  "total_profit_abs": 0,<br>
   "total_profit_fiat": null,<br>
-  "total_profit_ratio": -0.00772723<br>
+  "total_profit_ratio": null<br>
 }<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/45/reload<br>
-{"trade_id":45,"pair":"SOL/USDT","base_currency":"SOL","quote_currency":"USDT","is_open":true,"is_short":false,"exchange":"kraken","amount":0.0525,"amount_requested":0.0525,"stake_amount":7.278075,"max_stake_amount":7.278075,"strategy":"AlwaysBuy","enter_tag":"entry_reason","timeframe":5,"fee_open":0.00399996,"fee_open_cost":0.029112008877000002,"fee_open_currency":"USDT","fee_close":0.00399996,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-27 13:36:05","open_timestamp":1714224965443,"open_fill_date":"2024-04-27 13:37:08","open_fill_timestamp":1714225028909,"open_rate":138.63,"open_rate_requested":138.63,"open_trade_value":7.30718701,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":0.00519893,"profit_pct":0.52,"profit_abs":0.03798959,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":1.39,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":1.39,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":137.34,"max_rate":142.95,"has_open_orders":false,"orders":[{"pair":"SOL/USDT","order_id":"OTYKCF-DL67E-W7V5ET","status":"closed","remaining":0.0,"amount":0.0525,"safe_price":138.63,"cost":7.278075,"filled":0.0525,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714224965420,"order_filled_timestamp":1714225028909,"ft_fee_base":null,"ft_order_tag":"entry_reason"}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":1e-8,"price_precision":0.01,"precision_mode":4,"stoploss_current_dist":-139.08,"stoploss_current_dist_pct":-99.01,"stoploss_current_dist_ratio":-0.99010465,"stoploss_entry_dist":-7.23450391,"stoploss_entry_dist_ratio":-0.9900532,"current_rate":140.47,"total_profit_abs":0.03798959,"total_profit_fiat":null,"total_profit_ratio":0.00521973}{<br>
-  "trade_id": 45,<br>
-  "pair": "SOL/USDT",<br>
-  "base_currency": "SOL",<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/8/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/9/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/28/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/29/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/30/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/31/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/32/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/33/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/34/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/35/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/36/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/37/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/38/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/39/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/40/reload<br>
+Internal Server ErrorStarted  at 20240428-044001<br>
+20240428-044001<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+parse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/41/reload<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
+"Finished at 20240428-044005"<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/42/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/43/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/44/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/45/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/46/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/47/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/48/reload<br>
+{"trade_id":48,"pair":"SHIB/USDT","base_currency":"SHIB","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":337234.0,"amount_requested":341241.94611657,"stake_amount":8.69726486,"max_stake_amount":17.38184831,"strategy":"AlwaysBuy","enter_tag":"entry_reason","timeframe":5,"fee_open":0.001,"fee_open_cost":0.008697264860000001,"fee_open_currency":"SHIB","fee_close":0.001,"fee_close_cost":0.00875624,"fee_close_currency":"USDT","open_date":"2024-04-26 13:58:47","open_timestamp":1714139927483,"open_fill_date":"2024-04-26 13:58:47","open_fill_timestamp":1714139927362,"open_rate":0.00002579,"open_rate_requested":0.00002545,"open_trade_value":8.70596212,"close_date":"2024-04-27 13:34:14","close_timestamp":1714224854000,"close_rate":0.00002566,"close_rate_requested":0.00002567,"close_profit":-0.16467879290805976,"close_profit_pct":-16.47,"close_profit_abs":-2.919504,"profit_ratio":-0.16467879290805976,"profit_pct":-16.47,"profit_abs":-2.919504,"profit_fiat":null,"realized_profit":-2.86528422,"realized_profit_ratio":-0.16467879290805976,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":2.6e-7,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":2.6e-7,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.00002529,"max_rate":0.00002564,"has_open_orders":false,"orders":[{"pair":"SHIB/USDT","order_id":"2530761456","status":"closed","remaining":0.0,"amount":341241.0,"safe_price":0.00002545,"cost":8.68458345,"filled":341241.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714139927362,"order_filled_timestamp":1714139927362,"ft_fee_base":null,"ft_order_tag":"entry_reason"},{"pair":"SHIB/USDT","order_id":"2530841288","status":"closed","remaining":0.0,"amount":341241.0,"safe_price":0.00002566,"cost":8.75624406,"filled":341241.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714140837851,"order_filled_timestamp":1714140837851,"ft_fee_base":null,"ft_order_tag":"force_exit"},{"pair":"SHIB/USDT","order_id":"2530880170","status":"closed","remaining":0.0,"amount":337234.0,"safe_price":0.00002579,"cost":8.69726486,"filled":337234.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714141114960,"order_filled_timestamp":1714141114000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"SHIB/USDT","order_id":"2534130459","status":"closed","remaining":0.0,"amount":2100000.0,"safe_price":0.00002445,"cost":51.345,"filled":2100000.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714224854504,"order_filled_timestamp":1714224854000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":0.0,"price_precision":8.0,"precision_mode":2,"stoploss_current_dist":-0.0000254,"stoploss_current_dist_pct":-98.99,"stoploss_current_dist_ratio":-0.9898675,"stoploss_entry_dist":-8.61836897,"stoploss_entry_dist_ratio":-0.98993872,"current_rate":0.00002566,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
+  "trade_id": 48,<br>
+  "pair": "SHIB/USDT",<br>
+  "base_currency": "SHIB",<br>
   "quote_currency": "USDT",<br>
-  "is_open": true,<br>
+  "is_open": false,<br>
   "is_short": false,<br>
-  "exchange": "kraken",<br>
-  "amount": 0.0525,<br>
-  "amount_requested": 0.0525,<br>
-  "stake_amount": 7.278075,<br>
-  "max_stake_amount": 7.278075,<br>
+  "exchange": "binance",<br>
+  "amount": 337234,<br>
+  "amount_requested": 341241.94611657,<br>
+  "stake_amount": 8.69726486,<br>
+  "max_stake_amount": 17.38184831,<br>
   "strategy": "AlwaysBuy",<br>
   "enter_tag": "entry_reason",<br>
   "timeframe": 5,<br>
-  "fee_open": 0.00399996,<br>
-  "fee_open_cost": 0.029112008877000002,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.00399996,<br>
-  "fee_close_cost": null,<br>
-  "fee_close_currency": null,<br>
-  "open_date": "2024-04-27 13:36:05",<br>
-  "open_timestamp": 1714224965443,<br>
-  "open_fill_date": "2024-04-27 13:37:08",<br>
-  "open_fill_timestamp": 1714225028909,<br>
-  "open_rate": 138.63,<br>
-  "open_rate_requested": 138.63,<br>
-  "open_trade_value": 7.30718701,<br>
-  "close_date": null,<br>
-  "close_timestamp": null,<br>
-  "close_rate": null,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": null,<br>
-  "close_profit_pct": null,<br>
-  "close_profit_abs": null,<br>
-  "profit_ratio": 0.00505582,<br>
-  "profit_pct": 0.51,<br>
-  "profit_abs": 0.03694379,<br>
+  "fee_open": 0.001,<br>
+  "fee_open_cost": 0.008697264860000001,<br>
+  "fee_open_currency": "SHIB",<br>
+  "fee_close": 0.001,<br>
+  "fee_close_cost": 0.00875624,<br>
+  "fee_close_currency": "USDT",<br>
+  "open_date": "2024-04-26 13:58:47",<br>
+  "open_timestamp": 1714139927483,<br>
+  "open_fill_date": "2024-04-26 13:58:47",<br>
+  "open_fill_timestamp": 1714139927362,<br>
+  "open_rate": 2.579e-05,<br>
+  "open_rate_requested": 2.545e-05,<br>
+  "open_trade_value": 8.70596212,<br>
+  "close_date": "2024-04-27 13:34:14",<br>
+  "close_timestamp": 1714224854000,<br>
+  "close_rate": 2.566e-05,<br>
+  "close_rate_requested": 2.567e-05,<br>
+  "close_profit": -0.16467879290805976,<br>
+  "close_profit_pct": -16.47,<br>
+  "close_profit_abs": -2.919504,<br>
+  "profit_ratio": -0.16467879290805976,<br>
+  "profit_pct": -16.47,<br>
+  "profit_abs": -2.919504,<br>
   "profit_fiat": null,<br>
-  "realized_profit": 0,<br>
-  "realized_profit_ratio": null,<br>
-  "exit_reason": null,<br>
-  "exit_order_status": null,<br>
-  "stop_loss_abs": 1.39,<br>
+  "realized_profit": -2.86528422,<br>
+  "realized_profit_ratio": -0.16467879290805976,<br>
+  "exit_reason": "sold_on_exchange",<br>
+  "exit_order_status": "closed",<br>
+  "stop_loss_abs": 2.6e-07,<br>
   "stop_loss_ratio": -0.99,<br>
   "stop_loss_pct": -99,<br>
   "stoploss_last_update": null,<br>
   "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 1.39,<br>
+  "initial_stop_loss_abs": 2.6e-07,<br>
   "initial_stop_loss_ratio": -0.99,<br>
   "initial_stop_loss_pct": -99,<br>
-  "min_rate": 137.34,<br>
-  "max_rate": 142.95,<br>
+  "min_rate": 2.529e-05,<br>
+  "max_rate": 2.564e-05,<br>
   "has_open_orders": false,<br>
   "orders": [<br>
     {<br>
-      "pair": "SOL/USDT",<br>
-      "order_id": "OTYKCF-DL67E-W7V5ET",<br>
+      "pair": "SHIB/USDT",<br>
+      "order_id": "2530761456",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 0.0525,<br>
-      "safe_price": 138.63,<br>
-      "cost": 7.278075,<br>
-      "filled": 0.0525,<br>
+      "amount": 341241,<br>
+      "safe_price": 2.545e-05,<br>
+      "cost": 8.68458345,<br>
+      "filled": 341241,<br>
       "ft_order_side": "buy",<br>
       "order_type": "market",<br>
       "is_open": false,<br>
-      "order_timestamp": 1714224965420,<br>
-      "order_filled_timestamp": 1714225028909,<br>
+      "order_timestamp": 1714139927362,<br>
+      "order_filled_timestamp": 1714139927362,<br>
       "ft_fee_base": null,<br>
       "ft_order_tag": "entry_reason"<br>
+    },<br>
+    {<br>
+      "pair": "SHIB/USDT",<br>
+      "order_id": "2530841288",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 341241,<br>
+      "safe_price": 2.566e-05,<br>
+      "cost": 8.75624406,<br>
+      "filled": 341241,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714140837851,<br>
+      "order_filled_timestamp": 1714140837851,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "force_exit"<br>
+    },<br>
+    {<br>
+      "pair": "SHIB/USDT",<br>
+      "order_id": "2530880170",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 337234,<br>
+      "safe_price": 2.579e-05,<br>
+      "cost": 8.69726486,<br>
+      "filled": 337234,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714141114960,<br>
+      "order_filled_timestamp": 1714141114000,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": null<br>
+    },<br>
+    {<br>
+      "pair": "SHIB/USDT",<br>
+      "order_id": "2534130459",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 2100000,<br>
+      "safe_price": 2.445e-05,<br>
+      "cost": 51.345,<br>
+      "filled": 2100000,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714224854504,<br>
+      "order_filled_timestamp": 1714224854000,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": null<br>
     }<br>
   ],<br>
   "leverage": 1,<br>
@@ -3852,211 +4035,28 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trad
   "liquidation_price": null,<br>
   "funding_fees": 0,<br>
   "trading_mode": "spot",<br>
-  "amount_precision": 1e-08,<br>
-  "price_precision": 0.01,<br>
-  "precision_mode": 4,<br>
-  "stoploss_current_dist": -139.06,<br>
-  "stoploss_current_dist_pct": -99.01,<br>
-  "stoploss_current_dist_ratio": -0.99010324,<br>
-  "stoploss_entry_dist": -7.23450391,<br>
-  "stoploss_entry_dist_ratio": -0.9900532,<br>
-  "current_rate": 140.45,<br>
-  "total_profit_abs": 0.03694379,<br>
+  "amount_precision": 0,<br>
+  "price_precision": 8,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -2.54e-05,<br>
+  "stoploss_current_dist_pct": -98.99,<br>
+  "stoploss_current_dist_ratio": -0.9898675,<br>
+  "stoploss_entry_dist": -8.61836897,<br>
+  "stoploss_entry_dist_ratio": -0.98993872,<br>
+  "current_rate": 2.566e-05,<br>
+  "total_profit_abs": 0,<br>
   "total_profit_fiat": null,<br>
-  "total_profit_ratio": 0.00507604<br>
+  "total_profit_ratio": null<br>
 }<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/46/reload<br>
-{"trade_id":46,"pair":"BTC/USDT","base_currency":"BTC","quote_currency":"USDT","is_open":true,"is_short":false,"exchange":"kraken","amount":0.000105,"amount_requested":0.000105,"stake_amount":6.6350865,"max_stake_amount":6.6350865,"strategy":"AlwaysBuy","enter_tag":"entry_reason","timeframe":5,"fee_open":0.00399995,"fee_open_cost":0.026540014245675002,"fee_open_currency":"USDT","fee_close":0.00399995,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-27 13:38:02","open_timestamp":1714225082984,"open_fill_date":"2024-04-27 13:38:29","open_fill_timestamp":1714225109933,"open_rate":63191.3,"open_rate_requested":63191.3,"open_trade_value":6.66162651,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.00784872,"profit_pct":-0.78,"profit_abs":-0.05228522,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":632.0,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":632.0,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":62781.0,"max_rate":63574.9,"has_open_orders":false,"orders":[{"pair":"BTC/USDT","order_id":"OR357U-L2J7K-QQGE6M","status":"closed","remaining":0.0,"amount":0.000105,"safe_price":63191.3,"cost":6.6350865,"filled":0.000105,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714225082961,"order_filled_timestamp":1714225109933,"ft_fee_base":null,"ft_order_tag":"entry_reason"}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":1e-8,"price_precision":0.1,"precision_mode":4,"stoploss_current_dist":-62566.9,"stoploss_current_dist_pct":-99.0,"stoploss_current_dist_ratio":-0.98999983,"stoploss_entry_dist":-6.59553195,"stoploss_entry_dist_ratio":-0.99007831,"current_rate":63198.9,"total_profit_abs":-0.05228522,"total_profit_fiat":null,"total_profit_ratio":-0.00788011}{<br>
-  "trade_id": 46,<br>
-  "pair": "BTC/USDT",<br>
-  "base_currency": "BTC",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": true,<br>
-  "is_short": false,<br>
-  "exchange": "kraken",<br>
-  "amount": 0.000105,<br>
-  "amount_requested": 0.000105,<br>
-  "stake_amount": 6.6350865,<br>
-  "max_stake_amount": 6.6350865,<br>
-  "strategy": "AlwaysBuy",<br>
-  "enter_tag": "entry_reason",<br>
-  "timeframe": 5,<br>
-  "fee_open": 0.00399995,<br>
-  "fee_open_cost": 0.026540014245675002,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.00399995,<br>
-  "fee_close_cost": null,<br>
-  "fee_close_currency": null,<br>
-  "open_date": "2024-04-27 13:38:02",<br>
-  "open_timestamp": 1714225082984,<br>
-  "open_fill_date": "2024-04-27 13:38:29",<br>
-  "open_fill_timestamp": 1714225109933,<br>
-  "open_rate": 63191.3,<br>
-  "open_rate_requested": 63191.3,<br>
-  "open_trade_value": 6.66162651,<br>
-  "close_date": null,<br>
-  "close_timestamp": null,<br>
-  "close_rate": null,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": null,<br>
-  "close_profit_pct": null,<br>
-  "close_profit_abs": null,<br>
-  "profit_ratio": -0.00784872,<br>
-  "profit_pct": -0.78,<br>
-  "profit_abs": -0.05228522,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 0,<br>
-  "realized_profit_ratio": null,<br>
-  "exit_reason": null,<br>
-  "exit_order_status": null,<br>
-  "stop_loss_abs": 632,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 632,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 62781,<br>
-  "max_rate": 63574.9,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "BTC/USDT",<br>
-      "order_id": "OR357U-L2J7K-QQGE6M",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 0.000105,<br>
-      "safe_price": 63191.3,<br>
-      "cost": 6.6350865,<br>
-      "filled": 0.000105,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714225082961,<br>
-      "order_filled_timestamp": 1714225109933,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "entry_reason"<br>
-    }<br>
-  ],<br>
-  "leverage": 1,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": null,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "spot",<br>
-  "amount_precision": 1e-08,<br>
-  "price_precision": 0.1,<br>
-  "precision_mode": 4,<br>
-  "stoploss_current_dist": -62566.9,<br>
-  "stoploss_current_dist_pct": -99,<br>
-  "stoploss_current_dist_ratio": -0.98999983,<br>
-  "stoploss_entry_dist": -6.59553195,<br>
-  "stoploss_entry_dist_ratio": -0.99007831,<br>
-  "current_rate": 63198.9,<br>
-  "total_profit_abs": -0.05228522,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": -0.00788011<br>
-}<br>
-Reload Trades...<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/trades<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/1/reload<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/49/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/3/reload<br>
-Started  at 20240427-214001<br>
-20240427-214001<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-msantana 3561798 3561794  0 21:40 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-short-strategy<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana 3527043 2615948  0 21:31 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-"Finished at 20240427-214005"<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/50/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/14/reload<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/51/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/15/reload<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/52/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/16/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/17/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/18/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/19/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/20/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/21/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/22/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/23/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/24/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/25/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32332/api/v1/trades/27/reload<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/53/reload<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -4177,8 +4177,8 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/
   "status": "already running"<br>
 }<br>
 --------- Restarted 21 bots....<br>
-"Finished at: 20240427-214512"<br>
-20240427-215001<br>
+"Finished at: 20240428-043512"<br>
+20240428-044001<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
@@ -4369,8 +4369,8 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/
   "status": "already running"<br>
 }<br>
 --------- Restarted 21 bots....<br>
-"Finished at: 20240427-215012"<br>
-20240427-215501<br>
+"Finished at: 20240428-044013"<br>
+20240428-044501<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
@@ -4561,44 +4561,12 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/
   "status": "already running"<br>
 }<br>
 --------- Restarted 21 bots....<br>
-"Finished at: 20240427-215513"<br>
+"Finished at: 20240428-044511"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-"Finished at 20240422-100046"<br><br><br>
-20240422-150001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-22-04-2024-15-00...<br><br><br>
-.........................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240422-150045"<br><br><br>
-20240422-200001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-22-04-2024-20-00...<br><br><br>
-...........................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240422-200045"<br><br><br>
-20240423-000001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-00-00...<br><br><br>
-........................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-000047"<br><br><br>
-20240423-050001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-05-00...<br><br><br>
-.......................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-050044"<br><br><br>
-20240423-100001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-10-00...<br><br><br>
-.......................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-100048"<br><br><br>
-20240423-150001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-15-00...<br><br><br>
-.....................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-150044"<br><br><br>
-20240423-200001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-20-00...<br><br><br>
-..................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240423-200040"<br><br><br>
-20240424-000001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-24-04-2024-00-00...<br><br><br>
-.....................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240424-000045"<br><br><br>
 20240424-050001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-24-04-2024-05-00...<br><br><br>
@@ -4648,8 +4616,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-05-00...<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br><br>
 ..........................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240426-100047"<br><br><br>
-20240426-150001<br>100  418k  100  418k    0     0   358k      0  0:00:01  0:00:01 --:--:--  357k<br><br>
-<br><br>
+20240426-150001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br><br>
 ..........................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240426-150045"<br><br><br>
@@ -4675,13 +4642,50 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br><br>
 "Finished at 20240427-150044"<br><br><br>
 20240427-200001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br><br>
+................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-050044"<br><br><br>
+20240426-100001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br><br>
+..........................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-100047"<br><br><br>
+20240426-150001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br><br>
+..........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-150045"<br><br><br>
+20240426-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br><br>
+.........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-200045"<br><br><br>
+20240427-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-00-00...<br><br><br>
+......................................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-000049"<br><br><br>
+20240427-050001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br><br>
+.100  417k  100  417k    0     0   351k      0  0:00:01  0:00:01 --:--:--  351k<br><br>
+..............................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-050046"<br><br><br>
+20240427-100001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br><br>
+......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-100044"<br><br><br>
+20240427-150001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br><br>
+........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-150044"<br><br><br>
+20240427-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br><br>
 .......................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240427-200044"<br><br><br>
+20240428-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br><br><br>
+..................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240428-000044"<br><br><br>
 </body></html><br><br>
--rw------- 1 msantana msantana 0 Apr 27 21:43 /tmp/tmp.6UCDU0UCSg<br><br>
+-rw------- 1 msantana msantana 0 Apr 28 04:44 /tmp/tmp.kxatANKhmb<br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br>
-"Finished at: 20240427-214306"<br><br>
-20240427-214401<br><br>
+"Finished at: 20240428-044406"<br><br>
+20240428-044501<br><br>
 Running already? RUNNING=<br><br>
 <br><br><hr>##++<br><br>
 + + + + + /tmp/<b id=<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a>><b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> + + + + <br><br>
@@ -5019,15 +5023,15 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-00-00...<br><br>
 20240426-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-05-00...<br><br>
 ....................................................................................................................................................................................................done.<br><br>
-"F100  383k  100  383k    0     0   321k      0  0:00:01  0:00:01 --:--:--  321k<br>
-inished at 20240426-050044"<br><br>
+"Finished at 20240426-050044"<br><br>
 20240426-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br>
 ..........................................................................................................................................................................................done.<br><br>
 "Finished at 20240426-100047"<br><br>
 20240426-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br>
-..........................................................................................................................................................................................................done.<br><br>
+.....................................................................................................................................100  382k  100  382k    0     0   294k      0  0:00:01  0:00:01 --:--:--  294k<br>
+.....................................................................done.<br><br>
 "Finished at 20240426-150045"<br><br>
 20240426-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br>
@@ -5039,7 +5043,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-00-00...<br><br>
 "Finished at 20240427-000049"<br><br>
 20240427-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br>
-...........................................................................<br><br>
+...............................................................................................................................................................................................................done.<br><br>
 "Finished at 20240427-050046"<br><br>
 20240427-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br>
@@ -5047,25 +5051,21 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br>
 "Finished at 20240427-100044"<br><br>
 20240427-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br>
-.................................................................................................................................done.<br><br>
-"Finished at 20240427-050046"<br><br>
-20240427-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br>
-......................................................................................................................................................................................................done.<br><br>
-"Finished at 20240427-100044"<br><br>
-20240427-150001<br><br>
-Creating snapshot(s) snapshot-wirsindd(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br>
 ........................................................................................................................................................................................................done.<br><br>
 "Finished at 20240427-150044"<br><br>
 20240427-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br>
 .......................................................................................................................................................................................................done.<br><br>
 "Finished at 20240427-200044"<br><br>
+20240428-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br><br>
+..................................................................................................................................................................................................done.<br><br>
+"Finished at 20240428-000044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 27 21:58 /tmp/tmp.ISjlYpN5Cr<br>
+-rw------- 1 msantana msantana 0 Apr 28 04:45 /tmp/tmp.fdhpx42fW2<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240427-215806"<br>
-20240427-215901<br>
+"Finished at: 20240428-044505"<br>
+20240428-044601<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -5436,5 +5436,9 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br>
 .......................................................................................................................................................................................................done.<br>
 "Finished at 20240427-200044"<br>
+20240428-000001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br>
+..................................................................................................................................................................................................done.<br>
+"Finished at 20240428-000044"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Apr 27 21:59 /tmp/tmp.WF7Zflt1I0
+-rw------- 1 msantana msantana 0 Apr 28 04:46 /tmp/tmp.7788F8rqbJ
