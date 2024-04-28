@@ -262,7 +262,7 @@ bot:
   enabled: true  
 image:
   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256 # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 5d6c0ba5b69c89978a3353831164745e98e9fef0e134a29fa8108ad65c1dcfcf # 2023.11_freqaitorch
+  tag: 7f643beacbb3a3e73a05b9a4bca42ebc08bf2b64032fd92885c658a8704859b7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 5d6c0ba5b69c89978a3353831164745e98e9fef0e134a29fa8108ad65c1dcfcf # 2023.11_freqaitorch
 backtesting:
   enabled: false
   download_data: false

@@ -6,12 +6,14 @@ configcreds:
   bot_name: freqtrading-binance-juliano
   exchange:
     name: binance
-    key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 # RCB5nWqiZJa0DnYRjuPbijmuacCY8cBkoVqshEv77O23yWEYvKhWlkVfcUdJVw5T
-    secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd # MzvSLeBLWUQEqivtnQLasBY1lw8f1Sp4RJ8oXWq4zpKM0bL6PVZ2ZaOR70Y8UPPT
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 # RCB5nWqiZJa0DnYRjuPbijmuacCY8cBkoVqshEv77O23yWEYvKhWlkVfcUdJVw5T
+    # secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd # MzvSLeBLWUQEqivtnQLasBY1lw8f1Sp4RJ8oXWq4zpKM0bL6PVZ2ZaOR70Y8UPPT
   telegram:
     enabled: false
-    token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
-    chat_id: "1649376180"
+    token:  6761385610:AAHQJOe6C2dugh0MVsSrycSjzHMviujVzGQ # "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
+    chat_id:  "1759706931" # "1649376180"
 bot:
   debug: false
   debuglevel: -vvv
