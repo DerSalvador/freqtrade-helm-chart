@@ -4,7 +4,7 @@ kubernetes:
 configcreds:
   available_capital: 793
   leverage: 4
-  max_open_trades: 9
+  max_open_trades: 6
   trailing_stop: false
   trailing_stop_positive: 0.99
   trailing_stop_positive_offset: 0.2
