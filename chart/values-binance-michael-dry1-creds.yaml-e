@@ -1,19 +1,17 @@
 ---
 kubernetes:
-  nodePort: 32338
+  nodePort: 32337
 
 configcreds:
-  trading_mode: futures
-  margin_mode: isolated  
   dry_run: true
-  dry_run_wallet: 7000000  
-  available_capital: 7000000
+  dry_run_wallet: 50000
+  available_capital: 50000
   #stake_amount: 50
-  bot_name: freqtrading-binance-michael-futures-dry2
+  bot_name: freqtrading-binance-michael-dry1
   exchange:
     name: binance
     key: ""
-    secret: ""
+    secret: "" 
   telegram:
     enabled: false
     token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
@@ -83,14 +81,14 @@ configcreds:
       random_state: 1
     model_training_parameters:
       n_estimators: 800
-
+          
 bot:
   debug: true
   debuglevel: -vvv
   enabled: true
   strategy_name: NostalgiaForInfinityX4
-  pvc_size: 3Gi
-  freqaimodel: ReinforcementLearner # LightGBMRegressor
+  pvc_size: 1Gi
+  freqaimodel: ReinforcementLearner # LightGBMRegressor # 
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
 #   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image

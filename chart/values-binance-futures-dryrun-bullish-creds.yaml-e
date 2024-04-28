@@ -92,7 +92,7 @@ configcreds:
 #   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvv
   enabled: true
   # Short Trades only
