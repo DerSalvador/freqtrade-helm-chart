@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Sun Apr 28 04:46:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Sun Apr 28 04:50:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -13,9 +13,11 @@
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
 <tr><td nowrap><small>688367 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
-<tr><td nowrap><small>716317 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi</small></td></tr>
-<tr><td nowrap><small>805256 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>805264 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>805911 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures</small></td></tr>
+<tr><td nowrap><small>806233 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingRestartAllTrader.sh</small></td></tr>
+<tr><td nowrap><small>806234 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>806235 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>806253 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -3557,9 +3559,70 @@ Reload Configs...<br>
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-  "open_rate": 63187.5,<br>
-  "open_rate_requested": 63187.5,<br>
-  "open_trade_value": 16.44517875,<br>
+      "pair": "XLM/USDT:USDT",<br>
+      "order_id": "12011183671",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 3354,<br>
+      "safe_price": 0.11923,<br>
+      "cost": 399.89742,<br>
+      "filled": 3354,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713960372884,<br>
+      "order_filled_timestamp": 1713960372905,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-futures-2024-04-24-12h-06m-05s-4"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 0.0922662165,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 0,<br>
+  "price_precision": 5,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -0.025499999999999995,<br>
+  "stoploss_current_dist_pct": -22.13,<br>
+  "stoploss_current_dist_ratio": -0.22129654,<br>
+  "stoploss_entry_dist": -99.29342592,<br>
+  "stoploss_entry_dist_ratio": -0.99269262,<br>
+  "current_rate": 0.11523,<br>
+  "total_profit_abs": -13.80918942,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.13812732<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/218/reload<br>
+{"trade_id":218,"pair":"BCH/USDT:USDT","base_currency":"BCH","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":11.492,"amount_requested":11.49294673,"stake_amount":1363.84530633,"max_stake_amount":5455.38122532,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":2.72769061266,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-27 16:00:44","open_timestamp":1714233644635,"open_fill_date":"2024-04-27 16:00:44","open_fill_timestamp":1714233644518,"open_rate":474.71121,"open_rate_requested":474.48,"open_trade_value":5452.65353471,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.05833826,"profit_pct":-5.83,"profit_abs":-79.52457949,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":592.2,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":592.2,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":469.72,"max_rate":487.56,"has_open_orders":false,"orders":[{"pair":"BCH/USDT:USDT","order_id":"27334772839","status":"closed","remaining":0.0,"amount":11.492,"safe_price":474.71121,"cost":5455.38125,"filled":11.492,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1714233644515,"order_filled_timestamp":1714233644518,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":584.291364925,"funding_fees":-0.95744598,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":111.13000000000005,"stoploss_current_dist_pct":23.1,"stoploss_current_dist_ratio":0.23100588,"stoploss_entry_dist":-1357.26909247,"stoploss_entry_dist_ratio":-0.99567602,"current_rate":481.07,"total_profit_abs":-79.52457949,"total_profit_fiat":null,"total_profit_ratio":-0.05830909}{<br>
+  "trade_id": 218,<br>
+  "pair": "BCH/USDT:USDT",<br>
+  "base_currency": "BCH",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 11.492,<br>
+  "amount_requested": 11.49294673,<br>
+  "stake_amount": 1363.84530633,<br>
+  "max_stake_amount": 5455.38122532,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 2.72769061266,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-27 16:00:44",<br>
+  "open_timestamp": 1714233644635,<br>
+  "open_fill_date": "2024-04-27 16:00:44",<br>
+  "open_fill_timestamp": 1714233644518,<br>
+  "open_rate": 474.71121,<br>
+  "open_rate_requested": 474.48,<br>
+  "open_trade_value": 5452.65353471,<br>
   "close_date": null,<br>
   "close_timestamp": null,<br>
   "close_rate": null,<br>
@@ -3567,502 +3630,440 @@ Reload Configs...<br>
   "close_profit": null,<br>
   "close_profit_pct": null,<br>
   "close_profit_abs": null,<br>
-  "profit_ratio": 0.01148969,<br>
-  "profit_pct": 1.15,<br>
-  "profit_abs": 0.18895007,<br>
+  "profit_ratio": -0.05611766,<br>
+  "profit_pct": -5.61,<br>
+  "profit_abs": -76.49753923,<br>
   "profit_fiat": null,<br>
   "realized_profit": 0,<br>
   "realized_profit_ratio": null,<br>
   "exit_reason": null,<br>
   "exit_order_status": null,<br>
-  "stop_loss_abs": 631.88,<br>
+  "stop_loss_abs": 592.2,<br>
   "stop_loss_ratio": -0.99,<br>
   "stop_loss_pct": -99,<br>
   "stoploss_last_update": null,<br>
   "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 631.88,<br>
+  "initial_stop_loss_abs": 592.2,<br>
   "initial_stop_loss_ratio": -0.99,<br>
   "initial_stop_loss_pct": -99,<br>
-  "min_rate": 62750,<br>
-  "max_rate": 64357.33,<br>
+  "min_rate": 469.72,<br>
+  "max_rate": 487.56,<br>
   "has_open_orders": false,<br>
   "orders": [<br>
     {<br>
-      "pair": "BTC/USDT",<br>
-      "order_id": "26857634910",<br>
+      "pair": "BCH/USDT:USDT",<br>
+      "order_id": "27334772839",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 0.00027,<br>
-      "safe_price": 63187.5,<br>
-      "cost": 17.060625,<br>
-      "filled": 0.00027,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
+      "amount": 11.492,<br>
+      "safe_price": 474.71121,<br>
+      "cost": 5455.38125,<br>
+      "filled": 11.492,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "limit",<br>
       "is_open": false,<br>
-      "order_timestamp": 1714224995639,<br>
-      "order_filled_timestamp": 1714224995639,<br>
-      "ft_fee_base": 2.7e-07,<br>
-      "ft_order_tag": "entry_reason"<br>
+      "order_timestamp": 1714233644515,<br>
+      "order_filled_timestamp": 1714233644518,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
     }<br>
   ],<br>
-  "leverage": 1,<br>
+  "leverage": 4,<br>
   "interest_rate": 0,<br>
-  "liquidation_price": null,<br>
+  "liquidation_price": 584.291364925,<br>
   "funding_fees": 0,<br>
-  "trading_mode": "spot",<br>
-  "amount_precision": 5,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
   "price_precision": 2,<br>
   "precision_mode": 2,<br>
-  "stoploss_current_dist": -63409.58,<br>
-  "stoploss_current_dist_pct": -99.01,<br>
-  "stoploss_current_dist_ratio": -0.99013327,<br>
-  "stoploss_entry_dist": -16.28105424,<br>
-  "stoploss_entry_dist_ratio": -0.9900199,<br>
-  "current_rate": 64041.46,<br>
-  "total_profit_abs": 0.18895007,<br>
+  "stoploss_current_dist": 111.31000000000006,<br>
+  "stoploss_current_dist_pct": 23.15,<br>
+  "stoploss_current_dist_ratio": 0.23146666,<br>
+  "stoploss_entry_dist": -1356.31164649,<br>
+  "stoploss_entry_dist_ratio": -0.99497365,<br>
+  "current_rate": 480.89,<br>
+  "total_profit_abs": -76.49753923,<br>
   "total_profit_fiat": null,<br>
-  "total_profit_ratio": 0.0110863<br>
+  "total_profit_ratio": -0.0560896<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/219/reload<br>
+{"trade_id":219,"pair":"XRP/USDT:USDT","base_currency":"XRP","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":10576.8,"amount_requested":10576.80277137,"stake_amount":1362.55626,"max_stake_amount":5450.22504,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":2.72511252,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-27 17:00:52","open_timestamp":1714237252343,"open_fill_date":"2024-04-27 17:00:52","open_fill_timestamp":1714237252228,"open_rate":0.5153,"open_rate_requested":0.5153,"open_trade_value":5447.49992748,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.0568755,"profit_pct":-5.69,"profit_abs":-77.45732065,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.6428,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.6428,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.5153,"max_rate":0.5244,"has_open_orders":false,"orders":[{"pair":"XRP/USDT:USDT","order_id":"55542818716","status":"closed","remaining":0.0,"amount":10576.8,"safe_price":0.5153,"cost":5450.22504,"filled":10576.8,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1714237252228,"order_filled_timestamp":1714237252228,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.634232875,"funding_fees":-0.04889449,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.12070000000000003,"stoploss_current_dist_pct":23.12,"stoploss_current_dist_ratio":0.23118177,"stoploss_entry_dist":-1354.71539053,"stoploss_entry_dist_ratio":-0.99474284,"current_rate":0.5221,"total_profit_abs":-77.45732065,"total_profit_fiat":null,"total_profit_ratio":-0.05684706}{<br>
+  "trade_id": 219,<br>
+  "pair": "XRP/USDT:USDT",<br>
+  "base_currency": "XRP",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 10576.8,<br>
+  "amount_requested": 10576.80277137,<br>
+  "stake_amount": 1362.55626,<br>
+  "max_stake_amount": 5450.22504,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 2.72511252,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-27 17:00:52",<br>
+  "open_timestamp": 1714237252343,<br>
+  "open_fill_date": "2024-04-27 17:00:52",<br>
+  "open_fill_timestamp": 1714237252228,<br>
+  "open_rate": 0.5153,<br>
+  "open_rate_requested": 0.5153,<br>
+  "open_trade_value": 5447.49992748,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": -0.05761662,<br>
+  "profit_pct": -5.76,<br>
+  "profit_abs": -78.466635,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 0.6428,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 0.6428,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 0.5153,<br>
+  "max_rate": 0.5244,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "XRP/USDT:USDT",<br>
+      "order_id": "55542818716",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 10576.8,<br>
+      "safe_price": 0.5153,<br>
+      "cost": 5450.22504,<br>
+      "filled": 10576.8,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "limit",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714237252228,<br>
+      "order_filled_timestamp": 1714237252228,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 0.634232875,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 1,<br>
+  "price_precision": 4,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 0.12060000000000004,<br>
+  "stoploss_current_dist_pct": 23.09,<br>
+  "stoploss_current_dist_ratio": 0.230946,<br>
+  "stoploss_entry_dist": -1354.66649604,<br>
+  "stoploss_entry_dist_ratio": -0.99470694,<br>
+  "current_rate": 0.5222,<br>
+  "total_profit_abs": -78.466635,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.05758781<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/221/reload<br>
+{"trade_id":221,"pair":"IOTA/USDT:USDT","base_currency":"IOTA","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":23279.8,"amount_requested":23279.81487067,"stake_amount":1362.101098,"max_stake_amount":5448.404392,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":2.7242021960000002,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-27 19:01:05","open_timestamp":1714244465538,"open_fill_date":"2024-04-27 19:01:05","open_fill_timestamp":1714244465421,"open_rate":0.23404,"open_rate_requested":0.234,"open_trade_value":5445.6801898,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.03028946,"profit_pct":-3.03,"profit_abs":-41.23667374,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.2919,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.2919,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.2326,"max_rate":0.2381,"has_open_orders":false,"orders":[{"pair":"IOTA/USDT:USDT","order_id":"7638428176","status":"closed","remaining":0.0,"amount":23279.8,"safe_price":0.23404,"cost":5448.32467,"filled":23279.8,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1714244465421,"order_filled_timestamp":1714244465421,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.2849312245,"funding_fees":0.5463769,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.05629999999999999,"stoploss_current_dist_pct":23.9,"stoploss_current_dist_ratio":0.23896435,"stoploss_entry_dist":-1352.54474011,"stoploss_entry_dist_ratio":-0.99348085,"current_rate":0.2356,"total_profit_abs":-41.23667374,"total_profit_fiat":null,"total_profit_ratio":-0.03027431}{<br>
+  "trade_id": 221,<br>
+  "pair": "IOTA/USDT:USDT",<br>
+  "base_currency": "IOTA",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 23279.8,<br>
+  "amount_requested": 23279.81487067,<br>
+  "stake_amount": 1362.101098,<br>
+  "max_stake_amount": 5448.404392,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 2.7242021960000002,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-27 19:01:05",<br>
+  "open_timestamp": 1714244465538,<br>
+  "open_fill_date": "2024-04-27 19:01:05",<br>
+  "open_fill_timestamp": 1714244465421,<br>
+  "open_rate": 0.23404,<br>
+  "open_rate_requested": 0.234,<br>
+  "open_trade_value": 5445.6801898,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": -0.03069079,<br>
+  "profit_pct": -3.07,<br>
+  "profit_abs": -41.78305064,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 0.2919,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 0.2919,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 0.2326,<br>
+  "max_rate": 0.2381,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "IOTA/USDT:USDT",<br>
+      "order_id": "7638428176",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 23279.8,<br>
+      "safe_price": 0.23404,<br>
+      "cost": 5448.32467,<br>
+      "filled": 23279.8,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "limit",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714244465421,<br>
+      "order_filled_timestamp": 1714244465421,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 0.2849312245,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 1,<br>
+  "price_precision": 4,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 0.05629999999999999,<br>
+  "stoploss_current_dist_pct": 23.9,<br>
+  "stoploss_current_dist_ratio": 0.23896435,<br>
+  "stoploss_entry_dist": -1353.09111701,<br>
+  "stoploss_entry_dist_ratio": -0.99388217,<br>
+  "current_rate": 0.2356,<br>
+  "total_profit_abs": -41.78305064,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.03067544<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/222/reload<br>
+{"trade_id":222,"pair":"ALGO/USDT:USDT","base_currency":"ALGO","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":27871.2,"amount_requested":27871.25919774,"stake_amount":1369.86948,"max_stake_amount":5479.47792,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":2.7397389600000004,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-28 00:45:48","open_timestamp":1714265148745,"open_fill_date":"2024-04-28 00:45:48","open_fill_timestamp":1714265148628,"open_rate":0.1966,"open_rate_requested":0.1966,"open_trade_value":5476.73818104,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.0467711,"profit_pct":-4.68,"profit_abs":-64.03826268,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.2452,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.2452,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.1965,"max_rate":0.201,"has_open_orders":false,"orders":[{"pair":"ALGO/USDT:USDT","order_id":"10496136313","status":"closed","remaining":0.0,"amount":27871.2,"safe_price":0.1966,"cost":5479.47792,"filled":27871.2,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1714265148628,"order_filled_timestamp":1714265148628,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.2392625715,"funding_fees":0.0,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.046500000000000014,"stoploss_current_dist_pct":23.4,"stoploss_current_dist_ratio":0.23402114,"stoploss_entry_dist":-1360.69706808,"stoploss_entry_dist_ratio":-0.99380107,"current_rate":0.1987,"total_profit_abs":-64.03826268,"total_profit_fiat":null,"total_profit_ratio":-0.04674771}{<br>
+  "trade_id": 222,<br>
+  "pair": "ALGO/USDT:USDT",<br>
+  "base_currency": "ALGO",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 27871.2,<br>
+  "amount_requested": 27871.25919774,<br>
+  "stake_amount": 1369.86948,<br>
+  "max_stake_amount": 5479.47792,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 2.7397389600000004,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-28 00:45:48",<br>
+  "open_timestamp": 1714265148745,<br>
+  "open_fill_date": "2024-04-28 00:45:48",<br>
+  "open_fill_timestamp": 1714265148628,<br>
+  "open_rate": 0.1966,<br>
+  "open_rate_requested": 0.1966,<br>
+  "open_trade_value": 5476.73818104,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": -0.0467711,<br>
+  "profit_pct": -4.68,<br>
+  "profit_abs": -64.03826268,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 0.2452,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 0.2452,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 0.1965,<br>
+  "max_rate": 0.201,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ALGO/USDT:USDT",<br>
+      "order_id": "10496136313",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 27871.2,<br>
+      "safe_price": 0.1966,<br>
+      "cost": 5479.47792,<br>
+      "filled": 27871.2,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "limit",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714265148628,<br>
+      "order_filled_timestamp": 1714265148628,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 0.2392625715,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 1,<br>
+  "price_precision": 4,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 0.046500000000000014,<br>
+  "stoploss_current_dist_pct": 23.4,<br>
+  "stoploss_current_dist_ratio": 0.23402114,<br>
+  "stoploss_entry_dist": -1360.69706808,<br>
+  "stoploss_entry_dist_ratio": -0.99380107,<br>
+  "current_rate": 0.1987,<br>
+  "total_profit_abs": -64.03826268,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.04674771<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/223/reload<br>
+{"trade_id":223,"pair":"LTC/USDT:USDT","base_currency":"LTC","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":65.225,"amount_requested":65.22503677,"stake_amount":1369.5619375,"max_stake_amount":5478.24775,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":2.739123875,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-04-28 01:16:40","open_timestamp":1714267000807,"open_fill_date":"2024-04-28 01:16:40","open_fill_timestamp":1714267000687,"open_rate":83.99,"open_rate_requested":83.99,"open_trade_value":5475.50862612,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.01830371,"profit_pct":-1.83,"profit_abs":-25.0555315,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":104.77,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":104.77,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":83.81,"max_rate":85.31,"has_open_orders":false,"orders":[{"pair":"LTC/USDT:USDT","order_id":"30597189717","status":"closed","remaining":0.0,"amount":65.225,"safe_price":83.99,"cost":5478.24775,"filled":65.225,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1714267000687,"order_filled_timestamp":1714267000687,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":103.3754985905,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":20.47999999999999,"stoploss_current_dist_pct":24.3,"stoploss_current_dist_ratio":0.2429707,"stoploss_entry_dist":-1361.5314355,"stoploss_entry_dist_ratio":-0.99463376,"current_rate":84.29,"total_profit_abs":-25.0555315,"total_profit_fiat":null,"total_profit_ratio":-0.01829456}{<br>
+  "trade_id": 223,<br>
+  "pair": "LTC/USDT:USDT",<br>
+  "base_currency": "LTC",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 65.225,<br>
+  "amount_requested": 65.22503677,<br>
+  "stake_amount": 1369.5619375,<br>
+  "max_stake_amount": 5478.24775,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 2.739123875,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-04-28 01:16:40",<br>
+  "open_timestamp": 1714267000807,<br>
+  "open_fill_date": "2024-04-28 01:16:40",<br>
+  "open_fill_timestamp": 1714267000687,<br>
+  "open_rate": 83.99,<br>
+  "open_rate_requested": 83.99,<br>
+  "open_trade_value": 5475.50862612,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": -0.01830371,<br>
+  "profit_pct": -1.83,<br>
+  "profit_abs": -25.0555315,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 104.77,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 104.77,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 83.81,<br>
+  "max_rate": 85.31,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "LTC/USDT:USDT",<br>
+      "order_id": "30597189717",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 65.225,<br>
+      "safe_price": 83.99,<br>
+      "cost": 5478.24775,<br>
+      "filled": 65.225,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "limit",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714267000687,<br>
+      "order_filled_timestamp": 1714267000687,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 103.3754985905,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 20.47999999999999,<br>
+  "stoploss_current_dist_pct": 24.3,<br>
+  "stoploss_current_dist_ratio": 0.2429707,<br>
+  "stoploss_entry_dist": -1361.5314355,<br>
+  "stoploss_entry_dist_ratio": -0.99463376,<br>
+  "current_rate": 84.29,<br>
+  "total_profit_abs": -25.0555315,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.01829456<br>
 }<br>
 Reload Trades...<br>
 Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/trades<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/2/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/3/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/4/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/5/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/6/reload<br>
-{"trade_id":6,"pair":"ENA/USDT","base_currency":"ENA","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":42.4,"amount_requested":46.12546125,"stake_amount":49.94408592,"max_stake_amount":99.93368592,"strategy":"Anomaly","enter_tag":"anom_entry ","timeframe":5,"fee_open":0.001,"fee_open_cost":0.04994408592,"fee_open_currency":"ENA","fee_close":0.001,"fee_close_cost":0.05533007,"fee_close_currency":"USDT","open_date":"2024-04-14 13:45:44","open_timestamp":1713102344537,"open_fill_date":"2024-04-14 13:45:44","open_fill_timestamp":1713102344416,"open_rate":1.179,"open_rate_requested":1.084,"open_trade_value":49.98981988,"close_date":"2024-04-15 13:34:50","close_timestamp":1713188090000,"close_rate":1.201,"close_rate_requested":1.2,"close_profit":0.14787796451108887,"close_profit_pct":14.79,"close_profit_abs":4.020828,"profit_ratio":0.14787796451108887,"profit_pct":14.79,"profit_abs":4.020828,"profit_fiat":null,"realized_profit":14.792768050000001,"realized_profit_ratio":0.14787796451108887,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":0.011,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.011,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":1.053,"max_rate":1.199,"has_open_orders":false,"orders":[{"pair":"ENA/USDT","order_id":"73493109","status":"closed","remaining":0.0,"amount":46.12,"safe_price":1.084,"cost":49.99408,"filled":46.12,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713102344416,"order_filled_timestamp":1713102344416,"ft_fee_base":0.04612,"ft_order_tag":"anom_entry "},{"pair":"ENA/USDT","order_id":"75720887","status":"closed","remaining":0.0,"amount":46.07,"safe_price":1.201,"cost":55.33007,"filled":46.07,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713134234222,"order_filled_timestamp":1713134234222,"ft_fee_base":null,"ft_order_tag":"force_exit"},{"pair":"ENA/USDT","order_id":"75832553","status":"closed","remaining":0.0,"amount":44.0,"safe_price":1.211,"cost":53.284,"filled":44.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713135626403,"order_filled_timestamp":1713135626000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"ENA/USDT","order_id":"76119932","status":"closed","remaining":0.0,"amount":42.4,"safe_price":1.179,"cost":49.9896,"filled":42.4,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713140756800,"order_filled_timestamp":1713140756000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"ENA/USDT","order_id":"77976169","status":"closed","remaining":0.0,"amount":42.0,"safe_price":1.182,"cost":49.644,"filled":42.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1713188090965,"order_filled_timestamp":1713188090000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":2.0,"price_precision":3.0,"precision_mode":2,"stoploss_current_dist":-1.1900000000000002,"stoploss_current_dist_pct":-99.08,"stoploss_current_dist_ratio":-0.99084097,"stoploss_entry_dist":-49.52388628,"stoploss_entry_dist_ratio":-0.99067943,"current_rate":1.201,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 6,<br>
-  "pair": "ENA/USDT",<br>
-  "base_currency": "ENA",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": false,<br>
-  "exchange": "binance",<br>
-  "amount": 42.4,<br>
-  "amount_requested": 46.12546125,<br>
-  "stake_amount": 49.94408592,<br>
-  "max_stake_amount": 99.93368592,<br>
-  "strategy": "Anomaly",<br>
-  "enter_tag": "anom_entry ",<br>
-  "timeframe": 5,<br>
-  "fee_open": 0.001,<br>
-  "fee_open_cost": 0.04994408592,<br>
-  "fee_open_currency": "ENA",<br>
-  "fee_close": 0.001,<br>
-  "fee_close_cost": 0.05533007,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-04-14 13:45:44",<br>
-  "open_timestamp": 1713102344537,<br>
-  "open_fill_date": "2024-04-14 13:45:44",<br>
-  "open_fill_timestamp": 1713102344416,<br>
-  "open_rate": 1.179,<br>
-  "open_rate_requested": 1.084,<br>
-  "open_trade_value": 49.98981988,<br>
-  "close_date": "2024-04-15 13:34:50",<br>
-  "close_timestamp": 1713188090000,<br>
-  "close_rate": 1.201,<br>
-  "close_rate_requested": 1.2,<br>
-  "close_profit": 0.14787796451108887,<br>
-  "close_profit_pct": 14.79,<br>
-  "close_profit_abs": 4.020828,<br>
-  "profit_ratio": 0.14787796451108887,<br>
-  "profit_pct": 14.79,<br>
-  "profit_abs": 4.020828,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 14.792768050000001,<br>
-  "realized_profit_ratio": 0.14787796451108887,<br>
-  "exit_reason": "sold_on_exchange",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 0.011,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.011,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 1.053,<br>
-  "max_rate": 1.199,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "ENA/USDT",<br>
-      "order_id": "73493109",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 46.12,<br>
-      "safe_price": 1.084,<br>
-      "cost": 49.99408,<br>
-      "filled": 46.12,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713102344416,<br>
-      "order_filled_timestamp": 1713102344416,<br>
-      "ft_fee_base": 0.04612,<br>
-      "ft_order_tag": "anom_entry "<br>
-    },<br>
-    {<br>
-      "pair": "ENA/USDT",<br>
-      "order_id": "75720887",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 46.07,<br>
-      "safe_price": 1.201,<br>
-      "cost": 55.33007,<br>
-      "filled": 46.07,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713134234222,<br>
-      "order_filled_timestamp": 1713134234222,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "force_exit"<br>
-    },<br>
-    {<br>
-      "pair": "ENA/USDT",<br>
-      "order_id": "75832553",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 44,<br>
-      "safe_price": 1.211,<br>
-      "cost": 53.284,<br>
-      "filled": 44,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713135626403,<br>
-      "order_filled_timestamp": 1713135626000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "ENA/USDT",<br>
-      "order_id": "76119932",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 42.4,<br>
-      "safe_price": 1.179,<br>
-      "cost": 49.9896,<br>
-      "filled": 42.4,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713140756800,<br>
-      "order_filled_timestamp": 1713140756000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "ENA/USDT",<br>
-      "order_id": "77976169",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 42,<br>
-      "safe_price": 1.182,<br>
-      "cost": 49.644,<br>
-      "filled": 42,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713188090965,<br>
-      "order_filled_timestamp": 1713188090000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    }<br>
-  ],<br>
-  "leverage": 1,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": null,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "spot",<br>
-  "amount_precision": 2,<br>
-  "price_precision": 3,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": -1.1900000000000002,<br>
-  "stoploss_current_dist_pct": -99.08,<br>
-  "stoploss_current_dist_ratio": -0.99084097,<br>
-  "stoploss_entry_dist": -49.52388628,<br>
-  "stoploss_entry_dist_ratio": -0.99067943,<br>
-  "current_rate": 1.201,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/8/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/9/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/28/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/29/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/30/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/31/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/32/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/33/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/34/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/35/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/36/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/37/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/38/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/39/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/40/reload<br>
-Internal Server ErrorStarted  at 20240428-044001<br>
-20240428-044001<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-parse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/41/reload<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Running already? RUNNING=msantana  716317  688367  0 04:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh:17: command not found: fala<br>
-"Finished at 20240428-044005"<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/42/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/43/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/44/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/45/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/46/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/47/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/48/reload<br>
-{"trade_id":48,"pair":"SHIB/USDT","base_currency":"SHIB","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":337234.0,"amount_requested":341241.94611657,"stake_amount":8.69726486,"max_stake_amount":17.38184831,"strategy":"AlwaysBuy","enter_tag":"entry_reason","timeframe":5,"fee_open":0.001,"fee_open_cost":0.008697264860000001,"fee_open_currency":"SHIB","fee_close":0.001,"fee_close_cost":0.00875624,"fee_close_currency":"USDT","open_date":"2024-04-26 13:58:47","open_timestamp":1714139927483,"open_fill_date":"2024-04-26 13:58:47","open_fill_timestamp":1714139927362,"open_rate":0.00002579,"open_rate_requested":0.00002545,"open_trade_value":8.70596212,"close_date":"2024-04-27 13:34:14","close_timestamp":1714224854000,"close_rate":0.00002566,"close_rate_requested":0.00002567,"close_profit":-0.16467879290805976,"close_profit_pct":-16.47,"close_profit_abs":-2.919504,"profit_ratio":-0.16467879290805976,"profit_pct":-16.47,"profit_abs":-2.919504,"profit_fiat":null,"realized_profit":-2.86528422,"realized_profit_ratio":-0.16467879290805976,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":2.6e-7,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":2.6e-7,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.00002529,"max_rate":0.00002564,"has_open_orders":false,"orders":[{"pair":"SHIB/USDT","order_id":"2530761456","status":"closed","remaining":0.0,"amount":341241.0,"safe_price":0.00002545,"cost":8.68458345,"filled":341241.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714139927362,"order_filled_timestamp":1714139927362,"ft_fee_base":null,"ft_order_tag":"entry_reason"},{"pair":"SHIB/USDT","order_id":"2530841288","status":"closed","remaining":0.0,"amount":341241.0,"safe_price":0.00002566,"cost":8.75624406,"filled":341241.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714140837851,"order_filled_timestamp":1714140837851,"ft_fee_base":null,"ft_order_tag":"force_exit"},{"pair":"SHIB/USDT","order_id":"2530880170","status":"closed","remaining":0.0,"amount":337234.0,"safe_price":0.00002579,"cost":8.69726486,"filled":337234.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714141114960,"order_filled_timestamp":1714141114000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"SHIB/USDT","order_id":"2534130459","status":"closed","remaining":0.0,"amount":2100000.0,"safe_price":0.00002445,"cost":51.345,"filled":2100000.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714224854504,"order_filled_timestamp":1714224854000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":1.0,"interest_rate":0.0,"liquidation_price":null,"funding_fees":0.0,"trading_mode":"spot","amount_precision":0.0,"price_precision":8.0,"precision_mode":2,"stoploss_current_dist":-0.0000254,"stoploss_current_dist_pct":-98.99,"stoploss_current_dist_ratio":-0.9898675,"stoploss_entry_dist":-8.61836897,"stoploss_entry_dist_ratio":-0.98993872,"current_rate":0.00002566,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 48,<br>
-  "pair": "SHIB/USDT",<br>
-  "base_currency": "SHIB",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": false,<br>
-  "exchange": "binance",<br>
-  "amount": 337234,<br>
-  "amount_requested": 341241.94611657,<br>
-  "stake_amount": 8.69726486,<br>
-  "max_stake_amount": 17.38184831,<br>
-  "strategy": "AlwaysBuy",<br>
-  "enter_tag": "entry_reason",<br>
-  "timeframe": 5,<br>
-  "fee_open": 0.001,<br>
-  "fee_open_cost": 0.008697264860000001,<br>
-  "fee_open_currency": "SHIB",<br>
-  "fee_close": 0.001,<br>
-  "fee_close_cost": 0.00875624,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-04-26 13:58:47",<br>
-  "open_timestamp": 1714139927483,<br>
-  "open_fill_date": "2024-04-26 13:58:47",<br>
-  "open_fill_timestamp": 1714139927362,<br>
-  "open_rate": 2.579e-05,<br>
-  "open_rate_requested": 2.545e-05,<br>
-  "open_trade_value": 8.70596212,<br>
-  "close_date": "2024-04-27 13:34:14",<br>
-  "close_timestamp": 1714224854000,<br>
-  "close_rate": 2.566e-05,<br>
-  "close_rate_requested": 2.567e-05,<br>
-  "close_profit": -0.16467879290805976,<br>
-  "close_profit_pct": -16.47,<br>
-  "close_profit_abs": -2.919504,<br>
-  "profit_ratio": -0.16467879290805976,<br>
-  "profit_pct": -16.47,<br>
-  "profit_abs": -2.919504,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": -2.86528422,<br>
-  "realized_profit_ratio": -0.16467879290805976,<br>
-  "exit_reason": "sold_on_exchange",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 2.6e-07,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 2.6e-07,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 2.529e-05,<br>
-  "max_rate": 2.564e-05,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "SHIB/USDT",<br>
-      "order_id": "2530761456",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 341241,<br>
-      "safe_price": 2.545e-05,<br>
-      "cost": 8.68458345,<br>
-      "filled": 341241,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714139927362,<br>
-      "order_filled_timestamp": 1714139927362,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "entry_reason"<br>
-    },<br>
-    {<br>
-      "pair": "SHIB/USDT",<br>
-      "order_id": "2530841288",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 341241,<br>
-      "safe_price": 2.566e-05,<br>
-      "cost": 8.75624406,<br>
-      "filled": 341241,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714140837851,<br>
-      "order_filled_timestamp": 1714140837851,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "force_exit"<br>
-    },<br>
-    {<br>
-      "pair": "SHIB/USDT",<br>
-      "order_id": "2530880170",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 337234,<br>
-      "safe_price": 2.579e-05,<br>
-      "cost": 8.69726486,<br>
-      "filled": 337234,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714141114960,<br>
-      "order_filled_timestamp": 1714141114000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SHIB/USDT",<br>
-      "order_id": "2534130459",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 2100000,<br>
-      "safe_price": 2.445e-05,<br>
-      "cost": 51.345,<br>
-      "filled": 2100000,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714224854504,<br>
-      "order_filled_timestamp": 1714224854000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    }<br>
-  ],<br>
-  "leverage": 1,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": null,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "spot",<br>
-  "amount_precision": 0,<br>
-  "price_precision": 8,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": -2.54e-05,<br>
-  "stoploss_current_dist_pct": -98.99,<br>
-  "stoploss_current_dist_ratio": -0.9898675,<br>
-  "stoploss_entry_dist": -8.61836897,<br>
-  "stoploss_entry_dist_ratio": -0.98993872,<br>
-  "current_rate": 2.566e-05,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/49/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/50/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/51/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/52/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32336/api/v1/trades/53/reload<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/trades<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32321/api/v1/trades/83/reload<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-service/freqtrade-binance-futures-larissa unchanged<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
 {<br>
@@ -4562,11 +4563,39 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/
 }<br>
 --------- Restarted 21 bots....<br>
 "Finished at: 20240428-044511"<br>
+20240428-045001<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+20240422-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-04-2024-20-00...<br><br><br>
+...........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240422-200045"<br><br><br>
+20240423-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-00-00...<br><br><br>
+........................................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240423-000047"<br><br><br>
+20240423-050001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-05-00...<br><br><br>
+.......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240423-050044"<br><br><br>
+20240423-100001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-10-00...<br><br><br>
+.......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240423-100048"<br><br><br>
+20240423-150001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-15-00...<br><br><br>
+.....................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240423-150044"<br><br><br>
+20240423-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-04-2024-20-00...<br><br><br>
+..................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240423-200040"<br><br><br>
+20240424-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-24-04-2024-00-00...<br><br><br>
+.....................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240424-000045"<br><br><br>
 20240424-050001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-24-04-2024-05-00...<br><br><br>
@@ -4618,7 +4647,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br><br>
 "Finished at 20240426-100047"<br><br><br>
 20240426-150001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br><br>
-..........................................................................................................................................................................................................done.<br><br><br>
+.....................................................................................................................................100  382k  100  382k    0     0   315k      0  0:00:01  0:00:01 --:--:--  315k<br><br>
+.....................................................................done.<br><br><br>
 "Finished at 20240426-150045"<br><br><br>
 20240426-200001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br><br>
@@ -4637,41 +4667,13 @@ Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br><br>
 ......................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240427-100044"<br><br><br>
 20240427-150001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br><br>
-........................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240427-150044"<br><br><br>
-20240427-200001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br><br>
-................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240426-050044"<br><br><br>
-20240426-100001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br><br>
-..........................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240426-100047"<br><br><br>
-20240426-150001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br><br>
-..........................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240426-150045"<br><br><br>
-20240426-200001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br><br>
-.........................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240426-200045"<br><br><br>
-20240427-000001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-00-00...<br><br><br>
-......................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240427-000049"<br><br><br>
-20240427-050001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br><br>
-.100  417k  100  417k    0     0   351k      0  0:00:01  0:00:01 --:--:--  351k<br><br>
-..............................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240427-050046"<br><br><br>
-20240427-100001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br><br>
-......................................................................................................................................................................................................done.<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-2.....................................................................................................................................done.<br><br><br>
 "Finished at 20240427-100044"<br><br><br>
 20240427-150001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br><br>
 ........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-150044"<br><br><br>
+2..........................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240427-150044"<br><br><br>
 20240427-200001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br><br>
@@ -4682,10 +4684,10 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br><br><br>
 ..................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240428-000044"<br><br><br>
 </body></html><br><br>
--rw------- 1 msantana msantana 0 Apr 28 04:44 /tmp/tmp.kxatANKhmb<br><br>
+-rw------- 1 msantana msantana 0 Apr 28 04:48 /tmp/tmp.CPK3qoi1z1<br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br>
-"Finished at: 20240428-044406"<br><br>
-20240428-044501<br><br>
+"Finished at: 20240428-044805"<br><br>
+20240428-044901<br><br>
 Running already? RUNNING=<br><br>
 <br><br><hr>##++<br><br>
 + + + + + /tmp/<b id=<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a>><b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> + + + + <br><br>
@@ -5018,7 +5020,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-25-04-2024-20-00...<br><br>
 "Finished at 20240425-200044"<br><br>
 20240426-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-00-00...<br><br>
-......................................................................................................................................................................................................done.<br><br>
+..................................................................................................................................................100  379k  100  379k    0     0   325k      0  0:00:01  0:00:01 --:--:--  325k<br>
+....................................................done.<br><br>
 "Finished at 20240426-000046"<br><br>
 20240426-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-05-00...<br><br>
@@ -5030,8 +5033,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br>
 "Finished at 20240426-100047"<br><br>
 20240426-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br>
-.....................................................................................................................................100  382k  100  382k    0     0   294k      0  0:00:01  0:00:01 --:--:--  294k<br>
-.....................................................................done.<br><br>
+..........................................................................................................................................................................................................done.<br><br>
 "Finished at 20240426-150045"<br><br>
 20240426-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br>
@@ -5062,10 +5064,10 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br><br>
 ..................................................................................................................................................................................................done.<br><br>
 "Finished at 20240428-000044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 28 04:45 /tmp/tmp.fdhpx42fW2<br>
+-rw------- 1 msantana msantana 0 Apr 28 04:49 /tmp/tmp.fxVoO0yxNS<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240428-044505"<br>
-20240428-044601<br>
+"Finished at: 20240428-044907"<br>
+20240428-045001<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -5441,4 +5443,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br>
 ..................................................................................................................................................................................................done.<br>
 "Finished at 20240428-000044"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Apr 28 04:46 /tmp/tmp.7788F8rqbJ
+-rw------- 1 msantana msantana 0 Apr 28 04:50 /tmp/tmp.8xLkQW31CV
