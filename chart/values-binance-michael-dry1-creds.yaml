@@ -4,8 +4,8 @@ kubernetes:
 
 configcreds:
   dry_run: true
-  dry_run_wallet: 500000000  
-  available_capital: 500000000
+  dry_run_wallet: 50000
+  available_capital: 50000
   #stake_amount: 50
   bot_name: freqtrading-binance-michael-dry1
   exchange:
