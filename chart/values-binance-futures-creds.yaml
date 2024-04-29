@@ -19,7 +19,7 @@ configcreds:
   use_custom_stoploss: false
   has_downtime_protection: false
   position_adjustment_enable: false
-  available_capital: 19061
+  available_capital: 10000
   max_open_trades: 6
   trading_mode: futures
   margin_mode: isolated
