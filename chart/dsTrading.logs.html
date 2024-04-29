@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Mon Apr 29 16:52:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Mon Apr 29 17:43:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -13,17 +13,15 @@
 <div><a href=#dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</a><br><br></div>
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
-<tr><td nowrap><small>1762419 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
-<tr><td nowrap><small>2169513 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
-<tr><td nowrap><small>2214852 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures</small></td></tr>
-<tr><td nowrap><small>2395519 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingForceExit.sh binance-futures-larissa 97</small></td></tr>
-<tr><td nowrap><small>2411515 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-allpairs-michael GET show_config</small></td></tr>
-<tr><td nowrap><small>2411592 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh binance-futures-allpairs-michael</small></td></tr>
-<tr><td nowrap><small>2411613 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>2411615 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>2411633 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>2411665 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>2411666 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>2961300 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
+<tr><td nowrap><small>3287653 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures</small></td></tr>
+<tr><td nowrap><small>3355922 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
+<tr><td nowrap><small>3414388 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
+<tr><td nowrap><small>3414389 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>3414405 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>3414434 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
+<tr><td nowrap><small>3414435 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>3414491 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-allpairs-michael GET show_config</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -1040,9 +1038,6 @@ Using Endpoint on 35.233.38.30:32332<br>
 ++++<br>
 + + + + + <b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-parse error: Invalid literal at line 1, column 9<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-allpairs-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-allpairs-michael pipe kubectl apply -f - -n binance-futures-allpairs-michael<br>
 Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
 error: no objects passed to apply<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-allpairs-michael, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -1540,6 +1535,9 @@ Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or 
 parse error: Invalid literal at line 1, column 9<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-allpairs-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-allpairs-michael pipe kubectl apply -f - -n binance-futures-allpairs-michael<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-allpairs-michael, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -2050,278 +2048,6 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v
 ++++<br>
 + + + + + <b id=dsTradingConvertAllNonBotManagedCurrencies.sh.log>dsTradingConvertAllNonBotManagedCurrencies.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ETH 0.0003896 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ETH 0.0003896 binance<br>
-ERROR:root:Found error. status: 400, error code: -1013, error message: Filter failure: LOT_SIZE<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: ETH<br>
-Volume: 0.00039<br>
-Placing Market Order for ETH 0.00039 on binance<br>
-The step size for symbol ETHUSDT is 0.0001<br>
-The minQty for symbol ETHUSDT is 0.0001<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov IOTA 55.944 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov IOTA 55.944 binance<br>
-ERROR:root:Found error. status: 400, error code: -2010, error message: Account has insufficient balance for requested action.<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: IOTA<br>
-Volume: 5.6e+01<br>
-Placing Market Order for IOTA 56.0 on binance<br>
-The step size for symbol IOTAUSDT is 1.0<br>
-The minQty for symbol IOTAUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XRP 31.968 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XRP 31.968 binance<br>
-ERROR:root:Found error. status: 400, error code: -2010, error message: Account has insufficient balance for requested action.<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: XRP<br>
-Volume: 3.2e+01<br>
-Placing Market Order for XRP 32.0 on binance<br>
-The step size for symbol XRPUSDT is 1.0<br>
-The minQty for symbol XRPUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XLM 0.706 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XLM 0.706 binance<br>
-WARNING:root:Volume $0.71 is less than Min Quantity $1.0 for pair XLMUSDT<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: XLM<br>
-Volume: 0.71<br>
-Placing Market Order for XLM 0.71 on binance<br>
-The step size for symbol XLMUSDT is 1.0<br>
-The minQty for symbol XLMUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ALGO 88.822 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ALGO 88.822 binance<br>
-ERROR:root:Found error. status: 400, error code: -2010, error message: Account has insufficient balance for requested action.<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: ALGO<br>
-Volume: 8.9e+01<br>
-Placing Market Order for ALGO 89.0 on binance<br>
-The step size for symbol ALGOUSDT is 1.0<br>
-The minQty for symbol ALGOUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SOL 0.000879 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SOL 0.000879 binance<br>
-WARNING:root:Volume $0.00088 is less than Min Quantity $0.001 for pair SOLUSDT<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: SOL<br>
-Volume: 0.00088<br>
-Placing Market Order for SOL 0.00088 on binance<br>
-The step size for symbol SOLUSDT is 0.001<br>
-The minQty for symbol SOLUSDT is 0.001<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
-WARNING:root:Volume $0.02 is less than Min Quantity $1.0 for pair SHIBUSDT<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: SHIB<br>
-Volume: 0.02<br>
-Placing Market Order for SHIB 0.02 on binance<br>
-The step size for symbol SHIBUSDT is 1.0<br>
-The minQty for symbol SHIBUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-#############################################################################################<br>
----------------------------------------------------------------------------------------------<br>
-<br>
-dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-adriana-futures<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 6.512e-05 binance-adriana<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 6.512e-05 binance-adriana<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: BNB<br>
-Volume: 6.5e-05<br>
-Placing Market Order for BNB 6.5e-05 on binance-adriana<br>
-Exchange not defined<br>
-#############################################################################################<br>
----------------------------------------------------------------------------------------------<br>
-<br>
-dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-fouzi<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BTC 0.00025974 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BTC 0.00025974 binance<br>
-ERROR:root:Found error. status: 400, error code: -2010, error message: Account has insufficient balance for requested action.<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: BTC<br>
-Volume: 0.00026<br>
-Placing Market Order for BTC 0.00026 on binance<br>
-The step size for symbol BTCUSDT is 1e-05<br>
-The minQty for symbol BTCUSDT is 1e-05<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ETH 0.0003896 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ETH 0.0003896 binance<br>
-ERROR:root:Found error. status: 400, error code: -1013, error message: Filter failure: LOT_SIZE<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: ETH<br>
-Volume: 0.00039<br>
-Placing Market Order for ETH 0.00039 on binance<br>
-The step size for symbol ETHUSDT is 0.0001<br>
-The minQty for symbol ETHUSDT is 0.0001<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov IOTA 55.944 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov IOTA 55.944 binance<br>
-ERROR:root:Found error. status: 400, error code: -2010, error message: Account has insufficient balance for requested action.<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: IOTA<br>
-Volume: 5.6e+01<br>
-Placing Market Order for IOTA 56.0 on binance<br>
-The step size for symbol IOTAUSDT is 1.0<br>
-The minQty for symbol IOTAUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XRP 31.968 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XRP 31.968 binance<br>
-ERROR:root:Found error. status: 400, error code: -2010, error message: Account has insufficient balance for requested action.<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: XRP<br>
-Volume: 3.2e+01<br>
-Placing Market Order for XRP 32.0 on binance<br>
-The step size for symbol XRPUSDT is 1.0<br>
-The minQty for symbol XRPUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XLM 0.706 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov XLM 0.706 binance<br>
-WARNING:root:Volume $0.71 is less than Min Quantity $1.0 for pair XLMUSDT<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: XLM<br>
-Volume: 0.71<br>
-Placing Market Order for XLM 0.71 on binance<br>
-The step size for symbol XLMUSDT is 1.0<br>
-The minQty for symbol XLMUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ALGO 88.822 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov ALGO 88.822 binance<br>
-ERROR:root:Found error. status: 400, error code: -2010, error message: Account has insufficient balance for requested action.<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: ALGO<br>
-Volume: 8.9e+01<br>
-Placing Market Order for ALGO 89.0 on binance<br>
-The step size for symbol ALGOUSDT is 1.0<br>
-The minQty for symbol ALGOUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SOL 0.000879 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SOL 0.000879 binance<br>
-WARNING:root:Volume $0.00088 is less than Min Quantity $0.001 for pair SOLUSDT<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: SOL<br>
-Volume: 0.00088<br>
-Placing Market Order for SOL 0.00088 on binance<br>
-The step size for symbol SOLUSDT is 0.001<br>
-The minQty for symbol SOLUSDT is 0.001<br>
-None<br>
-Traceback (most recent call last):<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
-    main()<br>
-  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
-    print(resp.json())<br>
-AttributeError: 'NoneType' object has no attribute 'json'<br>
-convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
-python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
-WARNING:root:Volume $0.02 is less than Min Quantity $1.0 for pair SHIBUSDT<br>
-Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
-Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Symbol: SHIB<br>
-Volume: 0.02<br>
-Placing Market Order for SHIB 0.02 on binance<br>
-The step size for symbol SHIBUSDT is 1.0<br>
-The minQty for symbol SHIBUSDT is 1.0<br>
-None<br>
-Traceback (most recent call last):<br>
   File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
     main()<br>
   File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
@@ -2550,52 +2276,283 @@ Volume: 2.6e-05<br>
 <Response [200]><br>
 {'error': ['EGeneral:Invalid arguments:volume']}<br>
 "Finished at: 20240429-163644"<br>
+20240429-170001<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-adriana<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
+WARNING:root:Volume $0.02 is less than Min Quantity $1.0 for pair SHIBUSDT<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: SHIB<br>
+Volume: 0.02<br>
+Placing Market Order for SHIB 0.02 on binance<br>
+The step size for symbol SHIBUSDT is 1.0<br>
+The minQty for symbol SHIBUSDT is 1.0<br>
+None<br>
+Traceback (most recent call last):<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
+    main()<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
+    print(resp.json())<br>
+AttributeError: 'NoneType' object has no attribute 'json'<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-adriana-futures<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-adriana<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-adriana<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance-adriana<br>
+Exchange not defined<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance<br>
+WARNING:root:Volume $2.7e-06 is less than Min Quantity $0.001 for pair BNBUSDT<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance<br>
+The step size for symbol BNBUSDT is 0.001<br>
+The minQty for symbol BNBUSDT is 0.001<br>
+None<br>
+Traceback (most recent call last):<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
+    main()<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
+    print(resp.json())<br>
+AttributeError: 'NoneType' object has no attribute 'json'<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-allpairs-michael<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+parse error: Invalid numeric literal at line 1, column 6<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-allpairs-stieves<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+parse error: Invalid numeric literal at line 1, column 6<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-bearish<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-bullish<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-long-strategy<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-short-strategy<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-larissa<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-futures<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-futures<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance-futures<br>
+Exchange not defined<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-stieves-longshort<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-juliano-futures<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-juliano<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-juliano<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance-juliano<br>
+Exchange not defined<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-michael-dry1<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-michael-futures-dry2<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-shortlong-futures-dryrun<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-stieves-futures<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-stieves-futures-dryrun<br>
+"Finished at: 20240429-170052"<br>
+20240429-173401<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-adriana<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov SHIB 0.02 binance<br>
+WARNING:root:Volume $0.02 is less than Min Quantity $1.0 for pair SHIBUSDT<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: SHIB<br>
+Volume: 0.02<br>
+Placing Market Order for SHIB 0.02 on binance<br>
+The step size for symbol SHIBUSDT is 1.0<br>
+The minQty for symbol SHIBUSDT is 1.0<br>
+None<br>
+Traceback (most recent call last):<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
+    main()<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
+    print(resp.json())<br>
+AttributeError: 'NoneType' object has no attribute 'json'<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-adriana-futures<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-adriana<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-adriana<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance-adriana<br>
+Exchange not defined<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance<br>
+WARNING:root:Volume $2.7e-06 is less than Min Quantity $0.001 for pair BNBUSDT<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance<br>
+The step size for symbol BNBUSDT is 0.001<br>
+The minQty for symbol BNBUSDT is 0.001<br>
+None<br>
+Traceback (most recent call last):<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 164, in <module><br>
+    main()<br>
+  File "/home/msantana/dersalvador/freqtrading/python3-krakenex/examples/convertAssetToUSDT.py", line 86, in main<br>
+    print(resp.json())<br>
+AttributeError: 'NoneType' object has no attribute 'json'<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-allpairs-michael<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+parse error: Invalid numeric literal at line 1, column 6<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-allpairs-stieves<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+parse error: Invalid numeric literal at line 1, column 6<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-bearish<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-bullish<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-long-strategy<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-dryrun-short-strategy<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-larissa<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-futures<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-futures<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance-futures<br>
+Exchange not defined<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-futures-stieves-longshort<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-juliano-futures<br>
+convertAssetToUSDT.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-juliano<br>
+python3 convertAssetToUSDT.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov BNB 2.74e-06 binance-juliano<br>
+Key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm<br>
+Secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+Symbol: BNB<br>
+Volume: 2.7e-06<br>
+Placing Market Order for BNB 2.7e-06 on binance-juliano<br>
+Exchange not defined<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-michael-dry1<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-michael-futures-dry2<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-shortlong-futures-dryrun<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-stieves-futures<br>
+#############################################################################################<br>
+---------------------------------------------------------------------------------------------<br>
+<br>
+dsTradingConvertAllNonBotManagedCurrenciesPerBot.sh binance-stieves-futures-dryrun<br>
+"Finished at: 20240429-173620"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-- 35.233.38.30<br>
-- 35.205.159.255<br>
-- 35.233.103.91<br>
-Finished at: 20240429-020001<br>
-20240429-030001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     71      0 --:--:-- --:--:-- --:--:--    71<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     28      0 --:--:-- --:--:-- --:--:--    28<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
-35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 32321-32391<br>
-creationTimestamp: '2024-04-28T20:00:12.935-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '8195515769640104915'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
 - 35.233.38.30<br>
 - 35.205.159.255<br>
 - 35.233.103.91<br>
@@ -3055,6 +3012,47 @@ sourceRanges:<br>
 Finished at: 20240429-150001<br>
 20240429-160001<br>
 Finished at: 20240429-160001<br>
+20240429-170001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     73      0 --:--:-- --:--:-- --:--:--    73<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     87      0 --:--:-- --:--:-- --:--:--    87<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    114      0 --:--:-- --:--:-- --:--:--   114<br>
+35.233.38.30,35.205.159.255, 35.233.103.91, 35.233.103.91, <br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.38.30,35.205.159.255,35.233.103.91,35.233.103.91 --rules=tcp:32321-32391 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW            DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:32321-32391        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 32321-32391<br>
+creationTimestamp: '2024-04-29T10:00:15.454-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '1969218069947641072'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.38.30<br>
+- 35.205.159.255<br>
+- 35.233.103.91<br>
+Finished at: 20240429-170001<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingReloadAllConfigs.sh.log>dsTradingReloadAllConfigs.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -3565,6 +3563,134 @@ Reload Configs...<br>
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+[31malready running, exiting[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana 3287653 2961300  0 17:36 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures<br>
+[31malready running, exiting[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana 3287653 2961300  0 17:36 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures<br>
+[31malready running, exiting[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana 3287653 2961300  0 17:36 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures<br>
+[31malready running, exiting[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana 3287653 2961300  0 17:36 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures<br>
+[31malready running, exiting[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana 3287653 2961300  0 17:36 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures<br>
+[31malready running, exiting[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Running already? RUNNING=msantana 3287653 2961300  0 17:36 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures<br>
+[31malready running, exiting[0m<br>
+"Finished at 20240429-174007"<br>
+parse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/8/reload<br>
+{"trade_id":8,"pair":"ETH/USDT:USDT","base_currency":"ETH","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":0.012,"amount_requested":0.01235708,"stake_amount":9.71028,"max_stake_amount":38.84112,"strategy":"AdxSmasS_v7","enter_tag":"forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-02h-00m-53s-4","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.01942056,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":0.01885986,"fee_close_currency":"USDT","open_date":"2024-04-24 02:01:00","open_timestamp":1713924060860,"open_fill_date":"2024-04-24 02:01:00","open_fill_timestamp":1713924060742,"open_rate":3236.76,"open_rate_requested":3237.01,"open_trade_value":38.86054056,"close_date":"2024-04-26 20:43:35","close_timestamp":1714164215614,"close_rate":3143.31,"close_rate_requested":3142.81,"close_profit":-0.1193684290839417,"close_profit_pct":-11.94,"close_profit_abs":-1.15968042,"profit_ratio":-0.1193684290839417,"profit_pct":-11.94,"profit_abs":-1.15968042,"profit_fiat":null,"realized_profit":-1.15968042,"realized_profit_ratio":-0.1193684290839417,"exit_reason":"force_exit","exit_order_status":"closed","stop_loss_abs":2435.67,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":2435.67,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":3078.27,"max_rate":3284.85,"has_open_orders":false,"orders":[{"pair":"ETH/USDT:USDT","order_id":"8389765674918835482","status":"closed","remaining":0.0,"amount":0.012,"safe_price":3236.76,"cost":38.84112,"filled":0.012,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713924060742,"order_filled_timestamp":1713924060742,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-02h-00m-53s-4"},{"pair":"ETH/USDT:USDT","order_id":"8389765675769843566","status":"closed","remaining":0.0,"amount":0.012,"safe_price":3143.31,"cost":37.71972,"filled":0.012,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714164215614,"order_filled_timestamp":1714164215614,"ft_fee_base":null,"ft_order_tag":"force_exit"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":2478.794053968,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":-707.6399999999999,"stoploss_current_dist_pct":-22.51,"stoploss_current_dist_ratio":-0.22512574,"stoploss_entry_dist":-9.64711458,"stoploss_entry_dist_ratio":-0.9929985,"current_rate":3143.31,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
+  "trade_id": 8,<br>
+  "pair": "ETH/USDT:USDT",<br>
+  "base_currency": "ETH",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": false,<br>
+  "is_short": false,<br>
+  "exchange": "binance",<br>
+  "amount": 0.012,<br>
+  "amount_requested": 0.01235708,<br>
+  "stake_amount": 9.71028,<br>
+  "max_stake_amount": 38.84112,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-02h-00m-53s-4",<br>
+  "timeframe": 15,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.01942056,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": 0.01885986,<br>
+  "fee_close_currency": "USDT",<br>
+  "open_date": "2024-04-24 02:01:00",<br>
+  "open_timestamp": 1713924060860,<br>
+  "open_fill_date": "2024-04-24 02:01:00",<br>
+  "open_fill_timestamp": 1713924060742,<br>
+  "open_rate": 3236.76,<br>
+  "open_rate_requested": 3237.01,<br>
+  "open_trade_value": 38.86054056,<br>
+  "close_date": "2024-04-26 20:43:35",<br>
+  "close_timestamp": 1714164215614,<br>
+  "close_rate": 3143.31,<br>
+  "close_rate_requested": 3142.81,<br>
+  "close_profit": -0.1193684290839417,<br>
+  "close_profit_pct": -11.94,<br>
+  "close_profit_abs": -1.15968042,<br>
+  "profit_ratio": -0.1193684290839417,<br>
+  "profit_pct": -11.94,<br>
+  "profit_abs": -1.15968042,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": -1.15968042,<br>
+  "realized_profit_ratio": -0.1193684290839417,<br>
+  "exit_reason": "force_exit",<br>
+  "exit_order_status": "closed",<br>
+  "stop_loss_abs": 2435.67,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 2435.67,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 3078.27,<br>
+  "max_rate": 3284.85,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "8389765674918835482",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.012,<br>
+      "safe_price": 3236.76,<br>
+      "cost": 38.84112,<br>
+      "filled": 0.012,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1713924060742,<br>
+      "order_filled_timestamp": 1713924060742,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-02h-00m-53s-4"<br>
+    },<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "8389765675769843566",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.012,<br>
+      "safe_price": 3143.31,<br>
+      "cost": 37.71972,<br>
+      "filled": 0.012,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714164215614,<br>
+      "order_filled_timestamp": 1714164215614,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "force_exit"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 2478.794053968,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -707.6399999999999,<br>
+  "stoploss_current_dist_pct": -22.51,<br>
+  "stoploss_current_dist_ratio": -0.22512574,<br>
+  "stoploss_entry_dist": -9.64711458,<br>
+  "stoploss_entry_dist_ratio": -0.9929985,<br>
+  "current_rate": 3143.31,<br>
+  "total_profit_abs": 0,<br>
+  "total_profit_fiat": null,<br>
   "total_profit_ratio": null<br>
 }<br>
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/9/reload<br>
@@ -3937,274 +4063,11 @@ Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/15/reload<br>
 Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/16/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/17/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/18/reload<br>
-{"trade_id":18,"pair":"1000SHIB/USDT:USDT","base_currency":"1000SHIB","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":1554.0,"amount_requested":1554.90767736,"stake_amount":9.9887235,"max_stake_amount":39.954894,"strategy":"AdxSmasS_v7","enter_tag":"forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-21h-08m-02s-4","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.019977447000000002,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":0.02054232,"fee_close_currency":"USDT","open_date":"2024-04-24 21:08:10","open_timestamp":1713992890711,"open_fill_date":"2024-04-24 21:08:10","open_fill_timestamp":1713992890596,"open_rate":0.025711,"open_rate_requested":0.025725,"open_trade_value":39.97487145,"close_date":"2024-04-25 21:41:45","close_timestamp":1714081305895,"close_rate":0.026438,"close_rate_requested":0.026454,"close_profit":0.10899229346557354,"close_profit_pct":10.9,"close_profit_abs":1.08923823,"profit_ratio":0.10899229346557354,"profit_pct":10.9,"profit_abs":1.08923823,"profit_fiat":null,"realized_profit":1.08923823,"realized_profit_ratio":0.10899229346557354,"exit_reason":"force_exit","exit_order_status":"closed","stop_loss_abs":0.019348,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.019348,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.024495,"max_rate":0.026522,"has_open_orders":false,"orders":[{"pair":"1000SHIB/USDT:USDT","order_id":"17702955346","status":"closed","remaining":0.0,"amount":1554.0,"safe_price":0.025711,"cost":39.954894,"filled":1554.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1713992890596,"order_filled_timestamp":1713992890596,"ft_fee_base":null,"ft_order_tag":"forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-21h-08m-02s-4"},{"pair":"1000SHIB/USDT:USDT","order_id":"17727412963","status":"closed","remaining":0.0,"amount":1554.0,"safe_price":0.026438,"cost":41.084652,"filled":1554.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714081305895,"order_filled_timestamp":1714081305895,"ft_fee_base":null,"ft_order_tag":"force_exit"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.019736392999999998,"funding_fees":0.0,"trading_mode":"futures","amount_precision":0.0,"price_precision":6.0,"precision_mode":2,"stoploss_current_dist":-0.007089999999999999,"stoploss_current_dist_pct":-26.82,"stoploss_current_dist_ratio":-0.2681746,"stoploss_entry_dist":-9.92311284,"stoploss_entry_dist_ratio":-0.99293506,"current_rate":0.026438,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 18,<br>
-  "pair": "1000SHIB/USDT:USDT",<br>
-  "base_currency": "1000SHIB",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": false,<br>
-  "exchange": "binance",<br>
-  "amount": 1554,<br>
-  "amount_requested": 1554.90767736,<br>
-  "stake_amount": 9.9887235,<br>
-  "max_stake_amount": 39.954894,<br>
-  "strategy": "AdxSmasS_v7",<br>
-  "enter_tag": "forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-21h-08m-02s-4",<br>
-  "timeframe": 15,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 0.019977447000000002,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0005,<br>
-  "fee_close_cost": 0.02054232,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-04-24 21:08:10",<br>
-  "open_timestamp": 1713992890711,<br>
-  "open_fill_date": "2024-04-24 21:08:10",<br>
-  "open_fill_timestamp": 1713992890596,<br>
-  "open_rate": 0.025711,<br>
-  "open_rate_requested": 0.025725,<br>
-  "open_trade_value": 39.97487145,<br>
-  "close_date": "2024-04-25 21:41:45",<br>
-  "close_timestamp": 1714081305895,<br>
-  "close_rate": 0.026438,<br>
-  "close_rate_requested": 0.026454,<br>
-  "close_profit": 0.10899229346557354,<br>
-  "close_profit_pct": 10.9,<br>
-  "close_profit_abs": 1.08923823,<br>
-  "profit_ratio": 0.10899229346557354,<br>
-  "profit_pct": 10.9,<br>
-  "profit_abs": 1.08923823,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 1.08923823,<br>
-  "realized_profit_ratio": 0.10899229346557354,<br>
-  "exit_reason": "force_exit",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 0.019348,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.019348,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.024495,<br>
-  "max_rate": 0.026522,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "1000SHIB/USDT:USDT",<br>
-      "order_id": "17702955346",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1554,<br>
-      "safe_price": 0.025711,<br>
-      "cost": 39.954894,<br>
-      "filled": 1554,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1713992890596,<br>
-      "order_filled_timestamp": 1713992890596,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "forceenter-long-script-wirsinddieguten-binance-stieves-futures-2024-04-24-21h-08m-02s-4"<br>
-    },<br>
-    {<br>
-      "pair": "1000SHIB/USDT:USDT",<br>
-      "order_id": "17727412963",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1554,<br>
-      "safe_price": 0.026438,<br>
-      "cost": 41.084652,<br>
-      "filled": 1554,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714081305895,<br>
-      "order_filled_timestamp": 1714081305895,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "force_exit"<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 0.019736392999999998,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 0,<br>
-  "price_precision": 6,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": -0.007089999999999999,<br>
-  "stoploss_current_dist_pct": -26.82,<br>
-  "stoploss_current_dist_ratio": -0.2681746,<br>
-  "stoploss_entry_dist": -9.92311284,<br>
-  "stoploss_entry_dist_ratio": -0.99293506,<br>
-  "current_rate": 0.026438,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/19/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/20/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/21/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/22/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/23/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/24/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/25/reload<br>
-Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32340/api/v1/trades/26/reload<br>
-Internal Server Error<br><br><hr>##++<br>
+<br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-fouzi POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-fouzi-creds.yaml --show-only templates/service-nodeport.yaml -n binance-fouzi pipe kubectl apply -f - -n binance-fouzi<br>
-service/freqtrade-binance-fouzi unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-fouzi, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32336/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
-service/freqtrade-binance-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-allpairs-michael POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-allpairs-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-allpairs-michael pipe kubectl apply -f - -n binance-futures-allpairs-michael<br>
-Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-allpairs-michael, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
-nodePort is empty<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-allpairs-stieves POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-allpairs-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-allpairs-stieves pipe kubectl apply -f - -n binance-futures-allpairs-stieves<br>
-Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-allpairs-stieves, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
-nodePort is empty<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bearish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bearish pipe kubectl apply -f - -n binance-futures-dryrun-bearish<br>
-service/freqtrade-binance-futures-dryrun-bearish unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bearish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32343/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bullish POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bullish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bullish pipe kubectl apply -f - -n binance-futures-dryrun-bullish<br>
-service/freqtrade-binance-futures-dryrun-bullish unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bullish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32342/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-long-strategy POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-long-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-long-strategy pipe kubectl apply -f - -n binance-futures-dryrun-long-strategy<br>
-service/freqtrade-binance-futures-dryrun-long-strategy unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-long-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32345/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-short-strategy POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-short-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-short-strategy pipe kubectl apply -f - -n binance-futures-dryrun-short-strategy<br>
-service/freqtrade-binance-futures-dryrun-short-strategy unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-short-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32346/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
-service/freqtrade-binance-futures-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-stieves-longshort POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-stieves-longshort-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-stieves-longshort pipe kubectl apply -f - -n binance-futures-stieves-longshort<br>
-service/freqtrade-binance-futures-stieves-longshort unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-stieves-longshort, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-hassan POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-hassan-creds.yaml --show-only templates/service-nodeport.yaml -n binance-hassan pipe kubectl apply -f - -n binance-hassan<br>
-service/freqtrade-binance-hassan unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-hassan, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32323/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano pipe kubectl apply -f - -n binance-juliano<br>
-service/freqtrade-binance-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32324/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
-service/freqtrade-binance-juliano-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-larissa POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-larissa pipe kubectl apply -f - -n binance-larissa<br>
-service/freqtrade-binance-larissa unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32325/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
-service/freqtrade-binance-michael-dry1 unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-dry1, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
@@ -4241,27 +4104,9 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/
 {<br>
   "status": "already running"<br>
 }<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-adriana POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-adriana pipe kubectl apply -f - -n kraken-adriana<br>
-service/freqtrade-kraken-adriana unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32327/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 kraken-juliano POST start<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-kraken.yaml -f values-kraken-juliano-creds.yaml --show-only templates/service-nodeport.yaml -n kraken-juliano pipe kubectl apply -f - -n kraken-juliano<br>
-service/freqtrade-kraken-juliano unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot kraken-juliano, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32332/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
---------- Restarted 23 bots....<br>
-"Finished at: 20240429-164021"<br>
-20240429-164501<br>
+--------- Restarted 17 bots....<br>
+"Finished at: 20240429-172518"<br>
+20240429-173001<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
@@ -4414,8 +4259,8 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/
   "status": "already running"<br>
 }<br>
 --------- Restarted 17 bots....<br>
-"Finished at: 20240429-164515"<br>
-20240429-165001<br>
+"Finished at: 20240429-173013"<br>
+20240429-173501<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
@@ -4568,33 +4413,228 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/
   "status": "already running"<br>
 }<br>
 --------- Restarted 17 bots....<br>
-"Finished at: 20240429-165010"<br>
+"Finished at: 20240429-173517"<br>
+20240429-174001<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana pipe kubectl apply -f - -n binance-adriana<br>
+service/freqtrade-binance-adriana unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32330/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
+service/freqtrade-binance-adriana-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures pipe kubectl apply -f - -n binance-futures<br>
+service/freqtrade-binance-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-allpairs-michael POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-allpairs-michael-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-allpairs-michael pipe kubectl apply -f - -n binance-futures-allpairs-michael<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-allpairs-michael, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-binance-futures-allpairs-michael-creds.yaml: no such file or directory<br>
+nodePort is empty<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-allpairs-stieves POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-allpairs-stieves-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-allpairs-stieves pipe kubectl apply -f - -n binance-futures-allpairs-stieves<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-allpairs-stieves, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-binance-futures-allpairs-stieves-creds.yaml: no such file or directory<br>
+nodePort is empty<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bearish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bearish pipe kubectl apply -f - -n binance-futures-dryrun-bearish<br>
+service/freqtrade-binance-futures-dryrun-bearish unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bearish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32343/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bullish POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-bullish-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-bullish pipe kubectl apply -f - -n binance-futures-dryrun-bullish<br>
+service/freqtrade-binance-futures-dryrun-bullish unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-bullish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32342/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-long-strategy POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-long-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-long-strategy pipe kubectl apply -f - -n binance-futures-dryrun-long-strategy<br>
+service/freqtrade-binance-futures-dryrun-long-strategy unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-long-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32345/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-short-strategy POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-dryrun-short-strategy-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-dryrun-short-strategy pipe kubectl apply -f - -n binance-futures-dryrun-short-strategy<br>
+service/freqtrade-binance-futures-dryrun-short-strategy unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-short-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32346/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-larissa POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-larissa-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-larissa pipe kubectl apply -f - -n binance-futures-larissa<br>
+service/freqtrade-binance-futures-larissa unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-stieves-longshort POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-futures-stieves-longshort-creds.yaml --show-only templates/service-nodeport.yaml -n binance-futures-stieves-longshort pipe kubectl apply -f - -n binance-futures-stieves-longshort<br>
+service/freqtrade-binance-futures-stieves-longshort unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-stieves-longshort, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-juliano-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-juliano-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-juliano-futures pipe kubectl apply -f - -n binance-juliano-futures<br>
+service/freqtrade-binance-juliano-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-dry1 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-dry1-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-dry1 pipe kubectl apply -f - -n binance-michael-dry1<br>
+service/freqtrade-binance-michael-dry1 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-dry1, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32337/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-michael-futures-dry2 POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-michael-futures-dry2-creds.yaml --show-only templates/service-nodeport.yaml -n binance-michael-futures-dry2 pipe kubectl apply -f - -n binance-michael-futures-dry2<br>
+service/freqtrade-binance-michael-futures-dry2 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-futures-dry2, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32338/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-shortlong-futures-dryrun POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-shortlong-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-shortlong-futures-dryrun pipe kubectl apply -f - -n binance-shortlong-futures-dryrun<br>
+service/freqtrade-binance-shortlong-futures-dryrun unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-shortlong-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures pipe kubectl apply -f - -n binance-stieves-futures<br>
+service/freqtrade-binance-stieves-futures unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32340/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-stieves-futures-dryrun POST start<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-stieves-futures-dryrun-creds.yaml --show-only templates/service-nodeport.yaml -n binance-stieves-futures-dryrun pipe kubectl apply -f - -n binance-stieves-futures-dryrun<br>
+service/freqtrade-binance-stieves-futures-dryrun unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-stieves-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32341/api/v1/start<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+--------- Restarted 17 bots....<br>
+"Finished at: 20240429-174014"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-[34mmax_stake_amount: 779499[0m<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 160927.20<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 28 with PAIR=BTC/USDT:USDT because profit absolut -19.51 is less then profit to take 160927.20[0m<br>
+[33mAdd tradeid 28 with PAIR=BTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-29:17:40:59 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=28 PROFIT_ABS=-19.51 OPEN_RATE=62862.22 CURRENT_RATE=62951.7 MAX_STAKE_AMOUNT=804636 PROFIT_TO_TAKE=160927.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=29#-37.49525958#IOTA/USDT:USDT#53736.3#4#0.22#0.22#1192540#0.27#-2962.21#true#298135<br>
+[34mamount: 53736.3[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.22[0m<br>
+[34mis_short: true[0m<br>
+[34mstake_amount: 298135[0m<br>
+[34mmax_stake_amount: 1192540[0m<br>
 setBotVariables binance-juliano-futures<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
 [34mRetrieving SUM[0m<br>
-Internal Server ErrorFound quick parameter, dont creating node port for API access<br>
+Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
 [31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: BTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=779499*0.8=155900.00[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: IOTA/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=1192540*0.8=238508.00[0m<br>
 -----------------------------------------------------------------------<br>
 -----------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 155900.00<br>
+Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 238508.00<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 28 with PAIR=BTC/USDT:USDT because profit absolut -7.15 is less then profit to take 155900.00[0m<br>
-[33mAdd tradeid 28 with PAIR=BTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+[31mIgnoring tradeid 29 with PAIR=IOTA/USDT:USDT because profit absolut -37.50 is less then profit to take 238508.00[0m<br>
+[33mAdd tradeid 29 with PAIR=IOTA/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:50:19 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=28 PROFIT_ABS=-7.15 OPEN_RATE=62862.8 CURRENT_RATE=62857.6 MAX_STAKE_AMOUNT=779499 PROFIT_TO_TAKE=155900.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-29:17:41:00 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=29 PROFIT_ABS=-37.50 OPEN_RATE=0.22 CURRENT_RATE=0.22 MAX_STAKE_AMOUNT=1192540 PROFIT_TO_TAKE=238508.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=30#-54.3554361#ALGO/USDT:USDT#55386.1#4#0.19#0.19#1033536#0.23#-2564.6#true#258384<br>
+[34mamount: 55386.1[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.19[0m<br>
+[34mis_short: true[0m<br>
+[34mstake_amount: 258384[0m<br>
+[34mmax_stake_amount: 1033536[0m<br>
+setBotVariables binance-juliano-futures<br>
+[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: ALGO/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=1033536*0.8=206707.20[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 206707.20<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 30 with PAIR=ALGO/USDT:USDT because profit absolut -54.36 is less then profit to take 206707.20[0m<br>
+[33mAdd tradeid 30 with PAIR=ALGO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-29:17:41:00 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=30 PROFIT_ABS=-54.36 OPEN_RATE=0.19 CURRENT_RATE=0.19 MAX_STAKE_AMOUNT=1033536 PROFIT_TO_TAKE=206707.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+20240429-174101<br>
+Running Take Profit already? RUNNING=msantana 3355923 3355914  0 17:40 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh<br>
+[31mTake Profit already running, exiting[0m<br>
+"Finished at 20240429-174101"<br>
 cp history.allbots.last2days history.allbots<br>
-"Finished at 20240429-165019"<br>
-20240429-165101<br>
+"Finished at 20240429-174101"<br>
+20240429-174201<br>
 Running Take Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -4602,7 +4642,7 @@ Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Trans
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take <br>
-Backup takeprofit.allbots to takeprofit.allbots.20240429165101<br>
+Backup takeprofit.allbots to takeprofit.allbots.20240429174201<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4623,10 +4663,10 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status<br>
-TRADE_PROFIT_ROW=45#-2.21964115#LTC/USDT:USDT#2.84#4#82.76#83.7#23529#102.59#-57.8#true#5882<br>
+TRADE_PROFIT_ROW=45#-61.126909940000004#LTC/USDT:USDT#2.84#4#82.76#83.23#23529#102.59#-58.49#true#5882<br>
 [34mamount: 2.84[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 83.7[0m<br>
+[34mcurrent_rate: 83.23[0m<br>
 [34mis_short: true[0m<br>
 [34mstake_amount: 5882[0m<br>
 [34mmax_stake_amount: 23529[0m<br>
@@ -4643,11 +4683,11 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 4705.60<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 45 with PAIR=LTC/USDT:USDT because profit absolut -2.22 is less then profit to take 4705.60[0m<br>
+[31mIgnoring tradeid 45 with PAIR=LTC/USDT:USDT because profit absolut -61.13 is less then profit to take 4705.60[0m<br>
 [33mAdd tradeid 45 with PAIR=LTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:04 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=45 PROFIT_ABS=-2.22 OPEN_RATE=82.76 CURRENT_RATE=83.7 MAX_STAKE_AMOUNT=23529 PROFIT_TO_TAKE=4705.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=46#-3.65445664#XRP/USDT:USDT#466.4#4#0.5#0.51#23525#0.62#-57.41#true#5881<br>
+TIMESTAMP=2024-04-29:17:42:02 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=45 PROFIT_ABS=-61.13 OPEN_RATE=82.76 CURRENT_RATE=83.23 MAX_STAKE_AMOUNT=23529 PROFIT_TO_TAKE=4705.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=46#-3.84110992#XRP/USDT:USDT#466.4#4#0.5#0.51#23525#0.62#-57.41#true#5881<br>
 [34mamount: 466.4[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.51[0m<br>
@@ -4667,14 +4707,14 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 4704.80<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 46 with PAIR=XRP/USDT:USDT because profit absolut -3.65 is less then profit to take 4704.80[0m<br>
+[31mIgnoring tradeid 46 with PAIR=XRP/USDT:USDT because profit absolut -3.84 is less then profit to take 4704.80[0m<br>
 [33mAdd tradeid 46 with PAIR=XRP/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:05 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=46 PROFIT_ABS=-3.65 OPEN_RATE=0.5 CURRENT_RATE=0.51 MAX_STAKE_AMOUNT=23525 PROFIT_TO_TAKE=4704.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=49#0.278391#ORDI/USDT:USDT#7.1#4#40.83#40.75#28989#50.19#-72.07#true#7247<br>
+TIMESTAMP=2024-04-29:17:42:03 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=46 PROFIT_ABS=-3.84 OPEN_RATE=0.5 CURRENT_RATE=0.51 MAX_STAKE_AMOUNT=23525 PROFIT_TO_TAKE=4704.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=49#-2.8187568#ORDI/USDT:USDT#7.1#4#40.83#41.19#28989#50.19#-72.07#true#7247<br>
 [34mamount: 7.1[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 40.75[0m<br>
+[34mcurrent_rate: 41.19[0m<br>
 [34mis_short: true[0m<br>
 [34mstake_amount: 7247[0m<br>
 [34mmax_stake_amount: 28989[0m<br>
@@ -4691,11 +4731,11 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 5797.60<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 49 with PAIR=ORDI/USDT:USDT because profit absolut 0.28 is less then profit to take 5797.60[0m<br>
+[31mIgnoring tradeid 49 with PAIR=ORDI/USDT:USDT because profit absolut -2.82 is less then profit to take 5797.60[0m<br>
 [33mAdd tradeid 49 with PAIR=ORDI/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:06 PAIR=ORDI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=49 PROFIT_ABS=0.28 OPEN_RATE=40.83 CURRENT_RATE=40.75 MAX_STAKE_AMOUNT=28989 PROFIT_TO_TAKE=5797.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=50#-0.4211064#IOTA/USDT:USDT#1308.8#4#0.22#0.22#29016#0.27#-72.05#true#7254<br>
+TIMESTAMP=2024-04-29:17:42:04 PAIR=ORDI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=49 PROFIT_ABS=-2.82 OPEN_RATE=40.83 CURRENT_RATE=41.19 MAX_STAKE_AMOUNT=28989 PROFIT_TO_TAKE=5797.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=50#-1.33772448#IOTA/USDT:USDT#1308.8#4#0.22#0.22#29016#0.27#-72.05#true#7254<br>
 [34mamount: 1308.8[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.22[0m<br>
@@ -4715,10 +4755,58 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 5803.20<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 50 with PAIR=IOTA/USDT:USDT because profit absolut -0.42 is less then profit to take 5803.20[0m<br>
+[31mIgnoring tradeid 50 with PAIR=IOTA/USDT:USDT because profit absolut -1.34 is less then profit to take 5803.20[0m<br>
 [33mAdd tradeid 50 with PAIR=IOTA/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:07 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=50 PROFIT_ABS=-0.42 OPEN_RATE=0.22 CURRENT_RATE=0.22 MAX_STAKE_AMOUNT=29016 PROFIT_TO_TAKE=5803.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-29:17:42:05 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=50 PROFIT_ABS=-1.34 OPEN_RATE=0.22 CURRENT_RATE=0.22 MAX_STAKE_AMOUNT=29016 PROFIT_TO_TAKE=5803.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=51#-54.3554361#ALGO/USDT:USDT#55386.1#4#0.19#0.19#1033536#0.23#-2564.6#true#258384<br>
+[34mamount: 55386.1[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.19[0m<br>
+[34mis_short: true[0m<br>
+[34mstake_amount: 258384[0m<br>
+[34mmax_stake_amount: 1033536[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: ALGO/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=1033536*0.8=206707.20[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 206707.20<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 51 with PAIR=ALGO/USDT:USDT because profit absolut -54.36 is less then profit to take 206707.20[0m<br>
+[33mAdd tradeid 51 with PAIR=ALGO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-29:17:42:05 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=51 PROFIT_ABS=-54.36 OPEN_RATE=0.19 CURRENT_RATE=0.19 MAX_STAKE_AMOUNT=1033536 PROFIT_TO_TAKE=206707.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=52#-0.6695858#BTC/USDT:USDT#0#4#62844.2#62948.7#25138#77463.58#-62.5#true#6284<br>
+[34mamount: 0[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 62948.7[0m<br>
+[34mis_short: true[0m<br>
+[34mstake_amount: 6284[0m<br>
+[34mmax_stake_amount: 25138[0m<br>
+setBotVariables binance-adriana-futures<br>
+[33mGetting trading_mode from config ./values-binance-adriana-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-adriana-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-adriana-futures, pair: BTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=25138*0.8=5027.20[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-adriana-futures with ForceExit with Minimum Profit of 5027.20<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 52 with PAIR=BTC/USDT:USDT because profit absolut -0.67 is less then profit to take 5027.20[0m<br>
+[33mAdd tradeid 52 with PAIR=BTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-29:17:42:06 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-adriana-futures TRADEID=52 PROFIT_ABS=-0.67 OPEN_RATE=62844.2 CURRENT_RATE=62948.7 MAX_STAKE_AMOUNT=25138 PROFIT_TO_TAKE=5027.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4729,10 +4817,10 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v1/status<br>
-TRADE_PROFIT_ROW=191#-159.44011138#BTC/USDT:USDT#0.05#3#66235.7#62802.3#298061#45473.17#-988.12#false#99354<br>
+TRADE_PROFIT_ROW=191#-590.7006103#BTC/USDT:USDT#0.05#3#66235.7#62952.9#298061#78832.88#-986.09#false#99354<br>
 [34mamount: 0.05[0m<br>
 [34mleverage: 3[0m<br>
-[34mcurrent_rate: 62802.3[0m<br>
+[34mcurrent_rate: 62952.9[0m<br>
 [34mis_short: false[0m<br>
 [34mstake_amount: 99354[0m<br>
 [34mmax_stake_amount: 298061[0m<br>
@@ -4749,11 +4837,11 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures with ForceExit with Minimum Profit of 79483.20<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 191 with PAIR=BTC/USDT:USDT because profit absolut -159.44 is less then profit to take 79483.20[0m<br>
+[31mIgnoring tradeid 191 with PAIR=BTC/USDT:USDT because profit absolut -590.70 is less then profit to take 79483.20[0m<br>
 [33mAdd tradeid 191 with PAIR=BTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:08 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=191 PROFIT_ABS=-159.44 OPEN_RATE=66235.7 CURRENT_RATE=62802.3 MAX_STAKE_AMOUNT=298061 PROFIT_TO_TAKE=79483.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=199#-27.19828604#XLM/USDT:USDT#3354#4#0.12#0.11#39990#0.09#-99.31#false#9997<br>
+TIMESTAMP=2024-04-29:17:42:07 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=191 PROFIT_ABS=-590.70 OPEN_RATE=66235.7 CURRENT_RATE=62952.9 MAX_STAKE_AMOUNT=298061 PROFIT_TO_TAKE=79483.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=199#-671.63972584#XLM/USDT:USDT#3354#4#0.12#0.11#39990#0.14#-99.28#false#9997<br>
 [34mamount: 3354[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.11[0m<br>
@@ -4773,10 +4861,10 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32321/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures with ForceExit with Minimum Profit of 7997.60<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 199 with PAIR=XLM/USDT:USDT because profit absolut -27.20 is less then profit to take 7997.60[0m<br>
+[31mIgnoring tradeid 199 with PAIR=XLM/USDT:USDT because profit absolut -671.64 is less then profit to take 7997.60[0m<br>
 [33mAdd tradeid 199 with PAIR=XLM/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:08 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=199 PROFIT_ABS=-27.20 OPEN_RATE=0.12 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=39990 PROFIT_TO_TAKE=7997.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-29:17:42:08 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures TRADEID=199 PROFIT_ABS=-671.64 OPEN_RATE=0.12 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=39990 PROFIT_TO_TAKE=7997.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-allpairs-michael, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4796,7 +4884,7 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/status<br>
-TRADE_PROFIT_ROW=96#-6.8725883#XLM/USDT:USDT#838#4#0.12#0.11#9998#0.09#-24.84#false#2500<br>
+TRADE_PROFIT_ROW=96#-658.69393733#XLM/USDT:USDT#838#4#0.12#0.11#9998#0.14#-24.82#false#2500<br>
 [34mamount: 838[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.11[0m<br>
@@ -4816,90 +4904,14 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 2000.00<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 96 with PAIR=XLM/USDT:USDT because profit absolut -6.87 is less then profit to take 2000.00[0m<br>
+[31mIgnoring tradeid 96 with PAIR=XLM/USDT:USDT because profit absolut -658.69 is less then profit to take 2000.00[0m<br>
 [33mAdd tradeid 96 with PAIR=XLM/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:10 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=96 PROFIT_ABS=-6.87 OPEN_RATE=0.12 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=9998 PROFIT_TO_TAKE=2000.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=97#1760.36589007#LTC/USDT:USDT#2.68#10#82.04#83.63#1263238#104.71#205.54#false#84<br>
-[34mamount: 2.68[0m<br>
-[34mleverage: 10[0m<br>
-[34mcurrent_rate: 83.63[0m<br>
-[34mis_short: false[0m<br>
-[34mstake_amount: 84[0m<br>
-[34mmax_stake_amount: 1263238[0m<br>
-setBotVariables binance-futures-larissa<br>
-[33mGetting trading_mode from config ./values-binance-futures-larissa-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-futures-larissa is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-futures-larissa, pair: LTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=1263238*0.8=67.20[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 67.20<br>
------------------------------------------------------------------------<br>
-TIMESTAMP=2024-04-29:05:31:12 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=97 PROFIT_ABS=3014.68 OPEN_RATE=83.48 CURRENT_RATE=83.75 MAX_STAKE_AMOUNT=1075719 IS_SHORT=false PROFIT_TO_TAKE=2000.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-[33mTrade 97 with profit 1760.37 for binance-futures-larissa already in takeprofit.allbots, not adding it[0m<br>
-TIMESTAMP=2024-04-22:08:30:10 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:32:07 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:34:08 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:36:27 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:39:48 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:44:50 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:46:09 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:48:10 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:50:59 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:52:09 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:54:26 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:56:11 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:08:58:59 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:01:01 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:02:10 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:04:59 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:07:06 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:08:11 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:10:15 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:12:59 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:14:12 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:16:12 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:18:29 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:21:03 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:23:01 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:24:11 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:27:00 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-22:09:28:51 PAIR= TRADING_MODE=spot EXCHANGE=binance BOT=binance-michael TRADEID=-1 PROFIT_ABS=452.52 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-25:08:47:22 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=5 PROFIT_ABS=3.63 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-TIMESTAMP=2024-04-26:13:52:08 PAIR=ETH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=6 PROFIT_ABS=0.01 API_KEY=kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 API_SECRET=5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd<br>
-TIMESTAMP=2024-04-27:06:11:14 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=4000.00 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:12:36 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=4000.00 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:14:36 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=4000.00 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:16:57 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:19:18 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:21:08 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:23:20 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:24:40 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:28:05 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:30:34 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:33:14 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:06:34:51 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=-1 PROFIT_ABS=3767.35 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-27:10:44:22 PAIR=AVAX/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-stieves-futures TRADEID=32 PROFIT_ABS=3.99 OPEN_RATE=34.1 CURRENT_RATE=33.9 MAX_STAKE_AMOUNT=85239 IS_SHORT=true PROFIT_TO_TAKE=2 API_KEY=yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6 API_SECRET=rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv<br>
-TIMESTAMP=2024-04-28:22:54:18 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=94 PROFIT_ABS=3517.25 OPEN_RATE=0.23 CURRENT_RATE=0.23 MAX_STAKE_AMOUNT=3161999 IS_SHORT=false PROFIT_TO_TAKE=1999.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-28:23:07:27 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=13 PROFIT_ABS=2020.72 OPEN_RATE=0.2 CURRENT_RATE=0.19 MAX_STAKE_AMOUNT=2606669 IS_SHORT=false PROFIT_TO_TAKE=800.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-28:23:08:17 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=93 PROFIT_ABS=2296.85 OPEN_RATE=0.2 CURRENT_RATE=0.19 MAX_STAKE_AMOUNT=808190 IS_SHORT=false PROFIT_TO_TAKE=1217.60 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-28:23:29:16 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=91 PROFIT_ABS=6046104.82 OPEN_RATE=0.51 CURRENT_RATE=0.51 MAX_STAKE_AMOUNT=2333364 IS_SHORT=false PROFIT_TO_TAKE=-6238168.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-29:02:27:16 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=3 PROFIT_ABS=-905.50 OPEN_RATE=0.12 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=212397 IS_SHORT=true PROFIT_TO_TAKE=-1204.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TIMESTAMP=2024-04-29:05:31:12 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=97 PROFIT_ABS=3014.68 OPEN_RATE=83.48 CURRENT_RATE=83.75 MAX_STAKE_AMOUNT=1075719 IS_SHORT=false PROFIT_TO_TAKE=2000.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-[0;32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[0m<br>
-[0;32mForecexit Async: Taking minimum profit 67.20 from trade 97 PAIR=LTC/USDT:USDT, current PROFIT_ABS=1760.37[0m<br>
-[0;32mdsTradingForceExit.sh binance-futures-larissa 97[0m<br>
-[0;32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[0m<br>
-dsTradingForceExit.sh binance-futures-larissa 97<br>
-TRADE_PROFIT_ROW=98#0.16470862#AVAX/USDT:USDT#7#4#34.71#34.77#24295#26.61#-60.34#false#6074<br>
+TIMESTAMP=2024-04-29:17:42:09 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=96 PROFIT_ABS=-658.69 OPEN_RATE=0.12 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=9998 PROFIT_TO_TAKE=2000.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=98#1.31213462#AVAX/USDT:USDT#7#4#34.71#34.93#24295#26.61#-60.34#false#6074<br>
 [34mamount: 7[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 34.77[0m<br>
+[34mcurrent_rate: 34.93[0m<br>
 [34mis_short: false[0m<br>
 [34mstake_amount: 6074[0m<br>
 [34mmax_stake_amount: 24295[0m<br>
@@ -4916,10 +4928,10 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 4859.20<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 98 with PAIR=AVAX/USDT:USDT because profit absolut 0.16 is less then profit to take 4859.20[0m<br>
+[31mIgnoring tradeid 98 with PAIR=AVAX/USDT:USDT because profit absolut 1.31 is less then profit to take 4859.20[0m<br>
 [33mAdd tradeid 98 with PAIR=AVAX/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:11 PAIR=AVAX/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=98 PROFIT_ABS=0.16 OPEN_RATE=34.71 CURRENT_RATE=34.77 MAX_STAKE_AMOUNT=24295 PROFIT_TO_TAKE=4859.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-29:17:42:10 PAIR=AVAX/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=98 PROFIT_ABS=1.31 OPEN_RATE=34.71 CURRENT_RATE=34.93 MAX_STAKE_AMOUNT=24295 PROFIT_TO_TAKE=4859.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4930,31 +4942,7 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/status<br>
-TRADE_PROFIT_ROW=22#-34.37677357#LTC/USDT:USDT#111.69#4#83.43#83.66#931879#102.62#-2316.23#true#232970<br>
-[34mamount: 111.69[0m<br>
-[34mleverage: 4[0m<br>
-[34mcurrent_rate: 83.66[0m<br>
-[34mis_short: true[0m<br>
-[34mstake_amount: 232970[0m<br>
-[34mmax_stake_amount: 931879[0m<br>
-setBotVariables binance-juliano-futures<br>
-[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
-[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
-[34mRetrieving SUM[0m<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
-[31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: LTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=931879*0.8=186376.00[0m<br>
------------------------------------------------------------------------<br>
------------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 186376.00<br>
------------------------------------------------------------------------<br>
-[31mIgnoring tradeid 22 with PAIR=LTC/USDT:USDT because profit absolut -34.38 is less then profit to take 186376.00[0m<br>
-[33mAdd tradeid 22 with PAIR=LTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
-./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:12 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=22 PROFIT_ABS=-34.38 OPEN_RATE=83.43 CURRENT_RATE=83.66 MAX_STAKE_AMOUNT=931879 PROFIT_TO_TAKE=186376.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=24#-211.32668766#XRP/USDT:USDT#20704.3#4#0.5#0.51#1044123#0.62#-2595.58#true#261031<br>
+TRADE_PROFIT_ROW=24#-218.55207429#XRP/USDT:USDT#20704.3#4#0.5#0.51#1044123#0.62#-2594.52#true#261031<br>
 [34mamount: 20704.3[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.51[0m<br>
@@ -4974,11 +4962,11 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 208824.80<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 24 with PAIR=XRP/USDT:USDT because profit absolut -211.33 is less then profit to take 208824.80[0m<br>
+[31mIgnoring tradeid 24 with PAIR=XRP/USDT:USDT because profit absolut -218.55 is less then profit to take 208824.80[0m<br>
 [33mAdd tradeid 24 with PAIR=XRP/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:12 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=24 PROFIT_ABS=-211.33 OPEN_RATE=0.5 CURRENT_RATE=0.51 MAX_STAKE_AMOUNT=1044123 PROFIT_TO_TAKE=208824.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=26#-11.43226998#XLM/USDT:USDT#80107#4#0.11#0.11#891431#0.14#-2215.39#true#222858<br>
+TIMESTAMP=2024-04-29:17:42:11 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=24 PROFIT_ABS=-218.55 OPEN_RATE=0.5 CURRENT_RATE=0.51 MAX_STAKE_AMOUNT=1044123 PROFIT_TO_TAKE=208824.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=26#-36.27689854#XLM/USDT:USDT#80107#4#0.11#0.11#891431#0.14#-2215.39#true#222858<br>
 [34mamount: 80107[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.11[0m<br>
@@ -4989,8 +4977,6 @@ setBotVariables binance-juliano-futures<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
 [34mRetrieving SUM[0m<br>
-Using Endpoint on 35.233.38.30:32331<br>
-Running Forceexit already? RUNNING=<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
@@ -5000,28 +4986,17 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 178286.40<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 26 with PAIR=XLM/USDT:USDT because profit absolut -11.43 is less then profit to take 178286.40[0m<br>
+[31mIgnoring tradeid 26 with PAIR=XLM/USDT:USDT because profit absolut -36.28 is less then profit to take 178286.40[0m<br>
 [33mAdd tradeid 26 with PAIR=XLM/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:13 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=26 PROFIT_ABS=-11.43 OPEN_RATE=0.11 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=891431 PROFIT_TO_TAKE=178286.40 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-Found quick parameter, dont creating node port for API access<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/start<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32331/api/v1/forceexit -H accept: application/json -H Content-Type: application/json -d {<br>
-	  "tradeid": "97",<br>
-	  "entry_tag": "forceexit-script-wirsinddieguten-2024-04-29-16h-51m-13s-tradeid-97",  <br>
-	  "ordertype": "market"<br>
-	}<br>
-TRADE_PROFIT_ROW=28#-1.8648236#BTC/USDT:USDT#0.12#4#62862.8#62815#779499#77465.57#-1938.01#true#194875<br>
-[34mamount: 0.12[0m<br>
+TIMESTAMP=2024-04-29:17:42:12 PAIR=XLM/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=26 PROFIT_ABS=-36.28 OPEN_RATE=0.11 CURRENT_RATE=0.11 MAX_STAKE_AMOUNT=891431 PROFIT_TO_TAKE=178286.40 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=28#-19.8130444#BTC/USDT:USDT#0.13#4#62862.22#62954.1#804636#77464.48#-2000.51#true#201159<br>
+[34mamount: 0.13[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 62815[0m<br>
+[34mcurrent_rate: 62954.1[0m<br>
 [34mis_short: true[0m<br>
-[34mstake_amount: 194875[0m<br>
-[34mmax_stake_amount: 779499[0m<br>
+[34mstake_amount: 201159[0m<br>
+[34mmax_stake_amount: 804636[0m<br>
 setBotVariables binance-juliano-futures<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
@@ -5030,22 +5005,22 @@ Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
 [31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: BTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=779499*0.8=155900.00[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: BTC/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=804636*0.8=160927.20[0m<br>
 -----------------------------------------------------------------------<br>
 -----------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 155900.00<br>
+Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 160927.20<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 28 with PAIR=BTC/USDT:USDT because profit absolut -1.86 is less then profit to take 155900.00[0m<br>
+[31mIgnoring tradeid 28 with PAIR=BTC/USDT:USDT because profit absolut -19.81 is less then profit to take 160927.20[0m<br>
 [33mAdd tradeid 28 with PAIR=BTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:14 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=28 PROFIT_ABS=-1.86 OPEN_RATE=62862.8 CURRENT_RATE=62815 MAX_STAKE_AMOUNT=779499 PROFIT_TO_TAKE=155900.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=29#-10.06162366#IOTA/USDT:USDT#52427.5#4#0.22#0.22#1163524#0.27#-2889.77#true#290881<br>
-[34mamount: 52427.5[0m<br>
+TIMESTAMP=2024-04-29:17:42:13 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=28 PROFIT_ABS=-19.81 OPEN_RATE=62862.22 CURRENT_RATE=62954.1 MAX_STAKE_AMOUNT=804636 PROFIT_TO_TAKE=160927.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=29#-42.87157639#IOTA/USDT:USDT#53736.3#4#0.22#0.22#1192540#0.27#-2962.21#true#298135<br>
+[34mamount: 53736.3[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.22[0m<br>
 [34mis_short: true[0m<br>
-[34mstake_amount: 290881[0m<br>
-[34mmax_stake_amount: 1163524[0m<br>
+[34mstake_amount: 298135[0m<br>
+[34mmax_stake_amount: 1192540[0m<br>
 setBotVariables binance-juliano-futures<br>
 [33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
 [0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
@@ -5054,18 +5029,42 @@ Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
 [31mNo profit to take parameter, calculating by formula[0m<br>
-[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: IOTA/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=1163524*0.8=232704.80[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: IOTA/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=1192540*0.8=238508.00[0m<br>
 -----------------------------------------------------------------------<br>
 -----------------------------------------------------------------------<br>
-Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 232704.80<br>
+Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 238508.00<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 29 with PAIR=IOTA/USDT:USDT because profit absolut -10.06 is less then profit to take 232704.80[0m<br>
+[31mIgnoring tradeid 29 with PAIR=IOTA/USDT:USDT because profit absolut -42.87 is less then profit to take 238508.00[0m<br>
 [33mAdd tradeid 29 with PAIR=IOTA/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-04-29:16:51:15 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=29 PROFIT_ABS=-10.06 OPEN_RATE=0.22 CURRENT_RATE=0.22 MAX_STAKE_AMOUNT=1163524 PROFIT_TO_TAKE=232704.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-04-29:17:42:14 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=29 PROFIT_ABS=-42.87 OPEN_RATE=0.22 CURRENT_RATE=0.22 MAX_STAKE_AMOUNT=1192540 PROFIT_TO_TAKE=238508.00 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=30#-54.3554361#ALGO/USDT:USDT#55386.1#4#0.19#0.19#1033536#0.23#-2564.6#true#258384<br>
+[34mamount: 55386.1[0m<br>
+[34mleverage: 4[0m<br>
+[34mcurrent_rate: 0.19[0m<br>
+[34mis_short: true[0m<br>
+[34mstake_amount: 258384[0m<br>
+[34mmax_stake_amount: 1033536[0m<br>
+setBotVariables binance-juliano-futures<br>
+[33mGetting trading_mode from config ./values-binance-juliano-futures-creds.yaml[0m<br>
+[0;32mTrading Mode for Bot binance-juliano-futures is futures[0m<br>
+[34mRetrieving SUM[0m<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/balance<br>
+[31mNo profit to take parameter, calculating by formula[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-juliano-futures, pair: ALGO/USDT:USDT : PROFIT_TO_TAKE=max_stake_amout*PROFIT_RATIO=1033536*0.8=206707.20[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 206707.20<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 30 with PAIR=ALGO/USDT:USDT because profit absolut -54.36 is less then profit to take 206707.20[0m<br>
+[33mAdd tradeid 30 with PAIR=ALGO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
+./history.allbots<br>
+TIMESTAMP=2024-04-29:17:42:14 PAIR=ALGO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=30 PROFIT_ABS=-54.36 OPEN_RATE=0.19 CURRENT_RATE=0.19 MAX_STAKE_AMOUNT=1033536 PROFIT_TO_TAKE=206707.20 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 cp history.allbots.last2days history.allbots<br>
-"Finished at 20240429-165115"<br>
-20240429-165201<br>
+"Finished at 20240429-174215"<br>
+20240429-174301<br>
 Running Take Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -5073,47 +5072,57 @@ Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Trans
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take <br>
-Backup takeprofit.allbots to takeprofit.allbots.20240429165201<br>
+Backup takeprofit.allbots to takeprofit.allbots.20240429174301<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-......................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240428-150040"<br><br><br>
-20240428-200001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-20-00...<br><br><br>
+"Finished at 20240425-150048"<br><br><br>
+20240425-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-25-04-2024-20-00...<br><br><br>
 ....................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240428-200043"<br><br><br>
-20240429-000001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-00-00...<br><br><br>
-........................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240429-000047"<br><br><br>
-20240429-050001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-05-00...<br><br><br>
-.......................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240429-050047"<.....................................................................................................................................................done.<br><br><br>
-"Finished at 20240428-150040"<br><br><br>
-20240428-200001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-20-00...<br><br><br>
+"Finished at 20240425-200044"<br><br><br>
+20240426-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-00-00...<br><br><br>
+......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-000046"<br><br><br>
+20240426-050001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-05-00...<br><br><br>
 ....................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240428-200043"<br><br><br>
-20240429-000001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-00-00...<br><br><br>
-........................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240429-000047"<br><br><br>
-20240429-050001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-05-00...<br><br><br>
-..............................................................................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240429-000047"<br><br><br>
-20240429-050001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-05-00...<br><br><br>
-...............................................................................................................................................................................................................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240429-000047"<br><br><br>
-20240429-050001<br><br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-05-00...<br><br><br>
-....................................................................................................................................................................................100  474k  100  474k    0     0   320k      0  0:00:01  0:00:01 --:--:--  320k<br><br>
-d at 20240427-200044"<br><br><br>
+"Finished at 20240426-050044"<br><br><br>
+20240426-100001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-10-00...<br><br><br>
+..........................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-100047"<br><br><br>
+20240426-150001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-15-00...<br><br><br>
+..........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-150045"<br><br><br>
+20240426-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-26-04-2024-20-00...<br><br><br>
+.........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240426-200045"<br><br><br>
+20240427-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-00-00...<br><br><br>
+......................................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-000049"<br><br><br>
+20240427-050001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-05-00...<br><br><br>
+...............................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-050046"<br><br><br>
+20240427-100001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-10-00...<br><br><br>
+......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-100044"<br><br><br>
+20240427-150001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-15-00...<br><br><br>
+........................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-150044"<br><br><br>
+20240427-200001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-27-04-2024-20-00...<br><br><br>
+.......................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240427-200044"<br><br><br>
 20240428-000001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-00-00...<br><br><br>
 ..................................................................................................................................................................................................done.<br><br><br>
@@ -5129,7 +5138,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-10-00...<br><br><br>
 20240428-150001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-15-00...<br><br><br>
 ......................................................................................................................................................................................done.<br><br><br>
-"Finished at 20240428-150040"<br><br><br>
+"Finished at 20240428-150040"<br100  469k  100  469k    0     0   291k      0  0:00:01  0:00:01 --:--:--  291k<br><br>
+><br><br>
 20240428-200001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-20-00...<br><br><br>
 ....................................................................................................................................................................................................done.<br><br><br>
@@ -5151,10 +5161,10 @@ Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-15-00...<br><br><br>
 .....................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240429-150041"<br><br><br>
 </body></html><br><br>
--rw------- 1 msantana msantana 0 Apr 29 16:47 /tmp/tmp.BjQWCMJBAy<br><br>
+-rw------- 1 msantana msantana 0 Apr 29 17:41 /tmp/tmp.8PEymQ4Q9u<br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br>
-"Finished at: 20240429-164706"<br><br>
-20240429-164801<br><br>
+"Finished at: 20240429-174106"<br><br>
+20240429-174201<br><br>
 Running already? RUNNING=<br><br>
 <br><br><hr>##++<br><br>
 + + + + + /tmp/<b id=<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a>><b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> + + + + <br><br>
@@ -5535,7 +5545,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-05-00...<br><br>
 "Finished at 20240428-050043"<br><br>
 20240428-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-10-00...<br><br>
-.......................................................................................................................................................................................................done.<br><br>
+..............................100  466k  100  466k    0     0   290k      0  0:00:01  0:00:01 --:--:--  290k<br>
+.........................................................................................................................................................................done.<br><br>
 "Finished at 20240428-100044"<br><br>
 20240428-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-15-00...<br><br>
@@ -5543,19 +5554,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-15-00...<br><br>
 "Finished at 20240428-150040"<br><br>
 20240428-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-28-04-2024-20-00...<br><br>
-...........................................................................................................................................100  474k  100  474k    0     0   326k      0  0:00:01  0:00:01 --:--:--  326k<br>
-.........................................................done.<br><br>
-"Finished at 20240428-200043"<br><br>
-20240429-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-00-00...<br><br>
-........................................................................................................................................................................................................................done.<br><br>
-"Finished at 20240429-000047"<br><br>
-20240429-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieg........................................................................................................................................................................done.<br><br>
-"Finished at 20240428-200043"<br><br>
-20240429-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-00-00...<br><br>
-..........................................................................................................................................................................................................................................................done.<br><br>
+....................................................................................................................................................................................................done.<br><br>
 "Finished at 20240428-200043"<br><br>
 20240429-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-00-00...<br><br>
@@ -5574,10 +5573,10 @@ Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-15-00...<br><br>
 .....................................................................................................................................................................................done.<br><br>
 "Finished at 20240429-150041"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Apr 29 16:51 /tmp/tmp.shnb8yLLHR<br>
+-rw------- 1 msantana msantana 0 Apr 29 17:42 /tmp/tmp.U198ohXnOy<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240429-165106"<br>
-20240429-165201<br>
+"Finished at: 20240429-174207"<br>
+20240429-174301<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -5985,4 +5984,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-15-00...<br>
 .....................................................................................................................................................................................done.<br>
 "Finished at 20240429-150041"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Apr 29 16:52 /tmp/tmp.s1tipltN6Q
+-rw------- 1 msantana msantana 0 Apr 29 17:43 /tmp/tmp.oPeCHLmXNh
