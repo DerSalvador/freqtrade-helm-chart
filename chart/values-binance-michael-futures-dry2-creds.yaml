@@ -15,8 +15,8 @@ configcreds:
     key: ""
     secret: ""
   telegram:
-    enabled: false
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    enabled: true
+    token: "6786028088:AAEFQwodIi0yiUkLoNJSa1_x7DxS1fC8P0Y"
     chat_id: "1759706931" #  "5711830404"
   freqai:
     rl_config:
@@ -85,7 +85,7 @@ configcreds:
       n_estimators: 800
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvv
   enabled: true
   strategy_name: NostalgiaForInfinityX4
