@@ -18,7 +18,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: AlwaysBuy
+  strategy_name: Strategy005
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 # image:
