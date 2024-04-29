@@ -45,9 +45,8 @@ configcreds:
     secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
   telegram:
     enabled: false
-    token: 6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20 # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
-    chat_id:
-      "889071692" # "7015989617" # "1759706931" # "889071692"
+    token: 6401327802:AAEUBmMeH-dW7GGDXb5W1nNaqeJ8KygVs28 # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    chat_id: "1759706931" # "7015989617" # "1759706931" # "889071692"
       #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
       #chat_id: "5711830404"
 
