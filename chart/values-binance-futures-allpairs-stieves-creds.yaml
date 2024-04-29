@@ -136,9 +136,9 @@ configcreds:
     #   min_rate_of_change: 0.03
     #   refresh_period: 1800
     # - method: ShuffleFilter
-image:
-  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-  tag: 7f643beacbb3a3e73a05b9a4bca42ebc08bf2b64032fd92885c658a8704859b7 # 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 7f643beacbb3a3e73a05b9a4bca42ebc08bf2b64032fd92885c658a8704859b7 # 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
 
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
@@ -149,6 +149,6 @@ bot:
   debuglevel: -vvv
   enabled: true
   # Short Trades only
-  strategy_name: DWT_LongShort
+  strategy_name: AdxSmasS_v7
   pvc_size: 4Gi
   freqaimodel: LightGBMRegressor
