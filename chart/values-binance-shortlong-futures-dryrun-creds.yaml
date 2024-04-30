@@ -31,8 +31,8 @@ configcreds:
     key: "" # "yFfoG1QwS9gbiArI1jhZ2SrHU92e9R8YBU09ZpBRKeWFPJqVfOsRbww8Qh0oZNe6"
     secret: "" # "rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv"
   telegram:
-    enabled: false
-    token: 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    enabled: true
+    token: 6995580230:AAGcjy-fhKF-lMh_kMGE5N-n2Cvxia983zk # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
     chat_id: "1759706931" # "7015989617" # "889071692"
       #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
       #chat_id: "5711830404"
