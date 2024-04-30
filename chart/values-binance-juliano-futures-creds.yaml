@@ -27,9 +27,9 @@ configcreds:
     # key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76  # 7hYocq4QubefqJFFqCBEPvc9OlmcIkOXT1xpAMS05htTfrhABT9bFQzSmyWnpo7r # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
     # secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd #  8ERNEZyel3VxNyNQ8raIgtz967x5JRUZoDcW2THHUcTJFGhagdvcOSbYZKnB4Qhv # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
   telegram:
-    enabled: false
-    token:  "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
-    chat_id:  "1649376180" # "1759706931" # 
+    enabled: true
+    token:  "7140400515:AAHHXZH1eIw7S205RrximViSD0BTRHrM6_I"
+    chat_id:  "1759706931" # "1759706931" # 
   pairlists:
     - method: RemotePairList
       number_assets: 50
