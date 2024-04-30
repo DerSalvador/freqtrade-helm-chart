@@ -63,7 +63,7 @@ spec:
           echo find /extra_strategies
           find /extra_strategies
           echo Strategy {{ .Values.bot.strategy_name }} in /extra_strategies
-          cat /extra_strategies/{{ .Values.bot.strategy_name }}* 
+          # cat /extra_strategies/* 
           echo Strategy {{ .Values.bot.strategy_name }} in /freqtrade/user_data/strategies
           cat /freqtrade/user_data/strategies/{{ .Values.bot.strategy_name }}* 
         volumeMounts:
