@@ -22,7 +22,7 @@ configcreds:
   dry_run: false
   dry_run_wallet: 50000
   position_adjustment_enable: false
-  available_capital: 4000
+  available_capital: 3000
   max_open_trades: 6
   trading_mode: futures
   margin_mode: isolated
@@ -41,12 +41,14 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
-    secret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"      
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
+    # secret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"      
   telegram:
     enabled: true
-    token: 6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20 # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
-    chat_id:  "889071692"  # "7015989617" # "1759706931" # "889071692"
+    token: 6928775398:AAGglOLVSk96UbcQo85-DrO-_hhWrwbyzUE # 6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20 # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    chat_id: "1759706931" #  "889071692"  # "7015989617" # "889071692"
       #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
       #chat_id: "5711830404"
 
