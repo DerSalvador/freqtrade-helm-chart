@@ -30,7 +30,7 @@ nostalgiaforinfinity:
 config:
   stake_amount: unlimited
   minimal_roi:
-    "0": 0.05
+    "0": 0.03
     "40160": 0.01
     "80160": 0
   timeframe: 5m
