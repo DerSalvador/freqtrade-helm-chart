@@ -4,7 +4,7 @@ kubernetes:
 configcreds:
   dry_run: true
   dry_run_wallet: 4000
-  position_adjustment_enable: false
+  position_adjustment_enable: true
   available_capital: 4000
   max_open_trades: 6
   trading_mode: futures
