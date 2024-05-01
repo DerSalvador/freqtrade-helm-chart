@@ -1,6 +1,6 @@
 ---
 kubernetes:
-  nodePort: 32347
+  nodePort: 32350
 configcreds:
 # DWT_LongShort Parameter
   can_short: True
