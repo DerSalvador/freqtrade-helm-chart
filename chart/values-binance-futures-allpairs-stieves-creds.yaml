@@ -11,6 +11,7 @@ configcreds:
   timeframe: 5m
   inf_timeframe: "15m"
   use_custom_stoploss: False
+  stoploss: -0.07
   # Recommended
   use_exit_signal: True
   exit_profit_only: True
