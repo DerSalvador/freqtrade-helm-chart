@@ -6,11 +6,9 @@ configcreds:
   position_adjustment_enable: true
   trading_mode: futures
   margin_mode: isolated  
-  dry_run: true
-  dry_run_wallet: 10000  
-  available_capital: 10000
+  available_capital: 1000
   #stake_amount: 50
-  bot_name: freqtrading-binance-michael-futures-dry2
+  bot_name: freqtrading-binance-futures-michael-mega
   exchange:
     name: binance
     key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm

@@ -1,6 +1,6 @@
 ---
 kubernetes:
-  nodePort: 32340
+  nodePort: 32352
 configcreds:
   position_adjustment_enable: true
   available_capital: 1000
@@ -9,7 +9,7 @@ configcreds:
   margin_mode: isolated
   timeframe: 5m
   # stoploss: -0.07
-  bot_name: freqtrading-binance-stieves-futures
+  bot_name: freqtrading-binance-stieves-futures-mega
   exchange:
     ccxt_config:
       enableRateLimit: true
