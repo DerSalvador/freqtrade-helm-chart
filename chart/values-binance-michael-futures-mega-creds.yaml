@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32351
 
 configcreds:
+  position_adjustment_enable: true
   trading_mode: futures
   margin_mode: isolated  
   dry_run: true
