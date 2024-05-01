@@ -1,0 +1,49 @@
+---
+kubernetes:
+  nodePort: 32325
+
+configcreds:
+  #stake_amount: 50
+  available_capital: 1
+  # trading_mode: futures
+  # margin_mode: isolated
+  bot_name: freqtrading-binance-larissa
+  # pairlists:
+  #   - method: RemotePairList
+  #     number_assets: 50
+  #     pairlist_url: https://remotepairlist.com?q=175979476d5fc223
+  #     processing_mode: append
+  #     mode: whitelist
+  #     sort_key: quoteVolume
+  #     refresh_period: 900
+  #     keep_pairlist_on_failure: true
+  #     read_timeout: 60
+  #   - method: RemotePairList
+  #     number_assets: 50
+  #     pairlist_url: https://remotepairlist.com?q=ac822c0252729ed2
+  #     processing_mode: append
+  #     mode: blacklist
+  #     sort_key: quoteVolume
+  #     refresh_period: 900
+  #     keep_pairlist_on_failure: true
+  #     read_timeout: 60  
+  exchange:
+    name: binance
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: gYPgTEtZF9qEGJnV9pyijmXYU8qZR54kIolUZ62r1fKQIrPuo8SMhB1uHmSV6ygR #  Zp2MxtUwPPofPylEiAhO8sR9DJlWycMVnfvnZTSdalSmkx8g9BNxE7j2g0YJC0OY
+    # secret: H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg # JRJfHc1o3tdKXy384M1PUFPGtpRFEmhVTd0DNgOmzj17Oqrq74kyM5Ltj6iSQpVX
+  telegram:
+    enabled: false
+    token: "6607555119:AAGqoNPH-3m1SECXrPeZdtRDgTuy5988BN0"
+    chat_id: "1759706931" # "6456658723"
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: AlwaysBuy
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
