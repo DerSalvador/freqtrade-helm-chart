@@ -1,0 +1,29 @@
+---
+kubernetes:
+  nodePort: 32323
+configcreds:
+  available_capital: 100 
+  bot_name: freqtrading-binance-hassan
+  exchange:
+    name: binance
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: byguDVxWAiaLUhT0FjoxcPHp0fVYtPAjIUY5ish459dBARt8fJputqeL8OcXeTqI
+    # secret: 0aHY2r0Y8UUmKcjsyCwbVXTAwmMeCnH5gRSzx7Vt74OqVkGQWBTusFp7DMJkL0vV
+  telegram:
+    enabled: false
+    token: 6615015739:AAE_6w2ESWNgVzhN7MleruCRm-f8qMKML68 # "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"
+    chat_id:  "1759706931" # "5510878923"
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: AlwaysBuy
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor
+
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+   
+
