@@ -1,23 +1,22 @@
 ---
 kubernetes:
-  nodePort: 32351
+  nodePort: 32338
 
 configcreds:
-  position_adjustment_enable: true
   trading_mode: futures
   margin_mode: isolated  
-  available_capital: 1000
+  dry_run: true
+  dry_run_wallet: 10000  
+  available_capital: 10000
   #stake_amount: 50
-  bot_name: freqtrading-binance-futures-michael-mega
+  bot_name: freqtrading-binance-michael-futures-dry2
   exchange:
     name: binance
-    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
-    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
-    # key: ""
-    # secret: ""
+    key: ""
+    secret: ""
   telegram:
     enabled: true
-    token: 6632710647:AAF62LDqnrHf83KIIeSAtqsr6mgB6aKeL3Y # "6786028088:AAEFQwodIi0yiUkLoNJSa1_x7DxS1fC8P0Y"
+    token: "6786028088:AAEFQwodIi0yiUkLoNJSa1_x7DxS1fC8P0Y"
     chat_id: "1759706931" #  "5711830404"
   pairlists:
     - method: RemotePairList
