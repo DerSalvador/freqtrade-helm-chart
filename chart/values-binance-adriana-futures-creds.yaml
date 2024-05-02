@@ -121,7 +121,7 @@ configcreds:
       dropout_rate: 0.3
 bot:
   enabled: true
-  strategy_name: DWT_LongShort # AdxSmasS_v7
+  strategy_name: DWT_LongShort
   freqaimodel: LightGBMRegressor
 
 # image:
