@@ -1,15 +1,23 @@
 ---
 kubernetes:
-  nodePort: 32345
+  nodePort: 32342
 configcreds:
-# AdxSmas_V7
-  can_short: False
-  # Minimal ROI designed for the strategy.
-  # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
-  # This attribute will be overridden if the config file contains "minimal_roi"
-  # Optimal stoploss designed for the strategy
-  # Optimal timeframe for the strategy
-  timeframe: 1h
+# DWT_LongShort Parameter
+  can_short: True
+  trailing_stop: False
+  trailing_stop_positive: 0
+  trailing_stop_positive_offset: 0.0
+  trailing_only_offset_is_reached: False
+  timeframe: 5m
+  inf_timeframe: '15m'
+  use_custom_stoploss: False
+  # Recommended
+  use_exit_signal: True
+  exit_profit_only: True
+  ignore_roi_if_entry_signal: True
+  # Required
+  startup_candle_count: 128 # must be power of 2
+  process_only_new_candles: True
 # end
   dry_run: true
   dry_run_wallet: 50000
@@ -18,7 +26,7 @@ configcreds:
   max_open_trades: 6
   trading_mode: futures
   margin_mode: isolated
-  bot_name: freqtrading-binance-futures-dryrun-long
+  bot_name: freqtrading-binance-stieves-futures-dryrun-bullish
   exchange:
     ccxt_config:
       enableRateLimit: true
@@ -37,14 +45,14 @@ configcreds:
     secret: "" # "rQtW1MZ6S3mATH0cw8CHREAZdfGgq8HIQJ5PEEBHT1DIrKGdrN5gaizIoDFWsbnv"
   telegram:
     enabled: true
-    token: 7086215785:AAGydFKnSF0OFJmHuhagtcyKUx0Ek5tuJsg # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
-    chat_id: "1759706931" # "7015989617" # "889071692"
+    token: 7035160448:AAFYWeozmkF4yPtTHlNn8XCA7MaVJyOyMdI # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    chat_id: "1759706931" #  "7015989617" # "889071692"
       #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
       #chat_id: "5711830404"
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url:  https://remotepairlist.com?q=1ee7096e9a6efa5c # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: https://remotepairlist.com?q=1ee7096e9a6efa5c # bullish Futures  https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
@@ -84,10 +92,10 @@ configcreds:
 #   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
 
 bot:
-  debug: false
+  debug: true
   debuglevel: -vvv
   enabled: true
   # Short Trades only
   strategy_name: DWT_LongShort
-  pvc_size: 1Gi
+  pvc_size: 4Gi
   freqaimodel: LightGBMRegressor

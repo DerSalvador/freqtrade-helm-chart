@@ -11,6 +11,10 @@ configcreds:
   # Optimal timeframe for the strategy
   timeframe: 1h
 # end
+  minimal_roi:
+    "0": 0.04
+    "40160": 0.01
+    "80160": 0
   dry_run: false
   dry_run_wallet: 50000
   position_adjustment_enable: false
@@ -88,10 +92,10 @@ image:
 #   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvv
   enabled: true
   # Short Trades only
-  strategy_name: AdxSmasS_v7
+  strategy_name: DWT_LongShort # AdxSmasS_v7
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
