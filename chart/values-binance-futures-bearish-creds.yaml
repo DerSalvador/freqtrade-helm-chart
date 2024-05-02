@@ -11,6 +11,10 @@ configcreds:
   # Optimal timeframe for the strategy
   timeframe: 1h
 # end
+  minimal_roi:
+    "0": 0.04
+    "40160": 0.01
+    "80160": 0
   dry_run: false
   dry_run_wallet: 50000
   position_adjustment_enable: false
