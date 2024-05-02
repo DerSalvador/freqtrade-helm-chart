@@ -1,8 +1,8 @@
 ---
 kubernetes:
-  nodePort: 32330
+  nodePort: 32353
 configcreds:
-  available_capital: 2000
+  available_capital: 4000
   position_adjustment_enable: true
   initial_state: stopped
   stoploss: -0.99
