@@ -3,10 +3,14 @@ kubernetes:
   nodePort: 32334
 
 configcreds:
-  available_capital: 221
+  available_capital: 3000
+  minimal_roi:
+    "0": 0.05
+    "40160": 0.01
+    "80160": 0    
   trading_mode: futures
   margin_mode: isolated
-  timeframe: 15m
+  timeframe: 5m
   bot_name: freqtrading-binance-juliano-futures
   exchange:
     ccxt_config:
@@ -70,7 +74,7 @@ configcreds:
   position_adjustment_enable: false
 bot:
   enabled: true
-  strategy_name: AdxSmasS_v7
+  strategy_name: DWT_LongShort # AdxSmasS_v7
   freqaimodel: LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
