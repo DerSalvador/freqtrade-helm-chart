@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Thu May  2 11:08:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Thu May  2 11:10:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -16,11 +16,13 @@
 <table border=1><tr><th>Trading Processes</th></tr>
 <tr><td nowrap><small>1310727 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTradesOfAllBots.sh</small></td></tr>
 <tr><td nowrap><small>1658813 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingReloadAllTrades.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-bearish</small></td></tr>
-<tr><td nowrap><small>1658942 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>1658943 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>1658958 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>1658984 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>1658985 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>1673629 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingRestartAllTrader.sh</small></td></tr>
+<tr><td nowrap><small>1673630 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
+<tr><td nowrap><small>1673631 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>1673633 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>1673656 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>1673683 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
+<tr><td nowrap><small>1673684 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -1545,6 +1547,9 @@ URL: http://filekeys.com/dsTradingBalanceRealtime.html<br>
 20240502-110701<br>
 zsh:1: no such file or directory: /Users/msantana/dersalvador/general_purpose_scripts/dsTradingBuyLong.sh<br>
 Finished at: 20240502-110701<br>
+20240502-110901<br>
+zsh:1: no such file or directory: /Users/msantana/dersalvador/general_purpose_scripts/dsTradingBuyLong.sh<br>
+Finished at: 20240502-110901<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -3570,310 +3575,6 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32352/api/
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-  "min_rate": 1.3552,<br>
-  "max_rate": 1.4313,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "ZETA/USDT:USDT",<br>
-      "order_id": "699465009",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1561,<br>
-      "safe_price": 1.357079,<br>
-      "cost": 2118.3998,<br>
-      "filled": 1561,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714632130985,<br>
-      "order_filled_timestamp": 1714632130985,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "short_dwt_entry "<br>
-    },<br>
-    {<br>
-      "pair": "ZETA/USDT:USDT",<br>
-      "order_id": "700363089",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1561,<br>
-      "safe_price": 1.351029,<br>
-      "cost": 2108.9564,<br>
-      "filled": 1561,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714636836401,<br>
-      "order_filled_timestamp": 1714636836401,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "short_dwt_exit "<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 1.657094757,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 0,<br>
-  "price_precision": 4,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": 0.34187100000000004,<br>
-  "stoploss_current_dist_pct": 25.3,<br>
-  "stoploss_current_dist_ratio": 0.2530449,<br>
-  "stoploss_entry_dist": -526.59708961,<br>
-  "stoploss_entry_dist_ratio": -0.99482712,<br>
-  "current_rate": 1.351029,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32348/api/v1/trades/39/reload<br>
-{"trade_id":39,"pair":"1000BONK/USDT:USDT","base_currency":"1000BONK","quote_currency":"USDT","is_open":false,"is_short":true,"exchange":"binance","amount":93419.0,"amount_requested":93419.3427068,"stake_amount":530.73902922,"max_stake_amount":2122.9561169,"strategy":"DWT_LongShort","enter_tag":"short_dwt_entry ","timeframe":5,"fee_open":0.0005,"fee_open_cost":1.0614780584499999,"fee_open_currency":"USDT","fee_close":0.0002,"fee_close_cost":0.42141307,"fee_close_currency":"USDT","open_date":"2024-05-02 07:10:53","open_timestamp":1714633853243,"open_fill_date":"2024-05-02 07:10:53","open_fill_timestamp":1714633853118,"open_rate":0.0227251,"open_rate_requested":0.022723,"open_trade_value":2121.89463884,"close_date":"2024-05-02 07:55:21","close_timestamp":1714636521340,"close_rate":0.022555,"close_rate_requested":0.022555,"close_profit":0.027160030411059206,"close_profit_pct":2.72,"close_profit_abs":14.40768073,"profit_ratio":0.027160030411059206,"profit_pct":2.72,"profit_abs":14.40768073,"profit_fiat":null,"realized_profit":14.40768073,"realized_profit_ratio":0.027160030411059206,"exit_reason":"short_notrend_roi","exit_order_status":"closed","stop_loss_abs":0.028349,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.028349,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.022555,"max_rate":0.022828,"has_open_orders":false,"orders":[{"pair":"1000BONK/USDT:USDT","order_id":"3090123043","status":"closed","remaining":0.0,"amount":93419.0,"safe_price":0.0227251,"cost":2122.955031,"filled":93419.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714633853118,"order_filled_timestamp":1714633853118,"ft_fee_base":null,"ft_order_tag":"short_dwt_entry "},{"pair":"1000BONK/USDT:USDT","order_id":"3090752094","status":"closed","remaining":0.0,"amount":93419.0,"safe_price":0.022555,"cost":2107.065545,"filled":93419.0,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1714636351711,"order_filled_timestamp":1714636521340,"ft_fee_base":null,"ft_order_tag":"short_notrend_roi"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.027714718500000003,"funding_fees":0.0,"trading_mode":"futures","amount_precision":0.0,"price_precision":6.0,"precision_mode":2,"stoploss_current_dist":0.0057940000000000005,"stoploss_current_dist_pct":25.69,"stoploss_current_dist_ratio":0.25688317,"stoploss_entry_dist":-526.9702592,"stoploss_entry_dist_ratio":-0.99339571,"current_rate":0.022555,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 39,<br>
-  "pair": "1000BONK/USDT:USDT",<br>
-  "base_currency": "1000BONK",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": true,<br>
-  "exchange": "binance",<br>
-  "amount": 93419,<br>
-  "amount_requested": 93419.3427068,<br>
-  "stake_amount": 530.73902922,<br>
-  "max_stake_amount": 2122.9561169,<br>
-  "strategy": "DWT_LongShort",<br>
-  "enter_tag": "short_dwt_entry ",<br>
-  "timeframe": 5,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 1.0614780584499999,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0002,<br>
-  "fee_close_cost": 0.42141307,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-05-02 07:10:53",<br>
-  "open_timestamp": 1714633853243,<br>
-  "open_fill_date": "2024-05-02 07:10:53",<br>
-  "open_fill_timestamp": 1714633853118,<br>
-  "open_rate": 0.0227251,<br>
-  "open_rate_requested": 0.022723,<br>
-  "open_trade_value": 2121.89463884,<br>
-  "close_date": "2024-05-02 07:55:21",<br>
-  "close_timestamp": 1714636521340,<br>
-  "close_rate": 0.022555,<br>
-  "close_rate_requested": 0.022555,<br>
-  "close_profit": 0.027160030411059206,<br>
-  "close_profit_pct": 2.72,<br>
-  "close_profit_abs": 14.40768073,<br>
-  "profit_ratio": 0.027160030411059206,<br>
-  "profit_pct": 2.72,<br>
-  "profit_abs": 14.40768073,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 14.40768073,<br>
-  "realized_profit_ratio": 0.027160030411059206,<br>
-  "exit_reason": "short_notrend_roi",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 0.028349,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.028349,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.022555,<br>
-  "max_rate": 0.022828,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "1000BONK/USDT:USDT",<br>
-      "order_id": "3090123043",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 93419,<br>
-      "safe_price": 0.0227251,<br>
-      "cost": 2122.955031,<br>
-      "filled": 93419,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714633853118,<br>
-      "order_filled_timestamp": 1714633853118,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "short_dwt_entry "<br>
-    },<br>
-    {<br>
-      "pair": "1000BONK/USDT:USDT",<br>
-      "order_id": "3090752094",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 93419,<br>
-      "safe_price": 0.022555,<br>
-      "cost": 2107.065545,<br>
-      "filled": 93419,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714636351711,<br>
-      "order_filled_timestamp": 1714636521340,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "short_notrend_roi"<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 0.027714718500000003,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 0,<br>
-  "price_precision": 6,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": 0.0057940000000000005,<br>
-  "stoploss_current_dist_pct": 25.69,<br>
-  "stoploss_current_dist_ratio": 0.25688317,<br>
-  "stoploss_entry_dist": -526.9702592,<br>
-  "stoploss_entry_dist_ratio": -0.99339571,<br>
-  "current_rate": 0.022555,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32348/api/v1/trades/40/reload<br>
-{"trade_id":40,"pair":"XVS/USDT:USDT","base_currency":"XVS","quote_currency":"USDT","is_open":false,"is_short":true,"exchange":"binance","amount":244.6,"amount_requested":244.6578003,"stake_amount":534.14525,"max_stake_amount":2136.581,"strategy":"DWT_LongShort","enter_tag":"short_dwt_entry ","timeframe":5,"fee_open":0.0005,"fee_open_cost":1.0682905,"fee_open_currency":"USDT","fee_close":0.00048571428571428577,"fee_close_cost":0.8242322900000001,"fee_close_currency":"USDT","open_date":"2024-05-02 08:12:47","open_timestamp":1714637567951,"open_fill_date":"2024-05-02 08:12:47","open_fill_timestamp":1714637567826,"open_rate":8.735,"open_rate_requested":8.736,"open_trade_value":2135.5127095,"close_date":"2024-05-02 08:22:41","close_timestamp":1714638161971,"close_rate":8.6383933,"close_rate_requested":8.64,"close_profit":0.040337700139545817,"close_profit_pct":4.03,"close_profit_abs":21.53541783,"profit_ratio":0.040337700139545817,"profit_pct":4.03,"profit_abs":21.53541783,"profit_fiat":null,"realized_profit":21.53541783,"realized_profit_ratio":0.040337700139545817,"exit_reason":"short_notrend_roi","exit_order_status":"closed","stop_loss_abs":10.896,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":10.896,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":8.64,"max_rate":8.755,"has_open_orders":false,"orders":[{"pair":"XVS/USDT:USDT","order_id":"898482543","status":"closed","remaining":0.0,"amount":244.6,"safe_price":8.735,"cost":2136.581,"filled":244.6,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714637567826,"order_filled_timestamp":1714637567826,"ft_fee_base":null,"ft_order_tag":"short_dwt_entry "},{"pair":"XVS/USDT:USDT","order_id":"898507548","status":"closed","remaining":0.0,"amount":244.6,"safe_price":8.6383933,"cost":2112.951,"filled":244.6,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1714638161967,"order_filled_timestamp":1714638161971,"ft_fee_base":null,"ft_order_tag":"short_notrend_roi"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":10.602106249999999,"funding_fees":0.0,"trading_mode":"futures","amount_precision":1.0,"price_precision":3.0,"precision_mode":2,"stoploss_current_dist":2.2576067,"stoploss_current_dist_pct":26.13,"stoploss_current_dist_ratio":0.26134567,"stoploss_entry_dist":-530.94339756,"stoploss_entry_dist_ratio":-0.9945029,"current_rate":8.6383933,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 40,<br>
-  "pair": "XVS/USDT:USDT",<br>
-  "base_currency": "XVS",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": true,<br>
-  "exchange": "binance",<br>
-  "amount": 244.6,<br>
-  "amount_requested": 244.6578003,<br>
-  "stake_amount": 534.14525,<br>
-  "max_stake_amount": 2136.581,<br>
-  "strategy": "DWT_LongShort",<br>
-  "enter_tag": "short_dwt_entry ",<br>
-  "timeframe": 5,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 1.0682905,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.00048571428571428577,<br>
-  "fee_close_cost": 0.8242322900000001,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-05-02 08:12:47",<br>
-  "open_timestamp": 1714637567951,<br>
-  "open_fill_date": "2024-05-02 08:12:47",<br>
-  "open_fill_timestamp": 1714637567826,<br>
-  "open_rate": 8.735,<br>
-  "open_rate_requested": 8.736,<br>
-  "open_trade_value": 2135.5127095,<br>
-  "close_date": "2024-05-02 08:22:41",<br>
-  "close_timestamp": 1714638161971,<br>
-  "close_rate": 8.6383933,<br>
-  "close_rate_requested": 8.64,<br>
-  "close_profit": 0.040337700139545817,<br>
-  "close_profit_pct": 4.03,<br>
-  "close_profit_abs": 21.53541783,<br>
-  "profit_ratio": 0.040337700139545817,<br>
-  "profit_pct": 4.03,<br>
-  "profit_abs": 21.53541783,<br>
-  "profit_fiat": null,<br>
-  "realized_profit": 21.53541783,<br>
-  "realized_profit_ratio": 0.040337700139545817,<br>
-  "exit_reason": "short_notrend_roi",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 10.896,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
-  "stoploss_last_update": null,<br>
-  "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 10.896,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 8.64,<br>
-  "max_rate": 8.755,<br>
-  "has_open_orders": false,<br>
-  "orders": [<br>
-    {<br>
-      "pair": "XVS/USDT:USDT",<br>
-      "order_id": "898482543",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 244.6,<br>
-      "safe_price": 8.735,<br>
-      "cost": 2136.581,<br>
-      "filled": 244.6,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714637567826,<br>
-      "order_filled_timestamp": 1714637567826,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "short_dwt_entry "<br>
-    },<br>
-    {<br>
-      "pair": "XVS/USDT:USDT",<br>
-      "order_id": "898507548",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 244.6,<br>
-      "safe_price": 8.6383933,<br>
-      "cost": 2112.951,<br>
-      "filled": 244.6,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1714638161967,<br>
-      "order_filled_timestamp": 1714638161971,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": "short_notrend_roi"<br>
-    }<br>
-  ],<br>
-  "leverage": 4,<br>
-  "interest_rate": 0,<br>
-  "liquidation_price": 10.602106249999999,<br>
-  "funding_fees": 0,<br>
-  "trading_mode": "futures",<br>
-  "amount_precision": 1,<br>
-  "price_precision": 3,<br>
-  "precision_mode": 2,<br>
-  "stoploss_current_dist": 2.2576067,<br>
-  "stoploss_current_dist_pct": 26.13,<br>
-  "stoploss_current_dist_ratio": 0.26134567,<br>
-  "stoploss_entry_dist": -530.94339756,<br>
-  "stoploss_entry_dist_ratio": -0.9945029,<br>
-  "current_rate": 8.6383933,<br>
-  "total_profit_abs": 0,<br>
-  "total_profit_fiat": null,<br>
-  "total_profit_ratio": null<br>
-}<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32348/api/v1/trades/42/reload<br>
-{"trade_id":42,"pair":"1000SATS/USDT:USDT","base_currency":"1000SATS","quote_currency":"USDT","is_open":false,"is_short":true,"exchange":"binance","amount":8501333.0,"amount_requested":8501333.42028184,"stake_amount":537.92184558,"max_stake_amount":2151.6873823,"strategy":"DWT_LongShort","enter_tag":"short_dwt_entry ","timeframe":5,"fee_open":0.0005,"fee_open_cost":1.07584369115,"fee_open_currency":"USDT","fee_close":0.00046842105263157895,"fee_close_cost":0.9631888399999999,"fee_close_currency":"USDT","open_date":"2024-05-02 08:29:46","open_timestamp":1714638586003,"open_fill_date":"2024-05-02 08:29:45","open_fill_timestamp":1714638585884,"open_rate":0.0002531,"open_rate_requested":0.0002531,"open_trade_value":2150.61153861,"close_date":"2024-05-02 08:43:38","close_timestamp":1714639418204,"close_rate":0.0002516,"close_rate_requested":0.0002516,"close_profit":0.019853391946189892,"close_profit_pct":1.99,"close_profit_abs":10.67423345,"profit_ratio":0.019853391946189892,"profit_pct":1.99,"profit_abs":10.67423345,"profit_fiat":null,"realized_profit":10.67423345,"realized_profit_ratio":0.019853391946189892,"exit_reason":"short_notrend_roi","exit_order_status":"closed","stop_loss_abs":0.0003157,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.0003156,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.0002516,"max_rate":0.0002531,"has_open_orders":false,"orders":[{"pair":"1000SATS/USDT:USDT","order_id":"2278476184","status":"closed","remaining":0.0,"amount":8501333.0,"safe_price":0.0002531,"cost":2151.6873823,"filled":8501333.0,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714638585884,"order_filled_timestamp":1714638585884,"ft_fee_base":null,"ft_order_tag":"short_dwt_entry "},{"pair":"1000SATS/USDT:USDT","order_id":"2278574834","status":"closed","remaining":0.0,"amount":8501333.0,"safe_price":0.0002516,"cost":2138.9353828,"filled":8501333.0,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1714639418200,"order_filled_timestamp":1714639418204,"ft_fee_base":null,"ft_order_tag":"short_notrend_roi"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.0003087415,"funding_fees":0.0,"trading_mode":"futures","amount_precision":0.0,"price_precision":7.0,"precision_mode":2,"stoploss_current_dist":0.00006409999999999999,"stoploss_current_dist_pct":25.48,"stoploss_current_dist_ratio":0.25476948,"stoploss_entry_dist":-534.51647109,"stoploss_entry_dist_ratio":-0.99416647,"current_rate":0.0002516,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 42,<br>
-  "pair": "1000SATS/USDT:USDT",<br>
-  "base_currency": "1000SATS",<br>
-  "quote_currency": "USDT",<br>
-  "is_open": false,<br>
-  "is_short": true,<br>
-  "exchange": "binance",<br>
-  "amount": 8501333,<br>
-  "amount_requested": 8501333.42028184,<br>
-  "stake_amount": 537.92184558,<br>
-  "max_stake_amount": 2151.6873823,<br>
-  "strategy": "DWT_LongShort",<br>
-  "enter_tag": "short_dwt_entry ",<br>
-  "timeframe": 5,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 1.07584369115,<br>
-  "fee_open_currency": "USDT",<br>
-  "fee_close": 0.00046842105263157895,<br>
-  "fee_close_cost": 0.9631888399999999,<br>
-  "fee_close_currency": "USDT",<br>
-  "open_date": "2024-05-02 08:29:46",<br>
-  "open_timestamp": 1714638586003,<br>
-  "open_fill_date": "2024-05-02 08:29:45",<br>
-  "open_fill_timestamp": 1714638585884,<br>
-  "open_rate": 0.0002531,<br>
-  "open_rate_requested": 0.0002531,<br>
-  "open_trade_value": 2150.61153861,<br>
   "close_date": "2024-05-02 08:43:38",<br>
   "close_timestamp": 1714639418204,<br>
   "close_rate": 0.0002516,<br>
@@ -4070,12 +3771,314 @@ Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-bearish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32343/api/v1/status<br>
 curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32343/api/v1/trades/9/reload<br>
-<br><br><hr>##++<br>
+{"trade_id":9,"pair":"IOTA/USDT:USDT","base_currency":"IOTA","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":2982.7,"amount_requested":2982.78053241,"stake_amount":156.3680475,"max_stake_amount":625.47219,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":60,"fee_open":0.0005,"fee_open_cost":0.312736095,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-05-02 07:00:38","open_timestamp":1714633238444,"open_fill_date":"2024-05-02 07:00:38","open_fill_timestamp":1714633238326,"open_rate":0.2097,"open_rate_requested":0.2097,"open_trade_value":625.1594539,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.0960468,"profit_pct":-9.6,"profit_abs":-15.01114087,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.2616,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.2616,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.2095,"max_rate":0.2151,"has_open_orders":false,"orders":[{"pair":"IOTA/USDT:USDT","order_id":"7649912179","status":"closed","remaining":0.0,"amount":2982.7,"safe_price":0.2097,"cost":625.47219,"filled":2982.7,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714633238326,"order_filled_timestamp":1714633238326,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.2561495755,"funding_fees":0.23686894,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.046999999999999986,"stoploss_current_dist_pct":21.9,"stoploss_current_dist_ratio":0.21901212,"stoploss_entry_dist":-155.26813431,"stoploss_entry_dist_ratio":-0.9934626,"current_rate":0.2146,"total_profit_abs":-15.01114087,"total_profit_fiat":null,"total_profit_ratio":-0.09599877}{<br>
+  "trade_id": 9,<br>
+  "pair": "IOTA/USDT:USDT",<br>
+  "base_currency": "IOTA",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 2982.7,<br>
+  "amount_requested": 2982.78053241,<br>
+  "stake_amount": 156.3680475,<br>
+  "max_stake_amount": 625.47219,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 60,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.312736095,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-05-02 07:00:38",<br>
+  "open_timestamp": 1714633238444,<br>
+  "open_fill_date": "2024-05-02 07:00:38",<br>
+  "open_fill_timestamp": 1714633238326,<br>
+  "open_rate": 0.2097,<br>
+  "open_rate_requested": 0.2097,<br>
+  "open_trade_value": 625.1594539,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": -0.09947177,<br>
+  "profit_pct": -9.95,<br>
+  "profit_abs": -15.54642894,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 0.2616,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 0.2616,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 0.2095,<br>
+  "max_rate": 0.2151,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "IOTA/USDT:USDT",<br>
+      "order_id": "7649912179",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 2982.7,<br>
+      "safe_price": 0.2097,<br>
+      "cost": 625.47219,<br>
+      "filled": 2982.7,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714633238326,<br>
+      "order_filled_timestamp": 1714633238326,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 0.2561495755,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 1,<br>
+  "price_precision": 4,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 0.0469,<br>
+  "stoploss_current_dist_pct": 21.84,<br>
+  "stoploss_current_dist_ratio": 0.21844434,<br>
+  "stoploss_entry_dist": -155.50500326,<br>
+  "stoploss_entry_dist_ratio": -0.99497818,<br>
+  "current_rate": 0.2147,<br>
+  "total_profit_abs": -15.54642894,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.09942203<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32343/api/v1/trades/10/reload<br>
+{"trade_id":10,"pair":"ALGO/USDT:USDT","base_currency":"ALGO","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":3559.2,"amount_requested":3559.25390342,"stake_amount":156.24888,"max_stake_amount":624.99552,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":60,"fee_open":0.0005,"fee_open_cost":0.31249776,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":1.1829839899999999,"fee_close_currency":"USDT","open_date":"2024-05-02 07:01:18","open_timestamp":1714633278458,"open_fill_date":"2024-05-02 07:01:18","open_fill_timestamp":1714633278336,"open_rate":0.1756,"open_rate_requested":0.1756,"open_trade_value":624.68302224,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":-4.96,"close_profit_abs":-7.7404794,"profit_ratio":-0.11573099,"profit_pct":-11.57,"profit_abs":-18.07379556,"profit_fiat":null,"realized_profit":-7.7404794,"realized_profit_ratio":-0.04956420536126655,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":0.219,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.219,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.1755,"max_rate":0.1806,"has_open_orders":false,"orders":[{"pair":"ALGO/USDT:USDT","order_id":"10524454513","status":"closed","remaining":0.0,"amount":3559.2,"safe_price":0.1756,"cost":624.99552,"filled":3559.2,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714633278336,"order_filled_timestamp":1714633278336,"ft_fee_base":null,"ft_order_tag":""},{"pair":"ALGO/USDT:USDT","order_id":"10524677353","status":"closed","remaining":0.0,"amount":13443.0,"safe_price":0.176,"cost":2365.968,"filled":13443.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714637103142,"order_filled_timestamp":1714637103000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.21492886949999998,"funding_fees":0.0,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.038500000000000006,"stoploss_current_dist_pct":21.33,"stoploss_current_dist_ratio":0.2132964,"stoploss_entry_dist":-155.17151016,"stoploss_entry_dist_ratio":-0.99360158,"current_rate":0.1805,"total_profit_abs":-25.81427496,"total_profit_fiat":null,"total_profit_ratio":-0.16521254}{<br>
+  "trade_id": 10,<br>
+  "pair": "ALGO/USDT:USDT",<br>
+  "base_currency": "ALGO",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 3559.2,<br>
+  "amount_requested": 3559.25390342,<br>
+  "stake_amount": 156.24888,<br>
+  "max_stake_amount": 624.99552,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 60,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.31249776,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": 1.1829839899999999,<br>
+  "fee_close_currency": "USDT",<br>
+  "open_date": "2024-05-02 07:01:18",<br>
+  "open_timestamp": 1714633278458,<br>
+  "open_fill_date": "2024-05-02 07:01:18",<br>
+  "open_fill_timestamp": 1714633278336,<br>
+  "open_rate": 0.1756,<br>
+  "open_rate_requested": 0.1756,<br>
+  "open_trade_value": 624.68302224,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": -4.96,<br>
+  "close_profit_abs": -7.7404794,<br>
+  "profit_ratio": -0.11573099,<br>
+  "profit_pct": -11.57,<br>
+  "profit_abs": -18.07379556,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": -7.7404794,<br>
+  "realized_profit_ratio": -0.04956420536126655,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 0.219,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 0.219,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 0.1755,<br>
+  "max_rate": 0.1806,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ALGO/USDT:USDT",<br>
+      "order_id": "10524454513",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 3559.2,<br>
+      "safe_price": 0.1756,<br>
+      "cost": 624.99552,<br>
+      "filled": 3559.2,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714633278336,<br>
+      "order_filled_timestamp": 1714633278336,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    },<br>
+    {<br>
+      "pair": "ALGO/USDT:USDT",<br>
+      "order_id": "10524677353",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 13443,<br>
+      "safe_price": 0.176,<br>
+      "cost": 2365.968,<br>
+      "filled": 13443,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714637103142,<br>
+      "order_filled_timestamp": 1714637103000,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": null<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 0.21492886949999998,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 1,<br>
+  "price_precision": 4,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 0.038500000000000006,<br>
+  "stoploss_current_dist_pct": 21.33,<br>
+  "stoploss_current_dist_ratio": 0.2132964,<br>
+  "stoploss_entry_dist": -155.17151016,<br>
+  "stoploss_entry_dist_ratio": -0.99360158,<br>
+  "current_rate": 0.1805,<br>
+  "total_profit_abs": -25.81427496,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.16521254<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32343/api/v1/trades/11/reload<br>
+{"trade_id":11,"pair":"ETH/USDT:USDT","base_currency":"ETH","quote_currency":"USDT","is_open":true,"is_short":true,"exchange":"binance","amount":0.332,"amount_requested":0.332377,"stake_amount":242.11847,"max_stake_amount":968.47388,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":60,"fee_open":0.0005,"fee_open_cost":0.48423694,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":null,"fee_close_currency":null,"open_date":"2024-05-02 08:00:40","open_timestamp":1714636840422,"open_fill_date":"2024-05-02 08:00:40","open_fill_timestamp":1714636840304,"open_rate":2917.09,"open_rate_requested":2915.79,"open_trade_value":967.98964306,"close_date":null,"close_timestamp":null,"close_rate":null,"close_rate_requested":null,"close_profit":null,"close_profit_pct":null,"close_profit_abs":null,"profit_ratio":-0.10432544,"profit_pct":-10.43,"profit_abs":-25.24648682,"profit_fiat":null,"realized_profit":0.0,"realized_profit_ratio":null,"exit_reason":null,"exit_order_status":null,"stop_loss_abs":3639.06,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":3639.06,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":2917.09,"max_rate":3000.9,"has_open_orders":false,"orders":[{"pair":"ETH/USDT:USDT","order_id":"8389765677715474628","status":"closed","remaining":0.0,"amount":0.332,"safe_price":2917.09,"cost":968.47388,"filled":0.332,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714636840304,"order_filled_timestamp":1714636840304,"ft_fee_base":null,"ft_order_tag":""}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":3589.36258288,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":648.8800000000001,"stoploss_current_dist_pct":21.7,"stoploss_current_dist_ratio":0.21700366,"stoploss_entry_dist":-240.7823609,"stoploss_entry_dist_ratio":-0.99497908,"current_rate":2990.18,"total_profit_abs":-25.24648682,"total_profit_fiat":null,"total_profit_ratio":-0.10427328}{<br>
+  "trade_id": 11,<br>
+  "pair": "ETH/USDT:USDT",<br>
+  "base_currency": "ETH",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": true,<br>
+  "is_short": true,<br>
+  "exchange": "binance",<br>
+  "amount": 0.332,<br>
+  "amount_requested": 0.332377,<br>
+  "stake_amount": 242.11847,<br>
+  "max_stake_amount": 968.47388,<br>
+  "strategy": "AdxSmasS_v7",<br>
+  "enter_tag": "",<br>
+  "timeframe": 60,<br>
+  "fee_open": 0.0005,<br>
+  "fee_open_cost": 0.48423694,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0005,<br>
+  "fee_close_cost": null,<br>
+  "fee_close_currency": null,<br>
+  "open_date": "2024-05-02 08:00:40",<br>
+  "open_timestamp": 1714636840422,<br>
+  "open_fill_date": "2024-05-02 08:00:40",<br>
+  "open_fill_timestamp": 1714636840304,<br>
+  "open_rate": 2917.09,<br>
+  "open_rate_requested": 2915.79,<br>
+  "open_trade_value": 967.98964306,<br>
+  "close_date": null,<br>
+  "close_timestamp": null,<br>
+  "close_rate": null,<br>
+  "close_rate_requested": null,<br>
+  "close_profit": null,<br>
+  "close_profit_pct": null,<br>
+  "close_profit_abs": null,<br>
+  "profit_ratio": -0.10422936,<br>
+  "profit_pct": -10.42,<br>
+  "profit_abs": -25.2232352,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0,<br>
+  "realized_profit_ratio": null,<br>
+  "exit_reason": null,<br>
+  "exit_order_status": null,<br>
+  "stop_loss_abs": 3639.06,<br>
+  "stop_loss_ratio": -0.99,<br>
+  "stop_loss_pct": -99,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 3639.06,<br>
+  "initial_stop_loss_ratio": -0.99,<br>
+  "initial_stop_loss_pct": -99,<br>
+  "min_rate": 2917.09,<br>
+  "max_rate": 3000.9,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "8389765677715474628",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.332,<br>
+      "safe_price": 2917.09,<br>
+      "cost": 968.47388,<br>
+      "filled": 0.332,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1714636840304,<br>
+      "order_filled_timestamp": 1714636840304,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 3589.36258288,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 648.9499999999998,<br>
+  "stoploss_current_dist_pct": 21.7,<br>
+  "stoploss_current_dist_ratio": 0.21703215,<br>
+  "stoploss_entry_dist": -240.7823609,<br>
+  "stoploss_entry_dist_ratio": -0.99497908,<br>
+  "current_rate": 2990.11,<br>
+  "total_profit_abs": -25.2232352,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": -0.10417725<br>
+}<br>
+Reload Trades...<br>
+Found quick parameter, dont creating node port for API access<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-bearish, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32343/api/v1/trades<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32343/api/v1/trades/1/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32343/api/v1/trades/2/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32343/api/v1/trades/3/reload<br>
+Internal Server Errorparse error: Invalid numeric literal at line 1, column 9<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32343/api/v1/trades/4/reload<br>
+{"trade_id":4,"pair":"HIGH/USDT:USDT","base_currency":"HIGH","quote_currency":"USDT","is_open":false,"is_short":true,"exchange":"binance","amount":269.9,"amount_requested":110.82650189,"stake_amount":220.99385625,"max_stake_amount":3926.65271903,"strategy":"AdxSmasS_v7","enter_tag":"","timeframe":60,"fee_open":0.0005,"fee_open_cost":0.441987712495,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":0.19112006,"fee_close_currency":"USDT","open_date":"2024-05-01 16:01:10","open_timestamp":1714579270022,"open_fill_date":"2024-05-01 16:01:09","open_fill_timestamp":1714579269902,"open_rate":3.3753389,"open_rate_requested":3.4796,"open_trade_value":883.53343728,"close_date":"2024-05-02 04:18:31","close_timestamp":1714623511000,"close_rate":3.3587,"close_rate_requested":3.4517,"close_profit":0.02494568793720079,"close_profit_pct":2.49,"close_profit_abs":24.47601921,"profit_ratio":0.02494568793720079,"profit_pct":2.49,"profit_abs":24.47601921,"profit_fiat":null,"realized_profit":24.47601921,"realized_profit_ratio":0.02494568793720079,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":4.0858,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":4.3435,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":3.4517,"max_rate":3.6181,"has_open_orders":false,"orders":[{"pair":"HIGH/USDT:USDT","order_id":"1818968620","status":"closed","remaining":0.0,"amount":110.8,"safe_price":3.4817702,"cost":385.78014,"filled":110.8,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714579269902,"order_filled_timestamp":1714579269902,"ft_fee_base":null,"ft_order_tag":""},{"pair":"HIGH/USDT:USDT","order_id":"1820219783","status":"closed","remaining":0.0,"amount":110.8,"safe_price":3.4498208,"cost":382.24014,"filled":110.8,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1714588611579,"order_filled_timestamp":1714588611579,"ft_fee_base":null,"ft_order_tag":"roi"},{"pair":"HIGH/USDT:USDT","order_id":"1819759178","status":"closed","remaining":0.0,"amount":306.6,"safe_price":3.5577091,"cost":1090.79362,"filled":306.6,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714585860321,"order_filled_timestamp":1714585860000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"HIGH/USDT:USDT","order_id":"1820049989","status":"closed","remaining":0.0,"amount":306.6,"safe_price":3.5465995,"cost":1087.38741,"filled":306.6,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1714587517513,"order_filled_timestamp":1714587517000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"HIGH/USDT:USDT","order_id":"1820266535","status":"closed","remaining":0.0,"amount":440.2,"safe_price":3.4578,"cost":1522.12356,"filled":440.2,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1714588859943,"order_filled_timestamp":1714588859000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"HIGH/USDT:USDT","order_id":"1820281116","status":"closed","remaining":0.0,"amount":440.2,"safe_price":3.4963085,"cost":1539.075,"filled":440.2,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1714588923944,"order_filled_timestamp":1714588923000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"HIGH/USDT:USDT","order_id":"1823531417","status":"closed","remaining":0.0,"amount":269.9,"safe_price":3.3753389,"cost":911.00396,"filled":269.9,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1714619233143,"order_filled_timestamp":1714619233000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"HIGH/USDT:USDT","order_id":"1824020229","status":"closed","remaining":0.0,"amount":269.9,"safe_price":3.3587,"cost":906.51313,"filled":269.9,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1714623508452,"order_filled_timestamp":1714623511000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":4.091810399555391,"funding_fees":0.0,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":0.7271000000000001,"stoploss_current_dist_pct":21.65,"stoploss_current_dist_ratio":0.21648257,"stoploss_entry_dist":-219.77536143,"stoploss_entry_dist_ratio":-0.99498379,"current_rate":3.3587,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}<br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingRestartAllTrader.sh.log>dsTradingRestartAllTrader.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-{<br>
   "status": "already running"<br>
 }<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures POST start<br>
@@ -4575,15 +4578,21 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32352/api/
 }<br>
 --------- Restarted 19 bots....<br>
 "Finished at: 20240502-110517"<br>
+20240502-111001<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTakeProfit.sh.log>dsTradingTakeProfit.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-[31mIgnoring tradeid 19 with PAIR=HIGH/USDT:USDT because profit absolut -817.49 is less then profit to take 42694.60[0m<br>
+[0;32mNew Profit to take calculation for bot: binance-futures-dryrun-bullish, pair: HIGH/USDT:USDT : PROFIT_TO_TAKE=stake_amout*PROFIT_RATIO=853892*0.05=42694.60[0m<br>
+-----------------------------------------------------------------------<br>
+-----------------------------------------------------------------------<br>
+Trying Taking Profit for Bot binance-futures-dryrun-bullish with ForceExit with Minimum Profit of 42694.60<br>
+-----------------------------------------------------------------------<br>
+[31mIgnoring tradeid 19 with PAIR=HIGH/USDT:USDT because profit absolut -736.93 is less then profit to take 42694.60[0m<br>
 [33mAdd tradeid 19 with PAIR=HIGH/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:06:54 PAIR=HIGH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-dryrun-bullish TRADEID=19 PROFIT_ABS=-817.49 OPEN_RATE=3.37 CURRENT_RATE=3.69 MAX_STAKE_AMOUNT=853892 PROFIT_TO_TAKE=42694.60 API_KEY= API_SECRET=<br>
+TIMESTAMP=2024-05-02:11:09:14 PAIR=HIGH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-dryrun-bullish TRADEID=19 PROFIT_ABS=-736.93 OPEN_RATE=3.37 CURRENT_RATE=3.66 MAX_STAKE_AMOUNT=853892 PROFIT_TO_TAKE=42694.60 API_KEY= API_SECRET=<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-dryrun-long-strategy, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4614,11 +4623,11 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-larissa, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v1/status<br>
-TRADE_PROFIT_ROW=3#-103.20354259#LTC/USDT:USDT#28.11#4#76.72#80.34#215702#94.49#-510.5#true#53925<br>
-[0;32mPROFIT_ABS=-103.20[0m<br>
+TRADE_PROFIT_ROW=3#-101.2345786#LTC/USDT:USDT#28.11#4#76.72#80.27#215702#94.49#-510.5#true#53925<br>
+[0;32mPROFIT_ABS=-101.23[0m<br>
 [34mamount: 28.11[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 80.34[0m<br>
+[34mcurrent_rate: 80.27[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 215702[0m<br>
 [34mstake_amount: 53925[0m<br>
@@ -4635,10 +4644,10 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32331/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures-larissa with ForceExit with Minimum Profit of 2696.25<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 3 with PAIR=LTC/USDT:USDT because profit absolut -103.20 is less then profit to take 2696.25[0m<br>
+[31mIgnoring tradeid 3 with PAIR=LTC/USDT:USDT because profit absolut -101.23 is less then profit to take 2696.25[0m<br>
 [33mAdd tradeid 3 with PAIR=LTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:06:55 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=3 PROFIT_ABS=-103.20 OPEN_RATE=76.72 CURRENT_RATE=80.34 MAX_STAKE_AMOUNT=53925 PROFIT_TO_TAKE=2696.25 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-05-02:11:09:15 PAIR=LTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-larissa TRADEID=3 PROFIT_ABS=-101.23 OPEN_RATE=76.72 CURRENT_RATE=80.27 MAX_STAKE_AMOUNT=53925 PROFIT_TO_TAKE=2696.25 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-michael-longshort, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4649,11 +4658,11 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-michael-longshort, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v1/status<br>
-TRADE_PROFIT_ROW=21#86.47226205#DOT/USDT:USDT#254.6#10#6.68#7.03#170108#7.88#-170.04#false#17011<br>
-[0;32mPROFIT_ABS=86.47[0m<br>
+TRADE_PROFIT_ROW=21#92.32513415#DOT/USDT:USDT#254.6#10#6.68#7.05#170108#7.88#-170.04#false#17011<br>
+[0;32mPROFIT_ABS=92.33[0m<br>
 [34mamount: 254.6[0m<br>
 [34mleverage: 10[0m<br>
-[34mcurrent_rate: 7.03[0m<br>
+[34mcurrent_rate: 7.05[0m<br>
 [34mis_short: false[0m<br>
 [34mmax_stake_amount: 170108[0m<br>
 [34mstake_amount: 17011[0m<br>
@@ -4664,26 +4673,21 @@ setBotVariables binance-futures-michael-longshort<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-futures-michael-longshort, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v1/balance<br>
-20240502-110701<br>
-Running Take Profit already? RUNNING=msantana 1651230 1651226  0 11:06 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh<br>
-msantana 1656390 1651230  0 11:06 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh<br>
-[31mTake Profit already running, exiting[0m<br>
-"Finished at 20240502-110701"<br>
 [31mNo profit to take parameter, calculating by formula[0m<br>
 [0;32mNew Profit to take calculation for bot: binance-futures-michael-longshort, pair: DOT/USDT:USDT : PROFIT_TO_TAKE=stake_amout*PROFIT_RATIO=17011*0.05=850.55[0m<br>
 -----------------------------------------------------------------------<br>
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures-michael-longshort with ForceExit with Minimum Profit of 850.55<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 21 with PAIR=DOT/USDT:USDT because profit absolut 86.47 is less then profit to take 850.55[0m<br>
+[31mIgnoring tradeid 21 with PAIR=DOT/USDT:USDT because profit absolut 92.33 is less then profit to take 850.55[0m<br>
 [33mAdd tradeid 21 with PAIR=DOT/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:13 PAIR=DOT/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-michael-longshort TRADEID=21 PROFIT_ABS=86.47 OPEN_RATE=6.68 CURRENT_RATE=7.03 MAX_STAKE_AMOUNT=17011 PROFIT_TO_TAKE=850.55 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=32#-27.28015154#WIF/USDT:USDT#203.9#4#2.6#2.73#53021#3.17#-131.79#true#13255<br>
-[0;32mPROFIT_ABS=-27.28[0m<br>
+TIMESTAMP=2024-05-02:11:09:16 PAIR=DOT/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-michael-longshort TRADEID=21 PROFIT_ABS=92.33 OPEN_RATE=6.68 CURRENT_RATE=7.05 MAX_STAKE_AMOUNT=17011 PROFIT_TO_TAKE=850.55 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=32#-29.4833726#WIF/USDT:USDT#203.9#4#2.6#2.74#53021#3.17#-131.79#true#13255<br>
+[0;32mPROFIT_ABS=-29.48[0m<br>
 [34mamount: 203.9[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 2.73[0m<br>
+[34mcurrent_rate: 2.74[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 53021[0m<br>
 [34mstake_amount: 13255[0m<br>
@@ -4700,15 +4704,15 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures-michael-longshort with ForceExit with Minimum Profit of 662.75<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 32 with PAIR=WIF/USDT:USDT because profit absolut -27.28 is less then profit to take 662.75[0m<br>
+[31mIgnoring tradeid 32 with PAIR=WIF/USDT:USDT because profit absolut -29.48 is less then profit to take 662.75[0m<br>
 [33mAdd tradeid 32 with PAIR=WIF/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:14 PAIR=WIF/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-michael-longshort TRADEID=32 PROFIT_ABS=-27.28 OPEN_RATE=2.6 CURRENT_RATE=2.73 MAX_STAKE_AMOUNT=13255 PROFIT_TO_TAKE=662.75 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=34#-0.9440304#PENDLE/USDT:USDT#24#4#4.32#4.35#10361#5.26#-25.76#true#2590<br>
-[0;32mPROFIT_ABS=-0.94[0m<br>
+TIMESTAMP=2024-05-02:11:09:17 PAIR=WIF/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-michael-longshort TRADEID=32 PROFIT_ABS=-29.48 OPEN_RATE=2.6 CURRENT_RATE=2.74 MAX_STAKE_AMOUNT=13255 PROFIT_TO_TAKE=662.75 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=34#-0.7687428#PENDLE/USDT:USDT#24#4#4.32#4.34#10361#5.26#-25.76#true#2590<br>
+[0;32mPROFIT_ABS=-0.77[0m<br>
 [34mamount: 24[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 4.35[0m<br>
+[34mcurrent_rate: 4.34[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 10361[0m<br>
 [34mstake_amount: 2590[0m<br>
@@ -4725,10 +4729,10 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32347/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-futures-michael-longshort with ForceExit with Minimum Profit of 129.50<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 34 with PAIR=PENDLE/USDT:USDT because profit absolut -0.94 is less then profit to take 129.50[0m<br>
+[31mIgnoring tradeid 34 with PAIR=PENDLE/USDT:USDT because profit absolut -0.77 is less then profit to take 129.50[0m<br>
 [33mAdd tradeid 34 with PAIR=PENDLE/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:14 PAIR=PENDLE/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-michael-longshort TRADEID=34 PROFIT_ABS=-0.94 OPEN_RATE=4.32 CURRENT_RATE=4.35 MAX_STAKE_AMOUNT=2590 PROFIT_TO_TAKE=129.50 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-05-02:11:09:17 PAIR=PENDLE/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-futures-michael-longshort TRADEID=34 PROFIT_ABS=-0.77 OPEN_RATE=4.32 CURRENT_RATE=4.34 MAX_STAKE_AMOUNT=2590 PROFIT_TO_TAKE=129.50 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4739,11 +4743,11 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-juliano-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v1/status<br>
-TRADE_PROFIT_ROW=8#-102.97995098#ORDI/USDT:USDT#53.5#4#32.68#34.57#174813#40.18#-433.45#true#43703<br>
-[0;32mPROFIT_ABS=-102.98[0m<br>
+TRADE_PROFIT_ROW=8#-99.82187273#ORDI/USDT:USDT#53.5#4#32.68#34.51#174813#40.18#-433.45#true#43703<br>
+[0;32mPROFIT_ABS=-99.82[0m<br>
 [34mamount: 53.5[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 34.57[0m<br>
+[34mcurrent_rate: 34.51[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 174813[0m<br>
 [34mstake_amount: 43703[0m<br>
@@ -4760,12 +4764,12 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 2185.15<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 8 with PAIR=ORDI/USDT:USDT because profit absolut -102.98 is less then profit to take 2185.15[0m<br>
+[31mIgnoring tradeid 8 with PAIR=ORDI/USDT:USDT because profit absolut -99.82 is less then profit to take 2185.15[0m<br>
 [33mAdd tradeid 8 with PAIR=ORDI/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:15 PAIR=ORDI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=8 PROFIT_ABS=-102.98 OPEN_RATE=32.68 CURRENT_RATE=34.57 MAX_STAKE_AMOUNT=43703 PROFIT_TO_TAKE=2185.15 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=9#-37.26499317#DOT/USDT:USDT#84.2#4#6.61#7.05#351079#7.76#-122.66#true#13923<br>
-[0;32mPROFIT_ABS=-37.26[0m<br>
+TIMESTAMP=2024-05-02:11:09:18 PAIR=ORDI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=8 PROFIT_ABS=-99.82 OPEN_RATE=32.68 CURRENT_RATE=34.51 MAX_STAKE_AMOUNT=43703 PROFIT_TO_TAKE=2185.15 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=9#-37.18077633#DOT/USDT:USDT#84.2#4#6.61#7.05#351079#7.76#-122.66#true#13923<br>
+[0;32mPROFIT_ABS=-37.18[0m<br>
 [34mamount: 84.2[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 7.05[0m<br>
@@ -4785,12 +4789,12 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 696.15<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 9 with PAIR=DOT/USDT:USDT because profit absolut -37.26 is less then profit to take 696.15[0m<br>
+[31mIgnoring tradeid 9 with PAIR=DOT/USDT:USDT because profit absolut -37.18 is less then profit to take 696.15[0m<br>
 [33mAdd tradeid 9 with PAIR=DOT/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:15 PAIR=DOT/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=9 PROFIT_ABS=-37.26 OPEN_RATE=6.61 CURRENT_RATE=7.05 MAX_STAKE_AMOUNT=13923 PROFIT_TO_TAKE=696.15 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=13#-16.84177615#XRP/USDT:USDT#2629.8#4#0.51#0.52#134383#0.62#-333.63#true#33596<br>
-[0;32mPROFIT_ABS=-16.84[0m<br>
+TIMESTAMP=2024-05-02:11:09:18 PAIR=DOT/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=9 PROFIT_ABS=-37.18 OPEN_RATE=6.61 CURRENT_RATE=7.05 MAX_STAKE_AMOUNT=13923 PROFIT_TO_TAKE=696.15 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=13#-14.99999572#XRP/USDT:USDT#2629.8#4#0.51#0.52#134383#0.62#-333.63#true#33596<br>
+[0;32mPROFIT_ABS=-15.00[0m<br>
 [34mamount: 2629.8[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.52[0m<br>
@@ -4810,15 +4814,15 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 1679.80<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 13 with PAIR=XRP/USDT:USDT because profit absolut -16.84 is less then profit to take 1679.80[0m<br>
+[31mIgnoring tradeid 13 with PAIR=XRP/USDT:USDT because profit absolut -15.00 is less then profit to take 1679.80[0m<br>
 [33mAdd tradeid 13 with PAIR=XRP/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:16 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=13 PROFIT_ABS=-16.84 OPEN_RATE=0.51 CURRENT_RATE=0.52 MAX_STAKE_AMOUNT=33596 PROFIT_TO_TAKE=1679.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=14#-77.96816199#ETH/USDT:USDT#0.93#4#2912.23#2993.02#271128#3589.12#-670.95#true#67782<br>
-[0;32mPROFIT_ABS=-77.97[0m<br>
+TIMESTAMP=2024-05-02:11:09:18 PAIR=XRP/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=13 PROFIT_ABS=-15.00 OPEN_RATE=0.51 CURRENT_RATE=0.52 MAX_STAKE_AMOUNT=33596 PROFIT_TO_TAKE=1679.80 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=14#-72.92893363#ETH/USDT:USDT#0.93#4#2912.23#2987.61#271128#3589.12#-670.95#true#67782<br>
+[0;32mPROFIT_ABS=-72.93[0m<br>
 [34mamount: 0.93[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 2993.02[0m<br>
+[34mcurrent_rate: 2987.61[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 271128[0m<br>
 [34mstake_amount: 67782[0m<br>
@@ -4835,12 +4839,12 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 3389.10<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 14 with PAIR=ETH/USDT:USDT because profit absolut -77.97 is less then profit to take 3389.10[0m<br>
+[31mIgnoring tradeid 14 with PAIR=ETH/USDT:USDT because profit absolut -72.93 is less then profit to take 3389.10[0m<br>
 [33mAdd tradeid 14 with PAIR=ETH/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:16 PAIR=ETH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=14 PROFIT_ABS=-77.97 OPEN_RATE=2912.23 CURRENT_RATE=2993.02 MAX_STAKE_AMOUNT=67782 PROFIT_TO_TAKE=3389.10 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=15#-57.54573702#IOTA/USDT:USDT#11289.8#4#0.21#0.21#237079#0.26#-588.43#true#59270<br>
-[0;32mPROFIT_ABS=-57.55[0m<br>
+TIMESTAMP=2024-05-02:11:09:19 PAIR=ETH/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=14 PROFIT_ABS=-72.93 OPEN_RATE=2912.23 CURRENT_RATE=2987.61 MAX_STAKE_AMOUNT=67782 PROFIT_TO_TAKE=3389.10 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=15#-53.02755906#IOTA/USDT:USDT#11289.8#4#0.21#0.21#237079#0.26#-588.43#true#59270<br>
+[0;32mPROFIT_ABS=-53.03[0m<br>
 [34mamount: 11289.8[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.21[0m<br>
@@ -4860,15 +4864,15 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 2963.50<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 15 with PAIR=IOTA/USDT:USDT because profit absolut -57.55 is less then profit to take 2963.50[0m<br>
+[31mIgnoring tradeid 15 with PAIR=IOTA/USDT:USDT because profit absolut -53.03 is less then profit to take 2963.50[0m<br>
 [33mAdd tradeid 15 with PAIR=IOTA/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:17 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=15 PROFIT_ABS=-57.55 OPEN_RATE=0.21 CURRENT_RATE=0.21 MAX_STAKE_AMOUNT=59270 PROFIT_TO_TAKE=2963.50 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-TRADE_PROFIT_ROW=17#-6.7703335#BTC/USDT:USDT#0.01#4#57623.8#58242.9#57624#71009.57#-143.27#true#14406<br>
-[0;32mPROFIT_ABS=-6.77[0m<br>
+TIMESTAMP=2024-05-02:11:09:19 PAIR=IOTA/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=15 PROFIT_ABS=-53.03 OPEN_RATE=0.21 CURRENT_RATE=0.21 MAX_STAKE_AMOUNT=59270 PROFIT_TO_TAKE=2963.50 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TRADE_PROFIT_ROW=17#-5.792845#BTC/USDT:USDT#0.01#4#57623.8#58145.2#57624#71009.57#-143.27#true#14406<br>
+[0;32mPROFIT_ABS=-5.79[0m<br>
 [34mamount: 0.01[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 58242.9[0m<br>
+[34mcurrent_rate: 58145.2[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 57624[0m<br>
 [34mstake_amount: 14406[0m<br>
@@ -4885,10 +4889,10 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32334/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-juliano-futures with ForceExit with Minimum Profit of 720.30<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 17 with PAIR=BTC/USDT:USDT because profit absolut -6.77 is less then profit to take 720.30[0m<br>
+[31mIgnoring tradeid 17 with PAIR=BTC/USDT:USDT because profit absolut -5.79 is less then profit to take 720.30[0m<br>
 [33mAdd tradeid 17 with PAIR=BTC/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:17 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=17 PROFIT_ABS=-6.77 OPEN_RATE=57623.8 CURRENT_RATE=58242.9 MAX_STAKE_AMOUNT=14406 PROFIT_TO_TAKE=720.30 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
+TIMESTAMP=2024-05-02:11:09:20 PAIR=BTC/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-juliano-futures TRADEID=17 PROFIT_ABS=-5.79 OPEN_RATE=57623.8 CURRENT_RATE=58145.2 MAX_STAKE_AMOUNT=14406 PROFIT_TO_TAKE=720.30 API_KEY=b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm API_SECRET=tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
 dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 start --quick<br>
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-michael-futures-dry2, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
@@ -4919,8 +4923,8 @@ curl -s -X POST -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/
 Found quick parameter, dont creating node port for API access<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-shortlong-futures-dryrun, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v1/status<br>
-TRADE_PROFIT_ROW=34#-2862.34770289#UNFI/USDT:USDT#10915#4#3.33#3.59#3633604#4.02#-9009.95#true#908401<br>
-[0;32mPROFIT_ABS=-2862.35[0m<br>
+TRADE_PROFIT_ROW=34#-2916.94453289#UNFI/USDT:USDT#10915#4#3.33#3.59#3633604#4.02#-9009.95#true#908401<br>
+[0;32mPROFIT_ABS=-2916.94[0m<br>
 [34mamount: 10915[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 3.59[0m<br>
@@ -4940,15 +4944,15 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-shortlong-futures-dryrun with ForceExit with Minimum Profit of 45420.05<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 34 with PAIR=UNFI/USDT:USDT because profit absolut -2862.35 is less then profit to take 45420.05[0m<br>
+[31mIgnoring tradeid 34 with PAIR=UNFI/USDT:USDT because profit absolut -2916.94 is less then profit to take 45420.05[0m<br>
 [33mAdd tradeid 34 with PAIR=UNFI/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:18 PAIR=UNFI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=34 PROFIT_ABS=-2862.35 OPEN_RATE=3.33 CURRENT_RATE=3.59 MAX_STAKE_AMOUNT=908401 PROFIT_TO_TAKE=45420.05 API_KEY= API_SECRET=<br>
-TRADE_PROFIT_ROW=44#-2773.27289526#SOL/USDT:USDT#283#4#125.77#135.48#3559376#154.9#-8838.12#true#889844<br>
-[0;32mPROFIT_ABS=-2773.27[0m<br>
+TIMESTAMP=2024-05-02:11:09:21 PAIR=UNFI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=34 PROFIT_ABS=-2916.94 OPEN_RATE=3.33 CURRENT_RATE=3.59 MAX_STAKE_AMOUNT=908401 PROFIT_TO_TAKE=45420.05 API_KEY= API_SECRET=<br>
+TRADE_PROFIT_ROW=44#-2724.01119846#SOL/USDT:USDT#283#4#125.77#135.31#3559376#154.9#-8838.12#true#889844<br>
+[0;32mPROFIT_ABS=-2724.01[0m<br>
 [34mamount: 283[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 135.48[0m<br>
+[34mcurrent_rate: 135.31[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 3559376[0m<br>
 [34mstake_amount: 889844[0m<br>
@@ -4965,12 +4969,12 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-shortlong-futures-dryrun with ForceExit with Minimum Profit of 44492.20<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 44 with PAIR=SOL/USDT:USDT because profit absolut -2773.27 is less then profit to take 44492.20[0m<br>
+[31mIgnoring tradeid 44 with PAIR=SOL/USDT:USDT because profit absolut -2724.01 is less then profit to take 44492.20[0m<br>
 [33mAdd tradeid 44 with PAIR=SOL/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:19 PAIR=SOL/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=44 PROFIT_ABS=-2773.27 OPEN_RATE=125.77 CURRENT_RATE=135.48 MAX_STAKE_AMOUNT=889844 PROFIT_TO_TAKE=44492.20 API_KEY= API_SECRET=<br>
-TRADE_PROFIT_ROW=53#-1389.18845774#MYRO/USDT:USDT#250219#4#0.13#0.14#3325411#0.16#-8257.94#true#831353<br>
-[0;32mPROFIT_ABS=-1389.19[0m<br>
+TIMESTAMP=2024-05-02:11:09:21 PAIR=SOL/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=44 PROFIT_ABS=-2724.01 OPEN_RATE=125.77 CURRENT_RATE=135.31 MAX_STAKE_AMOUNT=889844 PROFIT_TO_TAKE=44492.20 API_KEY= API_SECRET=<br>
+TRADE_PROFIT_ROW=53#-1494.32247453#MYRO/USDT:USDT#250219#4#0.13#0.14#3325411#0.16#-8257.94#true#831353<br>
+[0;32mPROFIT_ABS=-1494.32[0m<br>
 [34mamount: 250219[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.14[0m<br>
@@ -4990,15 +4994,15 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-shortlong-futures-dryrun with ForceExit with Minimum Profit of 41567.65<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 53 with PAIR=MYRO/USDT:USDT because profit absolut -1389.19 is less then profit to take 41567.65[0m<br>
+[31mIgnoring tradeid 53 with PAIR=MYRO/USDT:USDT because profit absolut -1494.32 is less then profit to take 41567.65[0m<br>
 [33mAdd tradeid 53 with PAIR=MYRO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:19 PAIR=MYRO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=53 PROFIT_ABS=-1389.19 OPEN_RATE=0.13 CURRENT_RATE=0.14 MAX_STAKE_AMOUNT=831353 PROFIT_TO_TAKE=41567.65 API_KEY= API_SECRET=<br>
-TRADE_PROFIT_ROW=54#-1015.11060081#ETHFI/USDT:USDT#8918.8#4#3.73#3.84#3326712#4.51#-8269#true#831678<br>
-[0;32mPROFIT_ABS=-1015.11[0m<br>
+TIMESTAMP=2024-05-02:11:09:21 PAIR=MYRO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=53 PROFIT_ABS=-1494.32 OPEN_RATE=0.13 CURRENT_RATE=0.14 MAX_STAKE_AMOUNT=831353 PROFIT_TO_TAKE=41567.65 API_KEY= API_SECRET=<br>
+TRADE_PROFIT_ROW=54#-1166.79084865#ETHFI/USDT:USDT#8918.8#4#3.73#3.86#3326712#4.51#-8269#true#831678<br>
+[0;32mPROFIT_ABS=-1166.79[0m<br>
 [34mamount: 8918.8[0m<br>
 [34mleverage: 4[0m<br>
-[34mcurrent_rate: 3.84[0m<br>
+[34mcurrent_rate: 3.86[0m<br>
 [34mis_short: true[0m<br>
 [34mmax_stake_amount: 3326712[0m<br>
 [34mstake_amount: 831678[0m<br>
@@ -5015,12 +5019,12 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-shortlong-futures-dryrun with ForceExit with Minimum Profit of 41583.90<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 54 with PAIR=ETHFI/USDT:USDT because profit absolut -1015.11 is less then profit to take 41583.90[0m<br>
+[31mIgnoring tradeid 54 with PAIR=ETHFI/USDT:USDT because profit absolut -1166.79 is less then profit to take 41583.90[0m<br>
 [33mAdd tradeid 54 with PAIR=ETHFI/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:19 PAIR=ETHFI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=54 PROFIT_ABS=-1015.11 OPEN_RATE=3.73 CURRENT_RATE=3.84 MAX_STAKE_AMOUNT=831678 PROFIT_TO_TAKE=41583.90 API_KEY= API_SECRET=<br>
-TRADE_PROFIT_ROW=55#-529.71115274#1000RATS/USDT:USDT#292388#4#0.11#0.12#3325329#0.14#-8257.69#true#831332<br>
-[0;32mPROFIT_ABS=-529.71[0m<br>
+TIMESTAMP=2024-05-02:11:09:22 PAIR=ETHFI/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=54 PROFIT_ABS=-1166.79 OPEN_RATE=3.73 CURRENT_RATE=3.86 MAX_STAKE_AMOUNT=831678 PROFIT_TO_TAKE=41583.90 API_KEY= API_SECRET=<br>
+TRADE_PROFIT_ROW=55#-558.96164826#1000RATS/USDT:USDT#292388#4#0.11#0.12#3325329#0.14#-8257.69#true#831332<br>
+[0;32mPROFIT_ABS=-558.96[0m<br>
 [34mamount: 292388[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.12[0m<br>
@@ -5040,12 +5044,12 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-shortlong-futures-dryrun with ForceExit with Minimum Profit of 41566.60<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 55 with PAIR=1000RATS/USDT:USDT because profit absolut -529.71 is less then profit to take 41566.60[0m<br>
+[31mIgnoring tradeid 55 with PAIR=1000RATS/USDT:USDT because profit absolut -558.96 is less then profit to take 41566.60[0m<br>
 [33mAdd tradeid 55 with PAIR=1000RATS/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:20 PAIR=1000RATS/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=55 PROFIT_ABS=-529.71 OPEN_RATE=0.11 CURRENT_RATE=0.12 MAX_STAKE_AMOUNT=831332 PROFIT_TO_TAKE=41566.60 API_KEY= API_SECRET=<br>
-TRADE_PROFIT_ROW=56#-587.60432328#ONDO/USDT:USDT#37167#4#0.75#0.77#2804993#0.92#-6964.29#true#701248<br>
-[0;32mPROFIT_ABS=-587.60[0m<br>
+TIMESTAMP=2024-05-02:11:09:22 PAIR=1000RATS/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=55 PROFIT_ABS=-558.96 OPEN_RATE=0.11 CURRENT_RATE=0.12 MAX_STAKE_AMOUNT=831332 PROFIT_TO_TAKE=41566.60 API_KEY= API_SECRET=<br>
+TRADE_PROFIT_ROW=56#-684.27717696#ONDO/USDT:USDT#37167#4#0.75#0.77#2804993#0.92#-6964.29#true#701248<br>
+[0;32mPROFIT_ABS=-684.28[0m<br>
 [34mamount: 37167[0m<br>
 [34mleverage: 4[0m<br>
 [34mcurrent_rate: 0.77[0m<br>
@@ -5065,13 +5069,13 @@ curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32344/api/v
 -----------------------------------------------------------------------<br>
 Trying Taking Profit for Bot binance-shortlong-futures-dryrun with ForceExit with Minimum Profit of 35062.40<br>
 -----------------------------------------------------------------------<br>
-[31mIgnoring tradeid 56 with PAIR=ONDO/USDT:USDT because profit absolut -587.60 is less then profit to take 35062.40[0m<br>
+[31mIgnoring tradeid 56 with PAIR=ONDO/USDT:USDT because profit absolut -684.28 is less then profit to take 35062.40[0m<br>
 [33mAdd tradeid 56 with PAIR=ONDO/USDT:USDT to history file history.allbots for further canary strategy evaluation[0m<br>
 ./history.allbots<br>
-TIMESTAMP=2024-05-02:11:07:20 PAIR=ONDO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=56 PROFIT_ABS=-587.60 OPEN_RATE=0.75 CURRENT_RATE=0.77 MAX_STAKE_AMOUNT=701248 PROFIT_TO_TAKE=35062.40 API_KEY= API_SECRET=<br>
+TIMESTAMP=2024-05-02:11:09:23 PAIR=ONDO/USDT:USDT TRADING_MODE=futures EXCHANGE=binance BOT=binance-shortlong-futures-dryrun TRADEID=56 PROFIT_ABS=-684.28 OPEN_RATE=0.75 CURRENT_RATE=0.77 MAX_STAKE_AMOUNT=701248 PROFIT_TO_TAKE=35062.40 API_KEY= API_SECRET=<br>
 cp history.allbots.last2days history.allbots<br>
-"Finished at 20240502-110720"<br>
-20240502-110801<br>
+"Finished at 20240502-110923"<br>
+20240502-111001<br>
 Running Take Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -5079,12 +5083,20 @@ Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Trans
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take <br>
-Backup takeprofit.allbots to takeprofit.allbots.20240502110801<br>
+Backup takeprofit.allbots to takeprofit.allbots.20240502111001<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+20240501-000001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-00-00...<br><br><br>
+.............................................................................................................................................................................................................................done.<br><br><br>
+"Finished at 20240501-000051"<br><br><br>
+20240501-050001<br><br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-05-00...<br><br><br>
+.100  466k  100  466k    0     0   348k      0  0:00:01  0:00:01 --:--:--  348k<br><br>
+....................................................................................................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240501-050100"<br><br><br>
 20240501-100001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-10-00...<br><br><br>
@@ -5096,8 +5108,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-15-00...<br><br><br>
 "Finished at 20240501-150045"<br><br><br>
 20240501-200001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-20-00...<br><br><br>
-...........................................................................................................................................................................................................100  469k  100  469k    0     0   318k      0  0:00:01  0:00:01 --:--:--  318k<br><br>
-............done.<br><br><br>
+.......................................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240501-200047"<br><br><br>
 20240502-000001<br><br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-02-05-2024-00-00...<br><br><br>
@@ -5112,10 +5123,10 @@ Creating snapshot(s) snapshot-wirsinddieguten-02-05-2024-10-00...<br><br><br>
 ...................................................................................................................................................................................................done.<br><br><br>
 "Finished at 20240502-100044"<br><br><br>
 </body></html><br><br>
--rw------- 1 msantana msantana 0 May  2 11:05 /tmp/tmp.0gzGrhhN7v<br><br>
+-rw------- 1 msantana msantana 0 May  2 11:07 /tmp/tmp.PigyASp4TN<br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br>
-"Finished at: 20240502-110611"<br><br>
-20240502-110701<br><br>
+"Finished at: 20240502-110708"<br><br>
+20240502-110801<br><br>
 Running already? RUNNING=<br><br>
 <br><br><hr>##++<br><br>
 + + + + + /tmp/<b id=<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a>><b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a></b><a href=#top>Top</a> + + + + <br><br>
@@ -5195,7 +5206,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-13-04-2024-05-00...<br><br>
 ..............................................................................................................................................................done.<br><br>
 "Finished at 20240413-050036"<br><br>
 20240413-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-13-04-2024-10-00...<br><br>
+Crea 93  463k   93  432k    0     0   283k      0  0:00:01  0:00:01 --:--:--  283kting snapshot(s) snapshot-wirsinddieguten-13-04-2024-10-00...<br><br>
 ..........................................................................................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240413-100102"<br><br>
 20240413-150001<br><br>
@@ -5528,7 +5539,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-29-04-2024-20-00...<br><br>
 "Finished at 20240429-200047"<br><br>
 20240430-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-30-04-2024-00-00...<br><br>
-............................................................................................................................................................................................................................................done.<br><br>
+............................................................................................................................100  463k  100  463k    0     0   304k      0  0:00:01  0:00:01 --:--:--  304k<br>
+................................................................................................................done.<br><br>
 "Finished at 20240430-000054"<br><br>
 20240430-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-30-04-2024-05-00...<br><br>
@@ -5552,8 +5564,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-00-00...<br><br>
 "Finished at 20240501-000051"<br><br>
 20240501-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-05-00...<br><br>
-.100  466k  100  466k    0     0   348k      0  0:00:01  0:00:01 --:--:--  348k<br>
-....................................................................................................................................................................................................................................................................................done.<br><br>
+.....................................................................................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240501-050100"<br><br>
 20240501-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-10-00...<br><br>
@@ -5570,20 +5581,13 @@ Creating snapshot(s) snapshot-wirsinddieguten-01-05-2024-20-00...<br><br>
 20240502-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-02-05-2024-00-00...<br><br>
 ..................................................................................................................................................................................................done.<br><br>
-"Finished at 20240502-000045"<br><br>
-20240502-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-02-05-2024-05-00...<br><br>
-.......................................................................................................................................................................................................................done.<br><br>
-"Finished at 20240502-050047"<br><br>
-20240502-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-02-05-2024-10-00...<br><br>
-...................................................................................................................................................................................................done.<br><br>
+"Finished at 20240502-00.<br><br>
 "Finished at 20240502-100044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 May  2 11:07 /tmp/tmp.PigyASp4TN<br>
+-rw------- 1 msantana msantana 0 May  2 11:09 /tmp/tmp.9fdAvDhPiq<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240502-110708"<br>
-20240502-110801<br>
+"Finished at: 20240502-110906"<br>
+20240502-111001<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -6047,4 +6051,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-02-05-2024-10-00...<br>
 ...................................................................................................................................................................................................done.<br>
 "Finished at 20240502-100044"<br>
 </body></html>
--rw------- 1 msantana msantana 0 May  2 11:08 /tmp/tmp.rjZMXgeTnd
+-rw------- 1 msantana msantana 0 May  2 11:10 /tmp/tmp.KW632Crw9B
