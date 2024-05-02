@@ -128,7 +128,7 @@ bot:
   debuglevel: -vvv
   enabled: true
   # DWT_LongShort only long futures
-  strategy_name: VolatilitySystem
+  strategy_name: DWT_LongShort_Long
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 # image:
