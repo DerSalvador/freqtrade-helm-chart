@@ -1,0 +1,268 @@
+---
+nostalgiaforinfinity:
+  holdtrades:
+    trade_pairs:
+      BTC/USDT: 0.3
+      ETH/USDT: 0.3
+      ADA/USDT: 0.1
+      ALGO/USDT: 0.1
+      APE/USDT: 0.1
+      ATOM/USDT: 0.1
+      AVAX/USDT: 0.1
+      BCH/USDT: 0.1
+      DAI/USDT: 0.1
+      DOGE/USDT: 0.1
+      DOT/USDT: 0.1
+      EOS/USDT: 0.1
+      EURT/USDT: 0.1
+      LINK/USDT: 0.1
+      LTC/USDT: 0.1
+      MANA/USDT: 0.1
+      MATIC/USDT: 0.1
+      SHIB/USDT: 0.1
+      SOL/USDT: 0.1
+      USDC/USDT: 0.1
+      USTC/USDT: 0.1
+      XMR/USDT: 0.1
+      XRP/USDT: 0.1
+      XTZ/USDT: 0.1
+
+config:
+  stake_amount: unlimited
+  minimal_roi:
+    "0": 0.03
+    "40160": 0.01
+    "80160": 0
+  timeframe: 5m
+  stoploss: -0.99
+  trailing_stop: false
+  trailing_only_offset_is_reached: true
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.03
+  use_custom_stoploss: false
+  has_downtime_protection: false
+  # Do you want to use the hold feature? (with hold-trades.json)
+  hold_support_enabled: true
+  # Run "populate_indicators()" only for new candle.
+  process_only_new_candles: true
+  # These values can be overridden in the "ask_strategy" section in the config.
+  use_exit_signal: false
+  exit_profit_only: false
+  ignore_roi_if_entry_signal: true
+  # Number of candles the strategy requires before producing valid signals
+  startup_candle_count: 800
+  stake_amount_type: quote_currency
+  entry_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1
+    price_last_balance: 0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: other
+    use_order_book: true
+    order_book_top: 1
+  dataformat_ohlcv: feather
+  dataformat_trades: feather
+  download_trades: false
+  dry_run: false
+  dry_run_wallet: 4000
+  position_adjustment_enable: false
+  trading_mode: spot
+  max_open_trades: 6
+  amend_last_stake_amount: true
+  stake_currency: USDT
+  tradable_balance_ratio: 0.99
+  # fiat_display_currency: USD
+  db_url: "sqlite:///user_data/tradesv3.sqlite"
+  cancel_open_orders_on_exit: false
+  order_types:
+    entry: "market"
+    force_entry: "market"
+    force_exit: "market"
+    exit: limit
+    stoploss: "market"
+    stoploss_on_exchange: false
+  # margin_mode: ""
+  unfilledtimeout:
+    entry: 10
+    exit: 30
+    exit_timeout_count: 0
+    unit: minutes
+  order_time_in_force:
+    entry: "FOK" # Fill or Kill ( all or nothinh )
+    exit: "GTC" # Good till canceled (partially filling)
+  exchange:
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 1000
+      options:
+        defaultType: spot
+        leverage: 10
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 1000
+      options:
+        defaultType: spot
+        leverage: 10
+    pair_blacklist: [
+      # Exchange
+      "(BNB)/.*",
+      # Leverage
+      ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*",
+      # Fiat
+      "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*",
+      # Stable
+      "(FDUSD|BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|VAI|UST|USTC|AUSD)/.*",
+      # FAN
+      "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CHZ|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*",
+      # Others
+      "(1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|LUNA|BTS|QKC|COS|ACA|FTT|SRM|YFII|SNM|BNX|ANC|AION|MIR|BNX|STG|HNT|WABI|QLC|NEBL|AUTO|VGX|PEPE|VITE|DREP|JASMY|PNT|PERL|AMB|OAX|LOOM|BTS|RAD|ID|PNT|NULS|MLN|MEME|TOKEN|TOMO|BTS|PERL|WTC)/.*"
+    ]
+
+  pairlists:
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://filekeys.com/remotepairlist-white-spot.json # https://remotepairlist.com?q=175979476d5fc223
+      processing_mode: append
+      mode: whitelist
+      sort_key: quoteVolume
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 60
+  freqai:
+    rl_config:
+      train_cycles: 25
+      add_state_info: true
+      max_trade_duration_candles: 300
+      max_training_drawdown_pct: 0.02
+      cpu_count: 8
+      model_type: PPO
+      policy_type: MlpPolicy
+      model_reward_parameters:
+        rr: 1
+        profit_aim: 0.5
+    enabled: false
+    fit_live_predictions_candles: 300
+    purge_old_models: true # 2
+    train_period_days: 30
+    identifier: unique-id
+    backtest_period_days: 7
+    live_retrain_hours: 0
+    feature_parameters:
+      include_timeframes:
+        - 15m
+        - 1h
+      include_corr_pairlist:
+        - ATOM/USDT
+        - MATIC/USDT
+        - ADA/USDT
+        - ALGO/USDT
+        - APE/USDT
+        - ATOM/USDT
+        - AVAX/USDT
+        - BCH/USDT
+        - BTC/USDT
+        - DAI/USDT
+        - DOGE/USDT
+        - DOT/USDT
+        - EOS/USDT
+        - ETH/USDT
+        - LINK/USDT
+        - LTC/USDT
+        - MANA/USDT
+        - MATIC/USDT
+        - SHIB/USDT
+        - SOL/USDT
+        - XMR/USDT
+        - XRP/USDT
+        - XTZ/USDT
+        - BTC/USDT:USDT
+        - ETH/USDT:USDT
+      label_period_candles: 20
+      include_shifted_candles: 2
+      DI_threshold: 0.9
+      weight_factor: 0.9
+      principal_component_analysis: false
+      use_SVM_to_remove_outliers: true
+      indicator_periods_candles:
+        - 3
+        - 10
+        - 20
+      plot_feature_importances: 0
+    data_split_parameters:
+      test_size: 0
+      random_state: 1
+    model_training_parameters:
+      n_estimators: 800
+  telegram:
+    keyboard:
+      - - /forcelong
+        - /balance
+        - /profit
+        - /reload_config
+        - /stopentry
+      - - /status table
+        - /performance
+        - /mix_tags
+        - /start
+        - /stop
+      - - /show_config
+        - /whitelist
+        - /logs
+        - /trades
+        - /forceexit
+  api_server:
+    enabled: true
+    listen_ip_address: 0.0.0.0
+    listen_port: 8084
+    verbosity: error
+    enable_openapi: true
+    jwt_secret_key: >
+      235573d45bb26d0cbf1986893b12d4aaf0cf4934f3566d9459d818ec7fbb851b
+    ws_token: acnQI1n44GG9lJ51fLKqWQvVJF5k5q7xsw
+    CORS_origins:
+      - "http://127.0.0.1:8084"
+      - "http://localhost:8084"
+      - "http://0.0.0.0:8084"
+    username: freqtrade
+    password: "&&Liz270117!!"
+  initial_state: running
+  force_entry_enable: true
+  internals:
+    process_throttle_secs: 5
+
+image:
+  base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+  tag: e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+
+bot:
+  webserver_deployment: false  
+  debug: false
+  debuglevel: -vvv
+  enabled: false
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor
+
+backtesting:
+  enabled: false
+  download_data: false
+  timerange:
+  timeframes: 1h
+  strategy_list: Strategy005
+  fee:
+  pvc_size: 1Gi
+  results:
+    enable_export: false
+    reader_enabled: false
+    pvc_size: 1Gi
+
+ingress:
+  enabled: false
+
+create_config_configmap: true
+create_strategies_configmap: true
+
+strategies: []
