@@ -2,7 +2,11 @@
 kubernetes:
   nodePort: 32331
 configcreds:
-  available_capital: 2000
+  available_capital: 3000
+  minimal_roi:
+    "0": 0.07
+    "40160": 0.01
+    "80160": 0    
   leverage: 4
   max_open_trades: 6
   trailing_stop: false
