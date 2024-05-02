@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32352
 configcreds:
   position_adjustment_enable: true
-  available_capital: 1000
+  available_capital: 2000
   max_open_trades: 6
   trading_mode: futures
   margin_mode: isolated
