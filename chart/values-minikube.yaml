@@ -230,7 +230,7 @@ config:
       - "http://0.0.0.0:8084"
     username: freqtrade
     password: "&&Liz270117!!"
-  initial_state: running
+  initial_state: stopped
   force_entry_enable: true
   internals:
     process_throttle_secs: 5
