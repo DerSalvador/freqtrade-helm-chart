@@ -86,7 +86,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityX4
+  strategy_name: DWT_LongShort
   pvc_size: 1Gi
   freqaimodel: ReinforcementLearner # LightGBMRegressor # 
 # image:

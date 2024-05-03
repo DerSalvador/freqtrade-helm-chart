@@ -154,7 +154,7 @@ bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: NostalgiaForInfinityX4
+  strategy_name: ChatGPT_DWT_LongShort
   pvc_size: 3Gi
   freqaimodel: ReinforcementLearner # LightGBMRegressor
 # image:
