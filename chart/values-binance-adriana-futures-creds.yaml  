@@ -3,10 +3,10 @@ kubernetes:
   nodePort: 32335
 
 configcreds:
-  available_capital: 2000 
+  available_capital: 3000 
   trading_mode: futures
   margin_mode: isolated
-  timeframe: 15m
+  timeframe: 5m
   bot_name: freqtrading-binance-adriana-futures
   exchange:
     ccxt_config:
@@ -80,7 +80,7 @@ configcreds:
       model_reward_parameters:
         rr: 1
         profit_aim: 0.5
-    enabled: true
+    enabled: false
     keras: true
     model_save_type: keras
     identifier: tf_dryrun_0.0.1
@@ -121,7 +121,7 @@ configcreds:
       dropout_rate: 0.3
 bot:
   enabled: true
-  strategy_name: DWT_LongShort # AdxSmasS_v7
+  strategy_name: DWT_LongShort
   freqaimodel: LightGBMRegressor
 
 # image:
