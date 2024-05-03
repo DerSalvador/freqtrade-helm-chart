@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32353
 configcreds:
   available_capital: 4000
-  position_adjustment_enable: true
+  position_adjustment_enable: false
   initial_state: stopped
   stoploss: -0.99
   trailing_stop: False
@@ -20,8 +20,6 @@ configcreds:
     stoploss_on_exchange_limit_ratio: 0.99
   use_custom_stoploss: false
   has_downtime_protection: false
-  position_adjustment_enable: false
-  available_capital: 10000
   max_open_trades: 6
   trading_mode: futures
   margin_mode: isolated
@@ -37,6 +35,24 @@ configcreds:
     enabled: true
     token: "6821988252:AAHjxy6esJK6F8J3ytbSckg85zkI5iSxMNQ"
     chat_id: "1759706931" # "5711830404"
+  pairlists:
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=1ee7096e9a6efa5c # bullish Futures  https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120      
+
 bot:
   debug: false
   debuglevel: -vvv
