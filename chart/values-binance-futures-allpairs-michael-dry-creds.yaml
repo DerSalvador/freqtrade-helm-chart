@@ -1,6 +1,6 @@
 ---
 kubernetes:
-  nodePort: 32348
+  nodePort: 32349
 configcreds:
   # DWT_LongShort Parameter
   can_short: True
@@ -11,7 +11,6 @@ configcreds:
   timeframe: 5m
   inf_timeframe: "15m"
   use_custom_stoploss: False
-  # stoploss: -0.07
   # Recommended
   use_exit_signal: True
   exit_profit_only: True
@@ -20,14 +19,14 @@ configcreds:
   startup_candle_count: 128 # must be power of 2
   process_only_new_candles: True
   # end
-  dry_run: false
-  dry_run_wallet: 50000
-  position_adjustment_enable: false
-  available_capital: 2000
+  dry_run: true
+  dry_run_wallet: 10000
+  position_adjustment_enable: true
+  available_capital: 3000
   max_open_trades: 6
   trading_mode: futures
   margin_mode: isolated
-  bot_name: freqtrading-binance-futures-allpairs-stieves
+  bot_name: freqtrading-binance-futures-allpairs-michael
   exchange:
     ccxt_config:
       enableRateLimit: true
@@ -42,13 +41,12 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
-    secret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
   telegram:
     enabled: true
-    token: 7073717714:AAFWLPwlvE6RLzrrRL0XecU_O9v0IfjJRIo # 6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
-    chat_id:
-      "889071692" # "7015989617" # "1759706931" # "889071692"
+    token:  6401327802:AAEUBmMeH-dW7GGDXb5W1nNaqeJ8KygVs28 # 7044884289:AAHim80FNR32WYZBjUhJiF0-z4k_hypaeN8 #6991945681:AAHI9KNKccdGY68e7wzcdWjBNu4wTlvqOXY # 6858919298:AAHJt3gcgvysi5J5hccEscYFz3tt5WuQwlY
+    chat_id: "1759706931" # "7015989617" # "1759706931" # "889071692"
       #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
       #chat_id: "5711830404"
 
@@ -140,10 +138,6 @@ configcreds:
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
 #   tag: 7f643beacbb3a3e73a05b9a4bca42ebc08bf2b64032fd92885c658a8704859b7 # 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
-
-# image:
-#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
-#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
 
 bot:
   debug: false
