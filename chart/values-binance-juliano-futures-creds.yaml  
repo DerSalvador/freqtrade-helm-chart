@@ -74,7 +74,7 @@ configcreds:
   position_adjustment_enable: false
 bot:
   enabled: true
-  strategy_name: DWT_LongShort # AdxSmasS_v7
+  strategy_name: DWT_LongShort
   freqaimodel: LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade

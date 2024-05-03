@@ -1,0 +1,23 @@
+---
+kubernetes:
+  nodePort: 32329
+
+configcreds:
+  available_capital: 716
+  stake_amount: unlimited
+  bot_name: freqtrade-kraken-michael
+  exchange:
+    name: kraken
+    key: f4fMbOD6w9Qyng9XSzpMGwzvhx4+bR89wrqtIIjG0NGPuZ/cQa6UdH8y # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
+    secret: DMYily0iPtItwb/fuzzwqS6IKKPskjIAHVSjuq2kAibPYzK5PO6T6ZkKnng8aHqQ3+xHI9rYJH57tcPrguXcog== # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
+  telegram:
+    enabled: false
+    token: "6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA"
+    chat_id: "1759706931"
+bot:
+  enabled: true
+  strategy_name: Anomaly
+  freqaimodel: LightGBMRegressor
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
