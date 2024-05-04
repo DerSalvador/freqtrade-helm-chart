@@ -15,6 +15,7 @@ spec:
     metadata:
       labels:
         app: freqtrade-{{ .Release.Namespace }}
+        reason: trading
     spec:
       # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       initContainers:

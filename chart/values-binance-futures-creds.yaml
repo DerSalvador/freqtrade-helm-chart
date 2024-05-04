@@ -3,7 +3,7 @@ kubernetes:
   nodePort: 32321
 configcreds:
   available_capital: 10000
-  max_open_trades: 6
+  max_open_trades: 4
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m

@@ -2,13 +2,13 @@
 kubernetes:
   nodePort: #nodePort#
 configcreds:
-  available_capital: 2000
-  max_open_trades: 6
+  available_capital: #available_capital#
+  max_open_trades: 4
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
   bot_name: #bot_name#
-  dry_run: true
+  dry_run: #dry_run#
   dry_run_wallet: 2000
   initial_state: stopped
   stoploss: -0.99
@@ -46,7 +46,7 @@ configcreds:
   telegram:
     enabled: true
     token: #telegramtoken#
-    chat_id: "1759706931" # "5711830404"
+    chat_id: #telegramchatid# "1759706931" # "5711830404"
       #token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
       #chat_id: "5711830404"
   pairlists:
