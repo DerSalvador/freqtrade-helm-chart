@@ -2,6 +2,8 @@
 kubernetes:
   nodePort: #nodePort#
 configcreds:
+  # Do you want to use the hold feature? (with hold-trades.json)
+  hold_support_enabled: true
   available_capital: #available_capital#
   max_open_trades: 4
   use_exit_signal: true  
