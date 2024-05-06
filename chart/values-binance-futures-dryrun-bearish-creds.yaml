@@ -1,6 +1,6 @@
 ---
 kubernetes:
-  nodePort: 32343
+  nodePort: 32385
 configcreds:
 # AdxSmas_V7
   can_short: True
