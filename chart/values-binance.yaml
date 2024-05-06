@@ -83,8 +83,8 @@ config:
     entry: "market"
     force_entry: "market"
     force_exit: "market"
-    exit: limit
-    stoploss: "limit"
+    exit: market
+    stoploss: "market"
     stoploss_on_exchange: false
     stoploss_on_exchange_interval: 60
     stoploss_on_exchange_limit_ratio: 0.99
@@ -100,13 +100,13 @@ config:
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 1000
+      rateLimit: 100
       options:
         defaultType: spot
         leverage: 10
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 1000
+      rateLimit: 100
       options:
         defaultType: spot
         leverage: 10
