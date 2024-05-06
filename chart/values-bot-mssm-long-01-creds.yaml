@@ -182,6 +182,6 @@ bot:
   debuglevel: -vvv
   enabled: true
   # Short Trades only
-  strategy_name: E0V1E.py
+  strategy_name: TaSearchLevelG15m
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
