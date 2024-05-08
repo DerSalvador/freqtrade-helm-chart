@@ -18,6 +18,9 @@ spec:
         reason: trading
     spec:
       # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
+#
+# Set permissions to files, otherwise not starting
+#
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -45,6 +48,9 @@ spec:
           readOnly: false          
         - mountPath: /sqlite
           name: sqlite
+#
+# Copy Extra Strategies to userdata stratgies
+# 
 {{- if .Values.kubernetes.copyContainer }}          
       - name: copy-strategy-to-default
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -99,6 +105,83 @@ spec:
         - name: extra-strategies
           mountPath: /extra_strategies
           readOnly: false
+
+# 
+# Download Trade Data for backtesting and Hyperopting
+# freqtrade download-data --prepend --new-pairs-days 30 -p BTC/USDT ETH/USDT --days 365 --exchange binance -t 1m 5m 15m 1h
+#
+{{- if .Values.config.downloaddata }}
+      - name: downloaddata
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - download-data
+        - --prepend 
+        - --new-pairs-days 
+        - "30"
+        - -p 
+        # - {{ .Values.config.pairs_to_download }}
+        - XLM/USDT
+        - XRP/USDT
+        - IOTA/USDT
+        - ALGO/USDT
+        - BTC/USDT
+        - ETH/USDT
+        - SOL/USDT
+        - FDUSD/USDT 
+        - ENA/USDT
+        - WIF/USDT
+        - PEPE/USDT
+        - BCH/USD
+        - LTC/USDT
+        - --days 
+        - "365"
+        - --exchange 
+        - {{ .Values.config.exchange.name }} 
+        - -t 
+        - 1m 
+        - 5m 
+        - 15m 
+        - 1h
+        volumeMounts:
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+{{- end }}
+
+# 
+# Hyperopting
+# freqtrade hyperopt --strategy DWT_LongShort -c config/config-bot-larissa-do-nothing.json -c configcreds/configcreds-bot-larissa-do-nothing.json --hyperopt-loss ShortTradeDurHyperOptLoss
+# #
+# {{- if .Values.configcreds.hyperopt }}
+#       - name: hyperopt
+#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+#         command:
+#         - freqtrade
+#         args:
+#         - hyperopt
+#         - --config
+#         - /freqtrade/config/config-{{ .Release.Namespace }}.json
+#         - --config
+#         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+#         - --strategy-path
+#         - /extra_strategies
+#         - --strategy
+#         - {{ .Values.bot.strategy_name }}
+#         - --hyperopt-loss 
+#         - {{ .Values.configcreds.hyperlossfunction }}
+#         volumeMounts:
+#         - name: extra-strategies
+#           mountPath: /extra_strategies
+#           readOnly: false          
+#         - name: configcreds
+#           mountPath: /freqtrade/configcreds
+#         - name: config
+#           mountPath: /freqtrade/config
+# {{- end }}
+
 # STRATGEY UPDATER START             
 #       - name: freqtrade-strategy-updater-{{ .Release.Namespace }}
 #         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -150,6 +233,9 @@ spec:
 #         - name: config
 #           mountPath: /freqtrade/config
       containers:
+#
+# Main Process, Trading
+# 
       - name: freqtrade-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         lifecycle:
