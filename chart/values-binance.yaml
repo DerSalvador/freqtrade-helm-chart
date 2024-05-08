@@ -69,7 +69,7 @@ config:
   download_trades: true
   dry_run: false
   dry_run_wallet: 4000
-  position_adjustment_enable: false
+  position_adjustment_enable: true
   trading_mode: spot
   max_open_trades: 6
   amend_last_stake_amount: true
