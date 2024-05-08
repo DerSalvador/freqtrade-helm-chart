@@ -29,7 +29,7 @@ configcreds:
     stoploss_on_exchange_limit_ratio: 0.99
   use_custom_stoploss: true
   has_downtime_protection: false
-  position_adjustment_enable: false
+  position_adjustment_enable: true
   exchange:
     ccxt_config:
       enableRateLimit: true
