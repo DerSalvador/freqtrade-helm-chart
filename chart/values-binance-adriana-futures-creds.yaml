@@ -3,6 +3,8 @@ kubernetes:
   nodePort: 32335
 
 configcreds:
+  hyperopt: true
+  hyperlossfunction: ShortTradeDurHyperOptLoss
   available_capital: 3000 
   trading_mode: futures
   margin_mode: isolated
