@@ -251,6 +251,7 @@ spec:
       # Hyperopting
       # freqtrade hyperopt --strategy DWT_LongShort -c config/config-bot-larissa-do-nothing.json -c configcreds/configcreds-bot-larissa-do-nothing.json --hyperopt-loss ShortTradeDurHyperOptLoss
       # 
+      # - --timeframe-detail {{ .Values.configcreds.timeframe }} 
 {{- if .Values.configcreds.hyperopt.enable }}
       - name: hyperopt
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -266,15 +267,22 @@ spec:
         - {{ now | dateModify .Values.configcreds.backtesting.hoursInThePast | date "20060102"  }}-{{ now | date "20060102" }} 
         - --print-json
         - --print-all
-        - --epochs 150
-        - --random-state 111
-        - --fee 0.01
+        - --epochs 
+        - "150"
+        - --random-state 
+        - "111"
+        - --fee 
+        - "0.01"
 {{- if .Values.configcreds.hyperopt.enableprotections }}
         - --enable-protections
 {{- end }}
-        - --min-trades {{ .Values.configcreds.max_open_trades }}
-        - --timeframe-detail {{ .Values.configcreds.timeframe }} 
-        - --spaces roi,stoploss,trailing,trades
+        - --min-trades 
+        - "{{ .Values.configcreds.max_open_trades }}"
+        - --spaces 
+        - roi
+        - stoploss
+        - trailing
+        - trades
         - --config
         - /freqtrade/config/config-{{ .Release.Namespace }}.json
         - --config
