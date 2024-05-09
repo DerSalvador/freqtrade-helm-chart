@@ -27,6 +27,31 @@ nostalgiaforinfinity:
       XRP/USDT: 0.1
       XTZ/USDT: 0.1
 
+# temporary for all bots, put into specific values yam if different
+configcreds:
+  listdata:
+    enable: false
+  downloaddata:
+    enable: false
+    days: 7
+    pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
+  hyperopt:
+    enable: false
+    enableprotections: true
+    hyperlossfunction: ShortTradeDurHyperOptLoss
+    # "ShortTradeDurHyperOptLoss SharpeHyperOptLoss SharpeHyperOptLossDaily 
+    # SortinoHyperOptLoss SortinoHyperOptLossDaily CalmarHyperOptLoss MaxDrawDownHyperOptLoss 
+    # MaxDrawDownRelativeHyperOptLoss ProfitDrawDownHyperOptLoss OnlyProfitHyperOptLoss"
+    hoursInThePast: -48h
+  backtesting:
+    enable: false
+    exportType: signals # {none,trades,signals}
+    # one week ago
+    hoursInThePast: -48h
+    # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
+    # One year back
+    # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
+
 config:
   stake_amount: unlimited
   minimal_roi:
