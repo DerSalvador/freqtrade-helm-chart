@@ -13,15 +13,17 @@ configcreds:
     enable: true
     enableprotections: true
     hyperlossfunction: ShortTradeDurHyperOptLoss
+    hoursInThePast: -48h
   backtesting:
-    enable: true
+    enable: false
     exportType: signals # {none,trades,signals}
     # one week ago
-    hoursInThePast: -168h
+    hoursInThePast: -48h
     # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
     # One year back
     # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
   available_capital: 3000 
+  max_open_trades: 4
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
