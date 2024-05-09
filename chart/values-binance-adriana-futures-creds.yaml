@@ -3,8 +3,24 @@ kubernetes:
   nodePort: 32335
 
 configcreds:
-  hyperopt: true
-  hyperlossfunction: ShortTradeDurHyperOptLoss
+  listdata: 
+    enable: true
+  downloaddata: 
+    enable: true
+    days: 7
+    pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
+  hyperopt:
+    enable: true
+    enableprotections: true
+    hyperlossfunction: ShortTradeDurHyperOptLoss
+  backtesting:
+    enable: true
+    exportType: signals # {none,trades,signals}
+    # one week ago
+    hoursInThePast: -168h
+    # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
+    # One year back
+    # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
   available_capital: 3000 
   trading_mode: futures
   margin_mode: isolated

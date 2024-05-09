@@ -28,8 +28,6 @@ nostalgiaforinfinity:
       XTZ/USDT: 0.1
 
 config:
-  downloaddata: true
-  pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
   stake_amount: unlimited
   minimal_roi:
     "0": 0.8
