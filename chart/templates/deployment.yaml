@@ -114,7 +114,7 @@ spec:
       # Spot: freqtrade download-data --prepend --new-pairs-days 30 -p BTC/USDT ETH/USDT --days 365 --exchange binance -t 1m 5m 15m 1h
       # Futures: freqtrade download-data --prepend -p BTC/USDT:USDT ETH/USDT:USDT --days 1024 --exchange binance -t 1m 5m 15m 1h --trading-mode futures
       # - {{ .Values.config.pairs_to_download }}
-{{- if .Values.configcreds.downloaddata.enable }}
+{{- if .Values.configcreds.downloaddata.enable  | default false}}
       - name: downloaddata
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
@@ -164,7 +164,7 @@ spec:
       #
       # freqtrade list-data --exchange binance -p BTC/USDT:USDT --show-timerange --trading-mode futures
       # freqtrade list-data -d /extra_strategies/data/binance/futures/ --exchange binance -p SOL/USDT:USDT --show-timerange
-{{- if .Values.configcreds.listdata.enable }}
+{{- if .Values.configcreds.listdata.enable  | default false}}
       - name: listdata
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
@@ -209,7 +209,7 @@ spec:
       # backtesting
       # freqtrade hyperopt --strategy DWT_LongShort -c config/config-bot-larissa-do-nothing.json -c configcreds/configcreds-bot-larissa-do-nothing.json --hyperopt-loss ShortTradeDurHyperOptLoss
       # 
-{{- if .Values.configcreds.backtesting.enable }}
+{{- if .Values.configcreds.backtesting.enable  | default false}}
       - name: backtesting
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
@@ -252,7 +252,7 @@ spec:
       # freqtrade hyperopt --strategy DWT_LongShort -c config/config-bot-larissa-do-nothing.json -c configcreds/configcreds-bot-larissa-do-nothing.json --hyperopt-loss ShortTradeDurHyperOptLoss
       # 
       # - --timeframe-detail {{ .Values.configcreds.timeframe }} 
-{{- if .Values.configcreds.hyperopt.enable }}
+{{- if .Values.configcreds.hyperopt.enable | default false}}
       - name: hyperopt
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
