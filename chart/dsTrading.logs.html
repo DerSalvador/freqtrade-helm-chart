@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Thu May  9 17:44:02 UTC 2024</h2><hr>
+<h2>Trading Logs: Thu May  9 17:45:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
 <div><a href=#dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</a><br><br></div>
@@ -8,14 +8,15 @@
 <div><a href=#dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
 <tr><td nowrap><small>596969 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>2093990 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
-<tr><td nowrap><small>2126531 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
-<tr><td nowrap><small>2126532 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-mssm-longshort-04 GET status</small></td></tr>
-<tr><td nowrap><small>2153656 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>2153657 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish GET balance --quick</small></td></tr>
-<tr><td nowrap><small>2153736 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh binance-futures-dryrun-bearish</small></td></tr>
-<tr><td nowrap><small>2153789 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>2153807 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>2159196 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingGcloudFirewallRules.sh</small></td></tr>
+<tr><td nowrap><small>2166344 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
+<tr><td nowrap><small>2166345 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish GET balance --quick</small></td></tr>
+<tr><td nowrap><small>2167245 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>2167246 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
+<tr><td nowrap><small>2167247 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
+<tr><td nowrap><small>2167270 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>2167271 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
+<tr><td nowrap><small>2167272 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -527,8 +528,6 @@ Using Endpoint on 35.233.38.30:32383<br>
 ++++<br>
 + + + + + <b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-long-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32387/api/v1/weekly<br>
 <hr><br>
 <table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
 <tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
@@ -1027,6 +1026,8 @@ Use --debug flag to render out invalid YAML<br>
 error: no objects passed to apply<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-longshort-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32392/api/v1/status<br>
+20240509-174501<br>
+Usage: usage [--quick]<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -2042,142 +2043,6 @@ Finished at: 20240509-150001<br>
 ++++<br>
 + + + + + <b id=dsTradingHedging.sh.log>dsTradingHedging.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-[33mIgnoring pair SOL/USDT:USDT with loss of -3.01 USDT and leverage 3 because current profit_pct=-6.26 is greater than -40[0m<br>
-[0;32mbot-ssc-long-01[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-01 pipe kubectl apply -f - -n bot-ssc-long-01<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32369/api/v1/status<br>
-[0;32mbot-ssc-long-01-dry[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-01-dry-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-01-dry pipe kubectl apply -f - -n bot-ssc-long-01-dry<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-01-dry, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32376/api/v1/status<br>
-[0;32mbot-ssc-long-02[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-02 pipe kubectl apply -f - -n bot-ssc-long-02<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32382/api/v1/status<br>
-[0;32mProcessing Trade with ID 6 for bot bot-ssc-long-02[0m<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-long-02 GET status pipe jq -r .[] pipe select(.trade_id="6") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-02 pipe kubectl apply -f - -n bot-ssc-long-02<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32382/api/v1/status<br>
-[0;32mprofit_pct=-23.33, leverage=3, stake_amount=252.31, pair=OP/USDT:USDT, profit_abs=-58.91, is_short=false, is_open=true[0m<br>
-[0;32mCheck if profit percent is less then -40[0m<br>
-[33mIgnoring pair OP/USDT:USDT with loss of -58.91 USDT and leverage 3 because current profit_pct=-23.33 is greater than -40[0m<br>
-[0;32mProcessing Trade with ID 7 for bot bot-ssc-long-02[0m<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-long-02 GET status pipe jq -r .[] pipe select(.trade_id="7") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-02 pipe kubectl apply -f - -n bot-ssc-long-02<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32382/api/v1/status<br>
-[0;32mprofit_pct=-4.21, leverage=3, stake_amount=252.10, pair=METIS/USDT:USDT, profit_abs=-10.61, is_short=false, is_open=true[0m<br>
-[0;32mCheck if profit percent is less then -40[0m<br>
-[33mIgnoring pair METIS/USDT:USDT with loss of -10.61 USDT and leverage 3 because current profit_pct=-4.21 is greater than -40[0m<br>
-[0;32mbot-ssc-short-01[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-01 pipe kubectl apply -f - -n bot-ssc-short-01<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32370/api/v1/status<br>
-[0;32mbot-ssc-short-01-dry[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-01-dry-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-01-dry pipe kubectl apply -f - -n bot-ssc-short-01-dry<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-01-dry, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32377/api/v1/status<br>
-[0;32mbot-ssc-short-02[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-02 pipe kubectl apply -f - -n bot-ssc-short-02<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32383/api/v1/status<br>
-[0;32mProcessing Trade with ID 4 for bot bot-ssc-short-02[0m<br>
-dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-short-02 GET status pipe jq -r .[] pipe select(.trade_id="4") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-02 pipe kubectl apply -f - -n bot-ssc-short-02<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32383/api/v1/status<br>
-[0;32mprofit_pct=-6.10, leverage=3, stake_amount=249.97, pair=ATOM/USDT:USDT, profit_abs=-15.23, is_short=true, is_open=true[0m<br>
-[0;32mCheck if profit percent is less then -40[0m<br>
-[33mIgnoring pair ATOM/USDT:USDT with loss of -15.23 USDT and leverage 3 because current profit_pct=-6.10 is greater than -40[0m<br>
-20240509-173501<br>
-Running Take Profit already? RUNNING=<br>
-[0;32mbinance-adriana-futures => DWT_LongShort[0m<br>
-[0;32mbot-larissa-do-nothing => DoesNothingStrategy[0m<br>
-[0;32mbot-mssm-long-01 => E0V1E[0m<br>
-[0;32mbot-mssm-long-02 => TaSearchLevelG15m_Long[0m<br>
-[0;32mbot-mssm-long-03 => AdxSmasS_v7_Long[0m<br>
-[0;32mbot-mssm-longshort-01 => TaSearchLevelG15m[0m<br>
-[0;32mbot-mssm-longshort-01-dry => NostalgiaForInfinityX2[0m<br>
-[0;32mbot-mssm-longshort-02 => NostalgiaForInfinityX4[0m<br>
-[0;32mbot-mssm-longshort-03 => DWT_LongShort[0m<br>
-[0;32mbot-mssm-longshort-04 => NostalgiaForInfinityX2[0m<br>
-[0;32mbot-mssm-short-01 => DWT_LongShort_Short[0m<br>
-[0;32mbot-mssm-short-02 => TaSearchLevelG15m_Short[0m<br>
-[0;32mbot-mssm-short-03 => AdxSmasS_v7_Short[0m<br>
-[0;32mbot-ssc-long-01 => Apollo11[0m<br>
-[0;32mbot-ssc-long-01-dry => NostalgiaForInfinityX3[0m<br>
-[0;32mbot-ssc-long-02 => TaSearchLevelG15m_Long[0m<br>
-[0;32mbot-ssc-short-01 => TaSearchLevelG15m[0m<br>
-[0;32mbot-ssc-short-01-dry => DWT_Leveraged3_Short[0m<br>
-[0;32mbot-ssc-short-02 => TaSearchLevelG15m_Short[0m<br>
-[0;32mbinance-adriana-futures[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-binance-adriana-futures-creds.yaml --show-only templates/service-nodeport.yaml -n binance-adriana-futures pipe kubectl apply -f - -n binance-adriana-futures<br>
-service/freqtrade-binance-adriana-futures unchanged<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32335/api/v1/status<br>
-[0;32mbot-mssm-long-01[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-long-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-long-01 pipe kubectl apply -f - -n bot-mssm-long-01<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-long-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32378/api/v1/status<br>
-[0;32mbot-mssm-long-02[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-long-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-long-02 pipe kubectl apply -f - -n bot-mssm-long-02<br>
-Error: template: freqtrade/templates/deployment.yaml:117:14: executing "freqtrade/templates/deployment.yaml" at <.Values.configcreds.downloaddata.enable>: nil pointer evaluating interface {}.enable<br>
-<br>
-Use --debug flag to render out invalid YAML<br>
 error: no objects passed to apply<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-long-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32372/api/v1/status<br>
@@ -2542,36 +2407,147 @@ msantana 2126531 2093990  0 17:42 ?        00:00:00 /bin/zsh /home/msantana/ders
 Running Take Profit already? RUNNING=msantana 2093990 2093986  0 17:40 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40<br>
 msantana 2126531 2093990  0 17:42 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40<br>
 [31mdsTradingHedging already running, exiting[0m<br>
+[0;32mbot-mssm-short-01[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-01 pipe kubectl apply -f - -n bot-mssm-short-01<br>
+service/freqtrade-bot-mssm-short-01 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32386/api/v1/status<br>
+[0;32mbot-mssm-short-02[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-02 pipe kubectl apply -f - -n bot-mssm-short-02<br>
+service/freqtrade-bot-mssm-short-02 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32371/api/v1/status<br>
+[0;32mProcessing Trade with ID 5 for bot bot-mssm-short-02[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-mssm-short-02 GET status pipe jq -r .[] pipe select(.trade_id="5") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-02 pipe kubectl apply -f - -n bot-mssm-short-02<br>
+service/freqtrade-bot-mssm-short-02 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32371/api/v1/status<br>
+[0;32mprofit_pct=-3.89, leverage=3, stake_amount=250.02, pair=ATOM/USDT:USDT, profit_abs=-9.71, is_short=true, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair ATOM/USDT:USDT with loss of -9.71 USDT and leverage 3 because current profit_pct=-3.89 is greater than -40[0m<br>
+[0;32mbot-mssm-short-03[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-03 pipe kubectl apply -f - -n bot-mssm-short-03<br>
+service/freqtrade-bot-mssm-short-03 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32388/api/v1/status<br>
+[0;32mProcessing Trade with ID 55 for bot bot-mssm-short-03[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-mssm-short-03 GET status pipe jq -r .[] pipe select(.trade_id="55") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-03 pipe kubectl apply -f - -n bot-mssm-short-03<br>
+service/freqtrade-bot-mssm-short-03 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32388/api/v1/status<br>
+[0;32mprofit_pct=-4.83, leverage=3, stake_amount=45.05, pair=AVAX/USDT:USDT, profit_abs=-2.17, is_short=true, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair AVAX/USDT:USDT with loss of -2.17 USDT and leverage 3 because current profit_pct=-4.83 is greater than -40[0m<br>
+[0;32mProcessing Trade with ID 64 for bot bot-mssm-short-03[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-mssm-short-03 GET status pipe jq -r .[] pipe select(.trade_id="64") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-03 pipe kubectl apply -f - -n bot-mssm-short-03<br>
+service/freqtrade-bot-mssm-short-03 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32388/api/v1/status<br>
+[0;32mprofit_pct=-6.88, leverage=3, stake_amount=49.82, pair=DOT/USDT:USDT, profit_abs=-3.43, is_short=true, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair DOT/USDT:USDT with loss of -3.43 USDT and leverage 3 because current profit_pct=-6.88 is greater than -40[0m<br>
+[0;32mProcessing Trade with ID 65 for bot bot-mssm-short-03[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-mssm-short-03 GET status pipe jq -r .[] pipe select(.trade_id="65") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-03 pipe kubectl apply -f - -n bot-mssm-short-03<br>
+service/freqtrade-bot-mssm-short-03 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32388/api/v1/status<br>
+[0;32mprofit_pct=-2.32, leverage=3, stake_amount=50.00, pair=XRP/USDT:USDT, profit_abs=-1.16, is_short=true, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair XRP/USDT:USDT with loss of -1.16 USDT and leverage 3 because current profit_pct=-2.32 is greater than -40[0m<br>
+[0;32mProcessing Trade with ID 67 for bot bot-mssm-short-03[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-mssm-short-03 GET status pipe jq -r .[] pipe select(.trade_id="67") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-short-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-short-03 pipe kubectl apply -f - -n bot-mssm-short-03<br>
+service/freqtrade-bot-mssm-short-03 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-mssm-short-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32388/api/v1/status<br>
+[0;32mprofit_pct=-6.61, leverage=3, stake_amount=48.05, pair=SOL/USDT:USDT, profit_abs=-3.17, is_short=true, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair SOL/USDT:USDT with loss of -3.17 USDT and leverage 3 because current profit_pct=-6.61 is greater than -40[0m<br>
+[0;32mbot-ssc-long-01[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-01 pipe kubectl apply -f - -n bot-ssc-long-01<br>
+service/freqtrade-bot-ssc-long-01 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32369/api/v1/status<br>
+[0;32mbot-ssc-long-01-dry[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-01-dry-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-01-dry pipe kubectl apply -f - -n bot-ssc-long-01-dry<br>
+service/freqtrade-bot-ssc-long-01-dry unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-01-dry, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32376/api/v1/status<br>
+[0;32mbot-ssc-long-02[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-02 pipe kubectl apply -f - -n bot-ssc-long-02<br>
+service/freqtrade-bot-ssc-long-02 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32382/api/v1/status<br>
+[0;32mProcessing Trade with ID 6 for bot bot-ssc-long-02[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-long-02 GET status pipe jq -r .[] pipe select(.trade_id="6") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-02 pipe kubectl apply -f - -n bot-ssc-long-02<br>
+service/freqtrade-bot-ssc-long-02 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32382/api/v1/status<br>
+[0;32mprofit_pct=-23.09, leverage=3, stake_amount=252.31, pair=OP/USDT:USDT, profit_abs=-58.29, is_short=false, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair OP/USDT:USDT with loss of -58.29 USDT and leverage 3 because current profit_pct=-23.09 is greater than -40[0m<br>
+[0;32mProcessing Trade with ID 7 for bot bot-ssc-long-02[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-long-02 GET status pipe jq -r .[] pipe select(.trade_id="7") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-long-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-long-02 pipe kubectl apply -f - -n bot-ssc-long-02<br>
+service/freqtrade-bot-ssc-long-02 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-long-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32382/api/v1/status<br>
+[0;32mprofit_pct=-4.26, leverage=3, stake_amount=252.10, pair=METIS/USDT:USDT, profit_abs=-10.73, is_short=false, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair METIS/USDT:USDT with loss of -10.73 USDT and leverage 3 because current profit_pct=-4.26 is greater than -40[0m<br>
+[0;32mbot-ssc-short-01[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-01 pipe kubectl apply -f - -n bot-ssc-short-01<br>
+service/freqtrade-bot-ssc-short-01 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32370/api/v1/status<br>
+[0;32mbot-ssc-short-01-dry[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-01-dry-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-01-dry pipe kubectl apply -f - -n bot-ssc-short-01-dry<br>
+service/freqtrade-bot-ssc-short-01-dry unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-01-dry, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32377/api/v1/status<br>
+[0;32mbot-ssc-short-02[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-02 pipe kubectl apply -f - -n bot-ssc-short-02<br>
+service/freqtrade-bot-ssc-short-02 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32383/api/v1/status<br>
+[0;32mProcessing Trade with ID 4 for bot bot-ssc-short-02[0m<br>
+dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-short-02 GET status pipe jq -r .[] pipe select(.trade_id="4") pipe "\(.profit_pct)#\(.leverage)#\(.stake_amount)#\(.pair)#\(.profit_abs)#\(.is_short)#\(.is_open)"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-ssc-short-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-short-02 pipe kubectl apply -f - -n bot-ssc-short-02<br>
+service/freqtrade-bot-ssc-short-02 unchanged<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.233.38.30 for bot bot-ssc-short-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+curl -s -X GET -s -u 'freqtrade:&&Liz270117!!' http://35.233.38.30:32383/api/v1/status<br>
+[0;32mprofit_pct=-6.20, leverage=3, stake_amount=249.97, pair=ATOM/USDT:USDT, profit_abs=-15.49, is_short=true, is_open=true[0m<br>
+[0;32mCheck if profit percent is less then -40[0m<br>
+[33mIgnoring pair ATOM/USDT:USDT with loss of -15.49 USDT and leverage 3 because current profit_pct=-6.20 is greater than -40[0m<br>
+20240509-174501<br>
+Running Take Profit already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
--rw------- 1 msantana msantana 0 May  9 17:03 /tmp/tmp.RO5R54w8QF<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240509-170306"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240509-170401<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 ms40509-170101<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May  9 17:01 /tmp/tmp.UjLlLGRwqM<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240509-170105"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240509-170201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msan100  247k  100  247k    0     0   211k      0  0:00:01  0:00:01 --:--:--  211k<br><br><br><br><br><br><br><br><br><br><br><br><br>
-tana 0 May  9 17:02 /tmp/tmp.xhN6mvD1kv<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240509-170206"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240509-170301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May  9 17:03 /tmp/tmp.RO5R54w8QF<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240509-170306"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 20240509-170401<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -3007,7 +2983,7 @@ Running already? RUNNING=<br><br><br><br><br><br><br><br>
 -rw------- 1 msantana msantana 0 May  9 17:37 /tmp/tmp.KYVFhM3vAj<br><br><br><br><br><br><br>
 URL: http://filekeys.c100  244k  100  244k    0     0   209k      0  0:00:01  0:00:01 --:--:--  209k<br><br><br><br><br><br>
 om/dsTrading.logs.html<br><br><br><br><br><br><br>
-"Finished at: 20240509-173705"<br><br><br><br><100  245k  100  245k    0     0   205k      0  0:00:01  0:00:01 --:--:--  205k<br>
+"Finished at: 20240509-173705"<br><br><br><br><100  246k  100  246k    0     0   184k      0  0:00:01  0:00:01 --:--:--  184k<br>
 br><br><br>
 20240509-173801<br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br>
@@ -3018,34 +2994,59 @@ URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br><br>
 20240509-173901<br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br>
 </body></html><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May  9 17:39 /tmp/tmp.4MiZmSItIb<br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May  9 17:39 /tmp/tmp.4MiZmSItI><br><br><br><br><br>
+"Finished at: 20240509-173606"<br><br><br><br><br><br><br><br><br>
+20240509-173701<br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May  9 17:37 /tmp/tmp.KYVFhM3vAj<br><br><br><br><br><br><br><br>
+URL: http://filekeys.c100  244k  100  244k    0     0   209k      0  0:00:01  0:00:01 --:--:--  209k<br><br><br><br><br><br><br>
+om/dsTrading.logs.html<br><br><br><br><br><br><br><br>
+"Finished at: 20240509-173705"<br><br><br><br><100  245k  100  245k    0     0   205k      0  0:00:01  0:00:01 --:--:--  205k<br><br>
+br><br><br><br>
+20240509-173801<br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May  9 17:38 /tmp/tmp.i4eq71COdm<br><br><br><br><br><br><br>
+URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br><br><br>
+"Finished at: 20240509-173806"<br><br><br><br><br><br><br>
+20240509-173901<br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May  9 17:39 /tmp/tmp.4MiZmSItIb<br><br><br><br><br><br>
+URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br><br>
+"Finished at: 20240509-173906"<br><br><br><br><br><br>
+20240509-174001<br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br>
+</body></html><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May  9 17:40 /tmp/tmp.nNqZLQyXf1<br><br><br><br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br><br>
-"Finished at: 20240509-173906"<br><br><br><br><br>
-20240509-174001<br><br><br><br><br>
+"Finished at: 20240509-174005"<br><br><br><br><br>
+20240509-174101<br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br>
 </body></html><br><br><br><br>
--rw------- 1 msantana msantana 0 May  9 17:40 /tmp/tmp.nNqZLQyXf1<br><br><br><br>
+-rw------- 1 msantana msantana 0 May  9 17:41 /tmp/tmp.aFxbH3UJQi<br><br><br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br><br><br>
-"Finished at: 20240509-174005"<br><br><br><br>
-20240509-174101<br><br><br><br>
+"Finished at: 20240509-174106"<br><br><br><br>
+20240509-174201<br><br><br><br>
 Running already? RUNNING=<br><br><br><br>
 </body></html><br><br><br>
--rw------- 1 msantana msantana 0 May  9 17:41 /tmp/tmp.aFxbH3UJQi<br><br><br>
+-rw------- 1 msantana msantana 0 May  9 17:42 /tmp/tmp.XYYLehRhsh<br><br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br><br>
-"Finished at: 20240509-174106"<br><br><br>
-20240509-174201<br><br><br>
+"Finished at: 20240509-174206"<br><br><br>
+20240509-174301<br><br><br>
 Running already? RUNNING=<br><br><br>
 </body></html><br><br>
--rw------- 1 msantana msantana 0 May  9 17:42 /tmp/tmp.XYYLehRhsh<br><br>
+-rw------- 1 msantana msantana 0 May  9 17:43 /tmp/tmp.SMSGVHad0T<br><br>
 URL: http://filekeys.com/dsTrading.logs.html<br><br>
-"Finished at: 20240509-174206"<br><br>
-20240509-174301<br><br>
+"Finished at: 20240509-174305"<br><br>
+20240509-174401<br><br>
 Running already? RUNNING=<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 May  9 17:43 /tmp/tmp.SMSGVHad0T<br>
+-rw------- 1 msantana msantana 0 May  9 17:44 /tmp/tmp.NghOjrYZG6<br>
 URL: http://filekeys.com/dsTrading.logs.html<br>
-"Finished at: 20240509-174305"<br>
-20240509-174401<br>
+"Finished at: 20240509-174406"<br>
+20240509-174501<br>
 Running already? RUNNING=<br>
 </body></html>
--rw------- 1 msantana msantana 0 May  9 17:44 /tmp/tmp.NghOjrYZG6
+-rw------- 1 msantana msantana 0 May  9 17:45 /tmp/tmp.zF9ia5rqLA
