@@ -1,9 +1,31 @@
 ---
 kubernetes:
   nodePort: 32335
-
 configcreds:
-  available_capital: 3000 
+  listdata:
+    enable: false
+  downloaddata:
+    enable: false
+    days: 7
+    pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
+  hyperopt:
+    enable: false
+    enableprotections: true
+    hyperlossfunction: ShortTradeDurHyperOptLoss
+    # "ShortTradeDurHyperOptLoss SharpeHyperOptLoss SharpeHyperOptLossDaily 
+    # SortinoHyperOptLoss SortinoHyperOptLossDaily CalmarHyperOptLoss MaxDrawDownHyperOptLoss 
+    # MaxDrawDownRelativeHyperOptLoss ProfitDrawDownHyperOptLoss OnlyProfitHyperOptLoss"
+    hoursInThePast: -48h
+  backtesting:
+    enable: false
+    exportType: signals # {none,trades,signals}
+    # one week ago
+    hoursInThePast: -48h
+    # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
+    # One year back
+    # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
+  available_capital: 3000
+  max_open_trades: 4
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
@@ -26,10 +48,22 @@ configcreds:
     # secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
     key: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN #  xngX47kLt00jdiCkmY7Nj06peqjVnzRN6ZShvc6PBJH6LeRUw0MD23aVkfzQu199 # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
     secret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1 # lFrW07av9Ed61h1LW0pnin2WUDcVZy9cWp648QBBhhHh5csbkuauPDxW4M1v1wYw # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
+    pair_whitelist: 
+      - AVAX/USDT:USDT
+      - BCH/USDT:USDT
+      - SOL/USDT:USDT
+      - TRB/USDT:USDT
+      - DOT/USDT:USDT
+      - ETH/USDT:USDT
+      - XRP/USDT:USDT
+      - XLM/USDT:USDT
+      - IOTA/USDT:USDT
+      - ALGO/USDT:USDT
+      - BTC/USDT:USDT
   telegram:
     enabled: false
     token: 7020581178:AAGN2KOhJ3jCCXL_0p8s77uKo_5YPgICB1Y # "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
-    chat_id:  "1759706931" # "6274423445"
+    chat_id: "1759706931" # "6274423445"
   pairlists:
     - method: RemotePairList
       number_assets: 50
@@ -41,32 +75,32 @@ configcreds:
       read_timeout: 120
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
       keep_pairlist_on_failure: true
-      read_timeout: 120      
-    # - method: RemotePairList
-    #   number_assets: 50
-    #   mode: blacklist
-    #   pairlist_url: https://remotepairlist.com?q=3e362027334fd860
-    #   processing_mode: append
-    #   refresh_period: 900
-    #   keep_pairlist_on_failure: true
-    #   read_timeout: 120
-    # - method: AgeFilter
-    #   min_days_listed: 30
-    # - method: PriceFilter
-    #   low_price_ratio: 0.003
-    #   min_price: 50
-    # - method: SpreadFilter
-    #   max_spread_ratio: 0.005
-    # - method: RangeStabilityFilter
-    #   lookback_days: 3
-    #   min_rate_of_change: 0.03
-    #   refresh_period: 1800
-    # - method: ShuffleFilter
+      read_timeout: 120
+      # - method: RemotePairList
+      #   number_assets: 50
+      #   mode: blacklist
+      #   pairlist_url: https://remotepairlist.com?q=3e362027334fd860
+      #   processing_mode: append
+      #   refresh_period: 900
+      #   keep_pairlist_on_failure: true
+      #   read_timeout: 120
+      # - method: AgeFilter
+      #   min_days_listed: 30
+      # - method: PriceFilter
+      #   low_price_ratio: 0.003
+      #   min_price: 50
+      # - method: SpreadFilter
+      #   max_spread_ratio: 0.005
+      # - method: RangeStabilityFilter
+      #   lookback_days: 3
+      #   min_rate_of_change: 0.03
+      #   refresh_period: 1800
+      # - method: ShuffleFilter
   position_adjustment_enable: false
   freqai:
     rl_config:
@@ -123,7 +157,6 @@ bot:
   enabled: true
   strategy_name: DWT_LongShort
   freqaimodel: LightGBMRegressor
-
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
 #   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
