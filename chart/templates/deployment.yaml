@@ -1,5 +1,5 @@
----
 {{- if .Values.bot.enabled }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,9 +18,9 @@ spec:
         reason: trading
     spec:
       # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
-#
-# Set permissions to files, otherwise not starting
-#
+      #
+      # 1. Set permissions to files, otherwise not starting
+      #
       initContainers:
       - name: take-sqlite-dir-ownership
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -37,20 +37,22 @@ spec:
           echo chown -R ftuser:ftuser /extra_strategies
           # echo chown -R ftuser:ftuser /extra_strategies
           # echo chmod -R 777 /extra_strategies
+          mkdir -p /extra_strategies/logs 
           chown -R ftuser:ftuser /sqlite 
           chown -R ftuser:ftuser /freqtrade
           chown -R ftuser:ftuser /extra_strategies
           chmod -R 777 /extra_strategies
-          find /sqlite       
+          find /sqlite
+          find /extra_strategies/logs 
         volumeMounts:
         - name: extra-strategies
           mountPath: /extra_strategies
           readOnly: false          
         - mountPath: /sqlite
           name: sqlite
-#
-# Copy Extra Strategies to userdata stratgies
-# 
+      #
+      # 2. Copy Extra Strategies to userdata strategies
+      # 
 {{- if .Values.kubernetes.copyContainer }}          
       - name: copy-strategy-to-default
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -75,7 +77,7 @@ spec:
           mountPath: /extra_strategies
           readOnly: false          
 {{- end }}
-      - name: freqtrade-list-strategies-{{ .Release.Namespace }}
+      - name: liststrategies
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
         - freqtrade
@@ -91,10 +93,13 @@ spec:
         - /freqtrade/config/config-{{ .Release.Namespace }}.json
         - --config
         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-        - --datadir
-        - /freqtrade/user_data/data
+        - -d 
+        - "/extra_strategies/data"
+        # - "/extra_strategies/data/{{ .Values.configcreds.exchange.name }}/{{ .Values.configcreds.trading_mode }}"
         - --userdir
         - /freqtrade/user_data      
+        - --logfile
+        - /extra_strategies/logs/liststrategies_{{ now | date "20060102" }}.log
         volumeMounts:
         - name: configcreds
           mountPath: /freqtrade/configcreds
@@ -104,83 +109,195 @@ spec:
           mountPath: /sqlite
         - name: extra-strategies
           mountPath: /extra_strategies
-          readOnly: false
-
-# 
-# Download Trade Data for backtesting and Hyperopting
-# freqtrade download-data --prepend --new-pairs-days 30 -p BTC/USDT ETH/USDT --days 365 --exchange binance -t 1m 5m 15m 1h
-#
-{{- if .Values.config.downloaddata }}
+          readOnly: false 
+      # 3. Download Trade Data for backtesting and Hyperopting
+      # Spot: freqtrade download-data --prepend --new-pairs-days 30 -p BTC/USDT ETH/USDT --days 365 --exchange binance -t 1m 5m 15m 1h
+      # Futures: freqtrade download-data --prepend -p BTC/USDT:USDT ETH/USDT:USDT --days 1024 --exchange binance -t 1m 5m 15m 1h --trading-mode futures
+      # - {{ .Values.config.pairs_to_download }}
+{{- if .Values.configcreds.downloaddata.enable }}
       - name: downloaddata
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
         - freqtrade
         args:
         - download-data
+        - --erase
         - --prepend 
-        - --new-pairs-days 
-        - "30"
         - -p 
-        # - {{ .Values.config.pairs_to_download }}
-        - XLM/USDT
-        - XRP/USDT
-        - IOTA/USDT
-        - ALGO/USDT
-        - BTC/USDT
-        - ETH/USDT
-        - SOL/USDT
-        - FDUSD/USDT 
-        - ENA/USDT
-        - WIF/USDT
-        - PEPE/USDT
-        - BCH/USD
-        - LTC/USDT
+        - "XLM/USDT:USDT"
+        - "XRP/USDT:USDT"
+        - "IOTA/USDT:USDT"
+        - "ALGO/USDT:USDT"
+        - "BTC/USDT:USDT"
+        - "ETH/USDT:USDT"
+        - "SOL/USDT:USDT"
+        - "FDUSD/USDT:USDT"
+        - "ENA/USDT:USDT"
+        - "WIF/USDT:USDT"
+        - "PEPE/USDT:USDT"
+        - "BCH/USD:USDT"
+        - "LTC/USDT:USDT"
         - --days 
-        - "365"
+        - "{{ .Values.configcreds.downloaddata.days }}"
         - --exchange 
-        - {{ .Values.config.exchange.name }} 
+        - {{ .Values.configcreds.exchange.name }} 
         - -t 
-        - 1m 
-        - 5m 
-        - 15m 
-        - 1h
+        - {{ .Values.configcreds.timeframe }} 
+        - --trading-mode 
+        - {{ .Values.configcreds.trading_mode }}
+        - -d 
+        - /extra_strategies/data
+        - --logfile
+        - /extra_strategies/logs/downloaddata_{{ now | date "20060102" }}.log
+        # - "/extra_strategies/data/{{ .Values.config.exchange.name }}/{{ .Values.configcreds.trading_mode }}"
         volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
         - name: configcreds
           mountPath: /freqtrade/configcreds
         - name: config
           mountPath: /freqtrade/config
 {{- end }}
 
-# 
-# Hyperopting
-# freqtrade hyperopt --strategy DWT_LongShort -c config/config-bot-larissa-do-nothing.json -c configcreds/configcreds-bot-larissa-do-nothing.json --hyperopt-loss ShortTradeDurHyperOptLoss
-# #
-# {{- if .Values.configcreds.hyperopt }}
-#       - name: hyperopt
-#         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-#         command:
-#         - freqtrade
-#         args:
-#         - hyperopt
-#         - --config
-#         - /freqtrade/config/config-{{ .Release.Namespace }}.json
-#         - --config
-#         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-#         - --strategy-path
-#         - /extra_strategies
-#         - --strategy
-#         - {{ .Values.bot.strategy_name }}
-#         - --hyperopt-loss 
-#         - {{ .Values.configcreds.hyperlossfunction }}
-#         volumeMounts:
-#         - name: extra-strategies
-#           mountPath: /extra_strategies
-#           readOnly: false          
-#         - name: configcreds
-#           mountPath: /freqtrade/configcreds
-#         - name: config
-#           mountPath: /freqtrade/config
-# {{- end }}
+      # List download data 
+      #
+      # freqtrade list-data --exchange binance -p BTC/USDT:USDT --show-timerange --trading-mode futures
+      # freqtrade list-data -d /extra_strategies/data/binance/futures/ --exchange binance -p SOL/USDT:USDT --show-timerange
+{{- if .Values.configcreds.listdata.enable }}
+      - name: listdata
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - list-data
+        - --exchange 
+        - {{ .Values.configcreds.exchange.name }}
+        - --show-timerange 
+        - --trading-mode 
+        - {{ .Values.configcreds.trading_mode }} 
+        - -p 
+        - "XLM/USDT:USDT"
+        - "XRP/USDT:USDT"
+        - "IOTA/USDT:USDT"
+        - "ALGO/USDT:USDT"
+        - "BTC/USDT:USDT"
+        - "ETH/USDT:USDT"
+        - "SOL/USDT:USDT"
+        - "FDUSD/USDT:USDT"
+        - "ENA/USDT:USDT"
+        - "WIF/USDT:USDT"
+        - "PEPE/USDT:USDT"
+        - "BCH/USD:USDT"
+        - "LTC/USDT:USDT"
+        - -d 
+        - "/extra_strategies/data/"
+        - --logfile
+        - /extra_strategies/logs/listdata_{{ now | date "20060102" }}.log
+        # - "/extra_strategies/data/{{ .Values.configcreds.exchange.name }}/{{ .Values.configcreds.trading_mode }}"
+        volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+{{- end }}
+
+      # 
+      # backtesting
+      # freqtrade hyperopt --strategy DWT_LongShort -c config/config-bot-larissa-do-nothing.json -c configcreds/configcreds-bot-larissa-do-nothing.json --hyperopt-loss ShortTradeDurHyperOptLoss
+      # 
+{{- if .Values.configcreds.backtesting.enable }}
+      - name: backtesting
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - backtesting
+        - --export-filename
+        - "/extra_strategies/data/{{ .Values.configcreds.exchange.name }}/{{ .Values.configcreds.trading_mode }}/backtest_result_{{ now | date "20060102" }}.json"
+        - --breakdown 
+        - day 
+        - week
+        - --export 
+        - {{ .Values.configcreds.backtesting.exportType }}
+        - --strategy-list 
+        - DWT_LongShort 
+        - TaSearchLevelG15m 
+        - --timerange 
+        - {{ now | dateModify .Values.configcreds.backtesting.hoursInThePast | date "20060102"  }}-{{ now | date "20060102" }} 
+        - --config
+        - /freqtrade/config/config-{{ .Release.Namespace }}.json
+        - --config
+        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+        - -d 
+        - "/extra_strategies/data"
+        - --logfile
+        - /extra_strategies/logs/backtesting_{{ now | date "20060102" }}.log
+        # - "/extra_strategies/data/{{ .Values.configcreds.exchange.name }}/{{ .Values.configcreds.trading_mode }}"
+        volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+{{- end }}
+
+      # 
+      # Hyperopting
+      # freqtrade hyperopt --strategy DWT_LongShort -c config/config-bot-larissa-do-nothing.json -c configcreds/configcreds-bot-larissa-do-nothing.json --hyperopt-loss ShortTradeDurHyperOptLoss
+      # 
+{{- if .Values.configcreds.hyperopt.enable }}
+      - name: hyperopt
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        command:
+        - freqtrade
+        args:
+        - hyperopt
+        - --timeframe
+        - {{ .Values.configcreds.timeframe }}
+        - --ignore-missing-spaces
+        - --analyze-per-epoch
+        - --timerange 
+        - {{ now | dateModify .Values.configcreds.backtesting.hoursInThePast | date "20060102"  }}-{{ now | date "20060102" }} 
+        - --print-json
+        - --print-all
+        - --epochs 150
+        - --random-state 111
+        - --fee 0.01
+{{- if .Values.configcreds.hyperopt.enableprotections }}
+        - --enable-protections
+{{- end }}
+        - --min-trades {{ .Values.configcreds.max_open_trades }}
+        - --timeframe-detail {{ .Values.configcreds.timeframe }} 
+        - --spaces roi,stoploss,trailing,trades
+        - --config
+        - /freqtrade/config/config-{{ .Release.Namespace }}.json
+        - --config
+        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+        - --strategy-path
+        - /extra_strategies
+        - --strategy
+        - {{ .Values.bot.strategy_name }}
+        - --hyperopt-loss 
+        - {{ .Values.configcreds.hyperopt.hyperlossfunction }}
+        - -d 
+        - "/extra_strategies/data"
+        - --logfile
+        - /extra_strategies/logs/hyperopt_{{ now | date "20060102" }}.log
+        volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+{{- end }}
 
 # STRATGEY UPDATER START             
 #       - name: freqtrade-strategy-updater-{{ .Release.Namespace }}
@@ -232,11 +349,12 @@ spec:
 #           mountPath: /freqtrade/configcreds
 #         - name: config
 #           mountPath: /freqtrade/config
+
+      #
+      # Main Process, Trading
+      # 
       containers:
-#
-# Main Process, Trading
-# 
-      - name: freqtrade-{{ .Release.Namespace }}
+      - name: freqtrade
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         lifecycle:
           preStop:
@@ -264,10 +382,10 @@ spec:
         - {{ .Values.bot.freqaimodel }}
         - --freqaimodel-path 
         - /freqtrade/freqtrade/freqai/prediction_models
-        - --log-file 
-        - /tmp/freqtrade.log
-        - --datadir
-        - /freqtrade/user_data/data
+        - --logfile
+        - /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log
+        - -d 
+        - "/extra_strategies/data"
         - --userdir
         - /freqtrade/user_data 
         volumeMounts:
