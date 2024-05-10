@@ -4,7 +4,7 @@ kubernetes:
 configcreds:
   stake_amount: 50
   minimal_roi:
-    "0": 0.08
+    "0": 0.2
     "40160": 0.01
     "80160": 0
   # Do you want to use the hold feature? (with hold-trades.json)
