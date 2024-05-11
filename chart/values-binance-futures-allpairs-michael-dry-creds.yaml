@@ -21,7 +21,7 @@ configcreds:
   # end
   dry_run: true
   dry_run_wallet: 10000
-  position_adjustment_enable: true
+  position_adjustment_enable: false
   available_capital: 3000
   max_open_trades: 6
   trading_mode: futures
