@@ -54,7 +54,7 @@ configcreds:
       # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
 
 config:
-  stake_amount: unlimited
+  stake_amount: 50
   minimal_roi:
     "0": 0.8
     "40160": 0.01
@@ -95,7 +95,7 @@ config:
   download_trades: true
   dry_run: false
   dry_run_wallet: 4000
-  position_adjustment_enable: true
+  position_adjustment_enable: false
   trading_mode: spot
   max_open_trades: 6
   amend_last_stake_amount: true
