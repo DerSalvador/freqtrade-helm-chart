@@ -73,7 +73,7 @@ spec:
           mountPath: /sqlite
         ports:
         - name: api
-          containerPort: {{ .Values.config.api_server.listen_port }}
+          containerPort: {{ .Values.config.api_server.listen_port_webserver }}
       imagePullSecrets:
       - name: deploy-key-gcr
       volumes:
