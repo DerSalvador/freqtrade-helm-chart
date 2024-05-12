@@ -69,7 +69,7 @@ spec:
         - name: sqlite
           mountPath: /sqlite
         ports:
-        - name: api
+        - name: api-werbserver
           containerPort: {{ .Values.config.api_server.listen_port_webserver }}
       imagePullSecrets:
       - name: deploy-key-gcr

@@ -9,7 +9,7 @@ spec:
   type: ClusterIP
   ports:
   - protocol: TCP
-    port: {{ .Values.config.api_server.listen_port_webserver }}
+    port: {{ .Values.config.api_server.listen_port }}
     targetPort: api
   selector:
     app: freqtrade-{{ .Release.Namespace }}
