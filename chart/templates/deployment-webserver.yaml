@@ -62,9 +62,6 @@ spec:
         # - name: extra-strategies
         #   mountPath: /extra_strategies
         #   readOnly: false      
-        - name: strategies-default
-          mountPath: /freqtrade/user_data/strategies
-          readOnly: false     
         - name: configcreds
           mountPath: /freqtrade/configcreds
         - name: config
@@ -80,15 +77,9 @@ spec:
       # - name: extra-strategies
       #   persistentVolumeClaim:
       #     claimName: freqtrade-extra-strategies        
-      - name: strategies-default
-        persistentVolumeClaim:
-          claimName: freqtrade-strategies   
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
-      - name: nfi-hold-trades
-        configMap:
-          name: freqtrade-nfi-hold-trades-{{ .Release.Namespace }}
       - name: config
         configMap:
           name: freqtrade-config-{{ .Release.Namespace }}
