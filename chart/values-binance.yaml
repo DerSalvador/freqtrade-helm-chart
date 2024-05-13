@@ -247,7 +247,7 @@ config:
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
-    listen_port: 8084
+    listen_port: 8086
     listen_port_webserver: 8086
     verbosity: error
     enable_openapi: true
