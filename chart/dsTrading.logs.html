@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Mon May 13 11:39:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Mon May 13 11:52:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTestpairs.sh.log>dsTestpairs.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -10,14 +10,14 @@
 <div><a href=#dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
 <tr><td nowrap><small>596969 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>2768707 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
-<tr><td nowrap><small>2768708 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish GET balance --quick</small></td></tr>
-<tr><td nowrap><small>2768774 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>2768775 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
-<tr><td nowrap><small>2768793 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>2768794 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
-<tr><td nowrap><small>2768795 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
-<tr><td nowrap><small>2768891 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh binance-futures-dryrun-bearish</small></td></tr>
+<tr><td nowrap><small>2955478 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh</small></td></tr>
+<tr><td nowrap><small>2955479 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-futures-dryrun-bearish GET balance --quick</small></td></tr>
+<tr><td nowrap><small>2955556 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh binance-futures-dryrun-bearish</small></td></tr>
+<tr><td nowrap><small>2955609 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
+<tr><td nowrap><small>2955610 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>2955626 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40</small></td></tr>
+<tr><td nowrap><small>2955627 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>2955628 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTestpairs.sh.log>dsTestpairs.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -128,7 +128,7 @@
   "amend_last_stake_amount": true,<br>
   "exit_profit_only": true,<br>
   "api_server": {<br>
-    "listen_port": 8084,<br>
+    "listen_port": 8086,<br>
     "enable_openapi": true,<br>
     "CORS_origins": [<br>
       "http://127.0.0.1:8084",<br>
@@ -484,7 +484,7 @@ sudo zsh -c curl -s |jq -r '.pairs' > ../../freqtrade/user_data_k8s/binance-adri
 the input device is not a TTY<br>
 PAIRLIST_WHITE_URL=https://filekeys.com/remotepairlist-white-spot.json<br>
 PAIRLIST_BLACK_URL=<br>
-2024-05-13 11:36:05,350 - freqtrade - INFO - freqtrade docker-2024.5-dev-f7e69154<br>
+2024-05-13 11:48:05,596 - freqtrade - INFO - freqtrade docker-2024.5-dev-f7e69154<br>
 the input device is not a TTY<br>
 TIMEFRAMES=<br>
 TIMEFRAMES=<br>
@@ -512,18 +512,18 @@ TRADING_MODE=futures<br>
 #######################################################################################################<br>
 ################ Test Pairs for Strategy DWT_LongShort #############################<br>
 trading-test-pairlist.sh --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures<br>
--rw------- 1 msantana msantana 0 May 13 11:36 /tmp/tmp.yyLfADIKvX<br>
+-rw------- 1 msantana msantana 0 May 13 11:48 /tmp/tmp.DWVsvVz24z<br>
 trading-test-pairlist.sh --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures<br>
 #######################################################################################################<br>
 ################ Start: Test Pairs for Strategy --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures #############################<br>
 docker run --rm --name test-pairlist --user ftuser -it --entrypoint freqtrade -v /home/msantana/dersalvador/freqtrading/freqtrade:/trading europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256:e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f test-pairlist --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures<br>
 the input device is not a TTY<br>
--rw-r--r-- 1 msantana msantana 0 May 13 11:36 /tmp/tmp.C0ii6hPmDg.json<br>
-[31m/tmp/tmp.C0ii6hPmDg is empty[0m<br>
--rw-r--r-- 1 msantana msantana 0 May 13 11:36 /tmp/tmp.yyLfADIKvX.json<br>
-/tmp/tmp.yyLfADIKvX: ####################################################################################################### ################ Start: Test Pairs for Strategy --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures ############################# docker run --rm --name test-pairlist --user ftuser -it --entrypoint freqtrade -v /home/msantana/dersalvador/freqtrading/freqtrade:/trading europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256:e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f test-pairlist --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures the input device is not a TTY -rw-r--r-- 1 msantana msantana 0 May 13 11:36 /tmp/tmp.C0ii6hPmDg.json [31m/tmp/tmp.C0ii6hPmDg is empty[0m<br>
-[31m/tmp/tmp.yyLfADIKvX.json is empty[0m<br>
-"Finished at: 20240513-113606"<br>
+-rw-r--r-- 1 msantana msantana 0 May 13 11:48 /tmp/tmp.EtCZCbv6Ch.json<br>
+[31m/tmp/tmp.EtCZCbv6Ch is empty[0m<br>
+-rw-r--r-- 1 msantana msantana 0 May 13 11:48 /tmp/tmp.DWVsvVz24z.json<br>
+/tmp/tmp.DWVsvVz24z: ####################################################################################################### ################ Start: Test Pairs for Strategy --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures ############################# docker run --rm --name test-pairlist --user ftuser -it --entrypoint freqtrade -v /home/msantana/dersalvador/freqtrading/freqtrade:/trading europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256:e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f test-pairlist --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures the input device is not a TTY -rw-r--r-- 1 msantana msantana 0 May 13 11:48 /tmp/tmp.EtCZCbv6Ch.json [31m/tmp/tmp.EtCZCbv6Ch is empty[0m<br>
+[31m/tmp/tmp.DWVsvVz24z.json is empty[0m<br>
+"Finished at: 20240513-114806"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -1034,6 +1034,7 @@ parse error: Expected another key-value pair at line 6650, column 25<br>
 ++++<br>
 + + + + + <b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+<b>2024-04-29 08-58-29: 21772.72</b><br><br>
 <b>2024-04-29 07-45-03: 20279.40</b><br><br>
 <b>2024-04-29 07-25-34: 20202.44</b><br><br>
 <b>2024-04-29 07-03-57: 20182.30</b><br><br>
@@ -1485,9 +1486,9 @@ parse error: Expected another key-value pair at line 6650, column 25<br>
 <b>2024-04-21 16-42-38: 15931.77</b><br><br>
 <b>2024-04-21 16-23-18: 15981.50</b><br><br>
 <b>2024-04-21 16-06-19: 16009.07</b><br><br>
-<b>2024-04-21 15-42-44: 16006.46</b><br><br>
-<b>2024-04-21100 46815  100 46815    0     0  79752      0 --:--:-- --:--:-- --:--:-- 79617<br>
- 15-23-46: 15998.94</b><br><br>
+<b>2024-04-21 15-100 46811  100 46811    0     0  78939      0 --:--:-- --:--:-- --:--:-- 78806<br>
+42-44: 16006.46</b><br><br>
+<b>2024-04-21 15-23-46: 15998.94</b><br><br>
 <b>2024-04-21 15-03-13: 15986.28</b><br><br>
 <b>2024-04-21 14-43-25: 15996.88</b><br><br>
 <b>2024-04-21 14-25-21: 15989.28</b><br><br>
@@ -1529,7 +1530,6 @@ parse error: Expected another key-value pair at line 6650, column 25<br>
 <b>2024-04-21 06-03-30: 15069.92</b><br><br>
 <b>2024-04-21 05-43-20: 15070.89</b><br><br>
 <b>2024-04-21 05-24-38: 15116.78</b><br><br>
-<b>2024-04-21 05-04-24: 15116.11</b><br><br>
 </html><br>
 <br>
 [0;32mURL: http://filekeys.com/dsTradingBalanceRealtime.html[0m<br>
@@ -2549,71 +2549,6 @@ Finished at: 20240513-090001<br>
 ++++<br>
 + + + + + <b id=dsTradingHedging.sh.log>dsTradingHedging.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-20240513-095901<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-095901"<br>
-20240513-100001<br>
-Running Take Profit already? RUNNING=msantana 1242849 1242840  0 10:00 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -40<br>
-[31mdsTradingHedging already running, exiting[0m<br>
-"Finished at: 20240513-100002"<br>
-20240513-100101<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100101"<br>
-20240513-100201<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100201"<br>
-20240513-100301<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100301"<br>
-20240513-100401<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100402"<br>
-20240513-100501<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100501"<br>
-20240513-100601<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100601"<br>
-20240513-100701<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100701"<br>
-20240513-100801<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100801"<br>
-20240513-100901<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-100901"<br>
-20240513-101001<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-101001"<br>
-20240513-101101<br>
-Running Take Profit already? RUNNING=<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-parse error: Expected another key-value pair at line 6650, column 25<br>
-"Finished at: 20240513-101102"<br>
-20240513-101201<br>
 Running Take Profit already? RUNNING=<br>
 parse error: Expected another key-value pair at line 6650, column 25<br>
 parse error: Expected another key-value pair at line 6650, column 25<br>
@@ -3049,19 +2984,76 @@ parse error: Expected another key-value pair at line 6650, column 25<br>
 "Finished at: 20240513-113802"<br>
 20240513-113901<br>
 Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-113901"<br>
+20240513-114001<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114002"<br>
+20240513-114101<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114101"<br>
+20240513-114201<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114202"<br>
+20240513-114301<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114301"<br>
+20240513-114401<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114402"<br>
+20240513-114501<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114501"<br>
+20240513-114601<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114602"<br>
+20240513-114701<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114701"<br>
+20240513-114801<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114801"<br>
+20240513-114901<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-114901"<br>
+20240513-115001<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-115001"<br>
+20240513-115101<br>
+Running Take Profit already? RUNNING=<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+parse error: Expected another key-value pair at line 6650, column 25<br>
+"Finished at: 20240513-115101"<br>
+20240513-115201<br>
+Running Take Profit already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTestingPairList.sh.log>dsTradingTestingPairList.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTestingPairList.sh.log>dsTradingTestingPairList.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-the input device is not a TTY<br>
--rw-r--r-- 1 msantana msantana 0 May 12 23:12 /tmp/tmp.GwRonOjg3t.json<br>
-[31m/tmp/tmp.GwRonOjg3t is empty[0m<br>
-"Finished at: 20240512-231201"<br>
-20240512-232401<br>
-#######################################################################################################<br>
-################ Start: Test Pairs for Strategy --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty #############################<br>
-docker run --rm --name test-pairlist --user ftuser -it --entrypoint freqtrade -v /home/msantana/dersalvador/freqtrading/freqtrade:/trading europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256:e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f test-pairlist --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
 the input device is not a TTY<br>
 -rw-r--r-- 1 msantana msantana 0 May 12 23:24 /tmp/tmp.R6ljo67SKn.json<br>
 [31m/tmp/tmp.R6ljo67SKn is empty[0m<br>
@@ -3554,510 +3546,518 @@ the input device is not a TTY<br>
 -rw-r--r-- 1 msantana msantana 0 May 13 11:36 /tmp/tmp.lfvFy4QWeu.json<br>
 [31m/tmp/tmp.lfvFy4QWeu is empty[0m<br>
 "Finished at: 20240513-113601"<br>
+20240513-114801<br>
+#######################################################################################################<br>
+################ Start: Test Pairs for Strategy --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty #############################<br>
+docker run --rm --name test-pairlist --user ftuser -it --entrypoint freqtrade -v /home/msantana/dersalvador/freqtrading/freqtrade:/trading europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256:e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f test-pairlist --print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+the input device is not a TTY<br>
+-rw-r--r-- 1 msantana msantana 0 May 13 11:48 /tmp/tmp.4nCqr8GTxS.json<br>
+[31m/tmp/tmp.4nCqr8GTxS is empty[0m<br>
+"Finished at: 20240513-114801"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-Runbr><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-104601<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:07 /tmp/tmp.nlxe1rgi3f<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-110706"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-110801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:08 /tmp/tmp.3qJDxOn100  442k  100  442k    0     0   212k      0  0:00:02  0:00:02 --:--:--  212k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+6sg<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logsnished at: 20240513-110906"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111001<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:10 /tmp/tmp.7NmA9m6cXo<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111006"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+202-[0m100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-110706"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-110801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:46 /tmp/tmp.Kzl58g9FlC<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;100  444k  100  444k    0     0   229k      0  0:00:01  0:00:01 --:--:--  228k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------100  441k  100  441k    0     0   216k      0  0:00:02  0:00:02 --:--:--  216k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-104606"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-104701<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:08 /tmp/tmp.3qJDxOn100  441k  100  441k    0     0   214k      0  0:00:02  0:00:02 --:--:--  214k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+6sg<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logsnished at: 20240513-110906"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111001<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:47 /tmp/tmp.xeHtxkqx9b<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:10 /tmp/tmp.7NmA9m6cXo<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-104707"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-104801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111006"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111101<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</b100  442k  100  442k    0     0   228k      0  0:00:01  0:00:01 --:--:--  228k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ody></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:11 /tmp/tmp.hCaUvuRAgo<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:12 /tmp/tmp.wdVLqhRsOf<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111206"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:13 /tmp/tmp.mt1sgkKR8c<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------UvuRAgo<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:48 /tmp/tmp.BTUCEmun5x<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:12 /tmp/tmp.wdVLqhRsOf<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-104806"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-104901<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=msantana 2011854 2011849  0 10:49 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-already running, exiting<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-104901"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105001<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running al100  442k  100  442k    0     0   235k      0  0:00:01  0:00:01 --:--:--  235k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-0m<br><br>< 94  442k   94  417k    0     0   219k      0  0:00:02  0:00:01  0:00:01  219kbr><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-104707"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-104801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:48 /tmp/tmp.BTUCEmun5x<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-104806"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-104901<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=msantana 2011854 2011849  0 10:49 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-already running, exiting<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-104901"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105001<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running al100  440k  100  440k    0     0   216k      0  0:00:02  0:00:02 --:--:--  216k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-ready? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:50 /tmp/tmp.5at6dzDUgf<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105007"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105101<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111206"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:51 /tmp/tmp.yUkeCySsF4<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:13 /tmp/tmp.mt1sgkKR8c<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------100  442k  100  442k    0     0   253k      0  0:00:01  0:00:01 --:--:--  253k100  442k  100  442k    0     0   253k      0  0:00:01  0:00:01 --:--:--  253k<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111306"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111401<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana ms100  441k  100  441k    0     0   212k      0  0:00:02  0:00:02 --:--:--  212k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105007"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105101<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:14 /tmp/tmp.YMHGaEMobl<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111407"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-11150---------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111206"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:51 /tmp/tmp.yUkeCySsF4<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:13 /tmp/tmp.mt1sgkKR8c<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------100  441k  100  441k    0     0   212k      0  0:00:02  0:00:02 --:--:--  212k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111306"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111401<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana ms100  440k  100  440k    0     0   211k      0  0:00:02  0:00:02 --:--:--  211k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-antana 0 May 13 10:52 /tmp/tmp.sO6wJmaMMg<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:14 /tmp/tmp.YMHGaEMobl<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105207"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111407"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111501<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:53 /tmp/tmp.Q0LMKCVhVI<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:15 /tmp/tmp.x7YHWPSoab<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105306"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105401<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111507"<br><br><br><100  442k  100  442k    0     0   228k      0  0:00:01  0:00:01 --:--:--  228k<br><br><br><br><br><br><br><br><br><br><br><br><br>
+br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111601<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:54 /tmp/tmp.FVvFkLjm100  442k  100  442k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-lready? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana ms100  440k  100  440k    0     0   211k      0  0:00:02  0:00:02 --:--:--  211k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-antana 0 May 13 10:52 /tmp/tmp.sO6wJmaMMg<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105207"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:53 /tmp/tmp.Q0LMKCVhVI<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105306"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105401<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:54 /tmp/tmp.FVvFkLjm100  440k  100  440k    0     0   235k      0  0:00:01  0:00:01 --:--:--  235k<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-KZ<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105406"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105501<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:55 /tmp/tmp.1PCJdmwobx<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:16 /tmp/tmp.Ck1Q6aqGCH<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105507"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105601<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111605"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111701<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:56 /tmp/tmp.exyvSaC9RF<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrad100  441k  100  441k    0     0   236k      0  0:00:01  0:00:01 --:--:--  236k<br><br><br><br><br><br><br><br><br><br><br><br><br>
-------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-105406"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105501<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:55 /tmp/tmp.1PCJdmwobx<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><brr><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-110606"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-110701<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:07 /tmp/tmp.nlxe1rgi3f<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m100  442k  100  442k    0     0   236k      0  0:00:01  0:00:01 --:--:--  236k<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-105501<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantan<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 10:55 /tmp/tmp.1PCJdmwobx<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:15 /tmp/tmp.x7YHWPSoab<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><brr><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-110606"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-110701<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111507"<br><br><br><100  441k  100  441k    0     0   217k      0  0:00:02  0:00:02 --:--:--  217k<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111601<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:16 /tmp/tmp.Ck1Q6aqGCH<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111605"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111701<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:07 /tmp/tmp.nlxe1rgi3f<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:17 /tmp/tmp.fTkRr4Pc9f<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-110706"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-110801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111707"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:08 /tmp/tmp.3qJDxOn100  442k  100  442k    0     0   212k      0  0:00:02  0:00:02 --:--:--  212k<br><br><br><br><br><br><br><br><br><br><br>
-6sg<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logsnished at: 20240513-110906"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111001<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:10 /tmp/tmp.7NmA9m6cXo<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111006"<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-202-[0m100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k100  440k  100  440k    0     0   233k      0  0:00:01  0:00:01 --:--:--  233k<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-110706"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-110801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:18 /tmp/tmp.j4CXMpeLct<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111806"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+2024051100  442k  100  442k    0     0   218k      0  0:00:02  0:00:02 --:--:--  218k<br><br><br><br><br><br><br><br><br><br><br><br>
+[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111605"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111701<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:17 /tmp/tmp.fTkRr4Pc9f<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111707"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-111801<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:08 /tmp/tmp.3qJDxOn100  441k  100  441k    0     0   214k      0  0:00:02  0:00:02 --:--:--  214k<br><br><br><br><br><br><br><br><br><br><br><br>
-6sg<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logsnished at: 20240513-110906"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111001<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:18 /tmp/tmp.j4CXMpeLct<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-111806"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+2024051100  440k  100  440k    0     0   211k      0  0:00:02  0:00:02 --:--:--  211k<br><br><br><br><br><br><br><br><br><br><br><br><br>
+3-111901<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:10 /tmp/tmp.7NmA9m6cXo<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:19 /tmp/tmp.XB2QnWLLCw<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.log100  442k  100  442k    0     0   215k      0  0:00:02  0:00:02 --:--:--  215k<br><br><br><br><br><br><br><br><br><br><br>
+s.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111006"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111101<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</b100  442k  100  442k    0     0   228k      0  0:00:01  0:00:01 --:--:--  228k<br><br><br><br><br><br><br><br><br><br>
-ody></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:11 /tmp/tmp.hCaUvuRAgo<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111201<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:12 /tmp/tmp.wdVLqhRsOf<br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111206"<br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111301<br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:13 /tmp/tmp.mt1sgkKR8c<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------UvuRAgo<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112008"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112101<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:12 /tmp/tmp.wdVLqhRsOf<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111206"<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111301<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:13 /tmp/tmp.mt1sgkKR8c<br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m------------------------------------------------------100  442k  100  442k    0     0   253k      0  0:00:01  0:00:01 --:--:--  253k100  442k  100  442k    0     0   253k      0  0:00:01  0:00:01 --:--:--  253k<br><br><br><br><br><br><br><br><br>
--------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111306"<br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111401<br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:14 /tmp/tmp.YMHGaEMobl<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111407"<br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-11150---------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111206"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-----------------------------------------------------------------------r><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:13 /tmp/tmp.mt1sgkKR8c<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1  msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------------100  442k  100  442k    0     0   236k      0  0:00:01  0:00:01 --:--:--  235k<br><br><br><br><br><br><br><br><br><br>
+-------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:22 /tmp/tmp.FieG7zaEaZ<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br>d at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1  msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------------100  441k  100  441k    0     0   212k      0  0:00:02  0:00:02 --:--:--  212k<br><br><br><br><br><br><br><br><br><br><br>
+-------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112201<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:22 /tmp/tmp.FieG7zaEaZ<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br100  443k  100  443k    0     0   230k      0  0:00:01  0:00:01 --:--:--  230k<br><br><br><br><br><br><br><br><br>
+><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112207"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:23 /tmp/tmp.0qcS5KURB3<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+A<br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112606"<br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112701<br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:27 /tmp/tmp.OQLedZidXd<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-----------------------d at: 20240513-112207"<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112301<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:23 /tmp/tmp.0qcS5KURB3<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+A<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m------------------------------------------------------100  441k  100  441k    0     0   212k      0  0:00:02  0:00:02 --:--:--  212k<br><br><br><br><br><br><br><br><br><br>
--------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111306"<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111401<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112606"<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112701<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:14 /tmp/tmp.YMHGaEMobl<br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msan100  443k  100  443k    0     0   218k      0  0:00:02  0:00:02 --:--:--  218k<br><br><br><br><br><br><br><br>
+tana msantana 0 May 13 11:27 /tmp/tmp.OQLedZidXd<br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111407"<br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111501<br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112706"<br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112801<br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:15 /tmp/tmp.x7YHWPSoab<br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:28 /tmp/tmp.mmBEC4HIJt<br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111507"<br><br><br><100  442k  100  442k    0     0   228k      0  0:00:01  0:00:01 --:--:--  228k<br><br><br><br><br><br><br><br>
-br><br><br><br><br><br><br><br><br>
-20240513-111601<br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112808"<br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112901<br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:16 /tmp/tmp.Ck1Q6aqGCH<br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:29 /tmp/tmp.auZRO491MQ<br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111605"<br><br><br><br><br><br><br><br><br><br><br>
-20240513-111701<br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantan<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------tmp.OQLedZidXd<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112706"<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112801<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:15 /tmp/tmp.x7YHWPSoab<br><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:28 /tmp/tmp.mmBEC4HIJt<br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111507"<br><br><br><100  441k  100  441k    0     0   217k      0  0:00:02  0:00:02 --:--:--  217k<br><br><br><br><br><br><br><br><br>
-br><br><br><br><br><br><br><br><br><br>
-20240513-111601<br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-112808"<br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-112901<br><br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:16 /tmp/tmp.Ck1Q6aqGCH<br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:29 /tmp/tmp.auZRO491MQ<br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111605"<br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111701<br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240100  443k  100  443k    0     0   236k      0  0:00:01  0:00:01 --:--:--  236k<br><br><br><br><br><br><br>
+513-112906"<br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-113001<br><br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:17 /tmp/tmp.fTkRr4Pc9f<br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:30 /tmp/tmp.tArvr9j4Ms<br><br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111707"<br><br><br><br><br><br><br><br><br><br><br>
-20240513-111801<br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113007"<br><br><br><br><br><br><br><br><br><br><br>
+20240513-113101<br><br><br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:18 /tmp/tmp.j4CXMpeLct<br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:31 /tmp/tmp.iVwQvNxtc6<br><br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111806"<br><br><br><br><br><br><br><br><br><br>
-2024051100  442k  100  442k    0     0   218k      0  0:00:02  0:00:02 --:--:--  218k<br><br><br><br><br><br><br>
-[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113106"<br><br><br><br><br><br><br><br><br><br>
+20240513-113201<br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:32 /tmp/tmp.mXbf8ywvf9<br><br><br><br><br><br><br><br><br>
+[0 100  441k    0     0   211k      0  0:00:02  0:00:02 --:--:--  211k<br><br><br><br><br><br><br><br>
+513-112906"<br><br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-113001<br><br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:30 /tmp/tmp.tArvr9j4Ms<br><br><br><br><br>100  443k  100  443k    0     0   218k      0  0:00:02  0:00:02 --:--:--  218k<br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113007"<br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-113101<br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:31 /tmp/tmp.iVwQvNxtc6<br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113106"<br><br><br><br><br><br><br><br><br><br><br>
+20240513-113201<br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:32 /tmp/tmp.mXbf8ywvf9<br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113206"<br><br><br><br><br><br><br><br><br><br>
+20240513-113301<br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br>
+"Finished at: 100  443k  100  443k    0     0   229k      0  0:00:01  0:00:01 --:--:--  229k<br><br><br><br><br>
+20240513-113306"<br><brady? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:32 /tmp/tmp.mXbf8ywvf9<br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113206"<br><br><br><br><br><br><br><br><br><br><br>
+20240513-113301<br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><r><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113306"<br><brady? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:32 /tmp/tmp.mXbf8ywvf9<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113206"<br><br><br><br><br><br><br><br><br><br><br><br>
+20240513-113301<br><br><br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113306"<br><br3 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------------------------- 11:40 /tmp/tmp.pxhaI7SWF8<br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br>
+[0;32m--------------------------------------------------------------------------><br><br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113306"<br><br3 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------------------------- 11:40 /tmp/tmp.pxhaI7SWF8<br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br>
+"Finished at: 20240513-114006"<br><br><br><br><br><br><br><br>
+20240513-114101<br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:41 /tmp/tmp.as891fTFZc<br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br>
+"Finished at: 20240513-114210"<br><br><br><br><br><br><br>
+2024r><br><br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111605"<br><br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111701<br><br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:17 /tmp/tmp.fTkRr4Pc9f<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111707"<br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-111801<br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:18 /tmp/tmp.j4CXMpeLct<br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-111806"<br><br><br><br><br><br><br><br><br><br><br>
-2024051100  440k  100  440k    0     0   211k      0  0:00:02  0:00:02 --:--:--  211k<br><br><br><br><br><br><br><br>
-3-111901<br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:19 /tmp/tmp.XB2QnWLLCw<br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.log100  442k  100  442k    0     0   215k      0  0:00:02  0:00:02 --:--:--  215k<br><br><br><br><br><br>
-s.html[0m<br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112008"<br><br><br><br><br><br><br><br><br><br>
-20240513-112101<br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br>
-[0;32m-----------------------------------------------------------------------r><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br>
-20240513-112201<br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br>
--rw------- 1  msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
-[0;32m------------------------------------------------------------100  442k  100  442k    0     0   236k      0  0:00:01  0:00:01 --:--:--  235k<br><br><br><br><br>
--------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br><br>
-20240513-112201<br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:22 /tmp/tmp.FieG7zaEaZ<br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br>d at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br><br>
-20240513-112201<br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br>
--rw------- 1  msantana 0 May 13 11:21 /tmp/tmp.bLS8lAPETK<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-[0;32m------------------------------------------------------------100  441k  100  441k    0     0   212k      0  0:00:02  0:00:02 --:--:--  212k<br><br><br><br><br><br>
--------------------------[0m<br><br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112106"<br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-112201<br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:22 /tmp/tmp.FieG7zaEaZ<br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br100  443k  100  443k    0     0   230k      0  0:00:01  0:00:01 --:--:--  230k<br><br><br><br>
-><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112207"<br><br><br><br><br><br><br><br><br><br><br>
-20240513-112301<br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:23 /tmp/tmp.0qcS5KURB3<br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br>
-A<br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112606"<br><br><br><br><br><br><br><br>
-20240513-112701<br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:27 /tmp/tmp.OQLedZidXd<br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br>
-[0;32m-----------------------d at: 20240513-112207"<br><br><br><br><br><br><br><br><br><br><br><br>
-20240513-112301<br><br><br><br><br><br><br><br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br><br><br>
-</body></html><br><br><br><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:23 /tmp/tmp.0qcS5KURB3<br><br><br><br><br><br><br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br>
-A<br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-113306"<br><br3 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------------------------- 11:40 /tmp/tmp.pxhaI7SWF8<br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112606"<br><br><br><br><br><br><br><br><br>
-20240513-112701<br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-114006"<br><br><br><br><br><br><br><br><br>
+20240513-114101<br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br>
--rw------- 1 msan100  443k  100  443k    0     0   218k      0  0:00:02  0:00:02 --:--:--  218k<br><br><br>
-tana msantana 0 May 13 11:27 /tmp/tmp.OQLedZidXd<br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:41 /tmp/tmp.as891fTFZc<br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112706"<br><br><br><br><br><br><br><br>
-20240513-112801<br><br><br><br><br><br><br><br>
+"Finished at: 20240513-114210"<br><br><br><br><br><br><br><br>
+20240513-114301<br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:28 /tmp/tmp.mmBEC4HIJt<br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:43 /tmp/tmp.Nak1gviPfr<br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br>
-"Finished at: 20240513-112808"<br><br><br><br><br><br><br>
-20240513-112901<br><br><br><br><br><br><br>
+"Finished at: 20240513-114306"<br><br><br><br><br><br><br>
+20240513-114401<br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:29 /tmp/tmp.auZRO491MQ<br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:44 /tmp/tmp.wEMgAi9hfN<br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br>
-[0;32m------------------------------tmp.OQLedZidXd<br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br>
+"Finished at: 20240513-114407"<br><br><br><br><br><br>
+20240513-114501<br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br>
+</body></html><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11100  444k  100  444k    0     0   234k      0  0:00:01  0:00:01 --:--:--  234k<br><br><br><br>
+:45 /tmp/tmp.SMf6MN0QWBm<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+[0;32m------------------------------------------------------------------------- 11:40 /tmp/tmp.pxhaI7SWF8<br><br><br><br><br><br><br><br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-114006"<br><br><br><br><br><br><br><br><br><br>
+20240513-114101<br><br><br><br><br><br><br><br><br><br>
+Running already? RUNNING=<br><br><br><br><br><br><br><br><br><br>
+</body></html><br><br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:41 /tmp/tmp.as891fTFZc<br><br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112706"<br><br><br><br><br><br><br><br><br>
-20240513-112801<br><br><br><br><br><br><br><br><br>
+"Finished at: 20240513-114210"<br><br><br><br><br><br><br><br><br>
+20240513-114301<br><br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:28 /tmp/tmp.mmBEC4HIJt<br><br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:43 /tmp/tmp.Nak1gviPfr<br><br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br>
-"Finished at: 20240513-112808"<br><br><br><br><br><br><br><br>
-20240513-112901<br><br><br><br><br><br><br><br>
+[0;32m-----------------100  443k  100  443k    0     0   237k      0  0:00:01  0:00:01 --:--:--  237k<br><br>
+--------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br>
+"Finished at: 20240513-114306"<br><br><br><br><br><br><br><br>
+20240513-114401<br><br><br><br><b100  445k  100  445k    0     0   230k      0  0:00:01  0:00:01 --:--:--  230k<br><br><br>
+r><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:29 /tmp/tmp.auZRO491MQ<br><br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:44 /tmp/tmp.wEMgAi9hfN<br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br>
-"Finished at: 20240100  443k  100  443k    0     0   236k      0  0:00:01  0:00:01 --:--:--  236k<br><br>
-513-112906"<br><br><br><br><br><br><br>
-20240513-113001<br><br><br><br><br><br><br>
+"Finished at: 20240513-114407"<br><br><br><br><br><br><br>
+20240513-114501<br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:30 /tmp/tmp.tArvr9j4Ms<br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11100  444k  100  444k    0     0   234k      0  0:00:01  0:00:01 --:--:--  234k<br><br><br><br><br>
+:45 /tmp/tmp.SMSnU6VptA<br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br>
-"Finished at: 20240513-113007"<br><br><br><br><br><br>
-20240513-113101<br><br><br><br><br><br>
+"Finished at: 20240513-114506"<br><br><br><br><br><br>
+20240513-114601<br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br>
 </body></html><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:31 /tmp/tmp.iVwQvNxtc6<br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:46 /tmp/tmp.6B0al1VC2I<br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br>
-"Finished at: 20240513-113106"<br><br><br><br><br>
-20240513-113201<br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br>
-</body></html><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:32 /tmp/tmp.mXbf8ywvf9<br><br><br><br>
-[0 100  441k    0     0   211k      0  0:00:02  0:00:02 --:--:--  211k<br><br><br>
-513-112906"<br><br><br><br><br><br><br><br>
-20240513-113001<br><br><br><br><br><br><br><br>
+[0;32m--------------------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br><br>
+"Finished at: 20240513-114407"<br><br><br><br><br><br><br><br>
+20240513-114501<br><br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:30 /tmp/tmp.tArvr9j4Ms<br><br><br><br><br>100  442k  100  442k    0     0   217k      0  0:00:02  0:00:02 --:--:--  217k<br>
-<br><br>
+-rw------- 1 msantana msantana 0 May 13 11100  444k  100  444k    0     0   234k      0  0:00:01  0:00:01 --:--:--  234k<br><b100  442k  100  442k    0     0   208k      0  0:00:02  0:00:02 --:--:--  208k<br>
+r><br><br><br><br>
+:45 /tmp/tmp.SMSnU6VptA<br><br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br><br>
-"Finished at: 20240513-113007"<br><br><br><br><br><br><br>
-20240513-113101<br><br><br><br><br><br><br>
+"Finished at: 20240513-114506"<br><br><br><br><br><br><br>
+20240513-114601<br><br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br><br>
 </body></html><br><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:31 /tmp/tmp.iVwQvNxtc6<br><br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:46 /tmp/tmp.6B0al1VC2I<br><br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br><br>
-"Finished at: 20240513-113106"<br><br><br><br><br><br>
-20240513-113201<br><br><br><br><br><br>
+"Finished at: 20240513-114607"<br><br><br><br><br><br>
+20240513-114701<br><br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br><br>
 </body></html><br><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:32 /tmp/tmp.mXbf8ywvf9<br><br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:47 /tmp/tmp.BAq2tuXlQm<br><br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br>
-"Finished at: 20240513-113206"<br><br><br><br><br>
-20240513-113301<br><br><br><br><br>
+"Finished at: 20240513-114707"<br><br><br><br><br>
+20240513-114801<br><br><br><br><br>
 Running already? RUNNING=<br><br><br><br><br>
 </body></html><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:48 /tmp/tmp.NaB0F2z2wS<br><br><br><br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br>
 [0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br>
-"Finished at: 20240513-113306"<br><br3 11:33 /tmp/tmp.Of6MN0QWBm<br><br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br><br><br>
-[0;32m-------------------------------------------------------------------------------------[0m<br><br><br><br><br>
-"Finished at: 20240513-113306"<br><br><br><br><br>
-20240513-113401<br><br><br><br><br>
-Running already? RUNNING=<br><br><br><br><br>
-</body></html><br><br><br><br>
--rw------- 1 msantana msantana 0 May 13 11:34 /tmp/tmp.1dCkYzeRyZ<br><br><br><br>
-[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<b---------------------------------------[0m<br><br>
-"Finished at: 20240513-113706"<br><br>
-20240513-113801<br><br>
+"Finished at: 20240513-114806"<br><br><br><br>
+20240513-114901<br><br><br><br>
+Running already? RUNNING=<br><br><br><br>
+</body></html><br><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:49 /tmp/tmp.T2lAi6DYEV<br><br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br><br>
+"Finished at: 20240513-114907"<br><br><br>
+20240513-115001<br><br><br>
+Running already? RUNNING=<br><br><br>
+</body></html><br><br>
+-rw------- 1 msantana msantana 0 May 13 11:50 /tmp/tmp.9UBvWTtJt5<br><br>
+[0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br><br>
+[0;32m-------------------------------------------------------------------------------------[0m<br><br>
+"Finished at: 20240513-115006"<br><br>
+20240513-115101<br><br>
 Running already? RUNNING=<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 May 13 11:38 /tmp/tmp.i4XpZxAOVm<br>
+-rw------- 1 msantana msantana 0 May 13 11:51 /tmp/tmp.HwN9qPZO2R<br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br>
 [0;32m-------------------------------------------------------------------------------------[0m<br>
-"Finished at: 20240513-113807"<br>
-20240513-113901<br>
+"Finished at: 20240513-115107"<br>
+20240513-115201<br>
 Running already? RUNNING=<br>
 </body></html>
--rw------- 1 msantana msantana 0 May 13 11:39 /tmp/tmp.05bIVeZRo0
+-rw------- 1 msantana msantana 0 May 13 11:52 /tmp/tmp.xPNh1KrZmu
