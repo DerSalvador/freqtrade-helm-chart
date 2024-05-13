@@ -6,7 +6,7 @@ configcreds:
   stake_currency: USDT
   fiat_display_currency: USD
   dry_run: true
-  stake_amount: 100
+  stake_amount: 50
   dry_run_wallet: 5000
   tradable_balance_ratio: 0.99
   cancel_open_orders_on_exit: false
