@@ -1,20 +1,20 @@
-{{- if (and .Values.bot.enabled .Values.config.api_server.enabled) }}
-apiVersion: v1
-kind: Service
-metadata:
-  name: freqtrade-webserver-{{ .Release.Namespace }}
-  labels:
-    app: freqtrade-webserver-{{ .Release.Namespace }}
-spec:
-  type: NodePort
-  ports:
-  - protocol: TCP
-    port: {{ .Values.kubernetes.nodePort_webserver }}
-    targetPort: api-webserver
-    nodePort: {{ .Values.kubernetes.nodePort_webserver }}
-  selector:
-    app: freqtrade-webserver-{{ .Release.Namespace }}
-{{- end }}
+#{{- if (and .Values.bot.enabled .Values.config.api_server.enabled) }}
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: freqtrade-webserver-{{ .Release.Namespace }}
+#  labels:
+#    app: freqtrade-webserver-{{ .Release.Namespace }}
+#spec:
+#  type: NodePort
+#  ports:
+#  - protocol: TCP
+#    port: {{ .Values.kubernetes.nodePort_webserver }}
+#    targetPort: api-webserver
+#    nodePort: {{ .Values.kubernetes.nodePort_webserver }}
+#  selector:
+#    app: freqtrade-webserver-{{ .Release.Namespace }}
+#{{- end }}
 ---
 # apiVersion: networking.k8s.io/v1
 # kind: Ingress
