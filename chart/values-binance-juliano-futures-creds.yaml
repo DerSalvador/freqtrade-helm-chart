@@ -6,7 +6,7 @@ configcreds:
   available_capital: 3000
   stake_amount: 10
   minimal_roi:
-    "0": 0.05
+    "0": 0.5
     "40160": 0.01
     "80160": 0    
   trading_mode: futures
@@ -27,10 +27,10 @@ configcreds:
         defaultType: future
         leverage: 100
     name: binance
-    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
-    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
-    # key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76  # 7hYocq4QubefqJFFqCBEPvc9OlmcIkOXT1xpAMS05htTfrhABT9bFQzSmyWnpo7r # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
-    # secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd #  8ERNEZyel3VxNyNQ8raIgtz967x5JRUZoDcW2THHUcTJFGhagdvcOSbYZKnB4Qhv # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
+      # key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      # secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76  # 7hYocq4QubefqJFFqCBEPvc9OlmcIkOXT1xpAMS05htTfrhABT9bFQzSmyWnpo7r # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
+    secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd #  8ERNEZyel3VxNyNQ8raIgtz967x5JRUZoDcW2THHUcTJFGhagdvcOSbYZKnB4Qhv # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
   telegram:
     enabled: true
     token:  "7194749919:AAHEXWFtBp9u8QZVkrBgHmRgip33t8d_7DE"
