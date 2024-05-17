@@ -24,8 +24,9 @@ configcreds:
   #   # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
   #   # One year back
   #   # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
-  available_capital: 3000
+  available_capital: 1000
   max_open_trades: 50
+  stake_amount: 10
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
