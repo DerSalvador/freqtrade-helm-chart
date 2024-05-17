@@ -61,8 +61,8 @@ configcreds:
       - ALGO/USDT:USDT
       - BTC/USDT:USDT
   telegram:
-    enabled: false
-    token: 7020581178:AAGN2KOhJ3jCCXL_0p8s77uKo_5YPgICB1Y # "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
+    enabled: true
+    token: 6632710647:AAF62LDqnrHf83KIIeSAtqsr6mgB6aKeL3Y # 7020581178:AAGN2KOhJ3jCCXL_0p8s77uKo_5YPgICB1Y # "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     chat_id: "1759706931" # "6274423445"
   pairlists:
     - method: RemotePairList
