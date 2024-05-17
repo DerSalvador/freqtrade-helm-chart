@@ -4,6 +4,7 @@ kubernetes:
 
 configcreds:
   available_capital: 3000
+  stake_amount: 10
   minimal_roi:
     "0": 0.05
     "40160": 0.01
@@ -32,7 +33,7 @@ configcreds:
     # secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd #  8ERNEZyel3VxNyNQ8raIgtz967x5JRUZoDcW2THHUcTJFGhagdvcOSbYZKnB4Qhv # EMPRVS0QkTXSNZBWrwn+mg47db2Y2Mf85lFsjXuTlEnX7tmL0bAkjoPYIRrs6IwdR5VFu38IOJO0BM4QAFiYCg==
   telegram:
     enabled: true
-    token:  "7140400515:AAHHXZH1eIw7S205RrximViSD0BTRHrM6_I"
+    token:  "7194749919:AAHEXWFtBp9u8QZVkrBgHmRgip33t8d_7DE"
     chat_id:  "1759706931" # "1759706931" # 
   pairlists:
     - method: RemotePairList
@@ -74,7 +75,7 @@ configcreds:
   position_adjustment_enable: false
 bot:
   enabled: true
-  strategy_name: DWT_LongShort
+  strategy_name: DoesNothingStrategy
   freqaimodel: LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
