@@ -3,6 +3,7 @@ kubernetes:
   nodePort: 32334
 
 configcreds:
+  max_open_trades: 50
   available_capital: 3000
   stake_amount: 10
   minimal_roi:
