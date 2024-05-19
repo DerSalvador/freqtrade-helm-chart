@@ -197,7 +197,7 @@ configcreds:
       dropout_rate: 0.3
 bot:
   enabled: true
-  strategy_name: DWT_LongShort
+  strategy_name: TaSearchLevelG15m_Long
   freqaimodel: LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
