@@ -7,7 +7,6 @@ import hashlib
 from urllib.parse import urlencode
 from binance.client import Client
 
-
 base_url = 'https://api.binance.com'
 
 headers = {
