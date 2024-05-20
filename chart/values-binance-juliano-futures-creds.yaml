@@ -5,8 +5,8 @@ kubernetes:
 configcreds:
   max_open_trades: 50
   available_capital: 400
-  stake_amount: 80
-  leverage: 8
+  stake_amount: 60
+  leverage: 4
   minimal_roi:
     "0": 0.6
     "40160": 0.01
