@@ -57,7 +57,7 @@ configcreds:
   exchange:
     pair_blacklist: [
       # Emergency
-      "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
+      # "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
       # Exchange
       "(BNB)/.*",
       # Leverage
@@ -96,29 +96,37 @@ configcreds:
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=9dc2f24ca9c5f440 # Long #  https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
       keep_pairlist_on_failure: true
-      read_timeout: 120
-    - method: RemotePairList
-      number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=596a2c3bc69e7faf # Short # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-      mode: whitelist
-      processing_mode: append
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 120
+      read_timeout: 120     
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   pairlist_url: https://remotepairlist.com?q=9dc2f24ca9c5f440 # Long #  https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+    #   mode: whitelist
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   pairlist_url: https://remotepairlist.com?q=596a2c3bc69e7faf # Short # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+    #   mode: whitelist
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120
 
-    - method: RemotePairList
-      number_assets: 50
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-      mode: whitelist
-      processing_mode: append
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 120   
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+    #   mode: whitelist
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120   
 
     # - method: RemotePairList
     #   number_assets: 50
