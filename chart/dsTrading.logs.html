@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Thu May 23 10:37:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Thu May 23 10:39:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</a><br><br></div>
 <div><a href=#dsTradingAddPairsToBlacklistToAllBots.sh.log>dsTradingAddPairsToBlacklistToAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
@@ -15,15 +15,15 @@
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
 <tr><td nowrap><small>1220376 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
-<tr><td nowrap><small>1279420 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>1279421 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -10</small></td></tr>
-<tr><td nowrap><small>1279422 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
-<tr><td nowrap><small>1279423 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 80</small></td></tr>
-<tr><td nowrap><small>1279454 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>1279461 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
-<tr><td nowrap><small>1279462 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
-<tr><td nowrap><small>1279495 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 80</small></td></tr>
-<tr><td nowrap><small>1279496 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>1304265 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 80</small></td></tr>
+<tr><td nowrap><small>1304266 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -10</small></td></tr>
+<tr><td nowrap><small>1304267 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>1304268 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
+<tr><td nowrap><small>1304300 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>1304305 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
+<tr><td nowrap><small>1304307 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>1304343 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTakeProfit.sh 80</small></td></tr>
+<tr><td nowrap><small>1304345 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTrading10MostpopluarUSDTPairsOnBinance.sh.log>dsTrading10MostpopluarUSDTPairsOnBinance.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -3060,132 +3060,6 @@ Finished at: 20240523-090001<br>
 ++++<br>
 + + + + + <b id=dsTradingHedging.sh.log>dsTradingHedging.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-<br>
-curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
-  "pair": "JTO/USDT:USDT",<br>
-  "side": "long",<br>
-  "ordertype": "market",<br>
-  "stakeamount": 50,<br>
-  "entry_tag": "forceenter-long-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-32m-15s-4",<br>
-  "leverage": 4<br>
-}<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311  100    95  100   216   5937  13500 --:--:-- --:--:-- --:--:-- 19437<br>
-{"error":"Error querying /api/v1/forceenter: position for JTO/USDT:USDT already open - id: 80"}-e "nFinished at: 20240523-103215"<br>
-20240523-103301<br>
-Running Take Profit already? RUNNING=<br>
-ipython trading_signals_X.py .takeprofit/history.allbots<br>
-QNT/USDT:USDT=Long<br>
-ILV/USDT:USDT=Long<br>
-BCH/USDT:USDT=Short<br>
-JTO/USDT:USDT=Long<br>
-NEAR/USDT:USDT=Hold<br>
-<br>
-[34m-------------------------------------------------------------------------------------------[0m<br>
-<br>
-[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures QNT 4 50 long[0m<br>
-Using Endpoint on 35.233.38.30:32335<br>
-<br>
-[0;32mAdding to whitelist QNT[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-<br>
-curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
-  "pair": "QNT/USDT:USDT",<br>
-  "side": "long",<br>
-  "ordertype": "market",<br>
-  "stakeamount": 50,<br>
-  "entry_tag": "forceenter-long-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-33m-06s-4",<br>
-  "leverage": 4<br>
-}<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311  100    95  100   216    655   1489 --:--:-- --:--:-- --:--:--  2144<br>
-{"error":"Error querying /api/v1/forceenter: position for QNT/USDT:USDT already open - id: 85"}<br>
-[34m-------------------------------------------------------------------------------------------[0m<br>
-<br>
-[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures ILV 4 50 long[0m<br>
-Using Endpoint on 35.233.38.30:32335<br>
-<br>
-[0;32mAdding to whitelist ILV[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-<br>
-curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
-  "pair": "ILV/USDT:USDT",<br>
-  "side": "long",<br>
-  "ordertype": "market",<br>
-  "stakeamount": 50,<br>
-  "entry_tag": "forceenter-long-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-33m-09s-4",<br>
-  "leverage": 4<br>
-}<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311  100    95  100   216   4130   9391 --:--:-- --:--:-- --:--:-- 13521<br>
-{"error":"Error querying /api/v1/forceenter: position for ILV/USDT:USDT already open - id: 88"}<br>
-[34m-------------------------------------------------------------------------------------------[0m<br>
-<br>
-[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures BCH 4 50 short[0m<br>
-Using Endpoint on 35.233.38.30:32335<br>
-<br>
-[0;32mAdding to whitelist BCH[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-<br>
-curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
-  "pair": "BCH/USDT:USDT",<br>
-  "side": "short",<br>
-  "ordertype": "market",<br>
-  "stakeamount": 50,<br>
-  "entry_tag": "forceenter-short-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-33m-12s-4",<br>
-  "leverage": 4<br>
-}<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   218    0     0  100   218      0    181  0:00:01  0:00:01 --:--:--   181100   308  100    90  100   218     61    149  0:00:01  0:00:01 --:--:--   211100   308  100    90  100   218     61    149  0:00:01  0:00:01 --:--:--   211<br>
-{"error":"Error querying /api/v1/forceenter: Failed to enter position for BCH/USDT:USDT."}<br>
-[34m-------------------------------------------------------------------------------------------[0m<br>
-<br>
-[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures JTO 4 50 long[0m<br>
-Using Endpoint on 35.233.38.30:32335<br>
-<br>
-[0;32mAdding to whitelist JTO[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
-{<br>
-  "status": "already running"<br>
-}<br>
-<br>
-curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
-  "pair": "JTO/USDT:USDT",<br>
-  "side": "long",<br>
-  "ordertype": "market",<br>
   "stakeamount": 50,<br>
   "entry_tag": "forceenter-long-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-33m-17s-4",<br>
   "leverage": 4<br>
@@ -3560,6 +3434,132 @@ curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceen
 20240523-103701<br>
 Running Take Profit already? RUNNING=<br>
 ipython trading_signals_X.py .takeprofit/history.allbots<br>
+QNT/USDT:USDT=Long<br>
+ILV/USDT:USDT=Long<br>
+BCH/USDT:USDT=Short<br>
+JTO/USDT:USDT=Long<br>
+NEAR/USDT:USDT=Hold<br>
+<br>
+[34m-------------------------------------------------------------------------------------------[0m<br>
+<br>
+[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures QNT 4 50 long[0m<br>
+Using Endpoint on 35.233.38.30:32335<br>
+<br>
+[0;32mAdding to whitelist QNT[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+<br>
+curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
+  "pair": "QNT/USDT:USDT",<br>
+  "side": "long",<br>
+  "ordertype": "market",<br>
+  "stakeamount": 50,<br>
+  "entry_tag": "forceenter-long-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-37m-07s-4",<br>
+  "leverage": 4<br>
+}<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311  100    95  100   216   6785  15428 --:--:-- --:--:-- --:--:-- 22214<br>
+{"error":"Error querying /api/v1/forceenter: position for QNT/USDT:USDT already open - id: 85"}<br>
+[34m-------------------------------------------------------------------------------------------[0m<br>
+<br>
+[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures ILV 4 50 long[0m<br>
+Using Endpoint on 35.233.38.30:32335<br>
+<br>
+[0;32mAdding to whitelist ILV[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+<br>
+curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
+  "pair": "ILV/USDT:USDT",<br>
+  "side": "long",<br>
+  "ordertype": "market",<br>
+  "stakeamount": 50,<br>
+  "entry_tag": "forceenter-long-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-37m-10s-4",<br>
+  "leverage": 4<br>
+}<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311  100    95  100   216   5937  13500 --:--:-- --:--:-- --:--:-- 19437<br>
+{"error":"Error querying /api/v1/forceenter: position for ILV/USDT:USDT already open - id: 88"}<br>
+[34m-------------------------------------------------------------------------------------------[0m<br>
+<br>
+[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures BCH 4 50 short[0m<br>
+Using Endpoint on 35.233.38.30:32335<br>
+<br>
+[0;32mAdding to whitelist BCH[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+<br>
+curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
+  "pair": "BCH/USDT:USDT",<br>
+  "side": "short",<br>
+  "ordertype": "market",<br>
+  "stakeamount": 50,<br>
+  "entry_tag": "forceenter-short-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-37m-13s-4",<br>
+  "leverage": 4<br>
+}<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   308  100    90  100   218    285    692 --:--:-- --:--:-- --:--:--   977<br>
+{"error":"Error querying /api/v1/forceenter: Failed to enter position for BCH/USDT:USDT."}<br>
+[34m-------------------------------------------------------------------------------------------[0m<br>
+<br>
+[0;32mdsTradingForceEnterWithLeverage.sh binance-adriana-futures JTO 4 50 long[0m<br>
+Using Endpoint on 35.233.38.30:32335<br>
+<br>
+[0;32mAdding to whitelist JTO[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot binance-adriana-futures: curl -s -X POST -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/start[0m<br>
+{<br>
+  "status": "already running"<br>
+}<br>
+<br>
+curl -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32335/api/v1/forceenter -H accept: application/json -H Content-Type: application/json -d {<br>
+  "pair": "JTO/USDT:USDT",<br>
+  "side": "long",<br>
+  "ordertype": "market",<br>
+  "stakeamount": 50,<br>
+  "entry_tag": "forceenter-long-script-wirsinddieguten-binance-adriana-futures-2024-05-23-10h-37m-16s-4",<br>
+  "leverage": 4<br>
+}<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311  100    95  100   216   7307  16615 --:--:-- --:--:-- --:--:-- 23923<br>
+{"error":"Error querying /api/v1/forceenter: position for JTO/USDT:USDT already open - id: 80"}-e "nFinished at: 20240523-103716"<br>
+20240523-103801<br>
+Running Take Profit already? RUNNING=msantana 1291490 1291487  0 10:38 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingHedging.sh -10<br>
+<br>
+[31mdsTradingHedging already running, exiting[0m<br>
+-e "nFinished at: 20240523-103801"<br>
+20240523-103901<br>
+Running Take Profit already? RUNNING=<br>
+ipython trading_signals_X.py .takeprofit/history.allbots<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingPrevention.sh.ssc.log>dsTradingPrevention.sh.ssc.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -3688,380 +3688,380 @@ cat: ssc.blacklist.add: No such file or directory<br>
 cat: ssc.blacklist.add: No such file or directory<br>
 cat: ssc.blacklist.add: No such file or directory<br>
 cat: ssc.blacklist.add: No such file or directory<br>
--e "nFinished at: 20240523-103406"<br>
-20240523-103501<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-<br>
-[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => E0V1E[0m<br>
-<br>
-[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
-<br>
-[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
-<br>
-[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
-<br>
-[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
-<br>
-[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-01 => [0m<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-02 => [0m<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-03 => [0m<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-04 => [0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-01-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-01" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-01 pipe kubectl apply -f - -n bot-ssc-01<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-02-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-02" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-02 pipe kubectl apply -f - -n bot-ssc-02<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-03-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-03" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-03 pipe kubectl apply -f - -n bot-ssc-03<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-04-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-04" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-04-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-04 pipe kubectl apply -f - -n bot-ssc-04<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-04, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-<br>
-[0;32mAdd to blacklist[0m<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-ADDBLACK=""<br>
-<br>
-[0;32mRemove from blacklist[0m<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-REMOVEBLACK=""<br>
-<br>
-[0;32mremoving now from black lists[0m<br>
-<br>
-[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => E0V1E[0m<br>
-<br>
-[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
-<br>
-[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
-<br>
-[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
-<br>
-[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
-<br>
-[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-01 => [0m<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-02 => [0m<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-03 => [0m<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-04 => [0m<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-<br>
-[0;32madding now to black lists[0m<br>
-<br>
-[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => E0V1E[0m<br>
-<br>
-[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
-<br>
-[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
-<br>
-[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
-<br>
-[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
-<br>
-[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-01 => [0m<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-02 => [0m<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-03 => [0m<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-04 => [0m<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-cat: ssc.blacklist.add: No such file or directory<br>
--e "nFinished at: 20240523-103506"<br>
-20240523-103601<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-<br>
-[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => E0V1E[0m<br>
-<br>
-[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
-<br>
-[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
-<br>
-[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
-<br>
-[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
-<br>
-[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-01 => [0m<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-02 => [0m<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-03 => [0m<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-04 => [0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-01-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-01" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-01 pipe kubectl apply -f - -n bot-ssc-01<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-02-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-02" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-02 pipe kubectl apply -f - -n bot-ssc-02<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-03-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-03" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-03 pipe kubectl apply -f - -n bot-ssc-03<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
-<br>
-[34mfound force parameter, creating node port for API access[0m<br>
-Error: open ./values-bot-ssc-04-creds.yaml: no such file or directory<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
-Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
-Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-04" not found<br>
-helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-04-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-04 pipe kubectl apply -f - -n bot-ssc-04<br>
-Error: open values-.yaml: no such file or directory<br>
-error: no objects passed to apply<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-04, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-parse error: Invalid literal at line 1, column 9<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-<br>
-[0;32mAdd to blacklist[0m<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-ADDBLACK=""<br>
-<br>
-[0;32mRemove from blacklist[0m<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-REMOVEBLACK=""<br>
-<br>
-[0;32mremoving now from black lists[0m<br>
-<br>
-[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => E0V1E[0m<br>
-<br>
-[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
-<br>
-[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
-<br>
-[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
-<br>
-[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
-<br>
-[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-01 => [0m<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-02 => [0m<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-03 => [0m<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-04 => [0m<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-cat: ssc.blacklist.remove: No such file or directory<br>
-<br>
-[0;32madding now to black lists[0m<br>
-<br>
-[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => E0V1E[0m<br>
-<br>
-[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
-<br>
-[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
-<br>
-[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
-<br>
-[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
-<br>
-[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
-<br>
-[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
-<br>
-[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
-Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-01 => [0m<br>
-Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-02 => [0m<br>
-Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-03 => [0m<br>
-Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
-<br>
-[0;32mbot-ssc-04 => [0m<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-cat: ssc.blacklist.add: No such file or directory<br>
-cat: ssc.blacklist.add: No such file or directory<br>
 -e "nFinished at: 20240523-103606"<br>
 20240523-103701<br>
+Running already? RUNNING=<br>
+<br>
+[0;32mUpdate blacklists in all bots[0m<br>
+<br>
+[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => E0V1E[0m<br>
+<br>
+[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
+<br>
+[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
+<br>
+[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
+<br>
+[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
+<br>
+[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-01 => [0m<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-02 => [0m<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-03 => [0m<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-04 => [0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-01-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-01" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-01 pipe kubectl apply -f - -n bot-ssc-01<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-02-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-02" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-02 pipe kubectl apply -f - -n bot-ssc-02<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-03-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-03" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-03 pipe kubectl apply -f - -n bot-ssc-03<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-04-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-04" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-04-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-04 pipe kubectl apply -f - -n bot-ssc-04<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-04, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+<br>
+[34mremove all added pairs from remove file if present[0m<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+<br>
+[0;32mAdd to blacklist[0m<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+ADDBLACK=""<br>
+<br>
+[0;32mRemove from blacklist[0m<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+REMOVEBLACK=""<br>
+<br>
+[0;32mremoving now from black lists[0m<br>
+<br>
+[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => E0V1E[0m<br>
+<br>
+[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
+<br>
+[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
+<br>
+[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
+<br>
+[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
+<br>
+[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-01 => [0m<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-02 => [0m<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-03 => [0m<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-04 => [0m<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+<br>
+[0;32madding now to black lists[0m<br>
+<br>
+[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => E0V1E[0m<br>
+<br>
+[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
+<br>
+[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
+<br>
+[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
+<br>
+[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
+<br>
+[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-01 => [0m<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-02 => [0m<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-03 => [0m<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-04 => [0m<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+-e "nFinished at: 20240523-103705"<br>
+20240523-103801<br>
+Running already? RUNNING=<br>
+<br>
+[0;32mUpdate blacklists in all bots[0m<br>
+<br>
+[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => E0V1E[0m<br>
+<br>
+[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
+<br>
+[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
+<br>
+[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
+<br>
+[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
+<br>
+[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-01 => [0m<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-02 => [0m<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-03 => [0m<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-04 => [0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-01-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-01" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-01" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-01 pipe kubectl apply -f - -n bot-ssc-01<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-02-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-02" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-02" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-02-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-02 pipe kubectl apply -f - -n bot-ssc-02<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-03-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-03" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-03" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-03-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-03 pipe kubectl apply -f - -n bot-ssc-03<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-03, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
+<br>
+[34mfound force parameter, creating node port for API access[0m<br>
+Error: open ./values-bot-ssc-04-creds.yaml: no such file or directory<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCreateNodePortForAPI.sh:12: parse error: condition expected: =<br>
+Error from server (NotFound): services "freqtrade-nodeport-bot-ssc-04" not found<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-ssc-04" not found<br>
+helm template . -f values-base.yaml -f values-.yaml -f values-bot-ssc-04-creds.yaml --show-only templates/service-nodeport.yaml -n bot-ssc-04 pipe kubectl apply -f - -n bot-ssc-04<br>
+Error: open values-.yaml: no such file or directory<br>
+error: no objects passed to apply<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-04, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+parse error: Invalid literal at line 1, column 9<br>
+<br>
+[34mremove all added pairs from remove file if present[0m<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+<br>
+[0;32mAdd to blacklist[0m<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+ADDBLACK=""<br>
+<br>
+[0;32mRemove from blacklist[0m<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+REMOVEBLACK=""<br>
+<br>
+[0;32mremoving now from black lists[0m<br>
+<br>
+[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => E0V1E[0m<br>
+<br>
+[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
+<br>
+[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
+<br>
+[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
+<br>
+[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
+<br>
+[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-01 => [0m<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-02 => [0m<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-03 => [0m<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-04 => [0m<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+cat: ssc.blacklist.remove: No such file or directory<br>
+<br>
+[0;32madding now to black lists[0m<br>
+<br>
+[0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbinance-juliano-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => E0V1E[0m<br>
+<br>
+[0;32mbot-mssm-02 => TaSearchLevelG15m_Long[0m<br>
+<br>
+[0;32mbot-mssm-03 => AdxSmasS_v7_Long[0m<br>
+<br>
+[0;32mbot-mssm-04 => DWT_lev_short[0m<br>
+<br>
+[0;32mbot-mssm-05 => NostalgiaForInfinityX4[0m<br>
+<br>
+[0;32mbot-mssm-06 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-07 => Cenderawasih_3[0m<br>
+<br>
+[0;32mbot-mssm-08 => TaSearchLevelG15m_Short[0m<br>
+<br>
+[0;32mbot-mssm-09 => AdxSmasS_v7_Short[0m<br>
+Error: open values-bot-ssc-01-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-01 => [0m<br>
+Error: open values-bot-ssc-02-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-02 => [0m<br>
+Error: open values-bot-ssc-03-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-03 => [0m<br>
+Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
+<br>
+[0;32mbot-ssc-04 => [0m<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+cat: ssc.blacklist.add: No such file or directory<br>
+-e "nFinished at: 20240523-103805"<br>
+20240523-103901<br>
 Running already? RUNNING=<br>
 <br>
 [0;32mUpdate blacklists in all bots[0m<br>
@@ -4671,8 +4671,8 @@ error: no objects passed to apply<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-04, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
 parse error: Invalid literal at line 1, column 9<br>
--e "nFinished at 20240523-103525"<br>
-20240523-103601<br>
+-e "nFinished at 20240523-103723"<br>
+20240523-103801<br>
 Running Take Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -4680,7 +4680,7 @@ Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Trans
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take 80<br>
-Backup takeprofit.allbots to takeprofit.allbots.20240523103601<br>
+Backup takeprofit.allbots to takeprofit.allbots.20240523103801<br>
 <br>
 [0;32mbinance-adriana-futures => TaSearchLevelG15m_Long[0m<br>
 <br>
@@ -4734,9 +4734,9 @@ Error from server (NotFound): services "freqtrade-nodeport-bot-mssm-01" not foun
 <br>
 [34mfound force parameter, creating node port for API access[0m<br>
 Error from server (NotFound): services "freqtrade-nodeport-bot-mssm-01" not found<br>
-service "freqtrade-clusterip-bot-mssm-01" deleted<br>
+Error from server (NotFound): services "freqtrade-clusterip-bot-mssm-01" not found<br>
 helm template . -f values-base.yaml -f values-binance.yaml -f values-bot-mssm-01-creds.yaml --show-only templates/service-nodeport.yaml -n bot-mssm-01 pipe kubectl apply -f - -n bot-mssm-01<br>
-service/freqtrade-clusterip-bot-mssm-01 created<br>
+service/freqtrade-clusterip-bot-mssm-01 unchanged<br>
 The Service "freqtrade-nodeport-bot-mssm-01" is invalid: spec.ports[0].nodePort: Invalid value: 32378: provided port is already allocated<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 <br>
@@ -5065,8 +5065,8 @@ error: no objects passed to apply<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-04, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 Error: open values-bot-ssc-04-creds.yaml: no such file or directory<br>
 parse error: Invalid literal at line 1, column 9<br>
--e "nFinished at 20240523-103628"<br>
-20240523-103701<br>
+-e "nFinished at 20240523-103825"<br>
+20240523-103901<br>
 Running Take Profit already? RUNNING=<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
 ------------------------------------------------------------------------------------------------------------------------<br>
@@ -5074,7 +5074,7 @@ Starting Script dsTradingTakeProfit.sh: Checking profit with forceexit and Trans
 ------------------------------------------------------------------------------------------------------------------------<br>
 Remove old backups<br>
 Minium Profit to take 80<br>
-Backup takeprofit.allbots to takeprofit.allbots.20240523103701<br>
+Backup takeprofit.allbots to takeprofit.allbots.20240523103901<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTestingPairList.sh.log>dsTradingTestingPairList.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -5585,13 +5585,6 @@ last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-ad
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-..................................................................................................................................................................................done.<br><br>
-"Finished at 20240414-050041"<br><br>
-20240414-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-14-04-2024-10-00...<br><br>
-.........................................................................................................................................................................................................................................................................................................................done.<br><br>
-"Finished at 20240414-100108"<br><br>
-20240414-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-14-04-2024-15-00...<br><br>
 ......................................................................................................................................................................................................................done.<br><br>
 "Finished at 20240414-150047"<br><br>
@@ -6068,22 +6061,29 @@ Creating snapshot(s) snapshot-wirsinddieguten-22-05-2024-15-00...<br><br>
 .........................................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240522-150048"<br><br>
 20240522-200001<br><br>
-Creating snapshot(s) snapshot-wirsin100  496k  100  496k    0     0   215k      0  0:00:02  0:00:02 --:--:--  215k<br>
-ddieguten-22-05-2024-20-00...<br><br>
-........................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240522-200044"<br><br>
-20240523-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-23-05-2024-00-00...<br><br>
-.............................................................................................................................................................done.<br><br>
+Creating snapshot(s) snapshot-wirsin100  496k  100  496k    0     0   189k      0  0:00:02  0:00:02 --:--:--  189k<br>
+.....................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240523-000045"<br><br>
+20240523-050001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-05-2024-05-00...<br><br>
+.......................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240523-050041"<br><br>
+20240523-100001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-05-2024-10-00...<br><br>
+....................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240523-100044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 May 23 10:36 /tmp/tmp.hZNj1Nu2Mu<br>
+-rw------- 1 msantana msantana 0 May 23 10:37 /tmp/tmp.V76LvzMahq<br>
 <br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br>
 <br>
 [0;32m-------------------------------------------------------------------------------------[0m<br>
--e "nFinished at: 20240523-103607"<br>
-20240523-103701<br>
+-e "nFinished at: 20240523-103706"<br>
+20240523-103801<br>
+Running already? RUNNING=msantana 1291498 1291493  0 10:38 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh<br>
+already running, exiting<br>
+-e "nFinished at: 20240523-103801"<br>
+20240523-103901<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -6591,4 +6591,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-23-05-2024-10-00...<br>
 ....................................................................................................................................................................................................done.<br>
 -e "nFinished at 20240523-100044"<br>
 </body></html>
--rw------- 1 msantana msantana 0 May 23 10:37 /tmp/tmp.V76LvzMahq
+-rw------- 1 msantana msantana 0 May 23 10:39 /tmp/tmp.p6CvPmYzi8
