@@ -1,4 +1,3 @@
-# {{- if (and .Values.bot.enabled .Values.config.api_server.enabled) }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,4 +12,3 @@ spec:
     targetPort: api
   selector:
     app: freqtrade-{{ .Release.Namespace }}
-# {{- end }}
