@@ -90,7 +90,7 @@ if __name__ == '__main__':
         parser = argparse.ArgumentParser(description='Get Wallet Value')
         parser.add_argument('api_key', type=str, help='Binance API key')
         parser.add_argument('api_secret', type=str, help='Binance API secret')
-        parser.add_argument('wallet', type=str, default='FUNDING_WALLET', choices=['FUNDING_WALLET', 'SPOT_WALLET'], help='Type of funding transfer. Allowed values are SPOT_WALLET and FUNDING_WALLET')
+        parser.add_argument('wallet', type=str, default='FUNDING_WALLET', choices=['FUNDING_WALLET', 'SPOT_WALLET'], help='Wallets. Allowed values are SPOT_WALLET and FUNDING_WALLET')
         
         args = parser.parse_args()
 
