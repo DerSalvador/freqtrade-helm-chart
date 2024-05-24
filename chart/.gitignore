@@ -9,6 +9,7 @@ dsTradingBalanceRealtime.html.*
 **/*history.allbots
 **/*remotepairlist*.json
 !remotepairlist-white-futures-static.json
+!remotepairlist-black-futures-static.json
 .takeprofit/goshort.trades
 .takeprofit/history.allbots.last2days
 .takeprofit/history.allbots.last2days.binance
@@ -16,5 +17,5 @@ dsTradingBalanceRealtime.html.*
 .takeprofit/nohup.out
 .takeprofit/takeprofit.allbots
 .takeprofit/takeprofit.allbots.success
-remotepairlist-white-futures.json
-remotepairlist-white-spot.json
+!remotepairlist-white-futures.json
+!remotepairlist-white-spot.json
