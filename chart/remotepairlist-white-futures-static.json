@@ -17,6 +17,7 @@
               "DOGE/USDT:USDT",
               "MATIC/USDT:USDT",
               "LINK/USDT:USDT",
+              "GMX/USDT:USDT",
               "NEAR/USDT:USDT"
             ],
     "refresh_period": 900
