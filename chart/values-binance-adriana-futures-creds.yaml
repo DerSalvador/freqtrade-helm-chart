@@ -28,7 +28,7 @@ configcreds:
   timeframe: 5m
   available_capital: 400
   max_open_trades: 50
-  stake_amount: 50
+  stake_amount: unlimited
   leverage: 4
   trading_mode: futures
   margin_mode: isolated
