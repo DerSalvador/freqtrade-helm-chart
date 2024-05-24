@@ -2,3 +2,57 @@
 kubernetes:
   nodeNameBackTestingResultsReader: dynamicValues1
   copyContainer: true
+
+nostalgiaforinfinity:
+  holdtrades:
+    trade_pairs:
+      BTC/USDT: 0.3
+      ETH/USDT: 0.3
+      ADA/USDT: 0.1
+      ALGO/USDT: 0.1
+      APE/USDT: 0.1
+      ATOM/USDT: 0.1
+      AVAX/USDT: 0.1
+      BCH/USDT: 0.1
+      DAI/USDT: 0.1
+      DOGE/USDT: 0.1
+      DOT/USDT: 0.1
+      EOS/USDT: 0.1
+      EURT/USDT: 0.1
+      LINK/USDT: 0.1
+      LTC/USDT: 0.1
+      MANA/USDT: 0.1
+      MATIC/USDT: 0.1
+      SHIB/USDT: 0.1
+      SOL/USDT: 0.1
+      USDC/USDT: 0.1
+      USTC/USDT: 0.1
+      XMR/USDT: 0.1
+      XRP/USDT: 0.1
+      XTZ/USDT: 0.1
+
+dersalvador:
+  ds_listdata:
+    enable: false
+  ds_downloaddata:
+    enable: false
+    days: 7
+    pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
+  ds_hyperopt:
+    enable: false
+    enableprotections: true
+    hyperlossfunction: ShortTradeDurHyperOptLoss
+    # "ShortTradeDurHyperOptLoss SharpeHyperOptLoss SharpeHyperOptLossDaily 
+    # SortinoHyperOptLoss SortinoHyperOptLossDaily CalmarHyperOptLoss MaxDrawDownHyperOptLoss 
+    # MaxDrawDownRelativeHyperOptLoss ProfitDrawDownHyperOptLoss OnlyProfitHyperOptLoss"
+    hoursInThePast: -48h
+  ds_backtesting:
+    enable: false
+    exportType: signals # {none,trades,signals}
+    # one week ago
+    hoursInThePast: -48h
+    # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
+    # One year back
+    # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
+
+
