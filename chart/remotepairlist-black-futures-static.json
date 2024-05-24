@@ -10,7 +10,8 @@
     "RNDR/USDT:USDT",
     "SAGA/USDT:USDT",
     "TON/USDT:USDT",
-    "WLD/USDT:USDT"
+    "WLD/USDT:USDT",
+    "USDC/USDT:USDT"
     ],
     "refresh_period":900
 }
