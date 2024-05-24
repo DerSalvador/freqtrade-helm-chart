@@ -1,8 +1,12 @@
 ---
 config:
+  dersalvador:
+    hedge_bot_api: http://35.233.38.30:32335/api/v1/forceenter # binance-adriana-futures
+    leverage: 5
+    stake_amount: 100
   dry_run: false
   dry_run_wallet: 5000
-  stake_amount: 50
+  stake_amount: unlimited
   minimal_roi:
     "0": 0.8
     "40160": 0.01
