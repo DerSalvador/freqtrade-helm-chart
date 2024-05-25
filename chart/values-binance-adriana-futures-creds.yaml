@@ -26,8 +26,13 @@ configcreds:
   #   # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
   bot_name: binance-adriana-futures
   timeframe: 5m
+<<<<<<< HEAD
   available_capital: 400
   max_open_trades: 50
+=======
+  available_capital: 600
+  max_open_trades: 60
+>>>>>>> 140ed5727d9da1e48fb32d5c41b545597e20f5de
   stake_amount: unlimited
   leverage: 4
   trading_mode: futures
