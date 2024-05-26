@@ -2,16 +2,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: freqtrade-webserver-{{ .Release.Namespace }}
+  name: freqtrade-webserver-nodeport-{{ .Release.Namespace }}
   labels:
-    app: freqtrade-webserver-{{ .Release.Namespace }}
+    app: freqtrade-webserver-nodeport-{{ .Release.Namespace }}
 spec:
   type: NodePort
   ports:
   - protocol: TCP
-    port: {{ .Values.kubernetes.nodePort_webserver }}
+    port: {{ .Values.kubernetes.nodePort }}
     targetPort: api-webserver
-    nodePort: {{ .Values.kubernetes.nodePort_webserver }}
+    nodePort: {{ .Values.kubernetes.nodePort }}
   selector:
     app: freqtrade-webserver-{{ .Release.Namespace }}
 {{- end }}
