@@ -10,7 +10,7 @@ config:
   stake_amount: unlimited
   max_open_trades: 4
   minimal_roi:
-    "0": 0.8
+    "0": 0.1
     "40160": 0.01
     "80160": 0
   timeframe: 5m
