@@ -7,10 +7,10 @@ configcreds:
   bot_name: freqtrading-binance-adriana
   exchange:
     name: binance
-    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
-    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
-    # key: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
-    # secret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1  # TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
+    # key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    # secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    key: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
+    secret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1  # TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
   telegram:
     enabled: true
     token: "7194749919:AAHEXWFtBp9u8QZVkrBgHmRgip33t8d_7DE"
