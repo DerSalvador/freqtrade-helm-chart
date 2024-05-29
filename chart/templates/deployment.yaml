@@ -64,6 +64,12 @@ spec:
         - -c
         - |
           set -x
+          # echo cp /extra_strategies/utils/sklearn.utils.__init__.py /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # cp /extra_strategies/utils/sklearn.utils.__init__.py /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # echo cp -r /home/ftuser/.local/lib/python3.12/site-packages/sklearn /extra_strategies
+          # cp -r /home/ftuser/.local/lib/python3.12/site-packages/sklearn /extra_strategies
+          # echo cp /extra_strategies/utils/sklearn.utils.__init__.py /extra_strategies/sklearn/utils/__init__.py
+          # cp /extra_strategies/utils/sklearn.utils.__init__.py /extra_strategies/sklearn/utils/__init__.py
           echo cp -r /extra_strategies/* /freqtrade/user_data/strategies/
           cp -r /extra_strategies/* /freqtrade/user_data/strategies/
           echo find /extra_strategies
@@ -72,6 +78,13 @@ spec:
           cat /extra_strategies/{{ .Values.bot.strategy_name }}*
           echo "Strategy {{ .Values.bot.strategy_name }} in /freqtrade/user_data/strategies"
           cat /freqtrade/user_data/strategies/{{ .Values.bot.strategy_name }}* 
+          echo ""
+          # echo cp /extra_strategies/utils/sklearn.utils.__init__.py /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # cp /extra_strategies/utils/sklearn.utils.__init__.py /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # echo cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/_optional_dependencies.py >> /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/_optional_dependencies.py >> /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # sleep 30
         volumeMounts:
         - name: extra-strategies
           mountPath: /extra_strategies
@@ -362,6 +375,37 @@ spec:
       # Main Process, Trading
       # 
       containers:
+      # 
+      # Debug Container
+      #
+      - name: debug-container
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        # command: ["/bin/sleep", "3600"]
+        # Sleep command to keep the container running for debugging purposes
+        # Add any additional commands or tools you need for debugging
+        # For example:
+        command:
+        - bash 
+        - -c 
+        - |
+          echo 'Debug container running...'; 
+          # sleep 30
+          # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/_optional_dependencies.py >> /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+          while true; do sleep 10; done;
+        workingDir: /extra_strategies
+        # Set the working directory if needed
+          
+        volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+        - name: sqlite
+          mountPath: /sqlite
       - name: freqtrade
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         lifecycle:
@@ -392,7 +436,7 @@ spec:
         - /freqtrade/freqtrade/freqai/prediction_models
         - --logfile
         - /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log
-        - -d 
+        - --datadir
         - "/extra_strategies/data"
         - --userdir
         - /freqtrade/user_data 
