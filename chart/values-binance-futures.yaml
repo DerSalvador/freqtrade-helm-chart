@@ -17,7 +17,7 @@ config:
     "80160": 0
   timeframe: 5m
   stoploss: -0.99
-  trailing_stop: false
+  trailing_stop: true
   trailing_only_offset_is_reached: true
   trailing_stop_positive: 0.01
   trailing_stop_positive_offset: 0.03
@@ -48,7 +48,7 @@ config:
     order_book_top: 1
   dataformat_ohlcv: feather
   dataformat_trades: feather
-  download_trades: true
+  download_trades: false
   amend_last_stake_amount: true
   stake_currency: USDT
   tradable_balance_ratio: 0.99
@@ -93,13 +93,13 @@ config:
     ]
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 1000
+      rateLimit: 500
       options:
         defaultType: future
         leverage: 5
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 1000
+      rateLimit: 500
       options:
         defaultType: future
         leverage: 5  
