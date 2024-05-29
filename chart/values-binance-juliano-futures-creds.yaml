@@ -8,9 +8,8 @@ configcreds:
   stake_amount: 60
   leverage: 4
   minimal_roi:
-    "0": 0.6
-    "40160": 0.01
-    "80160": 0    
+    "0": 0.1
+  stoploss: -0.1     
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
