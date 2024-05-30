@@ -5,20 +5,21 @@ kubernetes:
 configcreds:
   available_capital: 1697
   #stake_amount: 50
-  bot_name: freqtrading-binance-michael
+  bot_name: binance-michael
+  trading_mode: spot
   exchange:
     name: binance
     key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
     secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
   telegram:
-    enabled: false
-    token: "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    enabled: true
+    token: "7073717714:AAFWLPwlvE6RLzrrRL0XecU_O9v0IfjJRIo"
     chat_id: "1759706931" # "5711830404"
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: AlwaysBuy
+  strategy_name: NNTC
   pvc_size: 1Gi
   freqaimodel: LightGBMRegressor
 # image:
