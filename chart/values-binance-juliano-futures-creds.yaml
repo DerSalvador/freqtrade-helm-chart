@@ -76,7 +76,7 @@ configcreds:
   position_adjustment_enable: false
 bot:
   enabled: true
-  strategy_name: DoesNothingStrategy
+  strategy_name: TrendFollowingStrategyGpt
   freqaimodel: LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
