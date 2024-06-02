@@ -111,4 +111,4 @@ configcreds:
       read_timeout: 120
 
 bot:
-  strategy_name: AdxSmasS_v7_Short
+  strategy_name: TrendFollowingStrategy
