@@ -75,10 +75,10 @@ spec:
           echo find /extra_strategies
           find /extra_strategies
           echo Strategy {{ .Values.bot.strategy_name }} in /extra_strategies
-          cat /extra_strategies/{{ .Values.bot.strategy_name }}*
-          echo "Strategy {{ .Values.bot.strategy_name }} in /freqtrade/user_data/strategies"
-          cat /freqtrade/user_data/strategies/{{ .Values.bot.strategy_name }}* 
-          echo ""
+          # cat /extra_strategies/{{ .Values.bot.strategy_name }}*
+          # echo "Strategy {{ .Values.bot.strategy_name }} in /freqtrade/user_data/strategies"
+          # cat /freqtrade/user_data/strategies/{{ .Values.bot.strategy_name }}* 
+          # echo ""
           # echo cp /extra_strategies/utils/sklearn.utils.__init__.py /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
           # cp /extra_strategies/utils/sklearn.utils.__init__.py /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
           # echo cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/_optional_dependencies.py >> /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
