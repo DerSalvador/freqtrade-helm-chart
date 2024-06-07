@@ -35,4 +35,4 @@ image:
 bot:
   debug: true
   debuglevel: -vvv
-  strategy_name: NNTC
+  strategy_name: BigZ07
