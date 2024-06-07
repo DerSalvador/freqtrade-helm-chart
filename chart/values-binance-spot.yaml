@@ -107,7 +107,7 @@ config:
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: https://remotepairlist.com?q=4f39d89805a6ba39 # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
@@ -115,7 +115,7 @@ config:
       read_timeout: 120     
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: http://filekeys.com/remotepairlist-black-futures-static.json # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: https://remotepairlist.com?q=d05e740ab9f444eb # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: blacklist
       processing_mode: append
       refresh_period: 900
