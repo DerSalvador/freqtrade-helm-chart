@@ -1,0 +1,46 @@
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-6f9c6d5f65-gmgmq -c freqtrade -- cat /freqtrade/user_data/strategies/ChatGPT_AdxSmasS_v7_Long_Informative.py NNPredict
+from freqtrade.strategy import IStrategy
+from pandas import DataFrame
+import talib.abstract as ta
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy.informative_decorator import informative
+
+class ChatGPT_AdxSmasS_v7_Long_Informative(IStrategy):
+    INTERFACE_VERSION = 3
+    minimal_roi = {"0": 0.10}  # Targeting a 10% ROI
+    stoploss = -0.10  # Adjust stoploss for long futures trades
+    timeframe = '1h'
+    
+    informative_timeframe = '4h'  # New informative timeframe
+
+    def informative_pairs(self):
+        return [("ETH/USDT", self.informative_timeframe)]
+
+    def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # Main Pair Indicators
+        dataframe['adx'] = ta.ADX(dataframe, timeperiod=14)
+        dataframe['short'] = ta.SMA(dataframe, timeperiod=3)
+        dataframe['long'] = ta.SMA(dataframe, timeperiod=6)
+
+        # Informative Pair Indicators
+        informative = self.dp.get_pair_dataframe(pair="ETH/USDT", timeframe=self.informative_timeframe)
+        informative['inf_long'] = ta.SMA(informative, timeperiod=6)
+        
+        # Merge informative indicators back to main dataframe
+        dataframe = dataframe.join(informative[['inf_long']], on='date', rsuffix='_inf')
+
+        return dataframe
+
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # Long Entry Condition: Simple cross above condition with informative pair
+        dataframe.loc[(dataframe['adx'] > 25) & (dataframe['long'] > dataframe['short']) & (dataframe['long'] > dataframe['inf_long']), 'enter_long'] = 1
+        
+        return dataframe
+
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # Long Exit Condition: Opposite of entry or specific profit target/stoploss hit
+        dataframe.loc[(dataframe['adx'] < 25) | (dataframe['long'] < dataframe['short']), 'exit_long'] = 1
+        
+        return dataframe
+
+cat: NNPredict: No such file or directory
