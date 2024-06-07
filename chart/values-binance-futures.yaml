@@ -189,20 +189,21 @@ config:
   telegram:
     keyboard:
       - - /forcelong
-        - /balance
+        - /forceshort
+        - /forceexit
+      - - /balance
         - /profit
         - /reload_config
-        - /stopentry
-      - - /status table
+      - - /stopentry
+        - /status table
         - /performance
-        - /mix_tags
+      - - /mix_tags
         - /start
         - /stop
       - - /show_config
         - /whitelist
         - /logs
         - /trades
-        - /forceexit
   api_server:
     enabled: true
     listen_ip_address: 0.0.0.0
