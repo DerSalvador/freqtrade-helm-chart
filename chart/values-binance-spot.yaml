@@ -10,7 +10,7 @@ config:
   dry_run: false
   dry_run_wallet: 5000
   stake_amount: unlimited
-  max_open_trades: 4
+  max_open_trades: 5
   minimal_roi:
     "0": 0.1
     "40160": 0.01
@@ -107,7 +107,7 @@ config:
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=4f39d89805a6ba39 # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: https://remotepairlist.com?q=59fd57009b4e0be2 # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
@@ -191,16 +191,16 @@ config:
       - - /forcelong
         - /balance
         - /profit
-        - /reload_config
+      - - /reload_config
         - /stopentry
-      - - /status table
-        - /performance
+        - /status table
+      - - /performance
         - /mix_tags
         - /start
-        - /stop
-      - - /show_config
+      - - /stop
+        - /show_config
         - /whitelist
-        - /logs
+      - - /logs
         - /trades
         - /forceexit
   api_server:
