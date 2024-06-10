@@ -8,9 +8,9 @@ config:
       apikey: "E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN"
       apisecret: "1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1"      
   dry_run: false
-  dry_run_wallet: 5000
+  dry_run_wallet: 50000
   stake_amount: unlimited
-  max_open_trades: 4
+  max_open_trades: 6
   minimal_roi:
     "0": 0.1
     "40160": 0.01
