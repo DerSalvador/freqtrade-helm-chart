@@ -3,8 +3,8 @@ config:
   dersalvador:
     hedging:
       hedge_bot_api: http://35.233.38.30:32335/api/v1/forceenter # binance-adriana-futures
-      leverage: 5
-      stake_amount: 100
+      leverage: 3
+      stake_amount: 1000
       apikey: "E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN"
       apisecret: "1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1"      
   dry_run: false
@@ -12,7 +12,7 @@ config:
   stake_amount: unlimited
   max_open_trades: 6
   minimal_roi:
-    "0": 0.1
+    "0": 0.01
     "40160": 0.01
     "80160": 0
   timeframe: 5m
@@ -107,7 +107,7 @@ config:
   pairlists:
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: https://remotepairlist.com?q=9b042d4a922710eb # https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
