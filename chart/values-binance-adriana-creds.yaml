@@ -15,6 +15,16 @@ configcreds:
     enabled: true
     token: "7194749919:AAHEXWFtBp9u8QZVkrBgHmRgip33t8d_7DE"
     chat_id: "1759706931" # "5711830404"
+    dry_run: true
+    dry_run_wallet: 50000
+    stake_amount: 1000
+    max_open_trades: 60
+    minimal_roi:
+      "0": 0.01
+      "40160": 0.01
+      "80160": 0
+    timeframe: 5m
+    stoploss: -0.0025
 bot:
   debug: false
   debuglevel: -vvv
