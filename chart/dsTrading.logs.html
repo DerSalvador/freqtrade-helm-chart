@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Fri Jun 14 10:20:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Fri Jun 14 16:27:02 UTC 2024</h2><hr>
 <div id=top><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
 <div><a href=#dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</a><br><br></div>
 <div><a href=#dsTradingDeleteOrphantTradesInFTForAllBots.sh.log>dsTradingDeleteOrphantTradesInFTForAllBots.sh.log</a><br><br></div>
@@ -11,15 +11,18 @@
 <div><a href=#dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</a><br><br></div>
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
-<tr><td nowrap><small>446111 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
-<tr><td nowrap><small>488950 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>488951 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh mssm</small></td></tr>
-<tr><td nowrap><small>488952 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
-<tr><td nowrap><small>488976 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
-<tr><td nowrap><small>489004 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
-<tr><td nowrap><small>489006 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh mssm</small></td></tr>
-<tr><td nowrap><small>489007 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
-<tr><td nowrap><small>489008 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>2215185 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
+<tr><td nowrap><small>2230457 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingGcloudFirewallRules.sh</small></td></tr>
+<tr><td nowrap><small>2230617 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>2230618 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
+<tr><td nowrap><small>2230619 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh mssm</small></td></tr>
+<tr><td nowrap><small>2230620 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingDeleteOrphantTradesInFTForAllBots.sh</small></td></tr>
+<tr><td nowrap><small>2230628 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>2230654 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>2230687 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh ssc</small></td></tr>
+<tr><td nowrap><small>2230688 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingPrevention.sh mssm</small></td></tr>
+<tr><td nowrap><small>2230689 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
+<tr><td nowrap><small>2230690 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingListRunningBotsInNamespaces.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -531,255 +534,6 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 f
 ++++<br>
 + + + + + <b id=dsTradingCleaningAllBots.sh.log>dsTradingCleaningAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/status[0m<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-20240614-000001<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
----------------------------<br>
-cleaning bot binance-adriana-futures<br>
---------------------------<br>
----------------------------<br>
-cleaning bot bot-mssm-01<br>
---------------------------<br>
----------------------------<br>
-cleaning bot bot-mssm-05<br>
---------------------------<br>
--e "nFinished at: 20240614-000002"<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/status[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-20240614-020001<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
----------------------------<br>
-cleaning bot binance-adriana-futures<br>
---------------------------<br>
----------------------------<br>
-cleaning bot bot-mssm-01<br>
---------------------------<br>
----------------------------<br>
-cleaning bot bot-mssm-05<br>
---------------------------<br>
--e "nFinished at: 20240614-020002"<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-<br>
-[34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/status[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
-20240614-040001<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
----------------------------<br>
-cleaning bot binance-adriana-futures<br>
---------------------------<br>
----------------------------<br>
-cleaning bot bot-mssm-01<br>
---------------------------<br>
----------------------------<br>
-cleaning bot bot-mssm-05<br>
---------------------------<br>
--e "nFinished at: 20240614-040002"<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 <br>
 [34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
@@ -1031,13 +785,260 @@ Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 f
 <br>
 [34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
 /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+20240614-120001<br>
+<br>
+[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
+<br>
+[0;32mbot-mssm-05 => AlwaysBuy[0m<br>
+---------------------------<br>
+cleaning bot binance-adriana-futures<br>
+--------------------------<br>
+---------------------------<br>
+cleaning bot bot-mssm-01<br>
+--------------------------<br>
+---------------------------<br>
+cleaning bot bot-mssm-05<br>
+--------------------------<br>
+-e "nFinished at: 20240614-120001"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/status[0m<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+20240614-140001<br>
+<br>
+[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
+<br>
+[0;32mbot-mssm-05 => AlwaysBuy[0m<br>
+---------------------------<br>
+cleaning bot binance-adriana-futures<br>
+--------------------------<br>
+---------------------------<br>
+cleaning bot bot-mssm-01<br>
+--------------------------<br>
+---------------------------<br>
+cleaning bot bot-mssm-05<br>
+--------------------------<br>
+-e "nFinished at: 20240614-140002"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/status[0m<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+20240614-160001<br>
+<br>
+[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
+<br>
+[0;32mbot-mssm-05 => AlwaysBuy[0m<br>
+---------------------------<br>
+cleaning bot binance-adriana-futures<br>
+--------------------------<br>
+---------------------------<br>
+cleaning bot bot-mssm-01<br>
+--------------------------<br>
+---------------------------<br>
+cleaning bot bot-mssm-05<br>
+--------------------------<br>
+-e "nFinished at: 20240614-160001"<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+<br>
+[34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/status[0m<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:12: command not found: fala<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
+/home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanPositions.sh:21: command not found: fala<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingDeleteOrphantTradesInFTForAllBots.sh.log>dsTradingDeleteOrphantTradesInFTForAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingDeleteOrphantTradesInFTForAllBots.sh.log>dsTradingDeleteOrphantTradesInFTForAllBots.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
 [34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
 <br>
 <br>
@@ -1193,15 +1194,15 @@ Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 <br>
 [34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/balance[0m<br>
--e "nFinished at 20240614-095409"<br>
-Started  at 20240614-100001<br>
-20240614-100001<br>
+-e "nFinished at 20240614-155422"<br>
+Started  at 20240614-160001<br>
+20240614-160001<br>
 <br>
 [0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
 <br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
+[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
 <br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
+[0;32mbot-mssm-05 => AlwaysBuy[0m<br>
 dsTradingDeleteOrphantTradesInFT.sh binance-adriana-futures<br>
 Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
 <br>
@@ -1535,128 +1536,14 @@ Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 <br>
 [34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/balance[0m<br>
--e "nFinished at 20240614-100032"<br>
+-e "nFinished at 20240614-160031"<br>
+Started  at 20240614-162702<br>
+20240614-162702<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 3200-32761<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - '8084'<br>
-creationTimestamp: '2024-06-13T02:00:12.787-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '7273836859032538099'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
-- 35.233.103.91<br>
-- 185.159.157.21<br>
-- 185.159.157.10<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
-Current Public IP: 35.233.103.91<br>
-<br>
-Finished at: 20240613-090001<br>
-20240613-120001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-<br>
-[0;32mcreateFW 185.159.157.21[0m<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     77      0 --:--:-- --:--:-- --:--:--    77<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    101      0 --:--:-- --:--:-- --:--:--   101<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
-35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
-<br>
-[0;32mPublic IP of this host wirsinddieguten[0m<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
-35.233.103.91<br>
-[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
-gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
-Creating firewall...<br>
-..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-done.<br>
-NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
-fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
-allowed:<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - 3200-32761<br>
-- IPProtocol: tcp<br>
-  ports:<br>
-  - '8084'<br>
-creationTimestamp: '2024-06-13T05:00:13.367-07:00'<br>
-description: For accessing freqtrade api endpoints<br>
-direction: INGRESS<br>
-disabled: false<br>
-id: '7534587291395121570'<br>
-kind: compute#firewall<br>
-logConfig:<br>
-  enable: false<br>
-name: fw-nodeport<br>
-network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
-priority: 1<br>
-selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
-sourceRanges:<br>
-- 35.233.103.91<br>
-- 185.159.157.21<br>
-- 185.159.157.10<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    115      0 --:--:-- --:--:-- --:--:--   115<br>
-Current Public IP: 35.233.103.91<br>
-<br>
-Finished at: 20240613-120001<br>
-20240613-150001<br>
-Deleting fw-nodeport<br>
-Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
-<br>
-[0;32mcreateFW 185.159.157.21[0m<br>
-WARNING: The following filter keys were not present in any resource : subnetwork<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     21      0 --:--:-- --:--:-- --:--:--    21<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    106      0 --:--:-- --:--:-- --:--:--   106<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
-35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
-<br>
-[0;32mPublic IP of this host wirsinddieguten[0m<br>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
-                                 Dload  Upload   Total   Spent    Left  Speed<br>
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
-35.233.103.91<br>
 [0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
 gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
 Creating firewall...<br>
@@ -2041,6 +1928,122 @@ sourceRanges:<br>
 Current Public IP: 35.233.103.91<br>
 <br>
 Finished at: 20240614-090001<br>
+20240614-120001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     74      0 --:--:-- --:--:-- --:--:--    73100    13  100    13    0     0     74      0 --:--:-- --:--:-- --:--:--    73<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    105      0 --:--:-- --:--:-- --:--:--   105<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    123      0 --:--:-- --:--:-- --:--:--   125<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    123      0 --:--:-- --:--:-- --:--:--   123<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-14T05:00:13.057-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '90735963231325730'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240614-120001<br>
+20240614-150001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     29      0 --:--:-- --:--:-- --:--:--    29<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    103      0 --:--:-- --:--:-- --:--:--   103<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    123      0 --:--:-- --:--:-- --:--:--   123<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-14T08:00:14.885-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '4416292402860516369'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    111      0 --:--:-- --:--:-- --:--:--   110100    13  100    13    0     0    111      0 --:--:-- --:--:-- --:--:--   110<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240614-150001<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingPrevention.sh.mssm.log>dsTradingPrevention.sh.mssm.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
@@ -2537,13 +2540,13 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.205.159.255:32389/api/v1/bl
         "STX/USDT:USDT"<br>
       ]<br>
 }<br>
--e "nFinished at: 20240614-101907"<br>
-20240614-102001<br>
+-e "nFinished at: 20240614-162604"<br>
+20240614-162702<br>
 Running already? RUNNING=<br>
 <br>
 [0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  488975  488952  0 10:20 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  488979  488975  0 10:20 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+Running already? RUNNING=msantana 2230653 2230618  0 16:27 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+msantana 2230657 2230653  0 16:27 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
 <br>
 [31malready running, exiting[0m<br>
 <br><br><hr>##++<br>
@@ -2551,504 +2554,504 @@ msantana  488979  488975  0 10:20 ?        00:00:00 /bin/zsh /home/msantana/ders
 ++++<br>
 + + + + + <b id=dsTradingPrevention.sh.ssc.log>dsTradingPrevention.sh.ssc.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-01 "LINK/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32378[0m<br>
+<br>
+[34mDeleting "LINK/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32378/api/v1/blacklist?pairs_to_delete="LINK/USDT:USDT",<br>
+{<br>
+  "blacklist": [<br>
+    "(BNB)/.*:.*",<br>
+    ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*:.*",<br>
+    "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*:.*",<br>
+    "(FDUSD|BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|VAI|UST|USTC|AUSD)/.*:.*",<br>
+    "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CHZ|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*:.*",<br>
+    "(1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|LUNA|BTS|QKC|COS|ACA|FTT|SRM|YFII|SNM|BNX|ANC|AION|MIR|BNX|STG|HNT|WABI|QLC|NEBL|AUTO|VGX|PEPE|VITE|DREP|JASMY|PNT|PERL|AMB|OAX|LOOM|BTS|RAD|ID|PNT|NULS|MLN|MEME|TOKEN|TOMO|BTS|PERL|WTC)/.*:.*",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "blacklist_expanded": [<br>
+    "BNB/USDT:USDT",<br>
+    "BNB/USDC:USDC",<br>
+    "JUP/USDT:USDT",<br>
+    "USDC/USDT:USDT",<br>
+    "USTC/USDT:USDT",<br>
+    "CHZ/USDT:USDT",<br>
+    "GAL/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "OMG/USDT:USDT",<br>
+    "HBAR/USDT:USDT",<br>
+    "FTT/USDT:USDT",<br>
+    "JASMY/USDT:USDT",<br>
+    "STG/USDT:USDT",<br>
+    "BNX/USDT:USDT",<br>
+    "ID/USDT:USDT",<br>
+    "AMB/USDT:USDT",<br>
+    "RAD/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "LOOM/USDT:USDT",<br>
+    "MEME/USDT:USDT",<br>
+    "TOKEN/USDT:USDT",<br>
+    "ONG/USDT:USDT",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "errors": {<br>
+    "\"LINK/USDT:USDT\",": {<br>
+      "error_msg": "Pair \"LINK/USDT:USDT\", is not in the current blacklist."<br>
+    }<br>
+  },<br>
+  "length": 7,<br>
+  "method": [<br>
+    "RemotePairList",<br>
+    "RemotePairList"<br>
+  ]<br>
+}<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-01 "GMX/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32378[0m<br>
+<br>
+[34mDeleting "GMX/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32378/api/v1/blacklist?pairs_to_delete="GMX/USDT:USDT",<br>
+{<br>
+  "blacklist": [<br>
+    "(BNB)/.*:.*",<br>
+    ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*:.*",<br>
+    "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*:.*",<br>
+    "(FDUSD|BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|VAI|UST|USTC|AUSD)/.*:.*",<br>
+    "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CHZ|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*:.*",<br>
+    "(1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|LUNA|BTS|QKC|COS|ACA|FTT|SRM|YFII|SNM|BNX|ANC|AION|MIR|BNX|STG|HNT|WABI|QLC|NEBL|AUTO|VGX|PEPE|VITE|DREP|JASMY|PNT|PERL|AMB|OAX|LOOM|BTS|RAD|ID|PNT|NULS|MLN|MEME|TOKEN|TOMO|BTS|PERL|WTC)/.*:.*",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "blacklist_expanded": [<br>
+    "BNB/USDT:USDT",<br>
+    "BNB/USDC:USDC",<br>
+    "JUP/USDT:USDT",<br>
+    "USDC/USDT:USDT",<br>
+    "USTC/USDT:USDT",<br>
+    "CHZ/USDT:USDT",<br>
+    "GAL/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "OMG/USDT:USDT",<br>
+    "HBAR/USDT:USDT",<br>
+    "FTT/USDT:USDT",<br>
+    "JASMY/USDT:USDT",<br>
+    "STG/USDT:USDT",<br>
+    "BNX/USDT:USDT",<br>
+    "ID/USDT:USDT",<br>
+    "AMB/USDT:USDT",<br>
+    "RAD/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "LOOM/USDT:USDT",<br>
+    "MEME/USDT:USDT",<br>
+    "TOKEN/USDT:USDT",<br>
+    "ONG/USDT:USDT",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "errors": {<br>
+    "\"GMX/USDT:USDT\",": {<br>
+      "error_msg": "Pair \"GMX/USDT:USDT\", is not in the current blacklist."<br>
+    }<br>
+  },<br>
+  "length": 7,<br>
+  "method": [<br>
+    "RemotePairList",<br>
+    "RemotePairList"<br>
+  ]<br>
+}<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-01 "LTC/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32378[0m<br>
+<br>
+[34mDeleting "LTC/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32378/api/v1/blacklist?pairs_to_delete="LTC/USDT:USDT",<br>
+{<br>
+  "blacklist": [<br>
+    "(BNB)/.*:.*",<br>
+    ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*:.*",<br>
+    "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*:.*",<br>
+    "(FDUSD|BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|VAI|UST|USTC|AUSD)/.*:.*",<br>
+    "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CHZ|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*:.*",<br>
+    "(1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|LUNA|BTS|QKC|COS|ACA|FTT|SRM|YFII|SNM|BNX|ANC|AION|MIR|BNX|STG|HNT|WABI|QLC|NEBL|AUTO|VGX|PEPE|VITE|DREP|JASMY|PNT|PERL|AMB|OAX|LOOM|BTS|RAD|ID|PNT|NULS|MLN|MEME|TOKEN|TOMO|BTS|PERL|WTC)/.*:.*",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "blacklist_expanded": [<br>
+    "BNB/USDT:USDT",<br>
+    "BNB/USDC:USDC",<br>
+    "JUP/USDT:USDT",<br>
+    "USDC/USDT:USDT",<br>
+    "USTC/USDT:USDT",<br>
+    "CHZ/USDT:USDT",<br>
+    "GAL/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "OMG/USDT:USDT",<br>
+    "HBAR/USDT:USDT",<br>
+    "FTT/USDT:USDT",<br>
+    "JASMY/USDT:USDT",<br>
+    "STG/USDT:USDT",<br>
+    "BNX/USDT:USDT",<br>
+    "ID/USDT:USDT",<br>
+    "AMB/USDT:USDT",<br>
+    "RAD/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "LOOM/USDT:USDT",<br>
+    "MEME/USDT:USDT",<br>
+    "TOKEN/USDT:USDT",<br>
+    "ONG/USDT:USDT",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "errors": {<br>
+    "\"LTC/USDT:USDT\",": {<br>
+      "error_msg": "Pair \"LTC/USDT:USDT\", is not in the current blacklist."<br>
+    }<br>
+  },<br>
+  "length": 7,<br>
+  "method": [<br>
+    "RemotePairList",<br>
+    "RemotePairList"<br>
+  ]<br>
+}<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-01 "NEAR/USDT:USDT"<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32378[0m<br>
+<br>
+[34mDeleting "NEAR/USDT:USDT" from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32378/api/v1/blacklist?pairs_to_delete="NEAR/USDT:USDT"<br>
+{<br>
+  "blacklist": [<br>
+    "(BNB)/.*:.*",<br>
+    ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*:.*",<br>
+    "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*:.*",<br>
+    "(FDUSD|BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|VAI|UST|USTC|AUSD)/.*:.*",<br>
+    "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CHZ|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*:.*",<br>
+    "(1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|LUNA|BTS|QKC|COS|ACA|FTT|SRM|YFII|SNM|BNX|ANC|AION|MIR|BNX|STG|HNT|WABI|QLC|NEBL|AUTO|VGX|PEPE|VITE|DREP|JASMY|PNT|PERL|AMB|OAX|LOOM|BTS|RAD|ID|PNT|NULS|MLN|MEME|TOKEN|TOMO|BTS|PERL|WTC)/.*:.*",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "blacklist_expanded": [<br>
+    "BNB/USDT:USDT",<br>
+    "BNB/USDC:USDC",<br>
+    "JUP/USDT:USDT",<br>
+    "USDC/USDT:USDT",<br>
+    "USTC/USDT:USDT",<br>
+    "CHZ/USDT:USDT",<br>
+    "GAL/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "OMG/USDT:USDT",<br>
+    "HBAR/USDT:USDT",<br>
+    "FTT/USDT:USDT",<br>
+    "JASMY/USDT:USDT",<br>
+    "STG/USDT:USDT",<br>
+    "BNX/USDT:USDT",<br>
+    "ID/USDT:USDT",<br>
+    "AMB/USDT:USDT",<br>
+    "RAD/USDT:USDT",<br>
+    "NMR/USDT:USDT",<br>
+    "LOOM/USDT:USDT",<br>
+    "MEME/USDT:USDT",<br>
+    "TOKEN/USDT:USDT",<br>
+    "ONG/USDT:USDT",<br>
+    "ZEC/USDT:USDT"<br>
+  ],<br>
+  "errors": {<br>
+    "\"NEAR/USDT:USDT\"": {<br>
+      "error_msg": "Pair \"NEAR/USDT:USDT\" is not in the current blacklist."<br>
+    }<br>
+  },<br>
+  "length": 7,<br>
+  "method": [<br>
+    "RemotePairList",<br>
+    "RemotePairList"<br>
+  ]<br>
+}<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-01 ]<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32378[0m<br>
+<br>
+[34mDeleting ] from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32378/api/v1/blacklist?pairs_to_delete=]<br>
+<br>
+Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTaasAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/whitelist[0m<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 [<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting [ from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete=[<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "JTO/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "JTO/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="JTO/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "SOL/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "SOL/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="SOL/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "DOT/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "DOT/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="DOT/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "ETH/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "ETH/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="ETH/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "XRP/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "XRP/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="XRP/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "XLM/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "XLM/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="XLM/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "XDC/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "XDC/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="XDC/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "IOTA/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "IOTA/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="IOTA/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "ALGO/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "ALGO/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="ALGO/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "BTC/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "BTC/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="BTC/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "BCH/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "BCH/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="BCH/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "TRB/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "TRB/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="TRB/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "WIF/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "WIF/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="WIF/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "MOVR/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "MOVR/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="MOVR/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "UMA/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "UMA/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="UMA/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "DOGE/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "DOGE/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="DOGE/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "MATIC/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "MATIC/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="MATIC/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "LINK/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "LINK/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="LINK/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "GMX/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "GMX/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="GMX/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "LTC/USDT:USDT",<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "LTC/USDT:USDT", from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="LTC/USDT:USDT",<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 "NEAR/USDT:USDT"<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting "NEAR/USDT:USDT" from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete="NEAR/USDT:USDT"<br>
+dsTradingDeleteFromBlacklist.sh bot-mssm-05 ]<br>
+<br>
+[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
+Warning: using cached endpoint in /tmp/dsTradingDeleteFromBlacklist.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
+<br>
+[0;32mUsing Endpoint on 35.205.159.255:32389[0m<br>
+<br>
+[34mDeleting ] from blacklist[0m<br>
+curl -s -X DELETE -u freqtrade:&&Liz270117!! -H accept: application/json http://35.205.159.255:32389/api/v1/blacklist?pairs_to_delete=]<br>
+<br>
+[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
+<br>
+[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
+<br>
+[0;32mbot-mssm-05 => AlwaysBuy[0m<br>
+<br>
+[34mremove all added pairs from remove file if present[0m<br>
+<br>
+[34mblacklist file ssc.blacklist.add is empty[0m<br>
+-e "nFinished at: 20240614-162428"<br>
+20240614-162501<br>
+Running already? RUNNING=<br>
+<br>
 [0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  340115  340081  0 09:54 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  340120  340115  0 09:54 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  340125  340121  0 09:54 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+Running already? RUNNING=msantana 2222948 2222923  0 16:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+msantana 2222953 2222948  0 16:25 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
 <br>
 [31malready running, exiting[0m<br>
 <br>
 [0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
 <br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
+[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
 <br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
+[0;32mbot-mssm-05 => AlwaysBuy[0m<br>
 <br>
 [34mremove all added pairs from remove file if present[0m<br>
 <br>
 [34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-095402"<br>
-20240614-095501<br>
+-e "nFinished at: 20240614-162502"<br>
+20240614-162601<br>
 Running already? RUNNING=<br>
 <br>
 [0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  347912  347887  0 09:55 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  347916  347912  0 09:55 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+Running already? RUNNING=msantana 2226758 2226734  0 16:26 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+msantana 2226761 2226758  0 16:26 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
 <br>
 [31malready running, exiting[0m<br>
 <br>
 [0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
 <br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
+[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
 <br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-095502"<br>
-20240614-095601<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  353093  353068  0 09:56 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  353096  353093  0 09:56 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
+[0;32mbot-mssm-05 => AlwaysBuy[0m<br>
 <br>
 [34mremove all added pairs from remove file if present[0m<br>
 <br>
 [34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-095602"<br>
-20240614-095701<br>
+-e "nFinished at: 20240614-162602"<br>
+20240614-162702<br>
 Running already? RUNNING=<br>
 <br>
 [0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  358435  358411  0 09:57 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-095701"<br>
-20240614-095801<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  367858  367836  0 09:58 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  367861  367858  0 09:58 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-095801"<br>
-20240614-095901<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  373099  373070  0 09:59 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  373101  373099  0 09:59 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-095901"<br>
-20240614-100001<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  378465  378459  0 10:00 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100001"<br>
-20240614-100101<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  388106  388081  0 10:01 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  388109  388106  0 10:01 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100102"<br>
-20240614-100201<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  393517  393495  0 10:02 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  393521  393517  0 10:02 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  393529  393521  0 10:02 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100202"<br>
-20240614-100301<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  398827  398803  0 10:03 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  398829  398827  0 10:03 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100301"<br>
-20240614-100401<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  404179  404156  0 10:04 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  404182  404179  0 10:04 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100401"<br>
-20240614-100501<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  409377  409353  0 10:05 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  409383  409377  0 10:05 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100501"<br>
-20240614-100601<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  414629  414596  0 10:06 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  414632  414629  0 10:06 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100602"<br>
-20240614-100701<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  419904  419879  0 10:07 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  419908  419904  0 10:07 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100701"<br>
-20240614-100801<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  425090  425067  0 10:08 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  425097  425090  0 10:08 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100801"<br>
-20240614-100901<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  430451  430427  0 10:09 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  430460  430451  0 10:09 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-100901"<br>
-20240614-101001<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  435637  435612  0 10:10 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  435640  435637  0 10:10 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101001"<br>
-20240614-101101<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  440920  440895  0 10:11 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  440923  440920  0 10:11 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101102"<br>
-20240614-101201<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  446142  446109  0 10:12 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  446146  446142  0 10:12 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101202"<br>
-20240614-101301<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  451469  451442  0 10:13 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  451473  451469  0 10:13 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  451480  451473  0 10:13 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101302"<br>
-20240614-101401<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  456623  456599  0 10:14 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  456626  456623  0 10:14 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101401"<br>
-20240614-101501<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  461921  461897  0 10:15 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  461925  461921  0 10:15 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101502"<br>
-20240614-101601<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  467193  467167  0 10:16 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  467196  467193  0 10:16 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101601"<br>
-20240614-101701<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  472567  472542  0 10:17 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  472570  472567  0 10:17 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101701"<br>
-20240614-101801<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  477845  477821  0 10:18 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  477849  477845  0 10:18 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101801"<br>
-20240614-101901<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  483149  483124  0 10:19 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  483151  483149  0 10:19 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-<br>
-[31malready running, exiting[0m<br>
-<br>
-[0;32mbinance-adriana-futures => DoesNothingStrategy[0m<br>
-<br>
-[0;32mbot-mssm-01 => MarketChyperHyperStrategy[0m<br>
-<br>
-[0;32mbot-mssm-05 => DWT_Predict2Hedged[0m<br>
-<br>
-[34mremove all added pairs from remove file if present[0m<br>
-<br>
-[34mblacklist file ssc.blacklist.add is empty[0m<br>
--e "nFinished at: 20240614-101901"<br>
-20240614-102001<br>
-Running already? RUNNING=<br>
-<br>
-[0;32mUpdate blacklists in all bots[0m<br>
-Running already? RUNNING=msantana  488974  488951  0 10:20 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
-msantana  488977  488974  0 10:20 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+Running already? RUNNING=msantana 2230650 2230619  0 16:27 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
+msantana 2230655 2230650  0 16:27 ?        00:00:00 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingCleanBlacklists.sh<br>
 <br>
 [31malready running, exiting[0m<br>
 <br><br><hr>##++<br>
@@ -3555,105 +3558,12 @@ Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<
 Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-05, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
 <br>
 [34mRunning against bot bot-mssm-05: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32389/api/v1/trades[0m<br>
--e "nFinished at 20240614-080812"<br>
+-e "nFinished at 20240614-160819"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTestingPairList.sh.log>dsTradingTestingPairList.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTestingPairList.sh.log>dsTradingTestingPairList.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-010001"<br>
-20240613-011201<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-011201"<br>
-20240613-012401<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-012401"<br>
-20240613-013601<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-013601"<br>
-20240613-014801<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-014801"<br>
-20240613-020001<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-020001"<br>
-20240613-021201<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-021201"<br>
-20240613-022401<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-022401"<br>
-20240613-023601<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-023601"<br>
-20240613-024801<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-024801"<br>
-20240613-030001<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-030001"<br>
-20240613-031201<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-031201"<br>
-20240613-032401<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-032401"<br>
-20240613-033601<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-033601"<br>
-20240613-034801<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-034801"<br>
-20240613-040001<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-040001"<br>
-20240613-041201<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-041201"<br>
-20240613-042401<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-042401"<br>
-20240613-043601<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-043601"<br>
-20240613-044801<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-044801"<br>
-20240613-050001<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-050001"<br>
-20240613-051201<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-051201"<br>
-20240613-052401<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-052401"<br>
-20240613-053601<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-053601"<br>
-20240613-054801<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-054801"<br>
-20240613-060001<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-060001"<br>
-20240613-061201<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-061201"<br>
-20240613-062401<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-062401"<br>
-20240613-063601<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-063602"<br>
-20240613-064801<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-064801"<br>
-20240613-070001<br>
-last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
--e "nFinished at: 20240613-070001"<br>
-20240613-071201<br>
 last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
 -e "nFinished at: 20240613-071201"<br>
 20240613-072401<br>
@@ -4061,18 +3971,104 @@ last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-ad
 20240614-101201<br>
 last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
 -e "nFinished at: 20240614-101201"<br>
+20240614-102401<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-102401"<br>
+20240614-103601<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-103601"<br>
+20240614-104801<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-104801"<br>
+20240614-110001<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-110001"<br>
+20240614-111201<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-111201"<br>
+20240614-112401<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-112401"<br>
+20240614-113601<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-113601"<br>
+20240614-114801<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-114801"<br>
+20240614-120001<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-120001"<br>
+20240614-121201<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-121201"<br>
+20240614-122401<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-122401"<br>
+20240614-123601<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-123601"<br>
+20240614-124801<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-124801"<br>
+20240614-130001<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-130001"<br>
+20240614-131201<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-131201"<br>
+20240614-132401<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-132401"<br>
+20240614-133601<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-133601"<br>
+20240614-134801<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-134801"<br>
+20240614-140001<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-140001"<br>
+20240614-141201<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-141201"<br>
+20240614-142401<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-142401"<br>
+20240614-143601<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-143601"<br>
+20240614-144801<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-144801"<br>
+20240614-150001<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-150001"<br>
+20240614-151201<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-151201"<br>
+20240614-152401<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-152401"<br>
+20240614-153601<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-153601"<br>
+20240614-154801<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-154801"<br>
+20240614-160001<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-160001"<br>
+20240614-161201<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-161201"<br>
+20240614-162401<br>
+last argument: no-tty and ARGS=--print-json -c /trading/user_data_k8s/binance-adriana-futures/binance-config.json -c /trading/user_data_k8s/binance-adriana-futures/binance-adriana-futures-config-creds.json --userdir /trading/user_data_k8s/binance-adriana-futures no-tty<br>
+-e "nFinished at: 20240614-162401"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
--e "nFinished at 20240520-200041"<br><br>
-20240521-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-21-05-2024-00-00...<br><br>
-.......................................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240521-000053"<br><br>
-20240521-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-21-05-2024-05-00...<br><br>
 ................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240521-050040"<br><br>
 20240521-100001<br><br>
@@ -4545,8 +4541,10 @@ Creating snapshot(s) snapshot-wirsinddieguten-13-06-2024-15-00...<br><br>
 -e "nFinished at 20240613-150043"<br><br>
 20240613-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-13-06-2024-20-00...<br><br>
-.................................................................................................................................................................................................100  344k  100  344k    0     0   186k      0  0:00:01  0:00:01 --:--:--  186k<br>
--00...<br><br>
+......................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240613-200044"<br><br>
+20240614-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-14-06-2024-00-00...<br><br>
 ....................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240614-000044"<br><br>
 20240614-050001<br><br>
@@ -4557,24 +4555,25 @@ Creating snapshot(s) snapshot-wirsinddieguten-14-06-2024-05-00...<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-14-06-2024-10-00...<br><br>
 ....................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240614-100043"<br><br>
+20240614-150001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-14-06-2024-15-00...<br><br>
+.................................................................................100  352k  100  352k    0     0   174k      0  0:00:02  0:00:02 --:--:--  174k<br>
+.................................................................................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240614-150112"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Jun 14 10:19 /tmp/tmp.B5VOU1nOav<br>
+-rw------- 1 msantana msantana 0 Jun 14 16:26 /tmp/tmp.4tjroQmJLl<br>
 <br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br>
 <br>
 [0;32m-------------------------------------------------------------------------------------[0m<br>
--e "nFinished at: 20240614-101907"<br>
-20240614-102001<br>
+-e "nFinished at: 20240614-162608"<br>
+20240614-162702<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-20240520-150001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-20-05-2024-15-00...<br>
-.....................................................................................................................................................................................done.<br>
--e "nFinished at 20240520-150042"<br>
 20240520-200001<br>
 Creating snapshot(s) snapshot-wirsinddieguten-20-05-2024-20-00...<br>
 .......................................................................................................................................................................................done.<br>
@@ -5071,5 +5070,9 @@ Creating snapshot(s) snapshot-wirsinddieguten-14-06-2024-05-00...<br>
 Creating snapshot(s) snapshot-wirsinddieguten-14-06-2024-10-00...<br>
 ....................................................................................................................................................................................................done.<br>
 -e "nFinished at 20240614-100043"<br>
+20240614-150001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-14-06-2024-15-00...<br>
+..................................................................................................................................................................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240614-150112"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Jun 14 10:20 /tmp/tmp.ZcNvzRFebP
+-rw------- 1 msantana msantana 0 Jun 14 16:27 /tmp/tmp.Q3isrcAcfE
