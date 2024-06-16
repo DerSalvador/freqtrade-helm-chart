@@ -471,7 +471,18 @@ spec:
            echo ""
            echo "Starting Freqtrade"
            echo ""
-           freqtrade trade {{- if .Values.bot.debug }} {{ .Values.bot.debuglevel }} {{- end }} --config  /freqtrade/config/config-{{ .Release.Namespace }}.json  --config /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json --strategy-path /extra_strategies --strategy {{ .Values.bot.strategy_name }} --db-url sqlite:////sqlite/tradesv3.sqlite --recursive-strategy-search --freqaimodel  {{ .Values.bot.freqaimodel }} --freqaimodel-path  /freqtrade/freqtrade/freqai/prediction_models --logfile /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log --datadir "/extra_strategies/data" --userdir /freqtrade/user_data
+           freqtrade trade {{- if .Values.bot.debug }} {{ .Values.bot.debuglevel }} {{- end }} \
+           --config  /freqtrade/config/config-{{ .Release.Namespace }}.json  \
+           --config /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json \
+           --strategy-path /extra_strategies \
+           --strategy {{ .Values.bot.strategy_name }} \
+           --db-url sqlite:////sqlite/tradesv3.sqlite \
+           --recursive-strategy-search \
+           --freqaimodel  {{ .Values.bot.freqaimodel }} \
+           --freqaimodel-path  /freqtrade/freqtrade/freqai/prediction_models \
+           --logfile /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
+           --datadir "/extra_strategies/data" \
+           --userdir /freqtrade/user_data
         volumeMounts:
         - name: extra-strategies
           mountPath: /extra_strategies
