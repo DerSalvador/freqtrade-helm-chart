@@ -6,7 +6,7 @@ configcreds:
     hedging:
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 5
-      stake_amount: 500
+      stake_amount: 1000
       apikey: "E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN"
       apisecret: "1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1"   
       trigger_timeout_seconds: 600   
@@ -61,7 +61,7 @@ configcreds:
     #   processing_mode: append
     - method: RemotePairList
       number_assets: 50
-      pairlist_url: https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: https://filekeys.com/remotepairlist-white-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
@@ -77,7 +77,7 @@ configcreds:
   timeframe: 5m
   trading_mode: spot
 bot:
-  strategy_name: DWT_Predict2
+  strategy_name: Strategy005Hedged
 
 image:
   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
