@@ -23,8 +23,8 @@ config:
   stoploss: -0.99
   trailing_stop: true
   trailing_only_offset_is_reached: true
-  trailing_stop_positive: 0.01
-  trailing_stop_positive_offset: 0.03
+  trailing_stop_positive: 0.09
+  trailing_stop_positive_offset: 0.1
   use_custom_stoploss: false
   has_downtime_protection: false
   # Do you want to use the hold feature? (with hold-trades.json)
