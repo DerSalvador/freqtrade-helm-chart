@@ -2,20 +2,23 @@
 config:
   dersalvador:
     hedging:
-      hedge_bot_api: http://35.233.38.30:32335/api/v1/forceenter # binance-adriana-futures
-      leverage: 1
+      apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN
+      apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
+      # hedge_bot_api: http://35.233.38.30:32335/api/v1/forceenter
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      leverage: 10
       stake_amount: 50
-      apikey: "E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN"
-      apisecret: "1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1"      
+      trigger_timeout_seconds: 300
   dry_run: true
   dry_run_wallet: 10000
   available_capital: 10000  
   stake_amount: unlimited
   max_open_trades: 5
-  #minimal_roi:
-  #  "0": 0.1
-  #  "40160": 0.01
-  #  "80160": 0
+  minimal_roi:
+    "0": 0.05
+    "100": 0.02
+    "40160": 0.01
+    "80160": 0
   timeframe: 5m
   stoploss: -0.99
   trailing_stop: true
@@ -29,8 +32,8 @@ config:
   # Run "populate_indicators()" only for new candle.
   process_only_new_candles: true
   # These values can be overridden in the "ask_strategy" section in the config.
-  use_exit_signal: false
-  exit_profit_only: true
+  use_exit_signal: true
+  exit_profit_only: false
   ignore_roi_if_entry_signal: true
   # Number of candles the strategy requires before producing valid signals
   startup_candle_count: 800
@@ -257,4 +260,3 @@ create_config_configmap: true
 create_strategies_configmap: true
 
 strategies: []
-
