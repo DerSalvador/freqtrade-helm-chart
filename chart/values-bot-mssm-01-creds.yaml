@@ -6,7 +6,7 @@ configcreds:
     hedging:
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 5
-      stake_amount: 20
+      stake_amount: 500
       apikey: "E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN"
       apisecret: "1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1"   
       trigger_timeout_seconds: 600   
