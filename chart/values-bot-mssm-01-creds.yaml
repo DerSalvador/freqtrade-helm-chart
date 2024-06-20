@@ -5,16 +5,17 @@ configcreds:
   dersalvador:
     hedging:
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      leverage: 5
-      stake_amount: 1000
+      leverage: 3
+      stake_amount: 50
       apikey: "E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN"
       apisecret: "1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1"   
-      trigger_timeout_seconds: 600   
+      trigger_timeout_seconds: 600
+      current_profits_check_array_length: 100
   available_capital: 5000
   use_custom_stoploss: true
   use_exit_signal: true
   bot_name: bot-mssm-01
-  dry_run: true
+  dry_run: false
   exchange:
     key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
     name: binance
@@ -53,8 +54,8 @@ configcreds:
       - XTZ/USDT
     secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
   minimal_roi:
-    "0": 0.04
-    "100": 0.02
+    "0": 0.2
+    "100": 0.1
   pairlists:
     # - method: StaticPairList
     #   mode: whitelist
@@ -66,7 +67,15 @@ configcreds:
       processing_mode: append
       refresh_period: 900
       keep_pairlist_on_failure: true
-      read_timeout: 120       
+      read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://filekeys.com/remotepairlist-black-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: blacklist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120      
   position_adjustment_enable: false
   stake_amount: unlimited
   stoploss: -0.99
@@ -77,7 +86,7 @@ configcreds:
   timeframe: 5m
   trading_mode: spot
 bot:
-  strategy_name: Strategy005Hedged
+  strategy_name: LizStrategy
 
 image:
   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
