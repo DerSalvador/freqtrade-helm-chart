@@ -11,6 +11,7 @@ configcreds:
       apisecret: "1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1"   
       trigger_timeout_seconds: 600
       current_profits_check_array_length: 100
+      analyse_timeframe_for_hedging: 15m
   available_capital: 5000
   use_custom_stoploss: true
   use_exit_signal: true
