@@ -20,6 +20,17 @@ spec:
   resources:
     requests:
       storage: {{ .Values.bot.pvc_size }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: freqtrade-tmp
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.bot.pvc_size }}
 # ---
 # apiVersion: v1
 # kind: PersistentVolumeClaim

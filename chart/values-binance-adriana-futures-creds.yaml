@@ -25,7 +25,7 @@ configcreds:
   #   # One year back
   #   # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
   bot_name: binance-adriana-futures
-  dry_run: false
+  dry_run: true
   dry_run_wallet: 50000
   timeframe: 5m
   available_capital: 10000
@@ -35,10 +35,21 @@ configcreds:
     "0": 0.05
     "100": 0.02
   stoploss: -0.99
-  leverage: 3
   trading_mode: futures
   margin_mode: isolated
   position_adjustment_enable: false
+  pairlists:
+    # - method: StaticPairList
+    #   mode: whitelist
+    #   processing_mode: append
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=7d20507a29bf9a44 # # bearish with filter https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120     
   exchange:
     name: binance
     key: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN #  xngX47kLt00jdiCkmY7Nj06peqjVnzRN6ZShvc6PBJH6LeRUw0MD23aVkfzQu199 # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
@@ -48,4 +59,4 @@ configcreds:
     token: 6632710647:AAF62LDqnrHf83KIIeSAtqsr6mgB6aKeL3Y # 7020581178:AAGN2KOhJ3jCCXL_0p8s77uKo_5YPgICB1Y # "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     chat_id: "1759706931" # "6274423445"
 bot:
-  strategy_name: DoesNothingStrategy
+  strategy_name: DWT_short
