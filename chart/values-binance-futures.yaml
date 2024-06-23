@@ -13,9 +13,7 @@ config:
   stake_amount: unlimited
   max_open_trades: 6
   minimal_roi:
-    "0": 0.05
-    "100": 0.02
-    "80160": 0
+    "0": 0.015
   timeframe: 5m
   stoploss: -0.99
   trailing_stop: true
