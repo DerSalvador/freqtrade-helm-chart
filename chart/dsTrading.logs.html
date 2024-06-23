@@ -1,1130 +1,1534 @@
 <html><body>
-<h2>Trading Logs: Tue Jun 18 06:37:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Sun Jun 23 05:22:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
+<div><a href=#dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</a><br><br></div>
 <div><a href=#dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</a><br><br></div>
 <div><a href=#dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</a><br><br></div>
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
-<tr><td nowrap><small>694626 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
-<tr><td nowrap><small>699273 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingGcloudFirewallRules.sh</small></td></tr>
-<tr><td nowrap><small>699663 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBalanceRealtime.sh started-as-cron-job</small></td></tr>
-<tr><td nowrap><small>699664 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-02 GET balance</small></td></tr>
-<tr><td nowrap><small>699757 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>699765 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>129210 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>129218 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-<br>
-[0;32mbot-mssm-01 => DWT_Predict2Hedged[0m<br>
-<br>
-[0;32mbot-ssc-01 => DWT_Predict2[0m<br>
-<br>
-[0;32mbot-ssc-02 => TaSearchLevelG15m_Long[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
-Trying to get Status of binance-adriana-futures<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/show_config[0m<br>
-<hr><b class=botheader id=binance-adriana-futures>1. binance-adriana-futures&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/show_config[0m<br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>futures</b><br><br>
-Exchange: <b>binance</b><br><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/status[0m<br>
-[0;32mOpen Positions: 6[0m<br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>127</td><td class=tdspecialbg><b>XLM/USDT:USDT</b></td><td>10989 / 10989.01</td><td class=tdspecialbg><b>-5.62</b></td><td>2024-06-18T02:21:35Z</td><td  class=tdspecialbg>20</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >49.98</td> <td>999.67</td><td class=tdspecialbg >0.09</td> <td class=tdspecialbg >0.09</td> <td  class=tdspecialbg >0.09</td> <td>-50.47</td><tr><br>
-<tr><td  class=tdspecialbg>133</td><td class=tdspecialbg><b>LTC/USDT:USDT</b></td><td>13.72 / 13.72</td><td class=tdspecialbg><b>-6.63</b></td><td>2024-06-18T02:48:02Z</td><td  class=tdspecialbg>20</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >49.99</td> <td>999.82</td><td class=tdspecialbg >72.9</td> <td class=tdspecialbg >73.31</td> <td  class=tdspecialbg >75.98</td> <td>-50.4</td><tr><br>
-<tr><td  class=tdspecialbg>142</td><td class=tdspecialbg><b>IOTA/USDT:USDT</b></td><td>6253.9 / 6253.91</td><td class=tdspecialbg><b>-17.89</b></td><td>2024-06-18T04:07:24Z</td><td  class=tdspecialbg>20</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >50</td> <td>1000</td><td class=tdspecialbg >0.16</td> <td class=tdspecialbg >0.16</td> <td  class=tdspecialbg >0.17</td> <td>-50.43</td><tr><br>
-<tr><td  class=tdspecialbg>144</td><td class=tdspecialbg><b>BNT/USDT:USDT</b></td><td>1585 / 1585.29</td><td class=tdspecialbg><b>-3.65</b></td><td>2024-06-18T04:12:00Z</td><td  class=tdspecialbg>20</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >49.98</td> <td>999.55</td><td class=tdspecialbg >0.63</td> <td class=tdspecialbg >0.63</td> <td  class=tdspecialbg >0.65</td> <td>-50.43</td><tr><br>
-<tr><td  class=tdspecialbg>148</td><td class=tdspecialbg><b>UMA/USDT:USDT</b></td><td>1030 / 1030.93</td><td class=tdspecialbg><b>-9.21</b></td><td>2024-06-18T06:23:18Z</td><td  class=tdspecialbg>50</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >49.93</td> <td>2496.72</td><td class=tdspecialbg >2.42</td> <td class=tdspecialbg >2.43</td> <td  class=tdspecialbg >2.44</td> <td>-50.43</td><tr><br>
-<tr><td  class=tdspecialbg>152</td><td class=tdspecialbg><b>WIF/USDT:USDT</b></td><td>1192.5 / 1192.58</td><td class=tdspecialbg><b>-8.32</b></td><td>2024-06-18T06:28:19Z</td><td  class=tdspecialbg>50</td> <td>true</td><td  class=tdspecialbg >true</td><td  class=tdspecialbg >49.99</td> <td>2499.72</td><td class=tdspecialbg >2.1</td> <td class=tdspecialbg >2.1</td> <td  class=tdspecialbg >2.11</td> <td>-51.51</td><tr> </table><br>
-<table><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/version[0m<br>
-<tr><td>Freqtrade Version</td><td>2024.4</td></tr><br>
-[33mLooking for Strategy in binance-adriana-futures API[0m<br>
-[33mdsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 binance-adriana-futures GET show_config |jq -r '.strategy'[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/show_config[0m<br>
-[33mStrategy is: DWT_short[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/profit[0m<br>
-<tr><td>Started</td><td>2024-05-29 10:54:00</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>10000</td></tr><br>
-Retrieving SUM<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance[0m<br>
-[0;32mFound running ssc bot bot-ssc-02[0m<br>
-[0;32mFound running mssm bot bot-mssm-01[0m<br>
-<tr><td><b>Strategy</b></td><td>DWT_short</td></tr><br>
-<tr><td><b>Value</b></td><td>225.04</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>null</td></tr><br>
-convertIntegerToDate.sh 1718692099141<br>
-LAST_ORDER_FILLED_DATE=2024-06-18 06:28:19.141000<br>
-convertIntegerToDate.sh 1718692099141<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/balance[0m<br>
-[0;32mFound 6 for binance-adriana-futures[0m<br>
-<tr><td>Last Order Date</td><td>2024-06-18 06:28:19.141000</td></tr><br>
-<tr><td>Max Open Trades</td><td>100</td></tr><br>
-<tr><td>Open</td><td>6</td></tr><br>
-<tr><td>Currencies</td><td>4</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>USDT</td><td>104.57</td><td>104.57</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XLM/USDT:USDT</td><td>44.07</td><td>0</td><td>short</td><td>10989</td><td class=tdspecialbg>20</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>LTC/USDT:USDT</td><td>43.69</td><td>0</td><td>short</td><td>13.715</td><td class=tdspecialbg>20</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>IOTA/USDT:USDT</td><td>32.72</td><td>0</td><td>short</td><td>6253.9</td><td class=tdspecialbg>20</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-showBinanceWalletBalances.sh E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1<br>
-<table><tr><th class=tdspecialbg colspan=3>Binance Wallets</th></tr><br>
-<tr><th>Wallet</th><th>Balance</th><th>Currency</th></tr><br>
-ipython getWalletBalanceBinance.py E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1 FUNDING_WALLET<br>
-BTC Price in USDT: 65588.29 USDT<br>
-<tr><td>Spot</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Funding</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Cross Margin</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Isolated Margin</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>USDⓈ-M Futures</td><td>0.00344551</td><td>BTC</td><td>225.99</td><td>USDT</td></tr><br>
-<tr><td>COIN-M Futures</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Earn</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Options</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Trading Bots</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-</table><br>
-<hr><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot binance-adriana-futures, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot binance-adriana-futures: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32335/api/v1/weekly[0m<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-06-17</td><td>52.03</td><td>0.01</td><td>9959.82537916</td><td>0</td><td>116</td></tr><br>
-<tr><td>2024-06-10</td><td>-9.34</td><td>-0</td><td>9969.16418696</td><td>0</td><td>20</td></tr><br>
-<tr><td>2024-06-03</td><td>-33</td><td>-0</td><td>10002.166484500001</td><td>0</td><td>9</td></tr><br>
-<tr><td>2024-05-27</td><td>2.17</td><td>0</td><td>10000.000000000002</td><td>0</td><td>1</td></tr><br>
-</table><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
-Trying to get Status of bot-mssm-01<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/show_config[0m<br>
-<hr><b class=botheader id=bot-mssm-01>2. bot-mssm-01&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/show_config[0m<br>
-<b><small>Trader is dry_run running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>binance</b><br><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/status[0m<br>
-[0;32mOpen Positions: 5[0m<br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>61</td><td class=tdspecialbg><b>UMA/USDT</b></td><td>251.4 / 251.75</td><td class=tdspecialbg><b>-86.01</b></td><td>2024-06-17T22:15:18Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >696.5</td> <td>696.5</td><td class=tdspecialbg >2.77</td> <td class=tdspecialbg >2.43</td> <td  class=tdspecialbg >0</td> <td>-690.03</td><tr><br>
-<tr><td  class=tdspecialbg>62</td><td class=tdspecialbg><b>XLM/USDT</b></td><td>7169 / 7177.62</td><td class=tdspecialbg><b>-41.5</b></td><td>2024-06-17T22:20:17Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >696.19</td> <td>696.19</td><td class=tdspecialbg >0.1</td> <td class=tdspecialbg >0.09</td> <td  class=tdspecialbg >0</td> <td>-689.64</td><tr><br>
-<tr><td  class=tdspecialbg>63</td><td class=tdspecialbg><b>BNT/USDT</b></td><td>1047.9 / 1049.09</td><td class=tdspecialbg><b>-34.77</b></td><td>2024-06-17T22:20:21Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >696.35</td> <td>696.35</td><td class=tdspecialbg >0.66</td> <td class=tdspecialbg >0.63</td> <td  class=tdspecialbg >0</td> <td>-690</td><tr><br>
-<tr><td  class=tdspecialbg>64</td><td class=tdspecialbg><b>IOTA/USDT</b></td><td>3949 / 3953.16</td><td class=tdspecialbg><b>-55.05</b></td><td>2024-06-17T22:35:18Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >696.22</td> <td>696.22</td><td class=tdspecialbg >0.18</td> <td class=tdspecialbg >0.16</td> <td  class=tdspecialbg >0</td> <td>-689.8</td><tr><br>
-<tr><td  class=tdspecialbg>65</td><td class=tdspecialbg><b>WIF/USDT</b></td><td>316.28 / 316.59</td><td class=tdspecialbg><b>-1.08</b></td><td>2024-06-18T04:55:50Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >664.64</td> <td>664.64</td><td class=tdspecialbg >2.1</td> <td class=tdspecialbg >2.1</td> <td  class=tdspecialbg >0</td> <td>-658.62</td><tr> </table><br>
-<table><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/version[0m<br>
-<tr><td>Freqtrade Version</td><td>docker-2024.6-dev-1775d86a</td></tr><br>
-[33mLooking for Strategy in bot-mssm-01 API[0m<br>
-[33mdsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-mssm-01 GET show_config |jq -r '.strategy'[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/show_config[0m<br>
-[33mStrategy is: DWT_Predict2[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/profit[0m<br>
-<tr><td>Started</td><td>2024-05-22 13:45:51</td></tr><br>
-<tr><td>DryRun</td><td>true</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>5000</td></tr><br>
-Retrieving SUM<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-<tr><td><b>Strategy</b></td><td>DWT_Predict2</td></tr><br>
-<tr><td><b>Value</b></td><td>9930.36</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>null</td></tr><br>
-convertIntegerToDate.sh 1718686550279<br>
-LAST_ORDER_FILLED_DATE=2024-06-18 04:55:50.279000<br>
-convertIntegerToDate.sh 1718686550279<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/balance[0m<br>
-[0;32mFound 5 for bot-mssm-01[0m<br>
-<tr><td>Last Order Date</td><td>2024-06-18 04:55:50.279000</td></tr><br>
-<tr><td>Max Open Trades</td><td>5</td></tr><br>
-<tr><td>Open</td><td>5</td></tr><br>
-<tr><td>Currencies</td><td>6</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>UMA</td><td>612.91</td><td>251.4</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>XLM</td><td>655.96</td><td>7169</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>BNT</td><td>663.22</td><td>1047.9</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>IOTA</td><td>643.29</td><td>3949</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>WIF</td><td>664.92</td><td>316.28</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>USDT</td><td>1690.06</td><td>6690.06</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr> </table><br>
-<hr><br>
-<br><br>
-showBinanceWalletBalances.sh b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov<br>
-<table><tr><th class=tdspecialbg colspan=3>Binance Wallets</th></tr><br>
-<tr><th>Wallet</th><th>Balance</th><th>Currency</th></tr><br>
-ipython getWalletBalanceBinance.py b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov FUNDING_WALLET<br>
-BTC Price in USDT: 65584.50 USDT<br>
-<tr><td>Spot</td><td>0.03442713</td><td>BTC</td><td>2257.89</td><td>USDT</td></tr><br>
-<tr><td>Funding</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Cross Margin</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Isolated Margin</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>USDⓈ-M Futures</td><td>0.02418362</td><td>BTC</td><td>1586.07</td><td>USDT</td></tr><br>
-<tr><td>COIN-M Futures</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Earn</td><td>0.02085479</td><td>BTC</td><td>1367.75</td><td>USDT</td></tr><br>
-<tr><td>Options</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Trading Bots</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-</table><br>
-<hr><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-mssm-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-mssm-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32378/api/v1/weekly[0m<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-06-17</td><td>-151.66</td><td>-0.03</td><td>5291.619932070001</td><td>0</td><td>12</td></tr><br>
-<tr><td>2024-06-10</td><td>74.1</td><td>0.01</td><td>5217.518634590001</td><td>0</td><td>20</td></tr><br>
-<tr><td>2024-06-03</td><td>146.66</td><td>0.03</td><td>5070.859440420001</td><td>0</td><td>11</td></tr><br>
-<tr><td>2024-05-27</td><td>70.86</td><td>0.01</td><td>5000.000000000001</td><td>0</td><td>6</td></tr><br>
-</table><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/status[0m<br>
-Trying to get Status of bot-ssc-01<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/show_config[0m<br>
-<hr><b class=botheader id=bot-ssc-01>3. bot-ssc-01&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/show_config[0m<br>
-<b><small>Trader is live running</small></b><br><br>
-Trading Mode: <b>spot</b><br><br>
-Exchange: <b>binance</b><br><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/status[0m<br>
-[0;32mOpen Positions: 4[0m<br>
- <table><tr><th class=tdspecialbg colspan=12>Positions</th></tr><tr><th>TradeId</th><th>Pair</th><th>Amount/Requested</th><th>Total Profit Fiat</th><th>Created</th><th>Leverage</th><th>Open</th><th>Short</th><th>Stake Amount USDT</th><th>Max Stake Amount USDT</th><th>Open Rate</th><th>Current Rate</th><th>Liquidation Price</th><th>Stop Loss Distance</th></tr> <tr><td  class=tdspecialbg>2</td><td class=tdspecialbg><b>GMX/USDT</b></td><td>19.01 / 19.03</td><td class=tdspecialbg><b>-72.64</b></td><td>2024-06-16T14:40:53Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >613.14</td> <td>613.14</td><td class=tdspecialbg >32.25</td> <td class=tdspecialbg >28.49</td> <td  class=tdspecialbg >0</td> <td>-144.43</td><tr><br>
-<tr><td  class=tdspecialbg>3</td><td class=tdspecialbg><b>BNT/USDT</b></td><td>881.4 / 882.38</td><td class=tdspecialbg><b>-56.53</b></td><td>2024-06-16T14:40:57Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >613.1</td> <td>613.1</td><td class=tdspecialbg >0.7</td> <td class=tdspecialbg >0.63</td> <td  class=tdspecialbg >0</td> <td>-150.92</td><tr><br>
-<tr><td  class=tdspecialbg>5</td><td class=tdspecialbg><b>DOT/USDT</b></td><td>97.18 / 97.28</td><td class=tdspecialbg><b>-55.51</b></td><td>2024-06-17T00:55:14Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >619.25</td> <td>619.25</td><td class=tdspecialbg >6.37</td> <td class=tdspecialbg >5.81</td> <td  class=tdspecialbg >0</td> <td>-154.82</td><tr><br>
-<tr><td  class=tdspecialbg>6</td><td class=tdspecialbg><b>STEEM/USDT</b></td><td>2798.8 / 2801.71</td><td class=tdspecialbg><b>-110.67</b></td><td>2024-06-17T01:10:21Z</td><td  class=tdspecialbg>1</td> <td>true</td><td  class=tdspecialbg >false</td><td  class=tdspecialbg >619.23</td> <td>619.23</td><td class=tdspecialbg >0.22</td> <td class=tdspecialbg >0.18</td> <td  class=tdspecialbg >0</td> <td>-155.69</td><tr> </table><br>
-<table><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/version[0m<br>
-<tr><td>Freqtrade Version</td><td>docker-2024.6-dev-1775d86a</td></tr><br>
-[33mLooking for Strategy in bot-ssc-01 API[0m<br>
-[33mdsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-01 GET show_config |jq -r '.strategy'[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/show_config[0m<br>
-[33mStrategy is: DWT_Predict2[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/profit[0m<br>
-<tr><td>Started</td><td>2024-06-15 15:28:10</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>2500</td></tr><br>
-Retrieving SUM<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/balance[0m<br>
-[0;32mFound running ssc bot bot-ssc-02[0m<br>
-[0;32mFound running mssm bot bot-mssm-01[0m<br>
-<tr><td><b>Strategy</b></td><td>DWT_Predict2</td></tr><br>
-<tr><td><b>Value</b></td><td>3209.02</td></tr><br>
-<tr><td>FreqAI enabled</td><td>false</td></tr><br>
-<tr><td>FreqAI Model</td><td>null</td></tr><br>
-convertIntegerToDate.sh 1718586621286<br>
-LAST_ORDER_FILLED_DATE=2024-06-17 01:10:21.286000<br>
-convertIntegerToDate.sh 1718586621286<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/balance[0m<br>
-[0;32mFound 4 for bot-ssc-01[0m<br>
-<tr><td>Last Order Date</td><td>2024-06-17 01:10:21.286000</td></tr><br>
-<tr><td>Max Open Trades</td><td>4</td></tr><br>
-<tr><td>Open</td><td>4</td></tr><br>
-<tr><td>Currencies</td><td>13</td></tr><br>
-</table><br>
-<table><tr><th  class=tdspecialbg colspan=7>Balances</th></tr><tr><th>Currency</th><th>Est. Stake Bot USDT</th><th>Free for Transfer (USDT)</th><th>Side</th><th>Position Quantity</th><th>Leverage</th><th>Botmanaged</th></tr> <tr><td  class=tdspecialbg>ETH</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>BNB</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>BNT</td><td>557.84</td><td>881.44</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>USDT</td><td>13.62</td><td>13.62</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>STEEM</td><td>509.94</td><td>2798.9</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>HOT</td><td>0</td><td>1.03</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>DOT</td><td>564.91</td><td>97.18</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>AVAX</td><td>0</td><td>9.7</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>MOVR</td><td>0</td><td>0</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>GMX</td><td>541.05</td><td>36.81</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>true</td></tr><br>
-<tr><td  class=tdspecialbg>ORDI</td><td>0</td><td>0.01</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>JTO</td><td>0</td><td>102.1</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr><br>
-<tr><td  class=tdspecialbg>WIF</td><td>0</td><td>0.01</td><td>long</td><td>0</td><td class=tdspecialbg>1</td><td>false</td></tr> </table><br>
-<hr><br>
-<br><br>
-showBinanceWalletBalances.sh pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV<br>
-<table><tr><th class=tdspecialbg colspan=3>Binance Wallets</th></tr><br>
-<tr><th>Wallet</th><th>Balance</th><th>Currency</th></tr><br>
-ipython getWalletBalanceBinance.py pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV FUNDING_WALLET<br>
-BTC Price in USDT: 65580.21 USDT<br>
-<tr><td>Spot</td><td>0.04907895</td><td>BTC</td><td>3218.61</td><td>USDT</td></tr><br>
-<tr><td>Funding</td><td>0.00001464</td><td>BTC</td><td>0.96</td><td>USDT</td></tr><br>
-<tr><td>Cross Margin</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Isolated Margin</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>USDⓈ-M Futures</td><td>0.00587185</td><td>BTC</td><td>385.08</td><td>USDT</td></tr><br>
-<tr><td>COIN-M Futures</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Earn</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Options</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-<tr><td>Trading Bots</td><td>0</td><td>BTC</td><td>0</td><td>USDT</td></tr><br>
-</table><br>
-<hr><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-01, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-01: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32369/api/v1/weekly[0m<br>
-<hr><br>
-<table><tr><th  class=tdspecialbg colspan=6>Weekly PNL</th></tr><br>
-<tr><th>Week Start</th><th>Absolut Profit</th><th>Relative Profit</th><th>Starting Balance</th><th>Fiat Value EUR</th><th>Trade Count</th></tr><br>
-<tr><td>2024-06-17</td><td>0</td><td>0</td><td>2525.21875933</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-06-10</td><td>25.22</td><td>0.01</td><td>2500</td><td>0</td><td>2</td></tr><br>
-<tr><td>2024-06-03</td><td>0</td><td>0</td><td>2500</td><td>0</td><td>0</td></tr><br>
-<tr><td>2024-05-27</td><td>0</td><td>0</td><td>2500</td><td>0</td><td>0</td></tr><br>
-</table><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/status[0m<br>
-Trying to get Status of bot-ssc-02<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/show_config[0m<br>
-<hr><b class=botheader id=bot-ssc-02>4. bot-ssc-02&nbsp;&nbsp;<a href=#top>Top</a></b><br><br><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/show_config[0m<br>
-<b><small>Trader is live stopped</small></b><br><br>
-Trading Mode: <b>futures</b><br><br>
-Exchange: <b>binance</b><br><br>
-<b style="color: red;">No open Positions</b><br><br>
-[33mNo Open Trades found: 0[0m<br>
-<table><br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/version[0m<br>
-<tr><td>Freqtrade Version</td><td>2024.4</td></tr><br>
-[33mLooking for Strategy in bot-ssc-02 API[0m<br>
-[33mdsTradingAPI.sh gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 bot-ssc-02 GET show_config |jq -r '.strategy'[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/show_config[0m<br>
-[33mStrategy is: AdxSmasS_v7[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/show_config[0m<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/profit[0m<br>
-<tr><td>Started</td><td>2024-05-22 15:53:40</td></tr><br>
-<tr><td>DryRun</td><td>false</td></tr><br>
-<tr><td>DryRunWallet</td><td> 0</td></tr><br>
-<tr><td>Available Capital</td><td>600</td></tr><br>
-Retrieving SUM<br>
-Switched to context "gke_vaulted-gift-406223_europe-west1-b_private-cluster-3".<br>
-<br>
-[0;32mdidnt find force parameter, dont creating node port for API access[0m<br>
-Warning: using cached endpoint in /tmp/dsTradingAPI.sh.endpoint=35.205.159.255 for bot bot-ssc-02, if not valid anymore (see firewall rules), delete it, a new valid one will be generated on next run<br>
-<br>
-[34mRunning against bot bot-ssc-02: curl -s -X GET -u 'freqtrade:&&Liz270117!!' http://35.205.159.255:32382/api/v1/balance[0m<br>
+<b>2024-06-18 21:12:49: 0.00</b><br><br>
+<b>2024-06-18 21:00:47: 0.00</b><br><br>
+<b>2024-06-18 20:48:53: 0.00</b><br><br>
+<b>2024-06-18 20:36:54: 0.00</b><br><br>
+<b>2024-06-18 20:24:49: 0.00</b><br><br>
+<b>2024-06-18 20:12:55: 0.00</b><br><br>
+<b>2024-06-18 20:00:48: 0.00</b><br><br>
+<b>2024-06-18 19:48:55: 0.00</b><br><br>
+<b>2024-06-18 19:36:50: 0.00</b><br><br>
+<b>2024-06-18 19:24:54: 0.00</b><br><br>
+<b>2024-06-18 19:12:54: 0.00</b><br><br>
+<b>2024-06-18 19:00:55: 0.00</b><br><br>
+<b>2024-06-18 18:48:50: 0.00</b><br><br>
+<b>2024-06-18 18:36:52: 0.00</b><br><br>
+<b>2024-06-18 18:24:53: 0.00</b><br><br>
+<b>2024-06-18 18:12:50: 0.00</b><br><br>
+<b>2024-06-18 18:00:56: 0.00</b><br><br>
+<b>2024-06-18 17:48:52: 0.00</b><br><br>
+<b>2024-06-18 17:36:52: 0.00</b><br><br>
+<b>2024-06-18 17:24:52: 0.00</b><br><br>
+<b>2024-06-18 17:12:50: 0.00</b><br><br>
+<b>2024-06-18 17:00:48: 0.00</b><br><br>
+<b>2024-06-18 16:48:51: 0.00</b><br><br>
+<b>2024-06-18 16:36:53: 0.00</b><br><br>
+<b>2024-06-18 16:24:47: 0.00</b><br><br>
+<b>2024-06-18 16:12:46: 0.00</b><br><br>
+<b>2024-06-18 16:00:50: 0.00</b><br><br>
+<b>2024-06-18 15:48:48: 0.00</b><br><br>
+<b>2024-06-18 15:36:49: 0.00</b><br><br>
+<b>2024-06-18 15:24:48: 0.00</b><br><br>
+<b>2024-06-18 15:12:45: 0.00</b><br><br>
+<b>2024-06-18 15:00:48: 0.00</b><br><br>
+<b>2024-06-18 14:48:41: 0.00</b><br><br>
+<b>2024-06-18 14:40:47: 370.20</b><br><br>
+<b>2024-06-18 11:48:34: 377.44</b><br><br>
+<b>2024-06-18 11:36:35: 377.44</b><br><br>
+<b>2024-06-18 11:24:41: 377.44</b><br><br>
+<b>2024-06-18 11:12:35: 383.52</b><br><br>
+<b>2024-06-18 11:00:36: 383.52</b><br><br>
+<b>2024-06-18 10:48:35: 383.52</b><br><br>
+<b>2024-06-18 10:36:35: 383.52</b><br><br>
+<b>2024-06-18 10:24:38: 383.52</b><br><br>
+<b>2024-06-18 10:16:49: 383.52</b><br><br>
+<b>2024-06-18 10:00:52: 389.99</b><br><br>
+<b>2024-06-18 09:48:34: 389.99</b><br><br>
+<b>2024-06-18 09:36:39: 389.99</b><br><br>
+<b>2024-06-18 09:24:39: 389.99</b><br><br>
+<b>2024-06-18 09:12:43: 389.99</b><br><br>
+<b>2024-06-18 09:00:39: 386.86</b><br><br>
+<b>2024-06-18 08:48:40: 386.86</b><br><br>
+<b>2024-06-18 08:36:40: 386.86</b><br><br>
+<b>2024-06-18 08:24:42: 386.86</b><br><br>
+<b>2024-06-18 08:12:38: 386.86</b><br><br>
+<b>2024-06-18 08:01:31: 387.18</b><br><br>
+<b>2024-06-18 07:48:40: 388.09</b><br><br>
+<b>2024-06-18 07:36:41: 384.87</b><br><br>
+<b>2024-06-18 07:24:33: 384.87</b><br><br>
+<b>2024-06-18 07:12:57: 496.72</b><br><br>
+<b>2024-06-18 07:00:46: 593.71</b><br><br>
+<b>2024-06-18 06:48:57: 622.60</b><br><br>
+<b>2024-06-18 06:37:05: 609.91</b><br><br>
+<b>2024-06-18 06:24:34: 386.59</b><br><br>
+<b>2024-06-18 06:16:08: 50392.93</b><br><br>
+<b>2024-06-18 06:01:01: 2866.86</b><br><br>
+<b>2024-06-18 05:48:57: 2880.39</b><br><br>
+<b>2024-06-18 05:37:01: 2884.46</b><br><br>
+<b>2024-06-18 05:24:58: 2889.76</b><br><br>
+<b>2024-06-18 05:13:00: 2884.08</b><br><br>
+<b>2024-06-18 05:00:37: 2869.00</b><br><br>
+<b>2024-06-18 04:48:56: 2856.51</b><br><br>
+<b>2024-06-18 04:36:41: 2863.19</b><br><br>
+<b>2024-06-18 04:25:01: 2883.47</b><br><br>
+<b>2024-06-18 04:12:50: 2871.99</b><br><br>
+<b>2024-06-18 04:00:53: 2864.53</b><br><br>
+<b>2024-06-18 03:48:58: 2865.61</b><br><br>
+<b>2024-06-18 03:36:40: 2869.91</b><br><br>
+<b>2024-06-18 03:25:02: 4156.98</b><br><br>
+<b>2024-06-18 03:12:57: 4147.35</b><br><br>
+<b>2024-06-18 03:00:53: 4148.63</b><br><br>
+<b>2024-06-18 02:48:53: 4153.34</b><br><br>
+<b>2024-06-18 02:36:40: 4156.35</b><br><br>
+<b>2024-06-18 02:25:00: 4160.77</b><br><br>
+<b>2024-06-18 02:13:00: 4219.68</b><br><br>
+<b>2024-06-18 02:00:50: 4195.63</b><br><br>
+<b>2024-06-18 01:48:59: 4170.57</b><br><br>
+<b>2024-06-18 01:36:39: 4314.27</b><br><br>
+<b>2024-06-18 01:24:58: 4325.43</b><br><br>
+<b>2024-06-18 01:12:57: 4401.91</b><br><br>
+<b>2024-06-18 01:00:56: 4418.15</b><br><br>
+<b>2024-06-18 00:48:52: 4406.08</b><br><br>
+<b>2024-06-18 00:36:58: 4369.48</b><br><br>
+<b>2024-06-18 00:24:57: 4406.23</b><br><br>
+<b>2024-06-18 00:12:59: 4423.59</b><br><br>
+<b>2024-06-18 00:01:00: 4421.52</b><br><br>
+<b>2024-06-17 23:49:00: 4427.67</b><br><br>
+<b>2024-06-17 23:36:39: 4431.86</b><br><br>
+<b>2024-06-17 23:25:00: 4433.14</b><br><br>
+<b>2024-06-17 23:12:49: 4436.66</b><br><br>
+<b>2024-06-17 23:00:56: 4434.15</b><br><br>
+<b>2024-06-17 22:48:46: 4438.71</b><br><br>
+<b>2024-06-17 22:36:38: 4436.11</b><br><br>
+<b>2024-06-17 22:24:59: 4440.57</b><br><br>
+<b>2024-06-17 22:12:58: 4441.02</b><br><br>
+<b>2024-06-17 22:00:37: 4439.77</b><br><br>
+<b>2024-06-17 21:48:47: 4446.03</b><br><br>
+<b>2024-06-17 21:36:39: 4454.38</b><br><br>
+<b>2024-06-17 21:24:37: 4437.36</b><br><br>
+<b>2024-06-17 21:12:35: 4409.40</b><br><br>
+<b>2024-06-17 21:00:36: 4436.68</b><br><br>
+<b>2024-06-17 20:49:20: 4441.59</b><br><br>
+<b>2024-06-17 20:36:35: 4456.38</b><br><br>
+<b>2024-06-17 20:24:35: 4460.43</b><br><br>
+<b>2024-06-17 20:12:34: 4458.43</b><br><br>
+<b>2024-06-17 20:00:36: 4461.96</b><br><br>
+<b>2024-06-17 19:48:36: 4462.83</b><br><br>
+<b>2024-06-17 19:36:37: 659.54</b><br><br>
+<b>2024-06-17 19:24:36: 4463.49</b><br><br>
+<b>2024-06-17 19:12:36: 658.70</b><br><br>
+<b>2024-06-17 19:00:35: 4477.97</b><br><br>
+<b>2024-06-17 18:48:35: 4463.16</b><br><br>
+<b>2024-06-17 18:36:35: 4472.26</b><br><br>
+<b>2024-06-17 18:24:36: 4457.28</b><br><br>
+<b>2024-06-17 18:12:36: 4552.49</b><br><br>
+<b>2024-06-17 18:00:38: 4523.99</b><br><br>
+<b>2024-06-17 17:48:36: 4514.14</b><br><br>
+<b>2024-06-17 17:36:35: 4512.46</b><br><br>
+<b>2024-06-17 17:24:36: 4493.14</b><br><br>
+<b>2024-06-17 17:12:37: 4502.20</b><br><br>
+<b>2024-06-17 17:00:36: 4481.07</b><br><br>
+<b>2024-06-17 16:48:36: 4498.85</b><br><br>
+<b>2024-06-17 16:36:35: 4480.41</b><br><br>
+<b>2024-06-17 16:24:38: 4410.50</b><br><br>
+<b>2024-06-17 16:12:52: 4463.34</b><br><br>
+<b>2024-06-17 16:01:05: 4447.13</b><br><br>
+<b>2024-06-17 15:51:14: 7507.45</b><br><br>
+<b>2024-06-17 15:36:29: 7485.78</b><br><br>
+<b>2024-06-17 15:24:32: 7480.14</b><br><br>
+<b>2024-06-17 15:12:27: 7538.58</b><br><br>
+<b>2024-06-17 15:00:33: 7518.78</b><br><br>
+<b>2024-06-17 14:48:31: 7556.49</b><br><br>
+<b>2024-06-17 14:36:33: 7551.91</b><br><br>
+<b>2024-06-17 14:24:33: 7518.89</b><br><br>
+<b>2024-06-17 14:12:28: 7501.95</b><br><br>
+<b>2024-06-17 14:00:28: 7456.66</b><br><br>
+<b>2024-06-17 13:48:47: 7469.74</b><br><br>
+<b>2024-06-17 13:36:30: 7492.26</b><br><br>
+<b>2024-06-17 13:24:29: 7527.96</b><br><br>
+<b>2024-06-17 13:12:30: 7526.99</b><br><br>
+<b>2024-06-17 13:00:29: 7311.67</b><br><br>
+<b>2024-06-17 12:48:30: 7331.73</b><br><br>
+<b>2024-06-17 12:36:31: 7018.31</b><br><br>
+<b>2024-06-17 12:24:35: 7024.49</b><br><br>
+<b>2024-06-17 12:12:31: 7011.27</b><br><br>
+<b>2024-06-17 12:00:31: 7020.92</b><br><br>
+<b>2024-06-17 11:48:31: 7018.44</b><br><br>
+<b>2024-06-17 11:36:32: 7017.64</b><br><br>
+<b>2024-06-17 11:24:30: 7036.67</b><br><br>
+<b>2024-06-17 11:12:31: 7044.50</b><br><br>
+<b>2024-06-17 11:00:29: 7027.67</b><br><br>
+<b>2024-06-17 10:48:31: 7034.91</b><br><br>
+<b>2024-06-17 10:36:32: 7003.16</b><br><br>
+<b>2024-06-17 10:24:33: 6961.51</b><br><br>
+<b>2024-06-17 10:12:27: 6979.41</b><br><br>
+<b>2024-06-17 10:00:28: 7022.43</b><br><br>
+<b>2024-06-17 09:48:31: 7028.15</b><br><br>
+<b>2024-06-17 09:36:33: 7106.34</b><br><br>
+<b>2024-06-17 09:24:30: 7097.26</b><br><br>
+<b>2024-06-17 09:12:34: 7089.73</b><br><br>
+<b>2024-06-17 09:00:30: 7074.57</b><br><br>
+<b>2024-06-17 08:48:30: 7072.44</b><br><br>
+<b>2024-06-17 08:36:33: 7045.19</b><br><br>
+<b>2024-06-17 08:24:29: 7122.74</b><br><br>
+<b>2024-06-17 08:12:30: 7133.84</b><br><br>
+<b>2024-06-17 08:00:48: 7126.17</b><br><br>
+<b>2024-06-17 07:48:31: 7135.71</b><br><br>
+<b>2024-06-17 07:36:33: 7151.03</b><br><br>
+<b>2024-06-17 07:24:29: 7131.90</b><br><br>
+<b>2024-06-17 07:12:34: 7095.36</b><br><br>
+<b>2024-06-17 07:00:36: 7134.21</b><br><br>
+<b>2024-06-17 06:48:28: 7167.77</b><br><br>
+<b>2024-06-17 06:36:31: 7178.78</b><br><br>
+<b>2024-06-17 06:24:31: 7192.90</b><br><br>
+<b>2024-06-17 06:12:29: 7198.90</b><br><br>
+<b>2024-06-17 06:00:29: 7232.67</b><br><br>
+<b>2024-06-17 05:48:31: 7256.45</b><br><br>
+<b>2024-06-17 05:36:30: 7270.58</b><br><br>
+<b>2024-06-17 05:24:32: 7273.17</b><br><br>
+<b>2024-06-17 05:12:31: 7299.47</b><br><br>
+<b>2024-06-17 05:00:30: 7282.75</b><br><br>
+<b>2024-06-17 04:48:30: 7253.04</b><br><br>
+<b>2024-06-17 04:36:30: 7256.62</b><br><br>
+<b>2024-06-17 04:24:31: 7233.66</b><br><br>
+<b>2024-06-17 04:12:30: 7197.52</b><br><br>
+<b>2024-06-17 04:00:28: 7214.71</b><br><br>
+<b>2024-06-17 03:48:29: 7241.40</b><br><br>
+<b>2024-06-17 03:36:32: 7238.68</b><br><br>
+<b>2024-06-17 03:24:33: 7228.74</b><br><br>
+<b>2024-06-17 03:12:33: 7254.54</b><br><br>
+<b>2024-06-17 03:00:35: 7253.19</b><br><br>
+<b>2024-06-17 02:48:31: 7263.57</b><br><br>
+<b>2024-06-17 02:36:31: 7248.28</b><br><br>
+<b>2024-06-17 02:24:31: 7249.79</b><br><br>
+<b>2024-06-17 02:12:30: 7276.82</b><br><br>
+<b>2024-06-17 02:00:31: 7314.62</b><br><br>
+<b>2024-06-17 01:48:32: 7307.76</b><br><br>
+<b>2024-06-17 01:36:31: 7335.35</b><br><br>
+<b>2024-06-17 01:24:29: 7353.04</b><br><br>
+<b>2024-06-17 01:12:28: 7393.60</b><br><br>
+<b>2024-06-17 01:00:28: 7398.62</b><br><br>
+<b>2024-06-17 00:48:31: 7442.17</b><br><br>
+<b>2024-06-17 00:36:30: 7449.41</b><br><br>
+<b>2024-06-17 00:24:30: 7400.43</b><br><br>
+<b>2024-06-17 00:12:31: 7412.90</b><br><br>
+<b>2024-06-17 00:00:49: 7416.94</b><br><br>
+<b>2024-06-16 23:48:31: 7406.35</b><br><br>
+<b>2024-06-16 23:36:30: 7400.24</b><br><br>
+<b>2024-06-16 23:24:31: 7408.12</b><br><br>
+<b>2024-06-16 23:12:31: 7414.31</b><br><br>
+<b>2024-06-16 23:00:29: 7410.90</b><br><br>
+<b>2024-06-16 22:48:31: 7398.06</b><br><br>
+<b>2024-06-16 22:36:30: 7404.44</b><br><br>
+<b>2024-06-16 22:24:33: 7406.10</b><br><br>
+<b>2024-06-16 22:12:27: 7427.50</b><br><br>
+<b>2024-06-16 22:00:34: 7357.49</b><br><br>
+<b>2024-06-16 21:48:27: 7341.80</b><br><br>
+<b>2024-06-16 21:36:34: 7355.12</b><br><br>
+<b>2024-06-16 21:24:28: 7354.06</b><br><br>
+<b>2024-06-16 21:12:27: 7353.93</b><br><br>
+<b>2024-06-16 21:00:33: 7356.89</b><br><br>
+<b>2024-06-16 20:48:28: 7367.53</b><br><br>
+<b>2024-06-16 20:36:30: 7357.45</b><br><br>
+<b>2024-06-16 20:24:29: 7368.26</b><br><br>
+<b>2024-06-16 20:12:30: 7347.10</b><br><br>
+<b>2024-06-16 20:00:31: 7355.55</b><br><br>
+<b>2024-06-16 19:48:27: 7347.62</b><br><br>
+<b>2024-06-16 19:36:32: 7343.58</b><br><br>
+<b>2024-06-16 19:24:30: 7361.32</b><br><br>
+<b>2024-06-16 19:12:33: 7364.51</b><br><br>
+<b>2024-06-16 19:00:31: 7350.62</b><br><br>
+<b>2024-06-16 18:48:31: 7348.85</b><br><br>
+<b>2024-06-16 18:36:27: 7352.34</b><br><br>
+<b>2024-06-16 18:24:32: 7346.78</b><br><br>
+<b>2024-06-16 18:12:39: 7346.97</b><br><br>
+<b>2024-06-16 18:00:32: 7350.21</b><br><br>
+<b>2024-06-16 17:48:28: 7347.94</b><br><br>
+<b>2024-06-16 17:36:31: 7359.67</b><br><br>
+<b>2024-06-16 17:24:29: 7373.57</b><br><br>
+<b>2024-06-16 17:12:33: 7360.41</b><br><br>
+<b>2024-06-16 17:00:32: 7358.25</b><br><br>
+<b>2024-06-16 16:48:32: 7359.12</b><br><br>
+<b>2024-06-16 16:36:29: 7362.66</b><br><br>
+<b>2024-06-16 16:24:33: 7373.17</b><br><br>
+<b>2024-06-16 16:12:27: 7367.76</b><br><br>
+<b>2024-06-16 16:00:48: 7369.52</b><br><br>
+<b>2024-06-16 15:48:30: 7361.28</b><br><br>
+<b>2024-06-16 15:36:27: 7354.05</b><br><br>
+<b>2024-06-16 15:24:32: 7348.03</b><br><br>
+<b>2024-06-16 15:12:31: 7346.79</b><br><br>
+<b>2024-06-16 15:00:32: 7331.56</b><br><br>
+<b>2024-06-16 14:48:27: 7341.99</b><br><br>
+<b>2024-06-16 14:36:28: 7338.61</b><br><br>
+<b>2024-06-16 14:24:28: 7347.51</b><br><br>
+<b>2024-06-16 14:12:29: 7355.48</b><br><br>
+<b>2024-06-16 14:00:28: 7345.06</b><br><br>
+<b>2024-06-16 13:48:29: 7341.43</b><br><br>
+<b>2024-06-16 13:36:27: 7339.98</b><br><br>
+<b>2024-06-16 13:24:27: 7345.84</b><br><br>
+<b>2024-06-16 13:12:28: 7342.30</b><br><br>
+<b>2024-06-16 13:00:27: 7337.87</b><br><br>
+<b>2024-06-16 12:48:28: 7332.07</b><br><br>
+<b>2024-06-16 12:36:27: 7334.69</b><br><br>
+<b>2024-06-16 12:24:28: 7333.71</b><br><br>
+<b>2024-06-16 12:12:27: 7329.82</b><br><br>
+<b>2024-06-16 12:00:23: 7328.78</b><br><br>
+<b>2024-06-16 11:48:27: 7329.04</b><br><br>
+<b>2024-06-16 11:36:27: 5926.11</b><br><br>
+<b>2024-06-16 11:24:26: 7005.05</b><br><br>
+<b>2024-06-16 11:12:27: 7016.10</b><br><br>
+<b>2024-06-16 11:00:24: 7023.17</b><br><br>
+<b>2024-06-16 10:48:27: 7005.16</b><br><br>
+<b>2024-06-16 10:36:25: 6992.92</b><br><br>
+<b>2024-06-16 10:24:24: 6984.28</b><br><br>
+<b>2024-06-16 10:12:24: 6977.69</b><br><br>
+<b>2024-06-16 10:00:23: 6980.07</b><br><br>
+<b>2024-06-16 09:48:25: 6971.45</b><br><br>
+<b>2024-06-16 09:36:25: 6967.01</b><br><br>
+<b>2024-06-16 09:24:24: 6963.35</b><br><br>
+<b>2024-06-16 09:12:29: 6956.93</b><br><br>
+<b>2024-06-16 09:00:23: 6964.57</b><br><br>
+<b>2024-06-16 08:48:24: 6969.58</b><br><br>
+<b>2024-06-16 08:36:25: 6979.90</b><br><br>
+<b>2024-06-16 08:24:25: 7004.33</b><br><br>
+<b>2024-06-16 08:12:24: 7000.00</b><br><br>
+<b>2024-06-16 08:00:25: 6990.60</b><br><br>
+<b>2024-06-16 07:48:26: 6989.03</b><br><br>
+<b>2024-06-16 07:36:26: 6981.09</b><br><br>
+<b>2024-06-16 07:24:24: 6998.22</b><br><br>
+<b>2024-06-16 07:12:25: 6997.94</b><br><br>
+<b>2024-06-16 07:00:29: 6979.78</b><br><br>
+<b>2024-06-16 06:48:31: 6960.74</b><br><br>
+<b>2024-06-16 06:36:25: 6938.56</b><br><br>
+<b>2024-06-16 06:24:26: 6949.89</b><br><br>
+<b>2024-06-16 06:12:24: 6946.07</b><br><br>
+<b>2024-06-16 06:00:24: 6946.27</b><br><br>
+<b>2024-06-16 05:48:25: 6937.70</b><br><br>
+<b>2024-06-16 05:36:26: 6930.17</b><br><br>
+<b>2024-06-16 05:24:26: 6903.42</b><br><br>
+<b>2024-06-16 05:12:26: 6876.38</b><br><br>
+<b>2024-06-16 05:00:24: 6863.59</b><br><br>
+<b>2024-06-16 04:48:23: 6875.06</b><br><br>
+<b>2024-06-16 04:36:25: 6873.41</b><br><br>
+<b>2024-06-16 04:24:24: 6846.74</b><br><br>
+<b>2024-06-16 04:12:27: 6869.20</b><br><br>
+<b>2024-06-16 04:00:22: 6880.63</b><br><br>
+<b>2024-06-16 03:48:25: 6880.96</b><br><br>
+<b>2024-06-16 03:36:26: 6871.28</b><br><br>
+<b>2024-06-16 03:24:25: 6904.82</b><br><br>
+<b>2024-06-16 03:12:25: 6892.64</b><br><br>
+<b>2024-06-16 03:00:24: 6910.69</b><br><br>
+<b>2024-06-16 02:48:25: 6911.75</b><br><br>
+<b>2024-06-16 02:36:24: 6933.80</b><br><br>
+<b>2024-06-16 02:24:25: 6933.68</b><br><br>
+<b>2024-06-16 02:12:24: 6919.72</b><br><br>
+<b>2024-06-16 02:00:23: 6919.89</b><br><br>
+<b>2024-06-16 01:48:25: 6895.97</b><br><br>
+<b>2024-06-16 01:36:24: 6903.44</b><br><br>
+<b>2024-06-16 01:24:30: 6923.72</b><br><br>
+<b>2024-06-16 01:12:26: 6902.73</b><br><br>
+<b>2024-06-16 01:00:23: 6900.65</b><br><br>
+<b>2024-06-16 00:48:24: 6921.56</b><br><br>
+<b>2024-06-16 00:36:24: 6926.90</b><br><br>
+<b>2024-06-16 00:24:25: 6932.06</b><br><br>
+<b>2024-06-16 00:12:24: 6925.30</b><br><br>
+<b>2024-06-16 00:00:24: 6938.49</b><br><br>
+<b>2024-06-15 23:48:28: 6933.55</b><br><br>
+<b>2024-06-15 23:36:26: 6941.10</b><br><br>
+<b>2024-06-15 23:24:26: 6927.36</b><br><br>
+<b>2024-06-15 23:12:26: 6933.38</b><br><br>
+<b>2024-06-15 23:00:22: 6934.12</b><br><br>
+<b>2024-06-15 22:48:25: 6932.71</b><br><br>
+<b>2024-06-15 22:36:25: 6912.00</b><br><br>
+<b>2024-06-15 22:24:24: 6913.12</b><br><br>
+<b>2024-06-15 22:12:25: 6912.09</b><br><br>
+<b>2024-06-15 22:00:25: 6917.45</b><br><br>
+<b>2024-06-15 21:48:26: 6900.53</b><br><br>
+<b>2024-06-15 21:36:26: 6892.56</b><br><br>
+<b>2024-06-15 21:24:27: 6879.48</b><br><br>
+<b>2024-06-15 21:12:30: 6891.05</b><br><br>
+<b>2024-06-15 21:00:24: 6874.34</b><br><br>
+<b>2024-06-15 20:48:29: 6882.18</b><br><br>
+<b>2024-06-15 20:36:27: 6886.76</b><br><br>
+<b>2024-06-15 20:24:27: 6867.79</b><br><br>
+<b>2024-06-15 20:12:28: 6894.60</b><br><br>
+<b>2024-06-15 20:00:24: 6900.13</b><br><br>
+<b>2024-06-15 19:48:26: 6902.78</b><br><br>
+<b>2024-06-15 19:36:29: 6908.93</b><br><br>
+<b>2024-06-15 19:24:29: 6900.44</b><br><br>
+<b>2024-06-15 19:12:29: 6899.82</b><br><br>
+<b>2024-06-15 19:00:24: 6910.74</b><br><br>
+<b>2024-06-15 18:48:29: 6913.62</b><br><br>
+<b>2024-06-15 18:36:28: 6914.37</b><br><br>
+<b>2024-06-15 18:24:28: 6912.82</b><br><br>
+<b>2024-06-15 18:12:24: 6917.99</b><br><br>
+<b>2024-06-15 18:00:26: 6921.53</b><br><br>
+<b>2024-06-15 17:48:30: 6920.57</b><br><br>
+<b>2024-06-15 17:36:31: 6917.85</b><br><br>
+<b>2024-06-15 17:24:36: 6917.68</b><br><br>
+<b>2024-06-15 17:12:32: 6919.40</b><br><br>
+<b>2024-06-15 17:00:24: 6923.25</b><br><br>
+<b>2024-06-15 16:48:28: 6922.55</b><br><br>
+<b>2024-06-15 16:36:30: 6925.13</b><br><br>
+<b>2024-06-15 16:24:28: 6926.99</b><br><br>
+<b>2024-06-15 16:12:34: 6926.31</b><br><br>
+<b>2024-06-15 16:00:24: 4678.07</b><br><br>
+<b>2024-06-15 15:48:28: 5177.34</b><br><br>
+<b>2024-06-15 15:36:27: 10100.99</b><br><br>
+<b>2024-06-15 15:28:28: 10168.58</b><br><br>
+<b>2024-06-15 15:12:47: 6068.32</b><br><br>
+<b>2024-06-15 15:00:43: 6502.17</b><br><br>
+<b>2024-06-15 14:48:48: 6538.72</b><br><br>
+<b>2024-06-15 14:36:27: 10041.87</b><br><br>
+<b>2024-06-15 14:25:05: 10097.12</b><br><br>
+<b>2024-06-15 14:13:06: 10057.96</b><br><br>
+<b>2024-06-15 14:00:34: 10059.14</b><br><br>
+<b>2024-06-15 13:49:06: 10036.79</b><br><br>
+<b>2024-06-15 13:36:49: 10084.28</b><br><br>
+<b>2024-06-15 13:25:43: 10042.06</b><br><br>
+<b>2024-06-15 11:13:04: 8910.53</b><br><br>
+<b>2024-06-15 08:12:14: 0.00</b><br><br>
+<b>2024-06-11 13:48:19: 0.00</b><br><br>
+<b>2024-06-11 13:36:19: 0.00</b><br><br>
+<b>2024-06-11 13:24:20: 0.00</b><br><br>
+<b>2024-06-11 13:12:20: 0.00</b><br><br>
+<b>2024-06-11 13:00:16: 0.00</b><br><br>
+<b>2024-06-11 12:48:19: 0.00</b><br><br>
+<b>2024-06-11 12:36:20: 0.00</b><br><br>
+<b>2024-06-11 12:24:19: 0.00</b><br><br>
+<b>2024-06-11 12:12:20: 0.00</b><br><br>
+<b>2024-06-11 12:00:16: 0.00</b><br><br>
+<b>2024-06-11 11:48:20: 0.00</b><br><br>
+<b>2024-06-11 11:36:19: 0.00</b><br><br>
+<b>2024-06-11 11:24:19: 0.00</b><br><br>
+<b>2024-06-11 11:12:18: 0.00</b><br><br>
+<b>2024-06-11 11:00:16: 0.00</b><br><br>
+<b>2024-06-11 10:48:19: 0.00</b><br><br>
+<b>2024-06-11 10:36:19: 0.00</b><br><br>
+<b>2024-06-11 10:24:20: 0.00</b><br><br>
+<b>2024-06-11 10:12:19: 0.00</b><br><br>
+<b>2024-06-11 10:00:15: 0.00</b><br><br>
+<b>2024-06-11 09:48:19: 0.00</b><br><br>
+<b>2024-06-11 100 89082  100 89082    0     0  74545      0  0:00:01  0:00:01 --:--:-- 74483100 89082  100 89082    0     0  74545      0  0:00:01  0:00:01 --:--:-- 74483<br>
+09:36:20: 0.00</b><br><br>
+<b>2024-06-11 09:24:20: 0.00</b><br><br>
+<b>2024-06-11 09:12:19: 0.00</b><br><br>
+<b>2024-06-11 09:00:18: 0.00</b><br><br>
+<b>2024-06-11 08:48:19: 0.00</b><br><br>
+<b>2024-06-11 08:36:19: 0.00</b><br><br>
+<b>2024-06-11 08:24:20: 0.00</b><br><br>
+<b>2024-06-11 08:12:19: 0.00</b><br><br>
+<b>2024-06-11 08:00:21: 0.00</b><br><br>
+<b>2024-06-11 07:48:19: 0.00</b><br><br>
+<b>2024-06-11 07:36:19: 0.00</b><br><br>
+<b>2024-06-11 07:24:20: 0.00</b><br><br>
+<b>2024-06-11 07:12:19: 0.00</b><br><br>
+<b>2024-06-11 07:00:15: 0.00</b><br><br>
+<b>2024-06-11 06:48:19: 0.00</b><br><br>
+<b>2024-06-11 06:36:19: 0.00</b><br><br>
+<b>2024-06-11 06:24:19: 0.00</b><br><br>
+<b>2024-06-11 06:12:19: 0.00</b><br><br>
+<b>2024-06-11 06:00:17: 0.00</b><br><br>
+<b>2024-06-11 05:48:19: 0.00</b><br><br>
+<b>2024-06-11 05:36:19: 0.00</b><br><br>
+<b>2024-06-11 05:24:18: 0.00</b><br><br>
+<b>2024-06-11 05:12:19: 0.00</b><br><br>
+<b>2024-06-11 05:00:15: 0.00</b><br><br>
+<b>2024-06-11 04:48:19: 0.00</b><br><br>
+<b>2024-06-11 04:36:18: 0.00</b><br><br>
+<b>2024-06-11 04:24:19: 0.00</b><br><br>
+<b>2024-06-11 04:12:23: 0.00</b><br><br>
+<b>2024-06-11 04:00:16: 0.00</b><br><br>
+<b>2024-06-11 03:48:19: 0.00</b><br><br>
+<b>2024-06-11 03:36:20: 0.00</b><br><br>
+<b>2024-06-11 03:24:19: 0.00</b><br><br>
+<b>2024-06-11 03:12:20: 0.00</b><br><br>
+<b>2024-06-11 03:00:15: 0.00</b><br><br>
+<b>2024-06-11 02:48:19: 0.00</b><br><br>
+<b>2024-06-11 02:36:20: 0.00</b><br><br>
+<b>2024-06-11 02:24:19: 0.00</b><br><br>
+<b>2024-06-11 02:12:19: 0.00</b><br><br>
+<b>2024-06-11 02:00:16: 0.00</b><br><br>
+<b>2024-06-11 01:48:19: 0.00</b><br><br>
+<b>2024-06-11 01:36:19: 0.00</b><br><br>
+<b>2024-06-11 01:24:19: 0.00</b><br><br>
+<b>2024-06-11 01:12:20: 0.00</b><br><br>
+<b>2024-06-11 01:00:16: 0.00</b><br><br>
+<b>2024-06-11 00:48:19: 0.00</b><br><br>
+<b>2024-06-11 00:36:20: 0.00</b><br><br>
+<b>2024-06-11 00:24:18: 0.00</b><br><br>
+<b>2024-06-11 00:12:19: 0.00</b><br><br>
+<b>2024-06-11 00:00:19: 0.00</b><br><br>
+<b>2024-06-10 23:48:19: 0.00</b><br><br>
+<b>2024-06-10 23:36:19: 0.00</b><br><br>
+<b>2024-06-10 23:24:25: 0.00</b><br><br>
+<b>2024-06-10 23:12:19: 0.00</b><br><br>
+<b>2024-06-10 23:00:16: 0.00</b><br><br>
+<b>2024-06-10 22:48:18: 0.00</b><br><br>
+<b>2024-06-10 22:36:19: 0.00</b><br><br>
+<b>2024-06-10 22:24:20: 0.00</b><br><br>
+<b>2024-06-10 22:12:19: 0.00</b><br><br>
+<b>2024-06-10 22:00:26: 0.00</b><br><br>
+<b>2024-06-10 21:48:40: 0.00</b><br><br>
+<b>2024-06-10 21:36:20: 0.00</b><br><br>
+<b>2024-06-10 21:24:48: 0.00</b><br><br>
+<b>2024-06-10 21:12:40: 0.00</b><br><br>
+<b>2024-06-10 21:00:25: 0.00</b><br><br>
+<b>2024-06-10 20:48:40: 0.00</b><br><br>
+<b>2024-06-10 20:36:40: 0.00</b><br><br>
+<b>2024-06-10 20:24:40: 0.00</b><br><br>
+<b>2024-06-10 20:12:38: 0.00</b><br><br>
+<b>2024-06-10 20:05:22: 0.00</b><br><br>
+<b>2024-06-10 19:51:26: 0.00</b><br><br>
+<b>2024-06-10 19:37:36: 0.00</b><br><br>
+<b>2024-06-10 19:30:27: 0.00</b><br><br>
+<b>2024-06-10 19:16:36: 0.00</b><br><br>
+<b>2024-06-10 19:02:41: 0.00</b><br><br>
+<b>2024-06-10 18:49:04: 0.00</b><br><br>
+<b>2024-06-10 18:42:11: 0.00</b><br><br>
+<b>2024-06-10 18:28:23: 0.00</b><br><br>
+<b>2024-06-10 18:14:33: 0.00</b><br><br>
+<b>2024-06-10 18:00:46: 0.00</b><br><br>
+<b>2024-06-10 17:53:57: 0.00</b><br><br>
+<b>2024-06-10 17:40:04: 0.00</b><br><br>
+<b>2024-06-10 17:26:21: 0.00</b><br><br>
+<b>2024-06-10 17:12:31: 0.00</b><br><br>
+</html><br>
+<br>
+<br>
+[0;32mURL: http://filekeys.com/dsTradingBalanceRealtime.html[0m<br>
+<br>
+[0;32m-------------------------------------------------------------------------------------[0m<br>
+<br><br><hr>##++<br>
++ + + + + /tmp/<b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
+++++<br>
++ + + + + <b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
+++<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-21T20:00:12.327-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '3452726656192184531'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240622-030001<br>
+20240622-060001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    121      0 --:--:-- --:--:-- --:--:--   121<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    109      0 --:--:-- --:--:-- --:--:--   109<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   121100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   121<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-21T23:00:11.534-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '3785065019328943748'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     28      0 --:--:-- --:--:-- --:--:--    28<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240622-060001<br>
+20240622-090001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    102      0 --:--:-- --:--:-- --:--:--   102<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    105      0 --:--:-- --:--:-- --:--:--   105<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   112100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   112<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    122      0 --:--:-- --:--:-- --:--:--   122<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-22T02:00:12.453-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '4706216280323730547'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    123      0 --:--:-- --:--:-- --:--:--   123<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240622-090001<br>
+20240622-120001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     99      0 --:--:-- --:--:-- --:--:--    99<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     99      0 --:--:-- --:--:-- --:--:--    99<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    123      0 --:--:-- --:--:-- --:--:--   123<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   113<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-22T05:00:11.822-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '3246932705498825252'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    114      0 --:--:-- --:--:-- --:--:--   114<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240622-120001<br>
+20240622-150001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     20      0 --:--:-- --:--:-- --:--:--    20<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    120      0 --:--:-- --:--:-- --:--:--   120<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    112      0 --:--:-- --:--:-- --:--:--   112<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     36      0 --:--:-- --:--:-- --:--:--    36<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-22T08:00:12.164-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '5440629402739890195'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    109      0 --:--:-- --:--:-- --:--:--   109<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240622-150001<br>
+20240622-180001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     78      0 --:--:-- --:--:-- --:--:--    78<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     23      0 --:--:-- --:--:-- --:--:--    23<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   113<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     90      0 --:--:-- --:--:-- --:--:--    90<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-22T11:00:11.981-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '4556229953558589380'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    114      0 --:--:-- --:--:-- --:--:--   114<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240622-180001<br>
+20240622-210001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    112      0 --:--:-- --:--:-- --:--:--   112<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    103      0 --:--:-- --:--:-- --:--:--   103<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    114      0 --:--:-- --:--:-- --:--:--   114<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-22T14:00:12.738-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '2069215100561687987'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240622-210001<br>
+20240623-000001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    127      0 --:--:-- --:--:-- --:--:--   127<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     57      0 --:--:-- --:--:-- --:--:--    57100    13  100    13    0     0     57      0 --:--:-- --:--:-- --:--:--    57<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     70      0 --:--:-- --:--:-- --:--:--    70<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-22T17:00:12.964-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '8696364623430605667'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     31      0 --:--:-- --:--:-- --:--:--    31<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240623-000001<br>
+20240623-030001<br>
+Deleting fw-nodeport<br>
+Deleted [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+<br>
+[0;32mcreateFW 185.159.157.21[0m<br>
+WARNING: The following filter keys were not present in any resource : subnetwork<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   113<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     48      0 --:--:-- --:--:-- --:--:--    48<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0     29      0 --:--:-- --:--:-- --:--:--    29100    13  100    13    0     0     29      0 --:--:-- --:--:-- --:--:--    29<br>
+35.233.103.91, 35.233.103.91, 185.159.157.21,185.159.157.10, 35.233.103.91<br>
+<br>
+[0;32mPublic IP of this host wirsinddieguten[0m<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    123      0 --:--:-- --:--:-- --:--:--   123<br>
+35.233.103.91<br>
+[0;32mIPs=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91[0m<br>
+gcloud compute firewall-rules create fw-nodeport --description=For accessing freqtrade api endpoints --source-ranges=35.233.103.91,35.233.103.91,185.159.157.21,185.159.157.10,35.233.103.91 --rules=tcp:3200-32761,tcp:8084 --action=Allow --priority=1 --network=default<br>
+Creating firewall...<br>
+..Created [https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport].<br>
+done.<br>
+NAME         NETWORK  DIRECTION  PRIORITY  ALLOW                    DENY  DISABLED<br>
+fw-nodeport  default  INGRESS    1         tcp:3200-32761,tcp:8084        False<br>
+allowed:<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - 3200-32761<br>
+- IPProtocol: tcp<br>
+  ports:<br>
+  - '8084'<br>
+creationTimestamp: '2024-06-22T20:00:11.737-07:00'<br>
+description: For accessing freqtrade api endpoints<br>
+direction: INGRESS<br>
+disabled: false<br>
+id: '8869140179812233556'<br>
+kind: compute#firewall<br>
+logConfig:<br>
+  enable: false<br>
+name: fw-nodeport<br>
+network: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/networks/default<br>
+priority: 1<br>
+selfLink: https://www.googleapis.com/compute/v1/projects/vaulted-gift-406223/global/firewalls/fw-nodeport<br>
+sourceRanges:<br>
+- 35.233.103.91<br>
+- 185.159.157.21<br>
+- 185.159.157.10<br>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
+                                 Dload  Upload   Total   Spent    Left  Speed<br>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    13  100    13    0     0    113      0 --:--:-- --:--:-- --:--:--   113<br>
+Current Public IP: 35.233.103.91<br>
+<br>
+Finished at: 20240623-030001<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingReloadAllTrades.sh.log>dsTradingReloadAllTrades.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-  "exit_reason": "sold_on_exchange",<br>
-  "exit_order_status": "closed",<br>
-  "stop_loss_abs": 133.161,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
+  "stop_loss_pct": -5,<br>
   "stoploss_last_update": null,<br>
   "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 133.161,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 169.068,<br>
-  "max_rate": 179.161,<br>
+  "initial_stop_loss_abs": 3510.74,<br>
+  "initial_stop_loss_ratio": -0.05,<br>
+  "initial_stop_loss_pct": -5,<br>
+  "min_rate": 3548.4,<br>
+  "max_rate": 3563.55,<br>
   "has_open_orders": false,<br>
   "orders": [<br>
     {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "52314712385",<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_buy_ETH/USDT:USDT_1718839950.54202",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 1,<br>
-      "safe_price": 176.958,<br>
-      "cost": 176.958,<br>
-      "filled": 1,<br>
+      "amount": 0.112,<br>
+      "safe_price": 3555.17,<br>
+      "cost": 398.17904000000004,<br>
+      "filled": 0.112,<br>
       "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
+      "order_type": "market",<br>
       "is_open": false,<br>
-      "order_timestamp": 1716420425050,<br>
-      "order_filled_timestamp": 1716420425050,<br>
+      "order_timestamp": 1718839950542,<br>
+      "order_filled_timestamp": 1718839950842,<br>
       "ft_fee_base": null,<br>
       "ft_order_tag": ""<br>
     },<br>
     {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "52421695172",<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_sell_ETH/USDT:USDT_1718843939.423095",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 1,<br>
-      "safe_price": 171.372,<br>
-      "cost": 171.372,<br>
-      "filled": 1,<br>
+      "amount": 0.112,<br>
+      "safe_price": 3558.97,<br>
+      "cost": 398.60463999999996,<br>
+      "filled": 0.112,<br>
       "ft_order_side": "sell",<br>
       "order_type": "limit",<br>
       "is_open": false,<br>
-      "order_timestamp": 1716494082841,<br>
-      "order_filled_timestamp": 1716494082000,<br>
+      "order_timestamp": 1718843939423,<br>
+      "order_filled_timestamp": 1718843945265,<br>
       "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "52422872589",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1,<br>
-      "safe_price": 168.333,<br>
-      "cost": 168.333,<br>
-      "filled": 1,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716494641324,<br>
-      "order_filled_timestamp": 1716494641000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "52888263434",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1,<br>
-      "safe_price": 172.098,<br>
-      "cost": 172.098,<br>
-      "filled": 1,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716829415003,<br>
-      "order_filled_timestamp": 1716829415000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "53076943984",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1,<br>
-      "safe_price": 168.41,<br>
-      "cost": 168.41,<br>
-      "filled": 1,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716948105389,<br>
-      "order_filled_timestamp": 1716948105000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "53082097914",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 1,<br>
-      "safe_price": 170.37,<br>
-      "cost": 170.37,<br>
-      "filled": 1,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716951940378,<br>
-      "order_filled_timestamp": 1716951940000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "53141058686",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 2,<br>
-      "safe_price": 168.567,<br>
-      "cost": 337.134,<br>
-      "filled": 2,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716988959273,<br>
-      "order_filled_timestamp": 1716988959000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "53161884101",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 2,<br>
-      "safe_price": 170.748,<br>
-      "cost": 341.496,<br>
-      "filled": 2,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1717001147521,<br>
-      "order_filled_timestamp": 1717001147000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "53168271173",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 2,<br>
-      "safe_price": 169.998,<br>
-      "cost": 339.996,<br>
-      "filled": 2,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1717005140559,<br>
-      "order_filled_timestamp": 1717005140000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "SOL/USDT:USDT",<br>
-      "order_id": "53179796900",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 2,<br>
-      "safe_price": 168.89,<br>
-      "cost": 337.78,<br>
-      "filled": 2,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1717013921629,<br>
-      "order_filled_timestamp": 1717013921000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
+      "ft_order_tag": "roi"<br>
     }<br>
   ],<br>
   "leverage": 4,<br>
   "interest_rate": 0,<br>
-  "liquidation_price": 137.0882392615,<br>
-  "funding_fees": 0,<br>
+  "liquidation_price": 2720.99005120482,<br>
+  "funding_fees": -0.039861973967312,<br>
   "trading_mode": "futures",<br>
-  "amount_precision": 0,<br>
-  "price_precision": 3,<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
   "precision_mode": 2,<br>
-  "stoploss_current_dist": -36.83699999999999,<br>
-  "stoploss_current_dist_pct": -21.67,<br>
-  "stoploss_current_dist_ratio": -0.21669078,<br>
-  "stoploss_entry_dist": 97.7716725,<br>
-  "stoploss_entry_dist_ratio": 2.3221308,<br>
-  "current_rate": 169.998,<br>
+  "stoploss_current_dist": -48.23000000000002,<br>
+  "stoploss_current_dist_pct": -1.36,<br>
+  "stoploss_current_dist_ratio": -0.01355167,<br>
+  "stoploss_entry_dist": -5.25393417,<br>
+  "stoploss_entry_dist_ratio": -0.05275851,<br>
+  "current_rate": 3558.97,<br>
   "total_profit_abs": 0,<br>
   "total_profit_fiat": null,<br>
   "total_profit_ratio": null<br>
 }<br>
-curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32382/api/v1/trades/5/reload<br>
-{"trade_id":5,"pair":"XRP/USDT:USDT","base_currency":"XRP","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":771.7,"amount_requested":1134.21550095,"stake_amount":337.464645,"max_stake_amount":2946.48634,"strategy":"TaSearchLevelG15m_Long","enter_tag":"","timeframe":15,"fee_open":0.0005,"fee_open_cost":0.67492929,"fee_open_currency":"USDT","fee_close":0.0005,"fee_close_cost":0.67684344,"fee_close_currency":"USDT","open_date":"2024-05-26 21:01:12","open_timestamp":1716757272908,"open_fill_date":"2024-05-26 21:01:12","open_fill_timestamp":1716757272792,"open_rate":0.5246,"open_rate_requested":0.529,"open_trade_value":1350.53350929,"close_date":"2024-05-30 14:08:46","close_timestamp":1717078126000,"close_rate":0.5304,"close_rate_requested":null,"close_profit":-0.007381245725556711,"close_profit_pct":-0.74,"close_profit_abs":-8.58408212,"profit_ratio":-0.007381245725556711,"profit_pct":-0.74,"profit_abs":-8.58408212,"profit_fiat":null,"realized_profit":-4.692485519999999,"realized_profit_ratio":-0.007381245725556711,"exit_reason":"sold_on_exchange","exit_order_status":"closed","stop_loss_abs":0.398,"stop_loss_ratio":-0.99,"stop_loss_pct":-99.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":0.398,"initial_stop_loss_ratio":-0.99,"initial_stop_loss_pct":-99.0,"min_rate":0.524,"max_rate":0.5341,"has_open_orders":false,"orders":[{"pair":"XRP/USDT:USDT","order_id":"57331561206","status":"closed","remaining":0.0,"amount":1134.2,"safe_price":0.5289,"cost":599.87838,"filled":1134.2,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1716757272792,"order_filled_timestamp":1716757272792,"ft_fee_base":null,"ft_order_tag":""},{"pair":"XRP/USDT:USDT","order_id":"57331584192","status":"closed","remaining":0.0,"amount":1418.0,"safe_price":0.5289,"cost":749.9802,"filled":1418.0,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1716757296677,"order_filled_timestamp":1716757296000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57360599299","status":"closed","remaining":0.0,"amount":2552.2,"safe_price":0.5304,"cost":1353.68688,"filled":2552.2,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1716798846406,"order_filled_timestamp":1716798846000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57387450895","status":"closed","remaining":0.0,"amount":371.6,"safe_price":0.5382,"cost":199.99512,"filled":371.6,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1716834953851,"order_filled_timestamp":1716834953000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57390601913","status":"closed","remaining":0.0,"amount":371.6,"safe_price":0.5338,"cost":198.36008,"filled":371.6,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1716839340988,"order_filled_timestamp":1716839340000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57467421818","status":"closed","remaining":0.0,"amount":378.8,"safe_price":0.5279,"cost":199.96852,"filled":378.8,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1716942893947,"order_filled_timestamp":1716942893000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57485527822","status":"closed","remaining":0.0,"amount":378.8,"safe_price":0.5247,"cost":198.75636,"filled":378.8,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1716970024603,"order_filled_timestamp":1716970030000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57491607011","status":"closed","remaining":0.0,"amount":754.1,"safe_price":0.5304,"cost":399.97464,"filled":754.1,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1716977210252,"order_filled_timestamp":1716977210000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57509126483","status":"closed","remaining":0.0,"amount":754.1,"safe_price":0.5268,"cost":397.25988,"filled":754.1,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1716998604208,"order_filled_timestamp":1716998604000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57539466350","status":"closed","remaining":0.0,"amount":759.3,"safe_price":0.5268,"cost":399.99924,"filled":759.3,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1717048240753,"order_filled_timestamp":1717048240000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57540715702","status":"closed","remaining":0.0,"amount":759.3,"safe_price":0.5234,"cost":397.41762,"filled":759.3,"ft_order_side":"buy","order_type":"limit","is_open":false,"order_timestamp":1717050171000,"order_filled_timestamp":1717050171000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57551352025","status":"closed","remaining":0.0,"amount":771.7,"safe_price":0.5183,"cost":399.97211,"filled":771.7,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1717063907790,"order_filled_timestamp":1717063907000,"ft_fee_base":null,"ft_order_tag":null},{"pair":"XRP/USDT:USDT","order_id":"57561368796","status":"closed","remaining":0.0,"amount":771.7,"safe_price":0.5246,"cost":404.83382,"filled":771.7,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1717078126794,"order_filled_timestamp":1717078126000,"ft_fee_base":null,"ft_order_tag":null}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":0.419177698,"funding_fees":0.0,"trading_mode":"futures","amount_precision":1.0,"price_precision":4.0,"precision_mode":2,"stoploss_current_dist":-0.13239999999999996,"stoploss_current_dist_pct":-24.96,"stoploss_current_dist_ratio":-0.24962293,"stoploss_entry_dist":-1043.55047759,"stoploss_entry_dist_ratio":-3.09077996,"current_rate":0.5304,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
-  "trade_id": 5,<br>
-  "pair": "XRP/USDT:USDT",<br>
-  "base_currency": "XRP",<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32383/api/v1/trades/198/reload<br>
+{"trade_id":198,"pair":"ETH/USDT:USDT","base_currency":"ETH","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":0.111,"amount_requested":0.11165948,"stake_amount":99.40938,"max_stake_amount":397.63752,"strategy":"MacheteV8bHedged","enter_tag":"","timeframe":5,"fee_open":0.0004,"fee_open_cost":0.159055008,"fee_open_currency":"USDT","fee_close":0.0004,"fee_close_cost":0.15919842,"fee_close_currency":"USDT","open_date":"2024-06-20 06:04:28","open_timestamp":1718863468448,"open_fill_date":"2024-06-20 06:04:28","open_fill_timestamp":1718863468448,"open_rate":3582.32,"open_rate_requested":3582.32,"open_trade_value":397.79657501,"close_date":"2024-06-20 06:39:09","close_timestamp":1718865549875,"close_rate":3585.55,"close_rate_requested":3585.55,"close_profit":0.00040499664934711923,"close_profit_pct":0.04,"close_profit_abs":0.04027657,"profit_ratio":0.00040499664934711923,"profit_pct":0.04,"profit_abs":0.04027657,"profit_fiat":null,"realized_profit":0.04027657,"realized_profit_ratio":0.00040499664934711923,"exit_reason":"roi","exit_order_status":"closed","stop_loss_abs":3537.55,"stop_loss_ratio":-0.05,"stop_loss_pct":-5.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":3537.55,"initial_stop_loss_ratio":-0.05,"initial_stop_loss_pct":-5.0,"min_rate":3574.21,"max_rate":3590.5,"has_open_orders":false,"orders":[{"pair":"ETH/USDT:USDT","order_id":"dry_run_buy_ETH/USDT:USDT_1718863468.149022","status":"closed","remaining":0.0,"amount":0.111,"safe_price":3582.32,"cost":397.63752,"filled":0.111,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1718863468149,"order_filled_timestamp":1718863468448,"ft_fee_base":null,"ft_order_tag":""},{"pair":"ETH/USDT:USDT","order_id":"dry_run_sell_ETH/USDT:USDT_1718865549.578899","status":"closed","remaining":0.0,"amount":0.111,"safe_price":3585.55,"cost":397.99605,"filled":0.111,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1718865549578,"order_filled_timestamp":1718865549875,"ft_fee_base":null,"ft_order_tag":"roi"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":2741.7696144578313,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":-48.0,"stoploss_current_dist_pct":-1.34,"stoploss_current_dist_ratio":-0.01338707,"stoploss_entry_dist":-5.28559223,"stoploss_entry_dist_ratio":-0.0531487,"current_rate":3585.55,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
+  "trade_id": 198,<br>
+  "pair": "ETH/USDT:USDT",<br>
+  "base_currency": "ETH",<br>
   "quote_currency": "USDT",<br>
   "is_open": false,<br>
   "is_short": false,<br>
   "exchange": "binance",<br>
-  "amount": 771.7,<br>
-  "amount_requested": 1134.21550095,<br>
-  "stake_amount": 337.464645,<br>
-  "max_stake_amount": 2946.48634,<br>
-  "strategy": "TaSearchLevelG15m_Long",<br>
+  "amount": 0.111,<br>
+  "amount_requested": 0.11165948,<br>
+  "stake_amount": 99.40938,<br>
+  "max_stake_amount": 397.63752,<br>
+  "strategy": "MacheteV8bHedged",<br>
   "enter_tag": "",<br>
-  "timeframe": 15,<br>
-  "fee_open": 0.0005,<br>
-  "fee_open_cost": 0.67492929,<br>
+  "timeframe": 5,<br>
+  "fee_open": 0.0004,<br>
+  "fee_open_cost": 0.159055008,<br>
   "fee_open_currency": "USDT",<br>
-  "fee_close": 0.0005,<br>
-  "fee_close_cost": 0.67684344,<br>
+  "fee_close": 0.0004,<br>
+  "fee_close_cost": 0.15919842,<br>
   "fee_close_currency": "USDT",<br>
-  "open_date": "2024-05-26 21:01:12",<br>
-  "open_timestamp": 1716757272908,<br>
-  "open_fill_date": "2024-05-26 21:01:12",<br>
-  "open_fill_timestamp": 1716757272792,<br>
-  "open_rate": 0.5246,<br>
-  "open_rate_requested": 0.529,<br>
-  "open_trade_value": 1350.53350929,<br>
-  "close_date": "2024-05-30 14:08:46",<br>
-  "close_timestamp": 1717078126000,<br>
-  "close_rate": 0.5304,<br>
-  "close_rate_requested": null,<br>
-  "close_profit": -0.007381245725556711,<br>
-  "close_profit_pct": -0.74,<br>
-  "close_profit_abs": -8.58408212,<br>
-  "profit_ratio": -0.007381245725556711,<br>
-  "profit_pct": -0.74,<br>
-  "profit_abs": -8.58408212,<br>
+  "open_date": "2024-06-20 06:04:28",<br>
+  "open_timestamp": 1718863468448,<br>
+  "open_fill_date": "2024-06-20 06:04:28",<br>
+  "open_fill_timestamp": 1718863468448,<br>
+  "open_rate": 3582.32,<br>
+  "open_rate_requested": 3582.32,<br>
+  "open_trade_value": 397.79657501,<br>
+  "close_date": "2024-06-20 06:39:09",<br>
+  "close_timestamp": 1718865549875,<br>
+  "close_rate": 3585.55,<br>
+  "close_rate_requested": 3585.55,<br>
+  "close_profit": 0.00040499664934711923,<br>
+  "close_profit_pct": 0.04,<br>
+  "close_profit_abs": 0.04027657,<br>
+  "profit_ratio": 0.00040499664934711923,<br>
+  "profit_pct": 0.04,<br>
+  "profit_abs": 0.04027657,<br>
   "profit_fiat": null,<br>
-  "realized_profit": -4.692485519999999,<br>
-  "realized_profit_ratio": -0.007381245725556711,<br>
-  "exit_reason": "sold_on_exchange",<br>
+  "realized_profit": 0.04027657,<br>
+  "realized_profit_ratio": 0.00040499664934711923,<br>
+  "exit_reason": "roi",<br>
   "exit_order_status": "closed",<br>
-  "stop_loss_abs": 0.398,<br>
-  "stop_loss_ratio": -0.99,<br>
-  "stop_loss_pct": -99,<br>
+  "stop_loss_abs": 3537.55,<br>
+  "stop_loss_ratio": -0.05,<br>
+  "stop_loss_pct": -5,<br>
   "stoploss_last_update": null,<br>
   "stoploss_last_update_timestamp": null,<br>
-  "initial_stop_loss_abs": 0.398,<br>
-  "initial_stop_loss_ratio": -0.99,<br>
-  "initial_stop_loss_pct": -99,<br>
-  "min_rate": 0.524,<br>
-  "max_rate": 0.5341,<br>
+  "initial_stop_loss_abs": 3537.55,<br>
+  "initial_stop_loss_ratio": -0.05,<br>
+  "initial_stop_loss_pct": -5,<br>
+  "min_rate": 3574.21,<br>
+  "max_rate": 3590.5,<br>
   "has_open_orders": false,<br>
   "orders": [<br>
     {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57331561206",<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_buy_ETH/USDT:USDT_1718863468.149022",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 1134.2,<br>
-      "safe_price": 0.5289,<br>
-      "cost": 599.87838,<br>
-      "filled": 1134.2,<br>
+      "amount": 0.111,<br>
+      "safe_price": 3582.32,<br>
+      "cost": 397.63752,<br>
+      "filled": 0.111,<br>
       "ft_order_side": "buy",<br>
       "order_type": "market",<br>
       "is_open": false,<br>
-      "order_timestamp": 1716757272792,<br>
-      "order_filled_timestamp": 1716757272792,<br>
+      "order_timestamp": 1718863468149,<br>
+      "order_filled_timestamp": 1718863468448,<br>
       "ft_fee_base": null,<br>
       "ft_order_tag": ""<br>
     },<br>
     {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57331584192",<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_sell_ETH/USDT:USDT_1718865549.578899",<br>
       "status": "closed",<br>
       "remaining": 0,<br>
-      "amount": 1418,<br>
-      "safe_price": 0.5289,<br>
-      "cost": 749.9802,<br>
-      "filled": 1418,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716757296677,<br>
-      "order_filled_timestamp": 1716757296000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57360599299",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 2552.2,<br>
-      "safe_price": 0.5304,<br>
-      "cost": 1353.68688,<br>
-      "filled": 2552.2,<br>
+      "amount": 0.111,<br>
+      "safe_price": 3585.55,<br>
+      "cost": 397.99605,<br>
+      "filled": 0.111,<br>
       "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716798846406,<br>
-      "order_filled_timestamp": 1716798846000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57387450895",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 371.6,<br>
-      "safe_price": 0.5382,<br>
-      "cost": 199.99512,<br>
-      "filled": 371.6,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716834953851,<br>
-      "order_filled_timestamp": 1716834953000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57390601913",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 371.6,<br>
-      "safe_price": 0.5338,<br>
-      "cost": 198.36008,<br>
-      "filled": 371.6,<br>
-      "ft_order_side": "buy",<br>
       "order_type": "limit",<br>
       "is_open": false,<br>
-      "order_timestamp": 1716839340988,<br>
-      "order_filled_timestamp": 1716839340000,<br>
+      "order_timestamp": 1718865549578,<br>
+      "order_filled_timestamp": 1718865549875,<br>
       "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57467421818",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 378.8,<br>
-      "safe_price": 0.5279,<br>
-      "cost": 199.96852,<br>
-      "filled": 378.8,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716942893947,<br>
-      "order_filled_timestamp": 1716942893000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57485527822",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 378.8,<br>
-      "safe_price": 0.5247,<br>
-      "cost": 198.75636,<br>
-      "filled": 378.8,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716970024603,<br>
-      "order_filled_timestamp": 1716970030000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57491607011",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 754.1,<br>
-      "safe_price": 0.5304,<br>
-      "cost": 399.97464,<br>
-      "filled": 754.1,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716977210252,<br>
-      "order_filled_timestamp": 1716977210000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57509126483",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 754.1,<br>
-      "safe_price": 0.5268,<br>
-      "cost": 397.25988,<br>
-      "filled": 754.1,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1716998604208,<br>
-      "order_filled_timestamp": 1716998604000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57539466350",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 759.3,<br>
-      "safe_price": 0.5268,<br>
-      "cost": 399.99924,<br>
-      "filled": 759.3,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1717048240753,<br>
-      "order_filled_timestamp": 1717048240000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57540715702",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 759.3,<br>
-      "safe_price": 0.5234,<br>
-      "cost": 397.41762,<br>
-      "filled": 759.3,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "limit",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1717050171000,<br>
-      "order_filled_timestamp": 1717050171000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57551352025",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 771.7,<br>
-      "safe_price": 0.5183,<br>
-      "cost": 399.97211,<br>
-      "filled": 771.7,<br>
-      "ft_order_side": "sell",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1717063907790,<br>
-      "order_filled_timestamp": 1717063907000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
-    },<br>
-    {<br>
-      "pair": "XRP/USDT:USDT",<br>
-      "order_id": "57561368796",<br>
-      "status": "closed",<br>
-      "remaining": 0,<br>
-      "amount": 771.7,<br>
-      "safe_price": 0.5246,<br>
-      "cost": 404.83382,<br>
-      "filled": 771.7,<br>
-      "ft_order_side": "buy",<br>
-      "order_type": "market",<br>
-      "is_open": false,<br>
-      "order_timestamp": 1717078126794,<br>
-      "order_filled_timestamp": 1717078126000,<br>
-      "ft_fee_base": null,<br>
-      "ft_order_tag": null<br>
+      "ft_order_tag": "roi"<br>
     }<br>
   ],<br>
   "leverage": 4,<br>
   "interest_rate": 0,<br>
-  "liquidation_price": 0.419177698,<br>
+  "liquidation_price": 2741.7696144578313,<br>
   "funding_fees": 0,<br>
   "trading_mode": "futures",<br>
-  "amount_precision": 1,<br>
-  "price_precision": 4,<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
   "precision_mode": 2,<br>
-  "stoploss_current_dist": -0.13239999999999996,<br>
-  "stoploss_current_dist_pct": -24.96,<br>
-  "stoploss_current_dist_ratio": -0.24962293,<br>
-  "stoploss_entry_dist": -1043.55047759,<br>
-  "stoploss_entry_dist_ratio": -3.09077996,<br>
-  "current_rate": 0.5304,<br>
+  "stoploss_current_dist": -48,<br>
+  "stoploss_current_dist_pct": -1.34,<br>
+  "stoploss_current_dist_ratio": -0.01338707,<br>
+  "stoploss_entry_dist": -5.28559223,<br>
+  "stoploss_entry_dist_ratio": -0.0531487,<br>
+  "current_rate": 3585.55,<br>
   "total_profit_abs": 0,<br>
   "total_profit_fiat": null,<br>
   "total_profit_ratio": null<br>
 }<br>
--e "nFinished at 20240618-001547"<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32383/api/v1/trades/199/reload<br>
+{"trade_id":199,"pair":"ETH/USDT:USDT","base_currency":"ETH","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":0.111,"amount_requested":0.11150292,"stake_amount":99.5489625,"max_stake_amount":398.19585,"strategy":"MacheteV8bHedged","enter_tag":"","timeframe":5,"fee_open":0.0004,"fee_open_cost":0.15927834000000002,"fee_open_currency":"USDT","fee_close":0.0002,"fee_close_cost":0.08006030400000001,"fee_close_currency":"USDT","open_date":"2024-06-20 07:07:30","open_timestamp":1718867250436,"open_fill_date":"2024-06-20 07:07:30","open_fill_timestamp":1718867250435,"open_rate":3587.35,"open_rate_requested":3587.35,"open_trade_value":398.35512834,"close_date":"2024-06-20 07:19:37","close_timestamp":1718867977991,"close_rate":3606.32,"close_rate_requested":3606.32,"close_profit":0.018740377389162847,"close_profit_pct":1.87,"close_profit_abs":1.86633136,"profit_ratio":0.018740377389162847,"profit_pct":1.87,"profit_abs":1.86633136,"profit_fiat":null,"realized_profit":1.86633136,"realized_profit_ratio":0.018740377389162847,"exit_reason":"roi","exit_order_status":"closed","stop_loss_abs":3542.51,"stop_loss_ratio":-0.05,"stop_loss_pct":-5.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":3542.51,"initial_stop_loss_ratio":-0.05,"initial_stop_loss_pct":-5.0,"min_rate":3583.05,"max_rate":3611.76,"has_open_orders":false,"orders":[{"pair":"ETH/USDT:USDT","order_id":"dry_run_buy_ETH/USDT:USDT_1718867250.138337","status":"closed","remaining":0.0,"amount":0.111,"safe_price":3587.35,"cost":398.19585,"filled":0.111,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1718867250138,"order_filled_timestamp":1718867250435,"ft_fee_base":null,"ft_order_tag":""},{"pair":"ETH/USDT:USDT","order_id":"dry_run_sell_ETH/USDT:USDT_1718867962.140576","status":"closed","remaining":0.0,"amount":0.111,"safe_price":3606.32,"cost":400.30152000000004,"filled":0.111,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1718867962140,"order_filled_timestamp":1718867977991,"ft_fee_base":null,"ft_order_tag":"roi"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":2745.6193825301207,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":-63.809999999999945,"stoploss_current_dist_pct":-1.77,"stoploss_current_dist_ratio":-0.01769394,"stoploss_entry_dist":-5.21516206,"stoploss_entry_dist_ratio":-0.05236696,"current_rate":3606.32,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
+  "trade_id": 199,<br>
+  "pair": "ETH/USDT:USDT",<br>
+  "base_currency": "ETH",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": false,<br>
+  "is_short": false,<br>
+  "exchange": "binance",<br>
+  "amount": 0.111,<br>
+  "amount_requested": 0.11150292,<br>
+  "stake_amount": 99.5489625,<br>
+  "max_stake_amount": 398.19585,<br>
+  "strategy": "MacheteV8bHedged",<br>
+  "enter_tag": "",<br>
+  "timeframe": 5,<br>
+  "fee_open": 0.0004,<br>
+  "fee_open_cost": 0.15927834000000002,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0002,<br>
+  "fee_close_cost": 0.08006030400000001,<br>
+  "fee_close_currency": "USDT",<br>
+  "open_date": "2024-06-20 07:07:30",<br>
+  "open_timestamp": 1718867250436,<br>
+  "open_fill_date": "2024-06-20 07:07:30",<br>
+  "open_fill_timestamp": 1718867250435,<br>
+  "open_rate": 3587.35,<br>
+  "open_rate_requested": 3587.35,<br>
+  "open_trade_value": 398.35512834,<br>
+  "close_date": "2024-06-20 07:19:37",<br>
+  "close_timestamp": 1718867977991,<br>
+  "close_rate": 3606.32,<br>
+  "close_rate_requested": 3606.32,<br>
+  "close_profit": 0.018740377389162847,<br>
+  "close_profit_pct": 1.87,<br>
+  "close_profit_abs": 1.86633136,<br>
+  "profit_ratio": 0.018740377389162847,<br>
+  "profit_pct": 1.87,<br>
+  "profit_abs": 1.86633136,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 1.86633136,<br>
+  "realized_profit_ratio": 0.018740377389162847,<br>
+  "exit_reason": "roi",<br>
+  "exit_order_status": "closed",<br>
+  "stop_loss_abs": 3542.51,<br>
+  "stop_loss_ratio": -0.05,<br>
+  "stop_loss_pct": -5,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 3542.51,<br>
+  "initial_stop_loss_ratio": -0.05,<br>
+  "initial_stop_loss_pct": -5,<br>
+  "min_rate": 3583.05,<br>
+  "max_rate": 3611.76,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_buy_ETH/USDT:USDT_1718867250.138337",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.111,<br>
+      "safe_price": 3587.35,<br>
+      "cost": 398.19585,<br>
+      "filled": 0.111,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1718867250138,<br>
+      "order_filled_timestamp": 1718867250435,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    },<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_sell_ETH/USDT:USDT_1718867962.140576",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.111,<br>
+      "safe_price": 3606.32,<br>
+      "cost": 400.30152000000004,<br>
+      "filled": 0.111,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "limit",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1718867962140,<br>
+      "order_filled_timestamp": 1718867977991,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "roi"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 2745.6193825301207,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -63.809999999999945,<br>
+  "stoploss_current_dist_pct": -1.77,<br>
+  "stoploss_current_dist_ratio": -0.01769394,<br>
+  "stoploss_entry_dist": -5.21516206,<br>
+  "stoploss_entry_dist_ratio": -0.05236696,<br>
+  "current_rate": 3606.32,<br>
+  "total_profit_abs": 0,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": null<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32383/api/v1/trades/200/reload<br>
+{"trade_id":200,"pair":"ETH/USDT:USDT","base_currency":"ETH","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":0.111,"amount_requested":0.11105743,"stake_amount":99.94773,"max_stake_amount":399.79092,"strategy":"MacheteV8bHedged","enter_tag":"","timeframe":5,"fee_open":0.0004,"fee_open_cost":0.15991636800000003,"fee_open_currency":"USDT","fee_close":0.0004,"fee_close_cost":0.160399884,"fee_close_currency":"USDT","open_date":"2024-06-20 08:12:39","open_timestamp":1718871159115,"open_fill_date":"2024-06-20 08:12:39","open_fill_timestamp":1718871159115,"open_rate":3601.72,"open_rate_requested":3601.74,"open_trade_value":399.95083637,"close_date":"2024-06-20 11:12:34","close_timestamp":1718881954193,"close_rate":3612.61,"close_rate_requested":3612.61,"close_profit":0.008885829649147213,"close_profit_pct":0.89,"close_profit_abs":0.88847375,"profit_ratio":0.008885829649147213,"profit_pct":0.89,"profit_abs":0.88847375,"profit_fiat":null,"realized_profit":0.88847375,"realized_profit_ratio":0.008885829649147213,"exit_reason":"roi","exit_order_status":"closed","stop_loss_abs":3556.7,"stop_loss_ratio":-0.05,"stop_loss_pct":-5.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":3556.7,"initial_stop_loss_ratio":-0.05,"initial_stop_loss_pct":-5.0,"min_rate":3574.35,"max_rate":3623.94,"has_open_orders":false,"orders":[{"pair":"ETH/USDT:USDT","order_id":"dry_run_buy_ETH/USDT:USDT_1718871158.818932","status":"closed","remaining":0.0,"amount":0.111,"safe_price":3601.72,"cost":399.79091999999997,"filled":0.111,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1718871158818,"order_filled_timestamp":1718871159115,"ft_fee_base":null,"ft_order_tag":""},{"pair":"ETH/USDT:USDT","order_id":"dry_run_sell_ETH/USDT:USDT_1718881953.895364","status":"closed","remaining":0.0,"amount":0.111,"safe_price":3612.61,"cost":400.99971,"filled":0.111,"ft_order_side":"sell","order_type":"limit","is_open":false,"order_timestamp":1718881953895,"order_filled_timestamp":1718881954193,"ft_fee_base":null,"ft_order_tag":"roi"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":2756.6176265060235,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":-55.91000000000031,"stoploss_current_dist_pct":-1.55,"stoploss_current_dist_ratio":-0.01547635,"stoploss_entry_dist":-5.31505385,"stoploss_entry_dist_ratio":-0.05315707,"current_rate":3612.61,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
+  "trade_id": 200,<br>
+  "pair": "ETH/USDT:USDT",<br>
+  "base_currency": "ETH",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": false,<br>
+  "is_short": false,<br>
+  "exchange": "binance",<br>
+  "amount": 0.111,<br>
+  "amount_requested": 0.11105743,<br>
+  "stake_amount": 99.94773,<br>
+  "max_stake_amount": 399.79092,<br>
+  "strategy": "MacheteV8bHedged",<br>
+  "enter_tag": "",<br>
+  "timeframe": 5,<br>
+  "fee_open": 0.0004,<br>
+  "fee_open_cost": 0.15991636800000003,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0004,<br>
+  "fee_close_cost": 0.160399884,<br>
+  "fee_close_currency": "USDT",<br>
+  "open_date": "2024-06-20 08:12:39",<br>
+  "open_timestamp": 1718871159115,<br>
+  "open_fill_date": "2024-06-20 08:12:39",<br>
+  "open_fill_timestamp": 1718871159115,<br>
+  "open_rate": 3601.72,<br>
+  "open_rate_requested": 3601.74,<br>
+  "open_trade_value": 399.95083637,<br>
+  "close_date": "2024-06-20 11:12:34",<br>
+  "close_timestamp": 1718881954193,<br>
+  "close_rate": 3612.61,<br>
+  "close_rate_requested": 3612.61,<br>
+  "close_profit": 0.008885829649147213,<br>
+  "close_profit_pct": 0.89,<br>
+  "close_profit_abs": 0.88847375,<br>
+  "profit_ratio": 0.008885829649147213,<br>
+  "profit_pct": 0.89,<br>
+  "profit_abs": 0.88847375,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": 0.88847375,<br>
+  "realized_profit_ratio": 0.008885829649147213,<br>
+  "exit_reason": "roi",<br>
+  "exit_order_status": "closed",<br>
+  "stop_loss_abs": 3556.7,<br>
+  "stop_loss_ratio": -0.05,<br>
+  "stop_loss_pct": -5,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 3556.7,<br>
+  "initial_stop_loss_ratio": -0.05,<br>
+  "initial_stop_loss_pct": -5,<br>
+  "min_rate": 3574.35,<br>
+  "max_rate": 3623.94,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_buy_ETH/USDT:USDT_1718871158.818932",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.111,<br>
+      "safe_price": 3601.72,<br>
+      "cost": 399.79091999999997,<br>
+      "filled": 0.111,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1718871158818,<br>
+      "order_filled_timestamp": 1718871159115,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    },<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_sell_ETH/USDT:USDT_1718881953.895364",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.111,<br>
+      "safe_price": 3612.61,<br>
+      "cost": 400.99971,<br>
+      "filled": 0.111,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "limit",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1718881953895,<br>
+      "order_filled_timestamp": 1718881954193,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "roi"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 2756.6176265060235,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": -55.91000000000031,<br>
+  "stoploss_current_dist_pct": -1.55,<br>
+  "stoploss_current_dist_ratio": -0.01547635,<br>
+  "stoploss_entry_dist": -5.31505385,<br>
+  "stoploss_entry_dist_ratio": -0.05315707,<br>
+  "current_rate": 3612.61,<br>
+  "total_profit_abs": 0,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": null<br>
+}<br>
+curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32383/api/v1/trades/201/reload<br>
+{"trade_id":201,"pair":"ETH/USDT:USDT","base_currency":"ETH","quote_currency":"USDT","is_open":false,"is_short":false,"exchange":"binance","amount":0.11,"amount_requested":0.11093546,"stake_amount":99.15675,"max_stake_amount":396.627,"strategy":"MacheteV8bHedged","enter_tag":"","timeframe":5,"fee_open":0.0004,"fee_open_cost":0.1586508,"fee_open_currency":"USDT","fee_close":0.0004,"fee_close_cost":0.15651240000000002,"fee_close_currency":"USDT","open_date":"2024-06-20 11:42:29","open_timestamp":1718883749405,"open_fill_date":"2024-06-20 11:42:29","open_fill_timestamp":1718883749405,"open_rate":3605.7,"open_rate_requested":3605.7,"open_trade_value":396.7856508,"close_date":"2024-06-20 13:17:35","close_timestamp":1718889455603,"close_rate":3557.1,"close_rate_requested":3559.59,"close_profit":-0.057070241210446515,"close_profit_pct":-5.71,"close_profit_abs":-5.6611632,"profit_ratio":-0.057070241210446515,"profit_pct":-5.71,"profit_abs":-5.6611632,"profit_fiat":null,"realized_profit":-5.6611632,"realized_profit_ratio":-0.057070241210446515,"exit_reason":"stop_loss","exit_order_status":"closed","stop_loss_abs":3560.63,"stop_loss_ratio":-0.05,"stop_loss_pct":-5.0,"stoploss_last_update":null,"stoploss_last_update_timestamp":null,"initial_stop_loss_abs":3560.63,"initial_stop_loss_ratio":-0.05,"initial_stop_loss_pct":-5.0,"min_rate":3559.59,"max_rate":3609.62,"has_open_orders":false,"orders":[{"pair":"ETH/USDT:USDT","order_id":"dry_run_buy_ETH/USDT:USDT_1718883749.108655","status":"closed","remaining":0.0,"amount":0.11,"safe_price":3605.7,"cost":396.627,"filled":0.11,"ft_order_side":"buy","order_type":"market","is_open":false,"order_timestamp":1718883749108,"order_filled_timestamp":1718883749405,"ft_fee_base":null,"ft_order_tag":""},{"pair":"ETH/USDT:USDT","order_id":"dry_run_sell_ETH/USDT:USDT_1718889455.375409","status":"closed","remaining":0.0,"amount":0.11,"safe_price":3557.1,"cost":391.281,"filled":0.11,"ft_order_side":"sell","order_type":"market","is_open":false,"order_timestamp":1718889455375,"order_filled_timestamp":1718889455603,"ft_fee_base":null,"ft_order_tag":"stop_loss"}],"leverage":4.0,"interest_rate":0.0,"liquidation_price":2759.663765060241,"funding_fees":0.0,"trading_mode":"futures","amount_precision":3.0,"price_precision":2.0,"precision_mode":2,"stoploss_current_dist":3.5300000000002,"stoploss_current_dist_pct":0.1,"stoploss_current_dist_ratio":0.00099238,"stoploss_entry_dist":-5.27301852,"stoploss_entry_dist_ratio":-0.05315735,"current_rate":3557.1,"total_profit_abs":0.0,"total_profit_fiat":null,"total_profit_ratio":null}{<br>
+  "trade_id": 201,<br>
+  "pair": "ETH/USDT:USDT",<br>
+  "base_currency": "ETH",<br>
+  "quote_currency": "USDT",<br>
+  "is_open": false,<br>
+  "is_short": false,<br>
+  "exchange": "binance",<br>
+  "amount": 0.11,<br>
+  "amount_requested": 0.11093546,<br>
+  "stake_amount": 99.15675,<br>
+  "max_stake_amount": 396.627,<br>
+  "strategy": "MacheteV8bHedged",<br>
+  "enter_tag": "",<br>
+  "timeframe": 5,<br>
+  "fee_open": 0.0004,<br>
+  "fee_open_cost": 0.1586508,<br>
+  "fee_open_currency": "USDT",<br>
+  "fee_close": 0.0004,<br>
+  "fee_close_cost": 0.15651240000000002,<br>
+  "fee_close_currency": "USDT",<br>
+  "open_date": "2024-06-20 11:42:29",<br>
+  "open_timestamp": 1718883749405,<br>
+  "open_fill_date": "2024-06-20 11:42:29",<br>
+  "open_fill_timestamp": 1718883749405,<br>
+  "open_rate": 3605.7,<br>
+  "open_rate_requested": 3605.7,<br>
+  "open_trade_value": 396.7856508,<br>
+  "close_date": "2024-06-20 13:17:35",<br>
+  "close_timestamp": 1718889455603,<br>
+  "close_rate": 3557.1,<br>
+  "close_rate_requested": 3559.59,<br>
+  "close_profit": -0.057070241210446515,<br>
+  "close_profit_pct": -5.71,<br>
+  "close_profit_abs": -5.6611632,<br>
+  "profit_ratio": -0.057070241210446515,<br>
+  "profit_pct": -5.71,<br>
+  "profit_abs": -5.6611632,<br>
+  "profit_fiat": null,<br>
+  "realized_profit": -5.6611632,<br>
+  "realized_profit_ratio": -0.057070241210446515,<br>
+  "exit_reason": "stop_loss",<br>
+  "exit_order_status": "closed",<br>
+  "stop_loss_abs": 3560.63,<br>
+  "stop_loss_ratio": -0.05,<br>
+  "stop_loss_pct": -5,<br>
+  "stoploss_last_update": null,<br>
+  "stoploss_last_update_timestamp": null,<br>
+  "initial_stop_loss_abs": 3560.63,<br>
+  "initial_stop_loss_ratio": -0.05,<br>
+  "initial_stop_loss_pct": -5,<br>
+  "min_rate": 3559.59,<br>
+  "max_rate": 3609.62,<br>
+  "has_open_orders": false,<br>
+  "orders": [<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_buy_ETH/USDT:USDT_1718883749.108655",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.11,<br>
+      "safe_price": 3605.7,<br>
+      "cost": 396.627,<br>
+      "filled": 0.11,<br>
+      "ft_order_side": "buy",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1718883749108,<br>
+      "order_filled_timestamp": 1718883749405,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": ""<br>
+    },<br>
+    {<br>
+      "pair": "ETH/USDT:USDT",<br>
+      "order_id": "dry_run_sell_ETH/USDT:USDT_1718889455.375409",<br>
+      "status": "closed",<br>
+      "remaining": 0,<br>
+      "amount": 0.11,<br>
+      "safe_price": 3557.1,<br>
+      "cost": 391.281,<br>
+      "filled": 0.11,<br>
+      "ft_order_side": "sell",<br>
+      "order_type": "market",<br>
+      "is_open": false,<br>
+      "order_timestamp": 1718889455375,<br>
+      "order_filled_timestamp": 1718889455603,<br>
+      "ft_fee_base": null,<br>
+      "ft_order_tag": "stop_loss"<br>
+    }<br>
+  ],<br>
+  "leverage": 4,<br>
+  "interest_rate": 0,<br>
+  "liquidation_price": 2759.663765060241,<br>
+  "funding_fees": 0,<br>
+  "trading_mode": "futures",<br>
+  "amount_precision": 3,<br>
+  "price_precision": 2,<br>
+  "precision_mode": 2,<br>
+  "stoploss_current_dist": 3.5300000000002,<br>
+  "stoploss_current_dist_pct": 0.1,<br>
+  "stoploss_current_dist_ratio": 0.00099238,<br>
+  "stoploss_entry_dist": -5.27301852,<br>
+  "stoploss_entry_dist_ratio": -0.05315735,<br>
+  "current_rate": 3557.1,<br>
+  "total_profit_abs": 0,<br>
+  "total_profit_fiat": null,<br>
+  "total_profit_ratio": null<br>
+}<br>
+-e "nFinished at 20240623-001151"<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240525-000044"<br><br>
-20240525-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-05-00...<br><br>
-.................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240525-050039"<br><br>
-20240525-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-10-00...<br><br>
-....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240525-100044"<br><br>
-20240525-150001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-15-00...<br><br>
-...................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240525-150044"<br><br>
-20240525-200002<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-20-00...<br><br>
-......................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240525-200045"<br><br>
-20240526-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-00-00...<br><br>
-..................................................................................................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240526-000059"<br><br>
-20240526-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-05-00...<br><br>
-...................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240526-050040"<br><br>
-20240526-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-10-00...<br><br>
-....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240526-100044"<br><br>
-20240526-150001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-15-00...<br><br>
-....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240526-150043"<br><br>
-20240526-200001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-20-00...<br><br>
-......................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240526-200044"<br><br>
-20240527-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-00-00...<br><br>
-......................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240527-000042"<br><br>
-20240527-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-05-00...<br><br>
-...................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240527-050040"<br><br>
-20240527-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-10-00...<br><br>
-.....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240527-100043"<br><br>
-20240527-150001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-15-00...<br><br>
-...........................................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240527-150048"<br><br>
-20240527-200001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-20-00...<br><br>
-...................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240527-200040"<br><br>
-20240528-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-00-00...<br><br>
-......................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240528-000045"<br><br>
-20240528-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-05-00...<br><br>
-...............................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240528-050045"<br><br>
-20240528-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-10-00...<br><br>
-.........................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240528-100041"<br><br>
-20240528-150001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-15-00...<br><br>
-..............................................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240528-150048"<br><br>
-20240528-200001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-20-00...<br><br>
-.......................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240528-200044"<br><br>
-20240529-000001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-00-00...<br><br>
-.....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240529-000044"<br><br>
-20240529-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-05-00...<br><br>
-.........................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240529-050044"<br><br>
-20240529-100001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-10-00...<br><br>
-........................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240529-100045"<br><br>
-20240529-150001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-15-00...<br><br>
-......................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240529-150041"<br><br>
-20240529-200001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-20-00...<br><br>
-.......................................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240529-200047"<br><br>
 20240530-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-30-05-2024-00-00...<br><br>
 ......................................................................................................................................................................................done.<br><br>
@@ -1267,7 +1671,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-05-06-2024-20-00...<br><br>
 -e "nFinished at 20240605-200045"<br><br>
 20240606-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-06-06-2024-00-00...<br><br>
-............................................................... 86  128k   86  111k    0     0  97969      0  0:00:01  0:00:01 --:--:-- 97885......................................................................................................................................done.<br><br>
+.....................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240606-000044"<br><br>
 20240606-050001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-06-06-2024-05-00...<br><br>
@@ -1502,13 +1906,8 @@ Creating snapshot(s) snapshot-wirsinddieguten-17-06-2024-15-00...<br><br>
 .....................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240617-150043"<br><br>
 20240617-200001<br><br>
-Creating snapshot(s) snapshot-wirsindhot(s) snapshot-wirsinddieguten-17-06-2024-15-00...<br><br>
-.....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240617-150043"<br><br>
-20240617-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-17-06-2024-20-00...<br><br>
-.........................................................................................................................100  128k  100  128k    0     0    98k      0  0:00:01  0:00:01 --:--:--   98k<br>
-.........................................................................................................done.<br><br>
+...............................................................................................................................................................done.<br><br>
 -e "nFinished at 20240617-200036"<br><br>
 20240618-000001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-00-00...<br><br>
@@ -1518,120 +1917,123 @@ Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-00-00...<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-05-00...<br><br>
 ................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240618-050039"<br><br>
+20240618-100001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-10-00...<br><br>
+...................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240618-100043"<br><br>
+20240618-150001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-15-00...<br><br>
+.....................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240618-150040"<br><br>
+20240618-200001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-20-00...<br><br>
+.....................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240618-200043"<br><br>
+20240619-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-00-00...<br><br>
+..........................................................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240619-000052"<br><br>
+20240619-050001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-05-00...<br><br>
+.....................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240619-050038"<br><br>
+20240619-100001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-10-00...<br><br>
+.......................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240619-100044"<br><br>
+20240619-150001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-15-00...<br><br>
+............................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240619-150045"<br><br>
+20240619-200001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-20-00...<br><br>
+.....................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240619-200040"<br><br>
+20240620-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-00-00...<br><br>
+.................................................................................................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240620-000100"<br><br>
+20240620-050001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-05-00...<br><br>
+..................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240620-050040"<br><br>
+20240620-100001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-10-00...<br><br>
+..................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240620-100040"<br><br>
+20240620-150001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-15-00...<br><br>
+....................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240620-150044"<br><br>
+20240620-200001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-20-00...<br><br>
+.................................................................................................................................................................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240620-200112"<br><br>
+20240621-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-00-00...<br><br>
+.........................................................................................................................................................................................................................................100  163k  100  163k    0     0  96335      0  0:00:01  0:00:01 --:--:-- 96279100  163k  100  163k    0     0  96335      0  0:00:01  0:00:01 --:--:-- 96279<br>
+...............................................................................done.<br><br>
+-e "nFinished at 20240621-000107"<br><br>
+20240621-050001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-05-00...<br><br>
+.......................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240621-050044"<br><br>
+20240621-100001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-10-00...<br><br>
+.....................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240621-100043"<br><br>
+20240621-150001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-15-00...<br><br>
+.............................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240621-150045"<br><br>
+20240621-200001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-20-00...<br><br>
+.................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240621-200040"<br><br>
+20240622-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-00-00...<br><br>
+.....................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240622-000045"<br><br>
+20240622-050001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-05-00...<br><br>
+...................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240622-050037"<br><br>
+20240622-100001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-10-00...<br><br>
+......................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240622-100042"<br><br>
+20240622-150001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-15-00...<br><br>
+........................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240622-150045"<br><br>
+20240622-200001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-20-00...<br><br>
+...................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240622-200040"<br><br>
+2024............................................................................................................................done.<br><br>
+-e "nFinished at 20240622-200040"<br><br>
+20240623-000001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-06-2024-00-00...<br><br>
+.......................................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240623-000045"<br><br>
+20240623-050001<br><br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-06-2024-05-00...<br><br>
+................................................................................................................................................................................done.<br><br>
+-e "nFinished at 20240623-050040"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Jun 18 06:36 /tmp/tmp.qOsuV9kEjR<br>
+-rw------- 1 msantana msantana 0 Jun 23 05:21 /tmp/tmp.uN7HBE6Q9V<br>
 <br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br>
 <br>
 [0;32m-------------------------------------------------------------------------------------[0m<br>
--e "nFinished at: 20240618-063606"<br>
-20240618-063701<br>
+-e "nFinished at: 20240623-052105"<br>
+20240623-052201<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++++<br>
 + + + + + <b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-20240524-100001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-24-05-2024-10-00...<br>
-.......................................................................................................................................................................................................................done.<br>
--e "nFinished at 20240524-100048"<br>
-20240524-150001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-24-05-2024-15-00...<br>
-.........................................................................................................................................................................................................done.<br>
--e "nFinished at 20240524-150045"<br>
-20240524-200001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-24-05-2024-20-00...<br>
-.........................................................................................................................................................................................done.<br>
--e "nFinished at 20240524-200041"<br>
-20240525-000001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-00-00...<br>
-....................................................................................................................................................................................................done.<br>
--e "nFinished at 20240525-000044"<br>
-20240525-050001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-05-00...<br>
-.................................................................................................................................................................................done.<br>
--e "nFinished at 20240525-050039"<br>
-20240525-100001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-10-00...<br>
-....................................................................................................................................................................................................done.<br>
--e "nFinished at 20240525-100044"<br>
-20240525-150001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-15-00...<br>
-...................................................................................................................................................................................................done.<br>
--e "nFinished at 20240525-150044"<br>
-20240525-200002<br>
-Creating snapshot(s) snapshot-wirsinddieguten-25-05-2024-20-00...<br>
-......................................................................................................................................................................................................done.<br>
--e "nFinished at 20240525-200045"<br>
-20240526-000001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-00-00...<br>
-..................................................................................................................................................................................................................................................................................done.<br>
--e "nFinished at 20240526-000059"<br>
-20240526-050001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-05-00...<br>
-...................................................................................................................................................................................done.<br>
--e "nFinished at 20240526-050040"<br>
-20240526-100001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-10-00...<br>
-....................................................................................................................................................................................................done.<br>
--e "nFinished at 20240526-100044"<br>
-20240526-150001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-15-00...<br>
-....................................................................................................................................................................................................done.<br>
--e "nFinished at 20240526-150043"<br>
-20240526-200001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-26-05-2024-20-00...<br>
-......................................................................................................................................................................................................done.<br>
--e "nFinished at 20240526-200044"<br>
-20240527-000001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-00-00...<br>
-......................................................................................................................................................................................done.<br>
--e "nFinished at 20240527-000042"<br>
-20240527-050001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-05-00...<br>
-...................................................................................................................................................................................done.<br>
--e "nFinished at 20240527-050040"<br>
-20240527-100001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-10-00...<br>
-.....................................................................................................................................................................................................done.<br>
--e "nFinished at 20240527-100043"<br>
-20240527-150001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-15-00...<br>
-...........................................................................................................................................................................................................................done.<br>
--e "nFinished at 20240527-150048"<br>
-20240527-200001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-27-05-2024-20-00...<br>
-...................................................................................................................................................................................done.<br>
--e "nFinished at 20240527-200040"<br>
-20240528-000001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-00-00...<br>
-......................................................................................................................................................................................................done.<br>
--e "nFinished at 20240528-000045"<br>
-20240528-050001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-05-00...<br>
-...............................................................................................................................................................................................................done.<br>
--e "nFinished at 20240528-050045"<br>
-20240528-100001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-10-00...<br>
-.........................................................................................................................................................................................done.<br>
--e "nFinished at 20240528-100041"<br>
-20240528-150001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-15-00...<br>
-..............................................................................................................................................................................................................................done.<br>
--e "nFinished at 20240528-150048"<br>
-20240528-200001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-28-05-2024-20-00...<br>
-.......................................................................................................................................................................................................done.<br>
--e "nFinished at 20240528-200044"<br>
-20240529-000001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-00-00...<br>
-.....................................................................................................................................................................................................done.<br>
--e "nFinished at 20240529-000044"<br>
-20240529-050001<br>
-Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-05-00...<br>
-.........................................................................................................................................................................................................done.<br>
--e "nFinished at 20240529-050044"<br>
 20240529-100001<br>
 Creating snapshot(s) snapshot-wirsinddieguten-29-05-2024-10-00...<br>
 ........................................................................................................................................................................................................done.<br>
@@ -2032,5 +2434,105 @@ Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-00-00...<br>
 Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-05-00...<br>
 ................................................................................................................................................................................done.<br>
 -e "nFinished at 20240618-050039"<br>
+20240618-100001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-10-00...<br>
+...................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240618-100043"<br>
+20240618-150001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-15-00...<br>
+.....................................................................................................................................................................................done.<br>
+-e "nFinished at 20240618-150040"<br>
+20240618-200001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-18-06-2024-20-00...<br>
+.....................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240618-200043"<br>
+20240619-000001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-00-00...<br>
+..........................................................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240619-000052"<br>
+20240619-050001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-05-00...<br>
+.....................................................................................................................................................................done.<br>
+-e "nFinished at 20240619-050038"<br>
+20240619-100001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-10-00...<br>
+.......................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240619-100044"<br>
+20240619-150001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-15-00...<br>
+............................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240619-150045"<br>
+20240619-200001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-19-06-2024-20-00...<br>
+.....................................................................................................................................................................................done.<br>
+-e "nFinished at 20240619-200040"<br>
+20240620-000001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-00-00...<br>
+.................................................................................................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240620-000100"<br>
+20240620-050001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-05-00...<br>
+..................................................................................................................................................................................done.<br>
+-e "nFinished at 20240620-050040"<br>
+20240620-100001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-10-00...<br>
+..................................................................................................................................................................................done.<br>
+-e "nFinished at 20240620-100040"<br>
+20240620-150001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-15-00...<br>
+....................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240620-150044"<br>
+20240620-200001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-20-06-2024-20-00...<br>
+.................................................................................................................................................................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240620-200112"<br>
+20240621-000001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-00-00...<br>
+........................................................................................................................................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240621-000107"<br>
+20240621-050001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-05-00...<br>
+.......................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240621-050044"<br>
+20240621-100001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-10-00...<br>
+.....................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240621-100043"<br>
+20240621-150001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-15-00...<br>
+.............................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240621-150045"<br>
+20240621-200001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-21-06-2024-20-00...<br>
+.................................................................................................................................................................................done.<br>
+-e "nFinished at 20240621-200040"<br>
+20240622-000001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-00-00...<br>
+.....................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240622-000045"<br>
+20240622-050001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-05-00...<br>
+...................................................................................................................................................................done.<br>
+-e "nFinished at 20240622-050037"<br>
+20240622-100001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-10-00...<br>
+......................................................................................................................................................................................done.<br>
+-e "nFinished at 20240622-100042"<br>
+20240622-150001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-15-00...<br>
+........................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240622-150045"<br>
+20240622-200001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-20-00...<br>
+...................................................................................................................................................................................done.<br>
+-e "nFinished at 20240622-200040"<br>
+20240623-000001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-06-2024-00-00...<br>
+.......................................................................................................................................................................................................done.<br>
+-e "nFinished at 20240623-000045"<br>
+20240623-050001<br>
+Creating snapshot(s) snapshot-wirsinddieguten-23-06-2024-05-00...<br>
+................................................................................................................................................................................done.<br>
+-e "nFinished at 20240623-050040"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Jun 18 06:37 /tmp/tmp.Vx1aMRt5yn
+-rw------- 1 msantana msantana 0 Jun 23 05:22 /tmp/tmp.PuUdikABwK
