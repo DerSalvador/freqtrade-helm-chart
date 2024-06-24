@@ -1,5 +1,5 @@
 <html><body>
-<h2>Trading Logs: Mon Jun 24 14:57:01 UTC 2024</h2><hr>
+<h2>Trading Logs: Mon Jun 24 14:58:01 UTC 2024</h2><hr>
 <div id=top><a href=#dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</a><br><br></div>
 <div><a href=#dsTradingBlacklistStatic.sh.log>dsTradingBlacklistStatic.sh.log</a><br><br></div>
 <div><a href=#dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</a><br><br></div>
@@ -7,11 +7,10 @@
 <div><a href=#dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</a><br><br></div>
 <div><a href=#gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</a><br><br></div>
 <table border=1><tr><th>Trading Processes</th></tr>
-<tr><td nowrap><small>754166 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferFromFundingToFutures.sh bot-ssc-03 2 MAIN_UMFUTURE</small></td></tr>
-<tr><td nowrap><small>754184 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBlacklistStatic.sh</small></td></tr>
-<tr><td nowrap><small>754185 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
-<tr><td nowrap><small>754193 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAddToBlacklist.sh bot-mssm-01 BIFI/USDT</small></td></tr>
-<tr><td nowrap><small>754201 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
+<tr><td nowrap><small>754916 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingTransferLogsToWebsite.sh</small></td></tr>
+<tr><td nowrap><small>754917 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingBlacklistStatic.sh</small></td></tr>
+<tr><td nowrap><small>754926 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingAddToBlacklist.sh bot-mssm-01 BIFI/USDT</small></td></tr>
+<tr><td nowrap><small>754938 /bin/zsh /home/msantana/dersalvador/general_purpose_scripts/dsTradingShowLogs.sh</small></td></tr>
 </table>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingBalanceRealtime.sh.log>dsTradingBalanceRealtime.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -1020,8 +1019,8 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.205.159.255:32372/api/v1/bl
     "RemotePairList"<br>
   ]<br>
 }<br>
--e "nFinished at: 20240624-145601"<br>
-20240624-145701<br>
+-e "nFinished at: 20240624-145701"<br>
+20240624-145801<br>
 dsTradingAddToBlacklist.sh bot-mssm-01 BIFI/USDT<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=dsTradingGcloudFirewallRules.sh.log>dsTradingGcloudFirewallRules.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -2038,12 +2037,6 @@ curl -s -X POST -u freqtrade:&&Liz270117!! http://35.233.38.30:32383/api/v1/trad
 ++++<br>
 + + + + + <b id=dsTradingTransferLogsToWebsite.sh.log>dsTradingTransferLogsToWebsite.sh.log</b><a href=#top>Top</a> + + + + <br>
 ++<br>
-Creating snapshot(s) snapshot-wirsinddieguten-01-06-2024-00-00...<br><br>
-....................................................................................................................................................................................................done.<br><br>
--e "nFinished at 20240601-000044"<br><br>
-20240601-050001<br><br>
-Creating snapshot(s) snapshot-wirsinddieguten-01-06-2024-05-00...<br><br>
-......................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240601-050044"<br><br>
 20240601-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-01-06-2024-10-00...<br><br>
@@ -2471,8 +2464,7 @@ Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-10-00...<br><br>
 -e "nFinished at 20240622-100042"<br><br>
 20240622-150001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-15-00...<br><br>
-...............................................................................................100  175k  100  175k    0     0  95598      0  0:00:01  0:00:01 --:--:-- 95547<br>
-.........................................................................................................done.<br><br>
+........................................................................................................................................................................................................done.<br><br>
 -e "nFinished at 20240622-150045"<br><br>
 20240622-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-22-06-2024-20-00...<br><br>
@@ -2517,7 +2509,13 @@ Creating snapshot(s) snapshot-wirsinddieguten-23-06-2024-15-00...<br><br>
 -e "nFinished at 20240623-150039"<br><br>
 20240623-200001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-23-06-2024-20-00...<br><br>
-................................................... VALUE<br><br>
+...................................................240624-000001<br><br>
+ERROR: (gcloud.compute.disks.snapshot) The required property [project] is not currently set.<br><br>
+It can be set on a per-command basis by re-running your command with the [--project] flag.<br><br>
+<br><br>
+You may set it for your current workspace by running:<br><br>
+<br><br>
+  $ gcloud config set project VALUE<br><br>
 <br><br>
 or it can be set temporarily by the environment variable [CLOUDSDK_CORE_PROJECT]<br><br>
 -e "nFinished at 20240624-000004"<br><br>
@@ -2527,16 +2525,17 @@ Creating snapshot(s) snapshot-wirsinddieguten-24-06-2024-05-00...<br><br>
 -e "nFinished at 20240624-050049"<br><br>
 20240624-100001<br><br>
 Creating snapshot(s) snapshot-wirsinddieguten-24-06-2024-10-00...<br><br>
-...................................................................................................................................................................................................done.<br><br>
+......................................................................................................................................100  176k  100  176k    0     0   100k      0  0:00:01  0:00:01 --:--:--  100k<br>
+.............................................................done.<br><br>
 -e "nFinished at 20240624-100044"<br><br>
 </body></html><br>
--rw------- 1 msantana msantana 0 Jun 24 14:56 /tmp/tmp.kNIkEzLA9W<br>
+-rw------- 1 msantana msantana 0 Jun 24 14:57 /tmp/tmp.LeL4aXM49B<br>
 <br>
 [0;32mURL: http://filekeys.com/dsTrading.logs.html[0m<br>
 <br>
 [0;32m-------------------------------------------------------------------------------------[0m<br>
--e "nFinished at: 20240624-145606"<br>
-20240624-145701<br>
+-e "nFinished at: 20240624-145706"<br>
+20240624-145801<br>
 Running already? RUNNING=<br>
 <br><br><hr>##++<br>
 + + + + + /tmp/<b id=gcloudCreateSnapshotWirsinddieguten.sh.log>gcloudCreateSnapshotWirsinddieguten.sh.log</b><a href=#top>Top</a> + + + + <br>
@@ -3044,4 +3043,4 @@ Creating snapshot(s) snapshot-wirsinddieguten-24-06-2024-10-00...<br>
 ...................................................................................................................................................................................................done.<br>
 -e "nFinished at 20240624-100044"<br>
 </body></html>
--rw------- 1 msantana msantana 0 Jun 24 14:57 /tmp/tmp.LeL4aXM49B
+-rw------- 1 msantana msantana 0 Jun 24 14:58 /tmp/tmp.z4toqHhrD9
