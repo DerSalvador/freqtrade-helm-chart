@@ -41,7 +41,7 @@ if __name__ == '__main__':
         parser.add_argument('api_secret', type=str, help='Binance API secret')
         parser.add_argument('asset', type=str, help='Asset symbol to transfer, e.g., USDT')
         parser.add_argument('amount', type=str, help='Amount to transfer, e.g., 5')
-        parser.add_argument('funding_type', type=str, default='MAIN_FUNDING', choices=['MAIN_FUNDING', 'FUNDING_MAIN', 'UMFUTURE_FUNDING', 'FUNDING_UMFUTURE'], help='Type of funding transfer. Allowed values are MAIN_FUNDING and FUNDING_MAIN')
+        parser.add_argument('funding_type', type=str, default='MAIN_FUNDING', choices=['MAIN_FUNDING', 'FUNDING_MAIN', 'UMFUTURE_FUNDING', 'FUNDING_UMFUTURE','FUNDING_UMFUTURE','UMFUTURE_FUNDING','MAIN_UMFUTURE','MAIN_CMFUTURE','UMFUTURE_MAIN','UMFUTURE_MARGIN','CMFUTURE_MARGIN','MARGIN_UMFUTURE','MARGIN_CMFUTURE','FUNDING_UMFUTURE','UMFUTURE_FUNDING','FUNDING_CMFUTURE','CMFUTURE_FUNDING','UMFUTURE_OPTION','OPTION_UMFUTURE'], help='Type of funding transfer. Allowed values are MAIN_FUNDING and FUNDING_MAIN')
         
         args = parser.parse_args()
 
