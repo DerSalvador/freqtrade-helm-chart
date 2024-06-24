@@ -20,7 +20,9 @@ configcreds:
   trailing_stop: true
   trailing_only_offset_is_reached: true
   trailing_stop_positive: 0.001
-  trailing_stop_positive_offset: 0.002  
+  trailing_stop_positive_offset: 0.002
+  minimal_roi:
+    "0": 0.015  
   bot_name: bot-mssm-01
   dry_run: true
   exchange:
@@ -60,13 +62,11 @@ configcreds:
       - STEEM/USDT
       - HOT/USDT
       - XTZ/USDT
-  minimal_roi:
-    "0": 0.015
-  pairlists:
-    # - method: StaticPairList
-    #   mode: whitelist
-    #   processing_mode: append
 
+  pairlists:
+    - method: StaticPairList
+      mode: whitelist
+      processing_mode: append
     - method: RemotePairList
       number_assets: 50
       pairlist_url: https://remotepairlist.com?q=0b3ede03fc1e6c25 # https://filekeys.com/remotepairlist-white-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
