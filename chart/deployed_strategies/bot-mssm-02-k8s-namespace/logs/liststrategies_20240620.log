@@ -1,0 +1,173 @@
+2024-06-20 11:06:27,369 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 11:06:27,370 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 11:06:27,370 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 11:06:27,382 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 11:06:27,382 - freqtrade.configuration.directory_operations - INFO - Created data directory: /extra_strategies/data
+2024-06-20 11:06:27,382 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 11:06:27,383 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 11:06:27,384 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 11:06:27,398 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 11:06:27,399 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 11:06:27,399 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 11:12:10,493 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 11:12:10,493 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 11:12:10,495 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 11:12:10,506 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 11:12:10,507 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 11:12:10,507 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 11:12:10,508 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 11:12:10,522 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 11:12:10,523 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 11:12:10,523 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 11:12:10,817 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 11:12:13,060 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 11:12:19,529 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 11:12:19,541 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 11:12:19,551 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 11:12:19,611 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 11:12:20,319 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 11:12:20,324 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:06:10,097 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:06:10,099 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:06:10,099 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:06:10,138 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:06:10,138 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:06:10,139 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:06:10,140 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:06:10,158 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:06:10,158 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:06:10,158 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:06:10,757 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:06:14,642 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:06:23,750 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:06:23,771 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:06:23,788 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:06:23,877 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:06:24,727 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:06:24,733 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:15:56,596 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:15:56,597 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:15:56,597 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:15:56,613 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:15:56,613 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:15:56,614 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:15:56,615 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:15:56,629 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:15:56,629 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:15:56,629 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:15:56,990 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:16:00,053 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:16:08,224 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:16:08,243 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:16:08,258 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:16:08,346 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:16:09,130 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:16:09,134 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:26:43,347 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:26:43,348 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:26:43,348 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:26:43,361 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:26:43,361 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:26:43,362 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:26:43,363 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:26:43,378 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:26:43,379 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:26:43,379 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:26:43,728 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:26:46,217 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:26:53,475 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:26:53,488 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:26:53,500 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:26:53,563 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:26:54,330 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:26:54,335 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:36:36,021 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:36:36,021 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:36:36,021 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:36:36,033 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:36:36,034 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:36:36,034 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:36:36,035 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:36:36,051 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:36:36,052 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:36:36,052 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:36:36,353 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:36:38,723 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:36:45,627 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:36:45,639 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:36:45,649 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:36:45,709 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:36:46,422 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:36:46,427 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:42:57,348 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:42:57,348 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:42:57,348 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:42:57,361 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:42:57,361 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:42:57,361 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:42:57,363 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:42:57,388 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:42:57,388 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:42:57,389 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:42:57,698 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:43:00,212 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:43:03,180 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:43:03,180 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:43:03,181 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:43:03,193 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:43:03,194 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:43:03,194 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:43:03,195 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:43:03,211 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:43:03,211 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:43:03,212 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:43:03,504 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:43:06,058 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:43:07,075 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:43:07,087 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:43:07,097 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:43:07,158 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:43:07,900 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:43:07,905 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:43:13,126 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:43:13,139 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:43:13,149 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:43:13,210 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:43:13,933 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:43:13,938 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:50:51,024 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:50:51,025 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:50:51,025 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:50:51,043 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:50:51,044 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:50:51,044 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:50:51,046 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:50:51,075 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:50:51,075 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:50:51,076 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:50:51,456 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:50:54,489 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:51:03,263 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:51:03,286 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:51:03,302 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:51:03,395 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:51:04,332 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:51:04,336 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:52:01,294 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:52:01,299 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:52:01,299 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:52:01,317 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:52:01,317 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:52:01,318 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:52:01,319 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:52:01,336 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:52:01,336 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:52:01,336 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:52:01,680 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:52:05,025 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:52:13,258 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:52:13,280 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:52:13,296 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:52:13,385 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:52:14,117 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/sklearn.utils.__init__.py due to 'cannot import name 'threadpool_info' from 'sklearn.utils.fixes' (/home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/fixes.py)'
+2024-06-20 13:52:14,122 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/utils/ClassifierKerasTFT.py due to 'No module named 'tft_model''
