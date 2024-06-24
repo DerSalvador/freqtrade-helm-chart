@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-669f5576b5-2wnwd -c freqtrade -- cat /freqtrade/user_data/strategies/DWT_short.json models
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f868d98c-bbvw5 -c freqtrade -- cat /extra_strategies/DWT_short.json DoesNothingStrategy.py data utils
 {
   "strategy_name": "DWT_short",
   "params": {
@@ -40,4 +40,6 @@ kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bi
   },
   "ft_stratparam_v": 1,
   "export_time": "2022-05-18 05:51:41.772585+00:00"
-}cat: models: No such file or directory
+}cat: DoesNothingStrategy.py: No such file or directory
+cat: data: No such file or directory
+cat: utils: No such file or directory

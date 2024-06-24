@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-669f5576b5-2wnwd -c freqtrade -- cat /freqtrade/user_data/strategies/ActionZone.py FBB_KalmanSIMD.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f868d98c-bbvw5 -c freqtrade -- cat /freqtrade/user_data/strategies/ActionZone.py FBB_KalmanSIMD.py
 # pragma pylint: disable=missing-docstring, invalid-name, pointless-string-statement
 # flake8: noqa: F401
 # isort: skip_file
