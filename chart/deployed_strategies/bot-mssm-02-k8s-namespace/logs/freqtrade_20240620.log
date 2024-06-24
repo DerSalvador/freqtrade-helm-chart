@@ -1,0 +1,2045 @@
+2024-06-20 13:48:47,975 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:48:49,690 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:48:51,381 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:48:53,029 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:48:54,674 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:48:56,359 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:48:58,003 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:48:59,717 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:01,422 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:03,141 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:04,816 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:06,494 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:08,124 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:09,840 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:11,533 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:13,289 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:14,945 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:16,606 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:18,312 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:20,056 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:21,707 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:23,451 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:25,386 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:27,476 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:29,590 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:31,694 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:33,774 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:35,812 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:37,726 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:39,477 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:41,393 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:43,062 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:44,700 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:46,392 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:48,079 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:49,765 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:51,471 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:53,169 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:54,839 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:56,547 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:58,223 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:49:59,950 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:01,890 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:03,807 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:05,569 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:07,648 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:09,852 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:12,039 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:15,785 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:18,856 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:20,675 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:22,660 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:24,324 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:26,047 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:27,735 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:29,451 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:31,173 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:32,967 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:34,683 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:36,410 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:38,052 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:39,829 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:50:41,567 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error [Errno 13] Permission denied: '/tmp/NNPredict/' calling <bound method IStrategy._analyze_ticker_internal of <NNPredict.NNPredict object at 0x7ae4a48de3f0>>
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 28, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1060, in _analyze_ticker_internal
+    dataframe = self.analyze_ticker(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1039, in analyze_ticker
+    dataframe = self.advise_indicators(dataframe, metadata)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1610, in advise_indicators
+    return self.populate_indicators(dataframe, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 381, in populate_indicators
+    dataframe = self.train_model(dataframe, self.curr_pair)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 532, in train_model
+    self.curr_classifier = self.make_classifier(self.curr_pair, self.seq_len, nfeatures)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/NNPredict.py", line 1061, in make_classifier
+    predictor.set_model_path(self.get_model_path(pair))
+  File "/extra_strategies/utils/ClassifierKeras.py", line 464, in set_model_path
+    self.checkpoint_path = self.get_checkpoint_path()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/extra_strategies/utils/ClassifierKeras.py", line 489, in get_checkpoint_path
+    os.makedirs(checkpoint_dir,exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+PermissionError: [Errno 13] Permission denied: '/tmp/NNPredict/'
+2024-06-20 13:52:29,207 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-06-20 13:52:29,211 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+2024-06-20 13:52:29,211 - freqtrade.configuration.configuration - INFO - Using additional Strategy lookup path: /extra_strategies
+2024-06-20 13:52:29,212 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
+2024-06-20 13:52:29,212 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
+2024-06-20 13:52:29,212 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2024-06-20 13:52:29,212 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////sqlite/tradesv3.sqlite"
+2024-06-20 13:52:29,212 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 2 ...
+2024-06-20 13:52:29,224 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2024-06-20 13:52:29,224 - freqtrade.configuration.configuration - INFO - Using data directory: /extra_strategies/data ...
+2024-06-20 13:52:29,225 - freqtrade.configuration.configuration - INFO - Recursively searching for a strategy in the strategies folder.
+2024-06-20 13:52:29,225 - freqtrade.configuration.configuration - INFO - Using freqaimodel class name: LightGBMRegressor
+2024-06-20 13:52:29,225 - freqtrade.configuration.configuration - INFO - Using freqaimodel path: /freqtrade/freqtrade/freqai/prediction_models
+2024-06-20 13:52:29,226 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-06-20 13:52:29,242 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-06-20 13:52:29,242 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-06-20 13:52:29,519 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_AdditiveAttention.py due to 'No module named 'custom_indicators''
+2024-06-20 13:52:31,864 - matplotlib.font_manager - INFO - generated new fontManager
+2024-06-20 13:52:38,325 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:52:38,336 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredict_TCN.py due to 'No module named 'TCN''
+2024-06-20 13:52:38,346 - freqtrade.resolvers.iresolver - WARNING - Could not import /extra_strategies/NNPredictor_kTFT.py due to 'No module named 'tft_model''
+2024-06-20 13:52:38,377 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NNPredict from '/extra_strategies/NNPredict.py'...
+2024-06-20 13:52:38,377 - freqtrade.strategy.hyper - INFO - Loading parameters from file /extra_strategies/NNPredict.json
+2024-06-20 13:52:38,379 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'minimal_roi' with value in config file: {'0': 0.02, '100': 0.02, '40160': 0.01, '80160': 0}.
+2024-06-20 13:52:38,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value in config file: 5m.
+2024-06-20 13:52:38,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stoploss' with value in config file: -0.99.
+2024-06-20 13:52:38,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_stop' with value in config file: True.
+2024-06-20 13:52:38,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_stop_positive' with value in config file: 0.09.
+2024-06-20 13:52:38,380 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_stop_positive_offset' with value in config file: 0.1.
+2024-06-20 13:52:38,381 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_only_offset_is_reached' with value in config file: True.
+2024-06-20 13:52:38,381 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'use_custom_stoploss' with value in config file: False.
+2024-06-20 13:52:38,381 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'process_only_new_candles' with value in config file: True.
+2024-06-20 13:52:38,381 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value in config file: {'emergency_exit': 'market', 'entry': 'market', 'exit': 'limit', 'force_entry': 'market', 'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
+2024-06-20 13:52:38,381 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_time_in_force' with value in config file: {'entry': 'FOK', 'exit': 'GTC'}.
+2024-06-20 13:52:38,382 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2024-06-20 13:52:38,382 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: unlimited.
+2024-06-20 13:52:38,382 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'startup_candle_count' with value in config file: 800.
+2024-06-20 13:52:38,382 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'entry': 10, 'exit': 30, 'exit_timeout_count': 2, 'unit': 'minutes'}.
+2024-06-20 13:52:38,382 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'use_exit_signal' with value in config file: True.
+2024-06-20 13:52:38,382 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'exit_profit_only' with value in config file: False.
+2024-06-20 13:52:38,383 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'ignore_roi_if_entry_signal' with value in config file: True.
+2024-06-20 13:52:38,383 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'position_adjustment_enable' with value in config file: False.
+2024-06-20 13:52:38,383 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value in config file: 2.
+2024-06-20 13:52:38,383 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.02, '100': 0.02, '40160': 0.01, '80160': 0}
+2024-06-20 13:52:38,383 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2024-06-20 13:52:38,383 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
+2024-06-20 13:52:38,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: True
+2024-06-20 13:52:38,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.09
+2024-06-20 13:52:38,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.1
+2024-06-20 13:52:38,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
+2024-06-20 13:52:38,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2024-06-20 13:52:38,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2024-06-20 13:52:38,384 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'emergency_exit': 'market', 'entry': 'market', 'exit': 'limit', 'force_entry': 'market', 'force_exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}
+2024-06-20 13:52:38,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'FOK', 'exit': 'GTC'}
+2024-06-20 13:52:38,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2024-06-20 13:52:38,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2024-06-20 13:52:38,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2024-06-20 13:52:38,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
+2024-06-20 13:52:38,385 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 30, 'exit_timeout_count': 2, 'unit': 'minutes'}
+2024-06-20 13:52:38,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2024-06-20 13:52:38,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2024-06-20 13:52:38,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
+2024-06-20 13:52:38,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2024-06-20 13:52:38,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2024-06-20 13:52:38,386 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2024-06-20 13:52:38,387 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2024-06-20 13:52:38,387 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2024-06-20 13:52:38,387 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 2
+2024-06-20 13:52:38,387 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-06-20 13:52:38,393 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2024-06-20 13:52:38,394 - freqtrade.exchange.exchange - INFO - Using CCXT 4.3.42
+2024-06-20 13:52:38,394 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'options': {'defaultType': 'spot', 'leverage': 1}, 'rateLimit': 200}
+2024-06-20 13:52:38,409 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'options': {'defaultType': 'spot', 'leverage': 1}, 'rateLimit': 200}
+2024-06-20 13:52:38,427 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'options': {'defaultType': 'spot', 'leverage': 1}, 'rateLimit': 200}
+2024-06-20 13:52:38,446 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2024-06-20 13:52:42,586 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2024-06-20 13:52:42,669 - freqtrade.wallets - INFO - Wallets synced.
+2024-06-20 13:52:42,669 - freqtrade.rpc.rpc_manager - INFO - Enabling rpc.telegram ...
+2024-06-20 13:52:42,957 - freqtrade.rpc.telegram - INFO - using custom keyboard from config.json: [['/forcelong', '/balance', '/profit'], ['/reload_config', '/stopentry', '/status table'], ['/performance', '/mix_tags', '/start'], ['/stop', '/show_config', '/whitelist'], ['/logs', '/trades', '/forceexit']]
+2024-06-20 13:52:42,958 - freqtrade.rpc.rpc_manager - INFO - Enabling rpc.api_server
+2024-06-20 13:52:43,149 - freqtrade.rpc.telegram - INFO - rpc.telegram is listening for following commands: [['status'], ['profit'], ['balance'], ['start'], ['stop'], ['forceexit', 'forcesell', 'fx'], ['forcebuy', 'forcelong'], ['forceshort'], ['reload_trade'], ['trades'], ['delete'], ['cancel_open_order', 'coo'], ['performance'], ['buys', 'entries'], ['exits', 'sells'], ['mix_tags'], ['stats'], ['daily'], ['weekly'], ['monthly'], ['count'], ['locks'], ['delete_locks', 'unlock'], ['reload_conf', 'reload_config'], ['show_conf', 'show_config'], ['stopbuy', 'stopentry'], ['whitelist'], ['blacklist'], ['bl_delete', 'blacklist_delete'], ['logs'], ['edge'], ['health'], ['help'], ['version'], ['marketdir'], ['order'], ['list_custom_data']]
+2024-06-20 13:52:43,391 - telegram.ext.Application - INFO - Application started
+2024-06-20 13:52:43,613 - freqtrade.rpc.api_server.webserver - INFO - Starting HTTP Server at 0.0.0.0:8084
+2024-06-20 13:52:43,614 - freqtrade.rpc.api_server.webserver - INFO - Starting Local Rest Server.
+2024-06-20 13:52:43,634 - uvicorn.error - INFO - Started server process [1]
+2024-06-20 13:52:43,635 - uvicorn.error - INFO - Waiting for application startup.
+2024-06-20 13:52:43,635 - uvicorn.error - INFO - Application startup complete.
+2024-06-20 13:52:43,636 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8084 (Press CTRL+C to quit)
+2024-06-20 13:52:43,647 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist RemotePairList from '/freqtrade/freqtrade/plugins/pairlist/RemotePairList.py'...
+2024-06-20 13:52:43,652 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist RemotePairList from '/freqtrade/freqtrade/plugins/pairlist/RemotePairList.py'...
+2024-06-20 13:52:44,331 - RemotePairList - INFO - Pairlist Fetched in 0.652298 seconds.
+2024-06-20 13:52:44,847 - RemotePairList - INFO - Pairlist Fetched in 0.429725 seconds.
+2024-06-20 13:52:44,909 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 4 pairs: ['SOL/USDT', 'DOT/USDT', 'ETH/USDT', 'BTC/USDT']
+2024-06-20 13:52:44,911 - freqtrade.strategy.hyper - INFO - Strategy Parameter: cexit_min_profit_th = 0.3
+2024-06-20 13:52:44,911 - freqtrade.strategy.hyper - INFO - Strategy Parameter: cexit_profit_nstd = 1.9
+2024-06-20 13:52:44,912 - freqtrade.strategy.hyper - INFO - Strategy Parameter: enable_bb_check = False
+2024-06-20 13:52:44,912 - freqtrade.strategy.hyper - INFO - Strategy Parameter: enable_guard_metric = True
+2024-06-20 13:52:44,912 - freqtrade.strategy.hyper - INFO - Strategy Parameter: enable_squeeze = False
+2024-06-20 13:52:44,912 - freqtrade.strategy.hyper - INFO - Strategy Parameter: entry_bb_factor = 0.82
+2024-06-20 13:52:44,912 - freqtrade.strategy.hyper - INFO - Strategy Parameter: entry_bb_width = 0.025
+2024-06-20 13:52:44,912 - freqtrade.strategy.hyper - INFO - Strategy Parameter: entry_guard_metric = -0.3
+2024-06-20 13:52:44,913 - freqtrade.strategy.hyper - INFO - Strategy Parameter: cexit_loss_nstd = 1.8
+2024-06-20 13:52:44,913 - freqtrade.strategy.hyper - INFO - Strategy Parameter: cexit_metric_overbought = 0.76
+2024-06-20 13:52:44,913 - freqtrade.strategy.hyper - INFO - Strategy Parameter: cexit_metric_take_profit = 0.94
+2024-06-20 13:52:44,914 - freqtrade.strategy.hyper - INFO - Strategy Parameter: cexit_min_loss_th = -1.4
+2024-06-20 13:52:44,914 - freqtrade.strategy.hyper - INFO - Strategy Parameter: enable_exit_signal = False
+2024-06-20 13:52:44,914 - freqtrade.strategy.hyper - INFO - Strategy Parameter: exit_bb_factor = 1.01
+2024-06-20 13:52:44,914 - freqtrade.strategy.hyper - INFO - Strategy Parameter: exit_guard_metric = 0.7
+2024-06-20 13:52:44,915 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+2024-06-20 13:52:44,915 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+2024-06-20 13:52:44,915 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'running'}
+2024-06-20 13:52:44,916 - freqtrade.worker - INFO - Changing state to: RUNNING
+2024-06-20 13:52:44,931 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': 'Dry run is enabled. All trades are simulated.'}
+2024-06-20 13:52:44,931 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "*Exchange:* `binance`\n*Stake per trade:* `unlimited USDT`\n*Minimum ROI:* `{'0': 0.02, '100': 0.02, '40160': 0.01, '80160': 0}`\n*Trailing Stoploss:* `-0.99`\n*Position adjustment:* `Off`\n*Timeframe:* `5m`\n*Strategy:* `NNPredict`"}
+2024-06-20 13:52:44,934 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "Searching for USDT pairs to buy and sell based on [{'RemotePairList': 'RemotePairList - 50 pairs from RemotePairlist.'}, {'RemotePairList': 'RemotePairList - 50 pairs from RemotePairlist.'}]"}
+2024-06-21 01:58:16,252 - telegram.ext.Updater - ERROR - Error while getting Updates: httpx.ReadError: 
+2024-06-21 01:58:16,255 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 373, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 216, in handle_async_request
+    raise exc from None
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 196, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_async/http11.py", line 143, in handle_async_request
+    raise exc
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_async/http11.py", line 113, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_async/http11.py", line 186, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_async/http11.py", line 224, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 276, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_client.py", line 1574, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_client.py", line 1661, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_client.py", line 1689, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_client.py", line 1726, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_client.py", line 1763, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 372, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/ftuser/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/ext/_updater.py", line 755, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/ext/_updater.py", line 749, in do_action
+    return action_cb_task.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/ext/_updater.py", line 389, in polling_action_cb
+    raise exc
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/ext/_updater.py", line 378, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 647, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/_bot.py", line 4326, in get_updates
+    await self._post(
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/_bot.py", line 618, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 353, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/_bot.py", line 647, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 342, in _request_wrapper
+    raise exc
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 332, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 300, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
