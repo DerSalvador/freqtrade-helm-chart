@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-01 exec -it pod/freqtrade-bot-mssm-01-858b999f6c-pf26r -c freqtrade -- cat /extra_strategies/LizStrategy.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-01 exec -it pod/freqtrade-bot-mssm-01-8589d59f7d-zwlgj -c freqtrade -- cat /extra_strategies/LizStrategy.py
 # --- Do not remove these libs ---
 from freqtrade.strategy import IStrategy
 from freqtrade.strategy import CategoricalParameter, IntParameter
@@ -249,9 +249,19 @@ class LizStrategy(IStrategy):
         return dataframe
     
     def remove_decimal_digits(self, num):
-        num_str = str(num)
+        num_str = str(num)        
+        if '.' not in num_str:
+            return num  # Return the number as is if there's no decimal point
         decimal_index = num_str.index('.')
-        new_num = float(num_str[:decimal_index+3])
+        # Find the first non-zero digit after the decimal point
+        for i in range(decimal_index + 1, len(num_str)):
+            if num_str[i] != '0':
+                new_num_str = num_str[:i + 1]
+                break
+        else:
+            # In case there are no non-zero digits after the decimal point
+            new_num_str = num_str[:decimal_index + 2]
+        new_num = float(new_num_str)
         return new_num
         
     def custom_exit(self, pair: str, trade: Trade, current_time: 'datetime', current_rate: float,
@@ -259,7 +269,7 @@ class LizStrategy(IStrategy):
         self.showHedgingConfig()
         dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
                           
-        self.goShortWithCondition(pair, trade, current_time, current_rate,
+        self.hedgeMe(pair, trade, current_time, current_rate,
                     current_profit, dataframe, **kwargs)
 
         return None
@@ -268,22 +278,15 @@ class LizStrategy(IStrategy):
         print(f"{msg}")
         log.info(f"{msg}")
 
-    def check_decreasing_negatives(self, arr):
-        if len(arr) < 2:
-            return False  # Not enough elements to compare
-
-        for i in range(1, len(arr)):
-            if arr[i] >= 0.0 or arr[i] >= arr[i - 1]:
-                return False
-        return True
-
-    def goShortWithCondition(self, pair: str, trade: Trade, current_time: 'datetime', current_rate: float,
+    def hedgeMe(self, pair: str, trade: Trade, current_time: 'datetime', current_rate: float,
                     current_profit: float,dataframe: DataFrame, **kwargs):
+        self.logme(f"----------------------------------------------------------------------------------------------------------------------------") 
+        self.logme(f"Entering Hedging Logic for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}") 
         # self.logme(dataframe)
         # Exit the trade if it has been more than 5 minutes with a negative profit
         self.getPositionInBinance(pair, current_time, current_rate, current_profit)
-        dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
-        dataframe_hedging = self.dp.get_pair_dataframe(pair, self.hedging_analyse_timeframe)
+        # dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+        # dataframe_hedging = self.dp.get_pair_dataframe(pair, self.hedging_analyse_timeframe)
         current_profit = self.remove_decimal_digits(current_profit)
         new_row = { 'timestamp': current_time, 'current_profit': current_profit, 'pair': pair, "trade_id": trade.id}
         # Convert the list of dictionaries to a DataFrame
@@ -302,54 +305,63 @@ class LizStrategy(IStrategy):
         current_pair_dataframe = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] == pair]     
         # Reset analysis when current_profit gets position for short hedging    
         if current_profit > 0: 
-            # Reset the timer if profit becomes greater than zero
+            # Reset the timer if profit becomes greater than zero for short hedging
             self.trade_start_times[trade.id] = current_time
             
         self.logme(f"Triggering Hedging after {self.hedging_trigger_timeout_seconds} sec. if conditions are met")
-        self.logme(f"Count UP {(current_time - self.trade_start_times[trade.id]).total_seconds()} till {self.hedging_trigger_timeout_seconds} seconds")
+        if  self.hedging_trigger_timeout_seconds > 0: 
+            self.logme(f"Count UP {(current_time - self.trade_start_times[trade.id]).total_seconds()} till {self.hedging_trigger_timeout_seconds} seconds")
         if (current_time - self.trade_start_times[trade.id]).total_seconds() >= int(self.hedging_trigger_timeout_seconds):
             pair_dataframe = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] == pair]
             self.logme(f"Waiting for pair_current_profit_dataframe until {self.hedging_current_profits_check_array_length} elements are reached")
             self.logme(f"{len(pair_dataframe)} count elements currently in pair_current_profit_dataframe")
             if len(pair_dataframe) > self.hedging_current_profits_check_array_length:
                 # Checking for current_profit drop pattern for going short hedge
+                filtered_df = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] != pair]
+                self.logme(f"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                self.logme(f"Checking now trends for pair {pair} in pair_dataframe {pair_dataframe}")
                 if self.check_closing_price_trend(pair_dataframe, decreasing=True):
-                    log.info(f"Found subsequent decreases in current profit hedging now short for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
-                    dsHedging.hedge_me(self, trade, pair, LizStrategy.existing_position_on_exchange)
-                    filtered_df = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] != pair]
-                    self.logme(f"Removed pair_dataframe {pair} after hedging from trade_profit_dataframe {filtered_df}")
+                    log.info(f"Found subsequent decreases in current profit, hedging now short for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
+                    self.logme(f"Analysed pair dataframe going short:")
+                    self.logme(f"{pair_dataframe}")
+                    dsHedging.hedge_me(self, trade, pair, self.existing_position_on_exchange)
+                    self.logme(f"Restoring trade dataframe after hedging")
                     self.trade_profit_dataframe = filtered_df
                 else:
                     self.logme(f"Not hedging short {pair}, because no patterns found for rapid drops in historical data")
                 # Checking for current_profit rise pattern for going long hedge   
                 if self.check_closing_price_trend(pair_dataframe, decreasing=False):
-                    log.info(f"Found subsequent decreases in current profit hedging now short for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
+                    log.info(f"Found subsequent rises in current profit, hedging now long for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
                     trade.is_short = True # Forcing Hedging to go long
-                    dsHedging.hedge_me(self, trade, pair, LizStrategy.existing_position_on_exchange)
-                    filtered_df = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] != pair]
-                    self.logme(f"Removed pair_dataframe {pair} after hedging from trade_profit_dataframe {filtered_df}")
+                    self.logme(f"Analysed pair dataframe going long:")
+                    self.logme(f"{pair_dataframe}")
+                    dsHedging.hedge_me(self, trade, pair, self.existing_position_on_exchange)
+                    self.logme(f"Restoring trade dataframe after hedging")
                     self.trade_profit_dataframe = filtered_df
                 else:
                     self.logme(f"Not hedging long {pair}, because no patterns found for rapid rise in historical data") 
-                self.logme(pair_dataframe)     
-                self.logme(pair_dataframe.to_string(index=True))    
+                self.logme(f"END of Checking trends for pair {pair} in pair_dataframe {pair_dataframe}")
+                self.logme(f"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                #self.logme(pair_dataframe)     
+                #self.logme(pair_dataframe.to_string(index=True))    
             else:
                 self.logme(f"Profit Dataframe Length for pair {pair}: {len(pair_dataframe)}")         
-        self.logme(f"Leaving custom_exit for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}") 
+        self.logme(f"Leaving Hedging Modus for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}") 
+        self.logme(f"----------------------------------------------------------------------------------------------------------------------------") 
             
     def getPositionInBinance(self, pair, current_time, current_rate, current_profit):
         self.logme(f"Entering custom_exit for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
         positionFetcher = FuturesPositionsFetcher(self.hedging_apikey, self.hedging_apisecret)
         symbol=pair.split('/')[0]+"USDT"
-        LizStrategy.existing_position_on_exchange = positionFetcher.get_futures_position_information(symbol)               
+        self.existing_position_on_exchange = positionFetcher.get_futures_position_information(symbol)               
 
     def check_closing_price_trend(self, dataf, decreasing: bool):
         if decreasing:
             # Check if all closing price values are negative
             sign = (dataf['current_profit'] < 0).all()
-            self.logme(f"all_negative: {sign}")
             # Check if all values are strictly increasing
             trend = (dataf['current_profit'].diff().dropna() <= 0).all()
+            self.logme(f"all_negative: {sign}")
             self.logme(f"Trend Decreasing: {trend}")
         else:
             # Check if all closing price values are positive
