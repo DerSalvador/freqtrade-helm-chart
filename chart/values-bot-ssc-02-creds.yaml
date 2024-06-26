@@ -13,7 +13,7 @@ configcreds:
   position_adjustment_enable: false
   minimal_roi:
     "0": 0.015
-  stoploss: -0.99
+  stoploss: -0.1
   trailing_stop: true
   trailing_only_offset_is_reached: true
   trailing_stop_positive: 0.02

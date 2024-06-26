@@ -1,2 +1,2 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-ssc-02 exec -it pod/freqtrade-bot-ssc-02-7b66bbcb98-xfkf8 -c freqtrade -- cat /extra_strategies/Forecasters.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-ssc-02 exec -it pod/freqtrade-bot-ssc-02-7cd5d5798b-z48tl -c freqtrade -- cat /extra_strategies/Forecasters.py
 cat: /extra_strategies/Forecasters.py: No such file or directory
