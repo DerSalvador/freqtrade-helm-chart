@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-02 exec -it pod/freqtrade-bot-mssm-02-6458f9f56b-q6g2s -c freqtrade -- cat /extra_strategies/NNPredict.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-02 exec -it pod/freqtrade-bot-mssm-02-688b7954b7-s4785 -c freqtrade -- cat /extra_strategies/NNPredict.py
 # pragma pylint: disable=W0105, C0103, C0114, C0115, C0116, C0301, C0302, C0303, C0325, C0411, C0413,  W1203, W291
 
 # import operator

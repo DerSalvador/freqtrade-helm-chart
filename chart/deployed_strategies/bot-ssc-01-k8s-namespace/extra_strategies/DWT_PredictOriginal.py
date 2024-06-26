@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-ssc-01 exec -it pod/freqtrade-bot-ssc-01-58fbd98dcc-lpjpq -c freqtrade -- cat /extra_strategies/DWT_PredictOriginal.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-ssc-01 exec -it pod/freqtrade-bot-ssc-01-d84dddcf9-trqsp -c freqtrade -- cat /extra_strategies/DWT_PredictOriginal.py
 #pragma pylint: disable=W0105, C0103, C0301, W1203
 
 from datetime import datetime
