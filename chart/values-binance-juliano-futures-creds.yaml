@@ -3,13 +3,15 @@ kubernetes:
   nodePort: 32334
 
 configcreds:
-  max_open_trades: 50
-  available_capital: 400
-  stake_amount: 60
+  dry_run: true
+  dry_run_wallet: 50000
+  max_open_trades: 100
+  available_capital: 50000
+  stake_amount: unlimited
   leverage: 4
   minimal_roi:
-    "0": 0.1
-  stoploss: -0.1     
+    "0": 0.02
+  stoploss: -0.021     
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
@@ -45,38 +47,38 @@ configcreds:
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 120      
-    # - method: RemotePairList
-    #   number_assets: 50
-    #   pairlist_url: https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-    #   mode: whitelist
-    #   processing_mode: append
-    #   refresh_period: 900
-    #   keep_pairlist_on_failure: true
-    #   read_timeout: 120
-    # - method: RemotePairList
-    #   number_assets: 50
-    #   mode: blacklist
-    #   pairlist_url: https://remotepairlist.com?q=3e362027334fd860
-    #   processing_mode: append
-    #   refresh_period: 900
-    #   keep_pairlist_on_failure: true
-    #   read_timeout: 120
-    # - method: AgeFilter
-    #   min_days_listed: 30
-    # - method: PriceFilter
-    #   low_price_ratio: 0.003
-    #   min_price: 50
-    # - method: SpreadFilter
-    #   max_spread_ratio: 0.005
-    # - method: RangeStabilityFilter
-    #   lookback_days: 3
-    #   min_rate_of_change: 0.03
-    #   refresh_period: 1800
-    # - method: ShuffleFilter
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      mode: blacklist
+      pairlist_url: https://remotepairlist.com?q=3e362027334fd860
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: AgeFilter
+      min_days_listed: 30
+    - method: PriceFilter
+      low_price_ratio: 0.003
+      min_price: 1
+    - method: SpreadFilter
+      max_spread_ratio: 0.005
+    - method: RangeStabilityFilter
+      lookback_days: 3
+      min_rate_of_change: 0.03
+      refresh_period: 1800
+    - method: ShuffleFilter
   position_adjustment_enable: false
 bot:
   enabled: true
-  strategy_name: TrendFollowingStrategyGpt
+  strategy_name: DWT_short
   freqaimodel: LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
