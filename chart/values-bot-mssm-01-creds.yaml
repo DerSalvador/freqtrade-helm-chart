@@ -15,9 +15,11 @@ configcreds:
     min_trade_number: 50
     max_trade_duration_minute: 1440
     remove_pumps: false
+    hoursInThePast: "-8760h" # 1 year      
   dersalvador:
     ds_downloaddata:
       enable: true
+      days: 365
     hedging:
       bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
@@ -26,7 +28,7 @@ configcreds:
       stake_amount: 300
       apikey: "b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm"
       apisecret: "tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov"   
-      trigger_timeout_seconds: 120
+      trigger_timeout_seconds: 30
       current_profits_check_array_length: 50
       duplicate_threshold: 10
       analyse_timeframe_for_hedging: 15m
@@ -50,7 +52,6 @@ configcreds:
     pair_whitelist:
       - ETH/USDT
       - BTC/USDT
-
   pairlists:
     # - method: StaticPairList
     #   mode: whitelist
@@ -87,7 +88,7 @@ configcreds:
       keep_pairlist_on_failure: true
       read_timeout: 120       
   position_adjustment_enable: false
-  stake_amount: 1000
+  stake_amount: unlimited
   stoploss: -0.99
   telegram:
     enabled: true
