@@ -26,8 +26,8 @@ configcreds:
   margin_mode: isolated
   position_adjustment_enable: false
   minimal_roi:
-    "0": 0.02
-  stoploss: -0.021
+    "0": 0.03
+  stoploss: -0.01
   trailing_stop: true
   trailing_only_offset_is_reached: true
   trailing_stop_positive: 0.02
