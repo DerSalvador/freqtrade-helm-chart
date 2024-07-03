@@ -21,15 +21,17 @@ configcreds:
       bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       # hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      leverage: 10
+      leverage: 5
       stake_amount: 100
       apikey: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
       apisecret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"   
       trigger_timeout_seconds: 60
-      current_profits_check_array_length: 20
-      duplicate_threshold: 3
+      current_profits_check_array_length: 10
+      duplicate_threshold: 2
       analyse_timeframe_for_hedging: 15m
-      custom_stoploss_minutes: 300      
+      custom_stoploss_minutes: 300
+      last_profits_check: -4
+      percent_derivation: 0.8        
   dry_run: true
   dry_run_wallet: 500000
   available_capital: 50000
