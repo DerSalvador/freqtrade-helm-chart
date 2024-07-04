@@ -28,7 +28,7 @@ configcreds:
       stake_amount: 200
       apikey: "b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm"
       apisecret: "tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov"   
-      trigger_timeout_seconds: 60
+      trigger_timeout_seconds: 300
       current_profits_check_array_length: 10
       duplicate_threshold: 2
       analyse_timeframe_for_hedging: 15m
