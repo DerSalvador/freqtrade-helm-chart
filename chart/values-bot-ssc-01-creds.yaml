@@ -12,7 +12,7 @@ configcreds:
     stoploss_range_step: -0.01
     minimum_winrate: 0.20
     minimum_expectancy: 0.10
-    min_trade_number: 50
+    min_trade_number: 10
     max_trade_duration_minute: 1440
     remove_pumps: false
     hoursInThePast: "-8760h" # 1 year  
@@ -21,17 +21,23 @@ configcreds:
       bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       # hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      leverage: 5
-      stake_amount: 100
+      leverage: 10
+      stake_amount: 2000
       apikey: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
       apisecret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"   
       trigger_timeout_seconds: 60
-      current_profits_check_array_length: 10
+      current_profits_check_array_length: 30
       duplicate_threshold: 2
       analyse_timeframe_for_hedging: 15m
       custom_stoploss_minutes: 300
       last_profits_check: -4
-      percent_derivation: 0.8        
+      percent_derivation: 0.8
+      linearRegressionIncreasingThreshold_Start: 0.09
+      linearRegressionIncreasingThreshold_End: 0.2
+      linearRegressionDecreasingThreshold_Start: -0.09
+      linearRegressionDecreasingThreshold_End: -0.2
+      start_profit_abs_positiv: 0.02
+      start_profit_abs_negative: -0.02     
   dry_run: true
   dry_run_wallet: 500000
   available_capital: 50000
@@ -64,14 +70,14 @@ configcreds:
       processing_mode: append
       refresh_period: 900
       keep_pairlist_on_failure: true
-    # - method: RemotePairList
-    #   number_assets: 50
-    #   pairlist_url: https://filekeys.com/remotepairlist-black-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-    #   mode: blacklist
-    #   processing_mode: append
-    #   refresh_period: 900
-    #   keep_pairlist_on_failure: true
-    #   read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://filekeys.com/remotepairlist-black-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
     - method: RemotePairList
       number_assets: 50
       pairlist_url: https://filekeys.com/remotepairlist-white-spot-static.json # https://filekeys.com/remotepairlist-white-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
@@ -79,7 +85,7 @@ configcreds:
       processing_mode: append
       refresh_period: 900
       keep_pairlist_on_failure: true
-      read_timeout: 120 
+      read_timeout: 120
     - method: RemotePairList
       number_assets: 50
       pairlist_url: http://filekeys.com/remotepairlist-spot-spot-static-floki.json # https://filekeys.com/remotepairlist-white-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
@@ -87,15 +93,35 @@ configcreds:
       processing_mode: append
       refresh_period: 900
       keep_pairlist_on_failure: true
-      read_timeout: 120 
-                   
+      read_timeout: 120
+    - method: RangeStabilityFilter
+      lookback_days: 10
+      min_rate_of_change: 0.1
+      refresh_period: 86400
+    - method: VolatilityFilter
+      lookback_days: 10
+      min_volatility: 0.1
+      max_volatility: 0.7
+      refresh_period: 86400
+    - method: MarketCapPairList
+      number_assets: 50
+      max_rank: 50
+      refresh_period: 86400
+    - method: AgeFilter
+      min_days_listed: 30
+    - method: SpreadFilter
+      max_spread_ratio: 0.01
+    - method: VolumePairList
+      number_assets: 50
+      sort_key: quoteVolume
+      min_value: 5000
+      refresh_period: 3600
+      lookback_timeframe: 1h
+      lookback_period: 72
   exchange:
     pair_whitelist:
       - ALGO/USDT
       - ATOM/USDT
-      - BAT/USDT
-      - BCH/USDT
-      - EOS/USDT
       - ETH/USDT
       - IOTA/USDT
       - LINK/USDT
@@ -109,20 +135,9 @@ configcreds:
       - XLM/USDT
       - BTC/USDT
       - TRB/USDT
-      - WIF/USDT
-      - MOVR/USDT
       - UMA/USDT
       - DOGE/USDT
       - MATIC/USDT
-      - GMX/USDT
-      - NEAR/USDT
-      - AVAX/USDT
-      - ORDI/USDT
-      - BNT/USDT
-      - POWR/USDT
-      - STEEM/USDT
-      - HOT/USDT
-      - XTZ/USDT
     name: binance
     key: "pX7yYyXSSTAeVWZRYGFlEfKCfxfb8I2b5d1FHJfk7lzo23CsxZh1pva1GZxaFz6A"
     secret: "Ta2MTBjpKM8OHAHTvtbH72gtj40vqPfgcULY6w7cHWroWs7NhZe0tDMzWdBm4dYV"
@@ -136,4 +151,3 @@ bot:
 image:
   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
   tag: binzrl_multi-arch-1 # 1adeb1ad7ce401700f1da0ab5a158d34c01c9ea185a51f56461eae38170bb1f7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
-
