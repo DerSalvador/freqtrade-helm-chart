@@ -11,7 +11,7 @@ config:
   dry_run: false
   dry_run_wallet: 50000
   stake_amount: unlimited
-  max_open_trades: 6
+  max_open_trades: -1
   minimal_roi:
     "0": 0.015
   timeframe: 5m
@@ -75,11 +75,6 @@ config:
     exit: "GTC" # Good till canceled (partially filling)
   exchange:
     pair_whitelist:
-      - 1000FLOKI/USDT:USDT
-      - 1000LUNC/USDT:USDT
-      - 1000PEPE/USDT:USDT
-      - 1000SHIB/USDT:USDT
-      - 1000XEC/USDT:USDT
       - ACH/USDT:USDT
       - AGIX/USDT:USDT
       - AGLD/USDT:USDT
@@ -89,7 +84,6 @@ config:
       - ARKM/USDT:USDT
       - ASTR/USDT:USDT
       - BICO/USDT:USDT
-      - BIGTIME/USDT:USDT
       - BLUR/USDT:USDT
       - BNT/USDT:USDT
       - BNX/USDT:USDT
@@ -99,7 +93,6 @@ config:
       - CKB/USDT:USDT
       - COMBO/USDT:USDT
       - CYBER/USDT:USDT
-      - DODOX/USDT:USDT
       - EDU/USDT:USDT
       - FET/USDT:USDT
       - FRONT/USDT:USDT
@@ -118,13 +111,11 @@ config:
       - LEVER/USDT:USDT
       - LOOM/USDT:USDT
       - LQTY/USDT:USDT
-      - LUNA2/USDT:USDT
       - MAGIC/USDT:USDT
       - MAV/USDT:USDT
       - MDT/USDT:USDT
       - MINA/USDT:USDT
       - NMR/USDT:USDT
-      - ORBS/USDT:USDT
       - OXT/USDT:USDT
       - PENDLE/USDT:USDT
       - PERP/USDT:USDT
@@ -224,29 +215,29 @@ config:
         - 15m
         - 1h
       include_corr_pairlist:
-        - ATOM/USDT
-        - MATIC/USDT
-        - ADA/USDT
-        - ALGO/USDT
-        - APE/USDT
-        - ATOM/USDT
-        - AVAX/USDT
-        - BCH/USDT
-        - BTC/USDT
-        - DAI/USDT
-        - DOGE/USDT
-        - DOT/USDT
-        - EOS/USDT
-        - ETH/USDT
-        - LINK/USDT
-        - LTC/USDT
-        - MANA/USDT
-        - MATIC/USDT
-        - SHIB/USDT
-        - SOL/USDT
-        - XMR/USDT
-        - XRP/USDT
-        - XTZ/USDT
+        - ATOM/USDT:USDT
+        - MATIC/USDT:USDT
+        - ADA/USDT:USDT
+        - ALGO/USDT:USDT
+        - APE/USDT:USDT
+        - ATOM/USDT:USDT
+        - AVAX/USDT:USDT
+        - BCH/USDT:USDT
+        - BTC/USDT:USDT
+        - DAI/USDT:USDT
+        - DOGE/USDT:USDT
+        - DOT/USDT:USDT
+        - EOS/USDT:USDT
+        - ETH/USDT:USDT
+        - LINK/USDT:USDT
+        - LTC/USDT:USDT
+        - MANA/USDT:USDT
+        - MATIC/USDT:USDT
+        - SHIB/USDT:USDT
+        - SOL/USDT:USDT
+        - XMR/USDT:USDT
+        - XRP/USDT:USDT
+        - XTZ/USDT:USDT
         - BTC/USDT:USDT
         - ETH/USDT:USDT
       label_period_candles: 20
