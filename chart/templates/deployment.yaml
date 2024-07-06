@@ -761,7 +761,7 @@ spec:
            --logfile \
            /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
            --datadir \
-           "/extra_strategies/data/{{ .Values.configcreds.trading_mode }}" \
+           "/extra_strategies/data" \
            --userdir \
            /freqtrade/user_data 
            echo ""
@@ -777,7 +777,7 @@ spec:
            --freqaimodel  {{ .Values.bot.freqaimodel }} \
            --freqaimodel-path  /freqtrade/freqtrade/freqai/prediction_models \
            --logfile /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
-           --datadir "/extra_strategies/data/{{ .Values.configcreds.trading_mode }}" \
+           --datadir "/extra_strategies/data" \
            --userdir /freqtrade/user_data
         volumeMounts:
         - name: tmp

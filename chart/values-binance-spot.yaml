@@ -80,85 +80,10 @@ config:
     exit: "GTC" # Good till canceled (partially filling)
   exchange:
     pair_whitelist:
-      - 1000FLOKI/USDT:USDT
-      - 1000LUNC/USDT:USDT
-      - 1000PEPE/USDT:USDT
-      - 1000SHIB/USDT:USDT
-      - 1000XEC/USDT:USDT
-      - ACH/USDT:USDT
-      - AGIX/USDT:USDT
-      - AGLD/USDT:USDT
-      - AMB/USDT:USDT
-      - ARB/USDT:USDT
-      - ARK/USDT:USDT
-      - ARKM/USDT:USDT
-      - ASTR/USDT:USDT
-      - BICO/USDT:USDT
-      - BIGTIME/USDT:USDT
-      - BLUR/USDT:USDT
-      - BNT/USDT:USDT
-      - BNX/USDT:USDT
-      - BOND/USDT:USDT
-      - BSV/USDT:USDT
-      - CFX/USDT:USDT
-      - CKB/USDT:USDT
-      - COMBO/USDT:USDT
-      - CYBER/USDT:USDT
-      - DODOX/USDT:USDT
-      - EDU/USDT:USDT
-      - FET/USDT:USDT
-      - FRONT/USDT:USDT
-      - FXS/USDT:USDT
-      - GAS/USDT:USDT
-      - GLMR/USDT:USDT
-      - GMX/USDT:USDT
-      - HFT/USDT:USDT
-      - HIFI/USDT:USDT
-      - HIGH/USDT:USDT
-      - HOOK/USDT:USDT
-      - ID/USDT:USDT
-      - IDEX/USDT:USDT
-      - JOE/USDT:USDT
-      - KEY/USDT:USDT
-      - LEVER/USDT:USDT
-      - LOOM/USDT:USDT
-      - LQTY/USDT:USDT
-      - LUNA2/USDT:USDT
-      - MAGIC/USDT:USDT
-      - MAV/USDT:USDT
-      - MDT/USDT:USDT
-      - MINA/USDT:USDT
-      - NMR/USDT:USDT
-      - ORBS/USDT:USDT
-      - OXT/USDT:USDT
-      - PENDLE/USDT:USDT
-      - PERP/USDT:USDT
-      - PHB/USDT:USDT
-      - POLYX/USDT:USDT
-      - POWR/USDT:USDT
-      - RAD/USDT:USDT
-      - RDNT/USDT:USDT
-      - RIF/USDT:USDT
-      - RNDR/USDT:USDT
-      - SEI/USDT:USDT
-      - SSV/USDT:USDT
-      - STPT/USDT:USDT
-      - STRAX/USDT:USDT
-      - STX/USDT:USDT
-      - SUI/USDT:USDT
-      - T/USDT:USDT
-      - TLM/USDT:USDT
-      - TRU/USDT:USDT
-      - UMA/USDT:USDT
-      - USDC/USDT:USDT
-      - WAXP/USDT:USDT
-      - WLD/USDT:USDT
-      - XVG/USDT:USDT
-      - XVS/USDT:USDT
-      - YGG/USDT:USDT  
+      - BTC/USDT
     pair_blacklist: [
       # Emergency
-      # "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
+      # "1000FLOKI/USDT","AR/USDT","ATOM/USDT","AXL/USDT","BEAMX/USDT","BTC/USDT","ETH/USDT","IOTA/USDT","LTC/USDT","MKR/USDT","PENDLE/USDT","RNDR/USDT","SAGA/USDT","TON/USDT","WLD/USDT",
       # Exchange
       "(BNB)/.*",
       # Leverage
@@ -189,14 +114,14 @@ config:
     - method: StaticPairList
       mode: whitelist
       processing_mode: append
-    - method: RemotePairList
-      number_assets: 50
-      pairlist_url: https://filekeys.com/remotepairlist-white-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-      mode: whitelist
-      processing_mode: append
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 120
+    # - method: RemotePairList
+    #   number_assets: 50
+    #   pairlist_url: https://filekeys.com/remotepairlist-white-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+    #   mode: whitelist
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120
     # - method: RemotePairList
     #   number_assets: 50
     #   pairlist_url: https://filekeys.com/remotepairlist-black-spot-static.json # https://remotepairlist.com?q=a2ddb59810ef030e # bullish macdhist > 0 https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
@@ -269,8 +194,8 @@ config:
         - XMR/USDT
         - XRP/USDT
         - XTZ/USDT
-        - BTC/USDT:USDT
-        - ETH/USDT:USDT
+        - BTC/USDT
+        - ETH/USDT
       label_period_candles: 20
       include_shifted_candles: 2
       DI_threshold: 0.9
