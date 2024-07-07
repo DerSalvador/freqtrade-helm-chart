@@ -2,7 +2,7 @@
 kubernetes:
   nodePort: 32330
 configcreds:
-  available_capital: 100 
+  available_capital: 50000
   position_adjustment_enable: false
   bot_name: freqtrading-binance-adriana
   exchange:
@@ -20,11 +20,11 @@ configcreds:
     stake_amount: unlimited
     max_open_trades: 2
     minimal_roi:
-      "0": 0.01
-      "40160": 0.01
-      "80160": 0
+      "0": 0.99
+      "40160": 0.99
+      "80160": 0.99
     timeframe: 5m
-    stoploss: -0.0025
+    stoploss: -0.99
 bot:
   debug: false
   debuglevel: -vvv
