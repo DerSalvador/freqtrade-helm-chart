@@ -1,17 +1,38 @@
 ---
 kubernetes:
   nodePort: 32334
-
 configcreds:
+  edge:
+    enabled: false
+    process_throttle_secs: 3600
+    calculate_since_number_of_days: 365
+    allowed_risk: 0.01
+    stoploss_range_min: -0.02
+    stoploss_range_max: -0.1
+    stoploss_range_step: -0.01
+    minimum_winrate: 0.02
+    minimum_expectancy: 0.05
+    min_trade_number: 5
+    max_trade_duration_minute: 7440
+    remove_pumps: false
+    hoursInThePast: "-8760h" # 1 year  
   dry_run: true
   dry_run_wallet: 50000
   max_open_trades: 100
   available_capital: 50000
   stake_amount: unlimited
   leverage: 4
+  position_adjustment_enable: false
   minimal_roi:
-    "0": 0.02
-  stoploss: -0.021     
+    "0": 0.1
+  stoploss: -0.11
+  download_trades: false
+  use_custom_stoploss: true
+  use_exit_signal: true
+  trailing_stop: true
+  trailing_only_offset_is_reached: true
+  trailing_stop_positive: 0.03
+  trailing_stop_positive_offset: 0.04
   trading_mode: futures
   margin_mode: isolated
   timeframe: 5m
@@ -19,16 +40,16 @@ configcreds:
   exchange:
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 800
+      rateLimit: 200
       options:
         defaultType: future
-        leverage: 100
+        leverage: 1
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 800
+      rateLimit: 200
       options:
         defaultType: future
-        leverage: 100
+        leverage: 1
     name: binance
       # key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       # secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
@@ -75,10 +96,9 @@ configcreds:
       min_rate_of_change: 0.03
       refresh_period: 1800
     - method: ShuffleFilter
-  position_adjustment_enable: false
 bot:
   enabled: true
-  strategy_name: DWT_short
+  strategy_name: DoesNothingStrategy
   freqaimodel: LightGBMRegressor
 # image:
 #   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
