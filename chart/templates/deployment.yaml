@@ -505,117 +505,117 @@ spec:
         - name: sqlite
           mountPath: /sqlite
 {{- end }}
-      - name: edge-container
-        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-        # command: ["/bin/sleep", "3600"]
-        # Sleep command to keep the container running for debugging purposes
-        # Add any additional commands or tools you need for debugging
-        # For example:
-        command:
-        - bash 
-        - -c 
-        - |
-          echo 'Edge Running...'; 
-          # sleep 30
-          # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/_optional_dependencies.py >> /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
-          # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
-          freqtrade edge -i 5m --stoplosses=-0.02,-0.1,-0.001 --fee 0.1  \
-          -p  \
-          '1000FLOKI/USDT:USDT' \
-          'AAVE/USDT:USDT' \
-          'ALGO/USDT:USDT' \
-          'APT/USDT:USDT' \
-          'ARK/USDT:USDT' \
-          'AVAX/USDT:USDT' \
-          'AXL/USDT:USDT' \
-          'BADGER/USDT:USDT' \
-          'BAKE/USDT:USDT' \
-          'BCH/USDT:USDT' \
-          'BEAMX/USDT:USDT' \
-          'BEL/USDT:USDT' \
-          'BIGTIME/USDT:USDT' \
-          'BNT/USDT:USDT' \
-          'BSV/USDT:USDT' \
-          'BTC/USDT:USDT' \
-          'BTCDOM/USDT:USDT' \
-          'COMP/USDT:USDT' \
-          'DEFI/USDT:USDT' \
-          'DODOX/USDT:USDT' \
-          'DOGE/USDT:USDT' \
-          'DOT/USDT:USDT' \
-          'ENA/USDT:USDT' \
-          'ENS/USDT:USDT' \
-          'ETC/USDT:USDT' \
-          'ETH/USDT:USDT' \
-          'ETHW/USDT:USDT' \
-          'FET/USDT:USDT' \
-          'FIL/USDT:USDT' \
-          'FLM/USDT:USDT' \
-          'GALA/USDT:USDT' \
-          'GMX/USDT:USDT' \
-          'HOOK/USDT:USDT' \
-          'HOT/USDT:USDT' \
-          'ILV/USDT:USDT' \
-          'IO/USDT:USDT' \
-          'IOTA/USDT:USDT' \
-          'JOE/USDT:USDT' \
-          'JTO/USDT:USDT' \
-          'KAS/USDT:USDT' \
-          'KEY/USDT:USDT' \
-          'LDO/USDT:USDT' \
-          'LEVER/USDT:USDT' \
-          'LINK/USDT:USDT' \
-          'LISTA/USDT' \
-          'LISTA/USDT:USDT' \
-          'LPT/USDT:USDT' \
-          'LTC/USDT:USDT' \
-          'LUNA2/USDT:USDT' \
-          'MATIC/USDT:USDT' \
-          'MAVIA/USDT:USDT' \
-          'MEW/USDT:USDT' \
-          'MKR/USDT:USDT' \
-          'MOVR/USDT:USDT' \
-          'MYRO/USDT:USDT' \
-          'NEAR/USDT:USDT' \
-          'ONDO/USDT:USDT' \
-          'ORBS/USDT:USDT' \
-          'ORDI/USDT:USDT' \
-          'WLD/USDT:USDT' \
-          'XEM/USDT:USDT' \
-          'XLM/USDT:USDT' \
-          'XMR/USDT:USDT' \
-          'XRP/USDT:USDT' \
-          'XVG/USDT:USDT' \
-          'XVS/USDT:USDT' \
-          'ZETA/USDT:USDT' \
-           --config  \
-           /freqtrade/config/config-{{ .Release.Namespace }}.json \
-           --config \
-           /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json \
-           --timerange \
-           {{ now | dateModify .Values.configcreds.edge.hoursInThePast | date "20060102"  }}-{{ now | date "20060102" }} \
-           --strategy-path \
-           /extra_strategies \
-           -s \
-           {{ .Values.bot.strategy_name }} \
-           --logfile \
-           /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
-           --datadir \
-           "/extra_strategies/data" \
-           --userdir \
-           /freqtrade/user_data            
-        workingDir: /extra_strategies
-        # Set the working directory if needed
-        volumeMounts:
-        - name: extra-strategies
-          mountPath: /extra_strategies
-          readOnly: false          
-        - name: configcreds
-          mountPath: /freqtrade/configcreds
-        - name: config
-          mountPath: /freqtrade/config
-        - name: sqlite
-          mountPath: /sqlite
+      # - name: edge-container
+      #   image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+      #   # command: ["/bin/sleep", "3600"]
+      #   # Sleep command to keep the container running for debugging purposes
+      #   # Add any additional commands or tools you need for debugging
+      #   # For example:
+      #   command:
+      #   - bash 
+      #   - -c 
+      #   - |
+      #     echo 'Edge Running...'; 
+      #     # sleep 30
+      #     # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/_optional_dependencies.py >> /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+      #     # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+      #     freqtrade edge -i 5m --stoplosses=-0.02,-0.1,-0.001 --fee 0.1  \
+      #     -p  \
+      #     '1000FLOKI/USDT:USDT' \
+      #     'AAVE/USDT:USDT' \
+      #     'ALGO/USDT:USDT' \
+      #     'APT/USDT:USDT' \
+      #     'ARK/USDT:USDT' \
+      #     'AVAX/USDT:USDT' \
+      #     'AXL/USDT:USDT' \
+      #     'BADGER/USDT:USDT' \
+      #     'BAKE/USDT:USDT' \
+      #     'BCH/USDT:USDT' \
+      #     'BEAMX/USDT:USDT' \
+      #     'BEL/USDT:USDT' \
+      #     'BIGTIME/USDT:USDT' \
+      #     'BNT/USDT:USDT' \
+      #     'BSV/USDT:USDT' \
+      #     'BTC/USDT:USDT' \
+      #     'BTCDOM/USDT:USDT' \
+      #     'COMP/USDT:USDT' \
+      #     'DEFI/USDT:USDT' \
+      #     'DODOX/USDT:USDT' \
+      #     'DOGE/USDT:USDT' \
+      #     'DOT/USDT:USDT' \
+      #     'ENA/USDT:USDT' \
+      #     'ENS/USDT:USDT' \
+      #     'ETC/USDT:USDT' \
+      #     'ETH/USDT:USDT' \
+      #     'ETHW/USDT:USDT' \
+      #     'FET/USDT:USDT' \
+      #     'FIL/USDT:USDT' \
+      #     'FLM/USDT:USDT' \
+      #     'GALA/USDT:USDT' \
+      #     'GMX/USDT:USDT' \
+      #     'HOOK/USDT:USDT' \
+      #     'HOT/USDT:USDT' \
+      #     'ILV/USDT:USDT' \
+      #     'IO/USDT:USDT' \
+      #     'IOTA/USDT:USDT' \
+      #     'JOE/USDT:USDT' \
+      #     'JTO/USDT:USDT' \
+      #     'KAS/USDT:USDT' \
+      #     'KEY/USDT:USDT' \
+      #     'LDO/USDT:USDT' \
+      #     'LEVER/USDT:USDT' \
+      #     'LINK/USDT:USDT' \
+      #     'LISTA/USDT' \
+      #     'LISTA/USDT:USDT' \
+      #     'LPT/USDT:USDT' \
+      #     'LTC/USDT:USDT' \
+      #     'LUNA2/USDT:USDT' \
+      #     'MATIC/USDT:USDT' \
+      #     'MAVIA/USDT:USDT' \
+      #     'MEW/USDT:USDT' \
+      #     'MKR/USDT:USDT' \
+      #     'MOVR/USDT:USDT' \
+      #     'MYRO/USDT:USDT' \
+      #     'NEAR/USDT:USDT' \
+      #     'ONDO/USDT:USDT' \
+      #     'ORBS/USDT:USDT' \
+      #     'ORDI/USDT:USDT' \
+      #     'WLD/USDT:USDT' \
+      #     'XEM/USDT:USDT' \
+      #     'XLM/USDT:USDT' \
+      #     'XMR/USDT:USDT' \
+      #     'XRP/USDT:USDT' \
+      #     'XVG/USDT:USDT' \
+      #     'XVS/USDT:USDT' \
+      #     'ZETA/USDT:USDT' \
+      #      --config  \
+      #      /freqtrade/config/config-{{ .Release.Namespace }}.json \
+      #      --config \
+      #      /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json \
+      #      --timerange \
+      #      {{ now | dateModify .Values.configcreds.edge.hoursInThePast | date "20060102"  }}-{{ now | date "20060102" }} \
+      #      --strategy-path \
+      #      /extra_strategies \
+      #      -s \
+      #      {{ .Values.bot.strategy_name }} \
+      #      --logfile \
+      #      /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
+      #      --datadir \
+      #      "/extra_strategies/data" \
+      #      --userdir \
+      #      /freqtrade/user_data            
+      #   workingDir: /extra_strategies
+      #   # Set the working directory if needed
+      #   volumeMounts:
+      #   - name: extra-strategies
+      #     mountPath: /extra_strategies
+      #     readOnly: false          
+      #   - name: configcreds
+      #     mountPath: /freqtrade/configcreds
+      #   - name: config
+      #     mountPath: /freqtrade/config
+      #   - name: sqlite
+      #     mountPath: /sqlite
 
 # STRATGEY UPDATER START             
 #       - name: freqtrade-strategy-updater-{{ .Release.Namespace }}
