@@ -234,6 +234,30 @@ configcreds:
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 120
+    - method: RangeStabilityFilter
+      lookback_days: 10
+      min_rate_of_change: 0.1
+      refresh_period: 86400
+    - method: VolatilityFilter
+      lookback_days: 10
+      min_volatility: 0.1
+      max_volatility: 0.7
+      refresh_period: 86400
+    - method: MarketCapPairList
+      number_assets: 50
+      max_rank: 50
+      refresh_period: 86400
+    - method: AgeFilter
+      min_days_listed: 30
+    - method: SpreadFilter
+      max_spread_ratio: 0.01
+    - method: VolumePairList
+      number_assets: 50
+      sort_key: quoteVolume
+      min_value: 5000
+      refresh_period: 3600
+      lookback_timeframe: 1h
+      lookback_period: 72      
 image:
   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
   tag: binzrl_multi-arch-1 # 1adeb1ad7ce401700f1da0ab5a158d34c01c9ea185a51f56461eae38170bb1f7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
