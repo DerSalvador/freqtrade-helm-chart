@@ -30,12 +30,12 @@ configcreds:
       stake_amount: 2000
       trigger_timeout_seconds: 60
       current_profits_check_array_length: 30
-      linearRegressionIncreasingThreshold_Start: 0.09
+      linearRegressionIncreasingThreshold_Start: 0.1
       linearRegressionIncreasingThreshold_End: 99999999
-      linearRegressionDecreasingThreshold_Start: -0.09
+      linearRegressionDecreasingThreshold_Start: -0.1
       linearRegressionDecreasingThreshold_End: -999999999
       start_profit_abs_positiv: 0.01
-      start_profit_abs_negative: -0.01  
+      start_profit_abs_negative: -0.01
     # hedging:
     #   bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/status"    
     #   hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
