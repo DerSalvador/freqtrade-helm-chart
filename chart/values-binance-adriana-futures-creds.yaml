@@ -42,7 +42,7 @@ configcreds:
   dry_run: true
   dry_run_wallet: 50000
   timeframe: 5m
-  available_capital: 10000
+  available_capital: 50000
   max_open_trades: 100
   stake_amount: unlimited
   minimal_roi:
