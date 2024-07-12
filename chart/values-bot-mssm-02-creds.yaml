@@ -27,7 +27,7 @@ configcreds:
   margin_mode: isolated
   position_adjustment_enable: false
   minimal_roi:
-    "0": 0.1
+    "0": 0.12
   stoploss: -0.11
   download_trades: false
   use_custom_stoploss: true

@@ -206,6 +206,8 @@ configcreds:
   timeframe: 5m
 bot:
   strategy_name: LizStrategy
+  debug: false
+  debuglevel: -vvv
 
 image:
   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
