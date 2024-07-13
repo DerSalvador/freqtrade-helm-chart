@@ -28,7 +28,7 @@ configcreds:
   position_adjustment_enable: false
   minimal_roi:
     "0": 0.12
-  stoploss: -0.11
+  stoploss: -0.25
   download_trades: false
   use_custom_stoploss: true
   use_exit_signal: true
