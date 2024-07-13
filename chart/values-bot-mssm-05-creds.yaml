@@ -74,7 +74,7 @@ configcreds:
   trailing_stop_positive_offset: 0.02
   minimal_roi:
     "0": 0.1
-  stoploss: -0.25
+  stoploss: -0.1
   bot_name: bot-mssm-05
   dry_run: true
   dry_run_wallet: 500000
