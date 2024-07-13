@@ -1,3 +1,3 @@
 {
-  "error": "Error querying /api/v1/forceenter: Failed to enter position for SOL/USDT:USDT."
+  "error": "Error querying /api/v1/forceenter: position for SOL/USDT:USDT already open - id: 9"
 }
