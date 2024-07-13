@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f868d98c-bbvw5 -c freqtrade -- cat /extra_strategies/DWT_short.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-7cd89dcf74-9qhg9 -c freqtrade -- cat /extra_strategies/DWT_short.py
 import numpy as np
 import scipy.fft
 from scipy.fft import rfft, irfft
@@ -36,7 +36,7 @@ warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
 from utils.DataframeUtils import DataframeUtils, ScalerType
 import pywt
 import talib.abstract as ta
-from utils.FuturesPositionsFetcher import FuturesPositionFetcher
+from utils.FuturesPositionsFetcher import FuturesPositionsFetcher
 
 from freqtrade.rpc import RPCManager
 from freqtrade.rpc.external_message_consumer import ExternalMessageConsumer
@@ -457,7 +457,7 @@ class DWT_short(IStrategy):
                         current_profit: float, **kwargs) -> float:
 
         log.info(f"Entering custom_exit for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
-        positionFetcher = FuturesPositionFetcher(self.hedging_apikey, self.hedging_apisecret)
+        positionFetcher = FuturesPositionsFetcher(self.hedging_apikey, self.hedging_apisecret)
         symbol=pair.split('/')[0]+"USDT"
         DWT_short.existing_position_on_exchange = positionFetcher.get_futures_position_information(symbol)      
         
