@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
   "error": "Error querying /api/v1/forceenter: position for SOL/USDT:USDT already open - id: 13"
+=======
+  "error": "Error querying /api/v1/forceenter: position for SOL/USDT:USDT already open - id: 1"
+>>>>>>> d03d8dafa39f9f5bc068308a2317421f91c6a0b1
 }

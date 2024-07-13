@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "trade_id": 18,
   "pair": "NEAR/USDT:USDT",
   "base_currency": "NEAR",
@@ -79,4 +80,7 @@
   "amount_precision": 0.0,
   "price_precision": 3.0,
   "precision_mode": 2
+=======
+  "error": "Error querying /api/v1/forceenter: position for NEAR/USDT:USDT already open - id: 16"
+>>>>>>> d03d8dafa39f9f5bc068308a2317421f91c6a0b1
 }
