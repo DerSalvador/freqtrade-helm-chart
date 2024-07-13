@@ -21,24 +21,29 @@ configcreds:
       enable: true
       days: 365
     hedging:
+      role: master
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN
       stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
-      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/status"    
-      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"    
+      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/status"
+      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/forceenter"      
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"      
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      leverage: 10
-      stake_amount: 2000
-      trigger_timeout_seconds: 30
-      current_profits_check_array_length: 40
-      linearRegressionIncreasingThreshold_Start: 0.4
+      leverage: 4
+      stake_amount: 200
+      trigger_timeout_seconds: 40
+      profits_check_array_length: 40
+      aggregated_profits_check_array_length: 40
+      market_profits_check_array_length: 20
+      linearRegressionIncreasingThreshold_Start: 0.5
       linearRegressionIncreasingThreshold_End: 99999999
-      linearRegressionDecreasingThreshold_Start: -0.4
+      linearRegressionDecreasingThreshold_Start: -0.5
       linearRegressionDecreasingThreshold_End: -999999999
-      start_profit_abs_positiv: 0.01
-      start_profit_abs_negative: -0.01
+      start_profit_abs_positiv: 0.001
+      start_profit_abs_negative: -0.001
       market_threshold_pct: 0.8
 
     # hedging:
