@@ -34,9 +34,9 @@ configcreds:
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
       stake_amount: 2000
-      trigger_timeout_seconds: 30
-      profits_check_array_length: 40
-      aggregated_profits_check_array_length: 40
+      trigger_timeout_seconds: 35
+      profits_check_array_length: 35
+      aggregated_profits_check_array_length: 35
       market_profits_check_array_length: 40
       linearRegressionIncreasingThreshold_Start: 0.36
       linearRegressionIncreasingThreshold_End: 99999999
