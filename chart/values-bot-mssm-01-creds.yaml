@@ -69,7 +69,7 @@ configcreds:
   use_custom_stoploss: true
   use_exit_signal: true
   trailing_stop: false
-  trailing_only_offset_is_reached: true
+  trailing_only_offset_is_reached: false
   trailing_stop_positive: 0.01
   trailing_stop_positive_offset: 0.02
   minimal_roi:
