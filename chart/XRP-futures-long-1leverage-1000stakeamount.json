@@ -1,7 +1,3 @@
 {
-<<<<<<< HEAD
-  "error": "Error querying /api/v1/forceenter: position for XRP/USDT:USDT already open - id: 14"
-=======
-  "error": "Error querying /api/v1/forceenter: position for XRP/USDT:USDT already open - id: 9"
->>>>>>> d03d8dafa39f9f5bc068308a2317421f91c6a0b1
+  "error": "Error querying /api/v1/forceenter: position for XRP/USDT:USDT already open - id: 1"
 }
