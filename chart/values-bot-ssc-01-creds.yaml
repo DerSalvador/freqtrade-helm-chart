@@ -17,6 +17,9 @@ configcreds:
     remove_pumps: false
     hoursInThePast: "-8760h" # 1 year  
   dersalvador:
+    ds_downloaddata:
+      enable: true
+      days: 365
     hedging:
       role: master
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
@@ -27,6 +30,8 @@ configcreds:
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/forceenter"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
       leverage: 10
       stake_amount: 2000
       trigger_timeout_seconds: 55
@@ -40,6 +45,7 @@ configcreds:
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
       market_threshold_pct: 0.8      
+
     # hedging:
     #   bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/status"    
     #   hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
@@ -245,3 +251,4 @@ bot:
 image:
   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
   tag: binzrl_multi-arch-1 # 1adeb1ad7ce401700f1da0ab5a158d34c01c9ea185a51f56461eae38170bb1f7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+...
