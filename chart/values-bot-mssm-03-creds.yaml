@@ -33,13 +33,13 @@ configcreds:
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 4
-      stake_amount: 200
+      stake_amount: 400
       trigger_timeout_seconds: 30
-      profits_check_array_length: 40
+      profits_check_array_length: 35
       aggregated_profits_check_array_length: 40
       market_profits_check_array_length: 30
-      linearRegressionIncreasingThreshold_Start_Pair: 0.15
-      linearRegressionDecreasingThreshold_Start_Pair: -0.15
+      linearRegressionIncreasingThreshold_Start_Pair: 0.1
+      linearRegressionDecreasingThreshold_Start_Pair: -0.1
       linearRegressionIncreasingThreshold_Start_Market: 0.09
       linearRegressionDecreasingThreshold_Start_Market: -0.09
       linearRegressionIncreasingThreshold_End: 99999999
@@ -49,7 +49,7 @@ configcreds:
       market_threshold_pct: 0.8
   trading_mode: futures
   margin_mode: isolated
-  available_capital: 500000
+  available_capital: 2000
   max_open_trades: 100
   use_custom_stoploss: true
   use_exit_signal: true
