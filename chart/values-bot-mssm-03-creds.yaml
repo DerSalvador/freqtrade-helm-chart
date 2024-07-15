@@ -35,13 +35,15 @@ configcreds:
       leverage: 4
       stake_amount: 200
       trigger_timeout_seconds: 30
-      profits_check_array_length: 30
-      aggregated_profits_check_array_length: 30
+      profits_check_array_length: 40
+      aggregated_profits_check_array_length: 40
       market_profits_check_array_length: 30
-      linearRegressionIncreasingThreshold_Start: 0.3
+      linearRegressionIncreasingThreshold_Start_Pair: 0.15
+      linearRegressionDecreasingThreshold_Start_Pair: -0.15
+      linearRegressionIncreasingThreshold_Start_Market: 0.09
+      linearRegressionDecreasingThreshold_Start_Market: -0.09
       linearRegressionIncreasingThreshold_End: 99999999
-      linearRegressionDecreasingThreshold_Start: -0.3
-      linearRegressionDecreasingThreshold_End: -999999999
+      linearRegressionDecreasingThreshold_End: -999999999      
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
       market_threshold_pct: 0.8
@@ -56,8 +58,8 @@ configcreds:
   trailing_stop_positive: 0.01
   trailing_stop_positive_offset: 0.02
   minimal_roi:
-    "0": 0.1
-  stoploss: -0.1
+    "0": 0.99
+  stoploss: -0.99
   bot_name: bot-mssm-03
   dry_run: true
   dry_run_wallet: 500000

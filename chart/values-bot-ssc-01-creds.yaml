@@ -21,7 +21,7 @@ configcreds:
       enable: true
       days: 365
     hedging:
-      role: master
+      role: master # hedger, strategy
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       stoploss_apikey: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76
@@ -38,9 +38,11 @@ configcreds:
       profits_check_array_length: 30
       aggregated_profits_check_array_length: 30
       market_profits_check_array_length: 30
-      linearRegressionIncreasingThreshold_Start: 0.06
+      linearRegressionIncreasingThreshold_Start_Pair: 0.03
+      linearRegressionDecreasingThreshold_Start_Pair: -0.03
+      linearRegressionIncreasingThreshold_Start_Market: 0.01
+      linearRegressionDecreasingThreshold_Start_Market: -0.01
       linearRegressionIncreasingThreshold_End: 99999999
-      linearRegressionDecreasingThreshold_Start: -0.06
       linearRegressionDecreasingThreshold_End: -999999999
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
