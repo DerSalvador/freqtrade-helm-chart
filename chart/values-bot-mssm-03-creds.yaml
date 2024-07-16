@@ -49,7 +49,7 @@ configcreds:
       market_threshold_pct: 0.8
   trading_mode: futures
   margin_mode: isolated
-  available_capital: 2000
+  available_capital: 500000
   max_open_trades: 100
   use_custom_stoploss: true
   use_exit_signal: true
