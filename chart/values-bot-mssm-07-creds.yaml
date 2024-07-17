@@ -28,9 +28,9 @@ configcreds:
       stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-07.bot-mssm-07.svc.cluster.local:8084/api/v1/status"
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-07.bot-mssm-07.svc.cluster.local:8084/api/v1/forceenter"
-      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status"
-      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
-      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-08.bot-mssm-08.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-08.bot-mssm-08.svc.cluster.local:8084/api/v1/profit"
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-08.bot-mssm-08.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
       stake_amount: 2000
@@ -38,8 +38,8 @@ configcreds:
       profits_check_array_length: 20
       aggregated_profits_check_array_length: 20
       market_profits_check_array_length: 20
-      linearRegressionIncreasingThreshold_Start_Pair: 0.3
-      linearRegressionDecreasingThreshold_Start_Pair: -0.3
+      linearRegressionIncreasingThreshold_Start_Pair: 0.25
+      linearRegressionDecreasingThreshold_Start_Pair: -0.25
       linearRegressionIncreasingThreshold_Start_Market: 0.2
       linearRegressionDecreasingThreshold_Start_Market: -0.2
       linearRegressionIncreasingThreshold_End: 99999999
