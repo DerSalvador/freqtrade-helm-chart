@@ -38,10 +38,10 @@ configcreds:
       profits_check_array_length: 20
       aggregated_profits_check_array_length: 20
       market_profits_check_array_length: 20
-      linearRegressionIncreasingThreshold_Start_Pair: 0.099
-      linearRegressionDecreasingThreshold_Start_Pair: -0.099
-      linearRegressionIncreasingThreshold_Start_Market: 0.1
-      linearRegressionDecreasingThreshold_Start_Market: -0.1
+      linearRegressionIncreasingThreshold_Start_Pair: 0.01
+      linearRegressionDecreasingThreshold_Start_Pair: -0.01
+      linearRegressionIncreasingThreshold_Start_Market: 0.02
+      linearRegressionDecreasingThreshold_Start_Market: -0.02
       linearRegressionIncreasingThreshold_End: 99999999
       linearRegressionDecreasingThreshold_End: -999999999
       start_profit_abs_positiv: 0.01
