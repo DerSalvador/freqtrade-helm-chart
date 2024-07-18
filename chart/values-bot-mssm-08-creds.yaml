@@ -58,8 +58,8 @@ configcreds:
   margin_mode: isolated
   position_adjustment_enable: false
   minimal_roi:
-    "0": 0.09
-  stoploss: -0.25
+    "0": 0.15
+  stoploss: -0.14
   download_trades: false
   use_custom_stoploss: true
   use_exit_signal: true
