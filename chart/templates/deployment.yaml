@@ -740,7 +740,7 @@ spec:
         - bash
         - -c
         - |
-           pip install multiprocess
+           pip install multiprocess mailtrap
            echo freqtrade trade \
            {{- if .Values.bot.debug }} {{ .Values.bot.debuglevel }} {{- end }}  \
            --config  \

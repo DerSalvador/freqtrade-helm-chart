@@ -43,7 +43,10 @@ configcreds:
       linearRegressionIncreasingThreshold_Start_Market: 0.15
       linearRegressionDecreasingThreshold_Start_Market: -0.15
       linearRegressionIncreasingThreshold_End: 99999999
-      linearRegressionDecreasingThreshold_End: -999999999      
+      linearRegressionDecreasingThreshold_End: -999999999
+      linearRegressionThreshold_Offset_Adjustment_Pair: 0.001
+      linearRegressionThreshold_Offset_Adjustment_Market: 0.0001
+      trigger_linear_regression_adjustment: 300
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
       market_threshold_pct: 0.8
