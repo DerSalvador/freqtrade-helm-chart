@@ -39,11 +39,11 @@ configcreds:
     #   # One year back
     #   # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
   bot_name: binance-adriana-futures
-  dry_run: true
+  dry_run: false
   dry_run_wallet: 50000
   timeframe: 5m
-  available_capital: 50000
-  max_open_trades: 100
+  available_capital: 200
+  max_open_trades: 2
   stake_amount: unlimited
   minimal_roi:
     "0": 0.1
