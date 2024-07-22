@@ -38,16 +38,18 @@ configcreds:
       profits_check_array_length: 25
       aggregated_profits_check_array_length: 10
       market_profits_check_array_length: 70
-      linearRegressionIncreasingThreshold_Start_Pair: 0.01
-      linearRegressionDecreasingThreshold_Start_Pair: -0.01
-      linearRegressionIncreasingThreshold_Start_Market: 0.01
-      linearRegressionDecreasingThreshold_Start_Market: -0.01
+      linearRegressionIncreasingThreshold_Start_Pair: 0.04
+      linearRegressionDecreasingThreshold_Start_Pair: -0.03
+      linearRegressionIncreasingThreshold_Start_Market: 0.05
+      linearRegressionDecreasingThreshold_Start_Market: -0.04
       linearRegressionIncreasingThreshold_End: 99999999
       linearRegressionDecreasingThreshold_End: -999999999
       linearRegressionThreshold_Offset_Adjustment_Pair: 0.001
       linearRegressionThreshold_Offset_Adjustment_Market: 0.0001
       trigger_linear_regression_adjustment: 300
       linear_regression_winrate_threshold: 0.8
+      market_analysis: false
+      pair_aggregated_analysis: false
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
       market_threshold_pct: 0.8
@@ -73,7 +75,8 @@ configcreds:
     #   linearRegressionDecreasingThreshold_Start: -0.09
     #   linearRegressionDecreasingThreshold_End: -0.2
     #   start_profit_abs_positiv: 0.02
-    #   start_profit_abs_negative: -0.02     
+    #   start_profit_abs_negative: -0.02
+  database_path: "/sqlite/tradesv3.sqlite"
   dry_run: true
   dry_run_wallet: 500000
   available_capital: 500000
