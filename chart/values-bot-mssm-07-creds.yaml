@@ -34,20 +34,22 @@ configcreds:
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
       stake_amount: 2000
-      trigger_timeout_seconds: 70
-      profits_check_array_length: 70
-      aggregated_profits_check_array_length: 70
-      market_profits_check_array_length: 70
-      linearRegressionIncreasingThreshold_Start_Pair: 0.01
-      linearRegressionDecreasingThreshold_Start_Pair: -0.01
-      linearRegressionIncreasingThreshold_Start_Market: 0.01
-      linearRegressionDecreasingThreshold_Start_Market: -0.01
+      trigger_timeout_seconds: 40
+      profits_check_array_length: 40
+      aggregated_profits_check_array_length: 10
+      market_profits_check_array_length: 55
+      linearRegressionIncreasingThreshold_Start_Pair: 0.3
+      linearRegressionDecreasingThreshold_Start_Pair: -0.3
+      linearRegressionIncreasingThreshold_Start_Market: 0.3
+      linearRegressionDecreasingThreshold_Start_Market: -0.3
       linearRegressionIncreasingThreshold_End: 99999999
       linearRegressionDecreasingThreshold_End: -999999999
       linearRegressionThreshold_Offset_Adjustment_Pair: 0.001
       linearRegressionThreshold_Offset_Adjustment_Market: 0.0001
       trigger_linear_regression_adjustment: 300
       linear_regression_winrate_threshold: 0.8
+      market_analysis: false
+      pair_aggregated_analysis: true
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
       market_threshold_pct: 0.8
@@ -82,6 +84,7 @@ configcreds:
     "0": 0.99
   stoploss: -0.99
   bot_name: bot-mssm-07
+  database_path: "/sqlite/tradesv3.sqlite"
   dry_run: true
   dry_run_wallet: 500000
   timeframe: 1h
