@@ -34,21 +34,21 @@ configcreds:
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
       stake_amount: 2000
-      trigger_timeout_seconds: 25
-      profits_check_array_length: 25
-      aggregated_profits_check_array_length: 12
-      market_profits_check_array_length: 40
-      linearRegressionIncreasingThreshold_Start_Pair: 0.01
-      linearRegressionDecreasingThreshold_Start_Pair: -0.01
-      linearRegressionIncreasingThreshold_Start_Market: 0.01
-      linearRegressionDecreasingThreshold_Start_Market: -0.01
+      trigger_timeout_seconds: 5
+      profits_check_array_length: 30
+      aggregated_profits_check_array_length: 22
+      market_profits_check_array_length: 20
+      linearRegressionIncreasingThreshold_Start_Pair: 0.1
+      linearRegressionDecreasingThreshold_Start_Pair: -0.1
+      linearRegressionIncreasingThreshold_Start_Market: 0.1
+      linearRegressionDecreasingThreshold_Start_Market: -0.1
       linearRegressionIncreasingThreshold_End: 99999999
       linearRegressionDecreasingThreshold_End: -999999999
-      linearRegressionThreshold_Offset_Adjustment_Pair: 0.001
-      linearRegressionThreshold_Offset_Adjustment_Market: 0.0001
-      trigger_linear_regression_adjustment: 300
-      linear_regression_winrate_threshold: 0.8
-      market_analysis: false
+      linearRegressionThreshold_Offset_Adjustment_Pair: 0.01
+      linearRegressionThreshold_Offset_Adjustment_Market: 0.01
+      trigger_linear_regression_adjustment: 100
+      linear_regression_winrate_threshold: 0.7
+      market_analysis: true
       pair_aggregated_analysis: true
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
