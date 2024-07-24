@@ -32,6 +32,8 @@ nostalgiaforinfinity:
       XTZ/USDT: 0.1
 
 dersalvador:
+  database_path: "/sqlite/tradesv3.sqlite"
+  enable_email_logging: false
   ds_listdata:
     enable: false
   ds_downloaddata:

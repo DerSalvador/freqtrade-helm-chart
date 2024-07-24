@@ -1,3 +1,3 @@
 {
-  "error": "Error querying /api/v1/forceenter: position for TRB/USDT:USDT already open - id: 5"
+  "error": "Error querying /api/v1/forceenter: Maximum number of trades is reached."
 }
