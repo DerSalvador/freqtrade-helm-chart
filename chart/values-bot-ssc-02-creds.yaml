@@ -37,7 +37,7 @@ configcreds:
       trigger_timeout_seconds: 30
       profits_check_array_length: 40
       aggregated_profits_check_array_length: 40
-      market_profits_check_array_length: 40
+      market_profits_check_array_length: 100
       linearRegressionIncreasingThreshold_Start_Pair: 0.23
       linearRegressionDecreasingThreshold_Start_Pair: -0.23
       linearRegressionIncreasingThreshold_Start_Market: 0.23
