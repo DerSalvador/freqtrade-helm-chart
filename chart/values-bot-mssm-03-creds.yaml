@@ -17,6 +17,8 @@ configcreds:
     remove_pumps: false
     hoursInThePast: "-8760h" # 1 year      
   dersalvador:
+    database_path: "/sqlite/tradesv3.sqlite"
+    enable_email_logging: false
     ds_downloaddata:
       enable: true
       days: 365
