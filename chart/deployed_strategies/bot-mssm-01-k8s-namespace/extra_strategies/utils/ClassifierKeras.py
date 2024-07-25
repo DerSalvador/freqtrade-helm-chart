@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-01 exec -it pod/freqtrade-bot-mssm-01-5f5bdfb5b4-kbc7z -c freqtrade -- cat /extra_strategies/utils/ClassifierKeras.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-01 exec -it pod/freqtrade-bot-mssm-01-dfb67557-65lvw -c freqtrade -- cat /extra_strategies/utils/ClassifierKeras.py
 # base class that implements an Anomaly detector using keras models
 # You should not really use this directly, use one of the specific subclasses instead, depending on the type
 # of classifier (linear, binary, encoder etc.)
