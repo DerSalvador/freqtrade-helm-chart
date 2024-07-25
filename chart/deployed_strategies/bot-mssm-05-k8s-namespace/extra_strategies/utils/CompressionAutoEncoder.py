@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-fd8dd8b4-cwn8d -c freqtrade -- cat /extra_strategies/utils/CompressionAutoEncoder.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-9b479bd49-g9mdv -c freqtrade -- cat /extra_strategies/utils/CompressionAutoEncoder.py
 # class that implements an Auto-Encoder for dimensional reduction of a panda dataframe
 # This can be used as-is, and can also be sub-classed - just override the build_model function and create
 # different encoder and decoder variables

@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-fd8dd8b4-cwn8d -c freqtrade -- cat /extra_strategies/utils/TrainingSignals.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-9b479bd49-g9mdv -c freqtrade -- cat /extra_strategies/utils/TrainingSignals.py
 # pylint: disable=C0103,C0114,C0301,C0116,C0413,C0115,W0611,W0613
 
 # This is a set of utilities for getting training signal (buy/sell) events

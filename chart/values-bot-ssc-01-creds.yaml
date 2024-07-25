@@ -36,19 +36,19 @@ configcreds:
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
       leverage: 10
       stake_amount: 2000
-      trigger_timeout_seconds: 20
-      profits_check_array_length: 35
+      trigger_timeout_seconds: 15
+      profits_check_array_length: 40
       aggregated_profits_check_array_length: 13
       market_profits_check_array_length: 100
-      linearRegressionIncreasingThreshold_Start_Pair: 0.04
-      linearRegressionDecreasingThreshold_Start_Pair: -0.03
-      linearRegressionIncreasingThreshold_Start_Market: 0.05
-      linearRegressionDecreasingThreshold_Start_Market: -0.04
+      linearRegressionIncreasingThreshold_Start_Pair: 0.1
+      linearRegressionDecreasingThreshold_Start_Pair: -0.1
+      linearRegressionIncreasingThreshold_Start_Market: 0.1
+      linearRegressionDecreasingThreshold_Start_Market: -0.1
       linearRegressionIncreasingThreshold_End: 99999999
       linearRegressionDecreasingThreshold_End: -999999999
       linearRegressionThreshold_Offset_Adjustment_Pair: 0.01
       linearRegressionThreshold_Offset_Adjustment_Market: 0.015
-      trigger_linear_regression_adjustment: 122
+      trigger_linear_regression_adjustment: 600
       linear_regression_winrate_threshold: 0.6
       market_analysis: true
       pair_aggregated_analysis: false

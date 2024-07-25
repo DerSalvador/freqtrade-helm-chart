@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-fd8dd8b4-cwn8d -c freqtrade -- cat /extra_strategies/utils/Detrenders.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-9b479bd49-g9mdv -c freqtrade -- cat /extra_strategies/utils/Detrenders.py
 # Utilities for de-/re-trending a signal
 
 # Note that there are several ways to detrend a signal. However, the best ways are also compute intensive, or cause a delay
