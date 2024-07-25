@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-fd8dd8b4-cwn8d -c freqtrade -- cat /extra_strategies/utils/DataframeUtils.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-05 exec -it pod/freqtrade-bot-mssm-05-9b479bd49-g9mdv -c freqtrade -- cat /extra_strategies/utils/DataframeUtils.py
 # utility set of funcs for manipulating dataframes & tensors
 # Note: this is a class, so you need to instantiate an object to use the functions here. The reason for this is
 # that we can then run multiple strategies simultaneously - if everything were to be static, one strat could reset

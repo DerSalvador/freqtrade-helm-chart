@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-01 exec -it pod/freqtrade-bot-mssm-01-5f5bdfb5b4-kbc7z -c freqtrade -- cat /extra_strategies/LizStrategy.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-01 exec -it pod/freqtrade-bot-mssm-01-dfb67557-65lvw -c freqtrade -- cat /extra_strategies/LizStrategy.py
 # --- Do not remove these libs ---
 from freqtrade.strategy import IStrategy
 from freqtrade.strategy import CategoricalParameter, IntParameter
@@ -13,6 +13,10 @@ import numpy as np
 # Get rid of pandas warnings during backtesting
 import pandas as pd
 pd.options.display.float_format = '{:f}'.format
+pd.set_option('display.max_columns', None)
+
+import sqlite3
+
 from pandas import DataFrame, Series
 import scipy
 # --------------------------------
@@ -21,6 +25,7 @@ import ta as taa
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy  # noqa
 import talib
+import mailtrap as mt
 
 import requests
 import json
@@ -33,6 +38,11 @@ from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
 from utils.FuturesPositionsFetcher import FuturesPositionsFetcher
 from typing import Dict, List, Optional, Tuple, Union
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+import threading
 
 import logging
 import warnings
@@ -55,14 +65,36 @@ from utils.dsHedging import dsHedging
 import numpy as np
 from enum import Enum
 
+# Host live.smtp.mailtrap.io
+# Port 587 (recommended), 2525 or 25
+# Username api
+# Password 50bf8b9214e6cf207cfe6252769ca5e4
+# Auth PLAIN, LOGIN
+# STARTTLS Required
+# curl \
+# --ssl-reqd \
+# --url 'smtp://live.smtp.mailtrap.io:587' \
+# --user 'api:********a5e4' \
+# --mail-from mailtrap@demomailtrap.com \
+# --mail-rcpt filekeys@gmail.com \
+# --upload-file - <<EOF
+# From: Magic Elves <mailtrap@demomailtrap.com>
+# To: Mailtrap Inbox <filekeys@gmail.com>
+# Subject: You are awesome!
+# Content-Type: multipart/alternative; boundary="boundary-string"
+
 class Constants(Enum):
     LINEAR_INCREASING = 1
     LINEAR_DECREASING = 2
     LINEAR_STABLE = 3
+    PAIR = 4
+    MARKET = 5
     
 class LizStrategy(IStrategy):
     rpc: RPCManager = None
     # DerSalvador Hedging
+    bot_role = ""
+    bot_name = ""
     hedging_url = ""
     hedging_leverage = 1
     hedging_stake_amount = 0
@@ -72,22 +104,32 @@ class LizStrategy(IStrategy):
     stoploss_apikey = ""
     stoploss_apisecret = ""    
     spot_bot_api_status = ""
+    spot_bot_api_forceenter = ""   
     bot_username = ""
     bot_password = ""
     hedging_trigger_timeout_seconds = 0
-    hedging_profits_check_array_length = 0
-    hedging_aggregated_profits_check_array_length = 0
+    hedging_pair_profits_check_array_length = 0
+    hedging_aggregated_pair_profits_check_array_length = 0
     hedging_market_profits_check_array_length = 0
     
     existing_position_on_exchange = None    
-    trade_start_times = {}  
-    aggregated_dataframe_dict = {}
-    market_aggregated_dataframe_dict = {}
+    trade_start_times = {}
+    trigger_linear_regression_adjustment_dict = {}
+    pair_dataframe_dict = {}
+    aggregated_pair_dataframe_dict = {}
+    market_aggregated_pair_dataframe_dict = {}
     stoploss_dataframe_dict = {}
-    linearRegressionIncreasingThreshold_Start = 0.004
-    linearRegressionIncreasingThreshold_End = 0.1
-    linearRegressionDecreasingThreshold_Start = -0.002
-    linearRegressionDecreasingThreshold_End = -0.1
+    pair_stoploss_dict = {}
+    linearRegressionThreshold_Offset_Adjustment_Market = 0.001    
+    linearRegressionThreshold_Offset_Adjustment_Pair = 0.0001
+    trigger_linear_regression_adjustment = 300
+    linearRegressionIncreasingThreshold_Start_Pair = 0.5
+    linearRegressionIncreasingThreshold_Start_Market = 0.2
+    linearRegressionIncreasingThreshold_End = 9999999
+    linearRegressionDecreasingThreshold_Start_Pair = -0.5
+    linearRegressionDecreasingThreshold_Start_Market = -0.2
+    linearRegressionDecreasingThreshold_End = -9999999
+    linear_regression_winrate_threshold = 0 
     start_profit_abs_positiv = 0.1
     start_profit_abs_negative = -0.1
     stoploss_bot_api = ""
@@ -95,6 +137,17 @@ class LizStrategy(IStrategy):
     market_falling_count = 0
     market_stable_count = 0
     market_threshold_pct = 0.8
+    market_analysis = False
+    pair_aggregated_analysis = False
+    enable_email_logging = False
+    threads = []    
+    # Example usage:
+    # Replace these with actual credentials and recipient information
+    sender_email = 'mailtrap@demomailtrap.com'
+    sender_password = '50bf8b9214e6cf207cfe6252769ca5e4'  # or App password if 2FA is enabled
+    recipient_email = 'filekeys@gmail.com'
+    subject = 'Bot Mail'
+    body = 'Test'
 
     """
     Strategy 005
@@ -138,6 +191,9 @@ class LizStrategy(IStrategy):
     # Sell hyperspace params:
     exit_params = {'exit_fishRsiNorma': 30, 'exit_minusDI': 4, 'exit_rsi': 74, 'exit_trigger': 'rsi-macd-minusdi'}
 
+    # Dictionary to keep track of which labels/tags have already been processed
+    processed_labels = {}
+
     # df_coeffs: DataFrame = None
     coeff_array = None
     coeff_model = None
@@ -153,6 +209,8 @@ class LizStrategy(IStrategy):
         
     ############################################
     def hedging_config(self, config) -> None:
+        self.bot_name = config['bot_name']
+        self.bot_role = config['dersalvador']['hedging']['role']
         self.hedging_url = config['dersalvador']['hedging']['hedge_bot_api']
         self.hedging_leverage = config['dersalvador']['hedging']['leverage']
         self.hedging_stake_amount = config['dersalvador']['hedging']['stake_amount']
@@ -161,22 +219,32 @@ class LizStrategy(IStrategy):
         self.stoploss_apikey = config['dersalvador']['hedging']['stoploss_apikey']
         self.stoploss_apisecret = config['dersalvador']['hedging']['stoploss_apisecret']
         self.hedging_trigger_timeout_seconds = config['dersalvador']['hedging']['trigger_timeout_seconds']
-        self.hedging_profits_check_array_length = config['dersalvador']['hedging']['profits_check_array_length']
-        self.hedging_aggregated_profits_check_array_length = config['dersalvador']['hedging']['aggregated_profits_check_array_length']
+        self.hedging_pair_profits_check_array_length = config['dersalvador']['hedging']['profits_check_array_length']
+        self.hedging_aggregated_pair_profits_check_array_length = config['dersalvador']['hedging']['aggregated_profits_check_array_length']
         self.hedging_market_profits_check_array_length = config['dersalvador']['hedging']['market_profits_check_array_length']
         self.spot_bot_api_status = config['dersalvador']['hedging']['spot_bot_api_status']
+        self.spot_bot_api_forceenter = config['dersalvador']['hedging']['spot_bot_api_forceenter']
         self.hedge_bot_api_status = config['dersalvador']['hedging']['hedge_bot_api_status']
         self.hedge_bot_api_profit = config['dersalvador']['hedging']['hedge_bot_api_profit']
         self.bot_username =  config['api_server']['username']
         self.bot_password =  config['api_server']['password']
-        self.linearRegressionIncreasingThreshold_Start = config['dersalvador']['hedging']['linearRegressionIncreasingThreshold_Start']
+        self.linearRegressionThreshold_Offset_Adjustment_Pair = config['dersalvador']['hedging']['linearRegressionThreshold_Offset_Adjustment_Pair'] 
+        self.linearRegressionThreshold_Offset_Adjustment_Market = config['dersalvador']['hedging']['linearRegressionThreshold_Offset_Adjustment_Market']
+        self.trigger_linear_regression_adjustment = config['dersalvador']['hedging']['trigger_linear_regression_adjustment']
+        self.linearRegressionIncreasingThreshold_Start_Pair = config['dersalvador']['hedging']['linearRegressionIncreasingThreshold_Start_Pair']
+        self.linearRegressionIncreasingThreshold_Start_Market = config['dersalvador']['hedging']['linearRegressionIncreasingThreshold_Start_Market']
         self.linearRegressionIncreasingThreshold_End = config['dersalvador']['hedging']['linearRegressionIncreasingThreshold_End']
-        self.linearRegressionDecreasingThreshold_Start = config['dersalvador']['hedging']['linearRegressionDecreasingThreshold_Start']
+        self.linearRegressionDecreasingThreshold_Start_Pair = config['dersalvador']['hedging']['linearRegressionDecreasingThreshold_Start_Pair']
+        self.linearRegressionDecreasingThreshold_Start_Market = config['dersalvador']['hedging']['linearRegressionDecreasingThreshold_Start_Market']
         self.linearRegressionDecreasingThreshold_End = config['dersalvador']['hedging']['linearRegressionDecreasingThreshold_End']
+        self.linear_regression_winrate_threshold = config['dersalvador']['hedging']['linear_regression_winrate_threshold']
         self.start_profit_abs_positiv = config['dersalvador']['hedging']['start_profit_abs_positiv']
         self.start_profit_abs_negative = config['dersalvador']['hedging']['start_profit_abs_negative']
         self.stoploss_bot_api  = config['dersalvador']['hedging']['stoploss_bot_api']
         self.market_threshold_pct  = config['dersalvador']['hedging']['market_threshold_pct']
+        self.market_analysis = config['dersalvador']['hedging']['market_analysis']
+        self.pair_aggregated_analysis = config['dersalvador']['hedging']['pair_aggregated_analysis']
+        self.enable_email_logging = config['dersalvador']['enable_email_logging']
     # ###################################
     # def bot_loop_start(self, current_time: datetime, **kwargs) -> None:
     #     self.logme("Bot loop start ")
@@ -199,6 +267,7 @@ class LizStrategy(IStrategy):
         
     def bot_start(self, **kwargs) -> None:
         if self.config['dersalvador']['hedging'] is not None:
+            self.hedging_config(self.config)
             msg = self.showHedgingConfig()
             LizStrategy.sendMessageToTelegram(msg)
         else:
@@ -211,30 +280,65 @@ class LizStrategy(IStrategy):
     def showHedgingConfig(self):
         msg = "No hedging config found"
         if self.config['dersalvador']['hedging'] is not None:
-            self.hedging_config(self.config)
             msg=f'*Found Hedging section in config*\n'
+            msg+=f'*Role:* {self.bot_role}\n'
             msg+=f'*API:* {self.hedging_url}\n'
             msg+=f'*Amount:* {self.hedging_stake_amount}\n' 
             msg+=f'*Leverage:* {self.hedging_leverage}\n'
-            msg+=f'*profits_check_array_length:* {self.hedging_profits_check_array_length}\n'
-            msg+=f'*aggregated_profits_check_array_length:* {self.hedging_aggregated_profits_check_array_length}\n'
+            msg+=f'*profits_check_array_length:* {self.hedging_pair_profits_check_array_length}\n'
+            msg+=f'*aggregated_profits_check_array_length:* {self.hedging_aggregated_pair_profits_check_array_length}\n'
             msg+=f'*market_profits_check_array_length:* {self.hedging_market_profits_check_array_length}\n'
             msg+=f'*trigger_timeout_seconds:* {self.hedging_trigger_timeout_seconds}\n'
-            msg+=f'*bot_api_status:* {self.spot_bot_api_status}\n'
+            msg+=f'*spot_bot_api_status:* {self.spot_bot_api_status}\n'
+            msg+=f'*spot_bot_api_forceenter:* {self.spot_bot_api_forceenter}\n'
             msg+=f'*bot_username:* {self.bot_username}\n'
             msg+=f'*bot_password:* {self.bot_password}\n'
-            msg+=f'*linearRegressionIncreasingThreshold_Start:* {self.linearRegressionIncreasingThreshold_Start}\n'
+            msg+=f'*linearRegressionIncreasingThreshold_Start_Pair:* {self.linearRegressionIncreasingThreshold_Start_Pair}\n'
+            msg+=f'*linearRegressionIncreasingThreshold_Start_Market:* {self.linearRegressionIncreasingThreshold_Start_Market}\n'
             msg+=f'*linearRegressionIncreasingThreshold_End:* {self.linearRegressionIncreasingThreshold_End}\n'
-            msg+=f'*linearRegressionDecreasingThreshold_Start:* {self.linearRegressionDecreasingThreshold_Start}\n'
+            msg+=f'*linearRegressionDecreasingThreshold_Start_Pair:* {self.linearRegressionDecreasingThreshold_Start_Pair}\n'
+            msg+=f'*linearRegressionDecreasingThreshold_Start_Market:* {self.linearRegressionDecreasingThreshold_Start_Market}\n'
             msg+=f'*linearRegressionDecreasingThreshold_End:* {self.linearRegressionDecreasingThreshold_End}\n'
             msg+=f'*start_profit_abs_positiv:* {self.start_profit_abs_positiv}\n'
             msg+=f'*start_profit_abs_negative:* {self.start_profit_abs_negative}\n'
             msg+=f'*stoploss_bot_api:* {self.stoploss_bot_api}\n'
+            msg+=f'*market_analysis:* {self.market_analysis}\n'
+            msg+=f'*pair_aggregated_analysis:* {self.pair_aggregated_analysis}\n'
             msg+=f'*market_threshold_pct:* {self.market_threshold_pct}\n'
+            msg+=f'*linearRegressionThreshold_Offset_Adjustment_Pair:* {self.linearRegressionThreshold_Offset_Adjustment_Pair}\n'
+            msg+=f'*linearRegressionThreshold_Offset_Adjustment_Market:* {self.linearRegressionThreshold_Offset_Adjustment_Market}\n'
+            msg+=f'*trigger_linear_regression_adjustment:* {self.trigger_linear_regression_adjustment}\n'
+            msg+=f'*linear_regression_winrate_threshold:* {self.linear_regression_winrate_threshold}\n'
+            msg+=f'*enable_email_logging:* {self.enable_email_logging}\n'
             
             self.logme(msg)
         return msg
-    
+
+    def resetDatabase(self):
+        data_dir = self.config['dersalvador']['database_path']
+        conn = None 
+        try:
+            # data_dir = "/Users/msantana/dersalvador/freqtrading/freqtrade/user_data/tradesv3.sqlite" # self.config['db_url']
+            # conn = sqlite3.connect(os.path.join(data_dir, "tradesv3.sqlite"))
+            conn = sqlite3.connect(data_dir)
+            cursor = conn.cursor()
+
+            # cursor.execute(".tables")
+            self.logme(cursor.fetchall())
+            cursor.execute("delete from KeyValueStore;")
+            cursor.execute("delete from orders;")
+            cursor.execute("delete from trades;")
+            cursor.execute("delete from pairlocks;")
+            cursor.execute("delete from trade_custom_data;")
+            cursor.execute("select count(*) from trades;")
+            self.logme(cursor.fetchall())
+        except Exception as ex:
+          self.logme(f"Something went wrong in resetDatabase: {ex}")
+        finally:
+            if conn is not None:
+                conn.close()
+            print('resetDatabase: The try except is finished')
+            
     def informative_pairs(self):
         """
         Define additional, informative pair/interval combinations to be cached from the exchange.
@@ -261,28 +365,31 @@ class LizStrategy(IStrategy):
         or your hyperopt configuration, otherwise you will waste your memory and CPU usage.
         """ 
         # MACD
-        macd = ta.MACD(dataframe)
-        dataframe['macd'] = macd['macd']
-        dataframe['macdsignal'] = macd['macdsignal']
-        # Minus Directional Indicator / Movement
-        dataframe['minus_di'] = ta.MINUS_DI(dataframe)
-        # RSI
-        dataframe['rsi'] = ta.RSI(dataframe)
-        # Inverse Fisher transform on RSI, values [-1.0, 1.0] (https://goo.gl/2JGGoy)
-        rsi = 0.1 * (dataframe['rsi'] - 50)
-        dataframe['fisher_rsi'] = (numpy.exp(2 * rsi) - 1) / (numpy.exp(2 * rsi) + 1)
-        # Inverse Fisher transform on RSI normalized, value [0.0, 100.0] (https://goo.gl/2JGGoy)
-        dataframe['fisher_rsi_norma'] = 50 * (dataframe['fisher_rsi'] + 1)
-        # Stoch fast
-        stoch_fast = ta.STOCHF(dataframe)
-        dataframe['fastd'] = stoch_fast['fastd']
-        dataframe['fastk'] = stoch_fast['fastk']
-        # Overlap Studies
-        # ------------------------------------
-        # SAR Parabol
-        dataframe['sar'] = ta.SAR(dataframe)
-        # SMA - Simple Moving Average
-        dataframe['sma'] = ta.SMA(dataframe, timeperiod=40)
+        if self.bot_role == "strategy":         
+            macd = ta.MACD(dataframe)
+            dataframe['macd'] = macd['macd']
+            dataframe['macdsignal'] = macd['macdsignal']
+            # Minus Directional Indicator / Movement
+            dataframe['minus_di'] = ta.MINUS_DI(dataframe)
+            # RSI
+            dataframe['rsi'] = ta.RSI(dataframe)
+            # Inverse Fisher transform on RSI, values [-1.0, 1.0] (https://goo.gl/2JGGoy)
+            rsi = 0.1 * (dataframe['rsi'] - 50)
+            dataframe['fisher_rsi'] = (numpy.exp(2 * rsi) - 1) / (numpy.exp(2 * rsi) + 1)
+            # Inverse Fisher transform on RSI normalized, value [0.0, 100.0] (https://goo.gl/2JGGoy)
+            dataframe['fisher_rsi_norma'] = 50 * (dataframe['fisher_rsi'] + 1)
+            # Stoch fast
+            stoch_fast = ta.STOCHF(dataframe)
+            dataframe['fastd'] = stoch_fast['fastd']
+            dataframe['fastk'] = stoch_fast['fastk']
+            # Overlap Studies
+            # ------------------------------------
+            # SAR Parabol
+            dataframe['sar'] = ta.SAR(dataframe)
+            # SMA - Simple Moving Average
+            dataframe['sma'] = ta.SMA(dataframe, timeperiod=40)
+        else:
+            self.logme(f"Bot {self.bot_name} Role is {self.bot_role} and not strategy, ignoring entry and exit trends...")
         return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
@@ -291,7 +398,14 @@ class LizStrategy(IStrategy):
         :param dataframe: DataFrame
         :return: DataFrame with entry column
         """
-        dataframe.loc[(dataframe['close'] > 2e-06) & (dataframe['volume'] > dataframe['volume'].rolling(self.entry_volumeAVG.value).mean() * 4) & (dataframe['close'] < dataframe['sma']) & (dataframe['fastd'] > dataframe['fastk']) & (dataframe['rsi'] > self.entry_rsi.value) & (dataframe['fastd'] > self.entry_fastd.value) & (dataframe['fisher_rsi_norma'] < self.entry_fishRsiNorma.value), 'enter_long'] = 1
+        dataframe.loc[(), 'enter_long'] = 0
+        dataframe.loc[(), 'enter_short'] = 0
+        dataframe.loc[(), 'exit_short'] = 0    
+        dataframe.loc[(), 'exit_long'] = 0    
+        if self.bot_role == "strategy":         
+            dataframe.loc[(dataframe['close'] > 2e-06) & (dataframe['volume'] > dataframe['volume'].rolling(self.entry_volumeAVG.value).mean() * 4) & (dataframe['close'] < dataframe['sma']) & (dataframe['fastd'] > dataframe['fastk']) & (dataframe['rsi'] > self.entry_rsi.value) & (dataframe['fastd'] > self.entry_fastd.value) & (dataframe['fisher_rsi_norma'] < self.entry_fishRsiNorma.value), 'enter_long'] = 1
+        else:
+            self.logme(f"Bot {self.bot_name} Role is {self.bot_role} and not strategy, ignoring entry and exit trends...")
         return dataframe
 
     def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
@@ -299,19 +413,26 @@ class LizStrategy(IStrategy):
         Based on TA indicators, populates the exit signal for the given dataframe
         :param dataframe: DataFrame
         :return: DataFrame with entry column
-        """ 
-        conditions = []
-        if self.exit_trigger.value == 'rsi-macd-minusdi':
-            conditions.append(qtpylib.crossed_above(dataframe['rsi'], self.exit_rsi.value))
-            conditions.append(dataframe['macd'] < 0)
-            conditions.append(dataframe['minus_di'] > self.exit_minusDI.value)
-        if self.exit_trigger.value == 'sar-fisherRsi':
-            conditions.append(dataframe['sar'] > dataframe['close'])
-            conditions.append(dataframe['fisher_rsi'] > self.exit_fishRsiNorma.value)
-        if conditions:
-            dataframe.loc[reduce(lambda x, y: x & y, conditions), 'exit_long'] = 1
+        """
+        dataframe.loc[(), 'enter_long'] = 0
+        dataframe.loc[(), 'enter_short'] = 0
+        dataframe.loc[(), 'exit_short'] = 0    
+        dataframe.loc[(), 'exit_long'] = 0    
+        if self.bot_role == "strategy":         
+            conditions = []
+            if self.exit_trigger.value == 'rsi-macd-minusdi':
+                conditions.append(qtpylib.crossed_above(dataframe['rsi'], self.exit_rsi.value))
+                conditions.append(dataframe['macd'] < 0)
+                conditions.append(dataframe['minus_di'] > self.exit_minusDI.value)
+            if self.exit_trigger.value == 'sar-fisherRsi':
+                conditions.append(dataframe['sar'] > dataframe['close'])
+                conditions.append(dataframe['fisher_rsi'] > self.exit_fishRsiNorma.value)
+            if conditions:
+                dataframe.loc[reduce(lambda x, y: x & y, conditions), 'exit_long'] = 1
+            else:
+                dataframe.loc[reduce(lambda x, y: x & y, conditions), 'exit_long'] = 0
         else:
-            dataframe.loc[reduce(lambda x, y: x & y, conditions), 'exit_long'] = 0
+            self.logme(f"Bot {self.bot_name} Role is {self.bot_role} and not strategy, ignoring entry and exit trends...")
         return dataframe
     
     def remove_decimal_digits(self, num):
@@ -332,94 +453,148 @@ class LizStrategy(IStrategy):
 
     def custom_stoploss(self, pair: str, trade: Trade, current_time: 'datetime', current_rate: float,
                     current_profit: float, **kwargs):
-        self.logme(f"----------------------------------------------------------")
-        self.logme(f"Entering custom stoploss for pair {pair}")
-        stoploss_distance_to_zero = trade.amount*trade.open_rate*trade.stop_loss_pct-current_profit
-        self.logme(f"Stoploss distance for pair {pair}: {stoploss_distance_to_zero}")
+        newstoploss = self.config['stoploss']
+        if self.bot_role == "mixed" or self.bot_role == "hedger":
+            if pair not in self.pair_stoploss_dict:
+                self.pair_stoploss_dict[pair] = float(self.config['stoploss'])
+            self.logme(f"----------------------------------------------------------")
+            self.logme(f"Entering custom stoploss for pair {pair}, current stoploss value {self.pair_stoploss_dict[pair]}")
+            stoploss_distance_to_zero = trade.amount*trade.open_rate*trade.stop_loss_pct-current_profit
+            self.logme(f"Stoploss distance for pair {pair}: {stoploss_distance_to_zero}")
+            # config_stoploss = float(self.config['stoploss'])
+            t = self.getJsonTrade(pair)
+            if t is not None:
+                profit_abs = t.get('profit_abs')
+            else:
+                s = f"No Trade found for Pair {pair} in custom_stoploss function"
+                raise Exception(s)
+            current_profit = profit_abs        
+            if current_profit < 0:
+                newstoploss = self.pair_stoploss_dict[pair] - 0.001
+            else:
+                newstoploss = self.pair_stoploss_dict[pair] + 0.002
+            # Stoploss passed 100%
+            if newstoploss < -0.5:
+                newstoploss = -0.5
+            # Stoploss in direction positive
+            if newstoploss > 0:
+                newstoploss = -0.1
+            self.logme(f"Setting new stoploss pct to {newstoploss} based on config stoploss {self.config['stoploss']} and current_profit {current_profit} with offset 0.01, for pair {pair} in bot {self.bot_name}")
+            self.pair_stoploss_dict[pair] = newstoploss
+        else:
+            self.logme(f"Bot role is {self.bot_role}, only bot role hedger uses custom stoploss")
+        return newstoploss
+
+    def adjustLinearRegressionThreshold(self):
         json = self.getJsonFromAPI(self.hedge_bot_api_profit)
         profit_all_coin = json['profit_all_coin']
+        winning_trades = json['winning_trades']
+        loosing_trades = json['losing_trades']
+        winrate = json['winrate']
         self.logme(f"Profit in hedgebot {self.hedge_bot_api_profit} for all coins is: {profit_all_coin}" )
-        config_stoploss = float(self.config['stoploss'])
-        bot_name = self.config['bot_name']
-        if profit_all_coin < 0:
-            newstoploss = config_stoploss - 0.01
-        else:
-            newstoploss = config_stoploss + 0.01
-        # Stoploss passed 100%
-        if newstoploss < -0.99:
-            newstoploss = -0.99
-        # Stoploss in direction positive
-        if newstoploss > -0.05:
-            newstoploss = -0.1
-        self.logme(f"Setting new stoploss pct to {newstoploss} for pair {pair} in bot {bot_name}")
-            
-        # try:
-        #     jsonTrade = self.getJsonTrade(pair, self.spot_bot_api_status)
-        #     if jsonTrade is not None:
-        #         stoploss_entry_dist = jsonTrade.get('stoploss_entry_dist')
-        #         profit_abs = jsonTrade.get('profit_abs')
-        #         leverage = jsonTrade.get('leverage')
-        #         is_short = jsonTrade.get('is_short')
-        #         trade.is_short = is_short
-        #         self.logme(f"Stoploss Distance = {stoploss_entry_dist}")
-        #         stoploss_distance_abs = stoploss_entry_dist-profit_abs
-        #         self.logme(f"set new stop loss because stoploss_entry_distance_abs {stoploss_distance_abs} close to zero")
-        #         if abs(stoploss_distance_abs) - 50 <= 0:
-        #             self.logme(f"Getting closer to zero {stoploss_distance_abs - 50}, stop loss with be increased with 1%")
-        #             newstoploss = config_stoploss + 0.01
-        #         new_stoploss_row = { 
-        #             'timestamp': current_time, 
-        #             'stoploss_distance_abs': stoploss_distance_abs,
-        #             'current_profit': current_profit,
-        #             'profit_abs': profit_abs,
-        #             'stoploss_entry_dist': stoploss_entry_dist,
-        #             'pair': pair 
-        #         }
-        #         self.logme(f"Stoploss distance absolut = {stoploss_distance_abs}, when getting close to zero stoploss triggers...")
-        #         stoploss_df = self.get_stoploss_dataframe_from_dict(pair)
-        #         stoploss_df = stoploss_df._append(new_stoploss_row, ignore_index=True)                
-        #         self.set_stoploss_dataframe_from_dict(pair, stoploss_df)
-        #         self.logme(f"Stoploss Dataframe = {stoploss_df}")
-        #         positionInBinance = self.getPositionInBinance(pair, self.stoploss_apikey, self.stoploss_apisecret)
-        #         if len(stoploss_df) >= self.hedging_current_profits_check_array_length:
-        #             trend, slope = self.detectLinearRegression(stoploss_df,"stoploss_distance_abs")        
-        #             if trend == Constants.LINEAR_DECREASING: 
-        #                 self.writeDataframeToFile(pair, stoploss_df, "is_short=" +  trade.is_short + "_stoploss_LINEAR_DECREASING", trade, slope)  
-        #                 # the more distance moves away from zero the greater is distance to stoploss (stoploss_distance_abs converges to zero)
-        #                 # Stoploss is reached when stoploss_distance_abs converge to zero, meaning increasing
-        #                 self.logme(f"Distance to stoploss/liquidation diverging negative {stoploss_distance_abs} from 0, profit_abs={profit_abs}, stoploss_distance_abs={stoploss_distance_abs}")
-        #                 if float(positionInBinance[0]['positionAmt']) == 0.0:
-        #                     market_trend = self.detectMarketTrend()
-        #                     if market_trend == Constants.LINEAR_DECREASING:
-        #                         hedged = dsHedging.hedge_me(self, trade, pair, self.existing_position_on_exchange, self.stoploss_bot_api)
-        #                     else:
-        #                         self.logme("Market is not decreasing, so not going short")                            
-        #             if trend == Constants.LINEAR_INCREASING: 
-        #                 self.writeDataframeToFile(pair, stoploss_df, "is_short=" + trade.is_short + "_stoploss_LINEAR_INCREASING", trade, slope)  
-        #                 # the closer to zero (increasing) the closer distance to stoploss
-        #                 # Stoploss is reached when stoploss_distance_abs converge to zero, meaning increasing
-        #                 self.logme(f"Distance to stoploss/liquidation converging {stoploss_distance_abs} to 0, profit_abs={profit_abs}, stoploss_distance_abs={stoploss_distance_abs}")
-        #                 if float(positionInBinance[0]['positionAmt']) == 0.0:
-        #                     market_trend = self.detectMarketTrend()
-        #                     if market_trend == Constants.LINEAR_DECREASING:
-        #                         hedged = dsHedging.hedge_me(self, trade, pair, self.existing_position_on_exchange, self.stoploss_bot_api)
-        #                     else:
-        #                         self.logme("Market is not decreasing, so not going short")                            
-        #             self.set_stoploss_dataframe_from_dict(pair, pd.DataFrame())
-        #     else:
-        #         self.logme("Pair {pair} not found in bot {self.spot_bot_api_status}")              
-        # except Exception as e:
-        #     print(f"Stoploss distance not found for pair {pair}")
-        #     print(f"{e}")
-        # finally:
-        #     print('Continuing after exception with next pair')
-        # self.logme(f"Leaving custom stoploss for pair {pair}")
-        # self.logme(f"----------------------------------------------------------")
+        if profit_all_coin < 0: 
+            self.logme(f"@@@@@@@@@@@@@@@@@@@@ Profit all coins is negative {profit_all_coin}, adjusting linear market regression threshold with value " + 
+                       f"{self.linearRegressionThreshold_Offset_Adjustment_Market} @@@@@@@@@@@@@@@@@@@@ ")
+            self.logme(f"@@@@@@@@@@@@@@@@@@@@ Profit all coins is negative {profit_all_coin}, adjusting linear pair regression threshold with value" +
+                       f"{self.linearRegressionThreshold_Offset_Adjustment_Pair} @@@@@@@@@@@@@@@@@@@@")
+            self.logme(f"Adjusting Linear Regression Slope and resetting database to start over")
+            self.resetDatabase()
+            self.hedging_trigger_timeout_seconds += 1
+            self.hedging_market_profits_check_array_length += 1
+            self.linearRegressionDecreasingThreshold_Start_Market -= self.linearRegressionThreshold_Offset_Adjustment_Market
+            self.linearRegressionDecreasingThreshold_Start_Pair -= self.linearRegressionThreshold_Offset_Adjustment_Pair
+            self.linearRegressionIncreasingThreshold_Start_Market += self.linearRegressionThreshold_Offset_Adjustment_Market
+            self.linearRegressionIncreasingThreshold_Start_Pair += self.linearRegressionThreshold_Offset_Adjustment_Pair
+            if self.bot_role == "hedger" or self.bot_role == "mixed":
+                self.send_email(f"Profit all Coins is negative {profit_all_coin}\n" + 
+                                f"adjusting slope threshold, New linear regression adjustment for Market is {self.linearRegressionDecreasingThreshold_Start_Market}\n" + 
+                                f"New linear regression adjustment for Pair Decreasing is {self.linearRegressionDecreasingThreshold_Start_Pair}\n" + 
+                                f"New linear regression adjustment for Market Decreasing is {self.linearRegressionDecreasingThreshold_Start_Market}\n" + 
+                                f"New linear regression adjustment for Pair Increasing is {self.linearRegressionIncreasingThreshold_Start_Pair}\n" + 
+                                f"New linear regression adjustment for Market Increasing is {self.linearRegressionIncreasingThreshold_Start_Market}"
+                                )
 
-        return newstoploss
-    
+        else:
+            if self.bot_role == "hedger" or self.bot_role == "mixed":
+                self.send_email(f"Winrate is {winrate} with profit all coins {profit_all_coin}, use following parameters for the configuration\n" + 
+                                f"Current linear regression adjustment for Market Decreasing is {self.linearRegressionDecreasingThreshold_Start_Market}\n" +
+                                f"Current linear regression adjustment for Pair Decreasing is {self.linearRegressionDecreasingThreshold_Start_Pair}\n" +
+                                f"Current linear regression adjustment for Market Increasing is {self.linearRegressionIncreasingThreshold_Start_Market}\n" +
+                                f"Current linear regression adjustment for Pair Increasing is {self.linearRegressionIncreasingThreshold_Start_Pair}\n" +
+                                f"hedging_trigger_timeout_seconds: {self.hedging_trigger_timeout_seconds}"
+                                )
+            self.logme(f"Profit all coins is positive {profit_all_coin}, with following configuration")
+            self.logme(f"linearRegressionDecreasingThreshold_Start_Market: {self.linearRegressionDecreasingThreshold_Start_Market}")
+            self.logme(f"linearRegressionDecreasingThreshold_Start_Pair: {self.linearRegressionDecreasingThreshold_Start_Pair}")
+            self.logme(f"linearRegressionIncreasingThreshold_Start_Market: {self.linearRegressionIncreasingThreshold_Start_Market}")
+            self.logme(f"linearRegressionIncreasingThreshold_Start_Pair: {self.linearRegressionIncreasingThreshold_Start_Pair}")
+            self.logme(f"hedging_trigger_timeout_seconds: {self.hedging_trigger_timeout_seconds}")
+            
+    def force_enter_trade(self, pair):
+        # Example usage:
+        side = "long"
+        ordertype = "market"
+        stake_amount = 1000  # Replace with your STAKE
+        leverage = 1  # Replace with your LEVERAGE
+        username = self.config['api_server']['username']
+        password = self.config['api_server']['password']
+        entry_tag = f"Force entry in bot {self.bot_name} to fill status table for market evaluation and hedging."
+        url = self.spot_bot_api_forceenter
+        headers = {
+            'accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+        data = {
+            "pair": pair,
+            "side": side,
+            "ordertype": ordertype,
+            "stakeamount": stake_amount,
+            "entry_tag": entry_tag,
+            "leverage": leverage
+        }
+        auth = (username, password)
+        try:
+            response = requests.post(url, json=data, headers=headers, auth=auth)
+            response.raise_for_status()  # Check for HTTP errors
+            if response.status_code == 200:
+                dsHedging.logme("Force Enter successful. Response:")
+                dsHedging.logme(response.json())
+                return True
+            else:
+                dsHedging.logme(f"Request returned status code: {response.status_code}")            
+            return response.json()
+        except requests.exceptions.HTTPError as http_err:
+            print(f"force_enter_trade: {self.bot_name}: HTTP error occurred: {http_err}")
+        except requests.exceptions.ConnectionError as conn_err:
+            print(f"force_enter_trade: {self.bot_name}: Connection error occurred: {conn_err}")
+        except requests.exceptions.Timeout as timeout_err:
+            print(f"force_enter_trade: {self.bot_name}: Timeout error occurred: {timeout_err}")
+        except requests.exceptions.RequestException as req_err:
+            print(f"force_enter_trade: {self.bot_name}: An error occurred: {req_err}")
+
+
     def custom_exit(self, pair: str, trade: Trade, current_time: 'datetime', current_rate: float,
                     current_profit: float, **kwargs):
+        if self.bot_role != "master" and self.bot_role != "mixed" : 
+            self.logme(f"Bot {self.bot_name} role is {self.bot_role} and not master, leaving custom_exit... ")
+            return False
+        self.logme(f"Wait until Status table has at least as much positions as the current whitelist, otherwise ignore custom_exit...")
+        whitelist_len = len(self.dp.current_whitelist())
+        if whitelist_len == 0:
+            self.logme(f"Whitelist is still empty for bot {self.bot_name}, waiting until whitelist is filled")
+            return False
+        positions = self.getJsonFromAPI(self.spot_bot_api_status)
+        positions_len = len(positions)
+        # if positions_len < whitelist_len:
+        #     self.logme(f"Need to create positions according to whitelist length or whitelist is still empty, whitelist_length={whitelist_len}...")
+        #     for pair in self.dp.current_whitelist(): 
+        #         self.logme(f"Creating position for pair {pair} in bot {self.config['bot_name']}")
+        #         self.force_enter_trade(pair)
+        if positions_len >= whitelist_len:
+            self.logme(f"Created {positions_len} positions, whitelist length {whitelist_len} hedging process can continue")
+        else:
+            self.logme(f"Not enough positions {positions_len} created, must reach at least whitelist length {whitelist_len}")
+            return False
         self.logme(f"Entering custom_exit for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")        
         run_mode = self.dp.runmode.value
         # if run_mode in ('backtest', 'live', 'dry_run'):        
@@ -440,7 +615,7 @@ class LizStrategy(IStrategy):
         # return False
 
     def logme(self, msg: str):
-        print(f"{msg}")
+        # print(f"{msg}")
         log.info(f"{msg}")
 
     def getJsonFromAPI(self, endpoint):
@@ -486,13 +661,19 @@ class LizStrategy(IStrategy):
         # if ':USDT' not in pair:
         #     pair += ':USDT'
         data = response.json()
-        for trade in data:
+        for trade in data:            
             pair = trade.get('pair')
             current_profit = trade.get('profit_abs')
             tradeid = trade.get("trade_id")
             open_timestamp = trade.get("open_timestamp")
             stop_loss_pct = trade.get("stop_loss_pct")
-            new_row = { 'timestamp': open_timestamp, 'current_profit': current_profit, 'pair': pair, "trade_id": tradeid, "stop_loss_pct": stop_loss_pct}
+            new_row = {
+                       'label': "status_table",                  
+                       'timestamp': open_timestamp, 
+                       'current_profit': current_profit, 
+                       'pair': pair, 
+                       "trade_id": tradeid, 
+                       "stop_loss_pct": stop_loss_pct}
             if self.market_status_df.empty:
                 new_rows_df = pd.DataFrame(new_row, index=[0])
             else:
@@ -500,13 +681,36 @@ class LizStrategy(IStrategy):
             self.market_status_df = self.market_status_df._append(new_rows_df)
         return self.market_status_df
 
+    def send_email(self, body):
+        try:
+            enableEmail = self.config['dersalvador']['enable_email_logging']
+            if enableEmail:
+                mail = mt.Mail(
+                    sender=mt.Address(email="mailtrap@demomailtrap.com", name=f"{self.bot_name}: Bot Mail"),
+                    to=[mt.Address(email="filekeys@gmail.com")],
+                    subject=f"{self.bot_name}: Bot Email",
+                    text=body,
+                    category="Integration Test",
+                )
+                client = mt.MailtrapClient(token="50bf8b9214e6cf207cfe6252769ca5e4")
+                client.send(mail)
+            else:
+                self.logme(f"Not send logs to email: enableEmail={enableEmail}")            
+        except Exception as e:
+            print(f'Failed to send email. Error: {str(e)}')
+        
     def hedgeMe(self, pair: str, trade: Trade, current_time: 'datetime', current_rate: float,
                     current_profit: float, dataframe: DataFrame, **kwargs): 
         hedged = False;
         self.logme(f"MSSM: Entering Hedging Logic for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}") 
-        t = self.getJsonTrade(pair)
+        if self.bot_role == "hedger" or self.bot_role == "mixed":
+            t = self.getJsonTrade(pair, self.hedge_bot_api_status)
+        else:
+            t = self.getJsonTrade(pair)
+        
         if t is not None:
             profit_abs = t.get('profit_abs')
+            self.logme(f"Profit via Json API = {profit_abs}, current_profit via freqtrade custom_exit function = {current_profit}")
             # self.logme(dataframe)
             # Exit the trade if it has been more than 5 minutes with a negative profit
             if profit_abs > self.start_profit_abs_positiv or profit_abs < self.start_profit_abs_negative: 
@@ -516,29 +720,42 @@ class LizStrategy(IStrategy):
                 hedged = self.hedgeMeCore(pair, trade, current_time, current_rate, profit_abs, existing_position_on_exchange)
             else:
                 self.logme(f"Filtering profit abs {profit_abs} because is inside range start_profit_abs_negative-start_profit_abs_positiv: {self.start_profit_abs_negative}-{self.start_profit_abs_positiv}")
+        else:
+            self.logme(f"Pair {pair} not found via Json API in bot {self.bot_name}")
         return hedged
 
-    def get_aggregated_dataframe_from_dict(self, key):
-        if key in self.aggregated_dataframe_dict:
-            return self.aggregated_dataframe_dict[key]
+    def get_aggregated_pair_dataframe_from_dict(self, key):
+        if key in self.aggregated_pair_dataframe_dict:
+            return self.aggregated_pair_dataframe_dict[key]
         else:
             empty_df = pd.DataFrame()
-            self.aggregated_dataframe_dict[key] = empty_df
+            self.aggregated_pair_dataframe_dict[key] = empty_df
             return empty_df
 
-    def set_aggregated_dataframe_from_dict(self, key: str, dataframe: pd.DataFrame):
-        self.aggregated_dataframe_dict[key] = dataframe
+    def set_aggregated_pair_dataframe_from_dict(self, key: str, dataframe: pd.DataFrame):
+        self.aggregated_pair_dataframe_dict[key] = dataframe
     
-    def get_market_aggregated_dataframe_from_dict(self, key):
-        if key in self.market_aggregated_dataframe_dict:
-            return self.market_aggregated_dataframe_dict[key]
+    def get_pair_dataframe_from_dict(self, key):
+        if key in self.pair_dataframe_dict:
+            return self.pair_dataframe_dict[key]
         else:
             empty_df = pd.DataFrame()
-            self.market_aggregated_dataframe_dict[key] = empty_df
+            self.pair_dataframe_dict[key] = empty_df
+            return empty_df
+    
+    def set_pair_dataframe_from_dict(self, key: str, dataframe: pd.DataFrame):
+        self.pair_dataframe_dict[key] = dataframe
+    
+    def get_market_aggregated_pair_dataframe_from_dict(self, key):
+        if key in self.market_aggregated_pair_dataframe_dict:
+            return self.market_aggregated_pair_dataframe_dict[key]
+        else:
+            empty_df = pd.DataFrame()
+            self.market_aggregated_pair_dataframe_dict[key] = empty_df
             return empty_df
 
-    def set_market_aggregated_dataframe_from_dict(self, key: str, dataframe: pd.DataFrame):
-        self.market_aggregated_dataframe_dict[key] = dataframe
+    def set_market_aggregated_pair_dataframe_from_dict(self, key: str, dataframe: pd.DataFrame):
+        self.market_aggregated_pair_dataframe_dict[key] = dataframe
     
     def get_stoploss_dataframe_from_dict(self, key):
         if key in self.stoploss_dataframe_dict:
@@ -550,153 +767,273 @@ class LizStrategy(IStrategy):
 
     def set_stoploss_dataframe_from_dict(self, key: str, dataframe: pd.DataFrame):
         self.stoploss_dataframe_dict[key] = dataframe
-    
+       
     def hedgeMeCore(self, pair, trade, current_time, current_rate, profit_abs, existing_position_on_exchange):
         profit_abs = round(profit_abs,2)
+        seconds_past_pair = 0
+        seconds_past_linear_regression = 0
         current_profit = profit_abs
-        if trade.id not in self.trade_start_times:
-            self.trade_start_times[trade.id] = current_time
+        if pair not in self.trade_start_times:
+            self.trade_start_times[pair] = current_time
+        if pair not in self.trigger_linear_regression_adjustment_dict:
+            self.trigger_linear_regression_adjustment_dict[pair] = current_time            
         hedged: bool = False
+        seconds_past_pair = (current_time - self.trade_start_times[pair]).total_seconds()
+        seconds_past_linear_regression = (current_time - self.trigger_linear_regression_adjustment_dict[pair]).total_seconds()
         if  self.hedging_trigger_timeout_seconds > 0: 
-            self.logme(f"Triggering Hedging after {self.hedging_trigger_timeout_seconds} seconds, now: {(current_time - self.trade_start_times[trade.id]).total_seconds()}")
-        if (current_time - self.trade_start_times[trade.id]).total_seconds() >= int(self.hedging_trigger_timeout_seconds):
-            # aggregate market status dataframe to one aggregated dataframe
-            self.populateAggregatedMarketDataframe()            
-            # aggregate pair dataframes to on aggregated dataframe
-            new_row = { 'timestamp': current_time, 'current_profit': current_profit, 'pair': pair, "trade_id": trade.id}
-            self.trade_start_times[trade.id] = current_time
-            if self.trade_profit_dataframe.empty:
-                new_rows_df = pd.DataFrame(new_row, index=[0])
+            self.logme(f"Triggering Hedging after {self.hedging_trigger_timeout_seconds} seconds, seconds past: {seconds_past_pair}")
+        
+        if (seconds_past_linear_regression >= int(self.trigger_linear_regression_adjustment)):
+            self.logme(f"Adjusting linear regression threshold after {self.trigger_linear_regression_adjustment} seconds...")
+            if self.bot_role == "hedger" or self.bot_role == "mixed":
+                self.send_email(f"Triggering linear regression adjustment after {self.trigger_linear_regression_adjustment} seconds")
+            self.adjustLinearRegressionThreshold()
+            for key in self.trigger_linear_regression_adjustment_dict:
+                self.trigger_linear_regression_adjustment_dict[key] = current_time
+        else:
+            self.logme(f"Remaining {self.trigger_linear_regression_adjustment - seconds_past_pair} seconds before adjusting linear threshold adjustment after {self.trigger_linear_regression_adjustment}")
+
+        if seconds_past_pair >= int(self.hedging_trigger_timeout_seconds):
+            # if self.trade_profit_dataframe.empty:
+            #     new_rows_df = pd.DataFrame(new_row, index=[0])
+            # else:            
+            #     new_rows_df = pd.DataFrame(new_row, index=[len(self.trade_profit_dataframe)])            
+            # self.trade_profit_dataframe = self.trade_profit_dataframe._append(new_rows_df)
+                # self.trade_profit_dataframe = self.trade_profit_dataframe._append(self.getStatusTableAsDataframe(), ignore_index=True) 
+                #self.trade_profit_dataframe.reset_index(drop=True)
+                # aggregate market status dataframe to one aggregated dataframe
+                # aggregate pair dataframes to on aggregated dataframe
+            # for key in self.trade_start_times:
+            #     self.trade_start_times[key] = current_time
+            # Check if the label has already been processed
+            self.trade_start_times[pair] = current_time
+            if pair in self.processed_labels:
+                print(f"Label '{pair}' already processed, skipping function execution.")
+                del self.processed_labels[pair]
             else:
-                new_rows_df = pd.DataFrame(new_row, index=[len(self.trade_profit_dataframe['timestamp'])])            
-            self.trade_profit_dataframe = self.trade_profit_dataframe._append(new_rows_df)     
-            pair_dataframe: pd.DataFrame = None           
-            filtered_df: pd.DataFrame = None
-            aggregate_df: pd.DataFrame = None
-            pair_dataframe = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] == pair]
-            pair_dataframe = pair_dataframe.reset_index(drop=True)
-            filtered_df = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] != pair]
-            filtered_df = filtered_df.reset_index(drop=True)
-            self.logme(f"Extracting pair {pair} from dataframe until {self.hedging_profits_check_array_length} elements are reached, now: {len(pair_dataframe)} ")
-            self.dumpCurrentProfitAsArray(pair_dataframe) 
-            if len(pair_dataframe) >= self.hedging_profits_check_array_length:
-                self.populateAggregatedPairDataframe(pair, pair_dataframe)         
-                self.logme(f"++++ Start Profit Abs Dataframe Check Trends ++++++++++++++++++++++")
-                self.logme(f"Checking now profit abs trends for pair {pair}")
-                hedged = self.checkTrends(pair, trade, current_time, current_rate, current_profit, pair_dataframe, existing_position_on_exchange) 
-                self.trade_profit_dataframe = filtered_df
-                self.logCheckEnd(pair, filtered_df)
-                self.logme(f"++++ End Profit Abs Check Trends ++++++++++++++++++++++")
-                self.logme(f"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-            aggregate_df = self.get_aggregated_dataframe_from_dict(pair)
-            if not hedged and len(aggregate_df) >= self.hedging_aggregated_profits_check_array_length:
-                self.logme(f"#### Start AGGREGATED Dataframe Check Trends ############")
-                self.logme(f"Checking Aggregated trends for {pair} in following aggregated dataframe") 
-                self.logme(f"{aggregate_df}")
-                self.set_aggregated_dataframe_from_dict(pair, pd.DataFrame())
-                hedged = self.checkTrends(pair, trade, current_time, current_rate, current_profit, aggregate_df, existing_position_on_exchange) 
-                self.logCheckEnd(pair, aggregate_df)
-                self.logme(f"#### End AGGREGATED Check Trends ############")
-                self.logme(f"#################################################################################################")
+                self.processed_labels[pair] = True
+                thread = threading.Thread(target=self.pair_processing, args=(pair,current_time, current_profit, trade.id,))
+                thread.start()
+            # pair, pair_dataframe, filtered_df, aggregate_df = self.pair_processing(pair)
+            # self.threads.append(thread)                    
+            self.populateAggregatedMarketDataframe(current_time)
+            self.logme(f"Length of aggregated market dataframe={len(self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET))}, maximum configured={self.hedging_pair_profits_check_array_length}")
+            market_aggregrated_df = self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET)
+            market_aggregrated_df = self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET)
+            aggregate_df = self.get_aggregated_pair_dataframe_from_dict(pair)
+            pair_dataframe = self.get_pair_dataframe_from_dict(pair)
+            # if aggregate_df is not None and len(aggregate_df) >= self.hedging_aggregated_pair_profits_check_array_length:
+            if pair_dataframe is not None and len(pair_dataframe) >= self.hedging_pair_profits_check_array_length:
+                if len(market_aggregrated_df) >= self.hedging_market_profits_check_array_length:
+                    self.hedging_market_profits_check_array_length *= -1
+                    market_aggregrated_df = market_aggregrated_df.iloc[self.hedging_market_profits_check_array_length:]
+                self.logme(f"++++ Start Check Trends ++++++++++++++++++++++")
+                self.logme(f"Checking now trends for pair {pair}")
+                pair_dataframe = self.get_pair_dataframe_from_dict(pair)
+                # if pair_dataframe is not None and len(pair_dataframe) >= self.hedging_pair_profits_check_array_length:                
+                hedged = self.checkTrends(pair, trade, current_time, current_rate, current_profit, pair_dataframe, market_aggregrated_df, aggregate_df, existing_position_on_exchange, "pair") 
+                # filtered_df = self.trade_profit_dataframe[self.trade_profit_dataframe['pair'] != pair]
+                # filtered_df = filtered_df.reset_index(drop=True)
+                # self.trade_profit_dataframe = filtered_df
+                self.dumpCurrentProfitAsArray(market_aggregrated_df)
+                self.set_aggregated_pair_dataframe_from_dict(pair, pd.DataFrame())
+                self.set_pair_dataframe_from_dict(pair, pd.DataFrame())
+                self.set_market_aggregated_pair_dataframe_from_dict(Constants.MARKET, pd.DataFrame())
+                # market_aggregrated_df.drop(index=market_aggregrated_df.index, inplace=True)
+                # market_aggregrated_df = self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET)
+                # self.logCheckEnd(pair, filtered_df)
+                pair_dataframe.drop(index=pair_dataframe.index, inplace=True)
+                self.set_pair_dataframe_from_dict(pair, pd.DataFrame())                
+                self.logme(f"++++ End Check Trends ++++++++++++++++++++++")
+                self.logme(f"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")                
+        if hedged:
+            result_market = self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET)['current_profit'].to_string(header=False, index=False).replace('\n', ',')
+            result_pair = pair_dataframe['current_profit'].to_string(header=False, index=False).replace('\n', ',')
+            if self.bot_role == "hedger":
+                self.send_email(f"#################### Successfully hedged Dataframe for Pair {pair}, Pair Dataframe:\n{pair_dataframe}\n" + 
+                                f"Market Dataframe:\n{self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET)}\n" +
+                                f"Aggregated Pair Dataframe:\n{self.get_aggregated_pair_dataframe_from_dict(pair_dataframe.iloc[0]['pair'])}\n"
+                                f"Market Dataframe Array for Jupyter:\n{result_market}\n"
+                                f"Pair Dataframe Array for Jupyter::\n{result_pair}\n"
+                                )
         self.logme(f"Leaving Hedging Modus for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
         return hedged
 
-    def populateAggregatedPairDataframe(self, pair, pair_dataframe):
+    def pair_processing(self, pair, current_time, current_profit, trade_id):
+        # Process the function for the label
+        print(f"Processing function for label '{pair}'")
+        lock = threading.Lock()
+        # Acquire a lock for the label to ensure only one thread processes it
+        try:
+            lock.acquire()
+            self.logme(f"Thread: all positions dataframe")
+            new_row = { 
+                        'label': "pair", 
+                        'timestamp': current_time, 
+                        'current_profit': current_profit, 
+                        'pair': pair, 
+                        "trade_id": trade_id
+                        }            
+            pair_dataframe = self.get_pair_dataframe_from_dict(pair)
+            if pair_dataframe.empty:
+                new_rows_df = pd.DataFrame(new_row, index=[0])
+            else:            
+                new_rows_df = pd.DataFrame(new_row, index=[len(pair_dataframe)])            
+            pair_dataframe = pair_dataframe._append(new_rows_df)
+            self.set_pair_dataframe_from_dict(pair, pair_dataframe)            
+            if pair_dataframe.empty == False and pair_dataframe is not None:
+                pair_dataframe['label'] = "Pair"
+                pair_dataframe = pair_dataframe.reset_index(drop=True)
+                self.logme(f"Thread: {pair} pair dataframe")
+                self.logme(f"Extracting pair {pair} from dataframe until {self.hedging_pair_profits_check_array_length} elements are reached, now: {len(pair_dataframe)} ")
+                self.dumpCurrentProfitAsArray(pair_dataframe)
+                if len(pair_dataframe) >= self.hedging_pair_profits_check_array_length:
+                    self.populateAggregatedPairDataframe(pair, pair_dataframe, current_time)
+                    # pair_dataframe.drop(index=pair_dataframe.index, inplace=True)
+                    # self.set_pair_dataframe_from_dict(pair, pd.DataFrame())
+            else:
+                self.logme(f"Pair dataframe is empty")
+        finally:
+            self.logme(f"Thread pair_processing {pair} is finished")
+            del self.processed_labels[pair]
+            # Release the lock
+            lock.release()
+                    
+        return
+
+    def populateAggregatedPairDataframe(self, pair, pair_dataframe, current_time):
         cumulated_current_profit = pair_dataframe['current_profit'].sum()
         new_aggregate_row = { 
-                    'timestamp': pair_dataframe.iloc[0]['timestamp'], 
+                    'label': "aggregated_pairs", 
+                    'timestamp': current_time, 
                     'current_profit': cumulated_current_profit,
-                    'pair': pair_dataframe.iloc[0]['pair'] 
+                    'pair': pair_dataframe.iloc[0]['pair'], 
+                    'trade_id': pair_dataframe.iloc[0]['trade_id']
                 }
-        aggregate_df = self.get_aggregated_dataframe_from_dict(pair_dataframe.iloc[0]['pair'])
+        aggregate_df = self.get_aggregated_pair_dataframe_from_dict(pair)
         aggregate_df = aggregate_df._append(new_aggregate_row, ignore_index=True)                
-        self.set_aggregated_dataframe_from_dict(pair_dataframe.iloc[0]['pair'], aggregate_df)
+        self.set_aggregated_pair_dataframe_from_dict(pair, aggregate_df)
         self.logme(f"Aggregated Dataframe Length for pair {pair}: {len(aggregate_df)}")
+        self.dumpCurrentProfitAsArray(aggregate_df)
+        return aggregate_df
 
-    def populateAggregatedMarketDataframe(self):
+    def populateAggregatedMarketDataframe(self, current_time):
         status_df = self.getStatusTableAsDataframe()
-        cumulated_market_profit = status_df['current_profit'].sum()
-        new_market_aggregate_row = { 
-                'timestamp': status_df.iloc[0]['timestamp'], 
-                'current_profit': cumulated_market_profit 
-            }
-        market_aggregate_df = self.get_market_aggregated_dataframe_from_dict("market")
-        market_aggregate_df = market_aggregate_df._append(new_market_aggregate_row, ignore_index=True)                
-        self.set_market_aggregated_dataframe_from_dict("market", market_aggregate_df)
+        # Identify indices of rows with lowest and highest current_profit values
+        if not status_df.empty:
+            # lowest_index = status_df['current_profit'].idxmin()
+            # highest_index = status_df['current_profit'].idxmax()
 
-    def logCheckEnd(self, pair, filtered_df):
+            # # Drop rows with lowest and highest values
+            # status_df = status_df.drop([lowest_index, highest_index])        
+            cumulated_market_profit = status_df['current_profit'].sum()
+            new_market_aggregate_row = {
+                    'label': "aggregated_market",                 
+                    'timestamp': current_time, 
+                    'current_profit': cumulated_market_profit 
+                }
+            market_aggregate_df = self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET)
+            market_aggregate_df = market_aggregate_df._append(new_market_aggregate_row, ignore_index=True)                
+            self.set_market_aggregated_pair_dataframe_from_dict(Constants.MARKET, market_aggregate_df)
+            self.logme(f"Aggregated Markt Dataframe with slope value:")
+            self.dumpCurrentProfitAsArray(market_aggregate_df)
+
+    def logCheckEnd(self, pair, df):
         self.logme(f"END of Checking trends for pair {pair}")
         self.logme(f"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        self.logme(f"Filtered out {pair}, remaining dataframe {filtered_df}")
+        self.logme(f"Filtered out {pair}, remaining dataframe")
+        self.dumpCurrentProfitAsArray(df)
         self.logme(f"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     
-    def checkTrends(self, pair, trade, current_time, current_rate, current_profit, pair_dataframe, existing_position_on_exchange):
+    def checkTrends(self, pair, trade, current_time, current_rate, current_profit, pair_dataframe, market_aggregrated_df, aggregate_df, existing_position_on_exchange, infix=""):
         hedged: bool = False
-        trend: bool = False
-        trend, slope = self.detectLinearRegression(pair_dataframe)        
-        if trend == Constants.LINEAR_DECREASING:            
+        trend_pair, slope_pair = self.detectLinearRegression(pair_dataframe, Constants.PAIR)
+        trend_market, slope_market = self.detectLinearRegression(market_aggregrated_df, Constants.MARKET)
+        if self.market_analysis == False:
+            self.logme(f"Market Analysis is disabled")
+            trend_market = trend_pair
+            slope_market = 0
+        trend_pair_aggregated, slope_pair_aggregated = self.detectLinearRegression(aggregate_df, Constants.PAIR)
+        if self.pair_aggregated_analysis == False:
+            self.logme(f"Pair Aggregated Analysis is disabled")
+            trend_pair_aggregated = trend_pair
+            slope_pair_aggregated = 0
+        self.logme(f"Trend Pair {pair}")
+        self.dumpCurrentProfitAsArray(pair_dataframe)
+        self.logme(f"Trend Market")
+        self.dumpCurrentProfitAsArray(market_aggregrated_df)
+        self.logme(f"Trend Pair Aggregated {pair}")
+        self.dumpCurrentProfitAsArray(aggregate_df)
+        self.logme(f"Results: Trend Pair={trend_pair}, Trend Market={trend_market}, Trend Pair Aggregated={trend_pair_aggregated}")
+        if trend_pair == Constants.LINEAR_DECREASING and trend_market == Constants.LINEAR_DECREASING and trend_pair_aggregated == Constants.LINEAR_DECREASING:            
             log.info(f"Found subsequent decreases in current profit, hedging now short for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
             self.logme(f"Analysed pair dataframe going short:")
-            self.logme(f"{pair_dataframe}")
             hedging_direction = "short"
             trade.is_short = False # hedge_me goes now short (opposite)
-            market_trend = self.detectMarketTrend()
-            if market_trend == Constants.LINEAR_DECREASING:
-                hedged = dsHedging.hedge_me(self, trade, pair, existing_position_on_exchange)
-                self.writeDataframeToFile(pair, pair_dataframe, hedging_direction + "_LINEAR_DECREASING", trade, slope)  
-            else:
-                self.logme("Market is not decreasing, so not going short")
-        if trend == Constants.LINEAR_INCREASING:
+            hedged = dsHedging.hedge_me(self, trade, pair, existing_position_on_exchange)
+            self.writeDataframeToFile(pair, pair_dataframe, hedging_direction + "_Pair_LINEAR_DECREASING", slope_pair)  
+            self.writeDataframeToFile(pair, market_aggregrated_df, hedging_direction + "_Market_LINEAR_DECREASING", slope_market)  
+            self.writeDataframeToFile(pair, aggregate_df, hedging_direction + "_Pair_Aggregated_LINEAR_DECREASING", slope_pair_aggregated)  
+        elif trend_pair == Constants.LINEAR_INCREASING and trend_market == Constants.LINEAR_INCREASING and trend_pair_aggregated == Constants.LINEAR_INCREASING:
             log.info(f"Found subsequent rises in current profit, hedging now long for {pair}, current_profit: {current_profit}, current_rate: {current_rate}, timestamp: {current_time}")
-            self.logme(f"Analysed pair dataframe going long:")
-            self.logme(f"{pair_dataframe}")
             hedging_direction = "long"
             trade.is_short = True # hedge_me goes now long (opposite) 
-            market_trend = self.detectMarketTrend()
-            if market_trend == Constants.LINEAR_INCREASING:
-                hedged = dsHedging.hedge_me(self, trade, pair, existing_position_on_exchange)
-                self.writeDataframeToFile(pair, pair_dataframe, hedging_direction + "_LINEAR_INCREASING", trade, slope)  
-            else:
-                self.logme("Market is not increasing, so not going long")
-        if trend == Constants.LINEAR_STABLE:
+            hedged = dsHedging.hedge_me(self, trade, pair, existing_position_on_exchange)
+            self.writeDataframeToFile(pair, pair_dataframe, hedging_direction + "_Pair_LINEAR_INCREASING", slope_pair)  
+            self.writeDataframeToFile(pair, market_aggregrated_df, hedging_direction + "_Market_LINEAR_INCREASING", slope_market)  
+            self.writeDataframeToFile(pair, aggregate_df, hedging_direction + "_Pair_Aggregated_LINEAR_INCREASING", slope_pair_aggregated)  
+        else:
             self.logme(f"Not hedging {pair}, because no patterns found")
-            self.dumpCurrentProfitAsArray(pair_dataframe) 
             hedged = False
-        self.set_market_aggregated_dataframe_from_dict("market", pd.DataFrame())
         return hedged
 
-    def detectMarketTrend(self):
-        market_aggregate_df = self.get_market_aggregated_dataframe_from_dict("market") 
-        self.logme("Checking Global Market Trend on spot bot with following aggregated status dataframe")
-        self.logme(f"{market_aggregate_df}")
-        # self.logme(f"{status_df}")
-        # market_trend = self.check_market_trend(status_df)
-        market_trend, _ = self.detectLinearRegression(market_aggregate_df)
-        self.logme(f"Found following market trend in bot status={market_trend}")
+    def detectMarketTrend(self, key: str):
+        market_aggregate_df = self.get_market_aggregated_pair_dataframe_from_dict(key)
+        market_trend = None
+        if not market_aggregate_df.empty:
+            self.logme("Checking Market Trend from status table on spot bot with following aggregated market dataframe")
+            self.dumpCurrentProfitAsArray(market_aggregate_df)
+            # self.logme(f"{status_df}")
+            # market_trend = self.check_market_trend(status_df)
+            market_trend, _ = self.detectLinearRegression(market_aggregate_df, Constants.MARKET)
+            self.logme(f"Found following market trend in bot status={market_trend}")
+        else:
+            raise Exception(f"Empty Status Table Market Data, create trades first in master bot...")
         return market_trend
 
     def dumpCurrentProfitAsArray(self, dataframe: pd.DataFrame):
+        self.logme("dumpCurrentProfitAsArray")
         self.logme(dataframe)
+        market_trend, slope = self.detectLinearRegression(dataframe, Constants.MARKET)
+        self.logme(f"Slope value: {slope}, Market Trend: {market_trend}")
         result = dataframe['current_profit'].to_string(header=False, index=False).replace('\n', ',')
-        print("[" + result + "]")
+        self.logme("Jupyter Array for Testing: [" + result + "]")
 
-    def writeDataframeToFile(self, pair: str, dataframe: DataFrame, direction: str, trade: Trade, slope):      
+    def writeDataframeToFile(self, pair: str, dataframe: DataFrame, direction: str, slope):      
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         pair = pair.replace("/USDT:USDT", "")
         pair = pair.replace("/USDT", "")
         # Define the file name with timestamp
         slope = "{:.3f}".format(slope)
-        file_name = f"hedged_{pair}_id_{trade.id}_slope_{slope}_{direction}_{timestamp}.csv"
-        file_name_market = f"hedged_{pair}_id_{trade.id}_slope_{slope}_{direction}_{timestamp}_market.csv"
-        file_name_aggregated_market = f"hedged_{pair}_id_{trade.id}_slope_{slope}_{direction}_{timestamp}_aggregated_market.csv"
+        tradeids = ""
+        if 'trade_id' in dataframe.columns:
+            tradeids = dataframe.loc[0, 'trade_id']
+        result = dataframe['current_profit'].to_string(header=False, index=False).replace('\n', ',')
+        file_name = f"hedged_{pair}_id_{tradeids}_slope_{slope}_{direction}_{timestamp}.csv"
+        file_name_array = f"hedged_{pair}_id_{tradeids}_slope_{slope}_{direction}_{timestamp}_jupyter.csv"
+        with open(file_name_array, 'w') as file:
+            # Write a string to the file
+            file.write('[' + result + ']')        
+        # file_name_market = f"hedged_{pair}_id_{tradeids}_slope_{slope}_{direction}_{timestamp}_market.csv"
+        # file_name_aggregated_market = f"hedged_{pair}_id_{tradeids}_slope_{slope}_{direction}_{timestamp}_aggregated_market.csv"
         # Write DataFrame to file
         dataframe.to_csv(file_name, index=True)
-        self.logme(f"Saving market trends as status table to {file_name_market}")
-        status_df = self.getStatusTableAsDataframe()
-        status_df.to_csv(file_name_market, index=True)
-        market_aggregate_df = self.get_market_aggregated_dataframe_from_dict("market")
-        market_aggregate_df.to_csv(file_name_aggregated_market, index=True)
-        self.logme("Found following market trend in bot status={market_trend}")
+        # self.logme(f"Saving market trends as status table to {file_name_market}")
+        # status_df = self.getStatusTableAsDataframe()
+        # status_df.to_csv(file_name_market, index=True)
+        # market_aggregate_df = self.get_market_aggregated_pair_dataframe_from_dict(Constants.MARKET)
+        # market_aggregate_df.to_csv(file_name_aggregated_market, index=True)
+        # self.logme("Found following market trend in bot status={market_trend}")
         self.logme(f"DataFrame written to file: {file_name}")
 
     def getPositionInBinance(self, pair, apikey, apisecret):
@@ -714,25 +1051,44 @@ class LizStrategy(IStrategy):
     #     symbol=pair.split('/')[0]+"USDT"
     #     self.existing_position_on_exchange = positionFetcher.get_futures_position_information(symbol)               
                 
-    def detectLinearRegression(self, df: DataFrame, column: str = "current_profit"):
+    def detectLinearRegression(self, df: DataFrame, domain: Constants, column: str = "current_profit"):
         # Step 2: Perform linear regression using scipy.stats.linregress
-        slope, intercept, r_value, p_value, std_err = linregress(df.index, df[column])
+        slope = None
+        if len(df) > 1: 
+            slope, intercept, r_value, p_value, std_err = linregress(df.index, df[column])
 
-        # Output the slope of the regression line
-        self.logme(f'Slope of the regression line: {slope}')
-
-        # Step 3: Check if the values are decreasing or increasing based on the slope
-        if slope > self.linearRegressionIncreasingThreshold_Start and slope < self.linearRegressionIncreasingThreshold_End:
-            self.logme('Values are increasing')
-            return Constants.LINEAR_INCREASING, slope
-        elif slope < self.linearRegressionDecreasingThreshold_Start and slope > self.linearRegressionDecreasingThreshold_End:
-            self.logme('Values are decreasing')
-            return Constants.LINEAR_DECREASING, slope
-        self.logme(f"detectLinearRegression: No Linear Regression found for pair {df['pair']}")
-        self.logme(f"detectLinearRegression: Current Slope Value: {slope},")
-        self.logme(f"detectLinearRegression: Increase Linear Threshold between: {self.linearRegressionIncreasingThreshold_Start}-{self.linearRegressionIncreasingThreshold_End}")
-        self.logme(f"detectLinearRegression: Decrease Linear Threshold between: {self.linearRegressionDecreasingThreshold_Start}-{self.linearRegressionDecreasingThreshold_End}")
-        self.dumpCurrentProfitAsArray(df)
+            # Output the slope of the regression line
+            self.logme(f'Slope of the regression line: {slope}')
+            linreg_Increasing_Start = 0
+            linreg_Decreasing_Start = 0
+            if domain == Constants.PAIR:
+                linreg_Increasing_Start = self.linearRegressionIncreasingThreshold_Start_Pair
+                linreg_Decreasing_Start = self.linearRegressionDecreasingThreshold_Start_Pair
+                self.logme(f"Using Pair Values for linear Regression, linreg_Increasing_Start={linreg_Increasing_Start}, linreg_Decreasing_Start={linreg_Decreasing_Start}")
+            elif domain == Constants.MARKET:
+                linreg_Increasing_Start = self.linearRegressionIncreasingThreshold_Start_Market
+                linreg_Decreasing_Start = self.linearRegressionDecreasingThreshold_Start_Market
+                self.logme(f"Using Market Values for linear Regression, linreg_Increasing_Start={linreg_Increasing_Start}, linreg_Decreasing_Start={linreg_Decreasing_Start}")
+            else:
+                raise Exception("Slope Ranges not define (linearRegression....)")
+                
+            # Step 3: Check if the values are decreasing or increasing based on the slope
+            if slope > linreg_Increasing_Start and slope < self.linearRegressionIncreasingThreshold_End:
+                self.logme('Values are increasing')
+                return Constants.LINEAR_INCREASING, slope
+            elif slope < linreg_Decreasing_Start and slope > self.linearRegressionDecreasingThreshold_End:
+                self.logme('Values are decreasing')
+                return Constants.LINEAR_DECREASING, slope
+            if 'pair' in df.columns:
+                self.logme(f"detectLinearRegression: No Linear Regression found for pair {df.iloc[0]['pair']}")
+            self.logme(df)
+            self.logme(f"detectLinearRegression: Current Slope Value: {slope},")
+            self.logme(f"detectLinearRegression: Increase Linear Threshold Pair between: {self.linearRegressionIncreasingThreshold_Start_Pair}-{self.linearRegressionIncreasingThreshold_End}")
+            self.logme(f"detectLinearRegression: Decrease Linear Threshold Pair between: {self.linearRegressionDecreasingThreshold_Start_Pair}-{self.linearRegressionDecreasingThreshold_End}")
+            self.logme(f"detectLinearRegression: Increase Linear Threshold Market between: {self.linearRegressionIncreasingThreshold_Start_Market}-{self.linearRegressionIncreasingThreshold_End}")
+            self.logme(f"detectLinearRegression: Decrease Linear Threshold Market between: {self.linearRegressionDecreasingThreshold_Start_Market}-{self.linearRegressionDecreasingThreshold_End}")
+        else:
+            self.logme(f"Cannot calculate slope for dataframe, cause must be more than one row in dataframe")
         return Constants.LINEAR_STABLE, slope
     
     # def check_market_trend(self, df: pd.DataFrame):

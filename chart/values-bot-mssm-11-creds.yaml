@@ -32,29 +32,55 @@ configcreds:
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-11.bot-mssm-11.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/status"
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/profit"
-      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
-      stake_amount: 2000
-      trigger_timeout_seconds: 40
-      profits_check_array_length: 50
-      aggregated_profits_check_array_length: 15
-      market_profits_check_array_length: 100
-      linearRegressionIncreasingThreshold_Start_Pair: 0.01
-      linearRegressionDecreasingThreshold_Start_Pair: -0.01
-      linearRegressionIncreasingThreshold_Start_Market: 0.01
-      linearRegressionDecreasingThreshold_Start_Market: -0.01
+      stake_amount: 1000
+      trigger_timeout_seconds: 27
+      profits_check_array_length: 40
+      aggregated_profits_check_array_length: 27
+      market_profits_check_array_length: 107
+      linearRegressionIncreasingThreshold_Start_Pair: 0.13500000000000004
+      linearRegressionDecreasingThreshold_Start_Pair: -0.13500000000000004
+      linearRegressionIncreasingThreshold_Start_Market: 0.13500000000000004
+      linearRegressionDecreasingThreshold_Start_Market: -0.13500000000000004
       linearRegressionIncreasingThreshold_End: 99999999
       linearRegressionDecreasingThreshold_End: -999999999
       linearRegressionThreshold_Offset_Adjustment_Pair: 0.005
       linearRegressionThreshold_Offset_Adjustment_Market: 0.005
       trigger_linear_regression_adjustment: 600
-      linear_regression_winrate_threshold: 0.8
+      linear_regression_winrate_threshold: 0.6
       market_analysis: true
       pair_aggregated_analysis: false
-      start_profit_abs_positiv: 0.01
-      start_profit_abs_negative: -0.01
+      start_profit_abs_positiv: 0.1
+      start_profit_abs_negative: -0.1
       market_threshold_pct: 0.8
+      # Role: master
+      # API: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-08.bot-mssm-08.svc.cluster.local:8084/api/v1/forceenter
+      # Amount: 2000
+      # Leverage: 10
+      # profits_check_array_length: 40
+      # aggregated_profits_check_array_length: 27
+      # market_profits_check_array_length: 107
+      # trigger_timeout_seconds: 27
+      # bot_username: freqtrade
+      # bot_password: &&Liz270117!!
+      # linearRegressionIncreasingThreshold_Start_Pair: 0.13500000000000004
+      # linearRegressionIncreasingThreshold_Start_Market: 0.13500000000000004
+      # linearRegressionIncreasingThreshold_End: 99999999
+      # linearRegressionDecreasingThreshold_Start_Pair: -0.13500000000000004
+      # linearRegressionDecreasingThreshold_Start_Market: -0.13500000000000004
+      # linearRegressionDecreasingThreshold_End: -999999999
+      # start_profit_abs_positiv: 0.1
+      # start_profit_abs_negative: -0.1
+      # market_analysis: True
+      # pair_aggregated_analysis: False
+      # market_threshold_pct: 0.8
+      # linearRegressionThreshold_Offset_Adjustment_Pair: 0.005
+      # linearRegressionThreshold_Offset_Adjustment_Market: 0.005
+      # trigger_linear_regression_adjustment: 600
+      # linear_regression_winrate_threshold: 0.6
+      # enable_email_logging: False
 
     # hedging:
     #   spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/status"    
@@ -93,17 +119,22 @@ configcreds:
     secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
     name: binance
     pair_whitelist:
-      - JTO/USDT:USDT
       - SOL/USDT:USDT
-      - DOT/USDT:USDT
-      - ETH/USDT:USDT
       - XRP/USDT:USDT
-      - XLM/USDT:USDT
-      - ALGO/USDT:USDT
-      - BTC/USDT:USDT
+      - WIF/USDT:USDT
       - DOGE/USDT:USDT
-      - MATIC/USDT:USDT
+      - AVAX/USDT:USDT
       - LINK/USDT:USDT
+      - BCH/USDT:USDT
+      - NEAR/USDT:USDT
+      - INJ/USDT:USDT
+      - MKR/USDT:USDT
+      - FET/USDT:USDT
+      - TAO/USDT:USDT
+      - FIL/USDT:USDT
+      - ICP/USDT:USDT
+      - IMX/USDT:USDT
+      - STX/USDT:USDT
   pairlists:
     - method: StaticPairList
       mode: whitelist

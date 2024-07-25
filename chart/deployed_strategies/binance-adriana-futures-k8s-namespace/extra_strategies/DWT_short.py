@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-7cd89dcf74-9qhg9 -c freqtrade -- cat /extra_strategies/DWT_short.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f6b69bdc7-zc9nh -c freqtrade -- cat /extra_strategies/DWT_short.py
 import numpy as np
 import scipy.fft
 from scipy.fft import rfft, irfft
