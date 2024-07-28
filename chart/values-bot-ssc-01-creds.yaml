@@ -29,6 +29,7 @@ configcreds:
       stoploss_apikey: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76
       stoploss_apisecret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/status"    
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/show_config"      
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
@@ -36,10 +37,10 @@ configcreds:
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
       leverage: 10
       stake_amount: 2000
-      trigger_timeout_seconds: 15
+      trigger_timeout_seconds: 10
       profits_check_array_length: 40
-      aggregated_profits_check_array_length: 13
-      market_profits_check_array_length: 100
+      aggregated_profits_check_array_length: 50
+      market_profits_check_array_length: 50
       linearRegressionIncreasingThreshold_Start_Pair: 0.1
       linearRegressionDecreasingThreshold_Start_Pair: -0.1
       linearRegressionIncreasingThreshold_Start_Market: 0.1
@@ -51,11 +52,17 @@ configcreds:
       trigger_linear_regression_adjustment: 600
       linear_regression_winrate_threshold: 0.6
       market_analysis: true
-      pair_aggregated_analysis: false
+      pair_aggregated_analysis: true
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
       market_threshold_pct: 0.8
-
+      bullish_threshold_pct: 0.725
+      bearish_threshold_pct: 0.725
+      candle_divisor: 3.0
+      bullish_partial_threshold_pct: 0.725
+      bearish_partial_threshold_pct: 0.725
+      minutesLatestTradeDuration: 120       
+      last_trend_entries: 3  
 
     # hedging:
     #   bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/status"    
