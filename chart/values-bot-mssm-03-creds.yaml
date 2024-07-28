@@ -30,16 +30,17 @@ configcreds:
       stoploss_apisecret: H849ke8KQ5Jr88oPSHbWC3UpslwEfmZH6hek5DTPCxZ49SD3NzSmetQcnUtZmAeg
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/status"
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"       
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/show_config"      
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
       stake_amount: 2000
-      trigger_timeout_seconds: 30
-      profits_check_array_length: 40
-      aggregated_profits_check_array_length: 22
-      market_profits_check_array_length: 100
+      trigger_timeout_seconds: 20
+      profits_check_array_length: 20
+      aggregated_profits_check_array_length: 20
+      market_profits_check_array_length: 20
       linearRegressionIncreasingThreshold_Start_Pair: 0.1
       linearRegressionDecreasingThreshold_Start_Pair: -0.1
       linearRegressionIncreasingThreshold_Start_Market: 0.1
@@ -51,10 +52,17 @@ configcreds:
       trigger_linear_regression_adjustment: 600
       linear_regression_winrate_threshold: 0.7
       market_analysis: true
-      pair_aggregated_analysis: false
-      start_profit_abs_positiv: 0.01
-      start_profit_abs_negative: -0.01
+      pair_aggregated_analysis: true
+      start_profit_abs_positiv: 0.00001
+      start_profit_abs_negative: -0.00001
       market_threshold_pct: 0.8
+      bullish_threshold_pct: 0.7
+      bearish_threshold_pct: 0.7
+      candle_divisor: 3.0
+      bullish_partial_threshold_pct: 0.75
+      bearish_partial_threshold_pct: 0.75
+      minutesLatestTradeDuration: 120       
+      last_trend_entries: 3  
   trading_mode: futures
   margin_mode: isolated
   available_capital: 500000

@@ -15,7 +15,54 @@ configcreds:
     min_trade_number: 5
     max_trade_duration_minute: 7440
     remove_pumps: false
-    hoursInThePast: "-8760h" # 1 year  
+    hoursInThePast: "-8760h" # 1 year 
+  dersalvador:
+    database_path: "/sqlite/tradesv3.sqlite"
+    enable_email_logging: true
+    ds_downloaddata:
+      enable: true
+      days: 365
+    hedging:
+      role: hedger
+      apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+      stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN
+      stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
+      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-11.bot-mssm-11.svc.cluster.local:8084/api/v1/status"
+      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-11.bot-mssm-11.svc.cluster.local:8084/api/v1/forceenter"
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/show_config"      
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/profit"
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      leverage: 10
+      stake_amount: 1000
+      trigger_timeout_seconds: 10
+      profits_check_array_length: 30
+      aggregated_profits_check_array_length: 100
+      market_profits_check_array_length: 100
+      linearRegressionIncreasingThreshold_Start_Pair: 0.13500000000000004
+      linearRegressionDecreasingThreshold_Start_Pair: -0.13500000000000004
+      linearRegressionIncreasingThreshold_Start_Market: 0.13500000000000004
+      linearRegressionDecreasingThreshold_Start_Market: -0.13500000000000004
+      linearRegressionIncreasingThreshold_End: 99999999
+      linearRegressionDecreasingThreshold_End: -999999999
+      linearRegressionThreshold_Offset_Adjustment_Pair: 0.005
+      linearRegressionThreshold_Offset_Adjustment_Market: 0.005
+      trigger_linear_regression_adjustment: 600
+      linear_regression_winrate_threshold: 0.6
+      market_analysis: true
+      pair_aggregated_analysis: true
+      start_profit_abs_positiv: 0.00001
+      start_profit_abs_negative: -0.00001
+      market_threshold_pct: 0.8
+      bullish_threshold_pct: 0.7
+      bearish_threshold_pct: 0.7
+      candle_divisor: 3.0
+      bullish_partial_threshold_pct: 0.75
+      bearish_partial_threshold_pct: 0.75
+      minutesLatestTradeDuration: 120 
+      last_trend_entries: 3
     # listdata:
     #   enable: false
     # downloaddata:
@@ -202,4 +249,4 @@ configcreds:
     token: 6632710647:AAF62LDqnrHf83KIIeSAtqsr6mgB6aKeL3Y # 7020581178:AAGN2KOhJ3jCCXL_0p8s77uKo_5YPgICB1Y # "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     chat_id: "1759706931" # "6274423445"
 bot:
-  strategy_name: DoesNothingStrategy
+  strategy_name: LizStrategy

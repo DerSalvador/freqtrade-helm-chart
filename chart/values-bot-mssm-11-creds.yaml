@@ -30,16 +30,17 @@ configcreds:
       stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-11.bot-mssm-11.svc.cluster.local:8084/api/v1/status"
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-11.bot-mssm-11.svc.cluster.local:8084/api/v1/forceenter"
-      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/status"
-      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/profit"
-      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/show_config"      
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/profit"
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      leverage: 10
-      stake_amount: 1000
-      trigger_timeout_seconds: 27
-      profits_check_array_length: 40
-      aggregated_profits_check_array_length: 27
-      market_profits_check_array_length: 107
+      leverage: 1
+      stake_amount: 100
+      trigger_timeout_seconds: 8
+      profits_check_array_length: 8
+      aggregated_profits_check_array_length: 8
+      market_profits_check_array_length: 8
       linearRegressionIncreasingThreshold_Start_Pair: 0.13500000000000004
       linearRegressionDecreasingThreshold_Start_Pair: -0.13500000000000004
       linearRegressionIncreasingThreshold_Start_Market: 0.13500000000000004
@@ -50,56 +51,18 @@ configcreds:
       linearRegressionThreshold_Offset_Adjustment_Market: 0.005
       trigger_linear_regression_adjustment: 600
       linear_regression_winrate_threshold: 0.6
-      market_analysis: true
-      pair_aggregated_analysis: false
-      start_profit_abs_positiv: 0.1
-      start_profit_abs_negative: -0.1
+      market_analysis: false
+      pair_aggregated_analysis: true
+      start_profit_abs_positiv: 0.00001
+      start_profit_abs_negative: -0.00001
       market_threshold_pct: 0.8
-      # Role: master
-      # API: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-08.bot-mssm-08.svc.cluster.local:8084/api/v1/forceenter
-      # Amount: 2000
-      # Leverage: 10
-      # profits_check_array_length: 40
-      # aggregated_profits_check_array_length: 27
-      # market_profits_check_array_length: 107
-      # trigger_timeout_seconds: 27
-      # bot_username: freqtrade
-      # bot_password: &&Liz270117!!
-      # linearRegressionIncreasingThreshold_Start_Pair: 0.13500000000000004
-      # linearRegressionIncreasingThreshold_Start_Market: 0.13500000000000004
-      # linearRegressionIncreasingThreshold_End: 99999999
-      # linearRegressionDecreasingThreshold_Start_Pair: -0.13500000000000004
-      # linearRegressionDecreasingThreshold_Start_Market: -0.13500000000000004
-      # linearRegressionDecreasingThreshold_End: -999999999
-      # start_profit_abs_positiv: 0.1
-      # start_profit_abs_negative: -0.1
-      # market_analysis: True
-      # pair_aggregated_analysis: False
-      # market_threshold_pct: 0.8
-      # linearRegressionThreshold_Offset_Adjustment_Pair: 0.005
-      # linearRegressionThreshold_Offset_Adjustment_Market: 0.005
-      # trigger_linear_regression_adjustment: 600
-      # linear_regression_winrate_threshold: 0.6
-      # enable_email_logging: False
-
-    # hedging:
-    #   spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/status"    
-    #   hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status"    
-    #   hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-    #   stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-    #   # hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-    #   leverage: 10
-    #   stake_amount: 2000
-    #   apikey: "b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm"
-    #   apisecret: "tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov"   
-    #   trigger_timeout_seconds: 60
-    #   current_profits_check_array_length: 30
-    #   linearRegressionIncreasingThreshold_Start: 0.06
-    #   linearRegressionIncreasingThreshold_End: 0.5
-    #   linearRegressionDecreasingThreshold_Start: -0.06
-    #   linearRegressionDecreasingThreshold_End: -0.5
-    #   start_profit_abs_positiv: 0.01
-    #   start_profit_abs_negative: -0.01
+      bullish_threshold_pct: 0.6749999999999999
+      bearish_threshold_pct: 0.6749999999999999
+      candle_divisor: 3.0
+      bullish_partial_threshold_pct: 0.725
+      bearish_partial_threshold_pct: 0.725
+      minutesLatestTradeDuration: 120
+      last_trend_entries: 3  
   available_capital: 500000
   max_open_trades: 100
   use_custom_stoploss: true
