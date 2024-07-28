@@ -18,6 +18,7 @@
               "MATIC/USDT:USDT",
               "LINK/USDT:USDT",
               "GMX/USDT:USDT",
+              "ADA/USDT:USDT",
               "NEAR/USDT:USDT"
             ],
     "refresh_period": 900

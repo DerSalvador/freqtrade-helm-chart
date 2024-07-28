@@ -3,58 +3,64 @@ kubernetes:
   nodeNameBackTestingResultsReader: dynamicValues1
   copyContainer: true
 
-nostalgiaforinfinity:
-  holdtrades:
-    trade_pairs:
-      BTC/USDT: 0.3
-      ETH/USDT: 0.3
-      ADA/USDT: 0.1
-      ALGO/USDT: 0.1
-      APE/USDT: 0.1
-      ATOM/USDT: 0.1
-      AVAX/USDT: 0.1
-      BCH/USDT: 0.1
-      DAI/USDT: 0.1
-      DOGE/USDT: 0.1
-      DOT/USDT: 0.1
-      EOS/USDT: 0.1
-      EURT/USDT: 0.1
-      LINK/USDT: 0.1
-      LTC/USDT: 0.1
-      MANA/USDT: 0.1
-      MATIC/USDT: 0.1
-      SHIB/USDT: 0.1
-      SOL/USDT: 0.1
-      USDC/USDT: 0.1
-      USTC/USDT: 0.1
-      XMR/USDT: 0.1
-      XRP/USDT: 0.1
-      XTZ/USDT: 0.1
-
-dersalvador:
-  database_path: "/sqlite/tradesv3.sqlite"
-  enable_email_logging: false
-  ds_listdata:
-    enable: false
-  ds_downloaddata:
-    enable: false
-    days: 7
-    pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
-  ds_hyperopt:
-    enable: false
-    enableprotections: true
-    hyperlossfunction: ShortTradeDurHyperOptLoss
-    # "ShortTradeDurHyperOptLoss SharpeHyperOptLoss SharpeHyperOptLossDaily 
-    # SortinoHyperOptLoss SortinoHyperOptLossDaily CalmarHyperOptLoss MaxDrawDownHyperOptLoss 
-    # MaxDrawDownRelativeHyperOptLoss ProfitDrawDownHyperOptLoss OnlyProfitHyperOptLoss"
-    hoursInThePast: -48h
-  ds_backtesting:
-    enable: false
-    exportType: signals # {none,trades,signals}
-    # one week ago
-    hoursInThePast: -48h
-    # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
-    # One year back
-    # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
-
-
+configcreds:
+  edge:
+    enabled: false
+    process_throttle_secs: 3600
+    calculate_since_number_of_days: 365
+    allowed_risk: 0.00
+    stoploss_range_min: -0.01
+    stoploss_range_max: -0.1
+    stoploss_range_step: -0.01
+    minimum_winrate: 0.01
+    minimum_expectancy: 0.08
+    min_trade_number: 1000
+    max_trade_duration_minute: 7440
+    remove_pumps: false
+    hoursInThePast: "-8760h" # 1 year      
+  dersalvador:
+    database_path: "/sqlite/tradesv3.sqlite"
+    enable_email_logging: true
+    ds_downloaddata:
+      enable: true
+      days: 365
+    hedging:
+      trigger_timeout_seconds: 30
+      profits_check_array_length: 30
+      aggregated_profits_check_array_length: 30
+      aggregated_pair_profits_check_array_length: 30
+      market_profits_check_array_length: 30
+      trigger_threshold_adjustment: 2400
+      market_analysis: true
+      pair_aggregated_analysis: true
+      start_profit_abs_positiv: 0.00001
+      start_profit_abs_negative: -0.00001
+      bullish_threshold_pct: 0.7
+      bearish_threshold_pct: 0.7
+      candle_divisor: 3.0
+      bullish_partial_threshold_pct: 0.75
+      bearish_partial_threshold_pct: 0.75
+      minutesLatestTradeDuration: 180     
+      last_trend_entries: 3  
+    ds_listdata:
+      enable: false
+    ds_downloaddata:
+      enable: false
+      days: 7
+      pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
+    ds_hyperopt:
+      enable: false
+      enableprotections: true
+      hyperlossfunction: ShortTradeDurHyperOptLoss
+      # "ShortTradeDurHyperOptLoss SharpeHyperOptLoss SharpeHyperOptLossDaily 
+      # SortinoHyperOptLoss SortinoHyperOptLossDaily CalmarHyperOptLoss MaxDrawDownHyperOptLoss 
+      # MaxDrawDownRelativeHyperOptLoss ProfitDrawDownHyperOptLoss OnlyProfitHyperOptLoss"
+      hoursInThePast: -48h
+    ds_backtesting:
+      enable: false
+      exportType: signals # {none,trades,signals}
+      # one week ago
+      hoursInThePast: -48h
+      # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
+      # One year back
+      # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
