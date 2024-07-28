@@ -21,9 +21,6 @@ configcreds:
   dersalvador:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: true
-    ds_downloaddata:
-      enable: true
-      days: 365
     hedging:
       trigger_timeout_seconds: 30
       profits_check_array_length: 30
