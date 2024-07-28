@@ -9,10 +9,10 @@ configcreds:
       stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-11.bot-mssm-11.svc.cluster.local:8084/api/v1/status"
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-11.bot-mssm-11.svc.cluster.local:8084/api/v1/forceenter"
-      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/show_config"      
-      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/status"
-      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/profit"
-      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-12.bot-mssm-12.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/show_config"      
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/profit"
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
       stake_amount: 1000

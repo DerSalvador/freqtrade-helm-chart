@@ -9,9 +9,9 @@ configcreds:
       stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/status"
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/forceenter"
-      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/show_config"      
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/show_config"
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
-      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"      
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/forceenter"
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
@@ -22,6 +22,6 @@ configcreds:
   bot_name: bot-mssm-06
   telegram:
     enabled: true
-    token: 7035160448:AAFYWeozmkF4yPtTHlNn8XCA7MaVJyOyMdI 
+    token: 7035160448:AAFYWeozmkF4yPtTHlNn8XCA7MaVJyOyMdI
     chat_id: "1759706931"
 ...

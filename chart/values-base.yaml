@@ -49,15 +49,9 @@ configcreds:
       enable: false
       enableprotections: true
       hyperlossfunction: ShortTradeDurHyperOptLoss
-      # "ShortTradeDurHyperOptLoss SharpeHyperOptLoss SharpeHyperOptLossDaily 
-      # SortinoHyperOptLoss SortinoHyperOptLossDaily CalmarHyperOptLoss MaxDrawDownHyperOptLoss 
-      # MaxDrawDownRelativeHyperOptLoss ProfitDrawDownHyperOptLoss OnlyProfitHyperOptLoss"
       hoursInThePast: -48h
     ds_backtesting:
       enable: false
       exportType: signals # {none,trades,signals}
       # one week ago
       hoursInThePast: -48h
-      # timerage: {{ now | dateModify "-168h" | date "20060102"  }}-{{ now | date "20060102" }}
-      # One year back
-      # timerage: {{ now | dateModify "-8766h" | date "20060102"  }}-{{ now | date "20060102" }}
