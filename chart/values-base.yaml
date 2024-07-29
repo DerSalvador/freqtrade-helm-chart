@@ -2,7 +2,6 @@
 kubernetes:
   nodeNameBackTestingResultsReader: dynamicValues1
   copyContainer: true
-
 configcreds:
   edge:
     enabled: false
@@ -22,23 +21,28 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: true
     hedging:
-      trigger_timeout_seconds: 30
-      profits_check_array_length: 30
-      aggregated_profits_check_array_length: 30
-      aggregated_pair_profits_check_array_length: 30
-      market_profits_check_array_length: 30
+      apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov   
+      leverage: 10
+      stake_amount: 2000       
+      trigger_timeout_seconds: 10
+      profits_check_array_length: 50
+      aggregated_pair_profits_check_array_length: 10
+      market_profits_check_array_length: 100
       trigger_threshold_adjustment: 2400
       market_analysis: true
       pair_aggregated_analysis: true
       start_profit_abs_positiv: 0.00001
       start_profit_abs_negative: -0.00001
-      bullish_threshold_pct: 0.7
-      bearish_threshold_pct: 0.7
-      candle_divisor: 3.0
+      bullish_threshold_pct: 0.725
+      bearish_threshold_pct: 0.725
+      candle_divisor: 3
       bullish_partial_threshold_pct: 0.75
       bearish_partial_threshold_pct: 0.75
-      minutesLatestTradeDuration: 180     
-      last_trend_entries: 3  
+      minutesLatestTradeDuration: 180
+      last_trend_entries: 5
+      bullish_threshold_pct_offset: 0.00025
+      bearish_threshold_pct_offset: 0.00025
     ds_listdata:
       enable: false
     ds_downloaddata:
