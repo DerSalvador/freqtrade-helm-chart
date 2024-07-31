@@ -18,6 +18,15 @@ configcreds:
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       leverage: 10
       stake_amount: 2000
+      hedging_trigger_timeout_seconds: 11
+      trigger_threshold_adjustment: 600
+      minutesLatestTradeDuration: 60
+      # Candle Lengths
+      profits_check_array_length: 35
+      aggregated_pair_profits_check_array_length: 9
+      market_profits_check_array_length: 25
+      # Dataframe Analysis
+      market_analysis: true      
   minimal_roi:
     "0": 0.99
   stoploss: -0.99

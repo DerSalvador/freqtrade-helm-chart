@@ -2,6 +2,8 @@
 kubernetes:
   nodePort: 32335
 configcreds:
+  trading_mode: futures
+  margin_mode: isolated
   dersalvador:
     hedging:
       role: hedger
