@@ -43,11 +43,11 @@ configcreds:
   dry_run_wallet: 50000
   timeframe: 5m
   available_capital: 50000
-  max_open_trades: 100
+  max_open_trades: 0
   stake_amount: unlimited
   minimal_roi:
-    "0": 0.1
-  stoploss: -0.11
+    "0": 0.99
+  stoploss: -0.99
   download_trades: false
   use_custom_stoploss: true
   use_exit_signal: true

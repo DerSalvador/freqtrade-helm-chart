@@ -18,14 +18,14 @@ configcreds:
     hoursInThePast: "-8760h" # 1 year  
   dry_run: true
   dry_run_wallet: 50000
-  max_open_trades: 100
+  max_open_trades: 0
   available_capital: 50000
   stake_amount: unlimited
   leverage: 4
   position_adjustment_enable: false
   minimal_roi:
-    "0": 0.1
-  stoploss: -0.11
+    "0": 0.99
+  stoploss: -0.99
   download_trades: false
   use_custom_stoploss: true
   use_exit_signal: true
