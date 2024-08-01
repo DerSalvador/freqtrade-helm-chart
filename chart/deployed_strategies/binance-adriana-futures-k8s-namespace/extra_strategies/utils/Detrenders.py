@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f6b69bdc7-zc9nh -c freqtrade -- cat /extra_strategies/utils/Detrenders.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-55cb57df55-dhrkz -c freqtrade -- cat /extra_strategies/utils/Detrenders.py
 # Utilities for de-/re-trending a signal
 
 # Note that there are several ways to detrend a signal. However, the best ways are also compute intensive, or cause a delay

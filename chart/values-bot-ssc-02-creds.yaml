@@ -14,7 +14,6 @@ configcreds:
       hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/show_config"      
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/profit"
       leverage: 10
       stake_amount: 2000

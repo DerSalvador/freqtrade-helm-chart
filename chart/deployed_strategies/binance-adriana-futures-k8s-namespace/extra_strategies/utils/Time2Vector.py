@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f6b69bdc7-zc9nh -c freqtrade -- cat /extra_strategies/utils/Time2Vector.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-55cb57df55-dhrkz -c freqtrade -- cat /extra_strategies/utils/Time2Vector.py
 import numpy as np
 import pandas as pd
 import os, datetime
