@@ -157,13 +157,13 @@ config:
     ]
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 1000
+      rateLimit: 2500
       options:
         defaultType: future
         leverage: 1
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 1000
+      rateLimit: 2500
       options:
         defaultType: future
         leverage: 1 

@@ -18,10 +18,10 @@ configcreds:
       leverage: 10
       stake_amount: 2000
       hedging_trigger_timeout_seconds: 10
-      trigger_threshold_adjustment: 300
-      minutesLatestTradeDuration: 30
+      trigger_threshold_adjustment: 100
+      minutesLatestTradeDuration: 10
       # Candle Lengths
-      profits_check_array_length: 30
+      profits_check_array_length: 10
       aggregated_pair_profits_check_array_length: 10
       market_profits_check_array_length: 20
       # Dataframe Analysis

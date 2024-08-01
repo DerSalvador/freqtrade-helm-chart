@@ -25,7 +25,8 @@ configcreds:
       aggregated_pair_profits_check_array_length: 7
       market_profits_check_array_length: 35
       # Dataframe Analysis
-      market_analysis: true      
+      market_analysis: false
+      pair_aggregated_analysis: false       
   minimal_roi:
     "0": 0.99
   stoploss: -0.99

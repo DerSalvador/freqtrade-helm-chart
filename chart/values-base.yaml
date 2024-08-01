@@ -26,27 +26,27 @@ configcreds:
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov  
       leverage: 10
       stake_amount: 2000
-      minimal_hedging_stoploss_length: 50
-      hedging_stoploss_length: 500
+      minimal_hedging_stoploss_length: 5
+      hedging_stoploss_length: 10
       # Minimal Threshold 
-      minimal_trigger_threshold_adjustment: 10
-      trigger_threshold_adjustment: 600
-      minimal_hedging_trigger_timeout_seconds: 10
-      hedging_trigger_timeout_seconds: 10
+      minimal_trigger_threshold_adjustment: 2
+      trigger_threshold_adjustment: 5
+      minimal_hedging_trigger_timeout_seconds: 2
+      hedging_trigger_timeout_seconds: 2
       minimal_last_trend_entries: 3
       last_trend_entries: 5
-      minimal_hedging_pair_profits_check_array_length: 6
-      profits_check_array_length: 20
-      minimal_hedging_aggregated_pair_profits_check_array_length: 8
-      aggregated_pair_profits_check_array_length: 20
-      minimal_hedging_market_profits_check_array_length: 8
-      market_profits_check_array_length: 40
-      minimal_bullish_threshold_pct: 0.5
+      minimal_hedging_pair_profits_check_array_length: 2
+      profits_check_array_length: 5
+      minimal_hedging_aggregated_pair_profits_check_array_length: 2
+      aggregated_pair_profits_check_array_length: 5
+      minimal_hedging_market_profits_check_array_length: 2
+      market_profits_check_array_length: 5
+      minimal_bullish_threshold_pct: 0.4
       bullish_threshold_pct: 0.7
-      minimal_bearish_threshold_pct: 0.5
+      minimal_bearish_threshold_pct: 0.4
       bearish_threshold_pct: 0.7
       # Timeout     
-      minutesLatestTradeDuration: 60
+      minutesLatestTradeDuration: 1
       # Candle Lengths
       # Dataframe Analysis
       market_analysis: true
@@ -54,9 +54,9 @@ configcreds:
       # Bullish or Bearish Thresholds
       start_profit_abs_positiv: 0.00001
       start_profit_abs_negative: -0.00001
-      candle_divisor: 3
-      bullish_partial_threshold_pct: 0.75
-      bearish_partial_threshold_pct: 0.75
+      candle_divisor: 1
+      bullish_partial_threshold_pct: 0.5
+      bearish_partial_threshold_pct: 0.5
       bullish_threshold_pct_offset: 0.01
       bearish_threshold_pct_offset: 0.01
       # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
