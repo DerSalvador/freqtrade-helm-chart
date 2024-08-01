@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-59fcd6954f-hzxnb -c freqtrade -- cat /extra_strategies/utils/CompressionAutoEncoder.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-64f97687bf-wn6d6 -c freqtrade -- cat /extra_strategies/utils/CompressionAutoEncoder.py
 # class that implements an Auto-Encoder for dimensional reduction of a panda dataframe
 # This can be used as-is, and can also be sub-classed - just override the build_model function and create
 # different encoder and decoder variables

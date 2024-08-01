@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f6b69bdc7-zc9nh -c freqtrade -- cat /extra_strategies/utils/DataframePopulator.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-55cb57df55-dhrkz -c freqtrade -- cat /extra_strategies/utils/DataframePopulator.py
 #
 # This is a set of functions used to populate the indicators in a dataframe
 # They are in a seperate file because I use the same set of indicators across several types of strategies, so it's
