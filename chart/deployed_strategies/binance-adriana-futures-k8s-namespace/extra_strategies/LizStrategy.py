@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-64f97687bf-wn6d6 -c freqtrade -- cat /extra_strategies/LizStrategy.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-55cb57df55-dhrkz -c freqtrade -- cat /extra_strategies/LizStrategy.py
 # --- Do not remove these libs ---
 from freqtrade.strategy import IStrategy
 from freqtrade.strategy import CategoricalParameter, IntParameter
@@ -482,7 +482,7 @@ class LizStrategy(IStrategy):
                 newstoploss += 0.01
             if newstoploss < -0.5:
                 newstoploss = -0.5
-            if newstoploss >= 0:
+            if newstoploss > 0:
                 newstoploss = -0.1
             self.logme(f"Setting new stoploss pct to {newstoploss} based on config stoploss {self.config['stoploss']} and current_profit {current_profit} with offset 0.01, for pair {pair} in bot {self.bot_name}")
             self.pair_stoploss_dict[pair] = newstoploss

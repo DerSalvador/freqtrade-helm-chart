@@ -14,16 +14,15 @@ configcreds:
       hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/show_config"      
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ssc-02.bot-ssc-02.svc.cluster.local:8084/api/v1/profit"
       leverage: 10
       stake_amount: 2000
-      hedging_trigger_timeout_seconds: 20
-      profits_check_array_length: 50
-      aggregated_pair_profits_check_array_length: 10
+      hedging_trigger_timeout_seconds: 8
+      profits_check_array_length: 70
+      aggregated_pair_profits_check_array_length: 8
       market_profits_check_array_length: 50
       trigger_threshold_adjustment: 600
-      market_analysis: true
+      market_analysis: false
       pair_aggregated_analysis: false
       start_profit_abs_positiv: 0.00001
       start_profit_abs_negative: -0.00001
@@ -33,7 +32,7 @@ configcreds:
       bullish_partial_threshold_pct: 0.75
       bearish_partial_threshold_pct: 0.75
       minutesLatestTradeDuration: 180
-      last_trend_entries: 3
+      last_trend_entries: 8
       bullish_threshold_pct_offset: 0.05
       bearish_threshold_pct_offset: 0.05
   minimal_roi:

@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-59fcd6954f-hzxnb -c freqtrade -- cat /extra_strategies/utils/TrainingSignals.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-64f97687bf-wn6d6 -c freqtrade -- cat /extra_strategies/utils/TrainingSignals.py
 # pylint: disable=C0103,C0114,C0301,C0116,C0413,C0115,W0611,W0613
 
 # This is a set of utilities for getting training signal (buy/sell) events

@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-f6b69bdc7-zc9nh -c freqtrade -- cat /extra_strategies/utils/DataframeUtils.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-adriana-futures exec -it pod/freqtrade-binance-adriana-futures-55cb57df55-dhrkz -c freqtrade -- cat /extra_strategies/utils/DataframeUtils.py
 # utility set of funcs for manipulating dataframes & tensors
 # Note: this is a class, so you need to instantiate an object to use the functions here. The reason for this is
 # that we can then run multiple strategies simultaneously - if everything were to be static, one strat could reset

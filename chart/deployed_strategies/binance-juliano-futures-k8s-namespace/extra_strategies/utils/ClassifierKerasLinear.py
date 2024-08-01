@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-59fcd6954f-hzxnb -c freqtrade -- cat /extra_strategies/utils/ClassifierKerasLinear.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-64f97687bf-wn6d6 -c freqtrade -- cat /extra_strategies/utils/ClassifierKerasLinear.py
 # base class that implements Neural Network Binary Classifier.
 # This class implements a keras classifier that provides a linear result (i.e. floats)
 # subclasses should override the create_model() method

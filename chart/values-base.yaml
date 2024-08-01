@@ -23,31 +23,44 @@ configcreds:
     hedging:
       hedging_version: 0.2.1
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
-      apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov   
+      apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov  
       leverage: 10
       stake_amount: 2000
-      # Timeout     
-      hedging_trigger_timeout_seconds: 10
+      minimal_hedging_stoploss_length: 50
+      hedging_stoploss_length: 500
+      # Minimal Threshold 
+      minimal_trigger_threshold_adjustment: 10
       trigger_threshold_adjustment: 600
+      minimal_hedging_trigger_timeout_seconds: 10
+      hedging_trigger_timeout_seconds: 10
+      minimal_last_trend_entries: 3
+      last_trend_entries: 5
+      minimal_hedging_pair_profits_check_array_length: 6
+      profits_check_array_length: 20
+      minimal_hedging_aggregated_pair_profits_check_array_length: 8
+      aggregated_pair_profits_check_array_length: 20
+      minimal_hedging_market_profits_check_array_length: 8
+      market_profits_check_array_length: 40
+      minimal_bullish_threshold_pct: 0.5
+      bullish_threshold_pct: 0.7
+      minimal_bearish_threshold_pct: 0.5
+      bearish_threshold_pct: 0.7
+      # Timeout     
       minutesLatestTradeDuration: 60
       # Candle Lengths
-      profits_check_array_length: 20
-      aggregated_pair_profits_check_array_length: 20
-      market_profits_check_array_length: 100
       # Dataframe Analysis
       market_analysis: true
       pair_aggregated_analysis: true
       # Bullish or Bearish Thresholds
       start_profit_abs_positiv: 0.00001
       start_profit_abs_negative: -0.00001
-      bullish_threshold_pct: 0.7
-      bearish_threshold_pct: 0.7
       candle_divisor: 3
       bullish_partial_threshold_pct: 0.75
       bearish_partial_threshold_pct: 0.75
-      last_trend_entries: 5
       bullish_threshold_pct_offset: 0.01
       bearish_threshold_pct_offset: 0.01
+      # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
     ds_listdata:
       enable: false
     ds_downloaddata:

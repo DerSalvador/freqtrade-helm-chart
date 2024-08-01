@@ -1,4 +1,4 @@
-kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-59fcd6954f-hzxnb -c freqtrade -- cat /extra_strategies/utils/Detrenders.py
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n binance-juliano-futures exec -it pod/freqtrade-binance-juliano-futures-64f97687bf-wn6d6 -c freqtrade -- cat /extra_strategies/utils/Detrenders.py
 # Utilities for de-/re-trending a signal
 
 # Note that there are several ways to detrend a signal. However, the best ways are also compute intensive, or cause a delay
