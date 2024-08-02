@@ -23,7 +23,8 @@ configcreds:
     hedging:
       hedging_version: 0.2.1
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
-      apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov  
+      apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+      exit_on_profit: false
       leverage: 10
       stake_amount: 2000
       minimal_hedging_stoploss_length: 5
@@ -45,6 +46,9 @@ configcreds:
       bullish_threshold_pct: 0.7
       minimal_bearish_threshold_pct: 0.4
       bearish_threshold_pct: 0.7
+      macd_short_window:  6
+      macd_long_window: 26
+      macd_signal_window: 9          
       # Timeout     
       minutesLatestTradeDuration: 1
       # Candle Lengths
