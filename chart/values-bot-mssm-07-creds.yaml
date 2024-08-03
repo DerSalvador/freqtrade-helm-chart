@@ -23,6 +23,7 @@ configcreds:
       # Candle Lengths
       profits_check_array_length: 45
       aggregated_pair_profits_check_array_length: 7
+      minimal_hedging_aggregated_pair_profits_check_array_length: 5      
       market_profits_check_array_length: 35
       # Dataframe Analysis
       market_analysis: false
