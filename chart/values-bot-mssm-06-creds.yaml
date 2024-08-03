@@ -15,8 +15,7 @@ configcreds:
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/forceenter"
-      leverage: 10
-      stake_amount: 2000
+      exit_on_profit: true
   minimal_roi:
     "0": 0.09
   stoploss: -0.20
