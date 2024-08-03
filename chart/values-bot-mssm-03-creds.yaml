@@ -19,7 +19,39 @@ configcreds:
       stake_amount: 2000
       # Dataframe Analysis
       market_analysis: true
-      pair_aggregated_analysis: false         
+      pair_aggregated_analysis: true
+      minimal_hedging_stoploss_length: 40
+      hedging_stoploss_length: 100
+      # Minimal Threshold 
+      minimal_trigger_threshold_adjustment: 10
+      trigger_threshold_adjustment: 60
+      minimal_hedging_trigger_timeout_seconds: 20
+      hedging_trigger_timeout_seconds: 60
+      minimal_last_trend_entries: 3
+      last_trend_entries: 5
+      minimal_hedging_pair_profits_check_array_length: 40
+      profits_check_array_length: 60
+      minimal_hedging_aggregated_pair_profits_check_array_length: 8
+      aggregated_pair_profits_check_array_length: 10
+      minimal_hedging_market_profits_check_array_length: 40
+      market_profits_check_array_length: 80
+      minimal_bullish_threshold_pct: 0.6
+      bullish_threshold_pct: 0.7
+      minimal_bearish_threshold_pct: 0.6
+      bearish_threshold_pct: 0.7
+      macd_short_window: 5
+      macd_long_window: 26
+      macd_signal_window: 9          
+      # Timeout     
+      minutesLatestTradeDuration: 10
+      # Candle Lengths
+      # Dataframe Analysis
+      # Bullish or Bearish Thresholds
+      start_profit_abs_positiv: 0.01
+      start_profit_abs_negative: -0.01
+      candle_divisor: 2
+      bullish_partial_threshold_pct: 0.75
+      bearish_partial_threshold_pct: 0.75      
   minimal_roi:
     "0": 0.99
   stoploss: -0.99
