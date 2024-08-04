@@ -101,26 +101,36 @@ spec:
       - name: liststrategies
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         command:
-        - freqtrade
-        args:
-        - list-strategies
-{{- if .Values.bot.debug }}
-        - {{ .Values.bot.debuglevel }}
-{{- end }}
-        - --recursive-strategy-search
-        - --strategy-path
-        - /extra_strategies
-        - --config
-        - /freqtrade/config/config-{{ .Release.Namespace }}.json
-        - --config
-        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
-        - -d 
-        - "/extra_strategies/data"
-        # - "/extra_strategies/data/{{ .Values.configcreds.exchange.name }}/{{ .Values.configcreds.trading_mode }}"
-        - --userdir
-        - /freqtrade/user_data      
-        - --logfile
-        - /extra_strategies/logs/liststrategies_{{ now | date "20060102" }}.log
+        - bash
+        - -c
+        - |
+           echo pip install multiprocess mailtrap
+           echo ""
+           echo "Starting Freqtrade list-strategies"
+           echo ""
+           pip install multiprocess mailtrap
+           freqtrade list-strategies --recursive-strategy-search --strategy-path /extra_strategies --config /freqtrade/config/config-{{ .Release.Namespace }}.json --config /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json -d  /extra_strategies/data --userdir /freqtrade/user_data --logfile /extra_strategies/logs/liststrategies_{{ now | date "20060102" }}.log
+#         command:
+#         - freqtrade
+#         args:
+#         - list-strategies
+# {{- if .Values.bot.debug }}
+#         - {{ .Values.bot.debuglevel }}
+# {{- end }}
+#         - --recursive-strategy-search
+#         - --strategy-path
+#         - /extra_strategies
+#         - --config
+#         - /freqtrade/config/config-{{ .Release.Namespace }}.json
+#         - --config
+#         - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
+#         - -d 
+#         - "/extra_strategies/data"
+#         # - "/extra_strategies/data/{{ .Values.configcreds.exchange.name }}/{{ .Values.configcreds.trading_mode }}"
+#         - --userdir
+#         - /freqtrade/user_data      
+#         - --logfile
+#         - /extra_strategies/logs/liststrategies_{{ now | date "20060102" }}.log
         volumeMounts:
         - name: configcreds
           mountPath: /freqtrade/configcreds
