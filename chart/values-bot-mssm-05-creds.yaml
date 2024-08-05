@@ -19,8 +19,8 @@ configcreds:
       enable_email_logging: true
       leverage: 10
       stake_amount: 2000
-      minimal_hedging_stoploss_length: 50
-      hedging_stoploss_length: 110
+      minimal_hedging_stoploss_length: 20
+      hedging_stoploss_length: 30
       # Minimal Threshold 
       minimal_trigger_threshold_adjustment: 10
       trigger_threshold_adjustment: 500
@@ -28,8 +28,8 @@ configcreds:
       hedging_trigger_timeout_seconds: 12
       minimal_last_trend_entries: 1
       last_trend_entries: 2
-      minimal_hedging_pair_profits_check_array_length: 30
-      profits_check_array_length: 32
+      minimal_hedging_pair_profits_check_array_length: 10
+      profits_check_array_length: 60
       minimal_hedging_aggregated_pair_profits_check_array_length: 5
       aggregated_pair_profits_check_array_length: 20
       minimal_hedging_market_profits_check_array_length: 80
@@ -45,8 +45,8 @@ configcreds:
       minutesLatestTradeDuration: 20
       # Candle Lengths
       # Dataframe Analysis
-      market_analysis: false
-      pair_aggregated_analysis: false
+      market_analysis: true
+      pair_aggregated_analysis: true
       # Bullish or Bearish Thresholds
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
