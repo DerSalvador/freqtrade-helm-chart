@@ -31,7 +31,7 @@ configcreds:
       minimal_hedging_pair_profits_check_array_length: 10
       profits_check_array_length: 60
       minimal_hedging_aggregated_pair_profits_check_array_length: 5
-      aggregated_pair_profits_check_array_length: 20
+      aggregated_pair_profits_check_array_length: 10
       minimal_hedging_market_profits_check_array_length: 80
       market_profits_check_array_length: 90
       minimal_bullish_threshold_pct: 0.7
