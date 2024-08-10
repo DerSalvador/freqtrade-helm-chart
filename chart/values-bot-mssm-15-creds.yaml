@@ -15,17 +15,7 @@ configcreds:
       hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-16.bot-mssm-16.svc.cluster.local:8084/api/v1/show_config"      
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-16.bot-mssm-16.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-16.bot-mssm-16.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      leverage: 10
-      stake_amount: 2000
-      hedging_trigger_timeout_seconds: 10
-      trigger_threshold_adjustment: 300
-      minutesLatestTradeDuration: 5
-      # Candle Lengths
-      profits_check_array_length: 24
-      aggregated_pair_profits_check_array_length: 16
-      market_profits_check_array_length: 100
-      # Dataframe Analysis
-      market_analysis: true  
+      
   minimal_roi:
     "0": 0.99
   stoploss: -0.99
