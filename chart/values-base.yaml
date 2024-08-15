@@ -34,14 +34,14 @@ configcreds:
       # Minimal Threshold 
       minimal_trigger_threshold_adjustment: 300
       trigger_threshold_adjustment: 600
-      minimal_trigger_timeout_seconds: 60
-      trigger_timeout_seconds: 120
+      minimal_trigger_timeout_seconds: 5
+      trigger_timeout_seconds: 10
       minimal_last_trend_entries: 3
       last_trend_entries: 5
-      minimal_pair_profits_check_array_length: 60
-      profits_check_array_length: 80
+      minimal_pair_profits_check_array_length: 30
+      profits_check_array_length: 40
       minimal_aggregated_pair_profits_check_array_length: 5
-      aggregated_pair_profits_check_array_length: 15
+      aggregated_pair_profits_check_array_length: 10
       minimal_market_profits_check_array_length: 80
       market_profits_check_array_length: 100
       minimal_bullish_threshold_pct: 0.5
