@@ -17,6 +17,8 @@ configcreds:
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       pair_aggregated_analysis: true
       macd_short_window: 4 
+      spot_pair_delay: 45
+      spot_aggregated_market_delay: 45
 
   minimal_roi:
     "0": 0.99
