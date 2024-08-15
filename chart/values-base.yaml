@@ -25,11 +25,11 @@ configcreds:
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: false
-      binance_timeout: 1
-      spot_pair_delay: 60
-      spot_aggregated_market_delay: 60
+      binance_timeout: 2
+      spot_pair_delay: 0
+      spot_aggregated_market_delay: 0
       leverage: 5
-      stake_amount: 200
+      stake_amount: 20
       minimal_stoploss_length: 30
       stoploss_length: 50
       # Minimal Threshold 
