@@ -21,15 +21,15 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-      hedging_version: 1.6a
+      hedging_version: v2.1a
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: true
       binance_timeout: 2
-      spot_pair_delay: 5
-      spot_aggregated_market_delay: 5
+      spot_pair_delay: 2
+      spot_aggregated_market_delay: 2
       leverage: 5
-      stake_amount: 20
+      stake_amount: 200
       minimal_stoploss_length: 30
       stoploss_length: 50
       # Minimal Threshold 
@@ -39,8 +39,8 @@ configcreds:
       trigger_timeout_seconds: 5
       minimal_last_trend_entries: 3
       last_trend_entries: 5
-      minimal_pair_profits_check_array_length: 50
-      profits_check_array_length: 60
+      minimal_pair_profits_check_array_length: 20
+      profits_check_array_length: 40
       minimal_aggregated_pair_profits_check_array_length: 10
       aggregated_pair_profits_check_array_length: 20
       minimal_market_profits_check_array_length: 80
