@@ -21,7 +21,7 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-      hedging_version: v2.1a
+      hedging_version: v2.3c
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: true
@@ -58,6 +58,7 @@ configcreds:
       # Dataframe Analysis
       market_analysis: true
       pair_aggregated_analysis: true
+      freqtrade_pair_analysis: true
       # Bullish or Bearish Thresholds
       start_profit_abs_positiv: 0.01
       start_profit_abs_negative: -0.01
