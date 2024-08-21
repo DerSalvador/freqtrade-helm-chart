@@ -16,9 +16,9 @@ configcreds:
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       macd_short_window: 5
-      minimal_aggregated_pair_profits_check_array_length: 20
-      aggregated_pair_profits_check_array_length: 10
-      exit_on_profit: false
+      minimal_aggregated_pair_profits_check_array_length: 5
+      aggregated_pair_profits_check_array_length: 7
+      exit_on_profit: true
 
   dry_run: true
   minimal_roi:
