@@ -23,6 +23,9 @@ configcreds:
   stoploss: -0.99
   bot_name: bot-mssm-09
   exchange:
+    pair_whitelist:  
+      - BCH/USDT:USDT
+      - ADA/USDT:USDT
     name: binance
   telegram:
     enabled: true

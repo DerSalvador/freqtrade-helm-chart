@@ -28,6 +28,10 @@ configcreds:
   stoploss: -0.99
   bot_name: bot-mssm-07
   exchange:
+    pair_whitelist:  
+      - DOGE/USDT:USDT
+      - LINK/USDT:USDT
+
     name: binance
   telegram:
     enabled: true
