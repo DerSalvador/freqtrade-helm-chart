@@ -21,11 +21,16 @@ configcreds:
       profits_check_array_length: 9
       minimal_market_profits_check_array_length: 50
       market_profits_check_array_length: 80
+      exit_on_profit: true 
+  dry_run: true
   minimal_roi:
     "0": 0.99
   stoploss: -0.99
   bot_name: bot-mssm-03
   exchange:
+    pair_whitelist:
+      - BTC/USDT:USDT
+      - ETH/USDT:USDT
     name: binance
   telegram:
     enabled: true
