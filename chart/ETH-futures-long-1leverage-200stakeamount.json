@@ -1,5 +1,3 @@
 {
-  "status": "Error entering long trade for pair ETH/USDT:USDT."
-}
-ition for ETH/USDT:USDT."
+  "error": "Error querying /api/v1/forceenter: Failed to enter position for ETH/USDT:USDT."
 }

@@ -15,16 +15,20 @@ configcreds:
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"      
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      macd_short_window: 4 
+      exit_on_profit: true
       minimal_aggregated_pair_profits_check_array_length: 5
       aggregated_pair_profits_check_array_length: 7
-
-
+      minimal_pair_profits_check_array_length: 5
+      profits_check_array_length: 9
+  dry_run: true
   minimal_roi:
     "0": 0.99
   stoploss: -0.99
   bot_name: bot-mssm-05
   exchange:
+    pair_whitelist:
+      - SOL/USDT:USDT
+      - XRP/USDT:USDT
     name: binance
   telegram:
     enabled: true

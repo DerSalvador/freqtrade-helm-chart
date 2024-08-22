@@ -21,7 +21,7 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-      hedging_version: v2.3d
+      hedging_version: v2.3f
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: true
@@ -33,27 +33,27 @@ configcreds:
       minimal_stoploss_length: 30
       stoploss_length: 50
       # Minimal Threshold 
-      minimal_trigger_threshold_adjustment: 30
-      trigger_threshold_adjustment: 60
-      minimal_trigger_timeout_seconds: 3
-      trigger_timeout_seconds: 5
+      minimal_trigger_threshold_adjustment: 3600
+      trigger_threshold_adjustment: 7200
+      minimal_trigger_timeout_seconds: 0
+      trigger_timeout_seconds: 0
       minimal_last_trend_entries: 3
       last_trend_entries: 5
-      minimal_pair_profits_check_array_length: 20
-      profits_check_array_length: 30
-      minimal_aggregated_pair_profits_check_array_length: 10
-      aggregated_pair_profits_check_array_length: 20
+      minimal_pair_profits_check_array_length: 12
+      profits_check_array_length: 20
+      minimal_aggregated_pair_profits_check_array_length: 5
+      aggregated_pair_profits_check_array_length: 7
       minimal_market_profits_check_array_length: 80
       market_profits_check_array_length: 100
-      minimal_bullish_threshold_pct: 0.5
+      minimal_bullish_threshold_pct: 0.6
       bullish_threshold_pct: 0.75
-      minimal_bearish_threshold_pct: 0.5
+      minimal_bearish_threshold_pct: 0.6
       bearish_threshold_pct: 0.75
       macd_short_window: 6
       macd_long_window: 26
-      macd_signal_window: 9          
+      macd_signal_window: 9
       # Timeout     
-      minutesLatestTradeDuration: 5
+      minutesLatestTradeDuration: 60
       # Candle Lengths
       # Dataframe Analysis
       market_analysis: true
