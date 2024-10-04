@@ -62,7 +62,7 @@ config:
   dataformat_ohlcv: feather
   dataformat_trades: feather
   download_trades: true
-  dry_run: false
+  dry_run: true
   dry_run_wallet: 4000
   stake_amount: unlimited
   position_adjustment_enable: false

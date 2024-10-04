@@ -11,11 +11,20 @@ configcreds:
     # secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
     key: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
     secret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1  # TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
+  pairlists:
+    - method: RemotePairList
+      number_assets: 100
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120    
   telegram:
     enabled: true
     token: "7194749919:AAHEXWFtBp9u8QZVkrBgHmRgip33t8d_7DE"
     chat_id: "1759706931" # "5711830404"
-    dry_run: false
+    dry_run: true
     dry_run_wallet: 50000
     stake_amount: unlimited
     max_open_trades: 2
