@@ -4,10 +4,9 @@ kubernetes:
 configcreds:
   trading_mode: futures
   margin_mode: isolated
-  dry_run: false  
   dersalvador:
     hedging:
-      role: mixed
+      role: hedger
       stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN
       stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
@@ -16,12 +15,11 @@ configcreds:
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      leverage: 5
-      stake_amount: 100
-      exit_on_profit: false
+      exit_on_profit: true
   bot_name: binance-adriana-futures
+  dry_run: false
   minimal_roi:
-    "0": 0.1
+    "0": 0.2
   stoploss: -0.14
   exchange:
     name: binance

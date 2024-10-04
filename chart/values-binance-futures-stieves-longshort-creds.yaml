@@ -19,7 +19,7 @@ configcreds:
   startup_candle_count: 128 # must be power of 2
   process_only_new_candles: True
 # end
-  dry_run: false
+  dry_run: true
   dry_run_wallet: 50000
   position_adjustment_enable: false
   available_capital: 2000
