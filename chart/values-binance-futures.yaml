@@ -6,7 +6,7 @@ config:
   max_open_trades: 100
   minimal_roi:
     "0": 0.11
-  stoploss: -0.12
+  stoploss: -0.99
   timeframe: 5m
   trailing_stop: false
   trailing_only_offset_is_reached: false
