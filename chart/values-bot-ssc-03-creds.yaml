@@ -35,7 +35,7 @@ configcreds:
   available_capital: 50000
   stake_amount: unlimited
   # margin_mode: isolated
-  position_adjustment_enable: false
+  position_adjustment_enable: true
   pairlists:
     - method: StaticPairList
       mode: whitelist
