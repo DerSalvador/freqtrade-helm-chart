@@ -1,3 +1,3 @@
 {
-  "status": "Error entering long trade for pair XLM/USDT:USDT."
+  "error": "Error querying /api/v1/forceenter: position for XLM/USDT:USDT already open - id: 135"
 }
