@@ -21,18 +21,18 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-      hedging_version: v2.4s
+      hedging_version: v2.4r-lostTrades
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: false
       debug: false
       dataframe_path: /extra_strategies/dataframes/
-      binance_timeout: 1
-      spot_pair_delay: 1
+      binance_timeout: 0
+      spot_pair_delay: 0
       thread_delay: 60
-      spot_aggregated_market_delay: 2
-      leverage: 10
-      minimal_leverage: 10
+      spot_aggregated_market_delay: 0
+      leverage: 5
+      minimal_leverage: 5
       stake_amount: 100
       minimal_stoploss_length: 50
       stoploss_length: 70
@@ -43,16 +43,16 @@ configcreds:
       trigger_timeout_seconds: 0
       minimal_last_trend_entries: 3
       last_trend_entries: 5
-      minimal_pair_profits_check_array_length: 50
-      pair_profits_check_array_length: 70
+      minimal_pair_profits_check_array_length: 70
+      pair_profits_check_array_length: 100
       minimal_aggregated_pair_profits_check_array_length: 15
       aggregated_pair_profits_check_array_length: 20
       minimal_market_profits_check_array_length: 80
       market_profits_check_array_length: 100
       minimal_bullish_threshold_pct: 0.65
-      bullish_threshold_pct: 0.75
+      bullish_threshold_pct: 0.65
       minimal_bearish_threshold_pct: 0.65
-      bearish_threshold_pct: 0.75
+      bearish_threshold_pct: 0.65
       macd_short_window: 6
       macd_long_window: 26
       macd_signal_window: 9
@@ -61,18 +61,18 @@ configcreds:
       # Candle Lengths
       # Dataframe Analysis
       market_analysis: true
-      pair_aggregated_analysis: true
+      pair_aggregated_analysis: false
       freqtrade_pair_analysis: true
       # Bullish or Bearish Thresholds
       start_profit_abs_positiv: 1
       start_profit_abs_negative: -1
       candle_divisor: 2
-      
+      lostTradeAgeInMinutes: 30 
       candle_divisor_freqtrade_candle: 3
       minimal_candle_divisor_freqtrade_candle: 2
       add_new_row_countdown_in_sec: 1
-      bullish_partial_threshold_pct: 0.75
-      bearish_partial_threshold_pct: 0.75
+      bullish_partial_threshold_pct: 0.65
+      bearish_partial_threshold_pct: 0.65
       bullish_threshold_pct_offset: 0.01
       bearish_threshold_pct_offset: 0.01
       stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN
