@@ -13,13 +13,15 @@ configcreds:
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
+      hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
+      hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       market_analysis: true
       pair_aggregated_analysis: false
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 30
-      pair_profits_check_array_length: 50
+      minimal_pair_profits_check_array_length: 10
+      pair_profits_check_array_length: 10
 
   dry_run: true
   minimal_roi:
@@ -35,7 +37,7 @@ configcreds:
       mode: whitelist
       processing_mode: append
     - method: RemotePairList
-      number_assets: 100
+      number_assets: 19
       pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
