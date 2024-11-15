@@ -22,7 +22,7 @@ configcreds:
 
       exit_on_profit: false
   minimal_roi:
-    "3": -1
+    "1440": -1
     "0": 0.7
     "120": 0.5
     "240": 0.4
