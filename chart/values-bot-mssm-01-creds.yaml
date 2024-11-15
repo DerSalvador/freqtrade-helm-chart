@@ -24,6 +24,7 @@ configcreds:
       pair_profits_check_array_length: 10
 
   dry_run: true
+  stoploss: -0.99
   minimal_roi:
     "0": 0.99
   bot_name: bot-mssm-01
