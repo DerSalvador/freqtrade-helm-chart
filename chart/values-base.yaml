@@ -27,10 +27,10 @@ configcreds:
       exit_on_profit: false
       debug: false
       dataframe_path: /extra_strategies/dataframes/
-      binance_timeout: 0
-      spot_pair_delay: 0
-      thread_delay: 0
-      spot_aggregated_market_delay: 0
+      binance_timeout: 2
+      spot_pair_delay: 2
+      thread_delay: 2
+      spot_aggregated_market_delay: 2
       leverage: 5
       minimal_leverage: 5
       stake_amount: 100
@@ -71,7 +71,7 @@ configcreds:
       lostTradeAgeInMinutes: 10 
       candle_divisor_freqtrade_candle: 3
       minimal_candle_divisor_freqtrade_candle: 2
-      add_new_row_countdown_in_sec: 0
+      add_new_row_countdown_in_sec: 2
       bullish_partial_threshold_pct: 0.65
       bearish_partial_threshold_pct: 0.65
       bullish_threshold_pct_offset: 0.01
