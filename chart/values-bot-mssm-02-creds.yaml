@@ -25,6 +25,7 @@ configcreds:
     "240": 0.4
     "480": 0.1
   dry_run: false
+  stoplos: 0.13
   exchange:
     name: binance
   telegram:
