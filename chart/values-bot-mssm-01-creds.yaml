@@ -20,13 +20,13 @@ configcreds:
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 10
-      pair_profits_check_array_length: 10
+      minimal_pair_profits_check_array_length: 50
+      pair_profits_check_array_length: 60
 
   dry_run: true
-  stoploss: -0.13
+  stoploss: -0.1
   minimal_roi:
-    "0": 0.99
+    "0": 0.1
   bot_name: bot-mssm-01
   exchange:
     pair_whitelist:
