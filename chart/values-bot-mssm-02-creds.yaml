@@ -24,7 +24,7 @@ configcreds:
     "120": 0.5
     "240": 0.4
     "480": 0.2
-  max_open_trades: 3    
+  max_open_trades: 10
   dry_run: false
   stoplos: 0.13
   exchange:

@@ -6,7 +6,7 @@ configcreds:
   margin_mode: isolated  
   dersalvador:
     hedging:
-      role: hedger
+      role: trades
       leverage: 3
       stake_amount: 100  
       stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN
