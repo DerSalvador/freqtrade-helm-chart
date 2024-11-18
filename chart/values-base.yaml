@@ -21,11 +21,7 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-<<<<<<< HEAD
       hedging_version: v2.6c-mypy-lostTrades
-=======
-      hedging_version: v2.5xy-lostTrades
->>>>>>> 5a15d6d6057eb1980f1b328042d2f29f2a648de8
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: false
