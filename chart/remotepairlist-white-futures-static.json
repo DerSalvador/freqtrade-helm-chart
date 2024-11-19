@@ -3,33 +3,23 @@
               "SOL/USDT:USDT",
               "DOT/USDT:USDT",
               "ETH/USDT:USDT",
-<<<<<<< HEAD
-=======
               "XRP/USDT:USDT",
               "XLM/USDT:USDT",
               "XDC/USDT:USDT",
->>>>>>> 5a15d6d6057eb1980f1b328042d2f29f2a648de8
               "IOTA/USDT:USDT",
               "ALGO/USDT:USDT", 
               "BTC/USDT:USDT",
               "BCH/USDT:USDT",
-<<<<<<< HEAD
-=======
               "TRB/USDT:USDT",
               "WIF/USDT:USDT",
               "MOVR/USDT:USDT",
               "UMA/USDT:USDT",
->>>>>>> 5a15d6d6057eb1980f1b328042d2f29f2a648de8
               "DOGE/USDT:USDT",
               "MATIC/USDT:USDT",
               "LINK/USDT:USDT",
               "GMX/USDT:USDT",
-<<<<<<< HEAD
-              "ADA/USDT:USDT"
-=======
               "ADA/USDT:USDT",
               "NEAR/USDT:USDT"
->>>>>>> 5a15d6d6057eb1980f1b328042d2f29f2a648de8
             ],
     "refresh_period": 900
 }
