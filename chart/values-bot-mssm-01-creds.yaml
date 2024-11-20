@@ -20,10 +20,10 @@ configcreds:
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 50
-      pair_profits_check_array_length: 60
+      minimal_pair_profits_check_array_length: 10
+      pair_profits_check_array_length: 10
 
-  dry_run: true
+  dry_run: false
   stoploss: -0.99
   minimal_roi:
     "0": 0.99
