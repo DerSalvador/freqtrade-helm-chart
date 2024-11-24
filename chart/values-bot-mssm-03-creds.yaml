@@ -6,20 +6,31 @@ configcreds:
   margin_mode: isolated  
   dersalvador:
     hedging:
-      role: master
+      role: master_status
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"       
       hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/show_config"      
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/status"    
       hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-04.bot-mssm-04.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status"
+
       market_analysis: true
       pair_aggregated_analysis: false
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 30
-      pair_profits_check_array_length: 50
+      minimal_pair_profits_check_array_length: 10
+      pair_profits_check_array_length: 10
+      minimal_trigger_timeout_seconds: 10
+      trigger_timeout_seconds: 10
+      binance_timeout: 10
+      spot_pair_delay: 10
+      thread_delay: 10
+      spot_aggregated_market_delay: 10
 
+
+  dry_run: false
+  stoploss: -0.99
   minimal_roi:
     "0": 0.99
   bot_name: bot-mssm-03
