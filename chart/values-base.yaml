@@ -2,7 +2,11 @@
 kubernetes:
   nodeNameBackTestingResultsReader: dynamicValues1
   copyContainer: true
+
 configcreds:
+  exchange:
+    pair_blacklist:
+      - XLM/USDT:USDT
   edge:
     enabled: false
     process_throttle_secs: 3600
@@ -21,7 +25,7 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-      hedging_version: v3.1-mypy-lostTrades
+      hedging_version: v3.5-mypy-lostTrades
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: false
@@ -34,10 +38,10 @@ configcreds:
       leverage: 5
       stoploss_hedging: false
       minimal_leverage: 5
-      stake_amount: 100
+      stake_amount: 200
       minimal_stoploss_length: 50
       stoploss_length: 70
-      status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT ]"
+      status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT ]"
       # Minimal Threshold 
       config_path_serialized: "/extra_strategies/config.json"
       minimal_trigger_threshold_adjustment: 1800
@@ -52,10 +56,10 @@ configcreds:
       aggregated_pair_profits_check_array_length: 20
       minimal_market_profits_check_array_length: 10
       market_profits_check_array_length: 10
-      minimal_bullish_threshold_pct: 0.65
-      bullish_threshold_pct: 0.65
-      minimal_bearish_threshold_pct: 0.65
-      bearish_threshold_pct: 0.65
+      minimal_bullish_threshold_pct: 0.7
+      bullish_threshold_pct: 0.8
+      minimal_bearish_threshold_pct: 0.7
+      bearish_threshold_pct: 0.8
       macd_short_window: 6
       macd_long_window: 26
       macd_signal_window: 9
@@ -65,7 +69,7 @@ configcreds:
       # Dataframe Analysis
       market_analysis: true
       pair_aggregated_analysis: false
-      freqtrade_pair_analysis: true
+      freqtrade_pair_analysis: false
       # Bullish or Bearish Thresholds
       start_profit_abs_positiv: 1
       start_profit_abs_negative: -1
