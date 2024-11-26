@@ -20,10 +20,10 @@ configcreds:
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 20
-      pair_profits_check_array_length: 25
-      minimal_market_profits_check_array_length: 20
-      market_profits_check_array_length: 25
+      minimal_pair_profits_check_array_length: 30
+      pair_profits_check_array_length: 35
+      minimal_market_profits_check_array_length: 30
+      market_profits_check_array_length: 35
 
 
   dry_run: true
