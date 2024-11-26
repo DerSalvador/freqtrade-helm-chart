@@ -21,7 +21,7 @@ configcreds:
 
       exit_on_profit: false
   bot_name: binance-adriana-futures
-  dry_run: false
+  dry_run: true
   minimal_roi:
     "1440": -1
     "0": 0.7
