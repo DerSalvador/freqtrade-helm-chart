@@ -1,0 +1,30 @@
+{
+    "pairs":[
+    "1000FLOKI/USDT:USDT",
+    "AR/USDT:USDT",
+    "AXL/USDT:USDT",
+    "BEAMX/USDT:USDT",
+    "MKR/USDT:USDT",
+    "PENDLE/USDT:USDT",
+    "RNDR/USDT:USDT",
+    "SAGA/USDT:USDT",
+    "TON/USDT:USDT",
+    "WLD/USDT:USDT",
+    "DEFI/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ORDI/USDT:USDT",
+    "TIA/USDT:USDT",
+    "HIGH/USDT:USDT",
+    "YFI/USDT:USDT",
+    "NEO/USDT:USDT",
+    "INJ/USDT:USDT",
+    "OP/USDT:USDT",
+    "FRONT/USDT:USDT",
+    "QNT/USDT:USDT",
+    "TON/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "ILV/USDT:USDT",
+    "USDC/USDT:USDT"
+    ],
+    "refresh_period":900
+}

@@ -1,2 +1,116 @@
+---
 kubernetes:
-  nodeNameBackTestingResultsReeader: dynamicValues1
+  nodeNameBackTestingResultsReader: dynamicValues1
+  copyContainer: true
+
+configcreds:
+  exchange:
+    pair_blacklist:
+      - XLM/USDT:USDT
+  edge:
+    enabled: false
+    process_throttle_secs: 3600
+    calculate_since_number_of_days: 365
+    allowed_risk: 0.00
+    stoploss_range_min: -0.01
+    stoploss_range_max: -0.1
+    stoploss_range_step: -0.01
+    minimum_winrate: 0.01
+    minimum_expectancy: 0.08
+    min_trade_number: 1000
+    max_trade_duration_minute: 7440
+    remove_pumps: false
+    hoursInThePast: "-8760h" # 1 year      
+  dersalvador:
+    database_path: "/sqlite/tradesv3.sqlite"
+    enable_email_logging: false
+    hedging:
+      hedging_version: v3.5-mypy-lostTrades
+      apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+      exit_on_profit: false
+      debug: false
+      dataframe_path: /extra_strategies/dataframes/
+      binance_timeout: 5
+      spot_pair_delay: 2
+      thread_delay: 2
+      spot_aggregated_market_delay: 2
+      leverage: 5
+      stoploss_hedging: false
+      minimal_leverage: 5
+      stake_amount: 200
+      minimal_stoploss_length: 50
+      stoploss_length: 70
+      status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT ]"
+      # Minimal Threshold 
+      config_path_serialized: "/extra_strategies/config.json"
+      minimal_trigger_threshold_adjustment: 1800
+      trigger_threshold_adjustment: 3600
+      minimal_trigger_timeout_seconds: 2
+      trigger_timeout_seconds: 2
+      minimal_last_trend_entries: 3
+      last_trend_entries: 5
+      minimal_pair_profits_check_array_length: 70
+      pair_profits_check_array_length: 100
+      minimal_aggregated_pair_profits_check_array_length: 15
+      aggregated_pair_profits_check_array_length: 20
+      minimal_market_profits_check_array_length: 10
+      market_profits_check_array_length: 10
+      minimal_bullish_threshold_pct: 0.7
+      bullish_threshold_pct: 0.8
+      minimal_bearish_threshold_pct: 0.7
+      bearish_threshold_pct: 0.8
+      macd_short_window: 6
+      macd_long_window: 26
+      macd_signal_window: 9
+      # Timeout     
+      minutesLatestTradeDuration: 10 # 60
+      # Candle Lengths
+      # Dataframe Analysis
+      market_analysis: true
+      pair_aggregated_analysis: false
+      freqtrade_pair_analysis: false
+      # Bullish or Bearish Thresholds
+      start_profit_abs_positiv: 1
+      start_profit_abs_negative: -1
+      candle_divisor: 2
+      lostTradeAgeInMinutes: 10 
+      candle_divisor_freqtrade_candle: 3
+      minimal_candle_divisor_freqtrade_candle: 2
+      add_new_row_countdown_in_sec: 2
+      bullish_partial_threshold_pct: 0.65
+      bearish_partial_threshold_pct: 0.65
+      bullish_threshold_pct_offset: 0.01
+      bearish_threshold_pct_offset: 0.01
+      # stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # adriana
+      # stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1 # adriana
+      hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
+      hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
+      hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+
+      stoploss_apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm # michael
+      stoploss_apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov # michael
+
+      # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
+      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/status"
+      # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/status"
+      spot_bot_api_whitelist: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/whitelist"
+    ds_listdata:
+      enable: false
+    ds_downloaddata:
+      enable: false
+      days: 7
+      pairs_to_download: XLM/USDT XDC/USDT XRP/USDT IOTA/USDT ALGO/USDT BTC/USDT ETH/USDT USDC/USDT SOL/USDT FDUSD/USDT ENA/USDT PEPE/USDT WIF/USDT XRP/USDT TRB/USDT
+    ds_hyperopt:
+      enable: false
+      enableprotections: true
+      hyperlossfunction: ShortTradeDurHyperOptLoss
+      hoursInThePast: -48h
+    ds_backtesting:
+      enable: false
+      exportType: signals # {none,trades,signals}
+      # one week ago
+      hoursInThePast: -48h

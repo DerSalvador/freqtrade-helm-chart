@@ -1,0 +1,24 @@
+---
+kubernetes:
+  nodePort: #nodePort#
+configcreds:
+  bot_name: #bot_name#
+  timeframe: 5m
+  available_capital: #available_capital#
+  stake_amount: 100 
+  position_adjustment_enable: false
+  trading_mode: futures
+  margin_mode: isolated
+  dry_run: #dry_run#
+  dry_run_wallet: 2000
+  exchange:
+    name: binance
+    key: #apikey#   # b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: #apisecret# # tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+  telegram:
+    enabled: true
+    token: #telegramtoken#
+    chat_id: #telegramchatid#
+bot:
+  strategy_name: #strategy_name#
+

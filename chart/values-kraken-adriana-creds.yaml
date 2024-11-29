@@ -1,49 +1,35 @@
+---
 kubernetes:
   nodePort: 32327
-  
+
 configcreds:
+  available_capital: 60
   bot_name: freqtrade-kraken-adriana
-  dry_run: false
-  dry_run_wallet: 100000
-  download_trades: false
-  position_adjustment_enable: true
-  stake_amount: unlimited
-  entry_pricing:
-    price_side: same
-    use_order_book: true
-    order_book_top: 1
-    price_last_balance: 0
-    check_depth_of_market:
-      enabled: false
-      bids_to_ask_delta: 1
-  exit_pricing:
-    price_side: same
-    use_order_book: true
-    order_book_top: 1
-  order_types: 
-    entry: "limit"
-    force_entry: "market"
-    force_exit: "market"
-    exit: limit
-    stoploss: "market"
-    stoploss_on_exchange: false  
   exchange:
     name: kraken
+    ccxt_config:
+      enableRateLimit: true
+      rateLimit: 3000
+      options:
+        defaultType: spot
+        leverage: 10
+    ccxt_async_config:
+      enableRateLimit: true
+      rateLimit: 3000
+      options:
+        defaultType: spot
+        leverage: 10  
     key: +H4NKdY1EIWMVwq4s+qOymZATOYoQPvND+wCMzo+jasiN+zScLEVPODo
-    secret: >-
-      jOrx0aLMbRzOjAoagVx0nU1fW2qzTvvT+2bZQNIehqjKfieATglkZ+o92QJm9AuCCdmH4k3owys+nWHKlCEJmw==
+    secret: jOrx0aLMbRzOjAoagVx0nU1fW2qzTvvT+2bZQNIehqjKfieATglkZ+o92QJm9AuCCdmH4k3owys+nWHKlCEJmw==
   telegram:
-    enabled: true
-    token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
-    chat_id: "743804896"
-    # Stefan token: "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
-    # Stefan chat_id: "743804896"
-    # Adriana token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
-    # Adriana chat_id: "6274423445"
-  
-bot:  
+    enabled: false
+    token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
+    chat_id:  "1759706931" # "6274423445"
+bot:
   enabled: true
-  strategy_name: Strategy005
-  pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor #  ReinforcementLearner
-  # freqaimodel: ReinforcementLearner # LightGBMRegressor
+  strategy_name: AlwaysBuy
+  freqaimodel: LightGBMRegressor
+
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image

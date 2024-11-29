@@ -1,0 +1,29 @@
+---
+kubernetes:
+  nodePort: 32393
+configcreds:
+  trading_mode: futures
+  margin_mode: isolated
+  dry_run: true
+  dersalvador:
+    hedging:
+      role: trades
+      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/forceenter"
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/show_config"
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/status" # "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/forceenter"
+      exit_on_profit: false
+
+  minimal_roi:
+    "0": 0.05
+  bot_name: bot-mssm-06
+  exchange:
+    name: binance
+  telegram:
+    enabled: true
+    token: 7035160448:AAFYWeozmkF4yPtTHlNn8XCA7MaVJyOyMdI
+    chat_id: "1759706931"
+bot:
+  strategy_name: LizStrategy
+...

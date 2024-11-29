@@ -1,44 +1,21 @@
+---
 kubernetes:
   nodePort: 32328
-
 configcreds:
+  available_capital: 769
   bot_name: freqtrade-kraken-hellen
-  dry_run: false
-  dry_run_wallet: 100000
-  download_trades: false
-  position_adjustment_enable: true
-  stake_amount: unlimited
-  entry_pricing:
-    price_side: same
-    use_order_book: true
-    order_book_top: 1
-    price_last_balance: 0
-    check_depth_of_market:
-      enabled: false
-      bids_to_ask_delta: 1
-  exit_pricing:
-    price_side: same
-    use_order_book: true
-    order_book_top: 1
-  order_types: 
-    entry: "limit"
-    force_entry: "market"
-    force_exit: "market"
-    exit: limit
-    stoploss: "market"
-    stoploss_on_exchange: false    
   exchange:
     name: kraken
-    key: 54UnpzC561cUBlNh1D/5+3C8pyKKZs8lFYNhI1HcLxmn+jo8JybDGgWM
-    secret: >-
-      GHHfmkJ2xnAwnutoOpux1n/cbG8+Hz3zjltsslfU4DybEfJ2gMedqbi/STzph2S1YuDvFaqpTe8n5D7+6bkVfw==
+    key: X6beWu84orWoCoXmAD0jVRcVBRAJ3VhlhZpu7TGKSiGifT6UWCHH3Jf8
+    secret: YhuqDH/BGwTevnUIBr8o9Kaw6fnjqNP3NZ/wF9nX3Dk4Efz1Uc2qyzT2RALy2rMJjdsjgOl7c4kC654NatBYuA==
   telegram:
-    enabled: true
+    enabled: false
     token: "6471453483:AAEM8wy0zTfCCgUc9Cj3DmMmhbaj9S_MR8s"
     chat_id: "6493643145"
-bot:  
+bot:
   enabled: true
-  strategy_name: BB_RTR
-  pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor #  ReinforcementLearner
-  # freqaimodel: ReinforcementLearner # LightGBMRegressor
+  strategy_name: Anomaly
+  freqaimodel: LightGBMRegressor
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image

@@ -1,0 +1,22 @@
+---
+configcreds:
+  bot_name: freqtrade-kraken-stieves
+  dry_run: false
+  dry_run_wallet: 100000
+  download_trades: false
+  position_adjustment_enable: true
+  stake_amount: unlimited
+  exchange:
+    name: kraken
+    key: iYMnr561Jd2W/5mO5vGh0dRkxVuRIIFASiyMg438+JxOo+3x4E0hRsRg
+    secret: >-
+        7WUb1oOKiy13s45HBDO9s+LMzjw6SXpsLAYuKC5biErZ83Wjt+fTY/QL7s2R6qG/5NCLr2EyxGJE1tqVMshJgQ==
+  telegram:
+    enabled: true
+    token: "6486731432:AAGeN2x5JCsnZYwuYMTOdDqx44bosqEuJ20"
+    chat_id: "889071692"
+bot:
+  enabled: true
+  strategy_name: NostalgiaForInfinityX4
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor

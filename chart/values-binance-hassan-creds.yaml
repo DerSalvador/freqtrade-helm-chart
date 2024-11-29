@@ -1,40 +1,29 @@
+---
 kubernetes:
   nodePort: 32323
-
 configcreds:
-  download_trades: true
+  available_capital: 100 
   bot_name: freqtrading-binance-hassan
-  dry_run: false
-  dry_run_wallet: 4000
-  stake_amount: unlimited
-  position_adjustment_enable: true
-  entry_pricing:
-    price_side: other
-    use_order_book: true
-    order_book_top: 1
-    price_last_balance: 0
-    check_depth_of_market:
-      enabled: false
-      bids_to_ask_delta: 1
-  exit_pricing:
-    price_side: other
-    use_order_book: true
-    order_book_top: 1  
   exchange:
     name: binance
-    key: EvXcnxKsJ7OQHHkh9xjeMGrjgcl8Dj2Fgaoi0MuNUZgf9mxGluC45Uc8EFWb9ZJL
-    secret: >-
-      gWa0htBqvwkdwLnUhY53LPdY4uHVoIW3ljUp2obKl1AdPe3O4nTIGHhVN1f0YNK6
-
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: byguDVxWAiaLUhT0FjoxcPHp0fVYtPAjIUY5ish459dBARt8fJputqeL8OcXeTqI
+    # secret: 0aHY2r0Y8UUmKcjsyCwbVXTAwmMeCnH5gRSzx7Vt74OqVkGQWBTusFp7DMJkL0vV
   telegram:
-    enabled: true
-    token: "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"
-    chat_id: "5510878923"
- 
+    enabled: false
+    token: 6615015739:AAE_6w2ESWNgVzhN7MleruCRm-f8qMKML68 # "6064146874:AAHSR_x0WljvorWkAZztXpTXPa9QTPqQRfU"
+    chat_id:  "1759706931" # "5510878923"
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: EI3v2_tag_cofi_green
+  strategy_name: AlwaysBuy
   pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor 
+  freqaimodel: LightGBMRegressor
+
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
+   
+

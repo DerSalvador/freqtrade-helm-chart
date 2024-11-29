@@ -1,17 +1,15 @@
-{{- if (and .Values.bot.enabled .Values.config.api_server.enabled) }}
 apiVersion: v1
 kind: Service
 metadata:
-  name: freqtrade-{{ .Release.Namespace }}
+  name: freqtrade-nodeport-{{ .Release.Namespace }}
   labels:
-    app: freqtrade-{{ .Release.Namespace }}
+    app: freqtrade-nodeport-{{ .Release.Namespace }}
 spec:
   type: NodePort
   ports:
   - protocol: TCP
-    port: 80
+    port: {{ .Values.kubernetes.nodePort }}
     targetPort: api
     nodePort: {{ .Values.kubernetes.nodePort }}
   selector:
     app: freqtrade-{{ .Release.Namespace }}
-{{- end }}

@@ -1,0 +1,65 @@
+---
+kubernetes:
+  nodePort: 32353
+configcreds:
+  available_capital: 4000
+  position_adjustment_enable: false
+  initial_state: running
+  stoploss: -0.99
+  trailing_stop: False
+  trailing_only_offset_is_reached: False                                                               
+  trailing_stop_positive: 0.01
+  trailing_stop_positive_offset: 0.04    
+  order_types:
+    entry: "limit"
+    exit": "limit"
+    emergency_exit: "market"
+    stoploss: "market"
+    stoploss_on_exchange: False
+    stoploss_on_exchange_interval: 60
+    stoploss_on_exchange_limit_ratio: 0.99
+  use_custom_stoploss: false
+  has_downtime_protection: false
+  max_open_trades: 6
+  trading_mode: futures
+  margin_mode: isolated
+  timeframe: 5m
+  bot_name: freqtrading-binance-futures-michael-long
+  exchange:
+    name: binance
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # LmlPrj6XjI1IeMYYvranGRADAkeWWrcgvHkYPG60mbeSNZGt9kxwu0lfDa8rY47P
+    # secret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1  # TLo2FRs5P7IDqvVI2UTk3fPgKc6W0I3nRWq9F43rX2TfOqQulZOtp4VJBHqWUH62
+  telegram:
+    enabled: true
+    token: "6821988252:AAHjxy6esJK6F8J3ytbSckg85zkI5iSxMNQ"
+    chat_id: "1759706931" # "5711830404"
+  pairlists:
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: https://remotepairlist.com?q=1ee7096e9a6efa5c # bullish Futures  https://remotepairlist.com?q=6ed672791d1040c0 # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
+    - method: RemotePairList
+      number_assets: 50
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json  # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120      
+
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: DWT_LongShort_Long
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image

@@ -1,0 +1,94 @@
+---
+kubernetes:
+  nodePort: 32336
+
+configcreds:
+  available_capital: 481 
+  # stake_amount: 50
+  bot_name: freqtrading-binance-fouzi
+  exchange:
+    name: binance
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # Fouzi key: HsEbzcbVwPvBBbdMkP5oCSLp73EScBwgqFC8RNtHfnCboLHIOvSe2Q6hdObdfHxG
+    # Fouzi secret: GKzd8zlKq077G48K78wsxDtHVYE6TEr8qesGgGisbOr3zuk4sUKApGk7iH0zqlXM
+  telegram:
+    enabled: true
+    token: 6303722344:AAFBug7IQImm1-gJMbhj86pky0-wWnYumzs # "6720698140:AAHZpVP9AJWeaaSQdL5g9eoP1AqK5z3fo7k"
+    chat_id: "1759706931" # "631010653"
+  position_adjustment_enable: false
+  freqai:
+    rl_config:
+      train_cycles: 25
+      add_state_info: true
+      max_trade_duration_candles: 300
+      max_training_drawdown_pct: 0.02
+      cpu_count: 8
+      model_type: PPO
+      policy_type: MlpPolicy
+      model_reward_parameters:
+        rr: 1
+        profit_aim: 0.5
+    enabled: false
+    fit_live_predictions_candles: 300
+    purge_old_models: true # 2
+    train_period_days: 30
+    identifier: unique-id
+    backtest_period_days: 7
+    live_retrain_hours: 0
+    feature_parameters:
+      include_timeframes:
+        - 15m
+        - 1h
+      include_corr_pairlist:
+        - ATOM/USDT
+        - MATIC/USDT
+        - ADA/USDT
+        - ALGO/USDT
+        - APE/USDT
+        - ATOM/USDT
+        - AVAX/USDT
+        - BCH/USDT
+        - BTC/USDT
+        - DAI/USDT
+        - DOGE/USDT
+        - DOT/USDT
+        - EOS/USDT
+        - ETH/USDT
+        - LINK/USDT
+        - LTC/USDT
+        - MANA/USDT
+        - MATIC/USDT
+        - SHIB/USDT
+        - SOL/USDT
+        - XMR/USDT
+        - XRP/USDT
+        - XTZ/USDT
+        - BTC/USDT:USDT
+        - ETH/USDT:USDT
+      label_period_candles: 20
+      include_shifted_candles: 2
+      DI_threshold: 0.9
+      weight_factor: 0.9
+      principal_component_analysis: false
+      use_SVM_to_remove_outliers: true
+      indicator_periods_candles:
+        - 3
+        - 10
+        - 20
+      plot_feature_importances: 0
+    data_split_parameters:
+      test_size: 0
+      random_state: 1
+    model_training_parameters:
+      n_estimators: 800    
+bot:
+  debug: false
+  debuglevel: -vvv
+  enabled: true
+  strategy_name: Strategy005
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image

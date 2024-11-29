@@ -1,40 +1,26 @@
+---
 kubernetes:
   nodePort: 32324
-  
 configcreds:
-  download_trades: true
+  available_capital: 25 
   bot_name: freqtrading-binance-juliano
-  dry_run: false
-  dry_run_wallet: 50
-  stake_amount: unlimited
-  position_adjustment_enable: true
-  entry_pricing:
-    price_side: other
-    use_order_book: true
-    order_book_top: 1
-    price_last_balance: 0
-    check_depth_of_market:
-      enabled: false
-      bids_to_ask_delta: 1
-  exit_pricing:
-    price_side: other
-    use_order_book: true
-    order_book_top: 1    
   exchange:
     name: binance
-    key: HrLllzlPhN2BAAChE7iQdewMvawTuEwLGkWPYU1ZqlnxJ1uN1IdUernLvk6rU5cF
-    secret: >-
-      HSeKgVJP2XpL7AJWENZ54p2QexsWZq25jT3i8ywHpSLA7zKijo8yoKvFFTweTIYF
-
+    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+    # key: kXNjdGnZmWkN2brA8268siqlm5Ks9e7sKJ84c0y9g0PB7YaZmX65MhBdws2dIr76 # RCB5nWqiZJa0DnYRjuPbijmuacCY8cBkoVqshEv77O23yWEYvKhWlkVfcUdJVw5T
+    # secret: 5z4UD2g3FNVQ3VTGb1pxAyb4ryhTkoWuIigdoO3rh2vHBmzuKf5v0wLXd9nZV9kd # MzvSLeBLWUQEqivtnQLasBY1lw8f1Sp4RJ8oXWq4zpKM0bL6PVZ2ZaOR70Y8UPPT
   telegram:
-    enabled: true
-    token: "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
-    chat_id: "1649376180"
- 
+    enabled: false
+    token:  6761385610:AAHQJOe6C2dugh0MVsSrycSjzHMviujVzGQ # "6766441579:AAFAKnwwb4oz0AvTO8buY-DWi-1i5pZ3yPs"
+    chat_id:  "1759706931" # "1649376180"
 bot:
   debug: false
   debuglevel: -vvv
   enabled: true
-  strategy_name: GodStraNew
+  strategy_name: Strategy005
   pvc_size: 1Gi
-  freqaimodel: LightGBMRegressor 
+  freqaimodel: LightGBMRegressor
+# image:
+#   base: europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+#   tag: 47467ed88878616adca7d658f14e06285b29cc3457962fe127d16e0d700716f5  # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image

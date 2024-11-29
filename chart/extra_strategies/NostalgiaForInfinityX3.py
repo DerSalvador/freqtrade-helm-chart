@@ -67,7 +67,7 @@ class NostalgiaForInfinityX3(IStrategy):
   INTERFACE_VERSION = 3
 
   def version(self) -> str:
-    return "v13.0.902"
+    return "v13.0.1015"
 
   # ROI table:
   minimal_roi = {
@@ -118,17 +118,17 @@ class NostalgiaForInfinityX3(IStrategy):
   pump_mode_tags = ["21", "22", "23"]
   # Quick mode tags
   quick_mode_tags = ["41", "42", "43", "44"]
-  # Rebuy mode tags
-  rebuy_mode_tags = ["61"]
+  # Long rebuy mode tags
+  long_rebuy_mode_tags = ["61"]
   # Long mode tags
   long_mode_tags = ["81", "82"]
   # Long rapid mode tags
-  long_rapid_mode_tags = ["101", "102", "103"]
+  long_rapid_mode_tags = ["101", "102", "103", "104", "105"]
 
   normal_mode_name = "normal"
   pump_mode_name = "pump"
   quick_mode_name = "quick"
-  rebuy_mode_name = "rebuy"
+  long_rebuy_mode_name = "long_rebuy"
   long_mode_name = "long"
   long_rapid_mode_name = "long_rapid"
 
@@ -141,10 +141,12 @@ class NostalgiaForInfinityX3(IStrategy):
   # 10: enable Doom Bull, 11: enable Doom Bear, 12: enable u_e Bull, 13: enable u_e Bear.
   stop_thresholds = [-0.2, -0.2, -0.025, -0.025, 720, 720, 0.016, 0.016, 24.0, 24.0, False, False, True, True]
   # Based on the the first entry (regardless of rebuys)
-  stop_threshold = 0.5
+  stop_threshold = 0.60
   stop_threshold_futures = 0.50
   stop_threshold_futures_rapid = 0.50
-  stop_threshold_spot_rapid = 0.35
+  stop_threshold_spot_rapid = 0.60
+  stop_threshold_futures_rebuy = 0.9
+  stop_threshold_spot_rebuy = 0.9
 
   # Rebuy mode minimum number of free slots
   rebuy_mode_min_free_slots = 2
@@ -154,12 +156,12 @@ class NostalgiaForInfinityX3(IStrategy):
 
   # Grinding feature
   grinding_enable = True
-  grinding_mode = 1
+  grinding_mode = 2
   stake_grinding_mode_multiplier = 1.0
   stake_grinding_mode_multiplier_alt_1 = 1.0
   stake_grinding_mode_multiplier_alt_2 = 1.0
   # Grinding stop thresholds
-  grinding_stop_init = -0.18
+  grinding_stop_init = -0.20
   grinding_stop_grinds = -0.16
   # Grinding take profit threshold
   grinding_profit_threshold = 0.012
@@ -186,11 +188,65 @@ class NostalgiaForInfinityX3(IStrategy):
   grinding_mode_1_sub_thresholds_alt_2 = [-0.0, -0.06, -0.08, -0.1]
   grinding_mode_1_stakes_alt_3 = [0.35, 0.35, 0.35]
   grinding_mode_1_sub_thresholds_alt_3 = [-0.06, -0.075, -0.1]
+  grinding_mode_1_stakes_alt_4 = [0.45, 0.45, 0.45]
+  grinding_mode_1_sub_thresholds_alt_4 = [-0.06, -0.08, -0.11]
 
-  stake_rebuy_mode_multiplier = 0.33
-  pa_rebuy_mode_max = 2
-  pa_rebuy_mode_pcts = (-0.02, -0.04, -0.04)
-  pa_rebuy_mode_multi = (1.0, 1.0, 1.0)
+  # Grinding mode 2
+  grinding_mode_2_stop_init_grinds_spot = -0.20
+  grinding_mode_2_stop_grinds_spot = -0.16
+  grinding_mode_2_stop_init_grinds_futures = -0.50
+  grinding_mode_2_stop_grinds_futures = -0.26
+  grinding_mode_2_profit_threshold_spot = 0.018
+  grinding_mode_2_profit_threshold_futures = 0.018
+  grinding_mode_2_stakes_spot = [
+    [0.2, 0.2, 0.2, 0.2, 0.2],
+    [0.25, 0.25, 0.25, 0.25, 0.25],
+    [0.3, 0.3, 0.3, 0.3],
+    [0.35, 0.35, 0.35, 0.35],
+    [0.4, 0.4, 0.4],
+    [0.45, 0.45, 0.45],
+    [0.5, 0.5, 0.5],
+    [0.75, 0.75],
+  ]
+  grinding_mode_2_stakes_futures = [
+    [0.2, 0.2, 0.2, 0.2, 0.2],
+    [0.25, 0.25, 0.25, 0.25, 0.25],
+    [0.3, 0.3, 0.3, 0.3],
+    [0.35, 0.35, 0.35, 0.35],
+    [0.4, 0.4, 0.4],
+    [0.45, 0.45, 0.45],
+    [0.5, 0.5, 0.5],
+    [0.75, 0.75],
+  ]
+  grinding_mode_2_sub_thresholds_spot = [
+    [-0.0, -0.04, -0.05, -0.06, -0.07, -0.08],
+    [-0.0, -0.04, -0.05, -0.06, -0.07, -0.08],
+    [-0.0, -0.05, -0.06, -0.07, -0.08],
+    [-0.0, -0.05, -0.07, -0.09, -0.1],
+    [-0.0, -0.06, -0.08, -0.1],
+    [-0.0, -0.06, -0.08, -0.1],
+    [-0.0, -0.06, -0.08, -0.1],
+    [-0.0, -0.06, -0.09],
+  ]
+  grinding_mode_2_sub_thresholds_futures = [
+    [-0.0, -0.04, -0.05, -0.06, -0.07, -0.08],
+    [-0.0, -0.04, -0.05, -0.06, -0.07, -0.08],
+    [-0.0, -0.05, -0.06, -0.07, -0.08],
+    [-0.0, -0.05, -0.07, -0.09, -0.1],
+    [-0.0, -0.06, -0.08, -0.1],
+    [-0.0, -0.06, -0.08, -0.1],
+    [-0.0, -0.06, -0.08, -0.1],
+    [-0.0, -0.06, -0.09],
+  ]
+
+  # Rebuy mode
+  rebuy_mode_stake_multiplier = 0.2
+  rebuy_mode_stake_multiplier_alt = 0.3
+  rebuy_mode_max = 3
+  rebuy_mode_stakes_spot = [1.0, 2.0, 4.0]
+  rebuy_mode_stakes_futures = [1.0, 2.0, 4.0]
+  rebuy_mode_thresholds_spot = [-0.06, -0.08, -0.10]
+  rebuy_mode_thresholds_futures = [-0.03, -0.06, -0.08]
 
   # Profit max thresholds
   profit_max_thresholds = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.05, 0.05]
@@ -223,12 +279,14 @@ class NostalgiaForInfinityX3(IStrategy):
     "buy_condition_42_enable": True,
     "buy_condition_43_enable": True,
     "buy_condition_44_enable": True,
-    # "buy_condition_61_enable": True,
+    "buy_condition_61_enable": True,
     # "buy_condition_81_enable": True,
     # "buy_condition_82_enable": True,
     "buy_condition_101_enable": True,
     "buy_condition_102_enable": True,
     "buy_condition_103_enable": True,
+    "buy_condition_104_enable": True,
+    "buy_condition_105_enable": True,
   }
 
   buy_protection_params = {}
@@ -265,6 +323,8 @@ class NostalgiaForInfinityX3(IStrategy):
       self.profit_max_thresholds = self.config["profit_max_thresholds"]
     if "grinding_enable" in self.config:
       self.grinding_enable = self.config["grinding_enable"]
+    if "grinding_mode" in self.config:
+      self.grinding_mode = self.config["grinding_mode"]
     if "grinding_mode" in self.config:
       self.grinding_mode = self.config["grinding_mode"]
     if "grinding_stakes" in self.config:
@@ -383,6 +443,24 @@ class NostalgiaForInfinityX3(IStrategy):
     # Williams %R based sells
     if not sell:
       sell, signal_name = self.exit_r(
+        self.normal_mode_name,
+        profit_current_stake_ratio,
+        max_profit,
+        max_loss,
+        last_candle,
+        previous_candle_1,
+        previous_candle_2,
+        previous_candle_3,
+        previous_candle_4,
+        previous_candle_5,
+        trade,
+        current_time,
+        enter_tags,
+      )
+
+    # Downtrend/descending based sells
+    if not sell:
+      sell, signal_name = self.exit_long_dec(
         self.normal_mode_name,
         profit_current_stake_ratio,
         max_profit,
@@ -622,6 +700,24 @@ class NostalgiaForInfinityX3(IStrategy):
         enter_tags,
       )
 
+    # Downtrend/descending based sells
+    if not sell:
+      sell, signal_name = self.exit_long_dec(
+        self.normal_mode_name,
+        profit_current_stake_ratio,
+        max_profit,
+        max_loss,
+        last_candle,
+        previous_candle_1,
+        previous_candle_2,
+        previous_candle_3,
+        previous_candle_4,
+        previous_candle_5,
+        trade,
+        current_time,
+        enter_tags,
+      )
+
     # Stoplosses
     if not sell:
       sell, signal_name = self.exit_stoploss(
@@ -846,6 +942,24 @@ class NostalgiaForInfinityX3(IStrategy):
         enter_tags,
       )
 
+    # Downtrend/descending based sells
+    if not sell:
+      sell, signal_name = self.exit_long_dec(
+        self.normal_mode_name,
+        profit_current_stake_ratio,
+        max_profit,
+        max_loss,
+        last_candle,
+        previous_candle_1,
+        previous_candle_2,
+        previous_candle_3,
+        previous_candle_4,
+        previous_candle_5,
+        trade,
+        current_time,
+        enter_tags,
+      )
+
     # Stoplosses
     if not sell:
       sell, signal_name = self.exit_stoploss(
@@ -1004,7 +1118,7 @@ class NostalgiaForInfinityX3(IStrategy):
 
     return False, None
 
-  def exit_rebuy(
+  def long_exit_rebuy(
     self,
     pair: str,
     current_rate: float,
@@ -1030,7 +1144,7 @@ class NostalgiaForInfinityX3(IStrategy):
 
     # Original sell signals
     sell, signal_name = self.exit_signals(
-      self.rebuy_mode_name,
+      self.long_rebuy_mode_name,
       profit_current_stake_ratio,
       max_profit,
       max_loss,
@@ -1048,7 +1162,7 @@ class NostalgiaForInfinityX3(IStrategy):
     # Main sell signals
     if not sell:
       sell, signal_name = self.exit_main(
-        self.rebuy_mode_name,
+        self.long_rebuy_mode_name,
         profit_current_stake_ratio,
         max_profit,
         max_loss,
@@ -1066,7 +1180,25 @@ class NostalgiaForInfinityX3(IStrategy):
     # Williams %R based sells
     if not sell:
       sell, signal_name = self.exit_r(
-        self.rebuy_mode_name,
+        self.long_rebuy_mode_name,
+        profit_current_stake_ratio,
+        max_profit,
+        max_loss,
+        last_candle,
+        previous_candle_1,
+        previous_candle_2,
+        previous_candle_3,
+        previous_candle_4,
+        previous_candle_5,
+        trade,
+        current_time,
+        enter_tags,
+      )
+
+    # Downtrend/descending based sells
+    if not sell:
+      sell, signal_name = self.exit_long_dec(
+        self.normal_mode_name,
         profit_current_stake_ratio,
         max_profit,
         max_loss,
@@ -1083,27 +1215,12 @@ class NostalgiaForInfinityX3(IStrategy):
 
     # Stoplosses
     if not sell:
-      sell, signal_name = self.exit_stoploss(
-        self.rebuy_mode_name,
-        current_rate,
-        profit_stake,
-        profit_ratio,
-        profit_current_stake_ratio,
-        profit_init_ratio,
-        max_profit,
-        max_loss,
-        filled_entries,
-        filled_exits,
-        last_candle,
-        previous_candle_1,
-        previous_candle_2,
-        previous_candle_3,
-        previous_candle_4,
-        previous_candle_5,
-        trade,
-        current_time,
-        enter_tags,
-      )
+      if profit_stake < -(
+        filled_entries[0].cost
+        * (self.stop_threshold_futures_rebuy if self.is_futures_mode else self.stop_threshold_spot_rebuy)
+        / (trade.leverage if self.is_futures_mode else 1.0)
+      ):
+        sell, signal_name = True, f"exit_{self.long_rebuy_mode_name}_stoploss_doom"
 
     # Profit Target Signal
     # Check if pair exist on target_profit_cache
@@ -1114,7 +1231,7 @@ class NostalgiaForInfinityX3(IStrategy):
       previous_time_profit_reached = datetime.fromisoformat(self.target_profit_cache.data[pair]["time_profit_reached"])
 
       sell_max, signal_name_max = self.exit_profit_target(
-        self.rebuy_mode_name,
+        self.long_rebuy_mode_name,
         pair,
         trade,
         current_time,
@@ -1133,10 +1250,10 @@ class NostalgiaForInfinityX3(IStrategy):
       )
       if sell_max and signal_name_max is not None:
         return True, f"{signal_name_max}_m"
-      if previous_sell_reason in [f"exit_{self.rebuy_mode_name}_stoploss_u_e"]:
+      if previous_sell_reason in [f"exit_{self.long_rebuy_mode_name}_stoploss_u_e"]:
         if profit_ratio > (previous_profit + 0.005):
           mark_pair, mark_signal = self.mark_profit_target(
-            self.rebuy_mode_name,
+            self.long_rebuy_mode_name,
             pair,
             True,
             previous_sell_reason,
@@ -1150,11 +1267,11 @@ class NostalgiaForInfinityX3(IStrategy):
           if mark_pair:
             self._set_profit_target(pair, mark_signal, current_rate, profit_ratio, current_time)
       elif (profit_current_stake_ratio > (previous_profit + 0.005)) and (
-        previous_sell_reason not in [f"exit_{self.rebuy_mode_name}_stoploss_doom"]
+        previous_sell_reason not in [f"exit_{self.long_rebuy_mode_name}_stoploss_doom"]
       ):
         # Update the target, raise it.
         mark_pair, mark_signal = self.mark_profit_target(
-          self.rebuy_mode_name,
+          self.long_rebuy_mode_name,
           pair,
           True,
           previous_sell_reason,
@@ -1173,9 +1290,12 @@ class NostalgiaForInfinityX3(IStrategy):
       previous_profit = None
       if self.target_profit_cache is not None and pair in self.target_profit_cache.data:
         previous_profit = self.target_profit_cache.data[pair]["profit"]
-      if signal_name in [f"exit_{self.rebuy_mode_name}_stoploss_doom", f"exit_{self.rebuy_mode_name}_stoploss_u_e"]:
+      if signal_name in [
+        f"exit_{self.long_rebuy_mode_name}_stoploss_doom",
+        f"exit_{self.long_rebuy_mode_name}_stoploss_u_e",
+      ]:
         mark_pair, mark_signal = self.mark_profit_target(
-          self.rebuy_mode_name,
+          self.long_rebuy_mode_name,
           pair,
           sell,
           signal_name,
@@ -1193,7 +1313,7 @@ class NostalgiaForInfinityX3(IStrategy):
           return True, f"{signal_name}"
       elif (previous_profit is None) or (previous_profit < profit_current_stake_ratio):
         mark_pair, mark_signal = self.mark_profit_target(
-          self.rebuy_mode_name,
+          self.long_rebuy_mode_name,
           pair,
           sell,
           signal_name,
@@ -1215,14 +1335,10 @@ class NostalgiaForInfinityX3(IStrategy):
         if self.target_profit_cache is not None and pair in self.target_profit_cache.data:
           previous_profit = self.target_profit_cache.data[pair]["profit"]
         if (previous_profit is None) or (previous_profit < profit_current_stake_ratio):
-          mark_signal = f"exit_profit_{self.rebuy_mode_name}_max"
+          mark_signal = f"exit_profit_{self.long_rebuy_mode_name}_max"
           self._set_profit_target(pair, mark_signal, current_rate, profit_current_stake_ratio, current_time)
 
-    if signal_name not in [
-      f"exit_profit_{self.rebuy_mode_name}_max",
-      f"exit_{self.rebuy_mode_name}_stoploss_doom",
-      f"exit_{self.rebuy_mode_name}_stoploss_u_e",
-    ]:
+    if signal_name not in [f"exit_profit_{self.long_rebuy_mode_name}_max"]:
       if sell and (signal_name is not None):
         return True, f"{signal_name}"
 
@@ -1528,6 +1644,24 @@ class NostalgiaForInfinityX3(IStrategy):
         enter_tags,
       )
 
+    # Downtrend/descending based sells
+    if not sell:
+      sell, signal_name = self.exit_long_dec(
+        self.normal_mode_name,
+        profit_current_stake_ratio,
+        max_profit,
+        max_loss,
+        last_candle,
+        previous_candle_1,
+        previous_candle_2,
+        previous_candle_3,
+        previous_candle_4,
+        previous_candle_5,
+        trade,
+        current_time,
+        enter_tags,
+      )
+
     # Stoplosses
     if not sell:
       sell, signal_name = self.exit_stoploss(
@@ -1568,7 +1702,7 @@ class NostalgiaForInfinityX3(IStrategy):
       if profit_stake < -(
         filled_entries[0].cost
         * (self.stop_threshold_futures_rapid if self.is_futures_mode else self.stop_threshold_spot_rapid)
-        / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+        / (trade.leverage if self.is_futures_mode else 1.0)
       ):
         sell, signal_name = True, f"exit_{self.long_rapid_mode_name}_stoploss_doom"
 
@@ -1760,27 +1894,38 @@ class NostalgiaForInfinityX3(IStrategy):
         # profit is under the threshold, cancel it
         self._remove_profit_target(pair)
         return False, None
-      if 0.001 <= profit_current_stake_ratio < 0.01:
-        if profit_current_stake_ratio < (previous_profit - 0.01):
-          return True, previous_sell_reason
-      elif 0.01 <= profit_current_stake_ratio < 0.02:
-        if profit_current_stake_ratio < (previous_profit - 0.02):
-          return True, previous_sell_reason
-      elif 0.02 <= profit_current_stake_ratio < 0.03:
-        if profit_current_stake_ratio < (previous_profit - 0.025):
-          return True, previous_sell_reason
-      elif 0.03 <= profit_current_stake_ratio < 0.05:
-        if profit_current_stake_ratio < (previous_profit - 0.03):
-          return True, previous_sell_reason
-      elif 0.05 <= profit_current_stake_ratio < 0.08:
-        if profit_current_stake_ratio < (previous_profit - 0.035):
-          return True, previous_sell_reason
-      elif 0.08 <= profit_current_stake_ratio < 0.12:
-        if profit_current_stake_ratio < (previous_profit - 0.04):
-          return True, previous_sell_reason
-      elif 0.12 <= profit_current_stake_ratio:
-        if profit_current_stake_ratio < (previous_profit - 0.045):
-          return True, previous_sell_reason
+      if self.is_futures_mode:
+        if 0.001 <= profit_current_stake_ratio < 0.01:
+          if profit_current_stake_ratio < (previous_profit * 0.5):
+            return True, previous_sell_reason
+        elif 0.01 <= profit_current_stake_ratio < 0.02:
+          if profit_current_stake_ratio < (previous_profit * 0.6):
+            return True, previous_sell_reason
+        elif 0.02 <= profit_current_stake_ratio < 0.03:
+          if profit_current_stake_ratio < (previous_profit * 0.7):
+            return True, previous_sell_reason
+        elif 0.03 <= profit_current_stake_ratio < 0.08:
+          if profit_current_stake_ratio < (previous_profit * 0.8):
+            return True, previous_sell_reason
+        elif 0.08 <= profit_current_stake_ratio < 0.16:
+          if profit_current_stake_ratio < (previous_profit * 0.9):
+            return True, previous_sell_reason
+        elif 0.16 <= profit_current_stake_ratio:
+          if profit_current_stake_ratio < (previous_profit * 0.95):
+            return True, previous_sell_reason
+      else:
+        if 0.01 <= profit_current_stake_ratio < 0.03:
+          if profit_current_stake_ratio < (previous_profit * 0.6):
+            return True, previous_sell_reason
+        elif 0.03 <= profit_current_stake_ratio < 0.08:
+          if profit_current_stake_ratio < (previous_profit * 0.65):
+            return True, previous_sell_reason
+        elif 0.08 <= profit_current_stake_ratio < 0.16:
+          if profit_current_stake_ratio < (previous_profit * 0.7):
+            return True, previous_sell_reason
+        elif 0.16 <= profit_current_stake_ratio:
+          if profit_current_stake_ratio < (previous_profit * 0.75):
+            return True, previous_sell_reason
     else:
       return False, None
 
@@ -2140,6 +2285,259 @@ class NostalgiaForInfinityX3(IStrategy):
 
     return False, None
 
+  def exit_long_dec(
+    self,
+    mode_name: str,
+    current_profit: float,
+    max_profit: float,
+    max_loss: float,
+    last_candle,
+    previous_candle_1,
+    previous_candle_2,
+    previous_candle_3,
+    previous_candle_4,
+    previous_candle_5,
+    trade: "Trade",
+    current_time: "datetime",
+    buy_tag,
+  ) -> tuple:
+    if 0.01 > current_profit >= 0.001:
+      if (
+        (last_candle["r_14"] > -1.0)
+        and (last_candle["rsi_14"] > 70.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_0_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_0_2"
+    elif 0.02 > current_profit >= 0.01:
+      if (
+        (last_candle["r_14"] > -10.0)
+        and (last_candle["rsi_14"] > 66.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_1_1"
+      elif (
+        (last_candle["r_14"] >= -30.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_1_2"
+    elif 0.03 > current_profit >= 0.02:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 56.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_2_1"
+      elif (
+        (last_candle["r_14"] >= -30.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_2_2"
+    elif 0.04 > current_profit >= 0.03:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 54.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_3_1"
+      elif (
+        (last_candle["r_14"] >= -30.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_3_2"
+    elif 0.05 > current_profit >= 0.04:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 52.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_4_1"
+      elif (
+        (last_candle["r_14"] >= -30.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_4_2"
+    elif 0.06 > current_profit >= 0.05:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 50.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_5_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_5_2"
+    elif 0.07 > current_profit >= 0.06:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 50.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_6_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_6_2"
+    elif 0.08 > current_profit >= 0.07:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 50.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_7_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_7_2"
+    elif 0.09 > current_profit >= 0.08:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 50.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_8_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_8_2"
+    elif 0.1 > current_profit >= 0.09:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 52.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_9_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_9_2"
+    elif 0.12 > current_profit >= 0.1:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 54.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_10_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_10_2"
+    elif 0.2 > current_profit >= 0.12:
+      if (
+        (last_candle["r_14"] > -16.0)
+        and (last_candle["rsi_14"] > 56.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_11_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_11_2"
+    elif current_profit >= 0.2:
+      if (
+        (last_candle["r_14"] > -10.0)
+        and (last_candle["rsi_14"] > 66.0)
+        and (last_candle["not_downtrend_1h"] == False)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_12_1"
+      elif (
+        (last_candle["r_14"] >= -1.0)
+        and (last_candle["rsi_14"] <= 50.0)
+        and (last_candle["rsi_14_15m"] <= 50.0)
+        and (last_candle["cti_20_1d"] > 0.5)
+        and (last_candle["rsi_14_1d"] >= 50.0)
+        and (last_candle["ema_200_dec_4_1d"] == True)
+        and (last_candle["change_pct_4h"] < -0.03)
+      ):
+        return True, f"exit_{mode_name}_d_12_2"
+
+    return False, None
+
   def exit_stoploss(
     self,
     mode_name: str,
@@ -2165,8 +2563,9 @@ class NostalgiaForInfinityX3(IStrategy):
     is_backtest = self.dp.runmode.value == "backtest"
     # Stoploss doom
     if (
-      profit_stake
-      < -(filled_entries[0].cost * self.stop_threshold / (self.futures_mode_leverage if self.is_futures_mode else 1.0))
+      self.is_futures_mode is False
+      and profit_stake
+      < -(filled_entries[0].cost * self.stop_threshold / (trade.leverage if self.is_futures_mode else 1.0))
       # temporary
       and (trade.open_date_utc.replace(tzinfo=None) >= datetime(2023, 6, 13) or is_backtest)
     ):
@@ -2175,11 +2574,7 @@ class NostalgiaForInfinityX3(IStrategy):
     if (
       self.is_futures_mode is True
       and profit_stake
-      < -(
-        filled_entries[0].cost
-        * self.stop_threshold_futures
-        / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-      )
+      < -(filled_entries[0].cost * self.stop_threshold_futures / (trade.leverage if self.is_futures_mode else 1.0))
       # temporary
       and (trade.open_date_utc.replace(tzinfo=None) >= datetime(2023, 10, 17) or is_backtest)
     ):
@@ -2210,11 +2605,9 @@ class NostalgiaForInfinityX3(IStrategy):
       total_profit += exit_stake
     current_stake = trade.amount * exit_rate * (1 - trade.fee_close)
     total_profit += current_stake
-    total_profit_ratio = total_profit / total_stake * (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-    current_profit_ratio = total_profit / current_stake * (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-    init_profit_ratio = (
-      total_profit / filled_entries[0].cost * (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-    )
+    total_profit_ratio = total_profit / total_stake
+    current_profit_ratio = total_profit / current_stake
+    init_profit_ratio = total_profit / filled_entries[0].cost
     return total_profit, total_profit_ratio, current_profit_ratio, init_profit_ratio
 
   def custom_exit(
@@ -2332,9 +2725,9 @@ class NostalgiaForInfinityX3(IStrategy):
       if sell and (signal_name is not None):
         return f"{signal_name} ( {enter_tag})"
 
-    # Rebuy mode
-    if all(c in self.rebuy_mode_tags for c in enter_tags):
-      sell, signal_name = self.exit_rebuy(
+    # Long Rebuy mode
+    if all(c in self.long_rebuy_mode_tags for c in enter_tags):
+      sell, signal_name = self.long_exit_rebuy(
         pair,
         current_rate,
         profit_stake,
@@ -2410,14 +2803,14 @@ class NostalgiaForInfinityX3(IStrategy):
       if sell and (signal_name is not None):
         return f"{signal_name} ( {enter_tag})"
 
-    # Trades not opened by X2
+    # Trades not opened by X3
     if not any(
       c
       in (
         self.normal_mode_tags
         + self.pump_mode_tags
         + self.quick_mode_tags
-        + self.rebuy_mode_tags
+        + self.long_rebuy_mode_tags
         + self.long_mode_tags
         + self.long_rapid_mode_tags
       )
@@ -2478,8 +2871,12 @@ class NostalgiaForInfinityX3(IStrategy):
             stake = proposed_stake * self.stake_grinding_mode_multiplier_alt_2
           return stake
       # Rebuy mode
-      if all(c in self.rebuy_mode_tags for c in enter_tags):
-        return proposed_stake * self.stake_rebuy_mode_multiplier
+      if all(c in self.long_rebuy_mode_tags for c in enter_tags):
+        stake_multiplier = self.rebuy_mode_stake_multiplier
+        # Low stakes, on Binance mostly
+        if (proposed_stake * self.rebuy_mode_stake_multiplier) < min_stake:
+          stake_multiplier = self.rebuy_mode_stake_multiplier_alt
+        return proposed_stake * stake_multiplier
 
     return proposed_stake
 
@@ -2507,7 +2904,14 @@ class NostalgiaForInfinityX3(IStrategy):
 
     # Grinding
     if any(
-      c in (self.normal_mode_tags + self.pump_mode_tags + self.quick_mode_tags + self.long_mode_tags)
+      c
+      in (
+        self.normal_mode_tags
+        + self.pump_mode_tags
+        + self.quick_mode_tags
+        + self.long_mode_tags
+        + self.long_rapid_mode_tags
+      )
       for c in enter_tags
     ) or not any(
       c
@@ -2515,7 +2919,7 @@ class NostalgiaForInfinityX3(IStrategy):
         self.normal_mode_tags
         + self.pump_mode_tags
         + self.quick_mode_tags
-        + self.rebuy_mode_tags
+        + self.long_rebuy_mode_tags
         + self.long_mode_tags
         + self.long_rapid_mode_tags
       )
@@ -2534,9 +2938,9 @@ class NostalgiaForInfinityX3(IStrategy):
         current_exit_profit,
       )
 
-    # Rebuy mode
-    if all(c in self.rebuy_mode_tags for c in enter_tags):
-      return self.rebuy_adjust_trade_position(
+    # Rebuy mode (Long)
+    if all(c in self.long_rebuy_mode_tags for c in enter_tags):
+      return self.long_rebuy_adjust_trade_position(
         trade,
         current_time,
         current_rate,
@@ -2566,7 +2970,7 @@ class NostalgiaForInfinityX3(IStrategy):
     **kwargs,
   ) -> Optional[float]:
     is_backtest = self.dp.runmode.value == "backtest"
-    if (self.grinding_enable) and (trade.open_date_utc.replace(tzinfo=None) >= datetime(2022, 8, 1) or is_backtest):
+    if self.grinding_enable:
       dataframe, _ = self.dp.get_analyzed_dataframe(trade.pair, self.timeframe)
       if len(dataframe) < 2:
         return None
@@ -2610,16 +3014,13 @@ class NostalgiaForInfinityX3(IStrategy):
 
       # Stop init buy
       if (
-        (
-          profit_current_stake_ratio
-          < (self.grinding_stop_init * (self.futures_mode_leverage if self.is_futures_mode else 1.0))
-        )
+        (profit_current_stake_ratio < (self.grinding_stop_init * (trade.leverage if self.is_futures_mode else 1.0)))
         and (count_of_entries == 1)
         and (count_of_exits == 0)
         # temporary
         and (trade.open_date_utc.replace(tzinfo=None) >= datetime(2023, 5, 17) or is_backtest)
       ):
-        sell_amount = (trade.amount * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)) - (
+        sell_amount = (trade.amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) - (
           min_stake * 1.5
         )
         if sell_amount > min_stake:
@@ -2635,9 +3036,7 @@ class NostalgiaForInfinityX3(IStrategy):
         and (filled_orders[-1].ft_order_side == "sell")
         and (filled_orders[-1].safe_price < filled_orders[0].safe_price)
       ):
-        sell_amount = (
-          filled_orders[-1].safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-        )
+        sell_amount = filled_orders[-1].safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)
         if sell_amount > min_stake:
           self.dp.send_msg(
             f"Grinding stop init (remaining) [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}%"
@@ -2645,8 +3044,13 @@ class NostalgiaForInfinityX3(IStrategy):
           return -sell_amount
 
       current_grind_mode = self.grinding_mode
-      if (current_grind_mode == 1) and ((slice_amount * self.grinding_mode_1_stakes_alt_3[0]) < min_stake):
+      if (current_grind_mode == 1) and (
+        (slice_amount * self.grinding_mode_1_stakes_alt_4[0] / (trade.leverage if self.is_futures_mode else 1.0))
+        < min_stake
+      ):
         current_grind_mode = 0
+
+      is_x3_trade = len(filled_orders) >= 2 and filled_orders[1].ft_order_side == "sell"
 
       # mode 0
       if current_grind_mode == 0:
@@ -2655,21 +3059,15 @@ class NostalgiaForInfinityX3(IStrategy):
         grinding_thresholds = self.grinding_thresholds
         grinding_stakes = self.grinding_stakes
         # Low stakes, on Binance mostly
-        if (
-          slice_amount * self.grinding_stakes[0] / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-        ) < min_stake:
+        if (slice_amount * self.grinding_stakes[0] / (trade.leverage if self.is_futures_mode else 1.0)) < min_stake:
           if (
-            slice_amount
-            * self.grinding_stakes_alt_2[0]
-            / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+            slice_amount * self.grinding_stakes_alt_2[0] / (trade.leverage if self.is_futures_mode else 1.0)
           ) < min_stake:
             grinding_parts = len(self.grinding_stakes_alt_3)
             grinding_thresholds = self.grinding_thresholds_alt_3
             grinding_stakes = self.grinding_stakes_alt_3
           elif (
-            slice_amount
-            * self.grinding_stakes_alt_1[0]
-            / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+            slice_amount * self.grinding_stakes_alt_1[0] / (trade.leverage if self.is_futures_mode else 1.0)
           ) < min_stake:
             grinding_parts = len(self.grinding_stakes_alt_2)
             grinding_thresholds = self.grinding_thresholds_alt_2
@@ -2691,10 +3089,10 @@ class NostalgiaForInfinityX3(IStrategy):
                     if (count_of_entries == 1 and count_of_exits == 0)
                     else grinding_thresholds[i]
                   )
-                  * (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+                  * (trade.leverage if self.is_futures_mode else 1.0)
                 )
               )
-              and (last_candle["protections_global"] == True)
+              and (last_candle["protections_long_global"] == True)
               and (
                 (last_candle["close_max_12"] < (last_candle["close"] * 1.12))
                 and (last_candle["close_max_24"] < (last_candle["close"] * 1.18))
@@ -2992,9 +3390,7 @@ class NostalgiaForInfinityX3(IStrategy):
                 )
               )
             ):
-              buy_amount = (
-                slice_amount * grinding_stakes[i] / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-              )
+              buy_amount = slice_amount * grinding_stakes[i] / (trade.leverage if self.is_futures_mode else 1.0)
               if buy_amount > max_stake:
                 buy_amount = max_stake
               if buy_amount < min_stake:
@@ -3010,9 +3406,7 @@ class NostalgiaForInfinityX3(IStrategy):
         if count_of_entries > 1:
           count_of_full_exits = 0
           for exit_order in filled_exits:
-            if (
-              exit_order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-            ) < min_stake:
+            if (exit_order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) < min_stake:
               count_of_full_exits += 1
           num_buys = 0
           num_sells = 0
@@ -3020,15 +3414,11 @@ class NostalgiaForInfinityX3(IStrategy):
             if order.ft_order_side == "buy":
               num_buys += 1
             elif order.ft_order_side == "sell":
-              if (
-                order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-              ) < min_stake:
+              if (order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) < min_stake:
                 num_sells += 1
             # patial fills on exits
             if (num_buys == num_sells) and (order.ft_order_side == "sell"):
-              sell_amount = (
-                order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-              )
+              sell_amount = order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)
               grind_profit = (exit_rate - order.safe_price) / order.safe_price
               if sell_amount > min_stake:
                 # Test if it's the last exit. Normal exit with partial fill
@@ -3050,9 +3440,7 @@ class NostalgiaForInfinityX3(IStrategy):
               buy_order = order
               grind_profit = (exit_rate - buy_order.safe_price) / buy_order.safe_price
               if grind_profit > self.grinding_profit_threshold:
-                sell_amount = (
-                  buy_order.safe_filled * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-                )
+                sell_amount = buy_order.safe_filled * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)
                 if (current_stake_amount - sell_amount) < (min_stake * 1.5):
                   sell_amount = (trade.amount * exit_rate) - (min_stake * 1.5)
                 if sell_amount > min_stake:
@@ -3069,10 +3457,7 @@ class NostalgiaForInfinityX3(IStrategy):
                 )
               ):
                 sell_amount = (
-                  buy_order.safe_filled
-                  * exit_rate
-                  / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-                  * 0.999
+                  buy_order.safe_filled * exit_rate / (trade.leverage if self.is_futures_mode else 1.0) * 0.999
                 )
                 if (current_stake_amount - sell_amount) < (min_stake * 1.5):
                   sell_amount = (trade.amount * exit_rate) - (min_stake * 1.5)
@@ -3090,20 +3475,22 @@ class NostalgiaForInfinityX3(IStrategy):
         grinding_mode_1_sub_thresholds = self.grinding_mode_1_sub_thresholds
         # Low stakes, on Binance mostly
         if (
-          slice_amount * self.grinding_mode_1_stakes[0] / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+          slice_amount * self.grinding_mode_1_stakes[0] / (trade.leverage if self.is_futures_mode else 1.0)
         ) < min_stake:
           if (
-            slice_amount
-            * self.grinding_mode_1_stakes_alt_2[0]
-            / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+            slice_amount * self.grinding_mode_1_stakes_alt_3[0] / (trade.leverage if self.is_futures_mode else 1.0)
+          ) < min_stake:
+            max_sub_grinds = len(self.grinding_mode_1_stakes_alt_4)
+            grinding_mode_1_stakes = self.grinding_mode_1_stakes_alt_4
+            grinding_mode_1_sub_thresholds = self.grinding_mode_1_sub_thresholds_alt_4
+          elif (
+            slice_amount * self.grinding_mode_1_stakes_alt_2[0] / (trade.leverage if self.is_futures_mode else 1.0)
           ) < min_stake:
             max_sub_grinds = len(self.grinding_mode_1_stakes_alt_3)
             grinding_mode_1_stakes = self.grinding_mode_1_stakes_alt_3
             grinding_mode_1_sub_thresholds = self.grinding_mode_1_sub_thresholds_alt_3
           elif (
-            slice_amount
-            * self.grinding_mode_1_stakes_alt_1[0]
-            / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+            slice_amount * self.grinding_mode_1_stakes_alt_1[0] / (trade.leverage if self.is_futures_mode else 1.0)
           ) < min_stake:
             max_sub_grinds = len(self.grinding_mode_1_stakes_alt_2)
             grinding_mode_1_stakes = self.grinding_mode_1_stakes_alt_2
@@ -3125,9 +3512,7 @@ class NostalgiaForInfinityX3(IStrategy):
             total_amount += order.safe_filled
             total_cost += order.safe_filled * order.safe_price
           elif order.ft_order_side == "sell":
-            if (
-              order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-            ) > min_stake:
+            if (order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) > min_stake:
               partial_sell = True
             break
         if sub_grind_count > 0:
@@ -3143,7 +3528,8 @@ class NostalgiaForInfinityX3(IStrategy):
                 and (
                   profit_init_ratio
                   < (
-                    self.grinding_mode_1_thresholds[1] * (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+                    (0.0 if is_x3_trade else grinding_mode_1_sub_thresholds[0])
+                    * (trade.leverage if self.is_futures_mode else 1.0)
                   )
                 )
               )
@@ -3152,7 +3538,7 @@ class NostalgiaForInfinityX3(IStrategy):
                 and (slice_profit_entry < grinding_mode_1_sub_thresholds[sub_grind_count])
               )
             )
-            and (last_candle["protections_global"] == True)
+            and (last_candle["protections_long_global"] == True)
             and (
               (last_candle["close_max_12"] < (last_candle["close"] * 1.12))
               and (last_candle["close_max_24"] < (last_candle["close"] * 1.18))
@@ -3277,7 +3663,7 @@ class NostalgiaForInfinityX3(IStrategy):
             buy_amount = (
               slice_amount
               * grinding_mode_1_stakes[sub_grind_count]
-              / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+              / (trade.leverage if self.is_futures_mode else 1.0)
             )
             if buy_amount > max_stake:
               buy_amount = max_stake
@@ -3293,9 +3679,11 @@ class NostalgiaForInfinityX3(IStrategy):
         # Sell remaining if partial fill on exit
         if partial_sell:
           order = filled_exits[-1]
-          sell_amount = (
-            order.safe_remaining * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-          )
+          sell_amount = order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)
+          if (current_stake_amount - sell_amount) < (min_stake * 1.7):
+            sell_amount = (trade.amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) - (
+              min_stake * 1.7
+            )
           grind_profit = (exit_rate - order.safe_price) / order.safe_price
           if sell_amount > min_stake:
             # Test if it's the last exit. Normal exit with partial fill
@@ -3309,7 +3697,7 @@ class NostalgiaForInfinityX3(IStrategy):
         elif sub_grind_count > 0:
           grind_profit = (exit_rate - current_open_rate) / current_open_rate
           if grind_profit > self.grinding_mode_1_profit_threshold:
-            sell_amount = total_amount * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
+            sell_amount = total_amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)
             if (current_stake_amount - sell_amount) < (min_stake * 1.7):
               sell_amount = (trade.amount * exit_rate) - (min_stake * 1.7)
             if sell_amount > min_stake:
@@ -3325,22 +3713,260 @@ class NostalgiaForInfinityX3(IStrategy):
               or (filled_entries[-1].order_date_utc.replace(tzinfo=None) >= datetime(2023, 8, 28) or is_backtest)
             )
           ):
-            sell_amount = (
-              total_amount * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0) * 0.999
-            )
+            sell_amount = total_amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0) * 0.999
             if (current_stake_amount - sell_amount) < (min_stake * 1.7):
-              sell_amount = (
-                trade.amount * exit_rate / (self.futures_mode_leverage if self.is_futures_mode else 1.0)
-              ) - (min_stake * 1.7)
+              sell_amount = (trade.amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) - (
+                min_stake * 1.7
+              )
             if sell_amount > min_stake:
               self.dp.send_msg(
                 f"Grinding stop exit [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Coin amount: {total_amount} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
               )
               return -sell_amount
 
+      # mode 2
+      elif current_grind_mode == 2:
+        max_sub_grinds = 0
+        grinding_mode_2_stakes = []
+        grinding_mode_2_sub_thresholds = []
+        for i, item in enumerate(
+          self.grinding_mode_2_stakes_futures if self.is_futures_mode else self.grinding_mode_2_stakes_spot
+        ):
+          if (slice_amount * item[0] / (trade.leverage if self.is_futures_mode else 1.0)) > min_stake:
+            grinding_mode_2_stakes = item
+            grinding_mode_2_sub_thresholds = (
+              self.grinding_mode_2_sub_thresholds_futures[i]
+              if self.is_futures_mode
+              else self.grinding_mode_2_sub_thresholds_spot[i]
+            )
+            max_sub_grinds = len(grinding_mode_2_stakes)
+            break
+        grinding_mode_2_stop_init_grinds = (
+          self.grinding_mode_2_stop_init_grinds_futures
+          if self.is_futures_mode
+          else self.grinding_mode_2_stop_init_grinds_spot
+        )
+        grinding_mode_2_stop_grinds = (
+          self.grinding_mode_2_stop_grinds_futures if self.is_futures_mode else self.grinding_mode_2_stop_grinds_spot
+        )
+        grinding_mode_2_profit_threshold = (
+          self.grinding_mode_2_profit_threshold_futures
+          if self.is_futures_mode
+          else self.grinding_mode_2_profit_threshold_spot
+        )
+        partial_sell = False
+        is_sell_found = False
+        sub_grind_count = 0
+        total_amount = 0.0
+        total_cost = 0.0
+        current_open_rate = 0.0
+        current_grind_stake = 0.0
+        current_grind_stake_profit = 0.0
+        for order in reversed(filled_orders):
+          if (order.ft_order_side == "buy") and (order is not filled_orders[0]):
+            sub_grind_count += 1
+            total_amount += order.safe_filled
+            total_cost += order.safe_filled * order.safe_price
+          elif order.ft_order_side == "sell":
+            is_sell_found = True
+            if (order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) > min_stake:
+              partial_sell = True
+            break
+        if sub_grind_count > 0:
+          current_open_rate = total_cost / total_amount
+          current_grind_stake = total_amount * exit_rate * (1 - trade.fee_close)
+          current_grind_stake_profit = current_grind_stake - total_cost
+
+        # Buy
+        if (not partial_sell) and (sub_grind_count < max_sub_grinds):
+          if (
+            (
+              (slice_profit_entry if (sub_grind_count > 0) else profit_init_ratio)
+              < grinding_mode_2_sub_thresholds[sub_grind_count + (0 if is_sell_found else 1)]
+            )
+            and (last_candle["protections_long_global"] == True)
+            and (last_candle["protections_long_rebuy"] == True)
+            and (
+              (last_candle["close_max_12"] < (last_candle["close"] * 1.12))
+              and (last_candle["close_max_24"] < (last_candle["close"] * 1.18))
+              and (last_candle["close_max_48"] < (last_candle["close"] * 1.24))
+              and (last_candle["btc_pct_close_max_72_5m"] < 0.03)
+              and (last_candle["btc_pct_close_max_24_5m"] < 0.03)
+            )
+            and (
+              (last_candle["enter_long"] == True)
+              or (
+                (last_candle["rsi_3"] > 10.0)
+                and (last_candle["rsi_3_15m"] > 20.0)
+                and (last_candle["rsi_3_1h"] > 20.0)
+                and (last_candle["rsi_3_4h"] > 20.0)
+                and (last_candle["rsi_14"] < 46.0)
+                and (last_candle["ha_close"] > last_candle["ha_open"])
+                and (last_candle["ema_12"] < (last_candle["ema_26"] * 0.990))
+                and (last_candle["cti_20_1h"] < 0.8)
+                and (last_candle["rsi_14_1h"] < 80.0)
+              )
+              or (
+                (last_candle["rsi_14"] < 36.0)
+                and (last_candle["close"] < (last_candle["sma_16"] * 0.998))
+                and (last_candle["rsi_3"] > 16.0)
+                and (last_candle["rsi_3_15m"] > 26.0)
+                and (last_candle["rsi_3_1h"] > 26.0)
+                and (last_candle["rsi_3_4h"] > 26.0)
+              )
+              or (
+                (last_candle["rsi_14"] < 36.0)
+                and (previous_candle["rsi_3"] > 6.0)
+                and (last_candle["ema_26"] > last_candle["ema_12"])
+                and ((last_candle["ema_26"] - last_candle["ema_12"]) > (last_candle["open"] * 0.010))
+                and ((previous_candle["ema_26"] - previous_candle["ema_12"]) > (last_candle["open"] / 100.0))
+                and (last_candle["rsi_3_1h"] > 20.0)
+                and (last_candle["rsi_3_4h"] > 20.0)
+                and (last_candle["cti_20_1h"] < 0.8)
+                and (last_candle["rsi_14_1h"] < 80.0)
+              )
+              or (
+                (last_candle["rsi_14"] > 30.0)
+                and (last_candle["rsi_14"] < 60.0)
+                and (last_candle["hma_70_buy"])
+                and (last_candle["close"] > last_candle["zlma_50_1h"])
+                and (last_candle["ema_26"] > last_candle["ema_12"])
+                and (last_candle["cti_20_15m"] < 0.5)
+                and (last_candle["rsi_14_15m"] < 50.0)
+                and (last_candle["cti_20_1h"] < 0.8)
+                and (last_candle["rsi_14_1h"] < 80.0)
+              )
+              or (
+                (last_candle["rsi_3"] > 10.0)
+                and (last_candle["rsi_3_15m"] > 20.0)
+                and (last_candle["rsi_3_1h"] > 20.0)
+                and (last_candle["rsi_3_4h"] > 20.0)
+                and (last_candle["rsi_14"] < 36.0)
+                and (last_candle["zlma_50_dec_15m"] == False)
+                and (last_candle["zlma_50_dec_1h"] == False)
+              )
+              or (
+                (last_candle["rsi_14"] < 40.0)
+                and (last_candle["rsi_14_15m"] < 40.0)
+                and (last_candle["rsi_3"] > 6.0)
+                and (last_candle["ema_26_15m"] > last_candle["ema_12_15m"])
+                and ((last_candle["ema_26_15m"] - last_candle["ema_12_15m"]) > (last_candle["open_15m"] * 0.006))
+                and (
+                  (previous_candle["ema_26_15m"] - previous_candle["ema_12_15m"]) > (last_candle["open_15m"] / 100.0)
+                )
+                and (last_candle["rsi_3_15m"] > 10.0)
+                and (last_candle["rsi_3_1h"] > 26.0)
+                and (last_candle["rsi_3_4h"] > 26.0)
+                and (last_candle["cti_20_1h"] < 0.8)
+                and (last_candle["rsi_14_1h"] < 80.0)
+              )
+              or (
+                (last_candle["rsi_14"] > 35.0)
+                and (last_candle["rsi_3"] > 4.0)
+                and (last_candle["rsi_3"] < 46.0)
+                and (last_candle["rsi_14"] < previous_candle["rsi_14"])
+                and (last_candle["close"] < (last_candle["sma_16"] * 0.982))
+                and (last_candle["cti_20"] < -0.6)
+                and (last_candle["rsi_3_1h"] > 20.0)
+                and (last_candle["rsi_3_4h"] > 20.0)
+              )
+              or (
+                (last_candle["rsi_3"] > 12.0)
+                and (last_candle["rsi_3_15m"] > 26.0)
+                and (last_candle["rsi_3_1h"] > 26.0)
+                and (last_candle["rsi_3_4h"] > 26.0)
+                and (last_candle["rsi_14"] < 40.0)
+                and (last_candle["cti_20_1h"] < 0.8)
+                and (last_candle["rsi_14_1h"] < 80.0)
+                and (last_candle["ema_200_dec_48_1h"] == False)
+              )
+            )
+          ):
+            buy_amount = (
+              slice_amount
+              * grinding_mode_2_stakes[sub_grind_count]
+              / (trade.leverage if self.is_futures_mode else 1.0)
+            )
+            if buy_amount > max_stake:
+              buy_amount = max_stake
+            if buy_amount < min_stake:
+              return None
+            self.dp.send_msg(
+              f"Grinding entry [{trade.pair}] | Rate: {current_rate} | Stake amount: {buy_amount} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}%"
+            )
+            return buy_amount
+
+        # Sell remaining if partial fill on exit
+        if partial_sell:
+          order = filled_exits[-1]
+          sell_amount = order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)
+          if (current_stake_amount - sell_amount) < (min_stake * 1.5):
+            sell_amount = (trade.amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) - (
+              min_stake * 1.5
+            )
+          grind_profit = (exit_rate - order.safe_price) / order.safe_price
+          if sell_amount > min_stake:
+            # Test if it's the last exit. Normal exit with partial fill
+            if (trade.stake_amount - sell_amount) > min_stake:
+              self.dp.send_msg(
+                f"Grinding exit (remaining) [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Coin amount: {order.safe_remaining} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
+              )
+              return -sell_amount
+
+        # Sell
+        elif sub_grind_count > 0:
+          grind_profit = (exit_rate - current_open_rate) / current_open_rate
+          if grind_profit > grinding_mode_2_profit_threshold:
+            sell_amount = total_amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)
+            if (current_stake_amount - sell_amount) < (min_stake * 1.5):
+              sell_amount = (trade.amount * exit_rate) - (min_stake * 1.5)
+            if sell_amount > min_stake:
+              self.dp.send_msg(
+                f"Grinding exit [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount}| Coin amount: {total_amount} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
+              )
+              return -sell_amount
+
+        # Grind stop
+        if (
+          (
+            (
+              current_grind_stake_profit
+              < (slice_amount * grinding_mode_2_stop_grinds / (trade.leverage if self.is_futures_mode else 1.0))
+            )
+            if is_sell_found
+            else (
+              profit_stake
+              < (slice_amount * grinding_mode_2_stop_init_grinds / (trade.leverage if self.is_futures_mode else 1.0))
+            )
+          )
+          # temporary
+          and (
+            (trade.open_date_utc.replace(tzinfo=None) >= datetime(2023, 8, 28) or is_backtest)
+            or (filled_entries[-1].order_date_utc.replace(tzinfo=None) >= datetime(2023, 8, 28) or is_backtest)
+          )
+        ):
+          sell_amount = (
+            (total_amount if is_sell_found else trade.amount)
+            * exit_rate
+            / (trade.leverage if self.is_futures_mode else 1.0)
+            * 0.999
+          )
+          if (current_stake_amount / (trade.leverage if self.is_futures_mode else 1.0) - sell_amount) < (
+            min_stake * 1.5
+          ):
+            sell_amount = (trade.amount * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) - (
+              min_stake * 1.5
+            )
+          if sell_amount > min_stake:
+            grind_profit = ((exit_rate - current_open_rate) / current_open_rate) if is_sell_found else profit_ratio
+            self.dp.send_msg(
+              f"Grinding stop exit [{trade.pair}] | Rate: {exit_rate} | Stake amount: {sell_amount} | Coin amount: {total_amount} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}% | Grind profit: {(grind_profit * 100.0):.2f}%"
+            )
+            return -sell_amount
+
     return None
 
-  def rebuy_adjust_trade_position(
+  def long_rebuy_adjust_trade_position(
     self,
     trade: Trade,
     current_time: datetime,
@@ -3369,24 +3995,92 @@ class NostalgiaForInfinityX3(IStrategy):
     if count_of_entries == 0:
       return None
 
+    exit_rate = current_rate
+    if self.dp.runmode.value in ("live", "dry_run"):
+      ticker = self.dp.ticker(trade.pair)
+      if ("bid" in ticker) and ("ask" in ticker):
+        if trade.is_short:
+          if self.config["exit_pricing"]["price_side"] in ["ask", "other"]:
+            if ticker["ask"] is not None:
+              exit_rate = ticker["ask"]
+        else:
+          if self.config["exit_pricing"]["price_side"] in ["bid", "other"]:
+            if ticker["bid"] is not None:
+              exit_rate = ticker["bid"]
+
+    profit_stake, profit_ratio, profit_current_stake_ratio, profit_init_ratio = self.calc_total_profit(
+      trade, filled_entries, filled_exits, exit_rate
+    )
+
+    slice_amount = filled_entries[0].cost
+    slice_profit = (exit_rate - filled_orders[-1].safe_price) / filled_orders[-1].safe_price
+    slice_profit_entry = (exit_rate - filled_entries[-1].safe_price) / filled_entries[-1].safe_price
+    slice_profit_exit = (
+      ((exit_rate - filled_exits[-1].safe_price) / filled_exits[-1].safe_price) if count_of_exits > 0 else 0.0
+    )
+
+    current_stake_amount = trade.amount * current_rate
+
     is_rebuy = False
 
-    if 0 < count_of_entries <= self.pa_rebuy_mode_max:
-      if (current_profit < self.pa_rebuy_mode_pcts[count_of_entries - 1]) and (
-        (last_candle["rsi_3"] > 10.0)
-        and (last_candle["rsi_14"] < 40.0)
-        and (last_candle["rsi_3_1h"] > 10.0)
-        and (last_candle["close_max_48"] < (last_candle["close"] * 1.1))
-        and (last_candle["btc_pct_close_max_72_5m"] < 0.03)
-      ):
-        is_rebuy = True
+    rebuy_mode_stakes = self.rebuy_mode_stakes_futures if self.is_futures_mode else self.rebuy_mode_stakes_spot
+    max_sub_grinds = len(rebuy_mode_stakes)
+    rebuy_mode_sub_thresholds = (
+      self.rebuy_mode_thresholds_futures if self.is_futures_mode else self.rebuy_mode_thresholds_spot
+    )
+    partial_sell = False
+    sub_grind_count = 0
+    total_amount = 0.0
+    total_cost = 0.0
+    current_open_rate = 0.0
+    current_grind_stake = 0.0
+    current_grind_stake_profit = 0.0
+    for order in reversed(filled_orders):
+      if (order.ft_order_side == "buy") and (order is not filled_orders[0]):
+        sub_grind_count += 1
+        total_amount += order.safe_filled
+        total_cost += order.safe_filled * order.safe_price
+      elif order.ft_order_side == "sell":
+        if (order.safe_remaining * exit_rate / (trade.leverage if self.is_futures_mode else 1.0)) > min_stake:
+          partial_sell = True
+        break
+    if sub_grind_count > 0:
+      current_open_rate = total_cost / total_amount
+      current_grind_stake = total_amount * exit_rate * (1 - trade.fee_close)
+      current_grind_stake_profit = current_grind_stake - total_cost
 
-    if is_rebuy:
-      # This returns first order stake size
-      stake_amount = filled_entries[0].cost
-      print("rebuying..")
-      stake_amount = stake_amount * self.pa_rebuy_mode_multi[count_of_entries - 1]
-      return stake_amount
+    if (not partial_sell) and (sub_grind_count < max_sub_grinds):
+      if (
+        ((0 <= sub_grind_count < max_sub_grinds) and (slice_profit_entry < rebuy_mode_sub_thresholds[sub_grind_count]))
+        and (last_candle["protections_long_global"] == True)
+        and (
+          (last_candle["close_max_12"] < (last_candle["close"] * 1.12))
+          and (last_candle["close_max_24"] < (last_candle["close"] * 1.18))
+          and (last_candle["close_max_48"] < (last_candle["close"] * 1.24))
+          and (last_candle["btc_pct_close_max_72_5m"] < 0.03)
+          and (last_candle["btc_pct_close_max_24_5m"] < 0.03)
+        )
+        and (
+          (last_candle["rsi_3"] > 10.0)
+          and (last_candle["rsi_3_15m"] > 10.0)
+          and (last_candle["rsi_3_1h"] > 10.0)
+          and (last_candle["rsi_3_4h"] > 10.0)
+          and (last_candle["rsi_14"] < 46.0)
+        )
+      ):
+        buy_amount = (
+          slice_amount * rebuy_mode_stakes[sub_grind_count] / (trade.leverage if self.is_futures_mode else 1.0)
+        )
+        if buy_amount > max_stake:
+          buy_amount = max_stake
+        if buy_amount < min_stake:
+          return None
+        if buy_amount < (min_stake * 1.5):
+          buy_amount = min_stake * 1.5
+        self.dp.send_msg(
+          f"Rebuy [{trade.pair}] | Rate: {current_rate} | Stake amount: {buy_amount} | Profit (stake): {profit_stake} | Profit: {(profit_ratio * 100.0):.2f}%"
+        )
+        return buy_amount
 
     return None
 
@@ -3643,6 +4337,13 @@ class NostalgiaForInfinityX3(IStrategy):
     informative_1h["sma_100"] = ta.SMA(informative_1h, timeperiod=100)
     informative_1h["sma_200"] = ta.SMA(informative_1h, timeperiod=200)
 
+    # ZL MA
+    informative_1h["zlma_50"] = pta.zlma(informative_1h["close"], length=50, matype="linreg", offset=0)
+
+    informative_1h["zlma_50_dec"] = (informative_1h["zlma_50"].isnull()) | (
+      informative_1h["zlma_50"] <= informative_1h["zlma_50"].shift(1)
+    )
+
     # BB
     bollinger = qtpylib.bollinger_bands(qtpylib.typical_price(informative_1h), window=20, stds=2)
     informative_1h["bb20_2_low"] = bollinger["lower"]
@@ -3770,6 +4471,13 @@ class NostalgiaForInfinityX3(IStrategy):
 
     # SMA
     informative_15m["sma_200"] = ta.SMA(informative_15m, timeperiod=200)
+
+    # ZL MA
+    informative_15m["zlma_50"] = pta.zlma(informative_15m["close"], length=50, matype="linreg", offset=0)
+
+    informative_15m["zlma_50_dec"] = (informative_15m["zlma_50"].isnull()) | (
+      informative_15m["zlma_50"] <= informative_15m["zlma_50"].shift(1)
+    )
 
     # BB - 20 STD2
     bollinger = qtpylib.bollinger_bands(qtpylib.typical_price(informative_15m), window=20, stds=2)
@@ -4135,7 +4843,7 @@ class NostalgiaForInfinityX3(IStrategy):
     dataframe = self.base_tf_5m_indicators(metadata, dataframe)
 
     # Global protections
-    dataframe["protections_global"] = (
+    dataframe["protections_long_global"] = (
       # current 4h red with top wick, previous 4h red, 4h overbought
       (
         (dataframe["change_pct_4h"] > -0.04)
@@ -10002,6 +10710,1171 @@ class NostalgiaForInfinityX3(IStrategy):
         | (dataframe["ema_200_dec_24_4h"] == False)
         | (dataframe["ema_200_dec_4_1d"] == False)
       )
+      # current 1d red, previous 1d green, 1h & 4h downmove, 15m & 4h &1d still high
+      & (
+        (dataframe["change_pct_1d"] > -0.08)
+        | (dataframe["change_pct_1d"].shift(288) < 0.12)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 16.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 15m & 1h & 1d downtrend, 15m & 1h & 6h downmove
+      & (
+        (dataframe["not_downtrend_15m"])
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 10.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_3_1d"] > 6.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h & 1d downtrend, 1d downmove, 15m stil high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_1d"] > 6.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # current 1d red with top wick, 1h & 4h downtrend, 15m & 1d downmove, 15m & 1h & 4h & 1d still high, 1h downtrend
+      & (
+        (dataframe["change_pct_1d"] > -0.01)
+        | (dataframe["top_wick_pct_1d"] < 0.02)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_3_1d"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 30.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # current 1d red, current 4h red, previous 4h green, 5m & 15m & 1h & 4h downmove, 1h & 4h & 1d stil high
+      & (
+        (dataframe["change_pct_1d"] > -0.01)
+        | (dataframe["change_pct_4h"] > -0.01)
+        | (dataframe["change_pct_4h"].shift(48) < 0.01)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 36.0)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 1h & 1d downtrend, 15m & 1h & 1d downmove, 4h low, 1h & 4h & 1d dowqntrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_3_1d"] > 16.0)
+        | (dataframe["r_480_4h"] > -90.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 1h & 1d downtrend, 5m & 15m downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 6.0)
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 36.0)
+        | (dataframe["rsi_14_1d"] < 36.0)
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # current 1d green with top wick, current 4h red, 5m & 15m downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] < 0.02)
+        | (dataframe["top_wick_pct_1d"] < 0.02)
+        | (dataframe["change_pct_4h"] > -0.01)
+        | (dataframe["rsi_3"] > 16.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.7)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 1d red, previous 1d green, 15m downmove, 5m & 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] > -0.12)
+        | (dataframe["change_pct_1d"].shift(288) < 0.12)
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["cti_20_15m"] < -0.5)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_4h"] < -0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.7)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 1h downtrend, 5m & 15m downmove, 15m & 1d high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 4.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # current 4h green, current 1h red, 5m downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_4h"] < 0.01)
+        | (dataframe["change_pct_1h"] > -0.00)
+        | (dataframe["rsi_3"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.8)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["cti_20_1d"] < 0.7)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 1d green, current 4h top wick, 5m & 15m downmove, 15m & 1h & 4h & 1d still high, pump in last 6 days, drop in last 6 days
+      & (
+        (dataframe["change_pct_1d"] < 0.24)
+        | (dataframe["top_wick_pct_4h"] < 0.08)
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 33.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < -0.5)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["hl_pct_change_6_1d"] < 0.9)
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.70))
+      )
+      # 1h & 4h & 1d downtrend, 5m & 15m downmove, 1h low, 1h & 4h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_14"] > 30.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["r_480_1h"] > -75.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # current 1d green with top wick, current 1h red, previous 1h greem, 15m & 1h & 4h & 1d stil high
+      & (
+        (dataframe["change_pct_1d"] < 0.08)
+        | (dataframe["top_wick_pct_1d"] < 0.08)
+        | (dataframe["change_pct_1h"] > -0.03)
+        | (dataframe["change_pct_1h"].shift(12) < 0.03)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < 0.7)
+        | (dataframe["rsi_14_4h"] < 60.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 1d green with top wick, previous 4h red, 1h downtrend, 5m & 15m downmove, 15m & 1h & 4h still high, 4h downtrend
+      & (
+        (dataframe["change_pct_1d"] < 0.03)
+        | (dataframe["top_wick_pct_1d"] < 0.03)
+        | (dataframe["change_pct_4h"].shift(48) > -0.04)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 36.0)
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_4h"] < 0.8)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # 1h downtrendm 5m & 1hm & 1h & 4h downmove, 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 26.0)
+        | (dataframe["rsi_3_15m"] > 16.0)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_3_4h"] > 26.0)
+        | (dataframe["rsi_14_1h"] < 30.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h & 1d downtrendm 1h & 1d downmove, 5m & 15m & 1h & 4h satill high, 4h low, 1h & 4h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_3_1d"] > 26.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["r_480_4h"] > -85.0)
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # 15m downmove, 5m & 1h & 4h & 1d still high, 4h low, 4h & 1d downtrend
+      & (
+        (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 30.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < -0.5)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["r_480_4h"] > -75.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 1h & 4h & 1d downtrend, 1h & 4h & 1d downmove, 1h & 4h low, 1h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["rsi_3_1d"] > 16.0)
+        | (dataframe["r_480_1h"] > -75.0)
+        | (dataframe["r_480_4h"] > -80.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # current 1d green, current 1h red, 15m & 1h downmove, 15m & 1h & 4h & 1d still high, 1d downtrend
+      & (
+        (dataframe["change_pct_1d"] < 0.06)
+        | (dataframe["change_pct_1h"] > -0.01)
+        | (dataframe["rsi_3_15m"] > 40.0)
+        | (dataframe["rsi_3_1h"] > 40.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.8)
+        | (dataframe["rsi_14_4h"] < 65.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 1h & 1d downtrend, 5m downmove, 15m & 1h still high, 1h & 4h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # 5m downmove, 15m & 1h & 4h & 1d still high, 4h high
+      & (
+        (dataframe["rsi_3"] > 30.0)
+        | (dataframe["cti_20_15m"] < -0.5)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.8)
+        | (dataframe["rsi_14_1d"] < 70.0)
+        | (dataframe["r_480_4h"] < -30.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 1d red, 4h & 1d downtrend, 15m & 1d downmove, 5m & still high, 4h low, drop in last 6 days
+      & (
+        (dataframe["change_pct_1d"] > -0.08)
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_14_1d"] > 36.0)
+        | (dataframe["rsi_14"] < 26.0)
+        | (dataframe["r_480_1h"] > -80.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.75))
+      )
+      # current 1d red, previous 1d green, 15m downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] > -0.02)
+        | (dataframe["change_pct_1d"].shift(288) < 0.08)
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.7)
+        | (dataframe["rsi_14_1d"] < 60.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 1d red, previous 1d green, 1h downtrend, 5m & 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] > -0.01)
+        | (dataframe["change_pct_1d"].shift(288) < 0.06)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_14"] < 33.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 1h downtrend, 1h downmove, 5m & 15m & 1h & 4h & 1d stil high, 4h high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 16.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_4h"] < 0.7)
+        | (dataframe["rsi_14_4h"] < 60.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["r_480_4h"] < -30.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+      )
+      # 15m & 1h downtrend, 15m & 1h downmove, 5m & 15m & 1h & 4h still high, 4h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_15m"])
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_3_1h"] > 10.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 1h & 1d downtrend, 1d downmove, 5m & 15m & 1d still high, 1h low, drop in last 6 days
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["is_downtrend_3_1d"] == False)
+        | (dataframe["rsi_3_1d"] > 30.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["r_480_1h"] > -75.0)
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.70))
+      )
+      # 1h & 1d downtrend, 15m & 1h & 1d downmove, 1h & 4h low, 1h & 4h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_3_1d"] > 10.0)
+        | (dataframe["r_480_1h"] > -90.0)
+        | (dataframe["r_480_4h"] > -90.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # 5m downmove, 15m & 1h & 4h still high, 4h love, 1h downtrend
+      & (
+        (dataframe["rsi_3"] > 4.0)
+        | (dataframe["rsi_14_15m"] < 46.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["r_480_1h"] > -85.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 1h downtrend, 1h downmove, 15m & 1h & 4h stil high, 4h low, 4h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_4h"] < 0.7)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["r_480_4h"] > -85.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # current 4h green with top wick, 1d downtrend, 15m & 1d downmove, 5m & 15m & 1h & 4h still high, 1h downtrend
+      & (
+        (dataframe["change_pct_4h"] < 0.03)
+        | (dataframe["top_wick_pct_4h"] < 0.03)
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_3_1d"] > 10.0)
+        | (dataframe["rsi_14"] < 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 1d downtrend, 5m & 15m & 1d downmove, 1h still high, 1h low, 1h downtrend, drop in last 6 days
+      & (
+        (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 6.0)
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_3_1d"] > 20.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["r_480_1h"] > -80.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.75))
+      )
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["cti_20_15m"] < -0.5)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["cti_20_1h"] < -0.5)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # current 4h green, 1d downtrend, 15m & 1h & 4h still high, 1h & 4h downtrend
+      & (
+        (dataframe["change_pct_4h"] < 0.03)
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["r_14_1h"] < -20.0)
+        | (dataframe["r_14_4h"] < -20.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # 15m downtrend, 15m downmove, 5m & 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_15m"])
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 5m downmove, 15m & 1h & 4h & 1d high
+      & (
+        (dataframe["rsi_3"] > 10.0)
+        | (dataframe["cti_20_15m"] < -0.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["cti_20_1h"] < 0.8)
+        | (dataframe["rsi_14_1h"] < 50.0)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+      )
+      # current 4h red, previous 4h green, 5m & 1h downmove, 15m & 1h & 4h & 1d still high, drop in last 6 days
+      & (
+        (dataframe["change_pct_4h"] > -0.01)
+        | (dataframe["change_pct_4h"].shift(48) < 0.01)
+        | (dataframe["rsi_3"] > 12.0)
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.80))
+      )
+      # current 1d top wick, 1h downtrend, 5m & 1h downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["top_wick_pct_1d"] < 0.08)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 20.0)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 5m & 15m downmove, 15m & 1h & 4h still high, 4h low, 1h downtrend
+      & (
+        (dataframe["rsi_3"] > 16.0)
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["r_480_1h"] > -80.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 5m & 15m downmove, 1h & 4h & 1d still high, 1h high
+      & (
+        (dataframe["rsi_3"] > 36.0)
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["r_480_1h"] < -30.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h downtrend, 5m downmove, 15m & 1h still high, 1h low, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["r_480_1h"] > -85.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 1h & 4h downtrend, 5m & 15m & 4h downmove, 15m & 1h & 4h still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3"] > 20.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_4h"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 30.0)
+        | (dataframe["rsi_14_4h"] < 30.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h downtrend, 5m & 15m downmove, 15m & 1h & 4h & 1d still high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 4h & 1d downtrend, 5m & 4h & 1d downmove, 1h downtrend
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["rsi_3_1d"] > 6.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # curent 1d red, previous 1d green, 1h downtrend, 15m & 1h & 4h downmove, 4h still high
+      & (
+        (dataframe["change_pct_1d"] > -0.06)
+        | (dataframe["change_pct_1d"].shift(288) < 0.06)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_15m"] > 16.0)
+        | (dataframe["rsi_3_1h"] > 16.0)
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 1h downtrend, 1h downmove, 15m & 1h & 4h & 1d still high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 12.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 1d downtrend, 15m & 1d downmove, 15m & 1h & 4h still high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_3_1d"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["rsi_14_4h"] < 36.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # current 1h red, previous 1h red, 5m & 15m & 1h & 4h still high, 1h & 4h downtrend
+      & (
+        (dataframe["change_pct_1h"] > -0.04)
+        | (dataframe["change_pct_1h"].shift(12) < 0.01)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # current 1d red, previous 1d green, current 4h green, 1h downtrend, 5m downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] > -0.01)
+        | (dataframe["change_pct_1d"].shift(288) < 0.01)
+        | (dataframe["change_pct_4h"] < 0.02)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 20.0)
+        | (dataframe["rsi_14_15m"] < 46.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 4h downtrend, 15m & 4h & 1d downmove, 1h & 1d still high, 1h downtrend, drop in last 6 days
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_4h"] > 20.0)
+        | (dataframe["rsi_3_1d"] > 26.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.70))
+      )
+      # 1d downtrend, 1d downmove, 15m & 1h & 4h still high, 4h low, 1h & 4h downtrend
+      & (
+        (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_1d"] > 30.0)
+        | (dataframe["cti_20_15m"] < -0.0)
+        | (dataframe["rsi_14_15m"] < 46.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 50.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["r_480_4h"] > -80.0)
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # current 4h red with top wick, 1h downtrend, 1h downmove, 15m & 1h & 4h & 1d stil high, 1d downtrend, drop in last 6 days
+      & (
+        (dataframe["change_pct_4h"] > -0.03)
+        | (dataframe["top_wick_pct_4h"] < 0.03)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_4_1d"] == False)
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.70))
+      )
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3"] > 36.0)
+        | (dataframe["rsi_3_15m"] > 16.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["rsi_14_4h"] < 36.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.60))
+      )
+      # current 1d green, 15m & 1g downmove, 1h & 4h still high, 1h & 4h downtrend
+      & (
+        (dataframe["change_pct_1d"] < 0.06)
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # 15m downmove, 1h & 4h & 1d high, 1h & 4h high
+      & (
+        (dataframe["rsi_3_15m"] > 40.0)
+        | (dataframe["cti_20_1h"] < -0.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < -0.0)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["cti_20_1d"] < 0.7)
+        | (dataframe["rsi_14_1d"] < 70.0)
+        | (dataframe["r_480_1h"] < -25.0)
+        | (dataframe["r_480_4h"] < -20.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+      )
+      # 4h downtrend, 5m downmove, 15m & 1h & 4h & 1d still high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3"] > 12.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["cti_20_1h"] < -0.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < -0.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 1h downtrend, 5m & 15m & 1h downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_14"] > 36.0)
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_1h"] < -0.5)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_4h"] < -0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 1h downtrend, 5m downmove, 5m & 15m & 1h still high, 1h low, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 12.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["r_480_1h"] > -85.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 1h & 4h downtrend, 5m & h downmove, 15m & 1h & 4h & 1d stil high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3"] > 12.0)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # current 1d red, previous 1d green, 1h & 4h downtrend, 15m & 1h downmove, 15m & 1n & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] > -0.02)
+        | (dataframe["change_pct_1d"].shift(288) < 0.02)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h downtrend, 1h downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 30.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 5m & 15m & 1h downmove, 5m & 1h & 4h & 1d still high, 1d downtrend
+      & (
+        (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 1h downtrend, 1h downmove, 1h & 4h & 1d still high, 1h & 4h high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["r_480_1h"] < -20.0)
+        | (dataframe["r_480_4h"] < -20.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 1h & 4h downtrend, 5m & 15m & 1h & 4h downmove, 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_3_4h"] > 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h downtrend, 1h downmove, 5m & 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 12.0)
+        | (dataframe["rsi_14"] < 40.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 1h & 1d downtrend, 15m & 1h downmove, 15m & 1h & 4h still high, 1h low, 1h & 4h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 30.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["r_480_1h"] > -85.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+      )
+      # current 4h green, 1h downtrend, 15m & 1h downmove, 15m & 1h & 4h still high
+      & (
+        (dataframe["change_pct_4h"] < 0.02)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_15m"] > 12.0)
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+      )
+      # 1h & 1d downtrend, 15m & 1h downmove, 5m & 15m & 1h & 4h still high, 1h downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # current 4h red, previous 4h green, 1h downtrend, 1h downmove, 5m & 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_4h"] > -0.03)
+        | (dataframe["change_pct_4h"].shift(48) < 0.03)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_max_6_4h"] < 70.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+      )
+      # 1h & 1d downtrend, 1h & 4h & 1d downmove, 15m still high, 1h & 4h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["rsi_3_4h"] > 36.0)
+        | (dataframe["rsi_3_1d"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 5m & 1h & 4h & 1d still high, drop in last 6 days
+      & (
+        (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.8)
+        | (dataframe["rsi_14_4h"] < 60.0)
+        | (dataframe["cti_20_1d"] < 0.8)
+        | (dataframe["rsi_14_1d"] < 70.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["hl_pct_change_6_1d"] < 0.9)
+      )
+      # 1h & 1d downtrend, 5m & 1h downmove, 1h & 4h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # current 1h red with top wick, 1h downtrend, 15m & 1h downmove, 5m & 15m & 1h & 4h still high, 1h downtrend
+      & (
+        (dataframe["change_pct_1h"] > -0.01)
+        | (dataframe["top_wick_pct_1h"] < 0.01)
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["ema_200_dec_48_1h"] == False)
+      )
+      # 4h downtrend, 4h downmove, 5m & 15m & 1h & 4h & 1d still high, 1h high
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3_4h"] > 30.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_1d"] < 0.8)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["r_480_1h"] < -30.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h & qd downtrend, 5m & 15m & 1h downmove, 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 16.0)
+        | (dataframe["rsi_3_15m"] > 12.0)
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["rsi_14_4h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 40.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 5m & 15m & 1h downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["cti_20_1d"] < 0.8)
+        | (dataframe["rsi_14_1d"] < 60.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 1d red, current 4h green, 1d downtrend, 15m downmove, 15m & 1h still high, 1h downtrend, drop in last 6 days
+      & (
+        (dataframe["change_pct_1d"] > -0.06)
+        | (dataframe["change_pct_4h"] < 0.06)
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3_15m"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["cti_20_1h"] < 0.7)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["close"] > (dataframe["high_max_6_1d"] * 0.85))
+      )
+      # 5m downmove, 5m & 15m & 1h & 4h & 1d still high, pump in last 6 days
+      & (
+        (dataframe["rsi_3"] > 26.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["cti_20_15m"] < -0.5)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["cti_20_1h"] < -0.5)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["hl_pct_change_6_1d"] < 0.5)
+      )
+      # 1h & 4h & 1d downtrend, 5m & 15m & 1h downmove, 4h low, 4h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 26.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["r_480_4h"] > -85.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 1h downtrend, 5m & 15m downmove, 15m & 1h & 4h & 1d still high, pump in last 6 days
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 10.0)
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["hl_pct_change_6_1d"] < 0.8)
+      )
+      # 15m & 1h downmove, 5m & 15m & 1h & 4h & 1d still high, 1h & 4h high
+      & (
+        (dataframe["rsi_3_15m"] > 40.0)
+        | (dataframe["rsi_3_1h"] > 16.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 60.0)
+        | (dataframe["rsi_14_1d"] < 60.0)
+        | (dataframe["r_480_1h"] < -30.0)
+        | (dataframe["r_480_4h"] < -15.0)
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # current 4h red, previous 4h green, 5m & 1hm downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_4h"] > -0.00)
+        | (dataframe["change_pct_4h"].shift(48) < 0.00)
+        | (dataframe["rsi_3"] > 26.0)
+        | (dataframe["rsi_3_15m"] > 26.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+        | (dataframe["close"] > dataframe["bb20_2_low_1h"])
+        | (dataframe["close"] > dataframe["zlma_50_1h"])
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # current & previous 1h red, 5m & 15m downmove, 15m & 1h & 4h still high, 4h high
+      & (
+        (dataframe["change_pct_1h"] > -0.01)
+        | (dataframe["change_pct_1h"].shift(12) > -0.01)
+        | (dataframe["rsi_3"] > 26.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 40.0)
+        | (dataframe["cti_20_1h"] < 0.7)
+        | (dataframe["rsi_14_1h"] < 50.0)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["r_480_4h"] < -30.0)
+      )
     )
 
     # Global protections
@@ -10056,6 +11929,110 @@ class NostalgiaForInfinityX3(IStrategy):
         | (dataframe["cti_20_1d"] < 0.8)
         | (dataframe["rsi_14_1d"] < 60.0)
       )
+      # 15m downtrend, 5m & 15m & 1h downmove, 5m & 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_15m"])
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_3_15m"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14"] < 30.0)
+        | (dataframe["rsi_14_15m"] < 33.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["rsi_14_1d"] < 36.0)
+        | (dataframe["close"] > dataframe["bb20_2_low_15m"])
+      )
+      # current 1d red, previous 1d green, 5m downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] > -0.03)
+        | (dataframe["change_pct_1d"].shift(288) < 0.03)
+        | (dataframe["rsi_3"] > 12.0)
+        | (dataframe["rsi_14_15m"] < 46.0)
+        | (dataframe["cti_20_1h"] < -0.0)
+        | (dataframe["rsi_14_1h"] < 50.0)
+        | (dataframe["cti_20_4h"] < -0.0)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["cti_20_1d"] < 0.7)
+        | (dataframe["rsi_14_1d"] < 50.0)
+      )
+      # current 1d green, current 1h red, 5m downmove, 15m & 1h & 4h & 1d high
+      & (
+        (dataframe["change_pct_1d"] < 0.08)
+        | (dataframe["change_pct_1h"] > -0.01)
+        | (dataframe["rsi_3"] > 20.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["cti_20_1h"] < 0.5)
+        | (dataframe["rsi_14_1h"] < 50.0)
+        | (dataframe["cti_20_4h"] < 0.5)
+        | (dataframe["rsi_14_4h"] < 70.0)
+        | (dataframe["rsi_14_1d"] < 46.0)
+      )
+      # current 1d green with top wick, current 1h red, 5m & 1h downmove, 15m & 1h & 4h & 1d still high
+      & (
+        (dataframe["change_pct_1d"] < 0.03)
+        | (dataframe["top_wick_pct_1d"] < 0.03)
+        | (dataframe["change_pct_1h"] > -0.01)
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 46.0)
+        | (dataframe["cti_20_4h"] < 0.7)
+        | (dataframe["rsi_14_4h"] < 50.0)
+        | (dataframe["rsi_14_1d"] < 60.0)
+      )
+      # 15m & 1h downtrend, 15m & 1h downmove, 1h & 4h & 1d still high
+      & (
+        (dataframe["not_downtrend_15m"])
+        | (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3_15m"] > 20.0)
+        | (dataframe["rsi_3_1h"] > 20.0)
+        | (dataframe["rsi_14_1h"] < 30.0)
+        | (dataframe["rsi_14_4h"] < 40.0)
+        | (dataframe["cti_20_1d"] < 0.5)
+        | (dataframe["rsi_14_1d"] < 50.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+      )
+      # 1h & 4h downtrend, 5m & 1h downmove, 15m & 1h still high, 1h & 4h low, 1h & 4h & 1d downtrend
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["not_downtrend_4h"])
+        | (dataframe["rsi_3"] > 30.0)
+        | (dataframe["rsi_3_1h"] > 36.0)
+        | (dataframe["rsi_14_15m"] < 36.0)
+        | (dataframe["rsi_14_1h"] < 36.0)
+        | (dataframe["r_480_1h"] > -75.0)
+        | (dataframe["r_480_4h"] > -80.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_48_1h"] == False)
+        | (dataframe["ema_200_dec_24_4h"] == False)
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
+      # 1h downtrend, 5m & 15m downmove, 15m & 1h & 4h still high, 1h low
+      & (
+        (dataframe["not_downtrend_1h"])
+        | (dataframe["rsi_3"] > 20.0)
+        | (dataframe["rsi_3_1h"] > 30.0)
+        | (dataframe["rsi_14_15m"] < 30.0)
+        | (dataframe["cti_20_1h"] < -0.0)
+        | (dataframe["rsi_14_1h"] < 40.0)
+        | (dataframe["cti_20_4h"] < -0.5)
+        | (dataframe["rsi_14_4h"] < 46.0)
+        | (dataframe["r_480_1h"] > -75.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+      )
+      # 4h & 1d downtrend, 5m & 15m & 4h downmove, 1d downtrend
+      & (
+        (dataframe["not_downtrend_4h"])
+        | (dataframe["not_downtrend_1d"])
+        | (dataframe["rsi_3"] > 20.0)
+        | (dataframe["rsi_3_15m"] > 10.0)
+        | (dataframe["rsi_3_4h"] > 20.0)
+        | (dataframe["close"] > dataframe["sup_level_1h"])
+        | (dataframe["close"] > dataframe["sup_level_4h"])
+        | (dataframe["ema_200_dec_4_1d"] == False)
+      )
     )
 
     tok = time.perf_counter()
@@ -10081,11 +12058,11 @@ class NostalgiaForInfinityX3(IStrategy):
         # -----------------------------------------------------------------------------------------
         item_buy_logic = []
         item_buy_logic.append(reduce(lambda x, y: x & y, item_buy_protection_list))
-        item_buy_logic.append(dataframe["protections_global"] == True)
 
         # Condition #1 - Long mode bull. Uptrend.
         if index == 1:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -10816,6 +12793,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #2 - Normal mode bull.
         if index == 2:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.16))
@@ -11452,6 +13430,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #3 - Normal mode bull.
         if index == 3:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -12090,6 +14069,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #4 - Normal mode bull.
         if index == 4:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -13093,6 +15073,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #5 - Normal mode bull.
         if index == 5:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -14320,6 +16301,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #6 - Normal mode bull.
         if index == 6:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -15040,6 +17022,8 @@ class NostalgiaForInfinityX3(IStrategy):
 
         # Condition #7 Normal mode.
         if index == 7:
+          # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -15289,6 +17273,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #8 Normal mode.
         if index == 8:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -15428,6 +17413,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #9 - Normal mode.
         if index == 9:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -15634,6 +17620,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #21 - Pump mode bull.
         if index == 21:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.16))
@@ -16709,6 +18696,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #22 - Pump mode bull.
         if index == 22:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -17602,6 +19590,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #23 - Pump mode.
         if index == 23:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -17701,6 +19690,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #41 - Quick mode bull.
         if index == 41:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -18816,6 +20806,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #42 - Quick mode bull.
         if index == 42:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -19410,6 +21401,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #43 - Quick mode bull.
         if index == 43:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -19787,6 +21779,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #44 - Quick mode bull.
         if index == 44:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
@@ -21021,187 +23014,44 @@ class NostalgiaForInfinityX3(IStrategy):
           item_buy_logic.append(dataframe["cti_20"] < -0.8)
           item_buy_logic.append(dataframe["r_14"] < -90.0)
 
-        # Condition #61 - Rebuy mode bull.
+        # Condition #61 - Rebuy mode (Long).
         if index == 61:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
+          item_buy_logic.append(dataframe["protections_long_rebuy"] == True)
           item_buy_logic.append(current_free_slots >= self.rebuy_mode_min_free_slots)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
-          item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.12))
-          item_buy_logic.append(dataframe["close_max_24"] < (dataframe["close"] * 1.16))
-          item_buy_logic.append(dataframe["close_max_48"] < (dataframe["close"] * 1.2))
-          item_buy_logic.append(dataframe["high_max_6_1h"] < (dataframe["close"] * 1.24))
-          item_buy_logic.append(dataframe["high_max_12_1h"] < (dataframe["close"] * 1.3))
-          item_buy_logic.append(dataframe["high_max_24_1h"] < (dataframe["close"] * 1.36))
-          item_buy_logic.append(dataframe["hl_pct_change_24_1h"] < 0.5)
-          item_buy_logic.append(dataframe["hl_pct_change_48_1h"] < 0.75)
+          item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.2))
+          item_buy_logic.append(dataframe["close_max_24"] < (dataframe["close"] * 1.24))
+          item_buy_logic.append(dataframe["close_max_48"] < (dataframe["close"] * 1.3))
+          item_buy_logic.append(dataframe["high_max_24_1h"] < (dataframe["close"] * 1.5))
+          item_buy_logic.append(dataframe["high_max_24_4h"] < (dataframe["close"] * 1.75))
+          item_buy_logic.append(dataframe["hl_pct_change_6_1h"] < 0.4)
+          item_buy_logic.append(dataframe["hl_pct_change_12_1h"] < 0.5)
+          item_buy_logic.append(dataframe["hl_pct_change_24_1h"] < 0.75)
+          item_buy_logic.append(dataframe["hl_pct_change_48_1h"] < 0.9)
 
-          item_buy_logic.append(dataframe["cti_20_1h"] < 0.95)
-          item_buy_logic.append(dataframe["cti_20_4h"] < 0.95)
-          item_buy_logic.append(dataframe["rsi_14_1h"] < 85.0)
-          item_buy_logic.append(dataframe["rsi_14_4h"] < 85.0)
-          item_buy_logic.append(dataframe["rsi_14_1d"] < 85.0)
-          item_buy_logic.append(dataframe["r_14_1h"] < -25.0)
-          item_buy_logic.append(dataframe["r_14_4h"] < -25.0)
-
-          item_buy_logic.append(dataframe["pct_change_high_max_6_24_1h"] > -0.3)
-          item_buy_logic.append(dataframe["pct_change_high_max_3_12_4h"] > -0.4)
-
-          item_buy_logic.append(protections_global_1)
-          item_buy_logic.append(protections_global_2)
-          item_buy_logic.append(protections_global_3)
-          item_buy_logic.append(protections_global_4)
-          item_buy_logic.append(protections_global_5)
-          item_buy_logic.append(protections_global_6)
-          item_buy_logic.append(protections_global_7)
-          item_buy_logic.append(protections_global_8)
-          item_buy_logic.append(protections_global_9)
-          item_buy_logic.append(protections_global_10)
-
-          item_buy_logic.append(dataframe["not_downtrend_15m"])
-          # current 1h downtrend, downtrend 4h
-          item_buy_logic.append(
-            (dataframe["not_downtrend_1h"])
-            | (dataframe["ema_200_1h"] > dataframe["ema_200_1h"].shift(288))
-            | (dataframe["ema_200_dec_24_4h"] == False)
-          )
-          # current 1h red, overbought 1h, downtrend 1h, downtrend 1h, drop last 2h
-          item_buy_logic.append(
-            (dataframe["change_pct_1h"] > -0.04)
-            | (dataframe["cti_20_1h"] < 0.85)
-            | (dataframe["ema_200_1h"] > dataframe["ema_200_1h"].shift(288))
-            | (dataframe["ema_200_dec_24_4h"] == False)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.1))
-          )
-          # current 1d green, overbought 1d
-          item_buy_logic.append((dataframe["change_pct_1d"] < 0.16) | (dataframe["cti_20_1d"] < 0.5))
-          # current 1d long relative top wick, overbought 1d, current 4h red, drop last 4h
-          item_buy_logic.append(
-            (dataframe["top_wick_pct_1d"] < (abs(dataframe["change_pct_1d"]) * 5.0))
-            | (dataframe["cti_20_1d"] < 0.5)
-            | (dataframe["change_pct_4h"] > -0.04)
-            | (dataframe["close_max_48"] < (dataframe["close"] * 1.1))
-          )
-          # downtrend 1d, overbought 1d, drop in last 2h
-          item_buy_logic.append(
-            (dataframe["is_downtrend_3_1d"] == False)
-            | (dataframe["cti_20_1d"] < 0.5)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.1))
-          )
-          # current 1d red with top wick, overbought 1d, drop in last 2h
-          item_buy_logic.append(
-            (dataframe["change_pct_1d"] > -0.02)
-            | (dataframe["top_wick_pct_1d"] < 0.02)
-            | (dataframe["cti_20_1d"] < 0.85)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.1))
-          )
-          # current 1d green with top wick, downtrend 4h, overbought 4h, drop in last 2h
-          item_buy_logic.append(
-            (dataframe["change_pct_1d"] < 0.06)
-            | (dataframe["top_wick_pct_1d"] < 0.06)
-            | (dataframe["is_downtrend_3_4h"] == False)
-            | (dataframe["cti_20_4h"] < 0.5)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.1))
-          )
-          # current 1h red, overbought 1h, drop in last 2h
-          item_buy_logic.append(
-            (dataframe["change_pct_1h"] > -0.02)
-            | (dataframe["cti_20_1h"] < 0.5)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.1))
-          )
-          # current 4h grered, previous 4h green, overbought 1h, downtrend 1h, downtrend 4h
-          item_buy_logic.append(
-            (dataframe["change_pct_4h"] > -0.04)
-            | (dataframe["change_pct_4h"].shift(48) < 0.04)
-            | (dataframe["cti_20_1h"] < 0.85)
-            | (dataframe["ema_200_1h"] > dataframe["ema_200_1h"].shift(288))
-            | (dataframe["ema_200_dec_24_4h"] == False)
-          )
-          # current 4h red, downtrend 1h, downtrend 4h, drop in last 2h
-          item_buy_logic.append(
-            (dataframe["change_pct_4h"] > -0.04)
-            | (dataframe["not_downtrend_1h"])
-            | (dataframe["ema_200_dec_24_4h"] == False)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.08))
-          )
-          # current 1d long red, overbought 1d, drop in last 2h
-          item_buy_logic.append(
-            (dataframe["change_pct_1d"] > -0.16)
-            | (dataframe["cti_20_1d"] < 0.5)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.1))
-          )
-          # current 1d relative long top wick, overbought 1d, drop in last 2h
-          item_buy_logic.append(
-            (dataframe["top_wick_pct_1d"] < (abs(dataframe["change_pct_1d"]) * 2.0))
-            | (dataframe["cti_20_1d"] < 0.85)
-            | (dataframe["rsi_14_1d"] < 70.0)
-            | (dataframe["close_max_24"] < (dataframe["close"] * 1.1))
-          )
-          # current and previous 1d red, overbought 1d
-          item_buy_logic.append(
-            (dataframe["change_pct_1d"] > -0.0)
-            | (dataframe["change_pct_1d"].shift(288) > -0.0)
-            | (dataframe["cti_20_1d"] < 0.85)
-          )
-          # downtrend 1d, overbought 1d
-          item_buy_logic.append((dataframe["is_downtrend_3_1d"] == False) | (dataframe["cti_20_1d"] < 0.5))
-          # overbought 1d
-          item_buy_logic.append((dataframe["cti_20_1d"] < 0.9) | (dataframe["rsi_14_1d"] < 80.0))
-          item_buy_logic.append(
-            (dataframe["not_downtrend_1h"])
-            | (dataframe["cti_20_1h"] < -0.5)
-            | (dataframe["cti_20_4h"] < -0.0)
-            | (dataframe["cti_20_1d"] < -0.5)
-            | (dataframe["ema_200_dec_4_1d"] == False)
-            | ((dataframe["ema_26"] - dataframe["ema_12"]) > (dataframe["open"] * 0.03))
-          )
-          item_buy_logic.append(
-            (dataframe["cti_20_15m"] < -0.5)
-            | (dataframe["cti_20_1h"] < -0.5)
-            | (dataframe["cti_20_4h"] < -0.0)
-            | (dataframe["cti_20_1d"] < 0.75)
-            | (dataframe["rsi_14_1d"] < 70.0)
-          )
-          # XAVA
-          item_buy_logic.append(
-            (dataframe["cti_20_15m"] < -0.5)
-            | (dataframe["rsi_3_15m"] > 25.0)
-            | (dataframe["cti_20_1h"] < -0.0)
-            | (dataframe["cti_20_1d"] < -0.5)
-            | ((dataframe["ema_26"] - dataframe["ema_12"]) > (dataframe["open"] * 0.02))
-          )
-          item_buy_logic.append(
-            (dataframe["not_downtrend_1h"])
-            | (dataframe["cti_20_15m"] < -0.8)
-            | (dataframe["rsi_3_15m"] > 10.0)
-            | (dataframe["cti_20_1h"] < -0.8)
-            | (dataframe["rsi_3_1h"] > 10.0)
-            | (dataframe["cti_20_4h"] < -0.0)
-            | ((dataframe["ema_26"] - dataframe["ema_12"]) > (dataframe["open"] * 0.03))
-          )
-          item_buy_logic.append(
-            (dataframe["not_downtrend_1h"])
-            | (dataframe["not_downtrend_4h"])
-            | (dataframe["rsi_14_15m"] < 30.0)
-            | (dataframe["cti_20_1h"] < -0.8)
-            | (dataframe["rsi_3_1h"] > 10.0)
-            | (dataframe["cti_20_4h"] < 0.5)
-            | (dataframe["cti_20_1d"] < -0.5)
-            | ((dataframe["ema_26"] - dataframe["ema_12"]) > (dataframe["open"] * 0.03))
-          )
+          item_buy_logic.append(dataframe["rsi_3_15m"] > 6.0)
+          item_buy_logic.append(dataframe["rsi_3_1h"] > 6.0)
+          item_buy_logic.append(dataframe["rsi_3_4h"] > 6.0)
+          item_buy_logic.append(dataframe["cti_20_15m"] < 0.9)
+          item_buy_logic.append(dataframe["cti_20_1h"] < 0.9)
+          item_buy_logic.append(dataframe["cti_20_4h"] < 0.9)
+          item_buy_logic.append(dataframe["cti_20_1d"] < 0.9)
 
           # Logic
-          item_buy_logic.append(dataframe["ema_26"] > dataframe["ema_12"])
-          item_buy_logic.append((dataframe["ema_26"] - dataframe["ema_12"]) > (dataframe["open"] * 0.016))
-          item_buy_logic.append(
-            (dataframe["ema_26"].shift() - dataframe["ema_12"].shift()) > (dataframe["open"] / 100)
-          )
-          item_buy_logic.append(dataframe["close_delta"] > dataframe["close"] * 12.0 / 1000)
-          item_buy_logic.append(dataframe["rsi_14"] < 30.0)
+          item_buy_logic.append(dataframe["rsi_14"] < 40.0)
+          item_buy_logic.append(dataframe["bb40_2_delta"].gt(dataframe["close"] * 0.03))
+          item_buy_logic.append(dataframe["close_delta"].gt(dataframe["close"] * 0.014))
+          item_buy_logic.append(dataframe["bb40_2_tail"].lt(dataframe["bb40_2_delta"] * 0.4))
+          item_buy_logic.append(dataframe["close"].lt(dataframe["bb40_2_low"].shift()))
+          item_buy_logic.append(dataframe["close"].le(dataframe["close"].shift()))
 
         # Condition #81 - Long mode bull.
         if index == 81:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.12))
@@ -21318,6 +23168,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #82 - Long mode bull.
         if index == 82:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_48"] < (dataframe["close"] * 1.2))
@@ -21486,6 +23337,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #101 - Long mode rapid
         if index == 101:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.18))
@@ -21520,6 +23372,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #102 - Long mode rapid
         if index == 102:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["close_max_12"] < (dataframe["close"] * 1.18))
@@ -21555,6 +23408,7 @@ class NostalgiaForInfinityX3(IStrategy):
         # Condition #103 - Long mode rapid
         if index == 103:
           # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
           item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
           item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
           item_buy_logic.append(dataframe["high_max_12_1d"] < (dataframe["close"] * 1.6))
@@ -21576,6 +23430,75 @@ class NostalgiaForInfinityX3(IStrategy):
           item_buy_logic.append(dataframe["rsi_3"] < 46.0)
           item_buy_logic.append(dataframe["rsi_14"] > 30.0)
           item_buy_logic.append(dataframe["close"] < (dataframe["sma_16"] * 0.974))
+
+        # Condition #104 - Long mode rapid
+        if index == 104:
+          # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
+          item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
+          item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
+          item_buy_logic.append(dataframe["high_max_12_1d"] < (dataframe["close"] * 1.6))
+          item_buy_logic.append(dataframe["hl_pct_change_6_1h"] < 0.5)
+          item_buy_logic.append(dataframe["hl_pct_change_12_1h"] < 0.75)
+          item_buy_logic.append(dataframe["hl_pct_change_24_1h"] < 0.8)
+          item_buy_logic.append(dataframe["hl_pct_change_48_1h"] < 0.9)
+          item_buy_logic.append(dataframe["hl_pct_change_6_1d"] < 1.9)
+          item_buy_logic.append(dataframe["num_empty_288"] < allowed_empty_candles)
+
+          item_buy_logic.append(dataframe["rsi_3"] > 16.0)
+          item_buy_logic.append(dataframe["rsi_3_15m"] > 16.0)
+          item_buy_logic.append(dataframe["rsi_3_1h"] > 4.0)
+          item_buy_logic.append(dataframe["rsi_3_4h"] > 4.0)
+          item_buy_logic.append(dataframe["rsi_3_1d"] > 4.0)
+          item_buy_logic.append(dataframe["cti_20_15m"] < 0.9)
+          item_buy_logic.append(dataframe["cti_20_1h"] < 0.8)
+          item_buy_logic.append(dataframe["rsi_14_1h"] < 70.0)
+          item_buy_logic.append(dataframe["cti_20_4h"] < 0.8)
+          item_buy_logic.append(dataframe["rsi_14_4h"] < 80.0)
+          item_buy_logic.append(dataframe["cti_20_4h"] < 0.8)
+          item_buy_logic.append(dataframe["rsi_14_4h"] < 80.0)
+
+          # Logic
+          item_buy_logic.append(dataframe["rsi_3"] < 50.0)
+          item_buy_logic.append(dataframe["rsi_14"] > 30.0)
+          item_buy_logic.append(dataframe["rsi_14"] < 40.0)
+          item_buy_logic.append(dataframe["ha_close"] > dataframe["ha_open"])
+          item_buy_logic.append(dataframe["close"] < (dataframe["sma_16"] * 0.978))
+
+        # Condition #105 - Long mode rapid
+        if index == 105:
+          # Protections
+          item_buy_logic.append(dataframe["protections_long_global"] == True)
+          item_buy_logic.append(dataframe["btc_pct_close_max_24_5m"] < 0.03)
+          item_buy_logic.append(dataframe["btc_pct_close_max_72_5m"] < 0.03)
+          item_buy_logic.append(dataframe["high_max_12_1d"] < (dataframe["close"] * 1.6))
+          item_buy_logic.append(dataframe["hl_pct_change_6_1h"] < 0.5)
+          item_buy_logic.append(dataframe["hl_pct_change_12_1h"] < 0.75)
+          item_buy_logic.append(dataframe["hl_pct_change_24_1h"] < 0.8)
+          item_buy_logic.append(dataframe["hl_pct_change_48_1h"] < 0.9)
+          item_buy_logic.append(dataframe["hl_pct_change_6_1d"] < 1.9)
+          item_buy_logic.append(dataframe["num_empty_288"] < allowed_empty_candles)
+
+          item_buy_logic.append(dataframe["rsi_3"] > 6.0)
+          item_buy_logic.append(dataframe["rsi_3_15m"] > 6.0)
+          item_buy_logic.append(dataframe["rsi_3_1h"] > 6.0)
+          item_buy_logic.append(dataframe["rsi_3_4h"] > 6.0)
+          item_buy_logic.append(dataframe["cti_20_1h"] < 0.8)
+          item_buy_logic.append(dataframe["rsi_14_1h"] < 80.0)
+          item_buy_logic.append(dataframe["cti_20_4h"] < 0.9)
+          item_buy_logic.append(dataframe["rsi_14_4h"] < 80.0)
+          item_buy_logic.append(dataframe["cti_20_1d"] < 0.8)
+          item_buy_logic.append(dataframe["rsi_14_1d"] < 80.0)
+          item_buy_logic.append(dataframe["close"] > dataframe["sup_level_4h"])
+          item_buy_logic.append(dataframe["close"] > dataframe["sup_level_1d"])
+
+          # Logic
+          item_buy_logic.append(dataframe["rsi_14"] < 46.0)
+          item_buy_logic.append(dataframe["ema_26"] > dataframe["ema_12"])
+          item_buy_logic.append((dataframe["ema_26"] - dataframe["ema_12"]) > (dataframe["open"] * 0.016))
+          item_buy_logic.append(
+            (dataframe["ema_26"].shift() - dataframe["ema_12"].shift()) > (dataframe["open"] / 100)
+          )
 
         item_buy_logic.append(dataframe["volume"] > 0)
         item_buy = reduce(lambda x, y: x & y, item_buy_logic)

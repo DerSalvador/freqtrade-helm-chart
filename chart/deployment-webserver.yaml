@@ -1,4 +1,4 @@
-{{- if .Values.bot.enabled }}
+{{- if .Values.bot.webserver_deployment }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -12,7 +12,32 @@ spec:
       labels:
         app: freqtrade-webserver-{{ .Release.Namespace }}
     spec:
-      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
+      initContainers:
+      - name: take-sqlite-dir-ownership
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        command:
+        - bash
+        - -c
+        - |
+          echo chown -R ftuser:ftuser /sqlite 
+          echo chown -R ftuser:ftuser /freqtrade
+          echo chown -R ftuser:ftuser /extra_strategies
+          echo chmod -R 777 /extra_strategies
+          chown -R ftuser:ftuser /sqlite 
+          chown -R ftuser:ftuser /freqtrade
+          chown -R ftuser:ftuser /extra_strategies
+          chmod -R 777 /extra_strategies
+          find /sqlite           
+        volumeMounts:
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false           
+        - mountPath: /sqlite
+          name: sqlite    
+      # nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReader }} # pool-dersalvador-y5w2t # pool-dersalvador-ylyw0
       containers:
       - name: freqtrade-webserver-{{ .Release.Namespace }}
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
@@ -24,20 +49,19 @@ spec:
         - {{ .Values.bot.debuglevel }}
 {{- end }}
         - --config
-        - /freqtrade/config/config.json
+        - /freqtrade/config/config-{{ .Release.Namespace }}.json
         - --config
-        - /freqtrade/configcreds/configcreds.json
+        - /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json
         - --log-file 
         - /tmp/freqtrade-webserver.log
-        - --data-dir
+        - --datadir
         - /freqtrade/user_data/data
+        - --userdir
+        - /freqtrade/user_data 
         volumeMounts:
-        - name: backtesting-data
-          mountPath: /freqtrade/user_data/data
-        - name: strategies
-          mountPath: /freqtrade/user_data/strategies
-        - name: extra-strategies
-          mountPath: /freqtrade/user_data/extra_strategies
+        # - name: extra-strategies
+        #   mountPath: /extra_strategies
+        #   readOnly: false      
         - name: configcreds
           mountPath: /freqtrade/configcreds
         - name: config
@@ -45,26 +69,20 @@ spec:
         - name: sqlite
           mountPath: /sqlite
         ports:
-        - name: api
-          containerPort: {{ .Values.config.api_server.listen_port }}
+        - name: api-webserver
+          containerPort: {{ .Values.config.api_server.listen_port_webserver }}
       imagePullSecrets:
-      - name: do-dersalvador-registry
+      - name: deploy-key-gcr
       volumes:
-      - name: backtesting-data
-        persistentVolumeClaim:
-          claimName: freqtrade-backtesting-data
-      - name: extra-strategies
-        persistentVolumeClaim:
-          claimName: freqtrade-extra-strategies
+      # - name: extra-strategies
+      #   persistentVolumeClaim:
+      #     claimName: freqtrade-extra-strategies        
       - name: configcreds
         configMap:
           name: freqtrade-config-creds-{{ .Release.Namespace }}
       - name: config
         configMap:
           name: freqtrade-config-{{ .Release.Namespace }}
-      - name: strategies
-        configMap:
-          name: freqtrade-strategies-{{ .Release.Namespace }}
       - name: sqlite
         persistentVolumeClaim:
           claimName: freqtrade-sqlite

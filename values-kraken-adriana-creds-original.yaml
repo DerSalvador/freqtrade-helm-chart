@@ -1,0 +1,23 @@
+configcreds:
+  bot_name: freqtrade-kraken-adriana
+  dry_run: false
+  dry_run_wallet: 100000
+  download_trades: false
+  position_adjustment_enable: true
+  stake_amount: unlimited
+  exchange:
+    name: kraken
+    key: +H4NKdY1EIWMVwq4s+qOymZATOYoQPvND+wCMzo+jasiN+zScLEVPODo
+    secret: >-
+      jOrx0aLMbRzOjAoagVx0nU1fW2qzTvvT+2bZQNIehqjKfieATglkZ+o92QJm9AuCCdmH4k3owys+nWHKlCEJmw==
+  telegram:
+    enabled: true
+    token: "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
+    chat_id: "6274423445"
+  
+bot:  
+  enabled: true
+  strategy_name: NostalgiaForInfinityX4
+  pvc_size: 1Gi
+  freqaimodel: LightGBMRegressor #  ReinforcementLearner
+  # freqaimodel: ReinforcementLearner # LightGBMRegressor

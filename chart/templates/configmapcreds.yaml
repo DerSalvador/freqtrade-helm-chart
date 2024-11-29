@@ -1,3 +1,4 @@
+---
 {{- if .Values.create_config_configmap }}
 apiVersion: v1
 kind: ConfigMap

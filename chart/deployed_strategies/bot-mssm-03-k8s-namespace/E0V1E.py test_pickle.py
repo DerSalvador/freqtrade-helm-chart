@@ -1,0 +1,105 @@
+kubectl --context=gke_vaulted-gift-406223_europe-west1-b_private-cluster-3 -n bot-mssm-03 exec -it pod/freqtrade-bot-mssm-03-7bcbf65bf7-hjf5x -c freqtrade -- cat /freqtrade/user_data/strategies/E0V1E.py test_pickle.py
+from datetime import datetime, timedelta
+import talib.abstract as ta
+import pandas_ta as pta
+from freqtrade.persistence import Trade
+from freqtrade.strategy.interface import IStrategy
+from pandas import DataFrame
+from freqtrade.strategy import DecimalParameter, IntParameter
+from functools import reduce
+import warnings
+
+warnings.simplefilter(action="ignore", category=RuntimeWarning)
+TMP_HOLD = []
+
+
+class E0V1E(IStrategy):
+    minimal_roi = {
+        "0": 1
+    }
+    timeframe = '5m'
+    process_only_new_candles = True
+    startup_candle_count = 120
+    order_types = {
+        'entry': 'market',
+        'exit': 'market',
+        'emergency_exit': 'market',
+        'force_entry': 'market',
+        'force_exit': "market",
+        'stoploss': 'market',
+        'stoploss_on_exchange': False,
+        'stoploss_on_exchange_interval': 60,
+        'stoploss_on_exchange_market_ratio': 0.99
+    }
+
+    stoploss = -0.25
+    trailing_stop = True
+    trailing_stop_positive = 0.003
+    trailing_stop_positive_offset = 0.03
+    trailing_only_offset_is_reached = True
+
+    is_optimize_32 = True
+    buy_rsi_fast_32 = IntParameter(20, 70, default=23, space='buy', optimize=is_optimize_32)
+    buy_rsi_32 = IntParameter(15, 50, default=36, space='buy', optimize=is_optimize_32)
+    buy_sma15_32 = DecimalParameter(0.900, 1, default=0.961, decimals=3, space='buy', optimize=is_optimize_32)
+    buy_cti_32 = DecimalParameter(-1, 1, default=-0.39, decimals=2, space='buy', optimize=is_optimize_32)
+    
+    sell_fastx = IntParameter(50, 100, default=80, space='sell', optimize=True)
+
+    def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # buy_1 indicators
+        dataframe['sma_15'] = ta.SMA(dataframe, timeperiod=15)
+        dataframe['cti'] = pta.cti(dataframe["close"], length=20)
+        dataframe['rsi'] = ta.RSI(dataframe, timeperiod=14)
+        dataframe['rsi_fast'] = ta.RSI(dataframe, timeperiod=4)
+        dataframe['rsi_slow'] = ta.RSI(dataframe, timeperiod=20)
+        # profit sell indicators
+        stoch_fast = ta.STOCHF(dataframe, 5, 3, 0, 3, 0)
+        dataframe['fastk'] = stoch_fast['fastk']
+
+        dataframe['ma120'] = ta.MA(dataframe, timeperiod=120)
+
+        return dataframe
+
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        conditions = []
+        dataframe.loc[:, 'enter_tag'] = ''
+        buy_1 = (
+                (dataframe['rsi_slow'] < dataframe['rsi_slow'].shift(1)) &
+                (dataframe['rsi_fast'] < self.buy_rsi_fast_32.value) &
+                (dataframe['rsi'] > self.buy_rsi_32.value) &
+                (dataframe['close'] < dataframe['sma_15'] * self.buy_sma15_32.value) &
+                (dataframe['cti'] < self.buy_cti_32.value)
+        )
+        conditions.append(buy_1)
+        dataframe.loc[buy_1, 'enter_tag'] += 'buy_1'
+        if conditions:
+            dataframe.loc[
+                reduce(lambda x, y: x | y, conditions),
+                'enter_long'] = 1
+        return dataframe
+
+    def custom_exit(self, pair: str, trade: 'Trade', current_time: 'datetime', current_rate: float,
+                    current_profit: float, **kwargs):
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+        current_candle = dataframe.iloc[-1].squeeze()
+
+        if trade.open_rate > current_candle["ma120"]:
+            if trade.id not in TMP_HOLD:
+                TMP_HOLD.append(trade.id)
+
+        if current_profit > 0:
+            if current_candle["fastk"] > self.sell_fastx.value:
+                return "fastk_profit_sell"
+
+        for i in TMP_HOLD:
+            if trade.id == i and current_candle["close"] < current_candle["ma120"]:
+                TMP_HOLD.remove(i)
+                return "ma120_sell"
+
+        return None
+
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[:, ['exit_long', 'exit_tag']] = (0, 'long_out')
+        return dataframe
+cat: test_pickle.py: No such file or directory

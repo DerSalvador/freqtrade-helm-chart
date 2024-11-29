@@ -1,0 +1,20 @@
+{
+    "pairs": ["JTO/USDT:USDT", 
+              "SOL/USDT:USDT",
+              "DOT/USDT:USDT",
+              "ETH/USDT:USDT",
+              "XRP/USDT:USDT",
+              "XLM/USDT:USDT",
+              "XDC/USDT:USDT",
+              "IOTA/USDT:USDT",
+              "ALGO/USDT:USDT", 
+              "BTC/USDT:USDT",
+              "BCH/USDT:USDT",
+              "DOGE/USDT:USDT",
+              "MATIC/USDT:USDT",
+              "LINK/USDT:USDT",
+              "GMX/USDT:USDT",
+              "ADA/USDT:USDT"
+            ],
+    "refresh_period": 900
+}

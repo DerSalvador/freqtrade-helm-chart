@@ -1,0 +1,136 @@
+{{- if .Values.backtesting.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: backtesting-{{ .Release.Namespace }}-{{ now | unixEpoch }}
+  labels:
+    app: backtesting-{{ .Release.Namespace }}
+spec:
+  template:
+    spec:
+      {{- if .Values.backtesting.download_data }}
+      {{- if (.Values.kubernetes.nodeNameBackTestingResultsReeader) }}
+      nodeName: {{ .Values.kubernetes.nodeNameBackTestingResultsReeader }} #  pool-dersalvador-y5wl4 # pool-dersalvador-y6z2l
+      {{- end }}
+      initContainers:
+      - name: take-data-dir-ownership
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsUser: 0
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   runAsUser: 0
+        command:
+        - bash
+        args: ["-c","chown -R ftuser:ftuser /data; ls -ltra /data" ] 
+        volumeMounts:
+        - mountPath: /data
+          name: data
+      - name: download-data
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        # securityContext:
+        #   allowPrivilegeEscalation: false
+        #   runAsUser: 0
+        command:
+        - freqtrade
+        args:
+        - download-data
+        - --pairs
+{{ .Values.config.exchange.pair_whitelist_backtesting | toYaml | indent 8 }}
+        - --timerange
+        - {{ .Values.backtesting.timerange }}
+        - --timeframes
+        - {{ .Values.backtesting.timeframes }}
+        - --datadir
+        - /data/{{ .Values.config.exchange.name }}
+        - --config
+        - /freqtrade/config/config.json
+        volumeMounts:
+        - mountPath: /data
+          name: data
+        - mountPath: /freqtrade/config
+          name: config
+      imagePullSecrets:
+      - name: do-dersalvador-registry
+      {{- end }}
+      containers:
+      - name: backtesting
+        image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+        command:
+        - freqtrade
+        args:
+        - backtesting
+        - --config
+        - /freqtrade/config/config.json
+        - --datadir
+        - /data/{{ .Values.config.exchange.name }}
+        - --strategy-list
+        - {{ .Values.backtesting.strategy_list }}
+        {{- if .Values.backtesting.timerange }}
+        - --timerange
+        - {{ .Values.backtesting.timerange }}
+        {{- end }}
+        {{- if .Values.backtesting.fee }}
+        - --fee
+        - {{ .Values.backtesting.fee | quote }}
+        {{- end }}
+        {{- if .Values.backtesting.results.enable_export }}
+        - --export
+        - trades
+        - --export-filename
+        - /results/backtesting-{{ now | unixEpoch }}.json
+        {{- end }}
+        volumeMounts:
+        - mountPath: /data
+          name: data
+        - mountPath: /results
+          name: results
+        - mountPath: /freqtrade/config
+          name: config
+        - mountPath: /freqtrade/user_data/strategies
+          name: strategies
+      imagePullSecrets:
+      - name: do-dersalvador-registry
+      restartPolicy: Never
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: backtesting-data-{{ .Release.Namespace }}
+      - name: results
+        persistentVolumeClaim:
+          claimName: backtesting-results-{{ .Release.Namespace }}
+      - name: config
+        configMap:
+          name: freqtrade-config-{{ .Release.Namespace }}
+      - name: strategies
+        configMap:
+          name: freqtrade-strategies-{{ .Release.Namespace }}
+#---
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+metadata:
+#  name: backtesting-data-{{ .Release.Namespace }}
+#spec:
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: {{ .Values.backtesting.pvc_size }}
+#---
+#{{- if .Values.backtesting.results.enable_export }}
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: backtesting-results-{{ .Release.Namespace }}
+#spec:
+#  accessModes:
+#  - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: {{ .Values.backtesting.results.pvc_size }}
+{{- end }}
+{{- end }}
