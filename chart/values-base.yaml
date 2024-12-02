@@ -7,6 +7,7 @@ configcreds:
   exchange:
     pair_blacklist:
       - XLM/USDT:USDT
+      - ADA/USDT:USDT
   edge:
     enabled: false
     process_throttle_secs: 3600
@@ -25,7 +26,7 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-      hedging_version: v3.5-mypy-lostTrades
+      hedging_version: v3.7-mypy-lostTrades
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: false
