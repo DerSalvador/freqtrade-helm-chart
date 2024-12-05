@@ -36,10 +36,10 @@ configcreds:
       spot_pair_delay: 2
       thread_delay: 2
       spot_aggregated_market_delay: 2
-      leverage: 5
+      leverage: 1
       stoploss_hedging: false
-      minimal_leverage: 5
-      stake_amount: 200
+      minimal_leverage: 1
+      stake_amount: 20
       minimal_stoploss_length: 50
       stoploss_length: 70
       status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT, DOGE/USDT:USDT, GMX/USDT:USDT ]"
@@ -66,6 +66,8 @@ configcreds:
       macd_signal_window: 9
       # Timeout     
       minutesLatestTradeDuration: 10 # 60
+      hedgeMinutes: 20 
+      lossAbsolutInHedge: -30      
       # Candle Lengths
       # Dataframe Analysis
       market_analysis: true
@@ -83,14 +85,14 @@ configcreds:
       bearish_partial_threshold_pct: 0.65
       bullish_threshold_pct_offset: 0.01
       bearish_threshold_pct_offset: 0.01
-      # stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # adriana
-      # stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1 # adriana
+      stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # adriana
+      stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1 # adriana
       hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
       hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
 
-      stoploss_apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm # michael
-      stoploss_apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov # michael
+      # stoploss_apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm # michael
+      # stoploss_apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov # michael
 
       # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
