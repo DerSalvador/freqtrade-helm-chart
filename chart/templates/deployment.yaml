@@ -104,11 +104,11 @@ spec:
         - bash
         - -c
         - |
-           echo pip install multiprocess mailtrap
+           echo pip install tensorflow python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
            echo ""
            echo "Starting Freqtrade list-strategies"
            echo ""
-           pip install multiprocess mailtrap
+           pip install  tensorflow  python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
            freqtrade list-strategies --recursive-strategy-search --strategy-path /extra_strategies --config /freqtrade/config/config-{{ .Release.Namespace }}.json --config /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json -d  /extra_strategies/data --userdir /freqtrade/user_data --logfile /extra_strategies/logs/liststrategies_{{ now | date "20060102" }}.log
 #         command:
 #         - freqtrade
@@ -750,7 +750,8 @@ spec:
         - bash
         - -c
         - |
-           pip install multiprocess mailtrap
+           echo pip install  tensorflow  python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
+           pip install  tensorflow  python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
            echo freqtrade trade \
            {{- if .Values.bot.debug }} {{ .Values.bot.debuglevel }} {{- end }}  \
            --config  \
