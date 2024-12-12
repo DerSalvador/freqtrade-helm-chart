@@ -43,6 +43,7 @@ configcreds:
       minimal_stoploss_length: 50
       stoploss_length: 70
       status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT, DOGE/USDT:USDT, GMX/USDT:USDT ]"
+      # status_table_informative_pairs: "[ BTC/USDT:USDT ]"
       # Minimal Threshold 
       config_path_serialized: "/extra_strategies/config.json"
       minimal_trigger_threshold_adjustment: 1800
@@ -66,8 +67,9 @@ configcreds:
       macd_signal_window: 9
       # Timeout     
       minutesLatestTradeDuration: 10 # 60
-      hedgeMinutes: 20 
-      lossAbsolutInHedge: -30      
+      hedgeMinutes: 20
+      lossAbsolutInHedge: -60
+      profitAbsolutInHedge: 20
       # Candle Lengths
       # Dataframe Analysis
       market_analysis: true
@@ -77,7 +79,7 @@ configcreds:
       start_profit_abs_positiv: 1
       start_profit_abs_negative: -1
       candle_divisor: 2
-      lostTradeAgeInMinutes: 10 
+      lostTradeAgeInMinutes: 30
       candle_divisor_freqtrade_candle: 3
       minimal_candle_divisor_freqtrade_candle: 2
       add_new_row_countdown_in_sec: 2
@@ -85,13 +87,17 @@ configcreds:
       bearish_partial_threshold_pct: 0.65
       bullish_threshold_pct_offset: 0.01
       bearish_threshold_pct_offset: 0.01
+      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"
+      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/status"
+      # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
       stoploss_apikey: E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN # adriana
       stoploss_apisecret: 1jKDzu9csiFtSpqpe6PetJAmRedge6tIHHjSsH8LeWGKwkt18v173bsM0gZS2gQ1 # adriana
-      hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
       stoploss_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
-      hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-
+      alternativeHedgingApproach: false
       # stoploss_apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm # michael
       # stoploss_apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov # michael
 
@@ -99,7 +105,7 @@ configcreds:
       # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
-      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/status"
+      # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/status"
       # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/status"
       spot_bot_api_whitelist: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-01.bot-mssm-01.svc.cluster.local:8084/api/v1/whitelist"
     ds_listdata:
