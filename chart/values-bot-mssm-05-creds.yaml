@@ -6,7 +6,7 @@ configcreds:
   margin_mode: isolated  
   dersalvador:
     hedging:
-      role: trades
+      role: trades_exit
       # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/status"
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
       # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/status"
@@ -24,6 +24,7 @@ configcreds:
       pair_profits_check_array_length: 90
       alternativeHedgingApproach: true
       binance_timeout: 2
+      exit_on_profit: true
 
   minimal_roi:
     "0": 0.99

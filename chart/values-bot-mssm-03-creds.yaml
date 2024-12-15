@@ -15,7 +15,7 @@ configcreds:
       hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
       hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      market_analysis: true
+      market_analysis: false
       pair_aggregated_analysis: false
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
