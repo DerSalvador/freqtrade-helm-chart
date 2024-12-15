@@ -8,13 +8,13 @@ configcreds:
     hedging:
       role: trades
       # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/status"
-      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
+      spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
       # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/status"
-      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/forceenter"      
-      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/show_config"      
-      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/status" # "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
-      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/profit"      
-      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-larissa-do-nothing.bot-larissa-do-nothing.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
+      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter"      
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/show_config"      
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status" # "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"      
+      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       market_analysis: false
       pair_aggregated_analysis: false
       freqtrade_pair_analysis: false
@@ -23,6 +23,7 @@ configcreds:
       minimal_pair_profits_check_array_length: 70
       pair_profits_check_array_length: 90
       alternativeHedgingApproach: true
+      binance_timeout: 2
 
   minimal_roi:
     "0": 0.99
@@ -33,6 +34,9 @@ configcreds:
       - SOL/USDT:USDT
       - XRP/USDT:USDT
     name: binance
+    key: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
+    secret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8    
+
   pairlists:
     - method: StaticPairList
       mode: whitelist
