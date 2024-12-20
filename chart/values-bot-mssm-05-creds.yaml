@@ -25,11 +25,13 @@ configcreds:
       alternativeHedgingApproach: true
       binance_timeout: 2
       exit_on_profit: true
+      spot_bot_apikey: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
+      spot_bot_apisecret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8
 
   minimal_roi:
     "0": 0.99
   bot_name: bot-mssm-05
-  dry_run: false
+  dry_run: true
   exchange:
     pair_whitelist:
       - SOL/USDT:USDT

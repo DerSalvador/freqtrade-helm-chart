@@ -39,7 +39,7 @@ configcreds:
       leverage: 5
       stoploss_hedging: false
       minimal_leverage: 5
-      stake_amount: 300
+      stake_amount: 400
       minimal_stoploss_length: 50
       stoploss_length: 70
       status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT, DOGE/USDT:USDT, GMX/USDT:USDT ]"
@@ -55,8 +55,8 @@ configcreds:
       minimal_pair_profits_check_array_length: 70
       pair_profits_check_array_length: 100
       minimal_aggregated_pair_profits_check_array_length: 15
-      aggregated_pair_profits_check_array_length: 20
-      minimal_market_profits_check_array_length: 10
+      aggregated_pair_profits_check_array_length: 40
+      minimal_market_profits_check_array_length: 20
       market_profits_check_array_length: 10
       minimal_bullish_threshold_pct: 0.7
       bullish_threshold_pct: 0.8
@@ -73,6 +73,7 @@ configcreds:
       # Candle Lengths
       # Dataframe Analysis
       market_analysis: true
+      market_decision_enforced: false
       pair_aggregated_analysis: false
       freqtrade_pair_analysis: false
       # Bullish or Bearish Thresholds
