@@ -18,7 +18,8 @@ configcreds:
       hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
       hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
-
+      lossAbsolutInHedge: -20
+      profitAbsolutInHedge: 20
       exit_on_profit: true
   bot_name: binance-adriana-futures
   dry_run: false

@@ -42,6 +42,8 @@ configcreds:
       stake_amount: 400
       minimal_stoploss_length: 50
       stoploss_length: 70
+      lossAbsolutInHedge: -20
+      profitAbsolutInHedge: 20
       status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT, DOGE/USDT:USDT, GMX/USDT:USDT ]"
       # status_table_informative_pairs: "[ BTC/USDT:USDT ]"
       # Minimal Threshold 
@@ -68,8 +70,6 @@ configcreds:
       # Timeout     
       minutesLatestTradeDuration: 10 # 60
       hedgeMinutes: 20
-      lossAbsolutInHedge: -60
-      profitAbsolutInHedge: 20
       # Candle Lengths
       # Dataframe Analysis
       market_analysis: true
@@ -80,7 +80,7 @@ configcreds:
       start_profit_abs_positiv: 1
       start_profit_abs_negative: -1
       candle_divisor: 2
-      lostTradeAgeInMinutes: 30
+      lostTradeAgeInMinutes: 40
       candle_divisor_freqtrade_candle: 3
       minimal_candle_divisor_freqtrade_candle: 2
       add_new_row_countdown_in_sec: 2
