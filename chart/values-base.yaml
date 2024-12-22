@@ -35,7 +35,7 @@ configcreds:
       binance_timeout: 5
       spot_pair_delay: 2
       thread_delay: 2
-      spot_aggregated_market_delay: 2
+      spot_aggregated_market_delay: 60 # seconds
       leverage: 5
       stoploss_hedging: false
       minimal_leverage: 5
@@ -80,7 +80,7 @@ configcreds:
       start_profit_abs_positiv: 1
       start_profit_abs_negative: -1
       candle_divisor: 2
-      lostTradeAgeInMinutes: 40
+      lostTradeAgeInMinutes: 15
       candle_divisor_freqtrade_candle: 3
       minimal_candle_divisor_freqtrade_candle: 2
       add_new_row_countdown_in_sec: 2
