@@ -32,7 +32,7 @@ configcreds:
   stoploss: -0.99
   minimal_roi:
     "0": 0.99
-
+  available_capital: 2200
   bot_name: bot-mssm-03
   exchange:
     pair_whitelist:
