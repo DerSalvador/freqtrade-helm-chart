@@ -32,14 +32,14 @@ configcreds:
       exit_on_profit: false
       debug: false
       dataframe_path: /extra_strategies/dataframes/
-      binance_timeout: 5
-      spot_pair_delay: 2
-      thread_delay: 2
+      binance_timeout: 8
+      spot_pair_delay: 5
+      thread_delay: 5
       spot_aggregated_market_delay: 60 # seconds
       leverage: 5
       stoploss_hedging: false
       minimal_leverage: 5
-      stake_amount: 400
+      stake_amount: 600
       minimal_stoploss_length: 50
       stoploss_length: 70
       lossAbsolutInHedge: -20
