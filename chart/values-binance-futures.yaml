@@ -177,8 +177,8 @@ config:
         defaultType: future
         leverage: 5 
     name: binance  
-    key: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
-    secret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov    
+    key: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P
+    secret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
   pairlists:
     - method: StaticPairList
       mode: whitelist
