@@ -97,9 +97,9 @@ def main():
         delete_existing_orders(symbol)
 
         # Check for existing open orders
-        if check_existing_orders(symbol):
-            print(f"There are already open orders for {symbol}. No new order will be placed.")
-            return
+        # if check_existing_orders(symbol):
+        #    print(f"There are already open orders for {symbol}. No new order will be placed.")
+        #    return
 
 
 
@@ -107,7 +107,7 @@ def main():
         tick_size = get_tick_size(symbol)
 
         # Calculate the target price for a 10% profit
-        target_price = calculate_target_price(entry_price, 0.1, position_amt, tick_size)
+        target_price = calculate_target_price(entry_price, 0.05, position_amt, tick_size)
 
         # Place the order
         place_order(symbol, position_amt, target_price)
