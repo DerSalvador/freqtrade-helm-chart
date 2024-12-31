@@ -24,9 +24,10 @@ configcreds:
     "120": 0.5
     "240": 0.4
     "480": 0.2
+    "880": 0.13
   max_open_trades: 10
   dry_run: false
-  stoplos: 0.13
+  stoploss: -0.99
   exchange:
     name: binance
   telegram:

@@ -27,11 +27,18 @@ configcreds:
       exit_on_profit: true
       spot_bot_apikey: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
       spot_bot_apisecret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8
-      lossAbsolutInHedge: -60
-      profitAbsolutInHedge: 60
-
+      lossAbsolutInHedge: -5
+      profitAbsolutInHedge: 5
+      hedgeMinutes: 20
+      hedgeMinutesMax: 300
+    
   minimal_roi:
-    "0": 0.99
+    "1440": -1 # nach 1 tagen sofort raus egal ob verlust oder gewinn
+    "0": 0.7
+    "120": 0.5
+    "240": 0.4
+    "480": 0.2
+    "880": 0.13
   bot_name: bot-mssm-05
   dry_run: true
   exchange:

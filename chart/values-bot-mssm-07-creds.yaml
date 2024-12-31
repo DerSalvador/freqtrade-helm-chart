@@ -26,7 +26,7 @@ configcreds:
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
       minimal_pair_profits_check_array_length: 20
-      pair_profits_check_array_length: 40
+      pair_profits_check_array_length: 30
       minimal_market_profits_check_array_length: 10
       market_profits_check_array_length: 20
       hedgeMinutes: 60

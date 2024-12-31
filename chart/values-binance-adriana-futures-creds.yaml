@@ -24,6 +24,7 @@ configcreds:
   bot_name: binance-adriana-futures
   dry_run: false
   minimal_roi:
+    "1440": -1
     "0": 0.7
     "120": 0.5
     "240": 0.4

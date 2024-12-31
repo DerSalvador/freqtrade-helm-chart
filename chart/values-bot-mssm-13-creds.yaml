@@ -33,7 +33,7 @@ configcreds:
       hedgeMinutes: 60
       lossAbsolutInHedge: -60
       profitAbsolutInHedge: 60
-
+      binance_timeout: 5
   dry_run: true
   stoploss: -0.99
   available_capital: 2200

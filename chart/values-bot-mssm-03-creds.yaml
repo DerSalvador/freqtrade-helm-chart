@@ -7,6 +7,10 @@ configcreds:
   dersalvador:
     hedging:
       role: master
+      leverage: 7
+      stoploss_hedging: false
+      minimal_leverage: 3
+      stake_amount: 1000      
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status"
       hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/show_config"      
@@ -21,10 +25,10 @@ configcreds:
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 20
-      pair_profits_check_array_length: 30
-      minimal_market_profits_check_array_length: 10
-      market_profits_check_array_length: 20
+      minimal_pair_profits_check_array_length: 5
+      pair_profits_check_array_length: 5
+      minimal_market_profits_check_array_length: 5
+      market_profits_check_array_length: 10
       hedgeMinutes: 60
       lossAbsolutInHedge: -60
 
@@ -32,7 +36,7 @@ configcreds:
   stoploss: -0.99
   minimal_roi:
     "0": 0.99
-  available_capital: 2200
+  available_capital: 4500
   bot_name: bot-mssm-03
   exchange:
     pair_whitelist:
@@ -53,6 +57,14 @@ configcreds:
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 120    
+    - method: RemotePairList
+      number_assets: 19
+      pairlist_url: https://remotepairlist.com?q=db874830cd9e6f4f # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      mode: whitelist
+      processing_mode: append
+      refresh_period: 900
+      keep_pairlist_on_failure: true
+      read_timeout: 120
 
   telegram:
     enabled: true
