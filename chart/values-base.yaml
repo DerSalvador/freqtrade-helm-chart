@@ -10,6 +10,7 @@ configcreds:
       - ADA/USDT:USDT
       - DOGE/USDT:USDT
       - LINK/USDT:USDT
+      - GMX/USDT:USDT
   edge:
     enabled: false
     process_throttle_secs: 3600

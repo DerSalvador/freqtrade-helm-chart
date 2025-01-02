@@ -9,8 +9,8 @@ configcreds:
       role: master
       leverage: 7
       stoploss_hedging: false
-      minimal_leverage: 3
-      stake_amount: 1000      
+      minimal_leverage: 5
+      stake_amount: 500      
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status"
       hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/show_config"      
@@ -25,15 +25,15 @@ configcreds:
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 5
-      pair_profits_check_array_length: 5
+      minimal_pair_profits_check_array_length: 10
+      pair_profits_check_array_length: 15
       minimal_market_profits_check_array_length: 5
       market_profits_check_array_length: 10
       hedgeMinutes: 60
       lossAbsolutInHedge: -60
 
   dry_run: true
-  stoploss: -0.99
+  stoploss: -0.10
   minimal_roi:
     "0": 0.99
   available_capital: 4500
