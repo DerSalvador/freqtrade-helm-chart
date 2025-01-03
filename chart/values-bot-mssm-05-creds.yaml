@@ -30,12 +30,12 @@ configcreds:
       alternativeHedgingApproach: true
       binance_timeout: 2
       exit_on_profit: true
-      spot_bot_apikey: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
-      spot_bot_apisecret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8
+      hedge_bot_apikey_alternative: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET # adriana
+      hedge_bot_apisecret_alternative: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8
       lossAbsolutInHedge: -5
       profitAbsolutInHedge: 5
       hedgeMinutes: 20
-      hedgeMinutesMax: 300
+      hedgeMinutesMax: 41893 # 300
     
   minimal_roi:
     "1440": -1 # nach 1 tagen sofort raus egal ob verlust oder gewinn
