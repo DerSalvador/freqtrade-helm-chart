@@ -31,6 +31,8 @@ configcreds:
       market_profits_check_array_length: 40
       hedgeMinutes: 60
       lossAbsolutInHedge: -60
+      apikey: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P # b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      apisecret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r # tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
 
   dry_run: true
   stoploss: -0.10
@@ -44,6 +46,7 @@ configcreds:
       - ETH/USDT:USDT
       - SOL/USDT:USDT
     name: binance
+    
 
   pairlists:
     - method: StaticPairList
