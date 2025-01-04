@@ -28,6 +28,10 @@ configcreds:
       hedgeMinutes: 60
       lossAbsolutInHedge: -60
       profitAbsolutInHedge: 60
+      leverage: 5
+      stoploss_hedging: false
+      minimal_leverage: 6
+      stake_amount: 200      
 
   dry_run: true
   stoploss: -0.99
