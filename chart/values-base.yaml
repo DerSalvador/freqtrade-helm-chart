@@ -38,8 +38,8 @@ configcreds:
       binance_timeout: 8
       spot_pair_delay: 5
       thread_delay: 5
-      custom_stoploss_max: -0.15
-      custom_stoploss_min: -0.09
+      custom_stoploss_max: -0.10
+      custom_stoploss_min: -0.08
       spot_aggregated_market_delay: 45 # seconds
       leverage: 5
       stoploss_hedging: false

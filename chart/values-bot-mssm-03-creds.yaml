@@ -25,10 +25,10 @@ configcreds:
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 30
-      pair_profits_check_array_length: 40
-      minimal_market_profits_check_array_length: 30
-      market_profits_check_array_length: 40
+      minimal_pair_profits_check_array_length: 8
+      pair_profits_check_array_length: 10
+      minimal_market_profits_check_array_length: 8
+      market_profits_check_array_length: 10
       hedgeMinutes: 60
       lossAbsolutInHedge: -60
       apikey: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P # b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm

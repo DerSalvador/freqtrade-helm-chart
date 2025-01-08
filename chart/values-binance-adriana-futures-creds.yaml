@@ -29,7 +29,7 @@ configcreds:
     "120": 0.5
     "240": 0.4
     "480": 0.2
-  stoploss: -0.08
+  stoploss: -0.15
   exchange:
     name: binance
     key: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET # E1Hep4aT7iRTbsEjC34bQXQt5l779vWHMbRyJG5r3b07KIhgMUzJ9J6y3SGSF2ZN #  xngX47kLt00jdiCkmY7Nj06peqjVnzRN6ZShvc6PBJH6LeRUw0MD23aVkfzQu199 # ZIvg+5kZpbxQFQLsGoQtu5Rj1p8JZx+eE3b5v5uGqhS2ORWX8C1oU1bA
