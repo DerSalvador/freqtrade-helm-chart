@@ -74,9 +74,15 @@ def place_order(symbol, position_amt, target_price, reduce_only=True):
 def main():
     parser = argparse.ArgumentParser(description="Place a Binance order with 10% profit target.")
     parser.add_argument('symbol', type=str, help="The trading pair symbol, e.g., LINKUSDT")
+    parser.add_argument('api_key', type=str, help="Your Binance API key")
+    parser.add_argument('api_secret', type=str, help="Your Binance API secret")
     args = parser.parse_args()
 
+    api_key = args.api_key
+    api_secret = args.api_secret
     symbol = args.symbol
+
+    client = Client(api_key, api_secret)
 
     # Fetch current position for the symbol
     try:
