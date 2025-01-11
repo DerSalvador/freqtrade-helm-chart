@@ -49,6 +49,7 @@ configcreds:
       stoploss_length: 70
       lossAbsolutInHedge: -20
       profitAbsolutInHedge: 20
+      alternateTrendMinutes: 10
       status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT, DOGE/USDT:USDT, GMX/USDT:USDT ]"
       # status_table_informative_pairs: "[ BTC/USDT:USDT ]"
       # Minimal Threshold 
