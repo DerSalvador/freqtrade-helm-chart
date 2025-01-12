@@ -76,10 +76,12 @@ def main():
     parser.add_argument('symbol', type=str, help="The trading pair symbol, e.g., LINKUSDT")
     parser.add_argument('api_key', type=str, help="Your Binance API key")
     parser.add_argument('api_secret', type=str, help="Your Binance API secret")
+    parser.add_argument('profitpct', type=str, help="Take Profit percent, 0.1 = 10%")
     args = parser.parse_args()
 
     api_key = args.api_key
     api_secret = args.api_secret
+    profitpct = float(args.profitpct)
     symbol = args.symbol
 
     client = Client(api_key, api_secret)
@@ -112,7 +114,7 @@ def main():
         tick_size = get_tick_size(symbol)
 
         # Calculate the target price for a 10% profit
-        target_price = calculate_target_price(entry_price, 0.01, position_amt, tick_size)
+        target_price = calculate_target_price(entry_price, profitpct, position_amt, tick_size)
 
         # Place the order
         place_order(symbol, position_amt, target_price)
