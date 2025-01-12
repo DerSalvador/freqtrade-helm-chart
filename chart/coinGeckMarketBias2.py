@@ -1,4 +1,4 @@
-import requests
+import requests, sys
 import json
 
 # API endpoint to retrieve data
@@ -13,9 +13,14 @@ if response.status_code == 200:
     
     # Extract relevant data from the JSON response
     market_cap_change_percentage_24h_usd = data["data"]["market_cap_change_percentage_24h_usd"]
+    sys.stderr.write(f"market_cap_change_percentage_24h_usd: {market_cap_change_percentage_24h_usd}")
     
     # Determine market trend bias based on the percentage change in market capitalization
-    market_trend_bias = "long" if market_cap_change_percentage_24h_usd > 0 else "short"
+    market_trend_bias = "long" 
+    if market_cap_change_percentage_24h_usd > 1:
+       market_trend_bias = "long" 
+    elif  market_cap_change_percentage_24h_usd < -1:
+       market_trend_bias = "short" 
     
     # Print the market trend bias
     print(market_trend_bias)

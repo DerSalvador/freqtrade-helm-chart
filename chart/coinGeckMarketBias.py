@@ -11,7 +11,6 @@ def get_crypto_market_data():
     }
     response = requests.get(url, params=params)
     data = response.json()
-    #sys.stderr.write(str(data))
     return data
 
 def calculate_trend_bias(market_data):
@@ -24,6 +23,7 @@ def calculate_trend_bias(market_data):
             else:
                 total_negative += 1
     
+    sys.stderr.write(f"total_negative: {total_negative}\nprice_change_percentage_24={crypto['price_change_percentage_24h']}\n")
     if total_positive > total_negative:
         return "long"
     elif total_positive < total_negative:
