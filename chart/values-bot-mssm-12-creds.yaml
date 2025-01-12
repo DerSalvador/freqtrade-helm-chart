@@ -17,7 +17,7 @@ configcreds:
       hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
       exit_on_profit: false
       lostTradeAgeInMinutes: 40
-      leverage: 7
+      leverage: 6
       stoploss_hedging: false
       minimal_leverage: 6
       stake_amount: 200
