@@ -7,10 +7,10 @@ configcreds:
   dersalvador:
     hedging:
       role: trades_exit
-      leverage: 5
+      leverage: 9
       stoploss_hedging: false
       minimal_leverage: 6
-      stake_amount: 200      
+      stake_amount: 500      
       # spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/status"
       # Oberserving Bot and Hedging to adriana
       spot_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status" # "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
