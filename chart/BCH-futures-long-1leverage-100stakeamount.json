@@ -1,3 +1,3 @@
 {
-  "error": "Error querying /api/v1/forceenter: position for BCH/USDT:USDT already open - id: 23"
+  "error": "Error querying /api/v1/forceenter: Failed to enter position for BCH/USDT:USDT."
 }

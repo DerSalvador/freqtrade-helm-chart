@@ -16,10 +16,10 @@ if response.status_code == 200:
     sys.stderr.write(f"market_cap_change_percentage_24h_usd: {market_cap_change_percentage_24h_usd}")
     
     # Determine market trend bias based on the percentage change in market capitalization
-    market_trend_bias = "long" 
-    if market_cap_change_percentage_24h_usd > 1:
+    market_trend_bias = "neutral" 
+    if market_cap_change_percentage_24h_usd > 0:
        market_trend_bias = "long" 
-    elif  market_cap_change_percentage_24h_usd < -1:
+    elif  market_cap_change_percentage_24h_usd < 0:
        market_trend_bias = "short" 
     
     # Print the market trend bias

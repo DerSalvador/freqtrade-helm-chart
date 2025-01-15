@@ -1,4 +1,4 @@
-import requests
+import requests, sys
 
 # API endpoint for CoinGecko
 url = "https://api.coingecko.com/api/v3"
@@ -16,7 +16,7 @@ def get_bitcoin_data():
 # Function to analyze the trend bias
 def analyze_trend_bias(data):
     price_change_percentage_24h = data["usd_24h_change"]
-    
+    sys.stderr.write(f"price_change_percentage_24h: {price_change_percentage_24h}")    
     if price_change_percentage_24h > 0:
         return "long"
     elif price_change_percentage_24h < 0:
