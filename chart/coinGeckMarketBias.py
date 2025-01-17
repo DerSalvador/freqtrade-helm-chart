@@ -1,7 +1,7 @@
 import requests, sys
 
 def get_crypto_market_data():
-    url = 'https://pro-api.coingecko.com/api/v3/coins/markets?x_cg_pro_api_key=CG-e82vEmuYRAsLxjioT4ezZ6ma'
+    url = 'https://pro-api.coingecko.com/api/v3/coins/markets?x_cg_pro_api_key=CG-AgEZRgMf3iLk1S8CwyCKp7N3'
     params = {
         'vs_currency': 'usd',
         'order': 'market_cap_desc',
@@ -16,15 +16,16 @@ def get_crypto_market_data():
 def calculate_trend_bias(market_data):
     total_positive = 0
     total_negative = 0
-    # print(market_data)
+    sys.stderr.write(str(market_data))
     for crypto in market_data:
+        sys.stderr.write(str(crypto))
         if crypto['price_change_percentage_24h'] is not None:
             if crypto['price_change_percentage_24h'] >= 0:
                 total_positive += 1
             else:
                 total_negative += 1
     
-    sys.stderr.write(f"total_negative: {total_negative}\nprice_change_percentage_24={crypto['price_change_percentage_24h']}\n")
+    sys.stderr.write(f"\ntotal_positive: {total_positive}\ntotal_negative: {total_negative}\nprice_change_percentage_24={crypto['price_change_percentage_24h']}\n")
     if total_positive > total_negative:
         return "long"
     elif total_positive < total_negative:

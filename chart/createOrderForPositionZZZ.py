@@ -47,7 +47,8 @@ def calculate_target_price(entry_price, profit_percentage, loss_percentage, posi
         stop_loss_price = round_step_size(entry_price * (1 + loss_percentage), tick_size)
     else:
         raise ValueError("Position amount is zero, no active position to close.")
-
+    print(f"position_amt: {position_amt},  stoploss: {abs(stop_loss_price)}, entry: {entry_price}")
+    print(f"target_price: {target_price}")
     return round(target_price / tick_size) * tick_size, stop_loss_price
 
 def delete_existing_orders(symbol):
@@ -69,32 +70,83 @@ def check_existing_orders(symbol):
         print(f"Error checking open orders: {e}")
         return False
 
-def place_order(symbol, position_amt, target_price, stop_loss_price, reduce_only=True):
-    """Place the appropriate order based on position_amt."""
+
+def place_order(symbol, position_amt, target_price, stop_loss_price, entry_price):
+    """Place separate orders for take-profit and stop-loss."""
     side = 'SELL' if position_amt > 0 else 'BUY'
     quantity = abs(position_amt)  # Always positive for order quantity
 
+    # Get the current market price
     try:
+        market_price = float(client.futures_symbol_ticker(symbol=symbol)['price'])
+    except Exception as e:
+        print(f"Error fetching market price: {e}")
+        return
+
+    # Adjust target and stop-loss prices if necessary
+    tick_size = get_tick_size(symbol)
+
+    #if side == 'SELL':
+    #    if target_price <= market_price:
+    #        target_price = market_price + tick_size
+    #    if stop_loss_price >= market_price:
+    #        stop_loss_price = market_price - tick_size
+    #else:  # side == 'BUY'
+    #    if target_price >= market_price:
+    #        target_price = market_price - tick_size
+    #    if stop_loss_price <= market_price:
+    #        stop_loss_price = market_price + tick_size
+
+    try:
+        # Place take-profit limit order
         target_order = client.futures_create_order(
             symbol=symbol,
             side=side,
             type='LIMIT',
             timeInForce='GTC',  # Good Till Cancelled
             quantity=quantity,
-            price=round(target_price, 8),  # Adjust precision as needed
-            reduceOnly=reduce_only  # Link the order to the existing position
+            price=round(target_price, 2),  # Take-profit price
+            reduceOnly=True  # Ensure the order is only for reducing the position
         )
-        stop_loss_order = client.futures_create_order(
-            symbol=symbol,
-            side='SELL' if side == 'BUY' else 'BUY',
-            type='STOP_MARKET',
-            quantity=quantity,
-            stopPrice=round(stop_loss_price, 8)
-        )
-        print(f"Target Order successfully placed: {target_order}")
-        print(f"Stop Loss Order successfully placed: {stop_loss_order}")
+        print(f"Take-Profit Order successfully placed: {target_order}")
+
+        # Place stop-loss market order
+        print(f"Stoploss price: {stop_loss_price}")
+        print("SL Order")
+        order = client.futures_create_order(symbol=symbol, 
+                                            side='SELL' if side == 'BUY' else 'SELL', #side=client.SIDE_SELL,  
+                                            newClientOrderId= "_SL",
+                                            quantity=quantity, 
+                                            type=client.FUTURE_ORDER_TYPE_STOP, 
+                                            stopPrice=round(stop_loss_price, 2), 
+                                            price=round(entry_price, 2),  
+                                            timeInForce="GTC", 
+                                            reduceOnly = True)
+
+       # stop_loss_order = client.futures_create_order(
+      #      symbol=symbol,
+     #       side='SELL' if side == 'BUY' else 'BUY',
+     #       type='STOP_MARKET',  # Stop-loss market order
+     #       quantity=quantity,
+     #       stopPrice=round(stop_loss_price, 2)  # Stop-loss trigger price
+     #   )
+     #   print(f"Stop-Loss Order successfully placed: {stop_loss_order}")
+
     except Exception as e:
-        print(f"Error placing order: {e}")
+        print(f"Error placing orders: {e}")
+
+def get_liquidation_price(symbol):
+    """Fetch the liquidation price for the given symbol."""
+    try:
+        positions = client.futures_position_information()
+        position = next((p for p in positions if p['symbol'] == symbol), None)
+        if not position:
+            raise ValueError(f"No active position found for {symbol}.")
+
+        liquidation_price = float(position['liquidationPrice'])
+        return liquidation_price
+    except Exception as e:
+        raise ValueError(f"Error fetching liquidation price: {e}")
 
 def main():
     parser = argparse.ArgumentParser(description="Place a Binance order with 10% profit target and stoploss.")
@@ -142,15 +194,17 @@ def main():
         tick_size = get_tick_size(symbol)
 
         # Calculate the target price for a 10% profit and stop loss price
-        target_price, stop_loss_price = calculate_target_price(entry_price, profitpct, loss_percentage, position_amt, tick_size)
+        print(f"entry_price: {entry_price}, profitpct: {profitpct}, loss_percentage: {loss_percentage}, position_amt: {position_amt}, tick_size: {tick_size}")
+        lp = get_liquidation_price(symbol)
+        target_price, stop_loss_price = calculate_target_price(entry_price, profitpct, loss_percentage,  position_amt, tick_size)
 
+        print(f"stop_loss_price: {stop_loss_price}")
         # Place the order with target and stop loss
-        place_order(symbol, position_amt, target_price, stop_loss_price)
+        place_order(symbol, position_amt, target_price, stop_loss_price, entry_price)
 
     except Exception as e:
         print(f"Error fetching position or placing order: {e}")
 
 if __name__ == "__main__":
     main()
-
 
