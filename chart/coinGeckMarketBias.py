@@ -1,7 +1,7 @@
 import requests, sys
 
 def get_crypto_market_data():
-    url = 'https://api.coingecko.com/api/v3/coins/markets'
+    url = 'https://pro-api.coingecko.com/api/v3/coins/markets?x_cg_pro_api_key=CG-AgEZRgMf3iLk1S8CwyCKp7N3'
     params = {
         'vs_currency': 'usd',
         'order': 'market_cap_desc',

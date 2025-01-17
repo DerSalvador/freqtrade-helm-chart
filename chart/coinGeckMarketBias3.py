@@ -1,12 +1,13 @@
 import requests, sys
 
 # API endpoint for CoinGecko
-url = "https://api.coingecko.com/api/v3"
+url = "https://pro-api.coingecko.com/api/v3"
 
 # Function to get the current price and price change in 24 hours for Bitcoin
 def get_bitcoin_data():
-    endpoint = f"{url}/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true"
+    endpoint = f"{url}/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&x_cg_pro_api_key=CG-AgEZRgMf3iLk1S8CwyCKp7N3"
     response = requests.get(endpoint)
+    print(response)
     if response.status_code == 200:
         data = response.json()
         return data["bitcoin"]

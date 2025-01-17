@@ -2,7 +2,7 @@ import requests, sys
 import json
 
 # API endpoint to retrieve data
-url = "https://api.coingecko.com/api/v3/global"
+url = "https://pro-api.coingecko.com/api/v3/global?x_cg_pro_api_key=CG-AgEZRgMf3iLk1S8CwyCKp7N3"
 
 # Make a GET request to the API endpoint
 response = requests.get(url)
