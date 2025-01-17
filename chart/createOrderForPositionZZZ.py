@@ -1,5 +1,6 @@
 import argparse
 from binance.client import Client
+from binance.helpers import round_step_size
 
 # Initialize the Binance client
 api_key = 'b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm'
@@ -21,17 +22,33 @@ def get_tick_size(symbol):
     except Exception as e:
         raise ValueError(f"Error fetching tick size: {e}")
 
-def calculate_target_price(entry_price, profit_percentage, position_amt, tick_size):
-    """Calculate the target price for the order and round to the nearest tick size."""
+#def calculate_target_price(entry_price, profit_percentage, loss_percentage, position_amt, tick_size):
+#    """Calculate the target price and stop loss price for the order and round to the nearest tick size."""
+#    if position_amt > 0:  # Long position
+#        target_price = entry_price * (1 + profit_percentage)
+#        stop_loss_price = entry_price * (1 - loss_percentage)
+#    elif position_amt < 0:  # Short position
+#        target_price = entry_price * (1 - profit_percentage)
+#        stop_loss_price = entry_price * (1 + loss_percentage)
+#    else:
+#        raise ValueError("Position amount is zero, no active position to close.")
+
+    # Round to the nearest tick size
+#    return round(target_price / tick_size) * tick_size, round(stop_loss_price / tick_size) * tick_size
+
+def calculate_target_price(entry_price, profit_percentage, loss_percentage, position_amt, tick_size):
+    # Calculate target and stop loss prices
+    # Round the stop loss price to the nearest tick size
     if position_amt > 0:  # Long position
-        raw_price = entry_price * (1 + profit_percentage)
+        target_price = entry_price * (1 + profit_percentage)
+        stop_loss_price = round_step_size(entry_price * (1 - loss_percentage), tick_size)
     elif position_amt < 0:  # Short position
-        raw_price = entry_price * (1 - profit_percentage)
+        target_price = entry_price * (1 - profit_percentage)
+        stop_loss_price = round_step_size(entry_price * (1 + loss_percentage), tick_size)
     else:
         raise ValueError("Position amount is zero, no active position to close.")
 
-    # Round to the nearest tick size
-    return round(raw_price / tick_size) * tick_size
+    return round(target_price / tick_size) * tick_size, stop_loss_price
 
 def delete_existing_orders(symbol):
     """Delete all existing open orders for the symbol."""
@@ -52,13 +69,13 @@ def check_existing_orders(symbol):
         print(f"Error checking open orders: {e}")
         return False
 
-def place_order(symbol, position_amt, target_price, reduce_only=True):
+def place_order(symbol, position_amt, target_price, stop_loss_price, reduce_only=True):
     """Place the appropriate order based on position_amt."""
     side = 'SELL' if position_amt > 0 else 'BUY'
     quantity = abs(position_amt)  # Always positive for order quantity
 
     try:
-        order = client.futures_create_order(
+        target_order = client.futures_create_order(
             symbol=symbol,
             side=side,
             type='LIMIT',
@@ -67,21 +84,32 @@ def place_order(symbol, position_amt, target_price, reduce_only=True):
             price=round(target_price, 8),  # Adjust precision as needed
             reduceOnly=reduce_only  # Link the order to the existing position
         )
-        print(f"Order successfully placed: {order}")
+        stop_loss_order = client.futures_create_order(
+            symbol=symbol,
+            side='SELL' if side == 'BUY' else 'BUY',
+            type='STOP_MARKET',
+            quantity=quantity,
+            stopPrice=round(stop_loss_price, 8)
+        )
+        print(f"Target Order successfully placed: {target_order}")
+        print(f"Stop Loss Order successfully placed: {stop_loss_order}")
     except Exception as e:
         print(f"Error placing order: {e}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Place a Binance order with 10% profit target.")
+    parser = argparse.ArgumentParser(description="Place a Binance order with 10% profit target and stoploss.")
     parser.add_argument('symbol', type=str, help="The trading pair symbol, e.g., LINKUSDT")
     parser.add_argument('api_key', type=str, help="Your Binance API key")
     parser.add_argument('api_secret', type=str, help="Your Binance API secret")
     parser.add_argument('profitpct', type=str, help="Take Profit percent, 0.1 = 10%")
+    parser.add_argument('stoplosspct', type=str, help="Stoploss percent, 0.1 = 10%")
     args = parser.parse_args()
 
     api_key = args.api_key
     api_secret = args.api_secret
     profitpct = float(args.profitpct)
+    stoplosspct = float(args.stoplosspct)
+    loss_percentage = stoplosspct # 10% stoploss
     symbol = args.symbol
 
     client = Client(api_key, api_secret)
@@ -113,15 +141,16 @@ def main():
         # Get the tick size for the symbol
         tick_size = get_tick_size(symbol)
 
-        # Calculate the target price for a 10% profit
-        target_price = calculate_target_price(entry_price, profitpct, position_amt, tick_size)
+        # Calculate the target price for a 10% profit and stop loss price
+        target_price, stop_loss_price = calculate_target_price(entry_price, profitpct, loss_percentage, position_amt, tick_size)
 
-        # Place the order
-        place_order(symbol, position_amt, target_price)
+        # Place the order with target and stop loss
+        place_order(symbol, position_amt, target_price, stop_loss_price)
 
     except Exception as e:
         print(f"Error fetching position or placing order: {e}")
 
 if __name__ == "__main__":
     main()
+
 

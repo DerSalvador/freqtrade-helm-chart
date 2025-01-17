@@ -1,7 +1,7 @@
 import requests, sys
 
 def get_crypto_market_data():
-    url = 'https://api.coingecko.com/api/v3/coins/markets'
+    url = 'https://pro-api.coingecko.com/api/v3/coins/markets?x_cg_pro_api_key=CG-e82vEmuYRAsLxjioT4ezZ6ma'
     params = {
         'vs_currency': 'usd',
         'order': 'market_cap_desc',
@@ -16,6 +16,7 @@ def get_crypto_market_data():
 def calculate_trend_bias(market_data):
     total_positive = 0
     total_negative = 0
+    # print(market_data)
     for crypto in market_data:
         if crypto['price_change_percentage_24h'] is not None:
             if crypto['price_change_percentage_24h'] >= 0:

@@ -50,6 +50,7 @@ configcreds:
       lossAbsolutInHedge: -20
       profitAbsolutInHedge: 20
       alternateTrendMinutes: 10
+      coinGeckoAPIKey: CG-AgEZRgMf3iLk1S8CwyCKp7N3 # CG-e82vEmuYRAsLxjioT4ezZ6ma #
       status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT, DOGE/USDT:USDT, GMX/USDT:USDT ]"
       # status_table_informative_pairs: "[ BTC/USDT:USDT ]"
       # Minimal Threshold 
