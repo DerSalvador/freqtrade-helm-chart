@@ -114,14 +114,17 @@ def place_order(symbol, position_amt, target_price, stop_loss_price, entry_price
         print(f"Stoploss price: {stop_loss_price}")
         print("SL Order")
         order = client.futures_create_order(symbol=symbol, 
-                                            side='SELL' if side == 'BUY' else 'SELL', #side=client.SIDE_SELL,  
+                                            side='BUY' if position_amt < 0 else 'SELL',
+                                            type='STOP_MARKET',
+                                            # side='SELL' if side == 'BUY' else 'SELL', #side=client.SIDE_SELL,  
                                             newClientOrderId= "_SL",
                                             quantity=quantity, 
-                                            type=client.FUTURE_ORDER_TYPE_STOP, 
+                                            # type=client.FUTURE_ORDER_TYPE_STOP, 
                                             stopPrice=round(stop_loss_price, 2), 
-                                            price=round(entry_price, 2),  
+                                            #price=round(target_price, 2),  
                                             timeInForce="GTC", 
                                             reduceOnly = True)
+        print(order)
 
        # stop_loss_order = client.futures_create_order(
       #      symbol=symbol,
@@ -195,7 +198,7 @@ def main():
 
         # Calculate the target price for a 10% profit and stop loss price
         print(f"entry_price: {entry_price}, profitpct: {profitpct}, loss_percentage: {loss_percentage}, position_amt: {position_amt}, tick_size: {tick_size}")
-        lp = get_liquidation_price(symbol)
+        # lp = get_liquidation_price(symbol)
         target_price, stop_loss_price = calculate_target_price(entry_price, profitpct, loss_percentage,  position_amt, tick_size)
 
         print(f"stop_loss_price: {stop_loss_price}")
