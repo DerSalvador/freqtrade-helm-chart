@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2024-12-17T18:40:58Z"
+  deletionTimestamp: "2025-01-23T15:03:01Z"
+  labels:
+    kubernetes.io/metadata.name: bot-mssm-10
+  name: bot-mssm-10
+  resourceVersion: "34914485"
+  uid: 21161479-e221-4e83-8ede-89dd082bdd6f
+status:
+  conditions:
+  - lastTransitionTime: "2025-01-23T15:03:07Z"
+    message: All resources successfully discovered
+    reason: ResourcesDiscovered
+    status: "False"
+    type: NamespaceDeletionDiscoveryFailure
+  - lastTransitionTime: "2025-01-23T15:03:07Z"
+    message: All legacy kube types successfully parsed
+    reason: ParsedGroupVersions
+    status: "False"
+    type: NamespaceDeletionGroupVersionParsingFailure
+  - lastTransitionTime: "2025-01-23T15:03:46Z"
+    message: 'Failed to delete all resource types, 1 remaining: unexpected items still
+      remain in namespace: bot-mssm-10 for gvr: /v1, Resource=pods'
+    reason: ContentDeletionFailed
+    status: "True"
+    type: NamespaceDeletionContentFailure
+  - lastTransitionTime: "2025-01-23T15:03:07Z"
+    message: 'Some resources are remaining: persistentvolumeclaims. has 4 resource
+      instances, pods. has 1 resource instances'
+    reason: SomeResourcesRemain
+    status: "True"
+    type: NamespaceContentRemaining
+  - lastTransitionTime: "2025-01-23T15:03:07Z"
+    message: 'Some content in the namespace has finalizers remaining: kubernetes.io/pvc-protection
+      in 4 resource instances'
+    reason: SomeFinalizersRemain
+    status: "True"
+    type: NamespaceFinalizersRemaining
+  phase: Terminating
