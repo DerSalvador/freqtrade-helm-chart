@@ -7,7 +7,6 @@ url = "https://pro-api.coingecko.com/api/v3"
 def get_bitcoin_data():
     endpoint = f"{url}/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&x_cg_pro_api_key=CG-AgEZRgMf3iLk1S8CwyCKp7N3"
     response = requests.get(endpoint)
-    print(response)
     if response.status_code == 200:
         data = response.json()
         return data["bitcoin"]
