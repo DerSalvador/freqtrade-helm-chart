@@ -35,7 +35,7 @@ configcreds:
       exit_on_profit: false
       debug: false
       dataframe_path: /extra_strategies/dataframes/
-      binance_timeout: 4
+      binance_timeout: 8
       spot_pair_delay: 5
       thread_delay: 5
       custom_stoploss_max: -0.10
