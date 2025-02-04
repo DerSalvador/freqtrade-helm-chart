@@ -25,7 +25,9 @@ configcreds:
     "240": 0.4
     "480": 0.2
     "880": 0.13
-  max_open_trades: 10
+  max_open_trades: 16
+  position_adjustment_enable: true
+  max_entry_position_adjustment: 16
   dry_run: false
   stoploss: -0.10
   exchange:
