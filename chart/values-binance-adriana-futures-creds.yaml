@@ -20,7 +20,7 @@ configcreds:
       hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
       lossAbsolutInHedge: -60
       profitAbsolutInHedge: 60
-      exit_on_profit: false
+      exit_on_profit: true
   bot_name: binance-adriana-futures
   dry_run: false
   minimal_roi:
@@ -39,7 +39,7 @@ configcreds:
     token: 7001144255:AAGsCcZmBUOUD4POw-F65HNs-zPd_nxQNcI # 7020581178:AAGN2KOhJ3jCCXL_0p8s77uKo_5YPgICB1Y # "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
     chat_id: "1759706931" # "6274423445"
 bot:
-  strategy_name: LizStrategyV3
+  strategy_name: LizStrategyFinal
 #image:
 #  base: europe-west1-docker.pkg.dev/gcp-nuke/gcp-nuke/freqtradeorg/freqtrade # docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
 #  # tag: binzrl_multi-arch-1 # 1adeb1ad7ce401700f1da0ab5a158d34c01c9ea185a51f56461eae38170bb1f7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image

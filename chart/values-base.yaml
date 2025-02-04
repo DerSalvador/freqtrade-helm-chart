@@ -6,11 +6,11 @@ kubernetes:
 configcreds:
   exchange:
     pair_blacklist:
-      - XLM/USDT:USDT
-      - ADA/USDT:USDT
-      - DOGE/USDT:USDT
+     # - XLM/USDT:USDT
+     # - ADA/USDT:USDT
+     # - DOGE/USDT:USDT
       - LINK/USDT:USDT
-      - GMX/USDT:USDT
+     #  - GMX/USDT:USDT
   edge:
     enabled: false
     process_throttle_secs: 3600
@@ -29,10 +29,11 @@ configcreds:
     database_path: "/sqlite/tradesv3.sqlite"
     enable_email_logging: false
     hedging:
-      hedging_version: v4.9-mypy-lostTrades-re-hedging-label-kaniko
+      hedging_version: v5.0
       apikey: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P # b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       apisecret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r # tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
       exit_on_profit: false
+      bias_determination: restrictive # loose # restrictive
       debug: false
       dataframe_path: /extra_strategies/dataframes/
       binance_timeout: 8
@@ -50,7 +51,8 @@ configcreds:
       lossAbsolutInHedge: -20
       profitAbsolutInHedge: 20
       alternateTrendMinutes: 10
-      status_table_informative_pairs: "[ BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, LINK/USDT:USDT, DOGE/USDT:USDT, GMX/USDT:USDT ]"
+      coinGeckoAPIKey: CG-AgEZRgMf3iLk1S8CwyCKp7N3 # CG-e82vEmuYRAsLxjioT4ezZ6ma #
+      status_table_informative_pairs: "BTC/USDT:USDT ETH/USDT:USDT"
       # status_table_informative_pairs: "[ BTC/USDT:USDT ]"
       # Minimal Threshold 
       config_path_serialized: "/extra_strategies/config.json"
@@ -107,7 +109,10 @@ configcreds:
       alternativeHedgingApproach: false
       # stoploss_apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm # michael
       # stoploss_apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov # michael
-
+      apikey_observer: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET # b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      apisecret_observer: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8 # tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+      pair_analysis: false
+      alternativeHedgingApproach: false
       # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       # stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       stoploss_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures

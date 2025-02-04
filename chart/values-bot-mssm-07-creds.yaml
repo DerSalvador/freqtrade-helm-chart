@@ -7,70 +7,91 @@ configcreds:
   dersalvador:
     hedging:
       role: master
-      leverage: 3
+      leverage: 10
       stoploss_hedging: false
-      minimal_leverage: 3
-      stake_amount: 100
+      minimal_leverage: 5
+      stake_amount: 1500
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"
-      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status"
-      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/show_config"      
-      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
+      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/status"
+      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/show_config"      
+      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/profit"
       hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
-      hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
+      hedge_bot_api_trades: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-adriana-futures.binance-adriana-futures.svc.cluster.local:8084/api/v1/trades" # binance-adriana-futures
       hedge_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_final: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/forceenter" # binance-adriana-futures
       market_analysis: false
-      market_decision_enforced: false
       pair_aggregated_analysis: false
       freqtrade_pair_analysis: false
       minimal_aggregated_pair_profits_check_array_length: 0
       aggregated_pair_profits_check_array_length: 0
-      minimal_pair_profits_check_array_length: 20
-      pair_profits_check_array_length: 30
-      minimal_market_profits_check_array_length: 10
-      market_profits_check_array_length: 20
-      hedgeMinutes: 60
-      lossAbsolutInHedge: -60
-      profitAbsolutInHedge: 60
-
-  dry_run: true
-  stoploss: -0.99
-  available_capital: 2200
+      minimal_pair_profits_check_array_length: 70
+      pair_profits_check_array_length: 90
+      alternativeHedgingApproach: true
+      binance_timeout: 8
+      exit_on_profit: true
+      hedge_bot_apikey_alternative: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P # adriana
+      hedge_bot_apisecret_alternative: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
+      lossAbsolutInHedge: -5
+      profitAbsolutInHedge: 5
+      hedgeMinutes: 20
+      pair_analysis: true
+      hedgeMinutesMax: 41893 # 300
+      apikey: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET # b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      apisecret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8
   minimal_roi:
-    "0": 0.99
+    "1440": -1 # nach 1 tagen sofort raus egal ob verlust oder gewinn
+    "0": 0.7
+    "120": 0.5
+    "240": 0.4
+    "480": 0.2
+    "880": 0.13
+
   bot_name: bot-mssm-07
+  dry_run: true
   exchange:
     pair_whitelist:
       - BTC/USDT:USDT
       - ETH/USDT:USDT
+    pair_blacklist:
       - SOL/USDT:USDT
+      - XRP/USDT:USDT
+      - DOGE/USDT:USDT
+      - LINK/USDT:USDT
+      - BCH/USDT:USDT
+      - ADA/USDT:USDT
+      - DOT/USDT:USDT
+      - JTO/USDT:USDT
+      - XLM/USDT:USDT
+      - IOTA/USDT:USDT
+      - ALGO/USDT:USDT
+      - GMX/USDT:USDT
     name: binance
 
-  pairlists:
-    - method: StaticPairList
-      mode: whitelist
-      processing_mode: append
-    - method: RemotePairList
-      number_assets: 19
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-      mode: whitelist
-      processing_mode: append
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 120
-    - method: RemotePairList
-      number_assets: 19
-      pairlist_url: https://remotepairlist.com?q=db874830cd9e6f4f # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-      mode: whitelist
-      processing_mode: append
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 120
+  # pairlists:
+  #   - method: StaticPairList
+  #     mode: whitelist
+  #     processing_mode: append
+  #   - method: RemotePairList
+  #     number_assets: 19
+  #     pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+  #     mode: whitelist
+  #     processing_mode: append
+  #     refresh_period: 900
+  #     keep_pairlist_on_failure: true
+  #     read_timeout: 120
+  #   - method: RemotePairList
+  #     number_assets: 19
+  #     pairlist_url: https://remotepairlist.com?q=db874830cd9e6f4f # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+  #     mode: whitelist
+  #     processing_mode: append
+  #     refresh_period: 900
+  #     keep_pairlist_on_failure: true
+  #     read_timeout: 120
 
   telegram:
     enabled: true
-    token: 6479684032:AAFomiYFJHRqHRqn_HoJuvUPO4VNCXlWjeM # generated by template dsTradingDeployNewStrategyFromTemplate.sh
-    chat_id: "1759706931" # generated by template dsTradingDeployNewStrategyFromTemplate.sh
+    token: 6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA # generated by template dsTradingDeployNewStrategyFromTemplate.sh
+    chat_id: "1759706931" 
 bot:
-  strategy_name: LizStrategyV3
+  strategy_name: LizStrategyFinal
 ...

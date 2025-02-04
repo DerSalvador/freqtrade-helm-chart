@@ -24,6 +24,28 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  name: freqtrade-user-data-strategies
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.bot.pvc_size }}
+---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: home-ftuser
+# spec:
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: {{ .Values.bot.pvc_size }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
   name: freqtrade-tmp
 spec:
   accessModes:
