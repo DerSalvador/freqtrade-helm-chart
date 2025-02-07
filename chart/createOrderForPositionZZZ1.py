@@ -132,9 +132,9 @@ def cancel_all_orders():
 #        print(f"Error canceling STOP_MARKET orders: {e}")
 
 def main():
-    risk_percentage = 10  # Stop loss percentage
-    reward_percentage = 15  # Take profit percentage
-    cancel_all_orders()
+    risk_percentage = 0.2  # Stop loss percentage
+    reward_percentage = 0.3  # Take profit percentage
+    # cancel_all_orders()
     # Fetch all active positions
     active_positions = get_all_positions()
     print(active_positions)
