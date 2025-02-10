@@ -36,7 +36,7 @@ configcreds:
       bias_determination: restrictive # loose # restrictive
       debug: false
       dataframe_path: /extra_strategies/dataframes/
-      binance_timeout: 8
+      binance_timeout: 5
       spot_pair_delay: 5
       thread_delay: 5
       custom_stoploss_max: -0.10
