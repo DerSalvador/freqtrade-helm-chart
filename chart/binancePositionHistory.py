@@ -30,3 +30,4 @@ if __name__ == "__main__":
 
     positions = get_positions_with_negative_unrealized_profit(api_key, api_secret)
     print(positions)
+

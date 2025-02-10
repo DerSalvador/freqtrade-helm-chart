@@ -15,6 +15,15 @@ API_SECRET = api_secret
 
 client = Client(API_KEY, API_SECRET)
 
+def cancel_stop_loss_orders(sl_orders):
+    try:
+        for order in sl_orders:
+            order_id = order['orderId']
+            client.futures_cancel_order(symbol=order['symbol'], orderId=order_id)
+            print(f"Canceled stop loss order for {order['symbol']}")
+    except Exception as e:
+        print(f"Error canceling stop loss orders: {e}")
+
 def fetch_open_stop_loss_orders():
     try:
         orders = client.futures_get_open_orders()
@@ -55,6 +64,25 @@ def close_position(symbol, position_qty):
     except Exception as e:
         print(f"Error closing position for {symbol}: {e}")
 
+def fetch_open_stop_market_orders():
+    try:
+        orders = client.futures_get_open_orders()
+        stop_market_orders = [
+            order for order in orders
+            if order['type'] == 'STOP_MARKET'
+        ]
+        return stop_market_orders
+    except Exception as e:
+        print(f"Error fetching stop market orders: {e}")
+        return []
+
+def cancel_order(symbol, order_id):
+    try:
+        client.futures_cancel_order(symbol=symbol, orderId=order_id)
+        print(f"Cancelled order {order_id} for {symbol}")
+    except Exception as e:
+        print(f"Error cancelling order {order_id} for {symbol}: {e}")
+
 def main():
     # Fetch all stop loss orders identified by clientOrderId
     sl_orders = fetch_open_stop_loss_orders()
@@ -62,6 +90,20 @@ def main():
     if not sl_orders:
         print("No stop loss orders found.")
         return
+    # Cancel all stop loss orders
+    # cancel_stop_loss_orders(sl_orders)
+
+    # Fetch all stop market orders
+    stop_orders = fetch_open_stop_market_orders()
+
+    if not stop_orders:
+        print("No stop market orders found.")
+        return
+
+    for stop_order in stop_orders:
+        symbol = stop_order['symbol']
+        order_id = stop_order['orderId']
+        # cancel_order(symbol, order_id)
 
     for sl_order in sl_orders:
         symbol = sl_order['symbol']
@@ -91,5 +133,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
