@@ -154,7 +154,7 @@ class CoinGeckoAPI():
                         total_positive += 1
                     else:
                         total_negative += 1
-            
+            print(f"total_positive: {total_positive}, total_negative: {total_negative}")    
             if total_positive > total_negative:
                 return "long"
             elif total_positive < total_negative:
@@ -263,7 +263,7 @@ class CoinGeckoAPI():
             trend = "short"
         else:
             trend = "neutral"
-
+     
         return trend
 
     def coinGeckoBiasBTC(self):
