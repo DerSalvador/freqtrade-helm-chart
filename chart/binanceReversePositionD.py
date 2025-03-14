@@ -306,6 +306,8 @@ def monitor_and_manage(client, loss_threshold, profit_threshold, leverage):
             elif market_bias == "short" and position_amt > 0:
                 logging.info(f"Market bias is short, reverting long position for {symbol} to short.")
                 reverse_position(client, position)
+            else:
+                logging.info(f"{symbol} has not reached loss nor profit and market bias has not changed {market_bias}")
 
         df = pd.DataFrame(position_data, columns=["Symbol", "Entry Price", "Current Price", "PnL (%)", f"{loss_threshold}% Loss Price", f"{profit_threshold}% Profit Price"])
         print(tabulate(df, headers="keys", tablefmt="pretty"))

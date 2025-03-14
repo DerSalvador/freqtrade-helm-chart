@@ -7,10 +7,10 @@ configcreds:
   dersalvador:
     hedging:
       role: master
-      leverage: 10
+      leverage: 2
       stoploss_hedging: false
-      minimal_leverage: 5
-      stake_amount: 1500
+      minimal_leverage: 2
+      stake_amount: 50
       spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"
       hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/status"
       hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/show_config"      
@@ -27,15 +27,15 @@ configcreds:
       minimal_pair_profits_check_array_length: 70
       pair_profits_check_array_length: 90
       alternativeHedgingApproach: true
-      binance_timeout: 8
+      binance_timeout: 3
       exit_on_profit: true
       hedge_bot_apikey_alternative: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P # adriana
       hedge_bot_apisecret_alternative: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
       lossAbsolutInHedge: -5
       profitAbsolutInHedge: 5
-      hedgeMinutes: 20
+      hedgeMinutes: 10
       pair_analysis: true
-      hedgeMinutesMax: 41893 # 300
+      hedgeMinutesMax: 41893 # +++++300
       apikey: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm # Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P # 
       apisecret: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov # 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r # 
   minimal_roi:

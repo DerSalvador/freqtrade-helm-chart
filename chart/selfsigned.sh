@@ -32,7 +32,7 @@ openssl req -subj "/CN=$(hostname)" -new -key tls.key -out server.csr
 # Edit
 # Create an extfile to define SAN (Subject Alternative Names)
 # echo "subjectAltName = IP:127.0.0.1,IP:$(hostname | awk '{print $1}')" > extfile.cnf
-echo "subjectAltName = IP:172.17.48.151" > extfile.cnf
+echo "subjectAltName = IP:172.17.48.34" > extfile.cnf
 
 # Sign the server certificate
 openssl x509 -req -days 365 -sha256 -in server.csr -CA ca.crt -CAkey ca-key.pem -CAcreateserial \
