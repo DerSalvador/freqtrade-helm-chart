@@ -33,7 +33,7 @@ spec:
         ports:
         - containerPort: 80
           name: http
-    volumes:
+      volumes:
       - name: config
         persistentVolumeClaim:
           claimName: biasconfig
