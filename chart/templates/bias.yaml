@@ -22,11 +22,11 @@ spec:
           - name: CONFIG_PATH
             value: /config
           - name: COINGECKO_API_KEY
-            value: "my-value"
+            value: {{ .Values.bot.coingecko_api_key }}
           - name: BINANCE_API_KEY
-            value: "my-value"
+            value: {{ .Values.bot.binance_api_key }}
           - name: BINANCE_SECRET_KEY
-            value: "my-value"
+            value: {{ .Values.bot.binance_secret_key }}
         volumeMounts:
         - name: config
           mountPath: /config
