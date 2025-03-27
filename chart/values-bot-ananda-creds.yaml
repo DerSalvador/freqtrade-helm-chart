@@ -39,4 +39,6 @@ configcreds:
     chat_id: "1759706931" 
 bot:
   strategy_name: AnandaStrategy
+bias:
+  endpoint: http://bias
 ...
