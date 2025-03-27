@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bias-{{ .Release.Namespace }}
+  labels:
+    app: bias
+    env: production   # Adding a label named env with value production
+spec:
+  selector:
+    matchLabels:
+      app: bias-{{ .Release.Namespace }}
+  template:
+    metadata:
+      labels:
+        app: bias-{{ .Release.Namespace }}
+        reason: trading
+    spec:
+      containers:
+      - name: bias-container
+        image: ghcr.io/dersalvador/ananda/bias:latest
+        env:
+          - name: CONFIG_PATH
+            value: /config
+          - name: COINGECKO_API_KEY
+            value: "my-value"
+          - name: BINANCE_API_KEY
+            value: "my-value"
+          - name: BINANCE_SECRET_KEY
+            value: "my-value"
+        volumeMounts:
+        - name: config
+          mountPath: /config
+        ports:
+        - containerPort: 80
+          name: http
+    volumes:
+      - name: config
+        persistentVolumeClaim:
+          claimName: biasconfig
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bias
+  labels:
+    app: bias-{{ .Release.Namespace }}
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+  selector:
+    app: bias-{{ .Release.Namespace }}
