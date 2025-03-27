@@ -18,6 +18,7 @@ spec:
       containers:
       - name: bias-container
         image: ghcr.io/dersalvador/ananda/bias:latest
+        imagePullPolicy: Always
         env:
           - name: CONFIG_PATH
             value: /config
