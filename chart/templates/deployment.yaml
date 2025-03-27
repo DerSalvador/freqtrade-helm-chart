@@ -126,6 +126,9 @@ spec:
    
       - name: freqtrade
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        env:
+          - name: BIAS_ENDPOINT
+            value: {{ .Values.bias.endpoint }}
         lifecycle:
           preStop:
             exec:
