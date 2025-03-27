@@ -123,7 +123,45 @@ spec:
           mountPath: /freqtrade/config
         - name: sqlite
           mountPath: /sqlite
-   
+      # 
+      # Bias 
+      #
+      - name: bias-container
+        image: ghcr.io/dersalvador/ananda/bias:latest
+        env:
+          - CONFIG_PATH
+            value: "/config"
+          - COINGECKO_API_KEY: xxx
+            value: "my-value"
+          - BINANCE_API_KEY: xxx
+            value: "my-value"
+          - BINANCE_SECRET_KEY: xxx  
+            value: "my-value"
+        # command:
+        # - bash 
+        # - -c 
+        # - |
+        #   echo 'Debug container running...'; 
+        #   # sleep 30
+        #   # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/_optional_dependencies.py >> /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+        #   # cat /home/ftuser/.local/lib/python3.12/site-packages/sklearn/utils/__init__.py
+        #   while true; do sleep 10; done;
+        # workingDir: /extra_strategies
+        # Set the working directory if needed
+        volumeMounts:
+        - name: extra-strategies
+          mountPath: /extra_strategies
+          readOnly: false          
+        - name: user-data-strategies
+          mountPath: /freqtrade/user_data/strategies
+          readOnly: false
+        - name: configcreds
+          mountPath: /freqtrade/configcreds
+        - name: config
+          mountPath: /freqtrade/config
+        - name: sqlite
+          mountPath: /sqlite
+
       - name: freqtrade
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         env:
