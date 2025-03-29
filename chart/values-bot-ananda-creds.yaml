@@ -5,8 +5,10 @@ bias:
   endpoint: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ananda.bot-ananda.svc.cluster.local:8084/sentiment/BTC"
 configcreds:
   trading_mode: futures
-  margin_mode: isolated  
+  margin_mode: isolated
+  timeframe: 1m
   dry_run: true
+  can_short: True
   position_adjustment_enable: false
   dry_run_wallet: 100000
   stoploss: -0.99
