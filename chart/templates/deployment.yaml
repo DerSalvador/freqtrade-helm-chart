@@ -160,6 +160,7 @@ spec:
            --logfile /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
            --strategy {{ .Values.bot.strategy_name }} \
            --db-url sqlite:////sqlite/tradesv3.sqlite 
+           --strategy-path /extra_strategies
         volumeMounts:
         - name: tmp
           mountPath: /tmp
