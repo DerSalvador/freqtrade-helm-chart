@@ -6,6 +6,7 @@ configcreds:
   margin_mode: isolated  
 
   dry_run: true
+  position_adjustment_enable: false
   dry_run_wallet: 100000
   stoploss: -0.99
   stake_amount: 1000

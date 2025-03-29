@@ -46,7 +46,6 @@ config:
   # fiat_display_currency: USD
   db_url: "sqlite:///sqlite/tradesv3.sqlite"
   cancel_open_orders_on_exit: false
-  position_adjustment_enable: false
   max_entry_position_adjustment: 0
   order_types:
     emergency_exit: "market"
