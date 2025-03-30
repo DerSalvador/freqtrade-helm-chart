@@ -48,4 +48,5 @@ bias:
   coingecko_api_key: CG-AgEZRgMf3iLk1S8CwyCKp7N3
   binance_api_key: oHUFlVe78kv5yrTxmdh0G5FEuf8mwoXhJ9uRzDROOYqkCdgtLbL0seqqPRitBa4A
   binance_secret_key: d9tppCwa3BQZv2tMFgsMd9JVALKgKye33ONo9BjvvQix7RUYFY1tRdpOMZxIS996
+  biasversion: v1.20_5095eeb
 ...
