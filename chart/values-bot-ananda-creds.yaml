@@ -18,9 +18,8 @@ configcreds:
   dry_run_wallet: 100000
   stoploss: -0.18
   stake_amount: 100
-  minimal_roi:
-    "0": 0.25
-
+  # minimal_roi:
+  #   "0": 0.20
   bot_name: bot-ananda
   exchange:
     pair_whitelist:
