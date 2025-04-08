@@ -22,12 +22,10 @@ spec:
         env:
           - name: CONFIG_PATH
             value: /config
-          - name: COINGECKO_API_KEY
-            value: {{ .Values.configcreds.bias.coingecko_api_key }}
-          - name: BINANCE_API_KEY
-            value: {{ .Values.configcreds.bias.binance_api_key }}
-          - name: BINANCE_SECRET_KEY
-            value: {{ .Values.configcreds.bias.binance_secret_key }}
+        {{- range $i, $env := .Values.configcreds.bias.env }}
+          - name: {{ .name }}
+            value: {{ .value }}
+        {{- end }}
         volumeMounts:
         - name: config
           mountPath: /config
