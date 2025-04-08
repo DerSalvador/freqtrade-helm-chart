@@ -11,6 +11,8 @@ configcreds:
         value: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
       - name: BINANCE_SECRET_KEY
         value: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+      - name: SANTIMENT_API_KEY
+        value: sez35zzm26hhw2bw_serglcvwjzfangkr
     biasversion: latest
     api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ananda.bot-ananda.svc.cluster.local:8084/api/v1/profit"
   trading_mode: futures
