@@ -126,7 +126,7 @@ spec:
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
         env:
           - name: BIAS_ENDPOINT
-            value: {{ .Values.bias.endpoint }}
+            value: {{ .Values.configcreds.bias.endpoint }}
         lifecycle:
           preStop:
             exec:

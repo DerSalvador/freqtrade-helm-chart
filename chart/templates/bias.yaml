@@ -17,17 +17,17 @@ spec:
     spec:
       containers:
       - name: bias-container
-        image: ghcr.io/dersalvador/ananda/bias:{{ .Values.bias.biasversion }}
+        image: ghcr.io/dersalvador/ananda/bias:{{ .Values.configcreds.bias.biasversion }}
         imagePullPolicy: Always
         env:
           - name: CONFIG_PATH
             value: /config
           - name: COINGECKO_API_KEY
-            value: {{ .Values.bias.coingecko_api_key }}
+            value: {{ .Values.configcreds.bias.coingecko_api_key }}
           - name: BINANCE_API_KEY
-            value: {{ .Values.bias.binance_api_key }}
+            value: {{ .Values.configcreds.bias.binance_api_key }}
           - name: BINANCE_SECRET_KEY
-            value: {{ .Values.bias.binance_secret_key }}
+            value: {{ .Values.configcreds.bias.binance_secret_key }}
         volumeMounts:
         - name: config
           mountPath: /config
