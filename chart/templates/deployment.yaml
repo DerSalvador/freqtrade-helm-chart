@@ -89,6 +89,13 @@ spec:
           mountPath: /sqlite
       - name: freqtrade
         image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+        resources:
+          limits:
+            cpu: 500m
+            memory: 2Gi
+          requests:
+            cpu: 500m
+            memory: 1Gi
         env:
           - name: BIAS_ENDPOINT
             value: {{ .Values.configcreds.bias.endpoint }}
