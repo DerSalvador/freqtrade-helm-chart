@@ -18,12 +18,12 @@ configcreds:
   trading_mode: futures
   margin_mode: isolated
   timeframe: 1m
-  dry_run: true
+  dry_run: false
   can_short: True
   position_adjustment_enable: false
   dry_run_wallet: 100000
   stoploss: -0.18
-  stake_amount: 300
+  stake_amount: 200
   # minimal_roi:
   #   "0": 0.20
   bot_name: bot-ananda
