@@ -2,28 +2,60 @@
 kubernetes:
   nodePort: 32393
 configcreds:
+  bias:
+    endpoint: http://bias # http://104.199.17.143 # http://freqtrade:'&&Liz270117!!'@bias.bot-ananda.svc.cluster.local/
+    env:
+      - name: COINGECKO_API_KEY
+        value: CG-AgEZRgMf3iLk1S8CwyCKp7N3
+      - name: BINANCE_API_KEY
+        value: b3r35QxZ6z8PKS7vFSoJztdTwI4mQJ1owCBmp08pjKj1FQWhFFxvFZ9yqStfpGwm
+      - name: BINANCE_SECRET_KEY
+        value: tHwYon2naTO6111rCo3c6yv84szDFFsaovNnf9eUY9FYl5Ub07c9IuZ8WTZx4uov
+      - name: SANTIMENT_API_KEY
+        value: sez35zzm26hhw2bw_serglcvwjzfangkr
+    biasversion: latest
+    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"
   trading_mode: futures
   margin_mode: isolated
-  dry_run: true
-  dersalvador:
-    hedging:
-      role: trades
-      spot_bot_api_forceenter: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-05.bot-mssm-05.svc.cluster.local:8084/api/v1/forceenter"
-      hedge_bot_api_show_config: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/show_config"
-      hedge_bot_api_status: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-binance-juliano-futures.binance-juliano-futures.svc.cluster.local:8084/api/v1/status" # "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/status"
-      hedge_bot_api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/profit"
-      hedge_bot_api: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-06.bot-mssm-06.svc.cluster.local:8084/api/v1/forceenter"
-      exit_on_profit: false
-
-  minimal_roi:
-    "0": 0.05
+  timeframe: 1m
+  dry_run: false
+  can_short: True
+  position_adjustment_enable: false
+  dry_run_wallet: 100000
+  stoploss: -0.18
+  stake_amount: 100
+  # minimal_roi:
+  #   "0": 0.20
   bot_name: bot-mssm-06
   exchange:
+    pair_blacklist:
+      - LINK/USDT:USDT
+    pair_whitelist:
+      - BTC/USDT:USDT
+      # - XLM/USDT:USDT
+      # - SOL/USDT:USDT
     name: binance
+
+  pairlists:
+    - method: StaticPairList
+      mode: whitelist
+      processing_mode: append
+    # - method: RemotePairList
+    #   number_assets: 19
+    #   pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+    #   mode: whitelist
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120    
+
+
   telegram:
     enabled: true
-    token: 7035160448:AAFYWeozmkF4yPtTHlNn8XCA7MaVJyOyMdI
+    token: 7018156345:AAGqhyNAb5aRMSlM-aoB5Se72S5oZhcXhqs
     chat_id: "1759706931"
 bot:
-  strategy_name: LizStrategy
+  strategy_name: AnandaStrategySplitNisham
+  debug: true 
+  debuglevel: -vvv
 ...

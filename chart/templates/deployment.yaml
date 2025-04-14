@@ -54,41 +54,6 @@ spec:
           readOnly: false
         - mountPath: /sqlite
           name: sqlite
-
-      # - name: liststrategies
-      #   image: {{ .Values.image.base }}:{{ .Values.image.tag }}
-      #   command:
-      #   - bash
-      #   - -c
-      #   - |
-      #      echo pip install python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
-      #      pip install --user python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
-      #      . /home/ftuser/.venv/bin/activate
-      #      echo mkdir -p "/freqtrade/user_data/strategies"
-      #      mkdir -p "/freqtrade/user_data/strategies"
-      #      echo cp -R /extra_strategies /freqtrade/user_data/strategies
-      #      cp -R /extra_strategies /freqtrade/user_data/strategies
-      #      echo ""
-      #      echo "Starting Freqtrade list-strategies"
-      #      echo ""
-      #      # pip install  python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
-      #      pip install --user python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
-      #      # freqtrade list-strategies --recursive-strategy-search --strategy-path /extra_strategies --config /freqtrade/config/config-{{ .Release.Namespace }}.json --config /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json -d  /extra_strategies/data --userdir /freqtrade/user_data --logfile /extra_strategies/logs/liststrategies_{{ now | date "20060102" }}.log
-      #      # freqtrade list-strategies 
-      #   volumeMounts:
-      #   - name: configcreds
-      #     mountPath: /freqtrade/configcreds
-      #   - name: config
-      #     mountPath: /freqtrade/config
-      #   - name: sqlite
-      #     mountPath: /sqlite
-      #   - name: extra-strategies
-      #     mountPath: /extra_strategies
-      #     readOnly: false 
-      #   - name: user-data-strategies
-      #     mountPath: /freqtrade/user_data/strategies
-      #     readOnly: false
-
       #
       # Main Process, Trading
       # 
@@ -138,6 +103,7 @@ spec:
            # . /home/ftuser/.venv/bin/activate
            # echo pip install python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
            # pip install --user python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
+           # pip install --user python-binance binance_spot binance-connector
            echo mkdir -p /freqtrade/user_data/strategies
            mkdir -p /freqtrade/user_data/strategies
            mkdir -p /freqtrade/logs/
@@ -150,7 +116,8 @@ spec:
            --config /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json \
            --logfile /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
            --strategy {{ .Values.bot.strategy_name }} \
-           --db-url sqlite:////sqlite/tradesv3.sqlite 
+           --db-url sqlite:////sqlite/tradesv3.sqlite \
+           --strategy-path /extra_strategies
            echo ""
            echo "Starting Freqtrade"
            echo ""
@@ -159,7 +126,7 @@ spec:
            --config /freqtrade/configcreds/configcreds-{{ .Release.Namespace }}.json \
            --logfile /extra_strategies/logs/freqtrade_{{ now | date "20060102" }}.log \
            --strategy {{ .Values.bot.strategy_name }} \
-           --db-url sqlite:////sqlite/tradesv3.sqlite 
+           --db-url sqlite:////sqlite/tradesv3.sqlite \
            --strategy-path /extra_strategies
         volumeMounts:
         - name: tmp

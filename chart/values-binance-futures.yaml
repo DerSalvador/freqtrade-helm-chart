@@ -5,7 +5,7 @@ config:
   stake_amount: unlimited
   max_open_trades: 100
   minimal_roi:
-    "0": 0.11
+    "0": 0.08
   stoploss: -0.99
   timeframe: 1m
   # trailing_stop: false
@@ -19,7 +19,7 @@ config:
   # These values can be overridden in the "ask_strategy" section in the config.
   use_exit_signal: true
   exit_profit_only: false
-  ignore_roi_if_entry_signal: true
+  ignore_roi_if_entry_signal: false
   trading_mode: futures
   margin_mode: isolated  
   # Number of candles the strategy requires before producing valid signals
@@ -43,6 +43,7 @@ config:
   amend_last_stake_amount: true
   stake_currency: USDT
   tradable_balance_ratio: 0.99
+  disable_dataframe_checks: true  
   # fiat_display_currency: USD
   db_url: "sqlite:///sqlite/tradesv3.sqlite"
   cancel_open_orders_on_exit: false
@@ -67,17 +68,17 @@ config:
     entry: "FOK" # Fill or Kill ( all or nothinh )
     exit: "GTC" # Good till canceled (partially filling)
   exchange:
-    pair_whitelist:
-      - TRUMP/USDT:USDT
-      - BTC/USDT:USDT
-      - ETH/USDT:USDT
-      - SOL/USDT:USDT
-      - XRP/USDT:USDT
-      - DOGE/USDT:USDT
-      - LINK/USDT:USDT
-      - BCH/USDT:USDT
-      - ADA/USDT:USDT
-      - DOT/USDT:USDT
+    # pair_whitelist:
+    #   - TRUMP/USDT:USDT
+    #   - BTC/USDT:USDT
+    #   - ETH/USDT:USDT
+    #   - SOL/USDT:USDT
+    #   - XRP/USDT:USDT
+    #   - DOGE/USDT:USDT
+    #   - LINK/USDT:USDT
+    #   - BCH/USDT:USDT
+    #   - ADA/USDT:USDT
+    #   - DOT/USDT:USDT
     pair_blacklist: [
       # Emergency
       # "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
@@ -96,13 +97,13 @@ config:
     ]
     ccxt_config:
       enableRateLimit: true
-      rateLimit: 3000
+      rateLimit: 500
       options:
         defaultType: future
         leverage: 5
     ccxt_async_config:
       enableRateLimit: true
-      rateLimit: 3000
+      rateLimit: 500
       options:
         defaultType: future
         leverage: 5 
@@ -229,12 +230,12 @@ config:
 #   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
 #   tag: binzrl_multi-arch-1 # 1adeb1ad7ce401700f1da0ab5a158d34c01c9ea185a51f56461eae38170bb1f7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
 image:
-  base: europe-west1-docker.pkg.dev/gcp-nuke/gcp-nuke/freqtradeorg/freqtrade # docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
+  base: freqtradeorg/freqtrade # docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
   # tag: binzrl_multi-arch-1 # 1adeb1ad7ce401700f1da0ab5a158d34c01c9ea185a51f56461eae38170bb1f7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
-  tag: 2024.12.1-venv-tensorflow
+  tag: 2025.3
 
 bot:
-  debug: false
+  debug: true
   debuglevel: -v
   enabled: true
   pvc_size: 12Gi
