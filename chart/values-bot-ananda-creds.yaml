@@ -22,7 +22,7 @@ configcreds:
   can_short: True
   position_adjustment_enable: false
   dry_run_wallet: 100000
-  stoploss: -0.18
+  stoploss: -0.99
   stake_amount: 200
   # minimal_roi:
   #   "0": 0.20
