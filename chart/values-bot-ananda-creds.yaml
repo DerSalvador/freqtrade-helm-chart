@@ -13,8 +13,10 @@ configcreds:
         value: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r 
       - name: SANTIMENT_API_KEY
         value: unwt4thnxxvzahvm_7k4vvoljri6tpxup
+      - name: FREQTRADE_BASE_URL
+        value: http://freqtrade:&&Liz270117!!@freqtrade-clusterip:8084/
     biasversion: latest
-    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-ananda.bot-ananda.svc.cluster.local:8084/api/v1/profit"
+    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip:8084/api/v1/profit"
   trading_mode: futures
   margin_mode: isolated
   timeframe: 1m
