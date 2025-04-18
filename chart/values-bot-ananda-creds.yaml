@@ -15,7 +15,7 @@ configcreds:
         value: unwt4thnxxvzahvm_7k4vvoljri6tpxup
       - name: FREQTRADE_BASE_URL
         value: http://freqtrade:&&Liz270117!!@freqtrade-clusterip:8084/
-    biasversion: latest
+    biasversion: develop
     api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip:8084/api/v1/profit"
   trading_mode: futures
   margin_mode: isolated
