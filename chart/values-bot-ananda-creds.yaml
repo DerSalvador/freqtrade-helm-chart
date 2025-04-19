@@ -9,7 +9,7 @@ configcreds:
         value: CG-AgEZRgMf3iLk1S8CwyCKp7N3
       - name: BINANCE_API_KEY
         value: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P 
-      - name: BINANCE_SECRET_KEY
+      - name: BINANCE_API_SECRET
         value: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r 
       - name: SANTIMENT_API_KEY
         value: unwt4thnxxvzahvm_7k4vvoljri6tpxup

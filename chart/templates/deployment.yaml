@@ -110,7 +110,8 @@ spec:
            # . /home/ftuser/.venv/bin/activate
            # echo pip install python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
            # pip install --user python-binance binance_spot binance-connector pywavelets ta ta-lib ta_lib TA-Lib TA_lib multiprocess mailtrap
-           pip install --user python-binance binance_spot binance-connector
+           echo pip install --user python-binance binance_spot binance-connector binance
+           pip install --user python-binance binance_spot binance-connector binance
            echo mkdir -p /freqtrade/user_data/strategies
            mkdir -p /freqtrade/user_data/strategies
            mkdir -p /freqtrade/logs/
