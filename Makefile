@@ -1,7 +1,10 @@
+manifest-test:
+	cd chart; helm template -f values-base.yaml -f values-binance-futures.yaml -f values-bot-ananda-creds.yaml -f values-bot-nisham-test.yaml . > /tmp/bot-ananda.yaml
+
 manifest:
 	cd chart; helm template -f values-base.yaml -f values-binance-futures.yaml -f values-bot-ananda-creds.yaml . > /tmp/bot-ananda.yaml
 
-apply: manifest
+apply: manifest-test
 	kubectl apply -f /tmp/bot-ananda.yaml
 
 diff:
