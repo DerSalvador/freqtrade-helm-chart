@@ -96,9 +96,14 @@ spec:
           requests:
             cpu: 500m
             memory: 1Gi
+        imagePullPolicy: Always
         env:
-          - name: BIAS_ENDPOINT
-            value: {{ .Values.configcreds.bias.endpoint }}
+          - name: CONFIG_PATH
+            value: /config
+        {{- range $i, $env := .Values.configcreds.bias.env }}
+          - name: {{ .name }}
+            value: {{ .value }}
+        {{- end }}
         lifecycle:
           preStop:
             exec:
