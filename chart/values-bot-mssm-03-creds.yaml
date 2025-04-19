@@ -18,7 +18,7 @@ configcreds:
       - name: FREQTRADE_BASE_URL
         value: http://freqtrade:&&Liz270117!!@freqtrade-clusterip:8084/
     biasversion: develop
-    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-02.bot-mssm-02.svc.cluster.local:8084/api/v1/profit"
+    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/profit"
   trading_mode: futures
   margin_mode: isolated
   timeframe: 1m
