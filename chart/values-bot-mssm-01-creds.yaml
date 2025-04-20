@@ -38,8 +38,8 @@ configcreds:
       - LINK/USDT:USDT
     pair_whitelist:
       - BTC/USDT:USDT
-      #- ETH/USDT:USDT
-      #- SOL/USDT:USDT
+      - ETH/USDT:USDT
+      - SOL/USDT:USDT
     name: binance
 
   pairlists:

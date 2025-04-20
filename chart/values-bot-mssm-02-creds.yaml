@@ -37,9 +37,9 @@ configcreds:
     pair_blacklist:
       - LINK/USDT:USDT
     pair_whitelist:
-      # - BTC/USDT:USDT
+      - BTC/USDT:USDT
       - DOT/USDT:USDT
-      # - SOL/USDT:USDT
+      - SOL/USDT:USDT
     name: binance
 
   pairlists:
