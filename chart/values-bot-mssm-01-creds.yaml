@@ -4,6 +4,8 @@ kubernetes:
 configcreds:
   bias:
     # endpoint: http://bias # http://104.199.17.143 # http://freqtrade:'&&Liz270117!!'@bias.bot-ananda.svc.cluster.local/
+    binance_api_key: "oHUFlVe78kv5yrTxmdh0G5FEuf8mwoXhJ9uRzDROOYqkCdgtLbL0seqqPRitBa4A"
+    binance_secret_key: "d9tppCwa3BQZv2tMFgsMd9JVALKgKye33ONo9BjvvQix7RUYFY1tRdpOMZxIS996"
     env:
       - name: BIAS_ENDPOINT
         value: http://bias
