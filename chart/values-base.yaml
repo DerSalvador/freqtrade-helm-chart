@@ -4,6 +4,12 @@ kubernetes:
   copyContainer: true
 
 configcreds:
+  imagePullSecrets_github:
+    name: github
+    username: x1mroepke
+    password: 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
+    email: michael.santana.mellouk@dersalvador.com
+
   exchange:
     pair_blacklist:
      # - XLM/USDT:USDT

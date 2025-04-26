@@ -32,6 +32,8 @@ spec:
         ports:
         - containerPort: 80
           name: http
+      imagePullSecrets:
+        - name: {{ .Values.configcreds.imagePullSecrets_github.name }}
       volumes:
       - name: config
         persistentVolumeClaim:
