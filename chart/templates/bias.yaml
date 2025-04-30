@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: bias-container
-        image: ghcr.io/dersalvador/ananda/bias:{{ .Values.configcreds.bias.biasversion }} # ghcr.io/x1mroepke/ananda-public/bias:{{ .Values.configcreds.bias.biasversion }}
+        image: ghcr.io/x1mroepke/ananda-public/bias:{{ .Values.configcreds.bias.biasversion }} # ghcr.io/x1mroepke/ananda-public/bias:{{ .Values.configcreds.bias.biasversion }}
         imagePullPolicy: Always
         env:
           - name: CONFIG_PATH
@@ -32,8 +32,8 @@ spec:
         ports:
         - containerPort: 80
           name: http
-      # imagePullSecrets:
-      #   - name: {{ .Values.configcreds.imagePullSecrets_github.name }}
+      imagePullSecrets:
+        - name: {{ .Values.configcreds.imagePullSecrets_github.name }}
       volumes:
       - name: config
         persistentVolumeClaim:
