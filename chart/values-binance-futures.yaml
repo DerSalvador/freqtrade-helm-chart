@@ -1,11 +1,6 @@
 ---
 config:
-  stoploss_on_exchange: true
-  stoploss_on_exchange_interval: 5
-  order_types:
-    stoploss: stop_limit
   stoploss: -0.99
-
   dry_run: true
   dry_run_wallet: 500000
   stake_amount: unlimited
@@ -59,9 +54,10 @@ config:
     force_entry: "market"
     force_exit: "market"
     exit: limit
-    stoploss: "market"
-    stoploss_on_exchange: false
-    stoploss_on_exchange_interval: 60
+    stoploss: "limit"
+    stoploss_on_exchange: true
+    stoploss_on_exchange_interval: 5
+    stoploss_price_type:
     stoploss_on_exchange_limit_ratio: 0.99
   # margin_mode: ""
   unfilledtimeout:
