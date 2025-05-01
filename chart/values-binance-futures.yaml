@@ -1,12 +1,17 @@
 ---
 config:
+  stoploss_on_exchange: true
+  stoploss_on_exchange_interval: 5
+  order_types:
+    stoploss: stop_limit
+  stoploss: -0.99
+
   dry_run: true
   dry_run_wallet: 500000
   stake_amount: unlimited
   max_open_trades: 100
   minimal_roi:
     "0": 0.08
-  stoploss: -0.99
   timeframe: 1m
   # trailing_stop: false
   # trailing_only_offset_is_reached: false
