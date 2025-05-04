@@ -4,8 +4,8 @@ kubernetes:
 configcreds:
   bias:
     # endpoint: http://bias # http://104.199.17.143 # http://freqtrade:'&&Liz270117!!'@bias.bot-ananda.svc.cluster.local/
-    binance_api_key: "oHUFlVe78kv5yrTxmdh0G5FEuf8mwoXhJ9uRzDROOYqkCdgtLbL0seqqPRitBa4A"
-    binance_secret_key: "d9tppCwa3BQZv2tMFgsMd9JVALKgKye33ONo9BjvvQix7RUYFY1tRdpOMZxIS996"
+    binance_api_key: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P # Nisham "oHUFlVe78kv5yrTxmdh0G5FEuf8mwoXhJ9uRzDROOYqkCdgtLbL0seqqPRitBa4A"
+    binance_secret_key: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r # Nisham "d9tppCwa3BQZv2tMFgsMd9JVALKgKye33ONo9BjvvQix7RUYFY1tRdpOMZxIS996"
     env:
       - name: BIAS_ENDPOINT
         value: http://bias
@@ -38,19 +38,19 @@ configcreds:
   exchange:
     pair_blacklist:
       - LINK/USDT:USDT
-    pair_whitelist:
-      - BTC/USDT:USDT
-      - ALGO/USDT:USDT
-      - SOL/USDT:USDT
+    # pair_whitelist:
+    #   - BTC/USDT:USDT
+    #   - ALGO/USDT:USDT
+    #   - SOL/USDT:USDT
     name: binance
 
   pairlists:
-    - method: StaticPairList
-      mode: whitelist
-      processing_mode: append
+    # - method: StaticPairList
+    #   mode: whitelist
+    #   processing_mode: append
     - method: RemotePairList
       number_assets: 19
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-3.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
