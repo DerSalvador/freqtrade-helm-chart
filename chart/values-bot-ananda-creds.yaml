@@ -76,5 +76,5 @@ configcreds:
 bot:
   strategy_name: AnandaStrategySplit
   debug: true 
-  debuglevel: -v
+  debuglevel: -vvv
 ...

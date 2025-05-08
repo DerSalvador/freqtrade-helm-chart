@@ -168,7 +168,58 @@ def main():
     symbol = args.symbol
 
     client = Client(api_key, api_secret)
+    def calculate_macd(dataframe):
+        """Calculate MACD and Signal Line using TA-Lib."""
+        macd, macd_signal, _ = talib.MACD(dataframe['current_profit'], fastperiod=12, slowperiod=26, signalperiod=9)
+        dataframe['macd'] = macd
+        dataframe['macd_signal'] = macd_signal
+        return dataframe
 
+    def should_reverse_position(dataframe, threshold=-0.05):
+        """
+        Determine if the position should be reversed based on MACD and falling profits.
+        :param dataframe: Pandas DataFrame with 'current_profit', 'macd', and 'macd_signal' columns.
+        :param threshold: Profit drop threshold to trigger reversal.
+        :return: Boolean indicating whether to reverse the position.
+        """
+        # Check if MACD is below the signal line and profits are falling rapidly
+        if len(dataframe) > 1:
+            recent_profit = dataframe['current_profit'].iloc[-1]
+            previous_profit = dataframe['current_profit'].iloc[-2]
+            macd = dataframe['macd'].iloc[-1]
+            macd_signal = dataframe['macd_signal'].iloc[-1]
+
+            if recent_profit < previous_profit and recent_profit < threshold and macd < macd_signal:
+                return True
+        return False
+
+    # Initialize a DataFrame to track profits
+    profit_data = pd.DataFrame(columns=['current_profit'])
+
+    # Simulate profit tracking for 30 minutes or until rapid drop is detected
+    time_window = 30  # in minutes
+    current_time = 0
+
+    while current_time < time_window:
+        try:
+            # Fetch current position profit
+            positions = client.futures_position_information()
+            position = next((p for p in positions if p['symbol'] == symbol), None)
+
+            if not position:
+                print(f"No active position found for {symbol}.")
+                break
+
+            current_profit = float(position['unrealizedProfit'])
+            profit_data = profit_data.append({'current_profit': current_profit}, ignore_index=True)
+
+            # Calculate MACD and check for reversal condition
+            profit_data = calculate_macd(profit_data)
+            if should_reverse_position(profit_data):
+                print("Rapid profit drop detected. Reversing position.")
+                # Reverse the position
+                position_amt = float(position['positionAmt'])
+                side = 'SELL' if position_amt > 0 else 'BUY'
     # Fetch current position for the symbol
     try:
         positions = client.futures_position_information()
