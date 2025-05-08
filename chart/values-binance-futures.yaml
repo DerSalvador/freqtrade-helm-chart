@@ -237,7 +237,7 @@ image:
 
 bot:
   debug: true
-  debuglevel: -v
+  debuglevel: -vv
   enabled: true
   pvc_size: 12Gi
   freqaimodel: LightGBMRegressor
