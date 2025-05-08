@@ -6,7 +6,7 @@ config:
   stake_amount: unlimited
   max_open_trades: 100
   minimal_roi:
-    "0": 0.08
+    "0": 0.2
   timeframe: 1m
   # trailing_stop: false
   # trailing_only_offset_is_reached: false
