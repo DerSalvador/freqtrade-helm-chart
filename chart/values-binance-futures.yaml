@@ -58,7 +58,7 @@ config:
     stoploss_on_exchange: true
     stoploss_on_exchange_interval: 5
     stoploss_price_type: last
-    stoploss_on_exchange_limit_ratio: 0.99
+    stoploss_on_exchange_limit_ratio: 0.95
   # margin_mode: ""
   unfilledtimeout:
     entry: 10
