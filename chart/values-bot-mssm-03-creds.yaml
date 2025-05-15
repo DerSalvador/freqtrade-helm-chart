@@ -23,6 +23,7 @@ configcreds:
     biasversion: develop
     api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/profit"
     blacklist_url: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/blacklist"
+    deleteTradeUrl: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/trades"
 
   trading_mode: futures
   margin_mode: isolated
