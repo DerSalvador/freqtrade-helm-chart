@@ -39,7 +39,7 @@ configcreds:
   exchange:
     pair_blacklist:
       - LINK/USDT:USDT
-    pair_whitelist:
+    # pair_whitelist:
       # - BTC/USDT:USDT
       # - GMX/USDT:USDT
       # - SOL/USDT:USDT
