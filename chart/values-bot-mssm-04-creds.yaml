@@ -35,7 +35,7 @@ configcreds:
   stake_amount: 100
   # minimal_roi:
   #   "0": 0.20
-  bot_name: bot-ananda
+  bot_name: bot-mssm-04
   exchange:
     pair_blacklist:
       - LINK/USDT:USDT
