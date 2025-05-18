@@ -34,9 +34,9 @@ configcreds:
   #   "880": 0.13
   dry_run: false  
   exchange:
-    name: binance
-    key: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
-    secret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8        
+    # name: binance
+    # key: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
+    # secret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8        
     pair_blacklist:
       - LINK/USDT:USDT
     name: binance
