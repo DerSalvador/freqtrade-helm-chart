@@ -30,6 +30,9 @@ configcreds:
     pair_blacklist:
       - LINK/USDT:USDT
     name: binance
+  timeframe: 1m
+  dry_run: false
+  can_short: True
 
   pairlists:
   #   - method: StaticPairList

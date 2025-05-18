@@ -32,7 +32,9 @@ configcreds:
   #   "240": 0.4
   #   "480": 0.2
   #   "880": 0.13
-  dry_run: false  
+  timeframe: 1m
+  dry_run: false
+  can_short: True
   exchange:
     # name: binance
     # key: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
