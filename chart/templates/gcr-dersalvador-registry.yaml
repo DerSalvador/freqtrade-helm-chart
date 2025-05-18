@@ -6,6 +6,7 @@ metadata:
   name: deploy-key-gcr
 type: kubernetes.io/dockerconfigjson
 
+apiVersion: v1
 kind: Secret
 metadata:
   name: {{ .Values.configcreds.imagePullSecrets_github.name }}
