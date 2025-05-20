@@ -23,6 +23,14 @@ def sign_request(data, api_secret):
     signature = hmac.new(api_secret.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256).hexdigest()
     return signature
 
+
+def get_open_orders(api_key, api_secret):
+    client = Client(api_key, api_secret)
+    open_orders = client.futures_get_open_orders()
+    for o in open_orders:
+        print(o)
+
+
 def get_account_balances(api_key, api_secret):
 
     # Create a new client object to interact with the Binance API
@@ -96,8 +104,11 @@ if __name__ == '__main__':
         parser.add_argument('symbol', type=str, help='Symbol BTCUSDT....')
         
         args = parser.parse_args()
-
+        print("Open Positions")
         response = getPosition(args.api_key, args.api_secret, args.symbol)
+        print(response)
+        print("Open Orders")
+        response = get_open_orders(args.api_key, args.api_secret)
         print(response)
     except Exception as e:
         print(f"Caught an exception: {e}")
