@@ -50,15 +50,13 @@ configcreds:
     #   mode: whitelist
     #   processing_mode: append
     - method: RemotePairList
-      number_assets: 19
+      number_assets: 1
       pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-6.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
       mode: whitelist
       processing_mode: append
       refresh_period: 900
       keep_pairlist_on_failure: true
       read_timeout: 120    
-
-
   telegram:
     enabled: true
     token: 7018156345:AAGqhyNAb5aRMSlM-aoB5Se72S5oZhcXhqs

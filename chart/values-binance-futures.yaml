@@ -69,17 +69,6 @@ config:
     entry: "FOK" # Fill or Kill ( all or nothinh )
     exit: "GTC" # Good till canceled (partially filling)
   exchange:
-    # pair_whitelist:
-    #   - TRUMP/USDT:USDT
-    #   - BTC/USDT:USDT
-    #   - ETH/USDT:USDT
-    #   - SOL/USDT:USDT
-    #   - XRP/USDT:USDT
-    #   - DOGE/USDT:USDT
-    #   - LINK/USDT:USDT
-    #   - BCH/USDT:USDT
-    #   - ADA/USDT:USDT
-    #   - DOT/USDT:USDT
     pair_blacklist: [
       # Emergency
       # "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
@@ -112,17 +101,28 @@ config:
     key: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P
     secret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
   pairlists:
-    - method: StaticPairList
-      mode: whitelist
-      processing_mode: append
-    - method: RemotePairList
-      number_assets: 19
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-      mode: whitelist
-      processing_mode: append
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 120
+    # - method: StaticPairList
+    #   mode: whitelist
+    #   processing_mode: append
+    # - method: RemotePairList
+    #   number_assets: 19
+    #   pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+    #   mode: whitelist
+    #   processing_mode: append
+    #   refresh_period: 900
+    #   keep_pairlist_on_failure: true
+    #   read_timeout: 120
+    - method: VolumePairList
+      number_assets: 30
+      sort_key: quoteVolume
+      refresh_period: 1440
+      shuffle: true
+
+    - method: VolatilityPairList
+      number_assets: 10
+      lookback_period: 14
+      refresh_period: 1440
+      shuffle: true
   freqai:
     enabled: false
     rl_config:
