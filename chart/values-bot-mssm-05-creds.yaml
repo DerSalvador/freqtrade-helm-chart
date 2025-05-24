@@ -45,18 +45,18 @@ configcreds:
     #   # - SOL/USDT:USDT
     name: binance
 
-  pairlists:
-    # - method: StaticPairList
-    #   mode: whitelist
-    #   processing_mode: append
-    - method: RemotePairList
-      number_assets: 19
-      pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-5.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
-      mode: whitelist
-      processing_mode: append
-      refresh_period: 900
-      keep_pairlist_on_failure: true
-      read_timeout: 120    
+  # pairlists:
+  #   # - method: StaticPairList
+  #   #   mode: whitelist
+  #   #   processing_mode: append
+  #   - method: RemotePairList
+  #     number_assets: 19
+  #     pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-5.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
+  #     mode: whitelist
+  #     processing_mode: append
+  #     refresh_period: 900
+  #     keep_pairlist_on_failure: true
+  #     read_timeout: 120    
 
   telegram:
     enabled: true
