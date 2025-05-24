@@ -113,16 +113,25 @@ config:
     #   keep_pairlist_on_failure: true
     #   read_timeout: 120
     - method: VolumePairList
-      number_assets: 30
-      sort_key: quoteVolume
-      refresh_period: 1440
-      shuffle: true
-
-    - method: VolatilityPairList
       number_assets: 10
+      sort_key: quoteVolume
+      sort_ascending: false
+
+    - method: VolatilityFilter
       lookback_period: 14
-      refresh_period: 1440
-      shuffle: true
+      min_volatility: 0.005
+      max_volatility: 0.2
+      allowed_assets: 10
+
+    - method: PerformanceFilter
+      lookback_period: 7
+      min_performance: 0.01
+      max_performance: 1.0
+      allowed_assets: 10
+
+    - method: ShuffleFilter
+      seed: 42
+
   freqai:
     enabled: false
     rl_config:
