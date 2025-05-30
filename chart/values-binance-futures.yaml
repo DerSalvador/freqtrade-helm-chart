@@ -116,14 +116,14 @@ config:
       number_assets: 10
       sort_key: quoteVolume
       sort_ascending: false
-      refresh_period: 900
+      refresh_period: 86400
       lookback_timeframe: 1h
       lookback_period: 24
 
     - method: MarketCapPairList
       number_assets: 10
       max_rank: 100
-      refresh_period: 900
+      refresh_period: 86400
       categories:
         - proof-of-work-pow
         - layer-1
@@ -137,6 +137,7 @@ config:
       min_volatility: 0.075
       max_volatility: 0.2
       allowed_assets: 10
+      refresh_period: 86400
 
     - method: PerformanceFilter
       lookback_period: 7
@@ -144,9 +145,10 @@ config:
       max_performance: 1.0
       allowed_assets: 10
       min_profit: 0.015
+      refresh_period: 86400
 
     - method: ShuffleFilter
-      seed: 42
+      seed: 44
 
   freqai:
     enabled: false
