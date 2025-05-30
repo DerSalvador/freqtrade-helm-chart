@@ -116,10 +116,25 @@ config:
       number_assets: 10
       sort_key: quoteVolume
       sort_ascending: false
+      refresh_period: 900
+      lookback_timeframe: 1h
+      lookback_period: 24
+
+    - method: MarketCapPairList
+      number_assets: 10
+      max_rank: 100
+      refresh_period: 900
+      categories:
+        - proof-of-work-pow
+        - layer-1
+        - layer-2
+        - decentralized-exchange
+        - tokenized-btc
+        - proof-of-stake-pos
 
     - method: VolatilityFilter
-      lookback_period: 14
-      min_volatility: 0.005
+      lookback_period: 7
+      min_volatility: 0.075
       max_volatility: 0.2
       allowed_assets: 10
 
@@ -128,6 +143,7 @@ config:
       min_performance: 0.01
       max_performance: 1.0
       allowed_assets: 10
+      min_profit: 0.015
 
     - method: ShuffleFilter
       seed: 42
