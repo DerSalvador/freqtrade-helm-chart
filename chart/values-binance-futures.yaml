@@ -113,12 +113,12 @@ config:
     #   keep_pairlist_on_failure: true
     #   read_timeout: 120
     - method: VolumePairList
-      number_assets: 10
+      number_assets: 50
       sort_key: quoteVolume
       sort_ascending: false
       refresh_period: 86400
       lookback_timeframe: 1h
-      lookback_period: 24
+      lookback_period: 144
 
     - method: MarketCapPairList
       number_assets: 10
