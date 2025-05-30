@@ -69,6 +69,19 @@ config:
     entry: "FOK" # Fill or Kill ( all or nothinh )
     exit: "GTC" # Good till canceled (partially filling)
   exchange:
+    pair_whitelist:
+      - BTC/USDT:USDT
+      - ETH/USDT:USDT
+      - XRP/USDT:USDT
+      - DOGE/USDT:USDT
+      - ADA/USDT:USDT
+      - DOT/USDT:USDT
+      - JTO/USDT:USDT
+      - XLM/USDT:USDT
+      - IOTA/USDT:USDT
+      - ALGO/USDT:USDT
+      - GMX/USDT:USDT
+
     pair_blacklist: [
       # Emergency
       # "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
@@ -101,9 +114,9 @@ config:
     key: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P
     secret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
   pairlists:
-    # - method: StaticPairList
-    #   mode: whitelist
-    #   processing_mode: append
+    - method: StaticPairList
+      mode: whitelist
+      processing_mode: append
     # - method: RemotePairList
     #   number_assets: 19
     #   pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
@@ -113,26 +126,28 @@ config:
     #   keep_pairlist_on_failure: true
     #   read_timeout: 120
     - method: VolumePairList
+      processing_mode: append
       number_assets: 50
       sort_key: quoteVolume
       sort_ascending: false
       refresh_period: 86400
-      lookback_timeframe: 1h
+      lookback_timeframe: 1m
       lookback_period: 144
 
-    # - method: MarketCapPairList
-    #   number_assets: 10
-    #   max_rank: 100
-    #   refresh_period: 86400
-      # categories:
-      #   - proof-of-work-pow
-      #   - layer-1
-      #   - layer-2
-      #   - decentralized-exchange
-      #   - tokenized-btc
-      #   - proof-of-stake-pos
+    - method: MarketCapPairList
+      number_assets: 10
+      max_rank: 100
+      refresh_period: 86400
+      categories:
+        - proof-of-work-pow
+        - layer-1
+        - layer-2
+        - decentralized-exchange
+        - tokenized-btc
+        - proof-of-stake-pos
 
     - method: VolatilityFilter
+      processing_mode: append
       lookback_period: 7
       min_volatility: 0.005
       max_volatility: 0.8
@@ -140,6 +155,7 @@ config:
       refresh_period: 86400
 
     - method: PerformanceFilter
+      processing_mode: append
       lookback_period: 7
       min_performance: 0.01
       max_performance: 1.0
