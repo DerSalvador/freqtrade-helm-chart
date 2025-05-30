@@ -124,18 +124,18 @@ config:
       number_assets: 10
       max_rank: 100
       refresh_period: 86400
-      categories:
-        - proof-of-work-pow
-        - layer-1
-        - layer-2
-        - decentralized-exchange
-        - tokenized-btc
-        - proof-of-stake-pos
+      # categories:
+      #   - proof-of-work-pow
+      #   - layer-1
+      #   - layer-2
+      #   - decentralized-exchange
+      #   - tokenized-btc
+      #   - proof-of-stake-pos
 
     - method: VolatilityFilter
       lookback_period: 7
-      min_volatility: 0.075
-      max_volatility: 0.2
+      min_volatility: 0.005
+      max_volatility: 0.8
       allowed_assets: 10
       refresh_period: 86400
 
@@ -144,7 +144,7 @@ config:
       min_performance: 0.01
       max_performance: 1.0
       allowed_assets: 10
-      min_profit: 0.015
+      min_profit: 0.005
       refresh_period: 86400
 
     - method: ShuffleFilter
