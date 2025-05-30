@@ -120,10 +120,10 @@ config:
       lookback_timeframe: 1h
       lookback_period: 144
 
-    - method: MarketCapPairList
-      number_assets: 10
-      max_rank: 100
-      refresh_period: 86400
+    # - method: MarketCapPairList
+    #   number_assets: 10
+    #   max_rank: 100
+    #   refresh_period: 86400
       # categories:
       #   - proof-of-work-pow
       #   - layer-1
