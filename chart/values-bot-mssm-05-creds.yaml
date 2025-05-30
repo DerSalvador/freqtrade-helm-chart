@@ -21,9 +21,10 @@ configcreds:
       - name: FREQTRADE_BASE_URL
         value: http://freqtrade:&&Liz270117!!@freqtrade-clusterip:8084/
     biasversion: develop # develop
-    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-05.svc.cluster.local:8084/api/v1/profit"
-    blacklist_url: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-05.svc.cluster.local:8084/api/v1/blacklist"
-    deleteTradeUrl: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-05.svc.cluster.local:8084/api/v1/trades"
+    api_profit: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-05.svc.cluster.local:8084/api/v1/profit
+    blacklist_url: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-05.svc.cluster.local:8084/api/v1/blacklist
+    blacklist_url_delete: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-05.svc.cluster.local:8084/api/v1/blacklist?pairs_to_delete=
+    deleteTradeUrl: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-05.svc.cluster.local:8084/api/v1/trades
   trading_mode: futures
   margin_mode: isolated
   timeframe: 1m
