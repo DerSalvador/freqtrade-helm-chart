@@ -115,7 +115,7 @@ config:
     secret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
   pairlists:
     - method: VolumePairList
-      number_assets: 30
+      number_assets: 10
       sort_key: quoteVolume
       refresh_period: 86400
       shuffle: true
@@ -125,8 +125,9 @@ config:
       min_volatility: 0.05
       max_volatility: 1
       refresh_period: 86400
-    # - method: ShuffleFilter
-    #   seed: 42
+      
+    - method: ShuffleFilter
+      seed: 42
 
     # - method: StaticPairList
     #   mode: whitelist
