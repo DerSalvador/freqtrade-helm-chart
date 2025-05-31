@@ -126,7 +126,7 @@ config:
     #   keep_pairlist_on_failure: true
     #   read_timeout: 120
     - method: VolumePairList
-      processing_mode: append
+      # processing_mode: append
       number_assets: 50
       sort_key: quoteVolume
       sort_ascending: false
@@ -147,13 +147,13 @@ config:
     #   #   - tokenized-btc
     #   #   - proof-of-stake-pos
 
-    - method: VolatilityFilter
-      processing_mode: append
-      lookback_period: 7
-      min_volatility: 0.005
-      max_volatility: 0.2
-      allowed_assets: 10
-      refresh_period: 86400
+    # - method: VolatilityFilter
+    #   processing_mode: append
+    #   lookback_period: 7
+    #   min_volatility: 0.005
+    #   max_volatility: 0.2
+    #   allowed_assets: 10
+    #   refresh_period: 86400
 
     # - method: PerformanceFilter
     #   processing_mode: append
