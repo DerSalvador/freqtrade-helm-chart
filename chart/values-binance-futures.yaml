@@ -131,33 +131,34 @@ config:
       sort_key: quoteVolume
       sort_ascending: false
       refresh_period: 86400
-      lookback_timeframe: 1m
-      lookback_period: 144
+      lookback_timeframe: 1h
+      lookback_period: 72
 
     - method: MarketCapPairList
+      processing_mode: append
       number_assets: 10
-      max_rank: 100
+      max_rank: 50
       refresh_period: 86400
-      categories:
-        - proof-of-work-pow
-        - layer-1
-        - layer-2
-        - decentralized-exchange
-        - tokenized-btc
-        - proof-of-stake-pos
+      # categories:
+      #   - proof-of-work-pow
+      #   - layer-1
+      #   - layer-2
+      #   - decentralized-exchange
+      #   - tokenized-btc
+      #   - proof-of-stake-pos
 
     - method: VolatilityFilter
       processing_mode: append
       lookback_period: 7
       min_volatility: 0.005
-      max_volatility: 0.8
+      max_volatility: 0.2
       allowed_assets: 10
       refresh_period: 86400
 
     - method: PerformanceFilter
       processing_mode: append
       lookback_period: 7
-      min_performance: 0.01
+      min_performance: 0.001
       max_performance: 1.0
       allowed_assets: 10
       min_profit: 0.005
