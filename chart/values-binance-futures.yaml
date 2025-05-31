@@ -6,7 +6,7 @@ config:
   stake_amount: unlimited
   max_open_trades: 1
   minimal_roi:
-    "0": 0.2
+    "1440": -1
   timeframe: 1m
   # trailing_stop: false
   # trailing_only_offset_is_reached: false
@@ -134,18 +134,18 @@ config:
       lookback_timeframe: 1h
       lookback_period: 72
 
-    - method: MarketCapPairList
-      processing_mode: append
-      number_assets: 10
-      max_rank: 50
-      refresh_period: 86400
-      # categories:
-      #   - proof-of-work-pow
-      #   - layer-1
-      #   - layer-2
-      #   - decentralized-exchange
-      #   - tokenized-btc
-      #   - proof-of-stake-pos
+    # - method: MarketCapPairList
+    #   processing_mode: append
+    #   number_assets: 10
+    #   max_rank: 50
+    #   refresh_period: 86400
+    #   # categories:
+    #   #   - proof-of-work-pow
+    #   #   - layer-1
+    #   #   - layer-2
+    #   #   - decentralized-exchange
+    #   #   - tokenized-btc
+    #   #   - proof-of-stake-pos
 
     - method: VolatilityFilter
       processing_mode: append
@@ -155,14 +155,14 @@ config:
       allowed_assets: 10
       refresh_period: 86400
 
-    - method: PerformanceFilter
-      processing_mode: append
-      lookback_period: 7
-      min_performance: 0.001
-      max_performance: 1.0
-      allowed_assets: 10
-      min_profit: 0.005
-      refresh_period: 86400
+    # - method: PerformanceFilter
+    #   processing_mode: append
+    #   lookback_period: 7
+    #   min_performance: 0.001
+    #   max_performance: 1.0
+    #   allowed_assets: 10
+    #   min_profit: 0.005
+    #   refresh_period: 86400
 
     - method: ShuffleFilter
       seed: 44
