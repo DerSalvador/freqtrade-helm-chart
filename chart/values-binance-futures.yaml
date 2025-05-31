@@ -69,18 +69,18 @@ config:
     entry: "FOK" # Fill or Kill ( all or nothinh )
     exit: "GTC" # Good till canceled (partially filling)
   exchange:
-    pair_whitelist:
-      - BTC/USDT:USDT
-      - ETH/USDT:USDT
-      - XRP/USDT:USDT
-      - DOGE/USDT:USDT
-      - ADA/USDT:USDT
-      - DOT/USDT:USDT
-      - JTO/USDT:USDT
-      - XLM/USDT:USDT
-      - IOTA/USDT:USDT
-      - ALGO/USDT:USDT
-      - GMX/USDT:USDT
+    # pair_whitelist:
+    #   - BTC/USDT:USDT
+    #   - ETH/USDT:USDT
+    #   - XRP/USDT:USDT
+    #   - DOGE/USDT:USDT
+    #   - ADA/USDT:USDT
+    #   - DOT/USDT:USDT
+    #   - JTO/USDT:USDT
+    #   - XLM/USDT:USDT
+    #   - IOTA/USDT:USDT
+    #   - ALGO/USDT:USDT
+    #   - GMX/USDT:USDT
 
     pair_blacklist: [
       # Emergency
@@ -114,9 +114,9 @@ config:
     key: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P
     secret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
   pairlists:
-    - method: StaticPairList
-      mode: whitelist
-      processing_mode: append
+    # - method: StaticPairList
+    #   mode: whitelist
+    #   processing_mode: append
     # - method: RemotePairList
     #   number_assets: 19
     #   pairlist_url: http://filekeys.com/remotepairlist-white-futures-static.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
@@ -165,7 +165,7 @@ config:
     #   refresh_period: 86400
 
     - method: ShuffleFilter
-      seed: 44
+      seed: 42
 
   freqai:
     enabled: false
