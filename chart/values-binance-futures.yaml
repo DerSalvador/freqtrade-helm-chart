@@ -115,15 +115,15 @@ config:
     secret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
   pairlists:
     - method: VolumePairList
-      number_assets: 50
+      number_assets: 5
       sort_key: quoteVolume
       refresh_period: 86400
       shuffle: true
 
     - method: VolatilityFilter
-      lookback_days: 50
-      min_volatility: 0.08
-      max_volatility: 8
+      lookback_days: 5
+      min_volatility: 0.05
+      max_volatility: 5
       refresh_period: 86400
 
     - method: ShuffleFilter
