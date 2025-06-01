@@ -37,26 +37,26 @@ configcreds:
   # minimal_roi:
   #   "0": 0.20
   bot_name: bot-ananda
-  exchange:
-    pair_blacklist:
-      - LINK/USDT:USDT
-    # pair_whitelist:
-        # - JTO/USDT:USDT
-        # - SOL/USDT:USDT
-        # - DOGE/USDT:USDT
-        # - DOT/USDT:USDT
-        # - ETH/USDT:USDT
-        # # - XRP/USDT:USDT
-        # # - XLM/USDT:USDT
-        # # - XDC/USDT:USDT
-        # # - IOTA/USDT:USDT
-        # - ALGO/USDT:USDT
-        # - BTC/USDT:USDT
-        # # - BCH/USDT:USDT
-        # # - MATIC/USDT:USDT
-        # # - GMX/USDT:USDT
-        # - ADA/USDT:USDT      
-    name: binance
+  # exchange:
+  #   pair_blacklist:
+  #     - LINK/USDT:USDT
+  #   # pair_whitelist:
+  #       # - JTO/USDT:USDT
+  #       # - SOL/USDT:USDT
+  #       # - DOGE/USDT:USDT
+  #       # - DOT/USDT:USDT
+  #       # - ETH/USDT:USDT
+  #       # # - XRP/USDT:USDT
+  #       # # - XLM/USDT:USDT
+  #       # # - XDC/USDT:USDT
+  #       # # - IOTA/USDT:USDT
+  #       # - ALGO/USDT:USDT
+  #       # - BTC/USDT:USDT
+  #       # # - BCH/USDT:USDT
+  #       # # - MATIC/USDT:USDT
+  #       # # - GMX/USDT:USDT
+  #       # - ADA/USDT:USDT      
+  #   name: binance
 
   # pairlists:
   #   # - method: StaticPairList
