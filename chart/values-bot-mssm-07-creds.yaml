@@ -54,8 +54,8 @@ configcreds:
     #   - IOTA/USDT:USDT
     #   - ALGO/USDT:USDT
     #   - GMX/USDT:USDT
-    pair_blacklist:
-      - LINK/USDT:USDT
+    # pair_blacklist:
+    #   - LINK/USDT:USDT
     name: binance
 
   # pairlists:

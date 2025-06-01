@@ -38,8 +38,8 @@ configcreds:
   #   "0": 0.20
   bot_name: bot-mssm-06
   exchange:
-    pair_blacklist:
-      - LINK/USDT:USDT
+    # pair_blacklist:
+    #   - LINK/USDT:USDT
     # pair_whitelist:
     #   - BTC/USDT:USDT
     #   # - XLM/USDT:USDT
