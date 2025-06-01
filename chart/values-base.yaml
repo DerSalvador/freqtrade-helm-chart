@@ -4,20 +4,20 @@ kubernetes:
   copyContainer: true
 
 configcreds:
-  strategy_version: "2025-06-01-15:46"
+  strategy_version: "2025-06-01-15:53"
   imagePullSecrets_github:
     name: github
     username: x1mroepke
     password: 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
     email: michael.santana.mellouk@dersalvador.com
 
-  exchange:
-    pair_blacklist:
-     # - XLM/USDT:USDT
-     # - ADA/USDT:USDT
-     # - DOGE/USDT:USDT
-      - LINK/USDT:USDT
-     #  - GMX/USDT:USDT
+  # exchange:
+  #   pair_blacklist:
+  #    # - XLM/USDT:USDT
+  #    # - ADA/USDT:USDT
+  #    # - DOGE/USDT:USDT
+  #     - LINK/USDT:USDT
+  #    #  - GMX/USDT:USDT
   edge:
     enabled: false
     process_throttle_secs: 3600
