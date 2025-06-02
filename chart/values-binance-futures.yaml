@@ -4,7 +4,7 @@ config:
   dry_run: true
   dry_run_wallet: 500000
   stake_amount: unlimited
-  max_open_trades: 1
+  max_open_trades: 100
   minimal_roi:
     "1440": -1
   timeframe: 1m
