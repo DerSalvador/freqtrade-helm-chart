@@ -138,8 +138,8 @@ config:
     #   max_volatility: 5
     #   refresh_period: 86400
 
-    - method: ShuffleFilter
-      seed: 42
+    # - method: ShuffleFilter
+    #   seed: 42
 
     # - method: StaticPairList
     #   mode: whitelist
