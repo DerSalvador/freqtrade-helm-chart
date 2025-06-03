@@ -113,19 +113,19 @@ config:
     name: binance  
     key: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P
     secret: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
-  pairlists:
-    - method: MarketCapPairList
-      processing_mode: append
-      number_assets: 10
-      max_rank: 50
-      refresh_period: 86400
-      categories:
-        - proof-of-work-pow
-        - layer-1
-        - layer-2
-        - decentralized-exchange
-        - tokenized-btc
-        - proof-of-stake-pos
+  # pairlists:
+  #   - method: MarketCapPairList
+  #     processing_mode: append
+  #     number_assets: 10
+  #     max_rank: 50
+  #     refresh_period: 86400
+  #     categories:
+  #       - proof-of-work-pow
+  #       - layer-1
+  #       - layer-2
+  #       - decentralized-exchange
+  #       - tokenized-btc
+  #       - proof-of-stake-pos
     # - method: VolumePairList
     #   number_assets: 5
     #   sort_key: quoteVolume

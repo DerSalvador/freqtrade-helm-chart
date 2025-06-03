@@ -26,17 +26,17 @@ configcreds:
     deleteTradeUrl: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-09.svc.cluster.local:8084/api/v1/trades"
   bot_name: bot-mssm-09
   exchange:
-    pair_blacklist:
-      - LINK/USDT:USDT
+    pair_whitelist:
+      - SUI/USDT:USDT
     name: binance
   timeframe: 1m
   dry_run: false
   can_short: True
 
-  # pairlists:
-  # #   - method: StaticPairList
-  # #     mode: whitelist
-  # #     processing_mode: append
+  pairlists:
+    - method: StaticPairList
+      mode: whitelist
+      processing_mode: append
   # - method: RemotePairList
   #   number_assets: 19
   #   pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-9.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0

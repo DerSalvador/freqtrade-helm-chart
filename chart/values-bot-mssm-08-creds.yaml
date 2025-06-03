@@ -38,15 +38,23 @@ configcreds:
   exchange:
     # name: binance
     # key: UYjkWFpAxfjfOnKjtEXOAj6RT5sirlBjl2fbZkJUYkwyChvxa0cOAtd7A5LrnSET
-    # secret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8        
-    pair_blacklist:
-      - LINK/USDT:USDT
+    # secret: zTXCHpSQWnzoINkljUamzJx3aYyFr4Js42lCiGe1XJG0Gxb9vq1MsG3Zo5GL42P8   
+    # , , , ,     
+    pair_whitelist:
+      - ADA/USDT:USDT
+    # pair_blacklist:
+    #   - LINK/USDT:USDT
     name: binance
 
-  # pairlists:
-  # #   - method: StaticPairList
-  # #     mode: whitelist
-  # #     processing_mode: append
+  pairlists:
+    - method: StaticPairList
+      mode: whitelist
+      processing_mode: append
+
+  pairlists:
+    - method: StaticPairList
+      mode: whitelist
+      processing_mode: append
   # - method: RemotePairList
   #   number_assets: 19
   #   pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-8.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0

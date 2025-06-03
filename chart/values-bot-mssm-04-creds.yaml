@@ -37,19 +37,17 @@ configcreds:
   # minimal_roi:
   #   "0": 0.20
   bot_name: bot-mssm-04
-  # exchange:
-  #   # pair_blacklist:
-  #   #   - LINK/USDT:USDT
-  #   # pair_whitelist:
-  #     # - BTC/USDT:USDT
-  #     # - GMX/USDT:USDT
-  #     # - SOL/USDT:USDT
-  #   name: binance
+  exchange:
+    # pair_blacklist:
+    #   - LINK/USDT:USDT
+    pair_whitelist:
+      - ETH/USDT:USDT
+    name: binance
 
-  # pairlists:
-  #   # - method: StaticPairList
-  #   #   mode: whitelist
-  #   #   processing_mode: append
+  pairlists:
+    - method: StaticPairList
+      mode: whitelist
+      processing_mode: append
   #   - method: RemotePairList
   #     number_assets: 19
   #     pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-4.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
