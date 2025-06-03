@@ -45,12 +45,6 @@ configcreds:
     # pair_blacklist:
     #   - LINK/USDT:USDT
     name: binance
-
-  pairlists:
-    - method: StaticPairList
-      mode: whitelist
-      processing_mode: append
-
   pairlists:
     - method: StaticPairList
       mode: whitelist
