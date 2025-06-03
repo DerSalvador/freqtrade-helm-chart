@@ -4,7 +4,7 @@ kubernetes:
   copyContainer: true
 
 configcreds:
-  strategy_version: "2025-06-03-13:01"
+  strategy_version: "2025-06-03-13:53"
   imagePullSecrets_github:
     name: github
     username: x1mroepke
@@ -13,6 +13,7 @@ configcreds:
 
   # exchange:
   #   pair_blacklist:
+  #   # SUI/USDT:USDT, BCH/USDT:USDT, DOGE/USDT:USDT, TRX/USDT:USDT, HYPE/USDT:USDT, BTC/USDT:USDT, SOL/USDT:USDT, ETH/USDT:USDT, AVAX/USDT:USDT, ADA/USDT:USDT
   #    # - XLM/USDT:USDT
   #    # - ADA/USDT:USDT
   #    # - DOGE/USDT:USDT
