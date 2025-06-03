@@ -24,6 +24,7 @@ configcreds:
     api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-09.svc.cluster.local:8084/api/v1/profit"
     blacklist_url: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-09.svc.cluster.local:8084/api/v1/blacklist"
     deleteTradeUrl: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-09.svc.cluster.local:8084/api/v1/trades"
+    whitelist_index: 3
   bot_name: bot-mssm-09
   exchange:
     pair_whitelist:

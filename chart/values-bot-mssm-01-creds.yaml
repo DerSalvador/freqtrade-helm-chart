@@ -25,6 +25,7 @@ configcreds:
     blacklist_url: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-01.svc.cluster.local:8084/api/v1/blacklist
     blacklist_url_delete: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-01.svc.cluster.local:8084/api/v1/blacklist?pairs_to_delete=
     deleteTradeUrl: http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-01.svc.cluster.local:8084/api/v1/trades
+    whitelist_index: 3
 
   trading_mode: futures
   margin_mode: isolated
