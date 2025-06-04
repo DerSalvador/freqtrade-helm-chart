@@ -31,7 +31,7 @@ configcreds:
       - SUI/USDT:USDT
     name: binance
   timeframe: 1m
-  dry_run: false
+  dry_run: true
   can_short: True
 
   pairlists:
