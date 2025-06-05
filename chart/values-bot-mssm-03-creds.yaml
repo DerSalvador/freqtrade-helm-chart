@@ -41,14 +41,14 @@ configcreds:
   # minimal_roi:
   #   "0": 0.20
   bot_name: bot-mssm-03
-  # exchange:
-  #   # pair_blacklist:
-  #   #   - LINK/USDT:USDT
-  #   # pair_whitelist:
-  #   #   - BTC/USDT:USDT
-  #   #   - ALGO/USDT:USDT
-  #   #   - SOL/USDT:USDT
-  #   name: binance
+  exchange:
+    # pair_blacklist:
+    #   - LINK/USDT:USDT
+    pair_whitelist:
+      - BTC/USDT:USDT
+      - ALGO/USDT:USDT
+      - SOL/USDT:USDT
+    name: binance
 
   # pairlists:
   #   # - method: StaticPairList
