@@ -307,7 +307,7 @@ image:
   tag: 2025.5
 
 bot:
-  debug: true
+  debug: false
   debuglevel: -vvvv
   enabled: true
   pvc_size: 12Gi
