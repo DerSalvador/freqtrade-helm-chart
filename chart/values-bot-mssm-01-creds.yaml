@@ -52,6 +52,19 @@ configcreds:
     - method: StaticPairList
       mode: whitelist
       processing_mode: append
+    - method: MarketCapPairList
+      processing_mode: append
+      number_assets: 10
+      max_rank: 50
+      refresh_period: 86400
+      categories:
+        - proof-of-work-pow
+        - layer-1
+        - layer-2
+        - decentralized-exchange
+        - tokenized-btc
+        - proof-of-stake-pos
+
   #   - method: RemotePairList
   #     number_assets: 19
   #     pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-1.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
