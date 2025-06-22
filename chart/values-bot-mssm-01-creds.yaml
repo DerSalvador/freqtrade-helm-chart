@@ -40,8 +40,8 @@ configcreds:
   #   "0": 0.20
   bot_name: bot-mssm-01
   exchange:
-    pair_whitelist:
-      - HYPE/USDT:USDT
+    # pair_whitelist:
+    #   - HYPE/USDT:USDT
     # pair_whitelist:
     #   - BTC/USDT:USDT
     #   - ETH/USDT:USDT
@@ -49,10 +49,11 @@ configcreds:
     name: binance
 
   pairlists:
-    - method: StaticPairList
-      mode: whitelist
-      processing_mode: append
+    # - method: StaticPairList
+    #   mode: whitelist
+    #   processing_mode: append
     - method: MarketCapPairList
+      mode: whitelist
       processing_mode: append
       number_assets: 10
       max_rank: 50
