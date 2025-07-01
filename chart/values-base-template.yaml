@@ -5,6 +5,7 @@ kubernetes:
 
 configcreds:
   strategy_version: "bot_version"
+  available_capital: 100
   imagePullSecrets_github:
     name: github
     username: x1mroepke
