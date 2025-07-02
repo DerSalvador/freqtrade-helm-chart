@@ -4,7 +4,7 @@ kubernetes:
   copyContainer: true
 
 configcreds:
-  strategy_version: "2025-07-02-12:45"
+  strategy_version: "2025-07-02-13:50"
   available_capital: 200
   imagePullSecrets_github:
     name: github
