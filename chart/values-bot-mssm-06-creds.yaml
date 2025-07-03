@@ -63,6 +63,6 @@ configcreds:
     chat_id: "1759706931"
 bot:
   strategy_name: AnandaStrategySplit
-  debug: true 
+  debug: false 
   debuglevel: -v
 ...
