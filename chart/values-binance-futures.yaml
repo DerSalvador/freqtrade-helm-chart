@@ -7,6 +7,9 @@ config:
   max_open_trades: 100
   minimal_roi:
     "1440": -1
+    "0": 0.05
+    "30": 0.03
+    "60": 0.01
   timeframe: 1m
   # trailing_stop: false
   # trailing_only_offset_is_reached: false
