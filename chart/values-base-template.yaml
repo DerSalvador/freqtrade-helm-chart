@@ -9,7 +9,7 @@ configcreds:
   imagePullSecrets_github:
     name: github
     username: x1mroepke
-    password: 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
+    password: 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 # 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
     email: michael.santana.mellouk@dersalvador.com
 
   # exchange:

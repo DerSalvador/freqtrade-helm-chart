@@ -1,0 +1,317 @@
+# ============================================================================
+# Kubernetes Service Configuration Examples
+# ============================================================================
+# This file demonstrates different service configuration options for 
+# exposing Freqtrade bot deployments
+# ============================================================================
+
+# Example 1: ClusterIP Only (Internal Access)
+# ============================================================================
+# Use this for bots that only need to communicate with other bots in the cluster
+# or don't need external access
+---
+# config:
+#   api_server:
+#     enabled: true
+#     listen_ip_address: 0.0.0.0
+#     listen_port: 8084
+#     username: freqtrade
+#     password: "secure_password_here"
+#
+# # No kubernetes or ingress section needed
+# # Service created: freqtrade-clusterip-<namespace> (ClusterIP)
+# # Access: http://freqtrade-clusterip-<namespace>.<namespace>.svc.cluster.local:8084
+
+# Example 2: NodePort Service (Direct External Access)
+# ============================================================================
+# Use this for development, testing, or when you don't have a LoadBalancer
+---
+# config:
+#   api_server:
+#     enabled: true
+#     listen_ip_address: 0.0.0.0
+#     listen_port: 8084
+#     username: freqtrade
+#     password: "secure_password_here"
+#
+# kubernetes:
+#   nodePort: 32084  # Must be unique and in range 30000-32767
+#
+# # Services created:
+# # 1. freqtrade-clusterip-<namespace> (ClusterIP)
+# # 2. freqtrade-nodeport-<namespace> (NodePort: 32084)
+# #
+# # Access:
+# # - Internal: http://freqtrade-clusterip-<namespace>.<namespace>.svc.cluster.local:8084
+# # - External: http://<node-ip>:32084
+
+# Example 3: LoadBalancer Service (Cloud-Native External Access)
+# ============================================================================
+# Use this for production deployments on cloud providers (AWS, GCP, Azure, etc.)
+---
+# config:
+#   api_server:
+#     enabled: true
+#     listen_ip_address: 0.0.0.0
+#     listen_port: 8084
+#     username: freqtrade
+#     password: "secure_password_here"
+#
+# ingress:
+#   enabled: true
+#   type: LoadBalancer
+#   annotations: {}
+#     # AWS Examples:
+#     # service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+#     # service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
+#     # service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+#     #
+#     # GCP Examples:
+#     # cloud.google.com/load-balancer-type: "Internal"
+#     # networking.gke.io/load-balancer-type: "Internal"
+#     #
+#     # Azure Examples:
+#     # service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+#     # service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "subnet-name"
+#   loadBalancerIP: ""  # Optional: specify a static IP address
+#
+# # Services created:
+# # 1. freqtrade-clusterip-<namespace> (ClusterIP)
+# # 2. freqtrade-loadbalancer-<namespace> (LoadBalancer)
+# #
+# # Access:
+# # - Internal: http://freqtrade-clusterip-<namespace>.<namespace>.svc.cluster.local:8084
+# # - External: http://<load-balancer-ip>:8084
+
+# Example 4: Multi-Bot Setup with NodePort
+# ============================================================================
+# Configuration for multiple bots that need to communicate with each other
+# and also be accessible externally
+
+## Bot 1: Spot Trading Bot (bot-ssc-01)
+---
+# configcreds:
+#   bot_name: bot-ssc-01
+#   trading_mode: spot
+#   exchange:
+#     name: binance
+#     key: "your_api_key"
+#     secret: "your_api_secret"
+#   telegram:
+#     enabled: true
+#     token: "your_telegram_token"
+#     chat_id: "your_chat_id"
+#
+# config:
+#   api_server:
+#     enabled: true
+#     listen_ip_address: 0.0.0.0
+#     listen_port: 8084
+#     username: freqtrade
+#     password: "&&Liz270117!!"
+#
+# kubernetes:
+#   nodePort: 32381
+#
+# bot:
+#   strategy_name: LizStrategy
+
+## Bot 2: Futures Trading Bot with Hedging (bot-ssc-02)
+---
+# configcreds:
+#   bot_name: bot-ssc-02
+#   trading_mode: futures
+#   margin_mode: isolated
+#   dersalvador:
+#     hedging:
+#       role: hedger
+#       # Reference to the spot bot using ClusterIP service
+#       spot_bot_api_status: "http://freqtrade:&&Liz270117!!@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/status"
+#       spot_bot_api_forceenter: "http://freqtrade:&&Liz270117!!@freqtrade-clusterip-bot-ssc-01.bot-ssc-01.svc.cluster.local:8084/api/v1/forceenter"
+#   exchange:
+#     name: binance
+#     key: "your_futures_api_key"
+#     secret: "your_futures_api_secret"
+#   telegram:
+#     enabled: true
+#     token: "your_telegram_token"
+#     chat_id: "your_chat_id"
+#
+# config:
+#   api_server:
+#     enabled: true
+#     listen_ip_address: 0.0.0.0
+#     listen_port: 8084
+#     username: freqtrade
+#     password: "&&Liz270117!!"
+#
+# kubernetes:
+#   nodePort: 32382
+#
+# bot:
+#   strategy_name: LizStrategy
+
+# Example 5: Production Multi-Bot with LoadBalancer
+# ============================================================================
+## Strategy Bot 1: MultiMetricStrategy
+---
+# configcreds:
+#   bot_name: multimetricstrategy
+#   can_short: true
+#   dry_run: false  # Production
+#   dry_run_wallet: 100000
+#   exchange:
+#     name: binance
+#     key: "your_api_key"
+#     secret: "your_api_secret"
+#     pair_whitelist:
+#       - BTC/USDT:USDT
+#       - ETH/USDT:USDT
+#   trading_mode: futures
+#   margin_mode: isolated
+#   strategy: MultiMetricStrategy
+#   telegram:
+#     enabled: true
+#     token: "your_telegram_token"
+#     chat_id: "your_chat_id"
+#
+# config:
+#   api_server:
+#     enabled: true
+#     listen_ip_address: 0.0.0.0
+#     listen_port: 8084
+#     username: freqtrade
+#     password: "production_secure_password"
+#
+# ingress:
+#   enabled: true
+#   type: LoadBalancer
+#   annotations:
+#     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+#     service.beta.kubernetes.io/aws-load-balancer-internal: "true"  # Internal only
+#   loadBalancerIP: "10.0.1.100"  # Private IP in VPC
+#
+# # Also enable NodePort for direct node access if needed
+# kubernetes:
+#   nodePort: 32392
+#
+# bot:
+#   strategy_name: MultiMetricStrategy
+
+# Example 6: Development Bot (All Access Methods)
+# ============================================================================
+# Enable all service types for maximum flexibility during development
+---
+# configcreds:
+#   bot_name: dev-test-bot
+#   dry_run: true
+#   dry_run_wallet: 50000
+#   exchange:
+#     name: binance
+#     pair_whitelist:
+#       - BTC/USDT:USDT
+#   trading_mode: futures
+#
+# config:
+#   api_server:
+#     enabled: true
+#     listen_ip_address: 0.0.0.0
+#     listen_port: 8084
+#     username: freqtrade
+#     password: "dev_password"
+#
+# # Enable both NodePort and LoadBalancer
+# kubernetes:
+#   nodePort: 32999
+#
+# ingress:
+#   enabled: true
+#   type: LoadBalancer
+#
+# bot:
+#   strategy_name: TestStrategy
+#   debug: true
+#   debuglevel: -vvvv
+
+# ============================================================================
+# Port Management Guidelines
+# ============================================================================
+# 
+# NodePort Range: 30000-32767 (Kubernetes default)
+# 
+# Recommended Port Allocation:
+# - 32000-32099: Reserved for system services
+# - 32100-32199: Production bots
+# - 32200-32299: Staging bots
+# - 32300-32399: Development/testing bots
+# - 32400-32499: Monitoring/observability
+# - 32500-32999: Available for special use cases
+#
+# Current Allocations:
+# - 32381: bot-ssc-01 (spot trading)
+# - 32382: bot-ssc-02 (futures hedging)
+# - 32372: bot-mssm-02 (MultiMetricStrategyHF)
+# - 32392: multimetricstrategy (MultiMetricStrategy)
+#
+# ============================================================================
+
+# ============================================================================
+# Service Selection Decision Tree
+# ============================================================================
+#
+# Question 1: Do you need external access to the bot API?
+#   NO  -> Use ClusterIP only (default, no additional config needed)
+#   YES -> Go to Question 2
+#
+# Question 2: Are you running on a cloud provider with LoadBalancer support?
+#   NO  -> Use NodePort
+#          Set kubernetes.nodePort: <port>
+#   YES -> Go to Question 3
+#
+# Question 3: Do you need production-grade external access?
+#   YES -> Use LoadBalancer
+#          Set ingress.enabled: true and ingress.type: LoadBalancer
+#   NO  -> Use NodePort for simpler setup
+#          Set kubernetes.nodePort: <port>
+#
+# Question 4: Do you need both direct node access AND load balanced access?
+#   YES -> Enable both NodePort and LoadBalancer
+#          Set both kubernetes.nodePort and ingress sections
+#   NO  -> Choose one based on your primary use case
+#
+# ============================================================================
+
+# ============================================================================
+# Common Use Cases Summary
+# ============================================================================
+#
+# 1. Inter-bot communication only:
+#    - ClusterIP (default, always created)
+#    - No additional configuration needed
+#
+# 2. Development/Testing with external access:
+#    - ClusterIP + NodePort
+#    - Set kubernetes.nodePort
+#
+# 3. Production on cloud (AWS/GCP/Azure):
+#    - ClusterIP + LoadBalancer
+#    - Set ingress.enabled: true and ingress.type: LoadBalancer
+#
+# 4. Production on-premises/bare-metal:
+#    - ClusterIP + NodePort
+#    - Set kubernetes.nodePort
+#    - Consider using MetalLB for LoadBalancer support
+#
+# 5. High-availability production:
+#    - ClusterIP + LoadBalancer + NodePort (backup access)
+#    - Set both kubernetes.nodePort and ingress sections
+#    - Use LoadBalancer with health checks
+#
+# 6. Multi-region deployment:
+#    - ClusterIP for intra-cluster
+#    - LoadBalancer with cross-region annotations
+#    - Consider service mesh (Istio/Linkerd) for advanced routing
+#
+# ============================================================================
+
+

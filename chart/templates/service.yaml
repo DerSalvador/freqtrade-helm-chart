@@ -1,28 +1,69 @@
+---
+# Main ClusterIP Service for internal cluster communication
 apiVersion: v1
 kind: Service
 metadata:
-  name: freqtrade-clusterip
+  name: freqtrade-clusterip-{{ .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
   labels:
     app: freqtrade-clusterip-{{ .Release.Namespace }}
+    service-type: api
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-  - protocol: TCP
+  - name: api
+    protocol: TCP
     port: {{ .Values.config.api_server.listen_port }}
     targetPort: api
   selector:
     app: freqtrade-{{ .Release.Namespace }}
-# ---
-# kind: Service
-# metadata:
-#   name: freqtrade-clusterip-bias
-#   labels:
-#     app: freqtrade-clusterip-bias
-# spec:
-#   type: ClusterIP
-#   ports:
-#   - protocol: TCP
-#     port: {{ .Values.config.api_server.listen_port }}
-#     targetPort: api-bias
-#   selector:
-#     app: freqtrade-bias
+---
+{{- if and .Values.kubernetes (hasKey .Values.kubernetes "nodePort") }}
+# NodePort Service for external access
+apiVersion: v1
+kind: Service
+metadata:
+  name: freqtrade-nodeport-{{ .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: freqtrade-nodeport-{{ .Release.Namespace }}
+    service-type: external
+spec:
+  type: NodePort
+  ports:
+  - name: api
+    protocol: TCP
+    port: {{ .Values.config.api_server.listen_port }}
+    targetPort: api
+    nodePort: {{ .Values.kubernetes.nodePort }}
+  selector:
+    app: freqtrade-{{ .Release.Namespace }}
+{{- end }}
+---
+{{- if and .Values.ingress.enabled (eq .Values.ingress.type "LoadBalancer") }}
+# LoadBalancer Service for external access (alternative to NodePort)
+apiVersion: v1
+kind: Service
+metadata:
+  name: freqtrade-loadbalancer-{{ .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: freqtrade-loadbalancer-{{ .Release.Namespace }}
+    service-type: loadbalancer
+  {{- if .Values.ingress.annotations }}
+  annotations:
+{{ toYaml .Values.ingress.annotations | indent 4 }}
+  {{- end }}
+spec:
+  type: LoadBalancer
+  ports:
+  - name: api
+    protocol: TCP
+    port: {{ .Values.config.api_server.listen_port }}
+    targetPort: api
+  selector:
+    app: freqtrade-{{ .Release.Namespace }}
+  {{- if .Values.ingress.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.ingress.loadBalancerIP }}
+  {{- end }}
+{{- end }}

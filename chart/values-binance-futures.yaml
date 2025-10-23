@@ -7,9 +7,12 @@ config:
   max_open_trades: 100
   minimal_roi:
     "1440": -1
-    "0": 0.05
-    "30": 0.03
-    "60": 0.01
+    "120": 0.001
+    "0": 0.015   # 1.5% instant profit
+    "5": 0.010   # 1% after 5 minutes
+    "15": 0.007  # 0.7% after 15 minutes
+    "30": 0.005  # 0.5% after 30 minutes
+    "60": 0.003   # 0.3% after 1 hour
   timeframe: 1m
   # trailing_stop: false
   # trailing_only_offset_is_reached: false
@@ -307,7 +310,7 @@ config:
 image:
   base: freqtradeorg/freqtrade # docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade
   # tag: binzrl_multi-arch-1 # 1adeb1ad7ce401700f1da0ab5a158d34c01c9ea185a51f56461eae38170bb1f7 # e7031abd16e0eef1ea8d9fd49e5ba932c0f4802ff047b0db28964412cb97df6f # d9008638d57857a8ca0c0dc7f3ba60c98b04655a3ceeb156520a0eb521a0d663 # df15774d4422dde9ad25e779402cb92631046a76cb24ea4f37e45036ffc01007 # 2023.12_freqaitorch as base image
-  tag: 2025.5
+  tag: stable  # Updated from 2025.5 - always uses latest stable release
 
 bot:
   debug: false
@@ -331,7 +334,20 @@ backtesting:
     pvc_size: 1Gi
 
 ingress:
-  enabled: false
+  enabled: true
+  type: LoadBalancer  # Options: LoadBalancer, NodePort, ClusterIP
+  annotations: {}
+  # Example annotations for cloud providers:
+  # annotations:
+  #  cloud.google.com/load-balancer-type: "Internal"
+  #  networking.gke.io/load-balancer-type: "Internal"
+  #   service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+  #   service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+  loadBalancerIP: ""  # Optional: specify a static IP
+
+kubernetes:
+  # nodePort: 32084  # Optional: Uncomment to enable NodePort service (range: 30000-32767)
+  # This allows external access to the bot's API on <NodeIP>:<nodePort>
 
 create_config_configmap: true
 create_strategies_configmap: true

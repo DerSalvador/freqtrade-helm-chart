@@ -39,16 +39,30 @@ configcreds:
   #   "0": 0.20
   bot_name: bot-mssm-04
   exchange:
-    # pair_blacklist:
-    #   - LINK/USDT:USDT
-    pair_whitelist:
-      - AVAX/USDT:USDT
+    pair_blacklist:
+      - USDC/USDT:USDT
+      - (BNB)/.*
+      - .*(_PREMIUM|BEAR|BULL|DOWN|UP|HALF|HEDGE|[234][SL])/.*
     name: binance
 
   pairlists:
-    - method: StaticPairList
-      mode: whitelist
-      processing_mode: append
+    - method: VolumePairList
+      number_assets: 10
+      sort_key: quoteVolume
+      min_value: 0
+      refresh_period: 1800
+      lookback_days: 1
+    - method: AgeFilter
+      min_days_listed: 10
+    - method: PrecisionFilter
+    - method: PriceFilter
+      low_price_ratio: 0.01
+    - method: SpreadFilter
+      max_spread_ratio: 0.005
+    - method: RangeStabilityFilter
+      lookback_days: 3
+      min_rate_of_change: 0.01
+      refresh_period: 1800
     #   - method: RemotePairList
     #     number_assets: 19
     #     pairlist_url: http://filekeys.com/remotepairlist-white-futures-static-4.json # http://filekeys.com/remotepairlist-white-futures.json   # https://remotepairlist.com?q=6ed672791d1040c0
