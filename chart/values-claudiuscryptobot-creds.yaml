@@ -31,15 +31,16 @@ configcreds:
     force_enter_url: http://localhost:8084/api/v1/forceenter
     whitelist_index: 3
     force_enter_ip: 104.155.119.20
-  timeframe: 5m
+  timeframe: 15m
   trading_mode: futures
   margin_mode: isolated
   max_open_trades: 5
   stake_currency: USDT
-  stake_amount: unlimited
+  stake_amount: 50
+  available_capital: 500  
   tradable_balance_ratio: 0.99
   fiat_display_currency: USD
-  dry_run: true
+  dry_run: false
   dry_run_wallet: 1000
   cancel_open_orders_on_exit: true
   entry_pricing:
@@ -75,8 +76,6 @@ configcreds:
       - MATIC/USDT:USDT
       - LINK/USDT:USDT
       - UNI/USDT:USDT
-    pair_blacklist:
-      - BNB/.*
   pairlists:
     - method: StaticPairList
   telegram:
@@ -113,6 +112,6 @@ configcreds:
     process_throttle_secs: 5
 
 bot:
-  strategy_name: ClaudiusCryptoStrategy
+  strategy_name: ClaudiusCryptoStrategyEnhanced
   debug: false
   debuglevel: -vvvv

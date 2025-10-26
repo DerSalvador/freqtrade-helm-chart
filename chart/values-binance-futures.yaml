@@ -1,23 +1,26 @@
 ---
 config:
-  stoploss: -0.99
+  can_short: true
+  stoploss: -0.02  # HFT Optimized: 2% tight stop loss
   dry_run: true
   dry_run_wallet: 500000
   stake_amount: unlimited
   max_open_trades: 100
   minimal_roi:
     "1440": -1
-    "120": 0.001
-    "0": 0.015   # 1.5% instant profit
-    "5": 0.010   # 1% after 5 minutes
-    "15": 0.007  # 0.7% after 15 minutes
-    "30": 0.005  # 0.5% after 30 minutes
-    "60": 0.003   # 0.3% after 1 hour
+    "0": 0.015   # 1.5% instant profit - above trailing activation
+    "30": 0.012  # 1.2% after 30 minutes
+    "60": 0.010  # 1.0% after 60 minutes
+    "120": 0.008 # 0.8% after 2 hours - matches trailing offset
   timeframe: 1m
-  # trailing_stop: false
-  # trailing_only_offset_is_reached: false
-  # trailing_stop_positive: 0.09
-  # trailing_stop_positive_offset: 0.1
+  
+  # Trailing Stop Configuration - HFT OPTIMIZED
+  # Overrides strategy-level trailing stop settings
+  trailing_stop: true
+  trailing_stop_positive: 0.005        # HFT: Lock in 0.5% profit once offset is reached
+  trailing_stop_positive_offset: 0.008  # HFT: Activate trailing after 0.8% profit
+  trailing_only_offset_is_reached: true  # Only trail after offset (0.8%) is reached
+  
   use_custom_stoploss: true
   has_downtime_protection: false
   # Run "populate_indicators()" only for new candle.
@@ -56,15 +59,15 @@ config:
   max_entry_position_adjustment: 0
   order_types:
     emergency_exit: "market"
-    entry: "market"
+    entry: "limit"  # HFT: Changed from "market" for better fills
     force_entry: "market"
     force_exit: "market"
     exit: limit
     stoploss: "limit"
-    stoploss_on_exchange: false
-    # stoploss_on_exchange_interval: 5
-    # stoploss_price_type: last
-    # stoploss_on_exchange_limit_ratio: 0.995
+    # stoploss_on_exchange: true  # HFT: Enable direct exchange stop loss orders ✅
+    # stoploss_on_exchange_interval: 30  # HFT: Update every 30 seconds
+    # stoploss_price_type: last  # HFT: Use last price for futures
+    # stoploss_on_exchange_limit_ratio: 0.99  # HFT: Limit price = stop * 0.99
   # margin_mode: ""
   unfilledtimeout:
     entry: 10
@@ -88,22 +91,22 @@ config:
     #   - ALGO/USDT:USDT
     #   - GMX/USDT:USDT
 
-    # pair_blacklist: [
-    #   # Emergency
-    #   # "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
-    #   # Exchange
-    #   "(BNB)/.*:.*",
-    #   # Leverage
-    #   ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*:.*",
-    #   # Fiat
-    #   "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*:.*",
-    #   # Stable
-    #   "(FDUSD|BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|VAI|UST|USTC|AUSD)/.*:.*",
-    #   # FAN
-    #   "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CHZ|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*:.*",
-    #   # Others
-    #   "(LINK|1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|LUNA|BTS|QKC|COS|ACA|FTT|SRM|YFII|SNM|BNX|ANC|AION|MIR|BNX|STG|HNT|WABI|QLC|NEBL|AUTO|VGX|PEPE|VITE|DREP|JASMY|PNT|PERL|AMB|OAX|LOOM|BTS|RAD|ID|PNT|NULS|MLN|MEME|TOKEN|TOMO|BTS|PERL|WTC)/.*:.*"
-    # ]
+    pair_blacklist: [
+      # Emergency
+      # "1000FLOKI/USDT:USDT","AR/USDT:USDT","ATOM/USDT:USDT","AXL/USDT:USDT","BEAMX/USDT:USDT","BTC/USDT:USDT","ETH/USDT:USDT","IOTA/USDT:USDT","LTC/USDT:USDT","MKR/USDT:USDT","PENDLE/USDT:USDT","RNDR/USDT:USDT","SAGA/USDT:USDT","TON/USDT:USDT","WLD/USDT:USDT",
+      # Exchange
+      "(BNB)/.*:.*",
+      # Leverage
+      ".*(_PREMIUM|BEAR|BULL|HALF|HEDGE|UP|DOWN|[1235][SL])/.*:.*",
+      # Fiat
+      "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*:.*",
+      # Stable
+      "(TRX|FDUSD|BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|VAI|UST|USTC|AUSD)/.*:.*",
+      # FAN
+      "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CHZ|CITY|FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*:.*",
+      # Others
+      "(LINK|1EARTH|ILA|BOBA|CTXC|CWAR|HBAR|NMR|OMG|ONG|ARDR|DMTR|MLS|TORN|LUNA|BTS|QKC|COS|ACA|FTT|SRM|YFII|SNM|BNX|ANC|AION|MIR|BNX|STG|HNT|WABI|QLC|NEBL|AUTO|VGX|PEPE|VITE|DREP|JASMY|PNT|PERL|AMB|OAX|LOOM|BTS|RAD|ID|PNT|NULS|MLN|MEME|TOKEN|TOMO|BTS|PERL|WTC)/.*:.*"
+    ]
     ccxt_config:
       enableRateLimit: true
       rateLimit: 500
@@ -302,7 +305,7 @@ config:
   initial_state: running
   force_entry_enable: true
   internals:
-    process_throttle_secs: 2
+    process_throttle_secs: 1  # HFT: Reduced from 2 for faster processing
 
 # image:
 #   base: docker.io/brokerme/freqtrade # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade@sha256   # europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador-dockerhub/freqtradeorg/freqtrade

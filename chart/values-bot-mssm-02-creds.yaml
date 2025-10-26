@@ -20,14 +20,10 @@ ingress:
 configcreds:
   bot_name: multimetricstrategy
   can_short: true
-  dry_run: true
+  dry_run: false
   dry_run_wallet: 100000
   exchange:
     name: binance
-    pair_blacklist:
-      - USDC/USDT:USDT
-      - (BNB)/.*
-      - .*(_PREMIUM|BEAR|BULL|DOWN|UP|HALF|HEDGE|[234][SL])/.*
   margin_mode: isolated
   pairlists:
     - method: MarketCapPairList
@@ -55,7 +51,7 @@ configcreds:
       min_rate_of_change: 0.01
       refresh_period: 1800
   position_adjustment_enable: false
-  stake_amount: 50
+  stake_amount: 100
   stoploss: -0.99
   telegram:
     enabled: true
@@ -81,7 +77,7 @@ configcreds:
     rsi_oversold_threshold: 25  # RSI oversold for short exit
     roc_negative_threshold: -1  # ROC threshold for long exit (momentum loss)
     roc_positive_threshold: 1  # ROC threshold for short exit (momentum gain)
-  available_capital: 2000
+  available_capital: 500
   bias:
     biasversion: develop
     binance_api_key: Ie1qiv3hF3gfMGIsyZxdxNDSVSfz8INIWGRKkUwPEejNGRikh2toUVZb1WlH2X2P
