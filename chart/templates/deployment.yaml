@@ -11,9 +11,16 @@ spec:
       app: freqtrade-{{ .Release.Namespace }}
   template:
     metadata:
+      annotations:
+        # Force pod restart when strategy version changes
+        strategy.version: "{{ .Values.configcreds.strategy_version }}"
+        # Also track config changes
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+        checksum/configcreds: {{ include (print $.Template.BasePath "/configmapcreds.yaml") . | sha256sum }}
       labels:
         app: freqtrade-{{ .Release.Namespace }}
         reason: trading
+        strategy-version: "{{ .Values.configcreds.strategy_version }}"
     spec:
       initContainers:
       - name: take-sqlite-dir-ownership

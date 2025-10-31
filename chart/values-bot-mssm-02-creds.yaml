@@ -94,6 +94,7 @@ configcreds:
       - name: SANTIMENT_API_KEY
         value: 4sh7p5gbwf7adojj_amy347xb3wdezyvd #   unwt4thnxxvzahvm_7k4vvoljri6tpxup
       - name: FREQTRADE_BASE_URL
+        value: http://freqtrade:&&Liz270117!!@freqtrade-clusterip:8084/
     whitelist_index: 3
 bot:
   debug: false

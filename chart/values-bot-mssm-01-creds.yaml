@@ -17,7 +17,7 @@ configcreds:
       - name: BINANCE_SECRET_KEY
         value: 3z4uF8JTXEJLN23IZmQJ9uQuOBc8AdD7ZEwkO5kg5FWm1SsbFMTIIp48usFzhk9r
       - name: SANTIMENT_API_KEY
-        value: unwt4thnxxvzahvm_7k4vvoljri6tpxup
+        value: 4sh7p5gbwf7adojj_amy347xb3wdezyvd
       - name: FREQTRADE_BASE_URL
         value: http://freqtrade:&&Liz270117!!@freqtrade-clusterip:8084/
     biasversion: develop
