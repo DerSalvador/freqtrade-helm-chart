@@ -1,23 +1,24 @@
 ---
 config:
+  import_from_binance: false
   can_short: true
-  stoploss: -0.02  # HFT Optimized: 2% tight stop loss
+  stoploss: -0.99  # HFT Optimized: 2% tight stop loss
   dry_run: true
   dry_run_wallet: 500000
   stake_amount: unlimited
-  max_open_trades: 100
+  max_open_trades: 9
   minimal_roi:
     "1440": -1
-    "0": 0.015   # 1.5% instant profit - above trailing activation
-    "30": 0.012  # 1.2% after 30 minutes
-    "60": 0.010  # 1.0% after 60 minutes
-    "120": 0.008 # 0.8% after 2 hours - matches trailing offset
-  timeframe: 1m
+    "0": 0.1   # 10% instant profit - above trailing activation
+    "30": 0.08  # 8% after 30 minutes
+    "60": 0.06 # 6% after 60 minutes
+    "120": 0.04 # 4% after 2 hours - matches trailing offset
+  timeframe: 15m
   
   # Trailing Stop Configuration - HFT OPTIMIZED
   # Overrides strategy-level trailing stop settings
   trailing_stop: true
-  trailing_stop_positive: 0.005        # HFT: Lock in 0.5% profit once offset is reached
+  trailing_stop_positive: 0.005      # HFT: Lock in 0.5% profit once offset is reached
   trailing_stop_positive_offset: 0.008  # HFT: Activate trailing after 0.8% profit
   trailing_only_offset_is_reached: true  # Only trail after offset (0.8%) is reached
   

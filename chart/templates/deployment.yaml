@@ -20,7 +20,7 @@ spec:
       labels:
         app: freqtrade-{{ .Release.Namespace }}
         reason: trading
-        strategy-version: "{{ .Values.configcreds.strategy_version }}"
+        strategy-version: "{{ .Values.configcreds.strategy_version | replace ":" "-" | replace "/" "-" }}"
     spec:
       initContainers:
       - name: take-sqlite-dir-ownership

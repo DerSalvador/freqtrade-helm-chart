@@ -11,31 +11,12 @@ configcreds:
   margin_mode: isolated
   pairlists:
     - method: MarketCapPairList
-      mode: whitelist
-      processing_mode: append
-      number_assets: 10
-      max_rank: 50
-      categories:
-        - proof-of-work-pow
-        - layer-1
-        - layer-2
-        - decentralized-exchange
-        - tokenized-btc
-        - proof-of-stake-pos
-      refresh_period: 86400
-    - method: AgeFilter
-      min_days_listed: 10
-    - method: PrecisionFilter
-    - method: PriceFilter
-      low_price_ratio: 0.01
-    - method: SpreadFilter
-      max_spread_ratio: 0.005
-    - method: RangeStabilityFilter
-      lookback_days: 3
-      min_rate_of_change: 0.01
+      number_assets: 9
+      sort_key: quoteVolume
+      min_value: 0
       refresh_period: 1800
   position_adjustment_enable: false
-  stake_amount: 1000
+  stake_amount: 200
   stoploss: -0.02
   bias:
     test:
@@ -58,10 +39,10 @@ configcreds:
       - name: FREQTRADE_BASE_URL
         value: http://freqtrade:&&Liz270117!!@freqtrade-clusterip:8084/
     biasversion: develop
-    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/profit"
-    blacklist_url: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/blacklist"
-    blacklist_url_delete: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/blacklist?pairs_to_delete="
-    deleteTradeUrl:  "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/trades"
+    api_profit: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/profit"
+    blacklist_url: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/blacklist"
+    blacklist_url_delete: "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/blacklist?pairs_to_delete="
+    deleteTradeUrl:  "http://freqtrade:'&&Liz270117!!'@freqtrade-clusterip-bot-mssm-03.bot-mssm-03.svc.cluster.local:8084/api/v1/trades"
     # force_enter_url: "http://freqtrade-clusterip.bot-mssm-03.svc.cluster.local:8084/api/v1/forceenter"
     # force_enter_url: "http://freqtrade:'&&Liz270117!!'@localhost:8084/api/v1/forceenter"
     force_enter_url: http://localhost:8084/api/v1/forceenter
@@ -69,9 +50,61 @@ configcreds:
     force_enter_ip: 104.155.119.20
   available_capital: 9000000000
   trading_mode: futures
-  timeframe: 4h
+  timeframe: 15m
   # minimal_roi:
   #   "0": 0.20
+  strategy_config:
+    # Signal detection thresholds - RELAXED for more signals
+    min_long_signals: 2  # Minimum patterns required for LONG (RELAXED from 2)
+    min_short_signals: 2  # Minimum patterns required for SHORT (RELAXED from 2)
+    signal_thresholds:
+      # Minimum technical indicators required (MANDATORY)
+      min_technical_indicators: 2.0  # RELAXED from 2.0 for more signals
+      
+      # Funding rate thresholds (for liquidation analysis scoring)
+      funding_very_negative: -0.02  # Very bullish (shorts overleveraged)
+      funding_negative: -0.02  # Bullish
+      funding_very_positive: 0.02  # Very bearish (longs overleveraged)
+      funding_positive: 0.02  # Bearish
+      
+      # Open interest change thresholds (%)
+      oi_big_drop: -10.0  # Liquidation cascade
+      oi_rising: 10.0  # Strong trend
+      
+      # Flow ratio thresholds (exchange outflow/inflow)
+      flow_very_strong_accumulation: 2.0  # 2.0x outflow/inflow
+      flow_strong_accumulation: 1.5  # 1.5x
+      flow_moderate_accumulation: 1.2  # 1.2x
+      flow_distribution: 0.67  # More inflow than outflow
+      flow_strong_distribution: 0.8  # Strong distribution
+      
+      # MVRV ratio thresholds
+      mvrv_deeply_undervalued: 0.8  # Deeply undervalued
+      mvrv_undervalued: 1.0  # Undervalued
+      mvrv_fair: 2.0  # Fair value
+      mvrv_overvalued: 2.5  # Overvalued
+      mvrv_highly_overvalued: 3.0  # Highly overvalued
+      
+      # Sentiment thresholds
+      sentiment_very_positive: 5.0  # Very positive sentiment
+      sentiment_positive: 2.0  # Positive
+      sentiment_slightly_positive: 0.5  # Slightly positive
+      sentiment_very_negative: -5.0  # Very negative
+      sentiment_negative: -2.0  # Negative
+      sentiment_slightly_negative: -0.5  # Slightly negative
+      
+      # Volume spike thresholds
+      volume_major_spike: 3.0  # 3.0x average (major spike)
+      volume_spike: 2.0  # 2.0x average (spike)
+      volume_moderate_spike: 1.5  # 1.5x average (moderate)
+      
+      # Social dominance thresholds (%)
+      dominance_very_high: 10.0  # Potential top (>10% of crypto discussions)
+      dominance_high: 5.0  # High attention
+      dominance_very_low: 1.0  # Accumulation phase (underexposure)
+      
+      # Signal conflict resolution threshold
+      min_signal_gap: 1.0  # Minimum difference to resolve LONG vs SHORT conflicts
   telegram:
     enabled: true
     token: 7175835008:AAHKZ1YfdIYboKCO_QAePOHxpt08jl6WmHg # 6401327802:AAEUBmMeH-dW7GGDXb5W1nNaqeJ8KygVs28 # 6663129411:AAGSEOh6p5XEydYnsZuvhNuQsmkhYl5pJ14 # 6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA # generated by template dsTradingDeployNewStrategyFromTemplate.sh
